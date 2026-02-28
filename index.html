@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Alignment</title>
+  <style>
+    :root{
+      --bg:#041006;
+      --bg2:#020a04;
+      --green:#57ff7a;
+      --green2:#1bdc57;
+      --dim:#0b3a18;
+      --glow: rgba(87,255,122,.35);
+      --glow2: rgba(87,255,122,.18);
+    }
+    html,body{height:100%;margin:0;background:radial-gradient(1200px 900px at 50% 35%, #071b0b 0%, var(--bg) 45%, var(--bg2) 100%); overflow:hidden;}
+    body{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      color: var(--green);
+      user-select:none;
+    }
+    #wrap{
+      position:fixed; inset:0;
+      display:flex; flex-direction:column;
+    }
+    header{
+      position:relative;
+      padding:16px 18px 10px 18px;
+      display:flex; align-items:baseline; justify-content:space-between;
+      gap:18px;
+      z-index:3;
+      pointer-events:none;
+    }
+    #title{
+      font-size:22px;
+      letter-spacing:.08em;
+      text-transform:none;
+      text-shadow: 0 0 10px var(--glow), 0 0 22px var(--glow2);
+      opacity:.92;
+    }
+    #hud{
+      font-size:12px;
+      letter-spacing:.08em;
+      opacity:.70;
+      text-shadow: 0 0 10px var(--glow2);
+      white-space:nowrap;
+    }
+
+    canvas{
+      position:absolute; inset:0;
+      width:100%; height:100%;
+    }
+
+    /* CRT overlay */
+    #crt{
+      position:absolute; inset:0;
+      pointer-events:none;
+      z-index:2;
+      background:
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.00) 8%, rgba(0,0,0,0.08) 52%, rgba(0,0,0,0.12) 100%),
+        repeating-linear-gradient(to bottom, rgba(0,0,0,0.0) 0px, rgba(0,0,0,0.0) 2px, rgba(0,0,0,0.10) 3px, rgba(0,0,0,0.10) 4px);
+      mix-blend-mode: multiply;
+      opacity:.85;
+      filter: blur(.1px);
+    }
+
+    /* subtle vignette + glass */
+    #glass{
+      position:absolute; inset:-2%;
+      pointer-events:none;
+      z-index:4;
+      background: radial-gradient(1200px 900px at 50% 45%, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.10) 55%, rgba(0,0,0,0.38) 100%);
+    }
+
+    /* slight curvature illusion */
+    #curve{
+      position:absolute; inset:0;
+      pointer-events:none;
+      z-index:5;
+      background:
+        radial-gradient(1200px 900px at 50% 45%, rgba(87,255,122,0.05) 0%, rgba(87,255,122,0.00) 35%, rgba(0,0,0,0.00) 100%);
+      transform: perspective(900px) translateZ(0);
+    }
+
+    /* optional tiny noise */
+    #noise{
+      position:absolute; inset:0;
+      pointer-events:none;
+      z-index:6;
+      opacity:.05;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+      mix-blend-mode: overlay;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header>
+      <div id="title" aria-label="Alignment title"></div>
+      <div id="hud"></div>
+    </header>
+
+    <canvas id="c"></canvas>
+    <div id="crt"></div>
+    <div id="glass"></div>
+    <div id="curve"></div>
+    <div id="noise"></div>
+  </div>
+
+<script>
+(() => {
+  // ---------- Utilities ----------
+  const clamp = (x,a,b)=>Math.max(a,Math.min(b,x));
+  const lerp = (a,b,t)=>a+(b-a)*t;
+
+  // Deterministic PRNG from seed (mulberry32)
+  function mulberry32(seed){
+    let a = seed >>> 0;
+    return function(){
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      let t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function seedFromLetter(ch){
+    const code = ch.toUpperCase().charCodeAt(0);
+    // Spread A-Z over a nicer seed range
+    return (code * 2654435761) ^ 0xA5A5A5A5;
+  }
+
+  function pick(arr, r){ return arr[Math.floor(r()*arr.length)]; }
+
+  // ---------- Canvas setup ----------
+  const canvas = document.getElementById('c');
+  const ctx = canvas.getContext('2d', { alpha: true });
+
+  let W=0,H=0,DPR=1;
+  function resize(){
+    DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+    W = Math.floor(window.innerWidth);
+    H = Math.floor(window.innerHeight);
+    canvas.width = Math.floor(W*DPR);
+    canvas.height = Math.floor(H*DPR);
+    canvas.style.width = W+'px';
+    canvas.style.height = H+'px';
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  // ---------- Title glitch ----------
+  const titleEl = document.getElementById('title');
+  const baseTitle = "Alignment";
+  let glitchIdx = 0;
+  let glitchUntil = 0;
+  let nextGlitchAt = 0;
+
+  function renderTitle(now){
+    if(now > nextGlitchAt){
+      glitchIdx = Math.floor(Math.random() * baseTitle.length);
+      glitchUntil = now + 500; // half a second
+      nextGlitchAt = now + 2500 + Math.random()*2500;
+    }
+    let s = baseTitle.split('');
+    if(now < glitchUntil){
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      s[glitchIdx] = letters[Math.floor(Math.random()*letters.length)];
+    }
+    titleEl.textContent = s.join('');
+  }
+
+  // ---------- Screensaver engine ----------
+  const hudEl = document.getElementById('hud');
+
+  // State
+  let currentLetter = 'A';
+  let mode = null;
+  let rng = mulberry32(seedFromLetter(currentLetter));
+  let t0 = performance.now();
+  let last = t0;
+
+  // Modes: parametric vector sketches
+  // Each mode draws "vector-green morphing shape screensavers" with persistence.
+  const MODES = {
+    LISS: {
+      name: "Lissajous Field",
+      init: (r) => ({
+        ax: 2 + Math.floor(r()*7),
+        ay: 2 + Math.floor(r()*7),
+        ph: r()*Math.PI*2,
+        twist: 0.3 + r()*1.6,
+        n: 1100,
+        thickness: 1.0 + r()*1.2,
+      }),
+      draw: (st, now) => {
+        const t = (now - t0) * 0.001;
+        const cx = W*0.5, cy = H*0.55;
+        const R = Math.min(W,H) * (0.32 + 0.08*Math.sin(t*0.5));
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.beginPath();
+        for(let i=0;i<st.n;i++){
+          const u = i/(st.n-1);
+          const a = u*Math.PI*2*(1.5 + st.twist*Math.sin(t*0.15));
+          const x = Math.sin(st.ax*a + st.ph + 0.25*Math.sin(t*0.9))*R*(0.85+0.15*Math.sin(t*0.4+u*6));
+          const y = Math.sin(st.ay*a + 0.5*st.ph + 0.22*Math.cos(t*0.7))*R*(0.85+0.15*Math.cos(t*0.35+u*5));
+          if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+        }
+        ctx.strokeStyle = "rgba(87,255,122,0.90)";
+        ctx.lineWidth = st.thickness;
+        ctx.shadowColor = "rgba(87,255,122,0.38)";
+        ctx.shadowBlur = 10;
+        ctx.stroke();
+        ctx.restore();
+      }
+    },
+
+    SPIRO: {
+      name: "Spirograph Drift",
+      init: (r)=>({
+        R: 120 + r()*180,
+        r0: 30 + r()*120,
+        d: 40 + r()*160,
+        loops: 8 + Math.floor(r()*16),
+        n: 1800,
+        thickness: 0.9 + r()*1.1,
+      }),
+      draw: (st, now)=>{
+        const t = (now - t0) * 0.001;
+        const cx=W*0.5, cy=H*0.55;
+        const big = Math.min(W,H) * 0.34;
+        const R = big*(0.55 + 0.15*Math.sin(t*0.27));
+        const r0 = big*(0.12 + 0.10*Math.cos(t*0.19));
+        const d = big*(0.18 + 0.14*Math.sin(t*0.31));
+        const k = R/r0;
+        ctx.save();
+        ctx.translate(cx,cy);
+        ctx.beginPath();
+        for(let i=0;i<st.n;i++){
+          const u=i/(st.n-1);
+          const a = u*Math.PI*2*st.loops;
+          const x = (R-r0)*Math.cos(a) + d*Math.cos((R-r0)/r0*a + 0.6*Math.sin(t*0.4));
+          const y = (R-r0)*Math.sin(a) - d*Math.sin((R-r0)/r0*a + 0.6*Math.sin(t*0.4));
+          if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+        }
+        ctx.strokeStyle="rgba(87,255,122,0.88)";
+        ctx.lineWidth=st.thickness;
+        ctx.shadowColor="rgba(87,255,122,0.35)";
+        ctx.shadowBlur=12;
+        ctx.stroke();
+        ctx.restore();
+      }
+    },
+
+    FLOW: {
+      name: "Vector Flowlines",
+      init: (r)=>({
+        seeds: 120 + Math.floor(r()*180),
+        steps: 90 + Math.floor(r()*70),
+        step: 5 + r()*8,
+        curl: 0.6 + r()*2.2,
+        drift: 0.15 + r()*0.6,
+        thickness: 0.7 + r()*0.9
+      }),
+      draw: (st, now)=>{
+        const t = (now - t0) * 0.001;
+        // RSVP-ish: scalar potential + rotational component
+        function field(x,y){
+          const nx = (x/W - 0.5);
+          const ny = (y/H - 0.55);
+          const r2 = nx*nx + ny*ny;
+          const phi = Math.exp(-r2*2.2);
+          const vx = -ny*st.curl + nx*(0.9-0.7*r2) + st.drift*Math.sin(t+nx*3.0);
+          const vy =  nx*st.curl + ny*(0.9-0.7*r2) + st.drift*Math.cos(t*0.9+ny*2.7);
+          // Modulate by scalar
+          return {vx: vx*(0.45+0.75*phi), vy: vy*(0.45+0.75*phi)};
+        }
+
+        ctx.save();
+        ctx.shadowColor = "rgba(87,255,122,0.22)";
+        ctx.shadowBlur = 10;
+
+        for(let s=0;s<st.seeds;s++){
+          let x = (rng()*W);
+          let y = (rng()*H);
+          ctx.beginPath();
+          ctx.moveTo(x,y);
+          for(let i=0;i<st.steps;i++){
+            const f = field(x,y);
+            const mag = Math.hypot(f.vx,f.vy) + 1e-6;
+            x += (f.vx/mag) * st.step;
+            y += (f.vy/mag) * st.step;
+            if(x<0||x>W||y<0||y>H) break;
+            ctx.lineTo(x,y);
+          }
+          ctx.strokeStyle = "rgba(87,255,122,0.22)";
+          ctx.lineWidth = st.thickness;
+          ctx.stroke();
+        }
+        ctx.restore();
+      }
+    },
+
+    ATTR: {
+      name: "Soft Attractor",
+      init: (r)=>({
+        // A gentle, bounded, Lorenz-ish map (not physically exact; visual)
+        a: 9 + r()*9,
+        b: 20 + r()*10,
+        c: 2 + r()*3,
+        dt: 0.007 + r()*0.01,
+        n: 3800,
+        thickness: 0.9 + r()*1.1
+      }),
+      draw: (st, now)=>{
+        const t = (now - t0) * 0.001;
+        let x = 0.1 + 0.2*Math.sin(t*0.3);
+        let y = 0.0;
+        let z = 0.0;
+        const cx=W*0.5, cy=H*0.55;
+        const scale = Math.min(W,H) * 0.020;
+        ctx.save();
+        ctx.translate(cx,cy);
+        ctx.beginPath();
+        for(let i=0;i<st.n;i++){
+          // Modified Lorenz-like system (bounded)
+          const dx = st.a*(y - x);
+          const dy = x*(st.b - z) - y;
+          const dz = x*y - st.c*z;
+
+          x += dx*st.dt;
+          y += dy*st.dt;
+          z += dz*st.dt;
+
+          const px = x * scale;
+          const py = (z - 18) * scale * -1.15;
+
+          if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+        }
+        ctx.strokeStyle="rgba(87,255,122,0.78)";
+        ctx.lineWidth=st.thickness;
+        ctx.shadowColor="rgba(87,255,122,0.30)";
+        ctx.shadowBlur=14;
+        ctx.stroke();
+        ctx.restore();
+      }
+    },
+
+    ORBIT: {
+      name: "Tiled Orbits",
+      init: (r)=>({
+        cells: 3 + Math.floor(r()*4),
+        n: 420,
+        thickness: 0.8 + r()*1.0,
+        wobble: 0.3 + r()*1.2
+      }),
+      draw: (st, now)=>{
+        const t=(now-t0)*0.001;
+        const pad=40;
+        const cols=st.cells;
+        const rows=st.cells;
+        const cw=(W-pad*2)/cols;
+        const ch=(H-pad*2)/rows;
+        ctx.save();
+        ctx.shadowColor="rgba(87,255,122,0.18)";
+        ctx.shadowBlur=10;
+
+        for(let gy=0;gy<rows;gy++){
+          for(let gx=0;gx<cols;gx++){
+            const cx = pad + gx*cw + cw*0.5;
+            const cy = pad + gy*ch + ch*0.5 + 10;
+            const R = Math.min(cw,ch) * 0.35;
+            const ph = (gx*31 + gy*57) * 0.11;
+            ctx.beginPath();
+            for(let i=0;i<st.n;i++){
+              const u=i/(st.n-1);
+              const a=u*Math.PI*2;
+              const k1=1.0 + 0.25*Math.sin(t*0.6+ph);
+              const k2=1.0 + 0.25*Math.cos(t*0.5+ph*1.7);
+              const x = cx + Math.cos(a*k1 + ph) * R * (0.6+0.4*Math.sin(t*0.2+u*4+ph));
+              const y = cy + Math.sin(a*k2 - ph) * R * (0.6+0.4*Math.cos(t*0.23+u*3+ph));
+              if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
+            }
+            ctx.strokeStyle="rgba(87,255,122,0.42)";
+            ctx.lineWidth=st.thickness;
+            ctx.stroke();
+          }
+        }
+        ctx.restore();
+      }
+    }
+  };
+
+  function modeForLetter(letter){
+    // Deterministically choose a mode & parameterization from the letter seed
+    const r = mulberry32(seedFromLetter(letter));
+    const keys = Object.keys(MODES);
+    const key = keys[Math.floor(r()*keys.length)];
+    const m = MODES[key];
+    return { key, m, st: m.init(r) };
+  }
+
+  function setLetter(letter){
+    currentLetter = letter.toUpperCase();
+    rng = mulberry32(seedFromLetter(currentLetter));
+    const { key, m, st } = modeForLetter(currentLetter);
+    mode = { key, m, st };
+    // Reset time origin a little so each letter feels like a new scene
+    t0 = performance.now() - (rng()*1200);
+    // HUD
+    hudEl.textContent = `[${currentLetter}]  ${m.name}   (press A–Z, any other key = random)`;
+  }
+
+  setLetter('A');
+
+  // Keyboard controls
+  window.addEventListener('keydown', (e)=>{
+    const k = e.key;
+    if(k && k.length === 1){
+      const up = k.toUpperCase();
+      if(up >= 'A' && up <= 'Z'){
+        setLetter(up);
+        return;
+      }
+    }
+    // Any other key chooses random letter
+    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    setLetter(letters[Math.floor(Math.random()*letters.length)]);
+  });
+
+  // ---------- Touch controls (mobile support) ----------
+let touchStartX = 0;
+let touchStartY = 0;
+let touchStartTime = 0;
+
+function randomLetter(){
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  return letters[Math.floor(Math.random()*letters.length)];
+}
+
+function nextLetter(step){
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const idx = letters.indexOf(currentLetter);
+  const next = (idx + step + 26) % 26;
+  return letters[next];
+}
+
+canvas.addEventListener('touchstart', (e)=>{
+  const t = e.touches[0];
+  touchStartX = t.clientX;
+  touchStartY = t.clientY;
+  touchStartTime = performance.now();
+});
+
+canvas.addEventListener('touchend', (e)=>{
+  const t = e.changedTouches[0];
+  const dx = t.clientX - touchStartX;
+  const dy = t.clientY - touchStartY;
+  const dt = performance.now() - touchStartTime;
+
+  const absX = Math.abs(dx);
+  const absY = Math.abs(dy);
+
+  // Swipe
+  if (dt < 500 && absX > 50 && absX > absY) {
+    if (dx > 0) {
+      setLetter(nextLetter(1));   // swipe right → next
+    } else {
+      setLetter(nextLetter(-1));  // swipe left → previous
+    }
+    return;
+  }
+
+  // Long press (hold > 600ms)
+  if (dt > 600) {
+    setLetter(nextLetter(1));
+    return;
+  }
+
+  // Simple tap → random
+  setLetter(randomLetter());
+});
+  
+  // ---------- Render loop ----------
+  function frame(now){
+    // Title glitch
+    renderTitle(now);
+
+    // Slight jitter for CRT feel
+    const jitterX = (Math.random()-0.5)*0.6;
+    const jitterY = (Math.random()-0.5)*0.6;
+
+    // Phosphor persistence: fade instead of clearing fully
+    ctx.save();
+    ctx.translate(jitterX, jitterY);
+
+    // Fade layer (tuned to look like trails)
+    ctx.fillStyle = "rgba(2, 10, 4, 0.10)";
+    ctx.fillRect(-2,-2,W+4,H+4);
+
+    // Soft border glow
+    ctx.strokeStyle = "rgba(87,255,122,0.06)";
+    ctx.lineWidth = 2;
+    ctx.strokeRect(18, 54, W-36, H-90);
+
+    // Draw current mode
+    if(mode) mode.m.draw(mode.st, now);
+
+    // Small “scan” sweep highlight
+    const tt = (now - t0) * 0.001;
+    const y = (tt*60) % (H+140) - 70;
+    const grad = ctx.createLinearGradient(0, y-40, 0, y+40);
+    grad.addColorStop(0, "rgba(87,255,122,0.00)");
+    grad.addColorStop(0.5, "rgba(87,255,122,0.05)");
+    grad.addColorStop(1, "rgba(87,255,122,0.00)");
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, y-40, W, 80);
+
+    ctx.restore();
+
+    last = now;
+    requestAnimationFrame(frame);
+  }
+
+  // Initialize title
+  titleEl.textContent = baseTitle;
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
