@@ -27,21 +27,10 @@ body {
 }
 
 @keyframes crtWarmup {
-  0% {
-    opacity: 0;
-    filter: brightness(0.2) blur(6px);
-  }
-  40% {
-    opacity: 0.6;
-    filter: brightness(1.4) blur(2px);
-  }
-  70% {
-    filter: brightness(0.9) blur(1px);
-  }
-  100% {
-    opacity: 1;
-    filter: brightness(1) blur(0);
-  }
+  0% { opacity: 0; filter: brightness(0.2) blur(6px); }
+  40% { opacity: 0.6; filter: brightness(1.4) blur(2px); }
+  70% { filter: brightness(0.9) blur(1px); }
+  100% { opacity: 1; filter: brightness(1) blur(0); }
 }
 
 .screen {
@@ -99,6 +88,10 @@ button:hover {
   background: #003322;
 }
 
+button.active {
+  background: #003322;
+}
+
 .timer {
   font-size: 1.1em;
   min-width: 80px;
@@ -153,9 +146,7 @@ button:hover {
 <h2>Convergence Before Autonomy</h2>
 
 <div class="subtitle">
-Why deliberate friction stops algorithmic capture. An examination of
-instrumental convergence, infrastructural opacity, and the necessity
-of preserving human-scale delay in sociotechnical systems.
+Three essays on friction, inefficiency, and structural resistance in sociotechnical systems.
 </div>
 
 <canvas id="turntable"></canvas>
@@ -167,12 +158,24 @@ of preserving human-scale delay in sociotechnical systems.
   <button id="loop">Loop: Off</button>
 </div>
 
+<div class="controls" id="tracklist">
+  <button data-track="Why_Deliberate_Friction_Stops_Algorithmic_Capture.mp3">
+    Why Deliberate Friction Stops Algorithmic Capture
+  </button>
+  <button data-track="Surviving_AI_Optimization_Through_Human_Friction.mp3">
+    Surviving AI Optimization Through Human Friction
+  </button>
+  <button data-track="La_ineficiencia_nos_salvará_de_la_IA.mp3">
+    La ineficiencia nos salvará de la IA
+  </button>
+</div>
+
 </div>
 
 <div class="scanlines"></div>
 <div class="flicker"></div>
 
-<audio id="audio" src="Why_Deliberate_Friction_Stops_Algorithmic_Capture.mp3" crossorigin="anonymous"></audio>
+<audio id="audio" crossorigin="anonymous"></audio>
 
 <script>
 const audio = document.getElementById('audio');
@@ -183,6 +186,7 @@ const loopBtn = document.getElementById('loop');
 const timer = document.getElementById('timer');
 const canvas = document.getElementById('turntable');
 const ctx = canvas.getContext('2d');
+const trackButtons = document.querySelectorAll('#tracklist button');
 
 let rotation = 0;
 let pulse = 120;
@@ -262,16 +266,29 @@ loopBtn.onclick = () => {
   loopBtn.textContent = `Loop: ${audio.loop ? 'On' : 'Off'}`;
 };
 
+trackButtons.forEach(btn => {
+  btn.onclick = () => {
+    trackButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    audio.pause();
+    audio.src = btn.dataset.track;
+    audio.currentTime = 0;
+    ctxAudio.resume();
+    audio.play();
+  };
+});
+
+audio.src = "Why_Deliberate_Friction_Stops_Algorithmic_Capture.mp3";
+trackButtons[1].classList.add('active');
+
 animate();
 updateTimer();
 
-/* Subtle horizontal drift */
 setInterval(() => {
   const drift = (Math.random() - 0.5) * 6;
   screen.style.transform = `translateX(${drift}px)`;
 }, 4000);
 
-/* Occasional micro glitch */
 setInterval(() => {
   if (Math.random() < 0.4) {
     screen.classList.add("micro-glitch");
