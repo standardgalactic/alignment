@@ -1,6 +1,10 @@
-# The Expiatory Gap
+# Alignment Research
 
-[Alignment Research](https://standardgalactic.github.io/alignment/The%20Expiatory%20Gap.pdf) (pdf)
+[The Expiatory Gap](https://standardgalactic.github.io/alignment/The%20Expiatory%20Gap.pdf)
+
+[Convergence Before Autonomy](https://standardgalactic.github.io/alignment/Convergence%20Before%20Autonomy.pdf)
+
+* [Audio Overview](https://standardgalactic.github.io/alignment/working/)
 
 ---
 

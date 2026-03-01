@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Convergence Before Autonomy</title>
+
+<style>
+:root { --vh: 1vh; }
+
+body {
+  margin: 0;
+  min-height: calc(var(--vh) * 100);
+  background: #000;
+  color: #00ff88;
+  font-family: "Courier New", monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
+  text-align: center;
+  padding: 24px;
+  text-shadow: 0 0 6px #00ff88aa;
+  opacity: 0;
+  animation: crtWarmup 2.8s ease-out forwards;
+}
+
+@keyframes crtWarmup {
+  0% {
+    opacity: 0;
+    filter: brightness(0.2) blur(6px);
+  }
+  40% {
+    opacity: 0.6;
+    filter: brightness(1.4) blur(2px);
+  }
+  70% {
+    filter: brightness(0.9) blur(1px);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+}
+
+.screen {
+  position: relative;
+  transition: transform 1.2s ease-in-out;
+}
+
+h2 {
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  opacity: 0.8;
+  font-size: 0.9em;
+  max-width: 760px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(circle at center, #001a0f 0%, #000 70%);
+  box-shadow:
+    0 0 20px #00ff8866,
+    inset 0 0 40px #00ff8844;
+  transition: transform 0.05s;
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+button {
+  background: #001a0f;
+  border: 1px solid #00ff88;
+  color: #00ff88;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 0 8px #00ff8844;
+}
+
+button:hover {
+  background: #003322;
+}
+
+.timer {
+  font-size: 1.1em;
+  min-width: 80px;
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,136,0.05) 0px,
+    rgba(0,255,136,0.05) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  mix-blend-mode: screen;
+}
+
+.flicker {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(0,255,136,0.02);
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.02; }
+  50% { opacity: 0.05; }
+  100% { opacity: 0.02; }
+}
+
+.micro-glitch {
+  animation: glitchPulse 0.12s steps(2,end);
+}
+
+@keyframes glitchPulse {
+  0%   { transform: translateX(0); filter: hue-rotate(0deg); }
+  25%  { transform: translateX(3px); filter: hue-rotate(20deg); }
+  50%  { transform: translateX(-4px); filter: hue-rotate(-15deg); }
+  75%  { transform: translateX(2px); filter: hue-rotate(10deg); }
+  100% { transform: translateX(0); filter: hue-rotate(0deg); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="screen" id="screen">
+
+<h2>Convergence Before Autonomy</h2>
+
+<div class="subtitle">
+Why deliberate friction stops algorithmic capture. An examination of
+instrumental convergence, infrastructural opacity, and the necessity
+of preserving human-scale delay in sociotechnical systems.
+</div>
+
+<canvas id="turntable"></canvas>
+
+<div class="controls">
+  <button id="play">Play</button>
+  <button id="pause">Pause</button>
+  <div class="timer" id="timer">00:00</div>
+  <button id="loop">Loop: Off</button>
+</div>
+
+</div>
+
+<div class="scanlines"></div>
+<div class="flicker"></div>
+
+<audio id="audio" src="Why_Deliberate_Friction_Stops_Algorithmic_Capture.mp3" crossorigin="anonymous"></audio>
+
+<script>
+const audio = document.getElementById('audio');
+const screen = document.getElementById('screen');
+const playBtn = document.getElementById('play');
+const pauseBtn = document.getElementById('pause');
+const loopBtn = document.getElementById('loop');
+const timer = document.getElementById('timer');
+const canvas = document.getElementById('turntable');
+const ctx = canvas.getContext('2d');
+
+let rotation = 0;
+let pulse = 120;
+
+const dpr = window.devicePixelRatio || 1;
+canvas.width = 340 * dpr;
+canvas.height = 340 * dpr;
+ctx.scale(dpr, dpr);
+
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const ctxAudio = new AudioContext();
+const analyser = ctxAudio.createAnalyser();
+analyser.fftSize = 256;
+
+const src = ctxAudio.createMediaElementSource(audio);
+src.connect(analyser);
+analyser.connect(ctxAudio.destination);
+
+const freqData = new Uint8Array(analyser.frequencyBinCount);
+
+function updateVisuals() {
+  analyser.getByteFrequencyData(freqData);
+  let bass = 0;
+  for (let i = 0; i < 32; i++) bass += freqData[i];
+  bass /= 32;
+  const brightness = Math.min(1, bass / 160);
+  pulse = 110 + brightness * 60;
+}
+
+function drawTurntable() {
+  ctx.clearRect(0, 0, 340, 340);
+  ctx.save();
+  ctx.translate(170, 170);
+  ctx.rotate(rotation);
+
+  ctx.beginPath();
+  ctx.arc(0, 0, pulse, 0, Math.PI * 2);
+  ctx.strokeStyle = "#00ff88";
+  ctx.lineWidth = 3;
+  ctx.shadowBlur = 20;
+  ctx.shadowColor = "#00ff88";
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.arc(0, 0, 18, 0, Math.PI * 2);
+  ctx.fillStyle = "#00ff88";
+  ctx.fill();
+
+  ctx.restore();
+}
+
+function animate() {
+  updateVisuals();
+  rotation += audio.paused ? 0.002 : 0.025;
+  drawTurntable();
+  requestAnimationFrame(animate);
+}
+
+function formatTime(sec) {
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return `${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+}
+
+function updateTimer() {
+  if (audio.duration) {
+    const remaining = Math.max(0, audio.duration - audio.currentTime);
+    timer.textContent = formatTime(remaining);
+  }
+  requestAnimationFrame(updateTimer);
+}
+
+playBtn.onclick = () => { ctxAudio.resume(); audio.play(); };
+pauseBtn.onclick = () => audio.pause();
+loopBtn.onclick = () => {
+  audio.loop = !audio.loop;
+  loopBtn.textContent = `Loop: ${audio.loop ? 'On' : 'Off'}`;
+};
+
+animate();
+updateTimer();
+
+/* Subtle horizontal drift */
+setInterval(() => {
+  const drift = (Math.random() - 0.5) * 6;
+  screen.style.transform = `translateX(${drift}px)`;
+}, 4000);
+
+/* Occasional micro glitch */
+setInterval(() => {
+  if (Math.random() < 0.4) {
+    screen.classList.add("micro-glitch");
+    setTimeout(() => screen.classList.remove("micro-glitch"), 120);
+  }
+}, 6000);
+</script>
+
+</body>
+</html>
