@@ -6,6 +6,8 @@
 
 * [Audio Overview](https://standardgalactic.github.io/alignment/working/)
 
+[Identity After Authenticity](https://standardgalactic.github.io/alignment/Identity%20After%20Authenticity.pdf)
+
 ---
 
 ## Summary
