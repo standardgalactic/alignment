@@ -8,6 +8,10 @@
 
 [Identity After Authenticity](https://standardgalactic.github.io/alignment/Identity%20After%20Authenticity.pdf)
 
+[Hyperpleonastic Legibility](https://standardgalactic.github.io/alignment/Hyperpleonastic%20Legibility.pdf)
+
+[Human in the Loop](https://standardgalactic.github.io/alignment/Human%20in%20the%20Loop.pdf)
+
 ---
 
 ## Summary
