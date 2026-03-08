@@ -1,0 +1,1433 @@
+Identity After Authenticity:
+Physiological Realism, Invariant Structure, and the Social Representation
+Flyxion
+March 1, 2026
+Abstract
+This essay begins with a moral injunction encountered in adolescence: Esse quam
+videri—to be rather than to seem.
+What initially appears as a character ideal is
+reinterpreted as a structural problem that anticipates a central tension in modern social
+theory. In The Society of the Spectacle, Guy Debord diagnoses a historical condition
+in which being is displaced by appearing and social relations are mediated by images.
+His critique unfolds across semiotics, political economy, and ontology, culminating in a
+narrative of lost authenticity.
+The present study reframes that diagnosis by grounding the distinction between
+being and seeming in the physiology of perception and the mathematics of invariance.
+The visual system does not passively record images but learns to detect transformation-
+invariant structure—curvature, depth, shadow geometry, and material reﬂectance. Sparse
+coding renders cognition metabolically eﬃcient yet structurally vulnerable to camouﬂage
+and mimicry. Under this interpretation, the spectacle functions as a socio-cognitive
+analogue of biological camouﬂage: it exploits compression constraints to simulate
+invariants without preserving generative substrate.
+By introducing a divergence functional that measures the gap between social signals
+and their structural or energetic basis, the argument shifts from moral exhortation to
+formal constraint. The imperative to be rather than to seem becomes a demand for
+structural congruence between representation and generative process. The essay then
+derives a program of institutional, technological, and personal interventions directly
+from this formalism. The argument concludes by situating this framework alongside the
+theory of proﬁlicity, which rejects nostalgia for an unmediated past while recognizing that
+identity is technologically scaﬀolded. The aim is not a recovery of pre-representational
+immediacy, but the preservation of coherence under transformation—and the engineering
+of systems that make such preservation structurally rewarded.
+1
+
+Contents
+1
+Introduction: The Tension of Being and Seeming
+3
+2
+Ciceronian Origins: Civic Virtue and the Priority of Being
+4
+3
+Biblical Interiorization: 1 Samuel 16:7 and the Primacy of the Heart
+6
+4
+General Principle and Generating Function: Beyond Particular Implementations
+8
+5
+Guy Debord and the Theory of the Spectacle
+9
+6
+Physiological Realism and the Physics of Perception
+11
+7
+Formalizing the Spectacle: Invariant Structure and Distortion
+13
+8
+The Wizard and Sprezzatura: Illusion, Eﬀortlessness, and Concealed Generation 15
+9
+Proﬁlicity: Identity After Authenticity
+16
+10 Abstraction, Performance, and the Discipline of Generating Structure
+18
+11 Intervention Architecture: Deriving Solutions from the Formalism
+19
+12 Operationalizing the Divergence Functional
+22
+13 Dimensional Richness as Anti-Camouﬂage Architecture
+23
+14 Energetic Accounting of Mutualism and Parasitism
+23
+15 Generative Rule Transparency
+24
+16 Latency as Alignment Mechanism
+24
+17 Invariance Testing as Personal Practice
+25
+2
+
+18 Incentive Topology and Systemic Alignment
+25
+19 Esse Quam Videri as Morphism Constraint
+25
+20 The Faithful Functor: Increasing the Fidelity of Representation
+26
+21 The Yarncrawler as Transjective Functor
+28
+22 Parser Interpretation
+28
+23 Transjectivity and Divergence Control
+29
+24 Yarncrawler as Infrastructure for Mutualism
+30
+25 Functorial Speciﬁcation of Transjectivity
+30
+26 Conclusion: The Demand for Structural Congruence
+31
+A Transformation Groups and Invariant Structure
+34
+B Sparse Encoding and Compressed Representation
+34
+C Signal-Substrate Divergence Functional
+35
+D Generating Operators and Implementation Maps
+36
+E Predictive Processing and Error Suppression
+36
+F Spectral Properties of Divergence Dynamics
+37
+G Category-Theoretic Interpretation of Being, Seeming, and Divergence
+39
+3
+
+1
+Introduction: The Tension of Being and Seeming
+When I began high school, I noticed that its motto was the Latin phrase Esse quam videri.
+The phrase translates as "to be rather than to seem." At ﬁrst glance, it reads as a simple
+moral directive. It encourages sincerity over hypocrisy, substance over display. Yet the
+structure of the phrase reveals a deeper philosophical tension. It posits a distinction between
+ontological presence and perceptual appearance. It implies that seeming can detach from
+being, that appearance can simulate what it does not structurally possess.
+Long before encountering critical social theory, this motto established a conceptual axis: the
+diﬀerence between structural reality and performed representation. That axis would later
+ﬁnd a systematic articulation in The Society of the Spectacle, where the displacement of
+being by appearing is described not as a personal failing but as a civilizational condition.
+The tension between being and seeming is not merely ethical. It is epistemological and
+ontological. It concerns the conditions under which perception tracks structure. To seem
+is to generate signals within a perceptual ﬁeld. To be is to maintain structural coherence
+under transformation. The distinction is therefore not reducible to sincerity or intention. It
+concerns invariance.
+In modernity, the proliferation of mediated representation intensiﬁes this tension. Images
+circulate independently of the processes they depict. Reputation precedes action. Branding
+precedes production. Evaluation precedes experience. The perceptual order is saturated
+with signals optimized for recognition rather than correspondence. The question raised by
+Esse quam videri is whether signal and substrate remain congruent.
+This question becomes explicit in the diagnostic framework oﬀered by Guy Debord in 1967.
+His account does not begin with physiology or mathematics, but with political economy. He
+argues that twentieth-century capitalism has evolved into a regime in which images become
+the primary commodity. Social life is reorganized around display. The spectacle is not a
+collection of media artifacts but a social relation mediated by images.
+The spectacle, in this sense, represents a structural inversion. Where prior social formations
+organized value around material production, the spectacle organizes value around visibility.
+Being is subordinated to appearing. Economic and social participation require continuous
+presentation. The show becomes the substance. The image acquires autonomy.
+Yet Debord frames this inversion as a historical loss. He suggests that a prior unity of
+4
+
+life has dissolved into representation. According to this narrative, what was once directly
+lived has become mere display. The moral undertone echoes the motto Esse quam videri.
+Authentic presence has been displaced by staged visibility.
+The present essay does not simply repeat that critique. Instead, it reframes the tension
+through a physiological and mathematical lens. The central claim is that the distinction
+between being and seeming can be modeled in terms of structural invariance and signal
+distortion. Perception evolved to detect transformation-invariant features in the environment.
+When signals simulate invariance without preserving substrate structure, cognitive systems
+are misled. The spectacle can therefore be interpreted as a large-scale exploitation of
+perceptual compression.
+The shift proposed here moves from socio-economic critique to structural modeling. Rather
+than asking whether authenticity has been lost, we ask whether invariant structure is
+preserved under transformation. The diﬀerence is subtle but decisive. The demand is not
+nostalgic return but measurable congruence.
+In what follows, the theory of the spectacle will be reconstructed in its original Marxist
+and ontological context. It will then be reinterpreted through the physiology of perception,
+sparse coding theory, and transformation groups. The moral injunction to be rather than
+to seem will become a formal constraint on divergence between signal and substrate. The
+question will not be whether appearance exists, but whether appearance tracks structural
+reality. Crucially, the framework does not terminate at diagnosis. Having formalized the
+pathology, the essay derives an intervention architecture from the same formal structure
+that identiﬁes the disease. The ﬁnal movements of the argument are therefore not critical
+but constructive.
+2
+Ciceronian Origins: Civic Virtue and the Priority of Being
+The phrase Esse quam videri predates modern social theory by nearly two millennia. It
+appears in Cicero's De Amicitia (On Friendship), where it functions as a civic and moral
+principle rather than a perceptual or structural one. For Cicero, the injunction to be rather
+than to seem is a warning against the cultivation of reputation detached from character.
+The Roman statesman frames friendship and public life as domains in which integrity must
+precede display. Virtue is not theatrical performance but stable disposition.
+In its classical context, the phrase does not reject appearance altogether. Roman political
+5
+
+culture depended heavily on visibility, rhetoric, and honor. Rather, Cicero insists that visible
+honor must correspond to genuine moral substance. Reputation without virtue is fragile; it
+collapses under scrutiny. The distinction between being and seeming therefore functions as
+a stabilizing constraint on public life. Appearance must be grounded in ethical structure.
+The phrase later acquired institutional embodiment. It was adopted in 1893 as the oﬃcial
+motto of the state of North Carolina.
+In this civic usage, Esse quam videri becomes
+a declaration of collective identity. It signals a commitment to integrity at the level of
+governance and public character. The motto's endurance suggests that the tension between
+substance and performance is not a modern invention but a persistent feature of social
+organization.
+Within the present framework, the Ciceronian origin acquires renewed signiﬁcance. Cicero's
+concern is moral congruence. Debord's concern is socio-economic displacement of lived reality
+by representation. The physiological account developed later concerns invariant structure
+under transformation. These three domains converge on a shared principle: appearance
+must track substrate.
+In Cicero's formulation, the substrate is ethical character. In Debord's analysis, the substrate
+is lived experience and material production. In the physiological model, the substrate
+is transformation-invariant structure in physical and energetic systems. The divergence
+functional D(S, B) generalizes Cicero's moral concern into a structural one. If signal S—
+whether reputation, brand, or proﬁle—deviates from substrate B—whether character, labor,
+or energetic ﬂow—then seeming dominates being.
+The Ciceronian maxim thus anticipates both the critique of spectacle and its reformulation.
+It does not deny the necessity of appearance. Public life requires visibility. What it demands
+is congruence. Virtue must be invariant under scrutiny. It must remain stable across
+transformations of context, illumination, and audience. In modern terms, it requires that
+the compressed representation φ(S) correspond to the invariant structure of B.
+The historical endurance of Esse quam videri indicates that the tension between substance
+and performance is not reducible to digital media or capitalist spectacle. What changes
+across epochs is the scale and velocity at which divergence can be ampliﬁed. In a regime of
+high-throughput signaling, where proﬁles and brands circulate globally, the cost of structural
+incongruence increases. Compression intensiﬁes. Camouﬂage becomes systemic.
+To return to the phrase, then, is not to indulge in nostalgia. It is to recognize that the
+demand for congruence between being and seeming has long served as a stabilizing principle
+6
+
+of civic life. The present analysis extends that principle beyond ethics into physiology and
+formal modeling. It treats Cicero's injunction not as mere moral advice, but as an early
+articulation of a constraint on signal-substrate divergence.
+In this sense, Esse quam videri becomes a bridge across domains. It links Roman civic
+virtue, Marxist social critique, perceptual neuroscience, and mathematical invariance. Its
+persistence underscores the structural depth of the problem. To be rather than to seem
+is not simply to act sincerely. It is to preserve coherence under transformation in systems
+increasingly optimized for display.
+3
+Biblical Interiorization: 1 Samuel 16:7 and the Primacy of
+the Heart
+The distinction between being and seeming also appears in the Hebrew Bible. In 1 Samuel
+16:7, the prophet Samuel is instructed during the anointing of David: "For the Lord sees
+not as man sees: man looks on the outward appearance, but the Lord looks on the heart."
+The verse relocates the tension from civic virtue to theological anthropology. It asserts that
+external form is an unreliable indicator of inner structure. Divine perception penetrates
+surface display.
+The biblical formulation sharpens the contrast. Human perception is described as appearance-
+bound. It privileges visible markers: stature, strength, social presence. The divine gaze,
+by contrast, accesses interior disposition. The heart in Hebrew thought does not denote
+mere emotion but the seat of intention, will, and moral structure. Being is deﬁned not by
+outward visibility but by invariant interior alignment.
+Placed alongside Cicero, the verse introduces an epistemic asymmetry. Cicero assumes that
+moral congruence can be recognized within civic life through consistent conduct. 1 Samuel
+suggests that surface evaluation is structurally limited. Human vision remains vulnerable to
+misclassiﬁcation. The theological claim anticipates the physiological argument developed
+subsequently: perception operates under compression constraints. It extracts sparse features
+and is therefore susceptible to camouﬂage.
+In the present framework, the biblical distinction may be reformulated without reducing
+its theological force. Let outward appearance correspond to signal S, and let the heart
+correspond to structural substrate B. Human observers rely on compressed representations
+φ(S) to classify character.
+Divine perception, in the biblical narrative, bypasses this
+7
+
+compression, accessing B directly. The divergence functional
+D(S, B) = ∥φ(S) −φ(σ(B))∥
+is invisible to ordinary observers when φ(S) successfully simulates invariant cues. The
+theological claim is that ultimate judgment does not rely on φ(S) but on B itself.
+This contrast reinforces the earlier argument. Sparse coding implies that classiﬁcation
+systems depend on minimal basis features. In evolutionary contexts, this suﬃces for survival.
+In moral and social contexts, however, it opens the possibility of systemic distortion. The
+spectacle can amplify signals optimized to match recognition templates while concealing
+substrate incoherence.
+The biblical warning acknowledges the structural gap between
+appearance and interior structure.
+Importantly, 1 Samuel 16:7 does not eliminate appearance. David himself must still be
+seen, anointed, and recognized. Rather, the verse reorders epistemic priority. Outward
+markers do not guarantee inward congruence. The heart functions as invariant substrate
+under transformation. Integrity, in this sense, is structural stability across shifting contexts.
+The convergence of Cicero and 1 Samuel reveals a deep continuity across cultural traditions.
+Both insist that surface display is insuﬃcient as a measure of reality. Both imply that
+congruence between signal and substrate is the condition of legitimacy. The modern spectacle
+intensiﬁes the stakes by multiplying channels of display and accelerating feedback loops. Yet
+the underlying tension remains ancient.
+In physiological terms, the heart of the matter is invariance. Whether framed theologically,
+civically, or mathematically, the principle is consistent: being must persist under transfor-
+mation. When outward appearance is decoupled from interior structure, seeming overtakes
+being. When interior structure remains stable across contexts, appearance becomes faithful
+projection rather than camouﬂage.
+Thus, the injunction of 1 Samuel 16:7 complements Esse quam videri. Both articulate
+the primacy of structural congruence. Both warn against mistaking optimized signal for
+grounded substance. Within a society saturated by spectacle and proﬁlicity, their shared
+insight becomes not merely devotional or moral, but structurally diagnostic.
+8
+
+4
+General Principle and Generating Function: Beyond Par-
+ticular Implementations
+The injunction Esse quam videri, when read alongside Cicero and 1 Samuel 16:7, can be
+extended beyond moral psychology into a structural epistemology. To be rather than to seem
+does not merely contrast inner sincerity with outer display. It can also be interpreted as a
+methodological demand: to seek the generating principle rather than ﬁxate on its speciﬁc
+implementation.
+In mathematics, a generating function encodes an entire class of objects through a compact
+structural rule. Particular instances may vary, yet they are derivable from a shared functional
+form.
+The generating principle remains invariant across manifestations.
+The speciﬁc
+implementation is a projection of that deeper structure under particular boundary conditions.
+Similarly, in physics, symmetries and conservation laws operate as general constraints from
+which observable phenomena are derived. The curvature of spacetime generates gravitational
+trajectories; the Lagrangian generates equations of motion. One does not mistake the speciﬁc
+trajectory for the underlying variational principle. The latter persists across transformations
+of coordinates and context.
+Applied to perception, this distinction parallels the diﬀerence between invariant detection
+and surface feature recognition. The organism does not merely memorize speciﬁc pixel
+arrays. It learns transformation-invariant structure. It identiﬁes curvature, continuity, and
+lawful change. The generating structure of the environment becomes the basis for reliable
+inference. Surface variation is secondary.
+The spectacle, by contrast, often promotes attachment to speciﬁc implementations. It
+elevates the instantiated image over the generating structure. A brand becomes detached
+from the production process that sustains it. A proﬁle becomes detached from the energetic
+and relational substrate that enables it. The visible implementation substitutes for the
+underlying generative dynamics.
+To read Esse quam videri in structural terms is therefore to privilege the generating function
+over its projection. Being corresponds to the invariant rule or structural constraint that
+gives rise to appearances. Seeming corresponds to a particular instantiation optimized for
+recognition within a perceptual or social ﬁeld. When the generating structure is coherent,
+particular appearances vary without compromising integrity. When the generating structure
+is hollow, implementations must be continually reﬁned to preserve recognition.
+9
+
+Formally, let G denote a generating operator acting on a parameter space Θ, producing
+observable instances x = G(θ). The spectacle privileges x while neglecting G. Structural
+congruence requires that the observable instance faithfully reﬂect the constraints encoded
+in G. Divergence arises when x is engineered to trigger recognition independently of the
+underlying generative rule.
+In cognitive terms, this corresponds to overﬁtting surface features while neglecting causal
+structure. In social terms, it corresponds to optimizing signals while eroding substrate. In
+moral terms, it corresponds to cultivating reputation while neglecting character. Across
+domains, the pattern is consistent: attention shifts from the rule to the projection.
+Thus, to be rather than to seem is to orient inquiry toward invariant generating structure.
+It is to ask what transformation law gives rise to observed patterns. It is to test whether
+speciﬁc implementations remain coherent under variation. Invariance under transformation
+becomes the criterion of authenticity—not in any essentialist sense, but in the precise sense
+of structural persistence across perturbation.
+This reframing also protects against nostalgia. One need not posit a lost pure implementation.
+Instead, one evaluates whether the generating function itself remains stable. If identity
+is technologically mediated, then the question becomes whether the identity-generating
+processes preserve structural reciprocity. If economic systems are mediated by images, the
+question becomes whether image production reﬂects underlying energetic constraints. The
+injunction therefore becomes methodological as well as ethical: seek the rule, not merely the
+display.
+5
+Guy Debord and the Theory of the Spectacle
+In 1967, Guy Debord published The Society of the Spectacle, a work that sought to diagnose
+the structural logic of advanced capitalism. Writing within a Marxist framework and as
+a member of the Situationist International, Debord argued that the dominant mode of
+production had undergone a qualitative shift. The production of material goods no longer
+deﬁned the core of economic life. Instead, the commodiﬁcation and circulation of images
+became central. Social relations were increasingly mediated not by direct interaction, but
+by representation.
+Debord's most cited formulation deﬁnes the spectacle as "a social relationship between
+people that is mediated by images." The spectacle is not reducible to television, advertising,
+10
+
+or entertainment, though these are its most visible manifestations. It is a totalizing condition
+in which appearing displaces being as the organizing principle of value. The image becomes
+autonomous. What matters is not the structural substrate of production, but the perceptual
+ﬁeld in which commodities, institutions, and identities are staged.
+The Marxist foundation of Debord's argument remains explicit. Classical industrial capital-
+ism, as analyzed by Marx, alienated workers from the products of their labor. In spectacular
+capitalism, alienation extends further. Individuals are separated from lived experience
+itself. Movement becomes tourism, sexuality becomes pornography, information becomes
+infotainment. In each case, activity is transformed into display. The commodity no longer
+merely satisﬁes needs; it contemplates itself in a world of its own making.
+Debord's theory rests on three interlocking pillars: semiotics, political economy, and ontology.
+At the semiotic level, the spectacle perfects the separation between sign and referent.
+Representations detach from the material realities they once indexed. The sign no longer
+points back to a stable thing; it circulates within a system of diﬀerential relations. Brands,
+celebrities, and media events function as self-referential sign clusters. Meaning emerges
+within discourse rather than through correspondence. The copy becomes more powerful
+than the original.
+At the level of political economy, the spectacle operates as a mode of production. It is
+self-generating and self-perpetuating. Value is determined by visibility. Economic ﬂows
+follow attention gradients. Hierarchies emerge from control over representation rather than
+control over physical resources alone. Debord describes the spectacle as capital accumulated
+to the point where it becomes image. In this formulation, capital no longer merely organizes
+labor; it organizes perception.
+Ontologically, the spectacle functions as what Debord calls an "appearance machine." It
+blurs the distinction between reality and illusion. The shift he describes is not merely from
+having to appearing, but from being to appearing. Appearance acquires normative authority.
+That which appears is validated; that which remains invisible is structurally marginalized.
+The spectacle reconstructs religious illusion in material form. It produces a secularized
+transcendence in which images assume the role once occupied by sacred symbols.
+From these three pillars emerges Debord's narrative of lost authenticity. He famously writes
+that all that was once directly lived has become mere representation. The former unity of
+life is declared irretrievable. Leisure becomes performance. Stardom transforms individuals
+into images. Communication becomes pseudo-dialogue. Alienation becomes systemic: the
+11
+
+spectacle alienates individuals not only from labor but from movement, sexuality, information,
+and history. It constructs a world of visibility in which participation requires constant display.
+The present essay accepts the structural insight of Debord's diagnosis while suspending
+its nostalgia. Rather than presuming an original unity of life, we reinterpret the spectacle
+through the physiology of perception and the mathematics of invariance. The question
+becomes not whether authenticity once existed, but how perceptual systems detect structure
+and how social systems exploit those detection mechanisms. In this reframing, the spectacle
+is not only a socio-economic phenomenon but a cognitive one—a regime that operates by
+simulating invariants recognized by compressed perceptual systems.
+6
+Physiological Realism and the Physics of Perception
+The distinction between being and seeming is often treated as a moral or metaphysical
+contrast. Yet it is also grounded in the physiology of perception. The visual system does
+not passively record images. It performs structured inference. The retina and downstream
+cortical circuits extract features that correspond to stable regularities in the external world.
+In doing so, the organism learns to detect invariants.
+Light arriving at the retina is subject to transformation. Objects rotate, translate, scale,
+and vary under changing illumination. Shadows shift as light sources move. Surfaces occlude
+one another. Reﬂections distort environmental structure according to material properties.
+Despite these variations, the organism must identify stable entities. Perception therefore
+privileges features that remain constant across transformation groups.
+Depth perception illustrates this principle. Binocular disparity arises because each eye
+receives a slightly diﬀerent projection of the same scene. The brain integrates these diﬀerences
+to infer three-dimensional structure. Curvature is not directly visible as a property in itself;
+it is inferred from gradients of shading, contour deformation, and motion parallax. Shadows
+encode information about spatial topology, yet their position shifts with illumination. The
+organism learns to treat certain transformations as irrelevant while preserving others as
+structurally signiﬁcant.
+To formalize this, let X represent the space of environmental states and let G denote a
+transformation group acting on X. Transformations in G may include rotations, translations,
+scaling operations, and illumination shifts. A perceptual feature f : X →Rn is invariant
+12
+
+under G if
+f(g · x) = f(x)
+for all g ∈G, x ∈X.
+Such invariants correspond to stable physical constraints. They deﬁne what it means for
+something to be, in the perceptual sense. Being is that which maintains structural coherence
+under transformation.
+However, the organism cannot encode the full environmental state. Metabolic and computa-
+tional constraints necessitate compression. Neural systems employ sparse coding strategies,
+representing stimuli through a limited set of basis features. Let φ(x) denote a compressed
+representation of x ∈X in a lower-dimensional space Z. Then
+φ(x) =
+k
+X
+i=1
+aibi,
+where the basis {bi} is selected to minimize representational cost while preserving task-
+relevant structure. Sparsity ensures eﬃciency, but it also creates vulnerability.
+Because classiﬁcation relies on a reduced feature set, it can be manipulated. Camouﬂage in
+nature exploits precisely this constraint. If an organism can produce surface features such
+that its compressed representation approximates that of its environment, detection fails.
+Formally, if for prey state x and background state y,
+∥φ(x) −φ(y)∥< ϵ,
+for a discrimination threshold ϵ, the prey becomes perceptually indistinguishable from the
+background. The predator's perceptual system has not abandoned physics; it has been
+deceived at the level of compressed invariants.
+This dynamic reveals a crucial insight. Seeming can simulate being if it replicates the
+invariants recognized by a compressed perceptual system. Structural grounding is not
+required if the signal triggers invariant detection heuristics. Camouﬂage does not alter
+the substrate of the organism; it alters the feature space in which recognition occurs.
+The spectacle may therefore be interpreted as a socio-cognitive analogue of camouﬂage:
+it produces signals optimized to match the invariant templates embedded in collective
+perception, while the underlying structural substrate diverges from those signals.
+In this framework, being corresponds to transformation-invariant structure across physical
+and social dimensions. Seeming corresponds to the simulation of those invariants at the
+13
+
+level of compressed representation. The motto Esse quam videri thus acquires a physio-
+logical interpretation. To be rather than to seem is to maintain invariant coherence under
+transformation rather than merely to trigger recognition patterns.
+The spectacle is not ﬂawed because it produces images. All perception involves mediation.
+It is ﬂawed when it systematically ampliﬁes invariant-simulating signals while severing
+correspondence with substrate constraints. In doing so, it exploits the very mechanisms by
+which organisms learn physics. It converts the eﬃciency of sparse inference into an opening
+for large-scale distortion. To move from analogy to formal critique, we must specify how
+divergence between signal and substrate can be modeled. The next section introduces a
+functional measure of spectacular distortion.
+7
+Formalizing the Spectacle: Invariant Structure and Distor-
+tion
+Having grounded the distinction between being and seeming in perceptual invariance and
+sparse coding, we can now formalize the spectacle as a structural divergence between signal
+and substrate. The goal is not to reduce social theory to mathematics, but to articulate a
+constraint that renders the critique of appearing measurable in principle.
+Let B denote a structural substrate. In economic terms, B may represent labor ﬂows,
+energetic resources, institutional constraints, or material conditions. Let S denote a social
+signal. S may take the form of branding, reputation, narrative framing, symbolic capital,
+or public image. In a structurally congruent system, S is a projection of B that preserves
+invariant features relevant to collective inference.
+Deﬁnition 1 (Signal Projection). A signal projection is a mapping σ : B →S such that
+S = σ(B). In a healthy system, σ preserves invariant structure under relevant transformation
+groups: if g belongs to a transformation group G acting on B, then
+σ(g · B) ≈g′ · σ(B),
+for some corresponding transformation g′ in the signal space.
+Deﬁnition 2 (Divergence Functional). Let φ denote the compressed perceptual encoding
+applied by collective cognition to both B and S. The divergence functional is
+D(S, B) = ∥φ(S) −φ(σ(B))∥.
+14
+
+When D(S, B) approaches zero, signal and substrate are congruent at the level of recognized
+invariants. Appearance tracks being. When D(S, B) exceeds a critical threshold δ > 0, signals
+simulate invariant structure without preserving substrate coherence. Seeming displaces
+being.
+This formulation reframes Debord's claim that the spectacle replaces lived reality with
+representation. The replacement is not total in ontological terms; the substrate continues to
+exist. Rather, the replacement occurs in the perceptual ﬁeld. Compressed representations
+converge on S while diverging from B. Collective inference stabilizes around image rather
+than structure.
+Proposition 1 (Energetic Criterion). Let E : B →R≥0 denote an energetic capacity
+functional. The distinction between mutualistic and parasitic integration is captured formally
+as follows. Let Eh be the host substrate capacity and Ep be the platform's energetic extraction.
+In endosymbiosis:
+∆Etotal > 0
+and
+∆Eh > 0.
+Structural congruence is maintained; signals of partnership correspond to mutual gain. In
+parasitism:
+∆Eh < 0,
+even while surface signals encode narratives of empowerment or collaboration. The divergence
+functional satisﬁes D(S, B) > δ precisely when the signal preserves invariants associated
+with symbiosis while the substrate reﬂects asymmetric extraction.
+Predictive processing deepens this account. Cognitive systems maintain priors about invariant
+structure in social environments. High-salience cues that match these priors reduce local
+prediction error. The spectacle supplies precisely such cues. It presents compressed patterns
+that align with templates for authenticity, excellence, or belonging, while suppressing error
+signals that would reveal substrate divergence. The system achieves perceptual stability
+while accumulating structural incoherence.
+The spectacle, therefore, is not a mere accumulation of images. It is a regime in which
+D(S, B) is systematically ampliﬁed while perceptual compression prevents its detection.
+What Debord described in moral and historical terms can be reframed as a regime of high
+signal-substrate divergence. The injunction Esse quam videri becomes, under this model,
+the constraint condition D(S, B) →0.
+To be rather than to seem is to maintain minimal divergence between invariant substrate and
+perceptual signal. It is not a rejection of appearance. Appearance is unavoidable. Rather, it
+15
+
+is a demand that appearance preserve transformation-invariant structure across energetic
+and institutional dynamics. The spectacle becomes pathological when it normalizes high
+divergence as standard operating condition: seeming is optimized for recognition, while
+being erodes under extraction.
+8
+The Wizard and Sprezzatura: Illusion, Eﬀortlessness, and
+Concealed Generation
+Two cultural motifs illuminate the dynamics of seeming without being: the Wizard of Oz and
+the Renaissance ideal of sprezzatura. Both revolve around the management of appearance,
+yet they diﬀer fundamentally in how they relate surface display to generating structure.
+In The Wonderful Wizard of Oz, the central revelation is not that the Wizard possesses
+hidden supernatural power, but that he possesses none. The grand projections of authority—
+ﬂames, booming voices, mechanized spectacle—are stage eﬀects. Behind the curtain stands
+an ordinary man operating a machine. The spectacle is sustained by concealment of its
+generating apparatus. The visible implementation is optimized to trigger awe, fear, and
+submission. The generating function is deliberately hidden.
+The Wizard is therefore a paradigmatic case of high divergence between signal and substrate.
+The signal space S encodes omnipotence. The substrate B consists of mechanical props
+and rhetorical manipulation. The divergence functional D(S, B) is large, yet recognition
+persists because the audience's perceptual compression relies on salient cues rather than
+causal inspection. The spectacle works until the curtain is drawn. When the generating
+mechanism is concealed and insulated from feedback, the signal can be ampliﬁed beyond
+substrate capacity. Authority becomes theatrical rather than invariant.
+By contrast, the Renaissance concept of sprezzatura, articulated by Baldassare Castiglione in
+Il Cortegiano, presents a subtler phenomenon. Sprezzatura denotes cultivated eﬀortlessness.
+It is the art of performing skill in such a way that labor disappears from view. The generating
+structure—discipline, rehearsal, technical mastery—remains real. What is concealed is not
+emptiness, but eﬀort. Sprezzatura thus occupies an intermediate position between being
+and seeming: the substrate B is robust; the performer genuinely possesses the invariant
+structure required for excellence. However, the signal S suppresses visible strain.
+Remark 1 (Structural Distinction). In the Wizard case, B lacks the structure implied by S:
+the substrate is hollow. In sprezzatura, B exceeds what S explicitly displays: the substrate is
+16
+
+intact, and the signal merely suppresses cost. The divergence functional behaves diﬀerently
+across these two conﬁgurations. In the Wizard scenario, D(S, B) is high because invariant
+structure is absent from B altogether. In sprezzatura, D(S, B) may remain low with respect
+to outcome invariants, while being elevated with respect to visible process. The concealment
+concerns implementation cost, not structural capacity.
+This distinction clariﬁes an important nuance. Not all concealment is parasitic. The spectacle
+becomes pathological when signals simulate invariant structure without substrate grounding.
+Sprezzatura conceals labor while preserving invariant competence; it is a management of
+surface without falsifying the generating principle. Nevertheless, sprezzatura risks drift
+toward spectacle if optimization of surface becomes detached from substrate cultivation.
+When the aesthetic of eﬀortlessness is pursued independently of disciplined formation, the
+practice collapses into Wizardry. Recognition persists temporarily, but structural erosion
+follows.
+Both motifs therefore reinforce the methodological reading of Esse quam videri. The Wizard
+warns against mistaking ampliﬁed signal for generating power. Sprezzatura demonstrates
+that surface modulation need not violate structural congruence, provided that invariant
+substrate remains intact. The critical distinction lies not in whether eﬀort is visible, but in
+whether invariant generating structure exists beneath the surface.
+9
+Proﬁlicity: Identity After Authenticity
+The critique of the spectacle culminates, in Debord's formulation, in a narrative of lost
+authenticity. He suggests that a prior unity of life has been fractured by representation. The
+revolutionary impulse in his work is animated by the desire to restore immediacy, to abolish
+separation, and to reclaim an authentic mode of being.
+A contemporary alternative challenges this nostalgia. The theory of proﬁlicity, developed by
+Hans-Georg Moeller and Paul J. D'Ambrosio, argues that identity has never been grounded in
+pure, unmediated presence. Historical existence has always been structured by incongruence,
+role diﬀerentiation, and social evaluation. The diﬀerence in the present is not the emergence
+of mediation, but the dominance of a particular identity technology: the proﬁle.
+Proﬁlicity names a regime in which individuals are constituted through publicly visible
+representations validated by a generalized peer. The proﬁle is not simply a curated persona
+on a digital platform. It is a structural form in which identity becomes legible through
+17
+
+metrics, feedback loops, and comparative visibility. Recognition is distributed through
+systems of ratings, likes, citations, rankings, and endorsements. Value emerges relationally
+within a network of mutual observation.
+From the standpoint of proﬁlicity, the distinction between being and seeming is not eliminated,
+but reconﬁgured. The proﬁle is a constructed image, yet it is not necessarily an illusion
+masking a hidden authentic core. Rather, it is a functional interface through which social
+participation occurs. Identity is technologically scaﬀolded. There is no original unity to
+which one might return; there are only successive regimes of mediation.
+This reframing modiﬁes the interpretation of divergence. Under Debord's model, high
+D(S, B) signals pathological displacement of reality by image. Under proﬁlicity, the signal S
+is itself part of the substrate. Proﬁles generate real consequences. They shape opportunities,
+access, and social mobility. The mapping σ : B →S becomes bidirectional. Signals feed
+back into substrate conditions, altering energetic ﬂows and institutional structures.
+The risk, however, remains. Proﬁlicity does not abolish divergence; it redistributes it. When
+identity becomes dependent on validation from a generalized peer, the incentive to optimize
+S independently of B intensiﬁes. Signals are reﬁned to trigger recognition heuristics. The
+compression constraints described earlier still apply. Sparse coding at the collective level
+privileges salient features over structural depth. The vulnerability to camouﬂage persists
+under proﬁlicity, even without the Debordian narrative of fall.
+The crucial diﬀerence is conceptual rather than structural. Proﬁlicity rejects authenticity as
+a lost historical state. It treats identity as technologically mediated without presupposing
+a pre-spectacular essence. In this view, critique must operate from within the regime of
+mediation rather than from an imagined exterior. One cannot step outside proﬁles; one can
+only modulate the degree of divergence they introduce.
+The demand for structural congruence thus shifts from restoration to calibration. The
+question becomes whether proﬁles preserve invariant structure across transformation or
+whether they amplify signal-substrate divergence for competitive advantage. Being is not
+redeﬁned as pre-representational presence, but as coherence under iterative feedback. In this
+light, the tension introduced by Esse quam videri remains operative but loses its nostalgic
+dimension. To be rather than to seem does not imply withdrawal from visibility. It implies
+maintaining low divergence between encoded identity and energetic reality within a mediated
+system. The spectacle and proﬁlicity share a semiotic foundation while diverging in historical
+interpretation. Under the structural metric of divergence, critique becomes continuous rather
+18
+
+than revolutionary: the aim is not to abolish mediation but to minimize distortion.
+10
+Abstraction, Performance, and the Discipline of Generat-
+ing Structure
+In any suﬃciently developed system, abstraction operates by reducing irrelevant degrees
+of freedom. A model that preserves every micro-detail is unusable. What matters is the
+retention of structure suﬃcient to generate stable behavior across transformation. The
+distinction between being and seeming can therefore be reinterpreted as a question about
+abstraction ﬁdelity.
+When abstraction functions properly, it preserves the generating constraints of a system while
+suppressing incidental variation. A diﬀerential equation abstracts from speciﬁc trajectories
+while retaining the law that produces them. A geometric invariant abstracts from coordinate
+choice while preserving relational structure. The abstract representation is not a distortion;
+it is a compression that maintains causal coherence. Pathology arises when abstraction ceases
+to preserve the generating constraint and instead optimizes for perceptual salience. In such
+cases, the abstract layer ﬂoats free of the substrate it once summarized. The visible interface
+becomes self-referential. The implementation disappears not because it is unnecessary, but
+because it has been displaced by a representation optimized for recognition rather than
+generation.
+A further pathology concerns the illusion of causality. Consider systems in which outcomes
+appear eﬀortless, instantaneous, or inevitable. This disappearance of visible process can be
+interpreted in two ways. In one case, the underlying generative mechanism is intact and
+robust; the suppression of visible eﬀort reﬂects mastery. In another case, the appearance of
+inevitability conceals the absence of generative depth. The surface is maintained through
+control of perceptual channels rather than through structural capacity. The illusion of
+causality arises when visible signals are mistaken for the forces that generate them. Metrics
+are taken as causes rather than as indicators. Reputation becomes conﬂated with competence.
+Visibility becomes conﬂated with value. In each instance, the system confuses projection
+with principle—a reversal of generative hierarchy in which the particular replaces the general.
+A reliable indicator of being, as distinct from seeming, is persistence under transformation.
+If a structure remains coherent when parameters shift, illumination changes, or context
+varies, then it exhibits invariant depth.
+If it collapses when attention wanes or when
+19
+
+external conditions ﬂuctuate, then it was sustained by surface optimization. Testing under
+transformation provides a criterion independent of aesthetic impression. A theory remains
+valid if it generates consistent predictions across coordinate frames. An institution remains
+stable if it withstands resource ﬂuctuation without rhetorical inﬂation. An identity remains
+coherent if it preserves relational commitments across audiences and temporal phases.
+Seeming thrives in stable perceptual environments. Being endures perturbation.
+To interpret being as generating function is thus to orient analysis toward ﬁrst principles
+rather than implementations. This does not entail rejection of implementation; speciﬁc forms
+are necessary and interfaces are unavoidable. The question concerns priority. Does the system
+cultivate the rule from which instances arise, or does it curate instances while neglecting
+the rule? In cognitive terms, this distinction parallels the diﬀerence between memorization
+and structural understanding. Memorization succeeds within a narrow distribution of cases.
+Structural understanding generalizes across perturbations. The former produces impressive
+surface ﬂuency; the latter produces invariant competence.
+The enduring relevance of Esse quam videri lies in this structural insight. To be rather
+than to seem is to anchor implementation in generative law. It is to ensure that abstraction
+reduces without falsifying, that performance conceals labor without erasing structure, and
+that visibility remains a projection of invariant coherence rather than its substitute. Systems
+that privilege projection over principle accumulate fragility. They must continually reinforce
+surface coherence because they lack invariant substrate. Systems that preserve generating
+constraints can tolerate variation without collapse.
+11
+Intervention Architecture: Deriving Solutions from the
+Formalism
+The preceding analysis constitutes a diagnostic architecture. The divergence functional
+D(S, B) is not merely a metaphor for social critique; it is an operational quantity that, when
+speciﬁed with suﬃcient precision, generates a corresponding set of interventions. The power
+of deriving solutions from within the same formal structure that identiﬁes the disease is that
+it constrains the solution space. Not every proposed reform is consistent with the formalism.
+The interventions described here are not imported from elsewhere; they are consequences of
+the axioms already established.
+The central operational insight is that D(S, B) is minimized not by suppressing signals but
+20
+
+by redesigning the incentive gradients under which signals are generated, evaluated, and
+ampliﬁed. A proﬁle should not be evaluated by recognition metrics but by transformation
+stability. If a representation remains coherent across contexts—diﬀerent audiences, diﬀerent
+timescales, diﬀerent incentive gradients—then it preserves invariant structure. The formalism
+therefore licenses a speciﬁc replacement: instead of amplifying the most reactive signal,
+systems should weight consistency under perturbation.
+Deﬁnition 3 (Longitudinal Coherence Measure). Let e(t, c) denote the engagement signal
+of a representation at time t under contextual condition c ∈C. Deﬁne the longitudinal
+coherence measure as
+CL =
+Ec∈C[e(t, c)]
+Varc∈C[e(t, c)] + 1.
+A high value of CL indicates that the signal is stable across contexts, which is the operational
+deﬁnition of invariance established in Section 6. Platform ranking by CL rather than by
+instantaneous engagement e(t, c0) for a single dominant context c0 directly implements the
+invariance criterion at the institutional level.
+The second intervention follows from the physiological argument on sparse coding. Spectacu-
+lar systems compress reality into low-dimensional, easily legible cues. Since the vulnerability
+to camouﬂage is a consequence of dimensionality reduction, a corrective architecture must
+reintroduce dimensional richness. Formally, if the discrimination condition ∥φ(x)−φ(y)∥> ϵ
+is required to distinguish distinct substrates x and y, then increasing the dimension of the
+encoding space Z tightens the condition by reducing the radius of the confusion set. In
+platform design, this corresponds to shifting from feed-based immediacy to layered disclosure,
+where depth precedes ampliﬁcation. The goal is structural irreducibility: if a representation
+cannot be collapsed to a low-dimensional cue without information loss, it is harder to
+counterfeit.
+Deﬁnition 4 (Energetic Mutualism Index). Let ∆CapA denote the change in autonomous
+capacity of participating agents following integration with a platform or institution, and let
+∆CapP denote the change in platform capacity. The mutualism index is
+M = ∆CapA
+∆CapP
+.
+Autonomous capacity CapA may be approximated empirically by skill acquisition velocity,
+independent creative output rates, network resilience (the degree to which agents function
+eﬀectively when platform access is removed), and option-set breadth over time. When M > 1,
+integration is endosymbiotic: the agents gain more autonomous degrees of freedom than
+21
+
+they contribute to platform growth. When M < 1, the energetic ﬂow is parasitic regardless
+of the surface rhetoric of partnership or empowerment. The mutualism index converts the
+Proposition of Section 8 into a governance metric rather than a moral accusation. It can in
+principle be mandated as a regulatory reporting requirement.
+The generating function methodology of Section 5 points toward a fourth class of intervention:
+cultural and educational reform oriented around rule transparency rather than output
+evaluation. The question is not whether a particular expression is authentic but whether
+the rule that produces it is stable across transformations. This yields a concrete evaluative
+criterion: instead of assessing outputs, assess whether the generating process remains coherent
+under novel constraints. In creative domains this means exposing process alongside results.
+In professional domains it means demonstrating constraint-handling under conditions not
+anticipated by the original signal, rather than merely presenting polished outcomes. A
+rule that survives perturbation signals substrate integrity; a rule that collapses under new
+conditions signals that the visible output was a surface curated for a speciﬁc perceptual
+environment.
+Proposition 2 (Horizon Evaluation and Friction as Protective). The predictive processing
+account of Appendix E implies that spectacular systems minimize local prediction error while
+accumulating long-term structural misalignment. This suggests a ﬁfth class of intervention:
+evaluation systems should track outcomes at extended temporal horizons rather than optimizing
+for immediate friction minimization. Formally, deﬁne the accumulated divergence over an
+interval [t0, t1] as
+D[t0,t1] =
+Z t1
+t0
+D(S(t), B(t)) dt.
+A system that appears smooth at each instant but produces a large D[t0,t1] is a failure by
+this criterion, even if it scores well on instantaneous satisfaction metrics. Conversely, a
+system that introduces local discomfort—deliberate latency, contextual expansion, friction in
+evaluation—while reducing D[t0,t1] is a structural success. This reframes friction as protective
+rather than ineﬃcient, and provides a precise temporal complement to the static divergence
+criterion.
+At the personal scale, the framework implies a discipline of invariance testing that is
+behavioral rather than contemplative. The question is not whether one can imagine one's
+commitments holding under diﬀerent conditions, but whether they actually do. The stress
+test requires periodically removing the conditions under which signals were optimized—
+changing the audience, removing a distribution channel, working without visibility—and
+22
+
+observing what remains. The rule that persists under actual incentive removal, not imagined
+incentive removal, is the rule with substrate integrity. This operationalizes the Ciceronian
+concern for virtue-under-scrutiny and the biblical concern for coherence-of-heart into a
+testable behavioral protocol.
+At the policy level, the framework implies that intervention should focus on incentive
+topology rather than content moderation. Change the gradient, and the divergence functional
+adjusts. Regulatory instruments consistent with the formalism include requirements for
+longitudinal coherence reporting, mutualism index disclosure, mandatory depth-gating before
+ampliﬁcation, and public investment in longitudinal data infrastructure suﬃcient to track
+outcomes at the horizon lengths required by D[t0,t1]. These are engineering requirements
+derivable from the formal structure. They are not imported moral preferences.
+Esse quam videri in this light becomes not a nostalgic demand for purity but a constraint
+equation. To be rather than to seem is to demand that the morphisms between substrate
+and signal preserve structure. The practical program is to instantiate those constraints
+wherever signals are generated, evaluated, and ampliﬁed.
+12
+Operationalizing the Divergence Functional
+If divergence D(S, B) is to function as more than a metaphor, it must be treated as a
+measurable functional over time and transformation classes. Let St denote the publicly
+observable signal at time t, and Bt the corresponding substrate state. Deﬁne a family of
+perturbations T acting on context: changes of audience, incentive gradient, temporal horizon,
+and medium.
+We deﬁne longitudinal divergence as
+¯D =
+Z t1
+t0
+D(St, Bt) dt
+and transformation-sensitive divergence as
+DT = Eτ∈T [D(τ(S), τ(B))] .
+A system that evaluates identity at moments of peak visibility minimizes D only locally in t
+and under restricted τ. A structurally aligned system instead minimizes ¯D and DT across
+23
+
+extended intervals and perturbation classes. Institutional design can therefore be speciﬁed
+as the enforcement of temporal invariance constraints. Metrics must reward stability of
+generative structure under perturbation rather than instantaneous recognizability. Trust
+becomes an emergent property of low DT , not of stylistic familiarity.
+13
+Dimensional Richness as Anti-Camouﬂage Architecture
+Sparse coding renders observers vulnerable to low-dimensional mimicry. Let Φ(B) denote
+the compressed perceptual encoding of substrate. Spectacular systems optimize S such that
+Φ(S) ≈Φ(B) even when S ̸∼= B structurally.
+Corrective architectures increase representational dimensionality prior to compression. Let
+R denote contextual enrichment such that the observed signal becomes S′ = (S, R). If R
+preserves generative history, constraint traces, and temporal depth, then the compression
+map Φ retains more structural information:
+Φ(S′) ̸≈Φ(B)
+unless
+S′ ∼= B.
+Layered disclosure, slower reveal rates, and context-ﬁrst presentation increase the cost of
+maintaining counterfeit invariants. Friction here is not obstruction but ﬁdelity ampliﬁcation.
+When decoding requires temporal investment, low-cost mimicry fails to scale.
+14
+Energetic Accounting of Mutualism and Parasitism
+Let Ci(t) denote the autonomous capacity of agent i at time t, measured by degrees of freedom
+in skill, production, and network resilience. Deﬁne system integration as a transformation
+I : Bi 7→B′
+i. The energetic character of I is determined by
+∆Ci = C′
+i(t + ∆t) −Ci(t).
+A system is mutualistic if P
+i ∆Ci > 0, and parasitic if P
+i ∆Ci < 0, even when surface
+narratives of empowerment persist. This converts moral critique into capacity accounting.
+Governance tracks whether integration expands or contracts substrate degrees of freedom.
+Spectacular parasitism is characterized by D(S, B) →0 at the perceptual level while
+24
+
+P
+i ∆Ci < 0 at the structural level.
+15
+Generative Rule Transparency
+Let G denote the generating function mapping substrate processes to outputs, G : B →S.
+Authenticity is not a property of S alone but of the stability of G under perturbation. For
+perturbations τ ∈T , G is invariant if
+G ◦τB ∼= τS ◦G.
+Educational and institutional reform should therefore expose G: constraint handling, revision
+pathways, and decision criteria. When observers can evaluate the commutativity of this
+diagram, surface style becomes secondary to structural continuity. Where G collapses
+under minor incentive shifts, divergence is present even if S remains visually coherent.
+The evaluative criterion shifts from output quality to rule stability: a generating process
+that survives novel constraints signals substrate integrity, while one that dissolves under
+perturbation reveals a signal curated for a speciﬁc perceptual environment rather than
+grounded in invariant structure.
+16
+Latency as Alignment Mechanism
+Under variational free energy, agents minimize expected prediction error. Spectacular systems
+reduce short-term error by supplying familiar cues, optimizing toward arg minS E[Errorshort].
+However, long-horizon divergence accumulates proportionally to
+R
+D(S, B) dt.
+Alignment-oriented systems must therefore tolerate local increases in prediction error in
+order to reduce integrated divergence. Introduce controlled latency λ such that signal release
+satisﬁes
+S(t) = S∗(t −λ),
+where λ enforces reﬂective processing and contextual integration before emission. Latency
+functions as a structural regularizer. By preventing premature convergence on low-ﬁdelity
+representations, it reduces accumulated ¯D over extended horizons. The deliberate introduc-
+tion of processing time is not an ineﬃciency but a mechanism for forcing alignment between
+generative structure and emitted signal.
+25
+
+17
+Invariance Testing as Personal Practice
+At the individual scale, let G denote one's generative rule. For perturbations τ representing
+audience change, incentive shift, or visibility reduction, invariance testing evaluates whether
+G ≈G◦τ. If commitments, labor, and decision criteria persist under perturbation, divergence
+remains bounded. If G changes discontinuously under minor τ, structural misalignment is
+present.
+This reframes ethical reﬂection as structural stress testing. The question is not sincerity
+but commutativity under transformation. Crucially, this test must be behavioral rather
+than contemplative: the discipline requires periodically removing the conditions under which
+signals were optimized and observing what survives. The rule that persists under actual
+incentive removal—not imagined removal—is the rule with substrate integrity.
+18
+Incentive Topology and Systemic Alignment
+Let ∇R denote the gradient of reward within an institutional environment. Divergence
+evolves according to
+d
+dtD(S, B) = f(∇R, T , Φ).
+Systems that reward rapid surface adaptation create steep local gradients favoring low-cost
+signals. Flattening short-term gradients and steepening long-term coherence gradients
+reshapes f and thereby shifts the equilibrium value of D(S, B) at scale. Policy intervention
+targets incentive topology rather than content adjudication. This is the systemic comple-
+ment to the personal practice of invariance testing: where individual practice modiﬁes the
+generating rule G, institutional design modiﬁes the reward landscape within which all G
+evolve.
+19
+Esse Quam Videri as Morphism Constraint
+The classical injunction may be restated formally. Let identity be deﬁned as invariance
+under transformation:
+Identity(B) = {τ ∈T | τ(B) ∼= B}.
+26
+
+The constraint is that mediation F must preserve these invariants:
+F(τ(B)) ∼= τ(F(B)).
+To be rather than to seem is therefore a condition on morphisms. Divergence is minimized
+when mappings between substrate and signal preserve structural symmetries across trans-
+formations. Implementation consists in embedding these constraints into metric design,
+architectural friction, energetic accounting, rule transparency, functorial ﬁdelity, and incen-
+tive topology. The framework thus shifts from cultural lamentation to systems engineering
+speciﬁcation: esse quam videri names not a nostalgic ideal but a commutativity requirement
+on the diagram that relates substrate dynamics to their social representation.
+20
+The Faithful Functor: Increasing the Fidelity of Repre-
+sentation
+The category-theoretic appendix to this essay identiﬁes the core formal problem with a
+precision that scalar analysis cannot achieve: the pathology of spectacular representation
+is not that representation exists, but that the functor Σ : B →S is non-faithful. Distinct
+substrate morphisms—distinct transformation processes in the underlying generative domain—
+map to indistinguishable signal morphisms. Two very diﬀerent causal histories produce the
+same appearance. The committed practitioner and the sophisticated simulator cannot be
+distinguished in the signal space because the morphism structure of their behavior maps to
+the same signal morphisms.
+This precise formulation changes what counts as a solution. The task is not to abolish the
+functor Σ; mediation is unavoidable and the functor is constitutive of social legibility. The
+task is to increase its ﬁdelity by ensuring that more morphisms survive the mapping. A
+faithful functor is injective on hom-sets: distinct morphisms between substrates yield distinct
+morphisms between their signals. A solution architecture is therefore any institutional
+arrangement that increases hom-set injectivity.
+One strategy follows directly from the categorical structure. Cross-domain coupling forces the
+functor to preserve morphisms across multiple independent signal channels simultaneously.
+It is substantially easier to simulate coherence in one signal domain than to maintain
+simultaneous coherence across three independent domains that were not jointly optimized.
+The substrate morphism must map consistently into all three signal morphisms; collapse in
+27
+
+any channel propagates. Formally, if Σ1, Σ2, Σ3 : B →S are three independent projection
+functors, then the product functor Σ1 × Σ2 × Σ3 : B →S3 has strictly higher ﬁdelity than
+any individual component, since a substrate morphism that collapses in one channel while
+surviving in the others is detectable from the joint signal.
+A second strategy involves traceability: requiring that objects in S carry suﬃcient metadata
+to recover the substrate objects in B from which they were generated. This corresponds
+to requiring that Σ be not only faithful but also conservative in the relevant sense—that
+isomorphisms in S reﬂect isomorphisms in B. When Σ is conservative, the appearance of
+equivalence implies genuine structural equivalence. When it is not conservative, as in the
+Wizard case, the appearance of power reﬂects no corresponding substrate power.
+The categorical language also clariﬁes the reconciliation with proﬁlicity. The theory of
+proﬁlicity does not deny that identity is functorially mediated; it aﬃrms this. The proﬁle
+is a functor image. What proﬁlicity resists is the nostalgia for a pre-functorial state. The
+categorical reformulation shows why this resistance is well-founded: there is no B without a
+Σ, no substrate without representation. The question is always the ﬁdelity of the functor in
+use.
+Proposition 3 (Kan Extension and Generative Principle). Let J : Θ0 ,→Θ be an inclusion
+of observed parameter contexts and G0 : Θ0 →B the known generating process on those
+contexts. The left Kan extension
+LanJ(G0) : Θ →B
+is the universal minimal extension of the generating principle from observed to unobserved
+contexts. A system optimized for implementation without generating principle corresponds to
+one that interpolates in S rather than extending in B—that is, one that ﬁts appearances across
+new contexts without the universal property that would guarantee substrate coherence. This
+provides a categorical characterization of what it means for a rule to fail under perturbation:
+it lacks the universal property that would make it the canonical extension.
+The practical upshot is concrete. To increase functor ﬁdelity is to require that identities and
+institutions remain accountable across multiple independent domains, that cross-domain
+consistency be institutionally tracked, and that the generative processes underlying signals
+be surfaced rather than suppressed. This is the categorical articulation of the intervention
+program derived in the previous section. The solutions are not competing formulations of
+the same idea; they are the same derivation stated in two complementary mathematical
+28
+
+languages.
+21
+The Yarncrawler as Transjective Functor
+We now reinterpret the Yarncrawler not as a metaphorical infrastructure but as a formally
+speciﬁed transjective functor. Its task is to mediate between substrate dynamics and signal
+surfaces while preserving structural invariants across transformations.
+Let B denote the category of substrate processes. Objects in B are constraint-bearing
+dynamical systems—labor processes, institutional ﬂows, cognitive routines. Morphisms are
+admissible transformations preserving structural feasibility. Let S denote the category of
+public signals. Objects are representations, proﬁles, documents, metrics. Morphisms are
+transformations of representation under audience, medium, or temporal shift.
+A naive mediation is a functor F : B →S, which often fails to be faithful. Distinct substrate
+morphisms collapse into indistinguishable signals, producing divergence. The Yarncrawler
+reﬁnes this mapping by introducing a third category T , the category of transjective traces.
+Objects in T are process-indexed signal bundles: representations annotated with constraint
+history, energetic cost, and transformation path.
+We deﬁne the Yarncrawler as a pair of functors
+Y1 : B →T ,
+Y2 : T →S
+such that the composite Y = Y2 ◦Y1 is more faithful than F. Transjectivity here means
+that the mapping does not merely project from substrate to signal, but carries forward
+morphisms as ﬁrst-class objects. If f : B1 →B2 is a substrate morphism, then Y1(f) is not
+erased but encoded as a trace morphism in T , preserving constraint continuity. Thus the
+Yarncrawler acts as a structure-preserving mediator rather than a surface generator.
+22
+Parser Interpretation
+The Yarncrawler can equivalently be understood as a constraint parser. Let substrate
+evolution be represented as a path γ : [0, 1] →B. A spectacle system samples γ at sparse
+extrema, producing S = Sample(γ), which discards intermediate structure. The Yarncrawler
+29
+
+instead performs a parse:
+Parse(γ) = (γ, Σ, C),
+where Σ denotes semantic segmentation and C denotes constraint annotations extracted
+from the path.
+Formally, parsing is a functor from the path category Path(B) into a category of structured
+derivations D:
+P : Path(B) →D.
+The essential property is that P preserves compositionality. If γ = γ2 ◦γ1, then P(γ) =
+P(γ2) ◦P(γ1).
+This compositional preservation prevents collapse into low-dimensional
+summary. The parse tree retains branching structure, constraint resolution, and revision
+history. Where a spectacular system reduces a developmental arc to its most recognition-
+optimal frame, the parser encodes the morphism sequence that produced each frame.
+23
+Transjectivity and Divergence Control
+We now relate the Yarncrawler to the divergence functional D(S, B). Let S = Y (B) be the
+Yarncrawler-mediated signal. Because morphisms are preserved in T , perturbations τ ∈T
+commute more readily with Y :
+Y (τ(B)) ∼= τ(Y (B)).
+This approximate commutativity reduces transformation-sensitive divergence:
+DT (Y (B), B) < DT (F(B), B).
+Intuitively, the Yarncrawler lowers divergence by embedding constraint history into the
+signal itself. Mimicry becomes more expensive because surface invariants must now align
+with preserved morphisms. A counterfeit signal must not only reproduce the perceptual
+surface of a substrate; it must reproduce the constraint trace that the Yarncrawler encodes.
+Since constraint traces are generated by actual substrate dynamics and not easily synthesized
+independently, the cost of camouﬂage increases.
+30
+
+24
+Yarncrawler as Infrastructure for Mutualism
+Recall the energetic accounting condition ∆Ci = C′
+i −Ci. A Yarncrawler-mediated system
+increases ∆Ci by exposing constraint traces and generative rules. Agents acquire visibility into
+process structure, enabling skill transfer and autonomous reproduction of substrate patterns.
+In categorical terms, the Yarncrawler approximates a faithful functor, and faithfulness
+corresponds to capacity expansion. When morphisms are preserved, agents can navigate
+structure rather than merely consume signals.
+A parasitic platform erases morphisms: agents receive outputs but cannot reconstruct the
+generating process. A mutualistic platform, functorially formalized by the Yarncrawler,
+preserves morphisms: agents can trace derivation paths, modify constraint parameters, and
+develop independent generative capacity. Thus the Yarncrawler operationalizes endosymbio-
+sis. It integrates representation with substrate without erasing structural continuity, and in
+doing so converts the energetic mutualism index M from a measurement criterion into an
+architectural property built into the mediating functor.
+25
+Functorial Speciﬁcation of Transjectivity
+We formalize transjectivity precisely. Let E be a ﬁbered category over B capturing energetic
+state. A transjective functor Y : B →S is one that factors through a ﬁber-preserving em-
+bedding B ,→E such that energy gradients and constraint invariants are mapped covariantly
+into signal space.
+For any commutative diagram in B,
+B1
+f−→
+B2
+↓τ
+↓τ
+B′
+1
+f′
+−→
+B′
+2
+transjectivity requires that its image under Y remains approximately commutative in S.
+The Yarncrawler therefore acts as a functor that transports not only objects but structural
+relations across domains. It is a parser because it segments and annotates substrate paths;
+it is transjective because it carries forward invariant-preserving morphisms.
+In this speciﬁcation, the Yarncrawler becomes a divergence-minimizing infrastructure. It
+31
+
+enforces the constraint that mediation preserve structure across transformation, thereby
+operationalizing the morphism condition underlying esse quam videri. Where a spectacular
+functor F achieves perceptual legibility by collapsing hom-sets, the Yarncrawler achieves
+structural legibility by preserving them. The two functors represent not competing aes-
+thetics but competing engineering speciﬁcations, one optimizing for recognition and one for
+congruence.
+26
+Conclusion: The Demand for Structural Congruence
+The phrase Esse quam videri began as a school motto. It now stands as a structural
+constraint. The tension between being and seeming, ﬁrst encountered as a moral exhortation,
+unfolds into a physiological, mathematical, and socio-economic problem. Guy Debord
+diagnosed a society in which appearing displaces being, and social relations are mediated by
+images. His critique articulated a condition of alienation in which representation becomes
+autonomous and authenticity is declared lost.
+This essay has preserved the structural insight of that diagnosis while suspending its nos-
+talgia. Rather than presupposing an original unity of life, it has grounded the distinction
+between being and seeming in perceptual invariance. Organisms learn physics by detecting
+transformation-invariant structure. Sparse coding enables eﬃciency but creates vulnerability.
+Camouﬂage exploits compression by simulating invariant features without preserving sub-
+strate reality. The spectacle can be understood as a large-scale analogue of such simulation.
+By introducing the divergence functional
+D(S, B) = ∥φ(S) −φ(σ(B))∥,
+the critique shifts from moral lament to formal constraint. Being corresponds to invariant
+coherence across transformations. Seeming corresponds to invariant simulation at the level
+of compressed representation. When D(S, B) approaches zero, appearance tracks structure.
+When D(S, B) increases, recognition is triggered without reciprocity. The spectacle becomes
+pathological not because it produces images, but because it ampliﬁes divergence between
+signal and substrate.
+The comparison with proﬁlicity further clariﬁes the stakes. If identity is technologically
+mediated and there is no pristine past to restore, then critique must operate from within
+mediation. Proﬁles are not inherently illusions; they are interfaces. The risk lies in optimizing
+32
+
+signal independent of structural grounding. The task is not to abolish appearance, but to
+calibrate it.
+The essay's most signiﬁcant departure from prior critical frameworks is the derivation of
+an intervention architecture from within the formalism itself. The solutions proposed—
+longitudinal coherence weighting, dimensional richness as anti-camouﬂage, the energetic
+mutualism index, rule transparency as evaluative criterion, extended horizon assessment
+of accumulated divergence—are not moral prescriptions imported from outside the theory.
+They are consequences of the same formal structure that identiﬁes the pathology. This
+derivation is the methodological contribution that distinguishes structural analysis from
+cultural criticism. A culture critic identiﬁes divergence and laments it. A structural analyst
+identiﬁes divergence, formalizes it, and then asks what constraint modiﬁcations would reduce
+it.
+The category-theoretic perspective reinforces this conclusion with additional precision. The
+problem is non-faithfulness of the functor from substrate to signal: distinct causal histories
+produce indistinguishable appearances. The solution class is all institutional arrangements
+that increase hom-set injectivity—cross-domain coupling, traceability, conservative account-
+ing of isomorphisms.
+These are not metaphors.
+They are structural requirements for
+representation systems that preserve enough morphisms to make the underlying substrate
+legible.
+Structural congruence therefore replaces authenticity nostalgia. The injunction to be rather
+than to seem becomes a demand for low divergence under transformation. It requires that
+energetic ﬂows, institutional structures, and identity signals remain reciprocally aligned.
+It requires that the invariants detected by collective perception correspond to constraints
+sustained by the substrate. Such a demand cannot be satisﬁed through withdrawal from
+visibility. Nor can it be achieved by revolutionary rupture alone. It requires continuous
+structural attention. Every critique risks becoming another signal within the perceptual
+ﬁeld it interrogates. Every posture against spectacle may itself become spectacular. The
+divergence functional applies not only to institutions but to theorists.
+The authentic journey, if the term is retained, does not consist in returning to pre-
+representational immediacy. It consists in preserving coherence between signal and structure
+across time. It consists in ensuring that appearing remains a projection of being rather
+than its camouﬂage. In a world where compression is inevitable and mediation is struc-
+tural, the preservation of invariant congruence becomes the central ethical, epistemic, and
+engineering task. Esse quam videri: not as nostalgia, but as a constraint equation whose
+33
+
+practical program is to instantiate congruence wherever signals are generated, evaluated,
+and ampliﬁed.
+34
+
+A
+Transformation Groups and Invariant Structure
+Let X be a smooth manifold representing environmental or structural state space. Let G be
+a Lie group acting smoothly on X:
+Φ : G × X →X,
+(g, x) 7→g · x.
+A function f : X →Rn is G-invariant if
+f(g · x) = f(x),
+∀g ∈G, ∀x ∈X.
+Deﬁne the orbit of x ∈X:
+Ox = {g · x | g ∈G}.
+An invariant f is constant on orbits: f|Ox = const. Let TxX denote the tangent space at x.
+The inﬁnitesimal action of the Lie algebra g generates vector ﬁelds
+ξX(x) = d
+dt
+
+t=0
+exp(tξ) · x.
+The inﬁnitesimal invariance condition is
+LξXf = 0,
+∀ξ ∈g.
+Structural being is identiﬁed with equivalence classes under G:
+[x] = X/G,
+π : X →X/G.
+Invariant structure corresponds to functions descending to the quotient: f = ˜f ◦π.
+B
+Sparse Encoding and Compressed Representation
+Let X ⊂Rm denote high-dimensional state space and Z ⊂Rk with k ≪m denote
+compressed representation space. Deﬁne encoding map φ : X →Z. Assume dictionary
+35
+
+matrix B = [b1 . . . bn] ∈Rm×n. Sparse coding solves
+min
+a∈Rn ∥x −Ba∥2
+2 + λ∥a∥1.
+The compressed representation is φ(x) = a∗(x), the minimizer of the above functional. The
+discrimination condition between x, y ∈X is ∥φ(x) −φ(y)∥2 > ϵ, while the camouﬂage
+condition is ∥φ(x) −φ(y)∥2 ≤ϵ. If G acts on X, the equivariance defect with respect to a
+representation ρ of G on Z is
+E(g, x) = ∥φ(g · x) −ρ(g)φ(x)∥2.
+Perfect equivariance corresponds to E(g, x) = 0. Compression vulnerability is the existence
+of x ̸= y such that φ(x) = φ(y).
+C
+Signal-Substrate Divergence Functional
+Let B ⊂Rm denote substrate space, S ⊂Rn signal space, and σ : B →S the projection
+map. Let φS : S →Z and φB : B →Z be compressed encodings into a common feature
+space Z. The divergence functional is
+D(S, B) = ∥φS(S) −φB(B)∥2.
+Its expectation over distribution µ on B is
+D = EB∼µ [D(σ(B), B)] .
+The congruence condition is D →0 and the distortion regime is D > δ for threshold δ > 0.
+The parasitic extraction condition is
+d
+dtE(B(t)) < 0
+while
+d
+dt∥φS(S(t))∥2 ≥0.
+Stability under perturbation η requires
+D(σ(B + η), B + η) −D(σ(B), B) = O(∥η∥).
+36
+
+D
+Generating Operators and Implementation Maps
+Let Θ ⊂Rp denote parameter space, G : Θ →X a generating operator, and Π : X →S an
+implementation map to signal space. The composite mapping is
+Θ G
+−→X
+Π
+−→S.
+The structural ﬁdelity condition is
+rank(DGθ) = rank(D(Π ◦G)θ),
+where D denotes the diﬀerential. Loss of generative depth is characterized by rank(D(Π ◦
+G)θ) < rank(DGθ). Overﬁtting to implementation corresponds to the existence of θ1 ̸= θ2
+such that Π(G(θ1)) = Π(G(θ2)). The implementation distortion functional is
+∆(θ) = ∥DGθ −D(Π ◦G)θ∥.
+Generative invariance under a transformation group H acting on Θ requires G(h·θ) = gh·G(θ)
+for induced gh acting on X, together with the projection stability condition Π(gh · x) =
+ρ(h)Π(x) for a representation ρ of H on S.
+E
+Predictive Processing and Error Suppression
+Let X denote latent substrate states and S observable signals. The generative model is
+p(S | X), p(X), with predictive distribution p(S) =
+R
+p(S | X)p(X) dX. The prediction
+error functional is
+E(S, X) = ∥S −ˆS(X)∥2
+2,
+ˆS(X) = E[S | X].
+Variational free energy is
+F(q, X) = Eq(X)[E(S, X)] + KL(q(X)∥p(X)).
+Perceptual update follows ˙q(X) = −∇qF. The error suppression condition characterizing
+37
+
+spectacular pathology is
+∇XE(S, X) ≈0
+while
+∥X −Xtrue∥large,
+with structural misalignment realized as E(S, Xtrue) small while D(S, B) > δ. Attractor
+dynamics follow ˙X = −∇XF, with metastable signal basins satisfying ∇XF = 0 and ∇2
+XF >
+0. Persistent divergence is the condition that there exists ϵ > 0 such that D(S(t), B(t)) > ϵ
+for all t ∈[t0, t1].
+F
+Spectral Properties of Divergence Dynamics
+This appendix develops the spectral analysis of the divergence functional, addressing the
+stability and propagation of signal-substrate gap under system dynamics. Let the joint state
+space be M = B × S with dynamics
+˙B = f(B),
+˙S = h(S, B) + η(t),
+where f governs autonomous substrate evolution, h governs signal updating in response to
+substrate, and η(t) is an exogenous noise process capturing the independent optimization of
+signal under incentive gradients.
+Deﬁne the divergence ﬂow as
+d
+dtD(S(t), B(t)) = ⟨∇SD, ˙S⟩+ ⟨∇BD, ˙B⟩.
+For the linearized system near a congruent ﬁxed point (S∗, B∗) where D(S∗, B∗) = 0, let
+δS = S −S∗and δB = B −B∗. The linearized divergence dynamics are governed by the
+Jacobian matrix
+J =
+ 
+∂Sh
+∂Bh
+0
+∂Bf
+!
+.
+The spectral gap of the linearized system determines the rate at which perturbations in
+the divergence functional decay or amplify. Let λmax(J) denote the spectral abscissa of
+J. When λmax(J) < 0, the congruent ﬁxed point is stable: small perturbations in D
+decay exponentially. When λmax(J) > 0, the ﬁxed point is unstable, and perturbations in
+divergence amplify.
+38
+
+Proposition 4 (Spectral Condition for Congruence Stability). The congruent equilibrium
+D = 0 is asymptotically stable if and only if the spectral abscissa satisﬁes
+λmax(∂Sh) < 0
+and
+λmax(∂Bf) < 0.
+Under spectacular conditions, the signal dynamics ˙S are governed by incentive gradients
+that optimize φS(S) independently of substrate alignment, which generically shifts λmax(∂Sh)
+toward zero or positive values, destabilizing congruence.
+The spectral analysis makes precise why spectacular systems are self-reinforcing. When
+λmax(∂Sh) > 0, small initial divergences between S and B amplify over time. The congruence
+equilibrium becomes a repeller rather than an attractor. Interventions that change the
+gradient of h—that is, that alter how signals respond to substrate—correspond to shifting
+∂Sh toward negative spectral abscissa. The ﬁve interventions derived in Section 11 can each
+be interpreted spectrally: longitudinal coherence weighting stabilizes signal dynamics around
+substrate-tracking equilibria; dimensional richness increases the dimension of the feature
+space, reducing the eﬀective λmax by distributing perturbations across more coordinates;
+mutualism accounting modiﬁes the incentive gradient for ˙S to penalize substrate-independent
+optimization; rule transparency introduces negative feedback between signal and generating
+principle; and extended horizon evaluation imposes a temporal integral constraint that
+penalizes persistent spectral instability.
+Deﬁne the spectral resilience of a representation system as
+R = −λmax(J).
+A high-resilience system has strongly negative spectral abscissa: divergences are rapidly
+corrected. A low-resilience system is near the edge of instability. A spectacular system has
+R ≤0: divergence is not corrected but ampliﬁed. Policy interventions that increase R are
+preferable to those that merely reduce instantaneous divergence, because a high-resilience
+system corrects divergences endogenously without requiring continuous external enforcement.
+39
+
+G
+Category-Theoretic Interpretation of Being, Seeming, and
+Divergence
+Let B be a category of substrates, with objects b ∈Ob(B) representing structured conditions—
+material processes, energetic conﬁgurations, institutional states, or generative bases—and
+morphisms u : b →b′ representing lawful transformations such as resource reallocations,
+perturbations, or time evolution. Let S be a category of signals, with objects s ∈Ob(S)
+representing representations, proﬁles, or symbolic interfaces, and morphisms α : s →s′
+representing transformations such as rebranding, narrative revision, or metric updates.
+A central primitive is a functor
+Σ : B →S,
+interpreted as a projection from substrate to signal. Functoriality enforces compositional
+consistency:
+Σ(idb) = idΣ(b),
+Σ(v ◦u) = Σ(v) ◦Σ(u).
+The notion of invariance is recast as categorical descent. Suppose a subcategory G ⊆End(B)
+encodes gauge transformations that should not alter identity at the level of being. Forming
+the localization B[G−1], the signal functor Σ respects invariance if it factors through the
+quotient:
+B π−→B[G−1]
+eΣ−→S,
+Σ = eΣ ◦π.
+Compression appears as non-faithfulness: there exist u ̸= v : b →b′ such that Σ(u) = Σ(v).
+This is the categorical analogue of feature-collision in sparse coding. Non-injectivity on
+objects expresses camouﬂage: there exist b ̸∼= b′ with Σ(b) ∼= Σ(b′). A regime of "seeming
+without being" is therefore: the functor Σ collapses structurally distinct substrate states
+into isomorphic signal states, while ambient evaluative processes operate in S rather than B.
+Introduce an evaluation functor V : S →E mapping signals to evaluative outcomes. A
+spectacular pathology is domination of V ◦Σ over any direct substrate-sensitive evaluation:
+eﬀective system dynamics are governed by the composite rather than intrinsic substrate
+constraints.
+The divergence functional is categoriﬁed by introducing an invariant extractor. Let ΦB :
+B →Z and ΦS : S →Z be functors into a comparison category Z. Deﬁne a comparison
+40
+
+natural transformation candidate
+η : ΦB ⇒ΦS ◦Σ.
+When η exists as a natural isomorphism, representation preserves invariant structure:
+ΦB(b) ∼= ΦS(Σ(b)) naturally in b.
+When such η fails to exist, or exists only as a lax
+transformation, the mismatch formalizes the gap between being and seeming.
+The generating function methodology of Section 5 receives a universal characterization via
+Kan extension. Let Θ be a category of parameters, G : Θ →B a functor, J : Θ0 ,→Θ
+an inclusion of observed contexts, and G0 = G ◦J the restriction. The left Kan extension
+LanJ(G0) : Θ →B is the universal minimal extension of the generating principle. A system
+optimized for implementation without principle corresponds to interpolating in S rather
+than extending in B, thereby failing the universal property.
+Energetic mutualism and parasitism are expressed using monoidal structure. Suppose B is
+symmetric monoidal with tensor ⊗. An energy valuation E : B →(R≥0, +, 0) as a monoidal
+functor encodes endosymbiosis by superadditivity E(b ⊗c) ≥E(b) + E(c) and parasitism by
+the contrary condition accompanied by positive signal growth.
+The Wizard-versus-sprezzatura contrast admits a categorical formulation. The Wizard
+corresponds to a functor Σ that is not conservative: it maps a non-isomorphism in B to an
+isomorphism-like pattern in S, failing to reﬂect isomorphisms. Sprezzatura corresponds to a
+conservative Σ with additional cost-forgetting structure: one may model cost via a profunctor
+or cost-enriched category, with sprezzatura as the existence of a natural transformation that
+forgets cost while preserving correctness. Wizardry is the failure of correctness itself.
+In summary: being is modeled by quotient-invariant content of B; seeming is modeled by
+the image in S; compression is non-faithfulness; camouﬂage is object- and morphism-level
+collapse; congruence is the existence of a natural isomorphism between invariant extractors;
+distortion is the obstruction to such naturality; principle is universal generation via Kan
+extension; and parasitism versus symbiosis is expressed through monoidal valuation and
+functorial coherence.
+41
+
+References
+[1] Barthes, Roland. Mythologies. Paris: ´Editions du Seuil, 1957.
+[2] Baudrillard, Jean. Simulacres et Simulation. Paris: ´Editions Galil´ee, 1981.
+[3] Baum, L. Frank. The Wonderful Wizard of Oz. Chicago: George M. Hill Company,
+1900.
+[4] Bateson, Gregory. Steps to an Ecology of Mind. Chicago: University of Chicago Press,
+1972.
+[5] Benjamin, Walter. "The Work of Art in the Age of Mechanical Reproduction." 1936.
+[6] Bourdieu, Pierre. Distinction: A Social Critique of the Judgement of Taste. Cambridge,
+MA: Harvard University Press, 1984.
+[7] Castiglione, Baldassare. Il Libro del Cortegiano. Venice: Aldus Manutius, 1528.
+[8] Cicero, Marcus Tullius. Laelius de Amicitia. 44 BCE.
+[9] Debord, Guy. La Soci´et´e du Spectacle. Paris: Buchet-Chastel, 1967.
+[10] Debord, Guy. La Soci´et´e du Spectacle (Film). Paris, 1973.
+[11] Derrida, Jacques. De la grammatologie. Paris: ´Editions de Minuit, 1967.
+[12] Eco, Umberto. A Theory of Semiotics. Bloomington: Indiana University Press, 1976.
+[13] Feuerbach, Ludwig. Das Wesen des Christentums. Leipzig: Wigand, 1841.
+[14] Foucault, Michel. L'arch´eologie du savoir. Paris: Gallimard, 1969.
+[15] Foucault, Michel. Surveiller et punir. Paris: Gallimard, 1975.
+[16] Friston, Karl. "The free-energy principle: A uniﬁed brain theory?" Nature Reviews
+Neuroscience, 11(2):127-138, 2010.
+[17] Gibson, James J. The Ecological Approach to Visual Perception. Boston: Houghton
+Miﬄin, 1979.
+[18] Grothendieck, Alexander. ´El´ements de g´eom´etrie alg´ebrique. Publications Math´ematiques
+de l'IH´ES, 1960-1967.
+42
+
+[19] Heidegger, Martin. Sein und Zeit. T¨ubingen: Niemeyer, 1927.
+[20] Heidegger, Martin. Die Frage nach der Technik. Pfullingen: Neske, 1954.
+[21] Hinton, Geoﬀrey E., Simon Osindero, and Yee-Whye Teh. "A fast learning algorithm
+for deep belief nets." Neural Computation, 18(7):1527-1554, 2006.
+[22] Husserl, Edmund. Ideen zu einer reinen Ph¨anomenologie und ph¨anomenologischen
+Philosophie. 1913.
+[23] Kashiwara, Masaki, and Pierre Schapira. Sheaves on Manifolds. Berlin: Springer, 1990.
+[24] Lacan, Jacques. ´Ecrits. Paris: ´Editions du Seuil, 1966.
+[25] Luhmann, Niklas. Soziale Systeme. Frankfurt am Main: Suhrkamp, 1984.
+[26] Mac Lane, Saunders. Categories for the Working Mathematician. 2nd ed. New York:
+Springer, 1998.
+[27] Marx, Karl. Economic and Philosophic Manuscripts of 1844. 1844.
+[28] Marx, Karl. Das Kapital, Vol. I. Hamburg: Otto Meissner, 1867.
+[29] Merleau-Ponty, Maurice. Ph´enom´enologie de la perception. Paris: Gallimard, 1945.
+[30] Moeller, Hans-Georg, and Paul J. D'Ambrosio. You and Your Proﬁle: Identity After
+Authenticity. New York: Columbia University Press, 2021.
+[31] Shannon, Claude E. "A mathematical theory of communication." Bell System Technical
+Journal, 27(3):379-423, 1948.
+[32] Spivak, David I. Category Theory for the Sciences. Cambridge, MA: MIT Press, 2014.
+[33] Todorov, Tzvetan. Theories of the Symbol. Ithaca: Cornell University Press, 1984.
+[34] Tomasello, Michael. The Cultural Origins of Human Cognition. Cambridge, MA: Harvard
+University Press, 1999.
+[35] Turkle, Sherry. Alone Together: Why We Expect More from Technology and Less from
+Each Other. New York: Basic Books, 2011.
+[36] Weick, Karl E. Sensemaking in Organizations. Thousand Oaks: Sage Publications,
+1995.
+43
+

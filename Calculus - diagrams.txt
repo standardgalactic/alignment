@@ -1,0 +1,2227 @@
+Calculus as the Geometry of
+Relationship and Controlled Change
+A Structural Textbook on Differential and Integral Theory
+Flyxion
+February 27, 2026
+
+Abstract
+This text develops calculus as a unified theory of relational deformation
+under controlled perturbation. Rather than presenting differentiation and
+integration as computational techniques, we interpret them as operators
+governing how structured systems respond to infinitesimal variation and
+how local influences accumulate into global behavior. The derivative is
+introduced as a sensitivity operator mapping perturbations to structured
+responses; the integral is presented as the reconstruction of coherent form
+from infinitesimal contributions.
+We integrate classical limit theory, multivariable calculus, manifold geom-
+etry, dynamical systems, stability analysis, control theory, and functional
+simulation architecture into a single structural narrative. Tangent and normal
+decomposition, curvature, and projection are treated not as advanced topics
+but as intrinsic features of differential reasoning from the outset.
+The text further interprets calculus pedagogically as the disciplined manage-
+ment of abstraction under computational constraints, distinguishing struc-
+tural invariants from arithmetic turbulence. Applications to physiological
+cell modelling, engineered appliances, and inferential systems demonstrate
+that the same geometric architecture governs all three domains. Throughout,
+calculus is framed as the geometry of relationship: a study of how quan-
+tities co-vary, how systems stabilise, and how change propagates through
+interconnected variables.
+
+Contents
+1
+Change Before Computation
+9
+1.1
+The Problem of Variation . . . . . . . . . . . . . . . . . . . . . . . . .
+9
+1.2
+Rise, Run, and the Balance of Error
+. . . . . . . . . . . . . . . . . . .
+10
+1.3
+Limits as Stability Under Refinement . . . . . . . . . . . . . . . . . . .
+10
+1.4
+The Derivative as a Sensitivity Operator . . . . . . . . . . . . . . . . .
+12
+1.5
+Abstraction as Reduction of Irrelevant Degrees of Freedom . . . . . . .
+13
+2
+Higher-Order Change and Curvature
+14
+2.1
+The Second Derivative and the Geometry of Bending . . . . . . . . . .
+14
+2.2
+Critical Points and Stability . . . . . . . . . . . . . . . . . . . . . . . .
+15
+2.3
+From One Variable to Many
+. . . . . . . . . . . . . . . . . . . . . . .
+15
+2.4
+Directional Derivatives and Linear Structure . . . . . . . . . . . . . . .
+16
+3
+Tangent Spaces and Local Models
+18
+3.1
+Curves and Embedded Surfaces
+. . . . . . . . . . . . . . . . . . . . .
+18
+3.2
+Functions Between Manifolds and the Jacobian . . . . . . . . . . . . .
+19
+3.3
+The Chain Rule as Composition of Deformation . . . . . . . . . . . . .
+19
+3.4
+The Hessian and Second-Order Structure . . . . . . . . . . . . . . . . .
+20
+4
+Integration and Reconstruction
+21
+3
+
+Contents
+4.1
+Accumulation from Infinitesimal Influence . . . . . . . . . . . . . . . .
+21
+4.2
+The Fundamental Theorem of Calculus . . . . . . . . . . . . . . . . . .
+22
+4.3
+Change of Variables and Structural Invariance . . . . . . . . . . . . . .
+22
+5
+Differential Equations and Dynamics
+24
+5.1
+Rates as Laws of Motion . . . . . . . . . . . . . . . . . . . . . . . . .
+24
+5.2
+Equilibria and Linearisation
+. . . . . . . . . . . . . . . . . . . . . . .
+25
+5.3
+Systems of Differential Equations
+. . . . . . . . . . . . . . . . . . . .
+25
+6
+Curvature, Constraint, and Manifolds
+27
+6.1
+Motion Under Constraint . . . . . . . . . . . . . . . . . . . . . . . . .
+27
+6.2
+Curvature and Geodesics . . . . . . . . . . . . . . . . . . . . . . . . .
+27
+6.3
+The Structural Unity of Calculus . . . . . . . . . . . . . . . . . . . . .
+28
+7
+Multivariable Integration Theory
+29
+7.1
+Measure and Volume in Higher Dimensions . . . . . . . . . . . . . . .
+29
+7.2
+Iterated Integrals and Fubini's Theorem
+. . . . . . . . . . . . . . . . .
+29
+7.3
+Coordinate Transformations and the Jacobian Determinant . . . . . . .
+30
+7.4
+Integration over Curves and Surfaces . . . . . . . . . . . . . . . . . . .
+30
+7.5
+Orientation and Differential Forms . . . . . . . . . . . . . . . . . . . .
+30
+8
+Vector Calculus and the Geometry of Fields
+31
+8.1
+Gradient, Divergence, and Curl . . . . . . . . . . . . . . . . . . . . . .
+31
+8.2
+The Divergence Theorem and Stokes' Theorem . . . . . . . . . . . . .
+32
+9
+Nonlinear Dynamics and Phase Space
+33
+9.1
+Phase Portraits and Flow Geometry . . . . . . . . . . . . . . . . . . . .
+33
+9.2
+The Hartman-Grobman Theorem . . . . . . . . . . . . . . . . . . . . .
+34
+4
+
+Contents
+9.3
+Lyapunov Functions and Energy Methods . . . . . . . . . . . . . . . .
+34
+9.4
+Bifurcation Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+34
+10 Constrained Dynamics and Lagrangian Structure
+36
+10.1 Variational Principles and the Euler-Lagrange Equation . . . . . . . . .
+36
+10.2 Hamiltonian Systems . . . . . . . . . . . . . . . . . . . . . . . . . . .
+37
+10.3 Noether's Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+37
+11 Geometric Control Theory
+38
+11.1 Control Systems as Vector Fields with Input . . . . . . . . . . . . . . .
+38
+11.2 Controllability and Lie Brackets . . . . . . . . . . . . . . . . . . . . .
+38
+11.3 Optimal Control and the Pontryagin Maximum Principle . . . . . . . .
+39
+11.4 Control as Directed Tangent Dynamics . . . . . . . . . . . . . . . . . .
+39
+12 Structural Synthesis
+41
+12.1 The Geometric Unification . . . . . . . . . . . . . . . . . . . . . . . .
+41
+12.2 Integration as Global Reconstruction from Local Flow
+. . . . . . . . .
+42
+12.3 Stability as Curvature Constraint . . . . . . . . . . . . . . . . . . . . .
+42
+13 From Differential Equations to Programs
+43
+13.1 State Mutation Versus Functional Evolution . . . . . . . . . . . . . . .
+43
+13.2 Time Discretisation as Approximation of Flow . . . . . . . . . . . . . .
+43
+13.3 Numerical Stability as Spectral Alignment . . . . . . . . . . . . . . . .
+44
+13.4 From Mutation to Morphism . . . . . . . . . . . . . . . . . . . . . . .
+44
+14 Critique of Imperative Physiological Simulation
+46
+14.1 The Architecture of Table-Driven Systems . . . . . . . . . . . . . . . .
+46
+14.2 Order Dependence and Hidden Coupling . . . . . . . . . . . . . . . . .
+46
+5
+
+Contents
+14.3 Implicit Jacobians and Structural Opacity
+. . . . . . . . . . . . . . . .
+47
+14.4 The Structural Alternative . . . . . . . . . . . . . . . . . . . . . . . . .
+47
+15 Calculus as a Functional Programming Language
+49
+15.1 Compositionality . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+49
+15.2 Flows as Exponentials of Vector Fields . . . . . . . . . . . . . . . . . .
+50
+15.3 Automatic Differentiation . . . . . . . . . . . . . . . . . . . . . . . . .
+50
+15.4 Calculus as a Declarative Language
+. . . . . . . . . . . . . . . . . . .
+50
+16 Symbolic Versus Numerical Modelling
+52
+16.1 Structural Invariants in Symbolic Form . . . . . . . . . . . . . . . . . .
+52
+16.2 Truncation Error and Invariant Drift
+. . . . . . . . . . . . . . . . . . .
+52
+16.3 Conservation-Preserving Methods . . . . . . . . . . . . . . . . . . . .
+53
+16.4 Modelling as Layered Representation
+. . . . . . . . . . . . . . . . . .
+53
+17 Retinal Cell as Dynamical System
+54
+17.1 Membrane Potential as a State Variable
+. . . . . . . . . . . . . . . . .
+54
+17.2 Gating Variables as Coupled Dynamics
+. . . . . . . . . . . . . . . . .
+54
+17.3 Phototransduction as Nested Dynamics . . . . . . . . . . . . . . . . . .
+55
+17.4 Functional Decomposition
+. . . . . . . . . . . . . . . . . . . . . . . .
+55
+17.5 Linearisation and Stability
+. . . . . . . . . . . . . . . . . . . . . . . .
+56
+18 Skin Cell and Boundary Regulation
+57
+18.1 Epidermal Dynamics as Reaction-Diffusion System . . . . . . . . . . .
+57
+18.2 Boundary Conditions as Structural Constraints . . . . . . . . . . . . . .
+57
+18.3 Turing Instability and Pattern Formation . . . . . . . . . . . . . . . . .
+58
+18.4 Fibrosis as Bifurcation in Repair Dynamics
+. . . . . . . . . . . . . . .
+58
+6
+
+Contents
+19 Appliances as Controlled Dynamical Systems
+59
+19.1 Thermal System: The Oven Model . . . . . . . . . . . . . . . . . . . .
+59
+19.2 Washing Machine Drum
+. . . . . . . . . . . . . . . . . . . . . . . . .
+60
+19.3 Compositional Architecture . . . . . . . . . . . . . . . . . . . . . . . .
+60
+20 A Functional Simulation Architecture
+61
+20.1 State as a Structured Object . . . . . . . . . . . . . . . . . . . . . . . .
+61
+20.2 Pure Vector Field Definition
+. . . . . . . . . . . . . . . . . . . . . . .
+61
+20.3 Integrator as Separate Layer
+. . . . . . . . . . . . . . . . . . . . . . .
+62
+20.4 Constraint Projection as Operator . . . . . . . . . . . . . . . . . . . . .
+62
+20.5 Alignment with Calculus . . . . . . . . . . . . . . . . . . . . . . . . .
+63
+21 Worked Example I: Minimal Retinal Cell
+64
+21.1 The FitzHugh-Nagumo Model . . . . . . . . . . . . . . . . . . . . . .
+64
+21.2 Jacobian and Local Sensitivity . . . . . . . . . . . . . . . . . . . . . .
+64
+21.3 Numerical Simulation . . . . . . . . . . . . . . . . . . . . . . . . . . .
+65
+21.4 Control Interpretation . . . . . . . . . . . . . . . . . . . . . . . . . . .
+65
+22 Worked Example II: Skin Cell and Boundary Repair
+66
+22.1 Minimal Repair Model . . . . . . . . . . . . . . . . . . . . . . . . . .
+66
+22.2 Phase Plane and Equilibrium Analysis . . . . . . . . . . . . . . . . . .
+67
+22.3 Projection Enforcement . . . . . . . . . . . . . . . . . . . . . . . . . .
+67
+23 Manifold-Aligned Inference and the Discipline of Not Predicting Noise
+68
+23.1 From Dynamical Systems to Inference . . . . . . . . . . . . . . . . . .
+68
+23.2 Signal and Noise as Geometric Decomposition
+. . . . . . . . . . . . .
+68
+23.3 Curvature Governs Generalisation . . . . . . . . . . . . . . . . . . . .
+69
+7
+
+Contents
+23.4 Noise Characterisation
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+69
+23.5 Regularisation as Geometric Constraint
+. . . . . . . . . . . . . . . . .
+70
+24 Entropy, Information, and Curvature in Model Space
+71
+24.1 The Fisher Information Metric . . . . . . . . . . . . . . . . . . . . . .
+71
+24.2 Free Energy as Variational Functional
+. . . . . . . . . . . . . . . . . .
+71
+24.3 Stability Requires Curvature-Entropy Alignment . . . . . . . . . . . .
+72
+25 The Unified Geometry of Physiology, Engineering, and Inference
+73
+25.1 One Architecture, Three Domains
+. . . . . . . . . . . . . . . . . . . .
+73
+25.2 A Single Geometric Doctrine . . . . . . . . . . . . . . . . . . . . . . .
+73
+26 Models, Manifolds, and Adequacy
+75
+26.1 What a Model Is . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+75
+26.2 Dimensionality and the Curse . . . . . . . . . . . . . . . . . . . . . . .
+75
+26.3 Limits of Fixed-Phase-Space Modelling . . . . . . . . . . . . . . . . .
+75
+27 Ergodicity and the Limits of Sampling
+77
+27.1 The Ergodic Theorem . . . . . . . . . . . . . . . . . . . . . . . . . . .
+77
+27.2 Non-Ergodicity and Phase-Space Fragmentation . . . . . . . . . . . . .
+77
+27.3 Stationarity and Distributional Drift
+. . . . . . . . . . . . . . . . . . .
+78
+28 The Absolute Limits of Approximation
+79
+28.1 Approximation as Projection onto a Hypothesis Manifold . . . . . . . .
+79
+28.2 Five Geometric Limits
+. . . . . . . . . . . . . . . . . . . . . . . . . .
+79
+28.3 Where Curvature Is Stable, Refinement Succeeds
+. . . . . . . . . . . .
+80
+8
+
+Chapter 1
+Change Before Computation
+1.1
+The Problem of Variation
+Calculus arises from a single question: how does one quantity change in response to
+another? This question is older than formal mathematics. It appears whenever motion is
+observed, whenever growth is measured, whenever tension balances across a structure,
+or whenever error is reduced through refinement.
+The essential feature of change is relational. A quantity does not change in isolation;
+it changes with respect to something. Distance changes with respect to time. Pressure
+changes with respect to volume. Profit changes with respect to production. A curve
+bends because neighbouring values fail to align linearly.
+Before numbers, before symbols, there is deformation. A line tilts. A surface bends. A
+system responds to perturbation. Calculus studies these responses.
+Key Insight
+Calculus is the geometry of relationship. Its central objects—derivatives, integrals,
+differential equations—encode how structured systems deform under infinitesimal
+perturbation and how that deformation accumulates into global form.
+9
+
+Chapter 1. Change Before Computation
+1.2
+Rise, Run, and the Balance of Error
+Consider a straight wall. Its slope is defined by rise over run. One may ascend a
+large vertical distance while advancing only slightly horizontally, and the ratio of these
+displacements determines steepness. Crucially, this ratio does not depend on absolute
+scale but on proportional change.
+x
+y
+y = f(x)
+P
+Q
+secant
+∆x
+∆y
+tangent at P
+Figure 1.1: As Q approaches P along the curve, the secant line (Maroon) rotates toward
+the tangent line (green). The limiting direction is the derivative.
+Now consider not a wall but a curve. A curve does not have a single slope; its steepness
+varies from point to point. To measure its inclination at a single location, we approximate
+it by secant lines connecting nearby points. As those points approach one another, the
+secant line approaches a unique limiting line: the tangent (fig. 1.1).
+The tangent line balances error symmetrically. It is the line for which deviations on one
+side cancel those on the other to first order. This balancing process resembles a lever in
+equilibrium: two equal perturbations placed symmetrically about a point must balance
+to produce equilibrium.
+Thus the derivative, at its core, is a local balance condition. It is the unique linear relation
+that stabilises infinitesimal variation.
+1.3
+Limits as Stability Under Refinement
+The concept of limit formalises the idea of refinement. Suppose one estimates the
+circumference of a circle by inscribing polygons with increasingly many sides. As the
+number of sides increases, the perimeter approaches a fixed value. One approaches the
+10
+
+1.3. Limits as Stability Under Refinement
+same number from above and below.
+Hexagon (n = 6): perimeter →πd as n →∞
+Figure 1.2: Inscribed polygons approximate the circle's circumference. Convergence is
+stability under refinement.
+Convergence is not merely approximation—it is agreement under arbitrarily small
+perturbation.
+Definition 1.1 (Limit)
+A function f(x) approaches L as x →a, written lim
+x→a f(x) = L, if for every
+tolerance ε > 0 there exists δ > 0 such that
+0 < |x −a| < δ =⇒|f(x) −L| < ε.
+This definition encodes stability. No matter how tightly one constrains acceptable error,
+one can restrict attention sufficiently to guarantee compliance. The limit is the expression
+of controlled variation.
+Example
+Let f(x) = x2−1
+x−1 for x ̸= 1. Although f is not defined at x = 1, we compute
+limx→1
+x2−1
+x−1 = limx→1(x + 1) = 2. The limit captures the behaviour of f near 1
+without requiring evaluation at 1.
+11
+
+Chapter 1. Change Before Computation
+1.4
+The Derivative as a Sensitivity Operator
+Definition 1.2 (Derivative)
+The derivative of f : R →R at x is
+f ′(x) = lim
+h→0
+f(x + h) −f(x)
+h
+,
+provided this limit exists.
+This expression measures how much f responds to a small perturbation in x. The
+numerator represents output change; the denominator represents input change; their ratio
+is relational sensitivity.
+When the limit exists, f is locally approximable by a linear map:
+f(x + h) = f(x) + f ′(x)h + o(h).
+The notation o(h) means a term that vanishes faster than h as h →0.
+Key Insight
+The derivative is not merely a number. It is the coefficient of the best local linear
+model—the linear approximation that most faithfully captures the function's
+behaviour near a point.
+Constants vanish under differentiation because they exhibit no relational sensitivity.
+Linear terms become constants because their deformation is uniform. Higher-degree
+terms reduce degree because curvature itself varies. The derivative strips away inert
+components and retains only those parts that actively participate in change.
+Example Power rule
+For f(x) = xn with n ∈Z>0, the binomial theorem gives
+(x + h)n −xn
+h
+= nxn−1 +
+n
+2
+
+xn−2h + · · ·
+h→0
+−−→nxn−1.
+Thus (xn)′ = nxn−1, the power rule.
+12
+
+1.5. Abstraction as Reduction of Irrelevant Degrees of Freedom
+1.5
+Abstraction as Reduction of Irrelevant Degrees of
+Freedom
+When differentiating
+f(x) = ax3 + bx2 + cx + d,
+the result
+f ′(x) = 3ax2 + 2bx + c
+reveals structure independent of arithmetic complication. The transformation rule does
+not depend on the magnitude of a, b, c, d. It depends only on exponentiation and linearity.
+Abstraction removes irrelevant degrees of freedom while preserving relational form.
+This principle recurs throughout the text. Calculus is not a collection of tricks but a
+disciplined method for isolating structural relationships from computational noise.
+13
+
+Chapter 2
+Higher-Order Change and Curvature
+2.1
+The Second Derivative and the Geometry of Bending
+The second derivative measures the rate at which the slope itself changes:
+f ′′(x) = d
+dx
+ f ′(x)
+
+.
+f
+f′(x
+f′′(x) =
+x
+y
+Figure 2.1: A function (blue), its first derivative (red dashed), and second derivative
+(green dotted). Where f ′′ > 0 the function is concave up; where f ′′ < 0 it is concave
+down.
+The Taylor expansion makes the role of the second derivative explicit:
+f(x + h) = f(x) + f ′(x)h + 1
+2f ′′(x)h2 + o(h2).
+The quadratic term encodes bending. It quantifies the deviation from perfect linearity.
+14
+
+2.2. Critical Points and Stability
+Higher derivatives describe successive layers of structural refinement: each derivative
+reveals how deformation itself deforms.
+2.2
+Critical Points and Stability
+Definition 2.1 (Critical point)
+A point x0 is critical for f if f ′(x0) = 0.
+Near a critical point,
+f(x0 + h) = f(x0) + 1
+2f ′′(x0)h2 + o(h2).
+Since h2 ≥0, the sign of f ′′(x0) determines whether perturbations raise or lower the
+function.
+Theorem 2.1 Second Derivative Test
+Let f ′(x0) = 0.
+• If f ′′(x0) > 0, then x0 is a local minimum.
+• If f ′′(x0) < 0, then x0 is a local maximum.
+• If f ′′(x0) = 0, the test is inconclusive.
+Key Insight
+Stability is a curvature condition. Positive curvature confines nearby trajectories;
+negative curvature repels them.
+2.3
+From One Variable to Many
+Real systems rarely depend on a single variable. For f : Rn →R, each coordinate may
+vary independently.
+15
+
+Chapter 2. Higher-Order Change and Curvature
+Definition 2.2 (Partial derivative)
+The partial derivative of f with respect to xi is
+∂f
+∂xi
+(x) = lim
+h→0
+f(x1, . . . , xi + h, . . . , xn) −f(x)
+h
+.
+Collecting all partial derivatives yields the gradient vector:
+∇f(x) =
+
+
+
+
+∂f/∂x1
+...
+∂f/∂xn
+
+
+
+.
+The gradient is not a collection of slopes but a directional sensitivity field.
+2.4
+Directional Derivatives and Linear Structure
+Let v ∈Rn be a unit direction vector. The directional derivative is
+Dvf(x) = lim
+h→0
+f(x + hv) −f(x)
+h
+.
+When f is differentiable,
+Dvf(x) = ∇f(x) · v.
+The gradient therefore represents the linear functional that maps directional perturbations
+to scalar responses. Differentiability in Rn means that f admits a linear approximation:
+f(x + h) = f(x) + ∇f(x) · h + o(∥h∥).
+16
+
+2.4. Directional Derivatives and Linear Structure
+x
+y
+z
+Figure 2.2: The paraboloid f(x, y) = x2 + y2. The gradient ∇f = (2x, 2y) points
+radially outward — in the direction of steepest ascent — and is always perpendicular to
+the level curves (circles).
+17
+
+Chapter 3
+Tangent Spaces and Local Models
+3.1
+Curves and Embedded Surfaces
+At a point p on a smooth surface S ⊂R3, curves lying on S have velocity vectors at p.
+The collection of all such velocity vectors forms a plane: the tangent plane.
+S
+p
+TpS
+v1
+v2
+n
+Figure 3.1: The tangent space TpS (red plane) at a point p on a surface S (blue). Tangent
+vectors v1, v2 lie in the plane; the normal n is perpendicular to it.
+Definition 3.1 (Tangent space of a manifold)
+For a smooth manifold M and a point x ∈M, the tangent space is
+TxM =
+
+γ′(0) | γ : (−ε, ε) →M, γ(0) = x
+	
+.
+The tangent space captures all possible instantaneous directions of motion con-
+strained to M.
+18
+
+3.2. Functions Between Manifolds and the Jacobian
+3.2
+Functions Between Manifolds and the Jacobian
+Let F : M →N be a smooth map between manifolds. The derivative of F at x is the
+linear map
+dFx : TxM →TF(x)N.
+For F : Rn →Rm, this linear map is represented by the Jacobian matrix:
+JF(x) =
+
+
+
+
+
+
+
+∂F1
+∂x1
+· · ·
+∂F1
+∂xn
+...
+...
+...
+∂Fm
+∂x1
+· · ·
+∂Fm
+∂xn
+
+
+
+
+
+
+
+.
+The Jacobian is the multivariable generalisation of slope.
+3.3
+The Chain Rule as Composition of Deformation
+Theorem 3.1 Chain Rule
+For smooth maps F : M →N and G : N →P,
+d(G ◦F)x = dGF(x) ◦dFx.
+The derivative of a composition is the composition of derivatives. In coordinates:
+JG◦F(x) = JG(F(x)) · JF(x).
+Key Insight
+The chain rule is not computational coincidence; it is a categorical necessity
+of linear approximation. Local deformation in M maps into N, then into P.
+Sensitivity composes.
+19
+
+Chapter 3. Tangent Spaces and Local Models
+TxM
+TF(x)N
+T(G◦F)(x)P
+dFx
+d(G◦F)x
+dGF (x)
+Figure 3.2: The chain rule as commutative diagram: the composite derivative equals the
+composition of individual derivatives.
+3.4
+The Hessian and Second-Order Structure
+For f : Rn →R, the second derivative is encoded in the Hessian matrix:
+Hf(x) =
+ ∂2f
+∂xi∂xj
+
+i,j.
+The quadratic Taylor expansion is
+f(x + h) = f(x) + ∇f(x) · h + 1
+2h⊤Hf(x)h + o(∥h∥2).
+Theorem 3.2 Multivariable Second Derivative Test
+Let ∇f(x0) = 0. Stability at x0 is determined by the eigenvalues of Hf(x0):
+• All eigenvalues positive ⇒local minimum.
+• All eigenvalues negative ⇒local maximum.
+• Mixed signs ⇒saddle point.
+20
+
+Chapter 4
+Integration and Reconstruction
+4.1
+Accumulation from Infinitesimal Influence
+If the derivative measures how a quantity changes locally, the integral measures how local
+changes accumulate into global structure. The two operations are inverse procedures
+within a unified stability framework.
+f(
+Riemann sum →
+R b
+a f(x) dx
+1
+2
+3
+4
+5
+x
+y
+Figure 4.1: A Riemann sum (blue rectangles) approximating the integral of f over [0, 5].
+As rectangle widths shrink to zero, the sum converges to the definite integral.
+Definition 4.1 (Definite integral)
+If f : [a, b] →R and the Riemann sums
+Sn =
+n−1
+X
+i=0
+f(x∗
+i ) ∆xi
+21
+
+Chapter 4. Integration and Reconstruction
+converge as maxi ∆xi →0 (independently of the choice of sample points), the
+limit is the definite integral
+Z b
+a
+f(x) dx.
+4.2
+The Fundamental Theorem of Calculus
+Theorem 4.1 Fundamental Theorem of Calculus
+Let f be continuous on [a, b].
+(i) If F(x) =
+R x
+a f(t) dt, then F ′(x) = f(x).
+(ii) If F ′(x) = f(x), then
+R b
+a f(x) dx = F(b) −F(a).
+Key Insight
+The Fundamental Theorem is not merely computational convenience. It expresses
+that global structure can be reconstructed from local sensitivity, and local sensitiv-
+ity can be extracted from global structure. The integral aggregates deformation;
+the derivative isolates it.
+Proof sketch of Part (i). By definition, F ′(x) = limh→0
+1
+h
+R x+h
+x
+f(t) dt. By continuity
+of f, for any ε > 0 there exists δ > 0 such that |f(t) −f(x)| < ε whenever |t −x| < δ.
+Then
+
+1
+h
+Z x+h
+x
+f(t) dt −f(x)
+ =
+
+1
+h
+Z x+h
+x
+(f(t) −f(x)) dt
+ ≤ε.
+Since ε was arbitrary, F ′(x) = f(x).
+■
+4.3
+Change of Variables and Structural Invariance
+For a transformation x = g(u):
+Z
+f(x) dx =
+Z
+f(g(u)) g′(u) du.
+In multiple dimensions, if Φ : Rn →Rn is smooth with Jacobian determinant det JΦ,
+22
+
+4.3. Change of Variables and Structural Invariance
+then
+Z
+Φ(U)
+h(x) dx =
+Z
+U
+h(Φ(u)) | det JΦ(u)| du.
+The Jacobian determinant measures how volume scales under the transformation. Inte-
+gration must incorporate this geometric correction to remain invariant.
+Example Polar coordinates
+The transformation x = r cos θ, y = r sin θ has det J = r, giving the familiar
+formula
+RR
+Ωf(x, y) dx dy =
+R 2π
+0
+R R
+0 f(r cos θ, r sin θ) r dr dθ.
+23
+
+Chapter 5
+Differential Equations and Dynamics
+5.1
+Rates as Laws of Motion
+A differential equation prescribes how a quantity evolves in response to its current state.
+It defines a rule of motion rather than a static relationship.
+Definition 5.1 (Ordinary differential equation)
+A first-order ODE is an equation of the form
+dx
+dt = f(x, t),
+where x : R →R (or Rn) is unknown and f specifies instantaneous rate of
+change.
+Solving a differential equation means reconstructing global behaviour from a local law.
+˙x = x(1 −x)
+t
+x
+Figure 5.1: Phase portrait for the logistic equation ˙x = x(1 −x). All trajectories with
+x(0) > 0 converge to x = 1 (stable equilibrium); x = 0 is unstable.
+24
+
+5.2. Equilibria and Linearisation
+5.2
+Equilibria and Linearisation
+An equilibrium x0 satisfies f(x0) = 0. Near equilibrium, a Taylor expansion gives the
+linearised equation:
+d
+dt(x −x0) = f ′(x0)(x −x0) + higher-order terms.
+Theorem 5.1 Stability via linearisation
+Let x0 be an equilibrium of ˙x = f(x).
+• If f ′(x0) < 0, perturbations decay exponentially; x0 is asymptotically stable.
+• If f ′(x0) > 0, perturbations grow; x0 is unstable.
+In higher dimensions, stability depends on the eigenvalues of Jf(x0).
+5.3
+Systems of Differential Equations
+For x ∈Rn, the system ˙x = F(x) defines a vector field on state space. Each initial
+condition generates a trajectory determined by the integral curves of F.
+For linear systems ˙x = Ax, the solution is
+x(t) = eAtx(0),
+where eAt is the matrix exponential. The eigenvalues of A determine long-term be-
+haviour:
+• Negative real parts ⇒exponential decay.
+• Positive real parts ⇒exponential growth.
+• Purely imaginary parts ⇒oscillation.
+25
+
+Chapter 5. Differential Equations and Dynamics
+x1
+x2
+Stable node
+x1
+x2
+Saddle point
+Figure 5.2: Phase portraits for a stable node (left, both eigenvalues negative) and a saddle
+point (right, eigenvalues of opposite sign).
+26
+
+Chapter 6
+Curvature, Constraint, and Manifolds
+6.1
+Motion Under Constraint
+If motion is restricted to a manifold M, the differential equation becomes
+dx
+dt = ΠTxMF(x),
+where ΠTxM denotes orthogonal projection onto the tangent space. This ensures trajecto-
+ries remain on the manifold by suppressing normal components (fig. 3.1).
+Example Pendulum
+A pendulum of length ℓis constrained to the circle of radius ℓ. The unconstrained
+gravity vector is projected onto the tangential direction, yielding ¨θ = −(g/ℓ) sin θ.
+6.2
+Curvature and Geodesics
+On a Riemannian manifold (M, g), geodesics are curves that locally minimise length.
+They satisfy the geodesic equation
+∇˙γ ˙γ = 0,
+where ∇is the Levi-Civita connection.
+27
+
+Chapter 6. Curvature, Constraint, and Manifolds
+geodesic
+p
+q
+S2
+Figure 6.1: A geodesic (great circle) on the sphere S2 connecting points p and q. The
+geodesic minimises length; curvature causes geodesics to converge at poles.
+The Riemann curvature tensor R measures how geodesics initially parallel deviate
+from one another under parallel transport. Positive curvature (as on a sphere) causes
+convergence; negative curvature (as on a hyperbolic surface) causes divergence.
+6.3
+The Structural Unity of Calculus
+The themes developed in the first six chapters can be summarised in a single diagram:
+Limits
+(stability)
+Derivative
+(sensitivity)
+Integral
+(accumulation)
+ODE
+(dynamics)
+Tangent space
+(local model)
+Control
+(direction)
+Figure 6.2: Structural dependencies among the core concepts of calculus.
+28
+
+Chapter 7
+Multivariable Integration Theory
+7.1
+Measure and Volume in Higher Dimensions
+For a bounded region Ω⊂Rn, the integral of f : Ω→R is defined by partitioning into
+small subregions of volume ∆Vi:
+Z
+Ω
+f(x) dx =
+lim
+max ∆Vi→0
+X
+i
+f(x∗
+i ) ∆Vi.
+7.2
+Iterated Integrals and Fubini's Theorem
+Theorem 7.1 Fubini
+If f : Ω→R is integrable on Ω= [a, b] × [c, d], then
+Z
+Ω
+f(x, y) dx dy =
+Z b
+a
+Z d
+c
+f(x, y) dy dx =
+Z d
+c
+Z b
+a
+f(x, y) dx dy.
+The significance is structural: accumulation along independent coordinate directions is
+compatible with accumulation over the whole region. Volume measure factorises across
+orthogonal directions.
+29
+
+Chapter 7. Multivariable Integration Theory
+7.3
+Coordinate Transformations and the Jacobian De-
+terminant
+For a smooth bijection Φ : U →Ω,
+Z
+Ω
+f(x) dx =
+Z
+U
+f(Φ(u)) | det DΦ(u)| du.
+The Jacobian determinant measures local volume distortion. It is the net scaling factor
+of the linear map DΦ(u), capturing how infinitesimal cubes deform under the transfor-
+mation.
+7.4
+Integration over Curves and Surfaces
+For a smooth curve γ : [a, b] →Rn, the arc-length integral is
+Z
+γ
+f ds =
+Z b
+a
+f(γ(t)) ∥γ′(t)∥dt.
+For a surface S parameterised by Φ(u, v):
+Z
+S
+f dS =
+Z
+U
+f(Φ(u, v)) ∥∂uΦ × ∂vΦ∥du dv.
+In both cases: integration equals accumulation of infinitesimal geometric elements
+weighted by local density.
+7.5
+Orientation and Differential Forms
+A differential k-form assigns oriented infinitesimal k-dimensional volume elements to
+tangent spaces. Orientation determines the sign of accumulated quantities. The exterior
+derivative d maps k-forms to (k + 1)-forms and satisfies d2 = 0, encoding the fact that
+boundaries of boundaries vanish.
+30
+
+Chapter 8
+Vector Calculus and the Geometry of
+Fields
+8.1
+Gradient, Divergence, and Curl
+Three differential operators play central roles in vector calculus.
+Definition 8.1 (Divergence)
+For F : R3 →R3,
+∇· F = ∂F1
+∂x + ∂F2
+∂y + ∂F3
+∂z .
+Divergence measures local volumetric expansion (∇· F > 0) or compression
+(∇· F < 0).
+Definition 8.2 (Curl)
+∇× F =
+
+
+
+∂yF3 −∂zF2
+∂zF1 −∂xF3
+∂xF2 −∂yF1
+
+
+.
+Curl measures local rotation density.
+31
+
+Chapter 8. Vector Calculus and the Geometry of Fields
+∇· F > 0 (source)
+∇× F ̸= 0 (rotation)
+Figure 8.1: Left: a diverging field with positive divergence (source). Right: a rotating
+field with nonzero curl.
+8.2
+The Divergence Theorem and Stokes' Theorem
+Theorem 8.1 Divergence Theorem
+For a region Ωwith outward-pointing boundary normal n,
+Z
+Ω
+∇· F dV =
+Z
+∂Ω
+F · n dS.
+Total interior expansion equals boundary flux.
+Theorem 8.2 Stokes' Theorem
+For an oriented surface S with boundary ∂S,
+Z
+S
+(∇× F) · n dS =
+Z
+∂S
+F · dr.
+Total curl over a surface equals boundary circulation.
+Both theorems are special cases of the general Stokes theorem for differential forms:
+Z
+∂M
+ω =
+Z
+M
+dω.
+Boundary behaviour reflects interior variation. This is the geometric expression of
+conservation laws.
+32
+
+Chapter 9
+Nonlinear Dynamics and Phase Space
+9.1
+Phase Portraits and Flow Geometry
+A nonlinear dynamical system
+dx
+dt = F(x),
+F : Rn →Rn,
+assigns to each state an instantaneous direction of evolution. The collection of all
+trajectories forms the flow of the system.
+limit cycle
+O
+x
+y
+Van der Pol oscillator phase portrait
+Figure 9.1: Schematic phase portrait of a limit cycle system. Trajectories starting far
+out (blue) spiral inward; trajectories starting near the origin (red) spiral outward. Both
+converge to the limit cycle (green dashed circle).
+33
+
+Chapter 9. Nonlinear Dynamics and Phase Space
+9.2
+The Hartman-Grobman Theorem
+Theorem 9.1 Hartman-Grobman
+If x0 is a hyperbolic equilibrium of ˙x = F(x) (i.e. no eigenvalue of DF(x0)
+lies on the imaginary axis), then the nonlinear system near x0 is topologically
+conjugate to its linearisation ˙y = DF(x0) y.
+Thus, near hyperbolic equilibria, nonlinear dynamics inherit qualitative behaviour from
+linear systems. The eigenvalues of DF(x0) give a complete local portrait.
+9.3
+Lyapunov Functions and Energy Methods
+Definition 9.1 (Lyapunov function)
+A smooth function V : Rn →R≥0 is a Lyapunov function for ˙x = F(x) at
+equilibrium x0 if V (x0) = 0, V (x) > 0 for x ̸= x0 nearby, and ˙V (x) :=
+∇V (x) · F(x) ≤0 along trajectories.
+Theorem 9.2 Lyapunov stability
+If a Lyapunov function V exists with ˙V < 0 (strict), then x0 is asymptotically
+stable.
+Lyapunov functions generalise potential functions to non-conservative systems. They
+provide stability certificates without requiring explicit solution of the differential equa-
+tion.
+9.4
+Bifurcation Theory
+As a parameter µ varies, equilibria may appear, disappear, or change stability. This is a
+bifurcation.
+34
+
+9.4. Bifurcation Theory
+Example Pitchfork bifurcation
+Consider ˙x = µx −x3. For µ < 0, the only equilibrium is x = 0 (stable). For
+µ > 0, the origin becomes unstable and two new stable equilibria x = ±√µ
+emerge (fig. 9.2).
+stable
+unstable
+stable
+stable
+µ
+x∗
+Figure 9.2: Bifurcation diagram for the pitchfork bifurcation ˙x = µx −x3. At µ = 0,
+one stable equilibrium splits into three.
+35
+
+Chapter 10
+Constrained Dynamics and Lagrangian
+Structure
+10.1
+Variational Principles and the Euler-Lagrange Equa-
+tion
+The calculus of variations generalises optimisation from functions to functionals.
+Definition 10.1 (Action functional)
+Given a Lagrangian L(q, ˙q, t), the action is
+S[γ] =
+Z b
+a
+L(γ(t), ˙γ(t), t) dt.
+Theorem 10.1 Euler-Lagrange equation
+Critical curves of S satisfy
+d
+dt
+∂L
+∂˙γ −∂L
+∂γ = 0.
+This equation arises by demanding that the first-order variation of the action vanishes
+under all compactly supported perturbations. Motion becomes a stationary condition in
+function space.
+36
+
+10.2. Hamiltonian Systems
+Key Insight
+The Euler-Lagrange equation expresses dynamics as extremisation of accumulated
+quantities. Geodesics, classical trajectories, and elastica are all solutions to
+variational problems.
+10.2
+Hamiltonian Systems
+Define conjugate momentum p = ∂L/∂˙q and Hamiltonian
+H(q, p) = p · ˙q −L.
+Theorem 10.2 Hamilton's equations
+˙q = ∂H
+∂p ,
+˙p = −∂H
+∂q .
+Hamiltonian flows preserve the symplectic form ω = dp ∧dq and, when H is time-
+independent, conserve energy. Phase space volume is also conserved (Liouville's theo-
+rem).
+10.3
+Noether's Theorem
+Theorem 10.3 Noether
+If the action S is invariant under a one-parameter family of transformations
+generated by a vector field X, then the quantity
+Q = ∂L
+∂˙γ · X(γ)
+is conserved along solutions.
+Symmetry generates conservation. Temporal invariance gives energy conservation;
+spatial translational invariance gives momentum conservation; rotational invariance
+gives angular momentum conservation.
+37
+
+Chapter 11
+Geometric Control Theory
+11.1
+Control Systems as Vector Fields with Input
+A control system extends a dynamical system by introducing external inputs:
+dx
+dt = F(x) +
+m
+X
+i=1
+ui Gi(x),
+where F is the drift field, Gi are control vector fields, and ui(t) are chosen inputs.
+Control introduces directed deformation.
+11.2
+Controllability and Lie Brackets
+Definition 11.1 (Lie bracket)
+For smooth vector fields X, Y on Rn, the Lie bracket is
+[X, Y ](x) = DY (x) X(x) −DX(x) Y (x).
+Lie brackets represent second-order motion generated by alternating flows. Physically,
+flowing along X for time
+√
+h, then Y , then −X, then −Y produces a displacement of
+order h in direction [X, Y ].
+38
+
+11.3. Optimal Control and the Pontryagin Maximum Principle
+Theorem 11.1 Chow-Rashevskii (accessibility)
+If the distribution generated by {G1, . . . , Gm} and all their iterated Lie brackets
+spans TxRn at every x, then the system is accessible (reachable from any point to
+any other).
+x1
+x2
+x0
+X
+Y
+−X
+−Y
+[X, Y ]
+Lie bracket: commutator motion
+Figure 11.1: Geometric interpretation of the Lie bracket. Alternating unit flows along X,
+Y , −X, −Y over time
+√
+h produce a net displacement of order h in the direction [X, Y ].
+11.3
+Optimal Control and the Pontryagin Maximum
+Principle
+Optimal control minimises a cost functional
+J(u) =
+Z T
+0
+L(x(t), u(t)) dt.
+The Pontryagin Maximum Principle introduces adjoint (costate) variables p(t) and a
+Hamiltonian
+H(x, p, u) = p · F(x, u) −L(x, u).
+Optimal trajectories satisfy Hamilton's equations for H together with the maximality
+condition u∗(t) = arg maxu H(x, p, u).
+11.4
+Control as Directed Tangent Dynamics
+Throughout calculus we have studied local linearisation, curvature, accumulation, and
+dynamical evolution. Control theory adds intention.
+39
+
+Chapter 11. Geometric Control Theory
+Where dynamics describe what will occur, control prescribes what should occur. The
+derivative measures sensitivity; the integral reconstructs trajectory; geometry constrains
+motion; control directs permissible variation toward desired equilibria.
+40
+
+Chapter 12
+Structural Synthesis
+12.1
+The Geometric Unification
+Across all preceding chapters, a single theme persists: calculus is the geometry of
+controlled change. A differentiable function is one that admits linear approximation.
+A dynamical system is one whose evolution is governed by local vector fields. A
+constrained system evolves within tangent spaces. A controlled system modifies those
+tangent directions intentionally.
+Each structure rests upon the same foundation: infinitesimal deformation aligned with
+geometric constraint.
+Limit
+(stability)
+Derivative
+(sensitivity)
+Integral
+(reconstruction)
+Manifold
+(constraint)
+ODE
+(dynamics)
+Control
+(intention)
+Stability
+(curvature)
+Conservation
+(Noether)
+Figure 12.1: Conceptual map of calculus. Every arrow represents a logical or structural
+dependency developed in the text.
+41
+
+Chapter 12. Structural Synthesis
+12.2
+Integration as Global Reconstruction from Local
+Flow
+The integral is not merely an area computation—it is the recovery of coherent structure
+from local contributions. In scalar calculus, the integral reconstructs accumulated
+quantity from instantaneous rate. In vector calculus, integral theorems reveal how
+boundary behaviour reflects interior variation. In variational calculus, the integral defines
+energy landscapes whose critical points determine motion.
+12.3
+Stability as Curvature Constraint
+Equilibrium is governed by curvature. Second derivatives classify local extrema. Hes-
+sians encode multi-directional bending. Lyapunov functions capture energy descent.
+Eigenvalues determine asymptotic behaviour. On manifolds, curvature shapes geodesic
+deviation. In nonlinear systems, phase-space curvature governs trajectory divergence.
+Stability is geometric discipline imposed by curvature.
+42
+
+Chapter 13
+From Differential Equations to Programs
+13.1
+State Mutation Versus Functional Evolution
+Many computational systems implement dynamics via state mutation:
+x ←x + ∆x.
+The symbol ←indicates replacement. From the perspective of calculus, however, this
+representation is incomplete.
+A differential equation ˙x = F(x) defines a flow: given initial state x0, it determines a
+trajectory x(t) = Φt(x0), where Φt is the flow map satisfying the semigroup property:
+Φt+s = Φt ◦Φs.
+This expresses time consistency: evolving for time s then t equals evolving for t + s
+directly. Mutation updates a variable; a flow defines a transformation family.
+13.2
+Time Discretisation as Approximation of Flow
+Euler's method approximates the flow map at step h:
+xn+1 = xn + h F(xn) ≈Φh(xn).
+43
+
+Chapter 13. From Differential Equations to Programs
+By Taylor expansion:
+x(t + h) = x(t) + h F(x(t)) + O(h2).
+Euler discards the O(h2) terms. Higher-order schemes (Runge-Kutta) improve the
+approximation. Each scheme constructs an approximate flow operator ˜Φh satisfying
+˜Φh(x) = Φh(x) + O(hp+1)
+for some order p.
+Key Insight
+Discrete simulation is meaningful only insofar as it approximates a continuous
+geometric object. The physical model is the vector field F; the numerical scheme
+approximates its integral curves.
+13.3
+Numerical Stability as Spectral Alignment
+For a linear system ˙x = Ax, the exact solution is x(t) = eAtx(0). Euler's method
+produces xn+1 = (I + hA)xn, so eigenvalues of the true dynamics λi(A) map to
+eigenvalues 1 + hλi(A) of the update operator.
+Stability requires |1 + hλi| < 1, imposing a step-size restriction proportional to the
+spectral radius of A.
+Key Insight
+Numerical stability is a spectral alignment problem. The eigenvalues of the
+numerical update operator must mirror the eigenvalues of the true flow.
+13.4
+From Mutation to Morphism
+A mutation-based simulation hides geometry inside procedural detail. A flow-based
+simulation exposes geometry explicitly. The natural architectural principle is: represent
+dynamics as morphisms between state spaces rather than as sequences of overwrites.
+If F : X →TX assigns tangent vectors, then integration constructs Φt : X →
+44
+
+13.4. From Mutation to Morphism
+X. Programs respecting this structure are compositional and admit differentiation,
+linearisation, stability analysis, and constraint projection naturally.
+45
+
+Chapter 14
+Critique of Imperative Physiological Sim-
+ulation
+14.1
+The Architecture of Table-Driven Systems
+Large physiological simulators are often constructed using imperative paradigms. State
+variables are stored in tables; each time step executes a sequence of update procedures.
+A typical fragment takes the form:
+V ←V + h · f(V, m, n, . . . ),
+m ←m + h · g(V, m, . . . ).
+In such systems, state variables are globally mutable, update order is explicitly encoded,
+dependencies are implicit in code structure, and coupling is distributed across procedural
+fragments. The geometric object F exists implicitly but is never explicit.
+14.2
+Order Dependence and Hidden Coupling
+Consider two coupled variables governed by
+˙x = f(x, y),
+˙y = g(x, y).
+A simultaneous Euler update evaluates both increments at (xn, yn). But sequential muta-
+tion—updating x first—evaluates g at (xn+1, yn) rather than (xn, yn). This introduces
+46
+
+14.3. Implicit Jacobians and Structural Opacity
+an unintentional semi-implicit scheme without deliberate design.
+Remark
+The vector field F(x, y) defines a simultaneous infinitesimal direction in the
+tangent space of R2. Sequential mutation replaces geometric simultaneity with
+procedural causality.
+14.3
+Implicit Jacobians and Structural Opacity
+In an imperative simulator, every update rule implicitly defines partial derivatives—but
+these are distributed across code. Without an explicit representation of F as a func-
+tion from state space to tangent space, the Jacobian must be reconstructed by tracing
+procedural dependencies.
+When F is explicit, JF(x) = DF(x) is immediate. Linearisation, eigenvalue computa-
+tion, and stability classification follow directly.
+V
+m
+n
+INa
+IK
+Dependency graph (implicit Jacobian)
+Figure 14.1: Even in a simple Hodgkin-Huxley fragment, the Jacobian is a directed
+graph embedded implicitly in code. Making F explicit renders the full matrix JF directly
+computable.
+14.4
+The Structural Alternative
+The critique is not that imperative systems are incorrect—many produce accurate results.
+The critique is structural: they obscure the geometric object they approximate.
+When F is explicit:
+• Linearisation is direct: JF(x) = DF(x).
+• Stability analysis is systematic: inspect eigenvalues.
+47
+
+Chapter 14. Critique of Imperative Physiological Simulation
+• Conservation laws are verifiable: check ∇I · F = 0.
+• Constraint projection is implementable: ΠTxMF(x).
+• Composition of subsystems is functional: F = F1 + F2 + · · · .
+48
+
+Chapter 15
+Calculus as a Functional Programming
+Language
+15.1
+Compositionality
+Differentiation assigns to each smooth map f : X →Y a linear map between tangent
+spaces Dfx : TxX →Tf(x)Y . Crucially, it respects composition:
+D(g ◦f)x = Dgf(x) ◦Dfx.
+This means differentiation is functorial: it defines a functor D : Diff →Lin, mapping
+the category of smooth manifolds with differentiable maps to the category of vector
+spaces with linear maps.
+(X, f)
+(Z, ·)
+(TxX, Dfx)
+(T(g◦f)(x)Z, ·)
+D
+g◦f
+D
+D(g◦f)x
+Figure 15.1: Functoriality of differentiation: the derivative of a composition equals the
+composition of derivatives.
+49
+
+Chapter 15. Calculus as a Functional Programming Language
+15.2
+Flows as Exponentials of Vector Fields
+Given F : X →TX, integration produces Φt : X →X. One writes formally
+Φt = exp(tF),
+the time-t map of ˙x = F(x). Vector fields are infinitesimal programs; flows are their
+execution.
+15.3
+Automatic Differentiation
+If a system is defined compositionally as F = F1 + F2 ◦G, derivatives propagate
+automatically via the chain rule. Automatic differentiation (AD) systems exploit this
+structure:
+• Forward mode: propagate tangent vectors alongside evaluation.
+• Reverse mode: propagate cotangent vectors (adjoints) backward.
+The correctness of AD rests entirely on D(g ◦f) = Dg ◦Df. AD computes exact
+derivatives—up to floating-point precision—by structural recursion on expression graphs.
+15.4
+Calculus as a Declarative Language
+A declarative program specifies what relationship holds, not how to mutate state step
+by step. The equation ˙x = F(x) declares a relational deformation. It specifies no loop
+structure, no variable overwriting, and no evaluation order.
+Calculus concept
+Programming analogue
+Mechanism
+State manifold
+Type
+Structural constraint
+Vector field F : X →TX
+Pure function
+Referential transparency
+Flow Φt
+Fold over time
+Functional iteration
+Chain rule
+Automatic differentiation
+Compositional recursion
+Projection ΠTM
+Constraint enforcement
+Type-level invariant
+Jacobian DF
+Sensitivity analysis
+Derivative of pure function
+50
+
+15.4. Calculus as a Declarative Language
+Key Insight
+Calculus, properly understood, is not merely a toolkit for computation. It is a
+language of compositional transformation. It is functional at its core.
+51
+
+Chapter 16
+Symbolic Versus Numerical Modelling
+16.1
+Structural Invariants in Symbolic Form
+When a dynamical system is written symbolically as ˙x = F(x), its structure is transpar-
+ent. A scalar function I : X →R is an invariant if ∇I · F = 0, which can be verified
+algebraically.
+Symbolic modelling preserves this transparency. The invariant is not an empirical
+observation—it is a structural property.
+16.2
+Truncation Error and Invariant Drift
+Under Euler's method, an exact invariant I satisfies
+I(xn+1) = I(xn) + O(h2).
+Over N ∼1/h steps, the invariant drifts by O(h). This is not merely a numerical
+nuisance; it reflects a real departure from the constraint manifold.
+52
+
+16.3. Conservation-Preserving Methods
+0
+25
+50
+75
+100
+0
+5 · 10−2
+0.1
+0.15
+time step n
+energy error
+Euler (order 1)
+Symplectic integrator
+RK4 (order 4)
+Figure 16.1: Energy error over time for different integrators applied to a Hamiltonian
+system. Euler accumulates linear drift; symplectic integrators exhibit bounded oscillatory
+error; RK4 drifts slowly.
+16.3
+Conservation-Preserving Methods
+Symplectic integrators preserve the symplectic structure of Hamiltonian systems. Projec-
+tion methods enforce constraints:
+xn+1 ←ΠM(xn+1).
+These methods explicitly incorporate geometric structure, making invariant preservation
+a design feature rather than a lucky accident.
+16.4
+Modelling as Layered Representation
+The structure of any simulation has three layers:
+1. Symbolic layer: ˙x = F(x) — the geometry.
+2. Numerical layer: xn+1 = ˜Φh(xn) — the approximation.
+3. Implementation layer: executable code — the encoding.
+Structural integrity requires each layer to remain aligned with the one above it. When
+the implementation diverges from the numerical scheme, artefacts appear. When the
+numerical scheme fails to approximate symbolic structure faithfully, qualitative errors
+emerge.
+53
+
+Chapter 17
+Retinal Cell as Dynamical System
+17.1
+Membrane Potential as a State Variable
+A retinal photoreceptor or ganglion cell is an excitable dynamical system. Current
+balance gives:
+C dV
+dt = −
+X
+i
+Ii(V, w) + Istim(t),
+where C is membrane capacitance, Ii = gi(w)(V −Ei) are ionic currents with conduc-
+tance gi and reversal potential Ei, and w denotes gating variables.
+17.2
+Gating Variables as Coupled Dynamics
+Each gating variable w satisfies
+dw
+dt = w∞(V ) −w
+τw(V )
+,
+where w∞(V ) is the voltage-dependent steady state and τw(V ) the voltage-dependent
+time constant. The full state vector is x = (V, w1, w2, . . . )⊤, and the system is ˙x =
+F(x, t).
+54
+
+17.3. Phototransduction as Nested Dynamics
+17.3
+Phototransduction as Nested Dynamics
+In photoreceptors, light L modifies cGMP concentration c(t):
+dc
+dt = −khyd(L) c + ksyn(c),
+and channel conductance depends on c:
+glight(c) = gmax
+cn
+cn + Kn.
+The compositional chain is:
+L
+chem
+−−→c(t)
+g(c)
+−−→I(V, c)
+current balance
+−−−−−−−→V (t).
+Light L(t)
+cGMP c(t)
+Conductance
+g(c)
+Potential
+V (t)
+Gating w
+phototransduction
+Hill
+current balance
+Figure 17.1: Functional decomposition of the retinal photoreceptor. Each arrow is a
+morphism between state spaces; derivatives propagate via the chain rule.
+17.4
+Functional Decomposition
+The total vector field decomposes as:
+Fretina = Fmembrane + Fgating + Fphoto.
+Each component is a pure function X →TX. Composition is algebraic addition.
+Subsystems remain modular because they are functions, not procedural updates.
+55
+
+Chapter 17. Retinal Cell as Dynamical System
+17.5
+Linearisation and Stability
+At equilibrium x0 under constant illumination,
+J(x0) = DF(x0) =
+ 
+∂FV /∂V
+∂FV /∂w
+∂Fw/∂V
+∂Fw/∂w
+!
+.
+Eigenvalues of J(x0) determine excitability, adaptation speed, and resonance. All these
+are spectral properties of a single matrix.
+56
+
+Chapter 18
+Skin Cell and Boundary Regulation
+18.1
+Epidermal Dynamics as Reaction-Diffusion System
+Unlike the retinal neuron, the skin cell operates within a layered tissue architecture
+governed by chemical gradients and boundary constraints. Let c(x, t) denote signalling
+molecule concentration in region Ω:
+∂c
+∂t = D ∆c + R(c).
+The Laplacian ∆c measures spatial curvature of the concentration field. Diffusion
+smooths gradients; reaction terms may amplify or suppress concentration locally.
+18.2
+Boundary Conditions as Structural Constraints
+The basement membrane at ∂Ωimposes boundary conditions:
+• Dirichlet: c
+
+∂Ω= c0 (fixed concentration).
+• Neumann: ∂c/∂n
+
+∂Ω= 0 (no flux).
+These restrict the state to a subspace Fadmissible ⊂F. Constraint again appears as
+geometric restriction—now on infinite-dimensional function space.
+57
+
+Chapter 18. Skin Cell and Boundary Regulation
+18.3
+Turing Instability and Pattern Formation
+Theorem 18.1 Turing instability
+Consider a two-component reaction-diffusion system near a homogeneous steady
+state (c0, m0) stable in the absence of diffusion. If the diffusion coefficients
+Dc ̸= Dm satisfy a certain parameter inequality, spatial modes of the Laplacian
+with wavenumber k∗can become unstable, producing spontaneous patterning.
+Eigenvalue analysis of the spatially extended Jacobian (incorporating −Dk2 terms from
+diffusion) determines which spatial frequencies grow. Pattern formation emerges when
+reaction kinetics introduce positive feedback exceeding diffusion smoothing.
+0
+Turing unstable modes
+unstable band
+wavenumber k
+growth rate σ(k)
+Figure 18.1: Dispersion relation for a Turing system. Modes in the unstable band
+(Maroon) have positive growth rate σ(k) > 0 and produce spatial patterns.
+18.4
+Fibrosis as Bifurcation in Repair Dynamics
+A minimal wound-repair model:
+dm
+dt = k1c + k3m2 −k2m.
+When repair gain k3 exceeds a threshold, the steady state of low m loses stability
+and excessive matrix accumulation occurs. Pathology corresponds to a bifurcation in
+parameter space—not to a narrative label but to a geometric transition.
+58
+
+Chapter 19
+Appliances as Controlled Dynamical Sys-
+tems
+19.1
+Thermal System: The Oven Model
+Let T(t) be oven temperature:
+C dT
+dt = −k(T −Troom) + P u(t),
+with C thermal capacity, k heat-loss coefficient, P heater power, and u ∈{0, 1} heater
+state. The equilibrium temperature under constant input is T ∗= Troom + (P/k)u.
+Under proportional feedback u = K(Td −T), the closed-loop eigenvalue is λ =
+−(k + PK)/C. With K > 0, λ < 0 and the system is exponentially stable.
+Troom
+·
+·
+Td
+Td
+response
+time t
+temperature T
+Figure 19.1: Temperature response of an oven under proportional feedback control. The
+trajectory converges exponentially to the target Td.
+59
+
+Chapter 19. Appliances as Controlled Dynamical Systems
+19.2
+Washing Machine Drum
+Let x1 = θ (angle) and x2 = ˙θ (angular velocity):
+dx1
+dt = x2,
+dx2
+dt = 1
+I (τmotor(u) −bx2 −τload).
+Spin cycles, agitation patterns, and acceleration ramps are trajectories in this two-
+dimensional state space. Control selects the trajectory.
+19.3
+Compositional Architecture
+Each subsystem is a pure function:
+Ftotal = Fthermal + Fmechanical + Fcontrol.
+Subsystems remain modular because they map state to tangent direction. The system
+is declarative rather than procedural. Safety constraints define invariant sets; control
+ensures trajectories remain inside them.
+60
+
+Chapter 20
+A Functional Simulation Architecture
+20.1
+State as a Structured Object
+Define state as a single coherent element of configuration space:
+x = (V, w1, w2, T, c1, . . . )⊤∈X.
+State is not scattered across global variables.
+20.2
+Pure Vector Field Definition
+Define dynamics as a pure function F : X →TX:
+F(x) - pure vector field
+function F(x, t, params):
+return {
+dV
+= membrane(x, params),
+dw1 = gating1(x, params),
+dw2 = gating2(x, params),
+dT
+= thermal(x, params),
+dc1 = chemistry(x, params)
+}
+Each component depends only on the input state. No mutation occurs inside F. The
+61
+
+Chapter 20. A Functional Simulation Architecture
+function is referentially transparent.
+20.3
+Integrator as Separate Layer
+step_rk4 - 4th-order Runge-Kutta
+function step_rk4(F, x, t, h, params):
+k1 = F(x,
+t,
+params)
+k2 = F(x + h/2*k1,
+t + h/2, params)
+k3 = F(x + h/2*k2,
+t + h/2, params)
+k4 = F(x + h*k3,
+t + h,
+params)
+return x + h/6 * (k1 + 2*k2 + 2*k3 + k4)
+# Simulation loop
+x = x0;
+t = 0
+for k = 1..N:
+x = step_rk4(F, x, t, h, params)
+t = t + h
+20.4
+Constraint Projection as Operator
+project - enforce admissible manifold
+function project(x):
+# Enforce mass conservation
+correction = (sum(x.mass) - M_total) / N
+x.mass = x.mass - correction
+# Enforce non-negativity
+x.concentrations = max(x.concentrations, 0)
+return x
+# Modified simulation loop
+for k = 1..N:
+x = step_rk4(F, x, t, h, params)
+x = project(x)
+# enforce constraints
+t = t + h
+62
+
+20.5. Alignment with Calculus
+20.5
+Alignment with Calculus
+Mathematics
+Code
+Role
+State manifold X
+Structured type / record
+Configuration space
+Vector field F : X →TX
+Pure function
+Instantaneous rate
+Flow Φt
+step_rk4 loop
+Time evolution
+Projection ΠM
+project function
+Constraint enforcement
+Jacobian JF
+Automatic differentiation
+Sensitivity analysis
+Eigenvalues of JF
+Stability check
+Qualitative behaviour
+63
+
+Chapter 21
+Worked Example I: Minimal Retinal Cell
+21.1
+The FitzHugh-Nagumo Model
+A minimal excitable model for a retinal ganglion cell uses the FitzHugh-Nagumo system.
+State: x = (V, n)⊤where V is membrane potential and n is a recovery variable. Light
+input enters as external current I(t):
+dV
+dt =
+V −V 3
+3
+| {z }
+fast nonlinearity
+−n + I(t),
+dn
+dt = ε(V + a −bn).
+21.2
+Jacobian and Local Sensitivity
+The Jacobian is explicitly:
+J(x, t) =
+ 
+1 −V 2
+−1
+ε
+−εb
+!
+.
+This matrix is not ornamental. Its eigenvalues determine whether the cell fires repetitively
+or returns to rest after a perturbation. Small ε (slow recovery) produces action-potential-
+like spikes; large ε produces damped oscillations.
+64
+
+21.3. Numerical Simulation
+21.3
+Numerical Simulation
+FitzHugh-Nagumo implementation
+# Parameters: a=0.7, b=0.8, eps=0.08
+# Input: I(t) = 0.5 (constant stimulus)
+function F_retina(x, t, p):
+V = x.V;
+n = x.n
+dV = V - (V^3)/3 - n + I(t)
+dn = p.eps * (V + p.a - p.b * n)
+return {dV=dV, dn=dn}
+−2
+0
+2
+V (t)
+time t
+V (arbitrary units)
+Figure 21.1: Schematic voltage trace of the FitzHugh-Nagumo model under constant
+stimulus. The oscillatory behaviour arises from the interplay of fast voltage nonlinearity
+and slow recovery variable.
+21.4
+Control Interpretation
+If I(t) is a control input rather than a fixed stimulus, the retinal cell is a control system:
+˙x = F0(x) + G u(t),
+G =
+ 
+1
+0
+!
+,
+u(t) = I(t).
+Photonic input actuates only the voltage direction. The slow variable n is not directly
+actuated—it responds only through coupling.
+65
+
+Chapter 22
+Worked Example II: Skin Cell and Bound-
+ary Repair
+22.1
+Minimal Repair Model
+State: x = (B, W)⊤where B ∈[0, 1] is basement membrane integrity and W ≥0 is
+wound burden.
+dW
+dt = u(t) −α B W −γ W,
+dB
+dt = r(t) β W −δ B + η B(1 −B).
+Wound burden increases with injury u(t), decreases when membrane integrity suppresses
+disruption, and decays through baseline clearance. Basement membrane integrity in-
+creases when repair resources r(t) respond to wound burden, decays through turnover,
+and saturates through logistic self-regulation.
+66
+
+22.2. Phase Plane and Equilibrium Analysis
+22.2
+Phase Plane and Equilibrium Analysis
+0
+0.5
+1
+healthy
+fibrotic
+Wound burden W
+Integrity B
+Phase plane: wound-repair dynamics
+Figure 22.1: Phase plane for the wound-repair model. Trajectories either converge to the
+healthy equilibrium (high integrity, low wound burden) or the fibrotic state (low integrity,
+sustained wound burden), depending on initial conditions and parameter regime.
+22.3
+Projection Enforcement
+Since B ∈[0, 1] is a physical constraint:
+project_skin - admissible manifold
+function project_skin(x):
+B = clamp(x.B, 0.0, 1.0)
+W = max(x.W, 0.0)
+return {B=B, W=W}
+Simulation:
+for k = 1..N:
+x = step_rk4(F_skin, x, t, h, params)
+x = project_skin(x)
+# enforce [0,1] x R+
+t = t + h
+The constraint is part of the architecture, not a numerical afterthought.
+67
+
+Chapter 23
+Manifold-Aligned Inference and the Dis-
+cipline of Not Predicting Noise
+23.1
+From Dynamical Systems to Inference
+An inference system also evolves state. The state is now a belief, parameter estimate, or
+internal model; data acts as input; update rules define motion in hypothesis space:
+dθ
+dt = F(θ, data).
+The same calculus architecture applies.
+23.2
+Signal and Noise as Geometric Decomposition
+Observed data y = f(x) + ε can be decomposed with respect to the data manifold M:
+y = ΠM(y) + ΠN(y),
+where ΠM projects onto M (structure) and ΠN onto its normal complement (noise).
+68
+
+23.3. Curvature Governs Generalisation
+M
+y
+ΠM(y)
+structural ∆
+noise ΠN(y)
+Figure 23.1: Geometric decomposition of a data point y into its tangential component
+(structure, green) and normal component (noise, red) relative to the data manifold M.
+23.3
+Curvature Governs Generalisation
+The Hessian H(θ) = ∇2L(θ) of the loss plays the role of curvature in parameter
+space. Directions of large positive curvature correspond to stiff, sensitive directions. If
+those directions correspond to noise modes, aggressive descent chases unstable non-
+generalisable structure.
+Key Insight
+The injunction "never predict noise" is a curvature discipline. It suppresses
+parameter motion aligned with transient, non-structural curvature in the loss
+landscape — identical in principle to projecting vector fields onto constraint
+manifolds.
+23.4
+Noise Characterisation
+Noise directions are characterised by:
+• Lack of persistence across scales.
+• Absence of stable eigenstructure.
+• Sensitivity to minor perturbation.
+• Failure to generalise under refinement.
+These criteria mirror the definition of limit: structure is what survives refinement; noise
+vanishes under projection and smoothing.
+69
+
+Chapter 23. Manifold-Aligned Inference and the Discipline of Not Predicting Noise
+23.5
+Regularisation as Geometric Constraint
+Regularisation modifies the loss:
+Lλ(θ) = L(θ) + λR(θ).
+For quadratic R(θ) = ∥θ∥2, the effective Hessian becomes Hλ = H +λI. Regularisation
+increases curvature uniformly, shrinking flat directions and improving conditioning. It is
+feedback control in parameter space, biasing trajectories toward low-curvature, stable
+regions.
+70
+
+Chapter 24
+Entropy, Information, and Curvature in
+Model Space
+24.1
+The Fisher Information Metric
+For a parametric family {p(x; θ)}, the Fisher information matrix
+I(θ) = E
+
+∇θ log p(x; θ)∇θ log p(x; θ)⊤
+acts as a Riemannian metric on parameter space [25]. Model space is not flat; it carries
+curvature induced by likelihood geometry.
+24.2
+Free Energy as Variational Functional
+Variational inference minimises the free energy:
+F(q) = Eq[log q(θ)] −Eq[log p(D, θ)].
+This balances entropy of belief against data fit — identical in structure to the energy
+functionals studied in variational calculus. Inference becomes constrained minimisation
+on a functional manifold.
+71
+
+Chapter 24. Entropy, Information, and Curvature in Model Space
+24.3
+Stability Requires Curvature-Entropy Alignment
+• High entropy without curvature ⇒diffuse ignorance.
+• High curvature without entropy ⇒brittle overconfidence.
+• Stable inference requires alignment: curvature along persistent directions, entropy
+retained along indeterminate directions.
+This is identical to stability in physical systems: stiffness without damping leads to
+oscillation; damping without structure leads to collapse.
+72
+
+Chapter 25
+The Unified Geometry of Physiology, En-
+gineering, and Inference
+25.1
+One Architecture, Three Domains
+The mathematical architecture governing physiological regulation, engineered systems,
+and inferential processes is formally identical. The differences lie in substrate and
+interpretation, not in underlying mathematical form.
+Concept
+Physiology
+Engineering
+Inference
+State manifold
+Membrane + channel
+Temperature + pressure
+Parameter space
+Vector field
+Ionic kinetics
+Mechanical laws
+Gradient flow
+Constraints
+Charge neutrality
+Safety bounds
+Normalisation
+Projection
+Conservation
+Constraint projection
+Regularisation
+Curvature
+Hessian of energy
+Jacobian of F
+Fisher information
+Control
+Neural modulation
+Feedback controller
+Learning rate
+Stability
+Lyapunov function
+Eigenvalue placement
+Loss landscape
+25.2
+A Single Geometric Doctrine
+Each system is defined by an explicit state manifold. Evolution is determined by a vector
+field. Constraints restrict motion through projection. Stability is governed by curvature.
+Control modifies trajectories through admissible inputs. Entropy measures dispersion
+73
+
+Chapter 25. The Unified Geometry of Physiology, Engineering, and Inference
+relative to invariant structure. Coherence persists where curvature and constraint organise
+flow into stable manifolds.
+Key Insight
+These principles apply without alteration whether the substrate is biological tissue,
+mechanical apparatus, or parameter space of a statistical model. The geometry is
+the same; only the interpretation differs.
+74
+
+Chapter 26
+Models, Manifolds, and Adequacy
+26.1
+What a Model Is
+A mathematical model is a structured mapping f : X →Y between state spaces. The
+central question is not whether a model is true, but whether it is adequate for the structure
+under consideration.
+26.2
+Dimensionality and the Curse
+If the true system dynamics lie on a k-dimensional submanifold M ⊂Rn with k ≪n,
+the learning problem has effective dimension k. When M does not exist—when variance
+is evenly distributed across many directions—no low-dimensional approximation is
+faithful. The curse of dimensionality is the geometric statement that volume concentrates
+near the boundary of high-dimensional balls, making uniform sampling exponentially
+sparse.
+26.3
+Limits of Fixed-Phase-Space Modelling
+Classical differential modelling presupposes a fixed phase space. If the underlying
+system modifies its own variables, the effective manifold Xt evolves. When no smooth
+diffeomorphism maps Xt into a fixed reference manifold, a time-invariant model cannot
+capture the system globally.
+75
+
+Chapter 26. Models, Manifolds, and Adequacy
+Key Insight
+The limits of modelling are not matters of optimism or pessimism. They are
+matters of geometry. When phase spaces evolve, dimensions shift, or generative
+mechanisms alter, no fixed parametric family can guarantee structural fidelity.
+76
+
+Chapter 27
+Ergodicity and the Limits of Sampling
+27.1
+The Ergodic Theorem
+Theorem 27.1 Birkhoff's Ergodic Theorem
+Let (X, µ, ϕt) be a measure-preserving dynamical system and f ∈L1(µ). Then
+for µ-almost every x,
+lim
+T→∞
+1
+T
+Z T
+0
+f(ϕt(x)) dt =
+Z
+X
+f dµ.
+Ergodicity asserts that time exploration of a single trajectory suffices to recover global
+statistical structure. This property is not automatic; it is a structural constraint on the
+dynamics.
+27.2
+Non-Ergodicity and Phase-Space Fragmentation
+If phase space decomposes into invariant components X = S
+α Xα with trajectories
+confined within each Xα, then time averages depend on initial condition. No amount
+of additional time reveals structure in other components. Non-ergodicity imposes a
+fundamental geometric limit on inference.
+77
+
+Chapter 27. Ergodicity and the Limits of Sampling
+27.3
+Stationarity and Distributional Drift
+Ergodicity presupposes stationarity: the law governing x(t) is invariant under time
+translation. If system parameters drift or external forcing varies, time averages no longer
+converge to a fixed ensemble average. Learning from past data presumes persistence of
+generative structure.
+78
+
+Chapter 28
+The Absolute Limits of Approximation
+28.1
+Approximation as Projection onto a Hypothesis
+Manifold
+Every parametric model defines a hypothesis manifold H within function space. Ap-
+proximation projects data onto H by minimising loss. If the true generative mapping lies
+near H, projection yields small residual. If not, approximation error persists regardless
+of optimisation precision.
+28.2
+Five Geometric Limits
+1. Fixed-dimensionality assumption. When dimensionality evolves, no fixed Θ re-
+mains adequate.
+2. Stationarity assumption. When Pt drifts, minimising empirical risk converges to
+outdated structure.
+3. Bounded-perturbation assumption. In chaotic regimes, small perturbations pro-
+duce large deviations; approximation requires exponentially increasing precision.
+4. Ergodicity assumption. Sampling fails to represent invariant measure if phase space
+is fragmented.
+5. Curvature mismatch. Local agreement does not imply global fidelity; second-order
+geometry must align.
+79
+
+Chapter 28. The Absolute Limits of Approximation
+Key Insight
+Increasing computational power accelerates exploration of Θ but does not alter
+the geometry of H or the true generative manifold. Approximation limits arise
+from geometry, not computation.
+28.3
+Where Curvature Is Stable, Refinement Succeeds
+When the five assumptions hold, calculus guarantees convergence under refinement.
+When they fail, no increase in computation ensures structural fidelity.
+Calculus defines both the power and the boundary of approximation. Where
+curvature is stable, refinement succeeds. Where geometry shifts, projection fails.
+The boundary is written in the structure of phase space itself.
+80
+
+Bibliography
+[1] W. Rudin. Principles of Mathematical Analysis. McGraw-Hill, 3rd edition, 1976.
+[2] W. Rudin. Real and Complex Analysis. McGraw-Hill, 3rd edition, 1987.
+[3] G. B. Folland. Real Analysis: Modern Techniques and Their Applications. Wiley,
+2nd edition, 1999.
+[4] L. C. Evans. Partial Differential Equations. American Mathematical Society, 2nd
+edition, 2010.
+[5] J. M. Lee. Introduction to Smooth Manifolds. Springer, 2nd edition, 2012.
+[6] J. M. Lee. Riemannian Manifolds: An Introduction to Curvature. Springer, 1997.
+[7] M. P. do Carmo. Riemannian Geometry. Birkhäuser, 1992.
+[8] R. Abraham, J. E. Marsden, and T. Ratiu. Manifolds, Tensor Analysis, and Applica-
+tions. Springer, 2nd edition, 1988.
+[9] V. Guillemin and A. Pollack. Differential Topology. Prentice-Hall, 1974.
+[10] M. W. Hirsch, S. Smale, and R. L. Devaney. Differential Equations, Dynamical
+Systems, and an Introduction to Chaos. Academic Press, 3rd edition, 2012.
+[11] A. Katok and B. Hasselblatt. Introduction to the Modern Theory of Dynamical
+Systems. Cambridge University Press, 1995.
+[12] S. H. Strogatz. Nonlinear Dynamics and Chaos. Westview Press, 2nd edition,
+2015.
+[13] J. Guckenheimer and P. Holmes. Nonlinear Oscillations, Dynamical Systems, and
+Bifurcations of Vector Fields. Springer, 1983.
+81
+
+Bibliography
+[14] S. Wiggins. Introduction to Applied Nonlinear Dynamical Systems and Chaos.
+Springer, 2nd edition, 2003.
+[15] P. Walters. An Introduction to Ergodic Theory. Springer, 1982.
+[16] I. P. Cornfeld, S. V. Fomin, and Y. G. Sinai. Ergodic Theory. Springer, 1982.
+[17] P. Billingsley. Probability and Measure. Wiley, 3rd edition, 1995.
+[18] R. Durrett. Probability: Theory and Examples. Cambridge University Press, 4th
+edition, 2010.
+[19] E. D. Sontag. Mathematical Control Theory. Springer, 2nd edition, 1998.
+[20] H. K. Khalil. Nonlinear Systems. Prentice Hall, 3rd edition, 2002.
+[21] A. Isidori. Nonlinear Control Systems. Springer, 3rd edition, 1995.
+[22] J.-L. Lions. Optimal Control of Systems Governed by Partial Differential Equations.
+Springer, 1971.
+[23] R. W. Brockett. Asymptotic stability and feedback stabilization. In R. W. Brockett,
+R. S. Millman, and H. J. Sussmann, editors, Differential Geometric Control Theory,
+pages 181-191. Birkhäuser, 1983.
+[24] T. M. Cover and J. A. Thomas. Elements of Information Theory. Wiley, 2nd edition,
+2006.
+[25] S. Amari and H. Nagaoka. Methods of Information Geometry. American Mathe-
+matical Society, 2000.
+[26] V. N. Vapnik. Statistical Learning Theory. Wiley, 1998.
+[27] C. M. Bishop. Pattern Recognition and Machine Learning. Springer, 2006.
+[28] T. Hastie, R. Tibshirani, and J. Friedman. The Elements of Statistical Learning.
+Springer, 2nd edition, 2009.
+[29] S. Boyd and L. Vandenberghe. Convex Optimization. Cambridge University Press,
+2004.
+[30] H. B. Callen. Thermodynamics and an Introduction to Thermostatistics. Wiley,
+2nd edition, 1985.
+82
+
+Bibliography
+[31] J. E. Marsden and T. S. Ratiu. Introduction to Mechanics and Symmetry. Springer,
+2nd edition, 1999.
+[32] M. Wilson. Physics Avoidance and Other Essays in Conceptual Strategy. Oxford
+University Press, 2017.
+[33] N. Cartwright. How the Laws of Physics Lie. Oxford University Press, 1983.
+83
+

@@ -1,5 +1,10 @@
 # Alignment Research
 
+<!--
+[Local Map](https://standardgalactic.github.io/alignment/local-map.html)
+
+---
+-->
 [The Expiatory Gap](https://standardgalactic.github.io/alignment/The%20Expiatory%20Gap.pdf)
 
 [Convergence Before Autonomy](https://standardgalactic.github.io/alignment/Convergence%20Before%20Autonomy.pdf)

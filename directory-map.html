@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Spherepop Directory Map</title>
+<style>
+  :root {
+    --bg: #020403;
+    --fg: #7CFFB2;
+    --fg-dim: rgba(124,255,178,0.65);
+    --fg-faint: rgba(124,255,178,0.22);
+    --panel: rgba(0, 16, 8, 0.86);
+    --line: rgba(124,255,178,0.18);
+    --glow: 0 0 10px rgba(124,255,178,0.35), 0 0 24px rgba(124,255,178,0.12);
+    --radius-scale: 14;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at 50% 45%, rgba(8,32,18,0.85), transparent 48%),
+      radial-gradient(circle at 50% 50%, rgba(124,255,178,0.06), transparent 62%),
+      linear-gradient(180deg, #031008 0%, #010302 100%);
+    color: var(--fg);
+    font-family: "Courier New", Courier, monospace;
+  }
+
+  canvas {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .hud {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .panel {
+    position: absolute;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    box-shadow: var(--glow);
+    backdrop-filter: blur(2px);
+    pointer-events: auto;
+  }
+
+  .panel.top-left {
+    top: 16px;
+    left: 16px;
+    width: min(420px, calc(100vw - 32px));
+    padding: 12px 14px;
+  }
+
+  .panel.bottom-left {
+    left: 16px;
+    bottom: 16px;
+    width: min(460px, calc(100vw - 32px));
+    max-height: 34vh;
+    overflow: auto;
+    padding: 12px 14px;
+  }
+
+  .panel.top-right {
+    top: 16px;
+    right: 16px;
+    width: min(320px, calc(100vw - 32px));
+    padding: 12px 14px;
+  }
+
+  h1, h2, p, pre {
+    margin: 0;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  h2 {
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: var(--fg-dim);
+  }
+
+  .meta, .help, .stats {
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--fg-dim);
+    white-space: pre-wrap;
+  }
+
+  .path {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--fg);
+    margin-top: 8px;
+    word-break: break-word;
+  }
+
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .controls input, .controls button, textarea {
+    background: rgba(0,0,0,0.28);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    font: inherit;
+    padding: 8px 10px;
+    outline: none;
+    box-shadow: var(--glow);
+  }
+
+  .controls button, .toolbar button {
+    cursor: pointer;
+  }
+
+  .toolbar {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .toolbar button {
+    background: rgba(0,0,0,0.28);
+    color: var(--fg);
+    border: 1px solid var(--line);
+    padding: 7px 10px;
+    font: inherit;
+    box-shadow: var(--glow);
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+    margin-top: 8px;
+    line-height: 1.35;
+  }
+
+  .hidden { display: none; }
+
+  @media (max-width: 820px) {
+    .panel.top-left, .panel.top-right, .panel.bottom-left {
+      width: calc(100vw - 20px);
+      left: 10px;
+      right: 10px;
+    }
+
+    .panel.top-left { top: 10px; }
+    .panel.top-right { top: auto; bottom: 10px; max-height: 32vh; overflow: auto; }
+    .panel.bottom-left { bottom: 180px; max-height: 24vh; }
+  }
+</style>
+</head>
+<body>
+<canvas id="view"></canvas>
+<div class="hud">
+  <div class="panel top-left">
+    <h1>Spherepop Directory Map</h1>
+    <div class="meta" id="summary">Load a nested JSON tree and descend through regions.</div>
+    <div class="path" id="pathDisplay">/</div>
+    <div class="controls">
+      <input id="search" type="text" placeholder="Search nodes" />
+      <button id="fitBtn">Fit</button>
+      <button id="resetBtn">Root</button>
+    </div>
+    <div class="toolbar">
+      <button id="toggleImportBtn">Import JSON</button>
+      <button id="toggleLabelsBtn">Labels: On</button>
+      <button id="toggleGlowBtn">Glow: On</button>
+    </div>
+    <div id="importWrap" class="hidden">
+      <textarea id="jsonInput" spellcheck="false"></textarea>
+      <div class="toolbar">
+        <button id="loadBtn">Load Tree</button>
+        <button id="sampleBtn">Sample</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel top-right">
+    <h2>Selection</h2>
+    <div class="stats" id="selectionStats">No node selected.</div>
+  </div>
+
+  <div class="panel bottom-left">
+    <h2>Controls</h2>
+    <div class="help">Click a region to focus it.
+Double click a directory to descend.
+Right click or Backspace to go to parent.
+Mouse wheel or pinch-equivalent trackpad gesture to zoom.
+Drag the field to pan.
+Press / to focus search.
+Press L to toggle labels.
+Press G to toggle glow.
+
+JSON format:
+{
+  "name": "root",
+  "type": "dir",
+  "children": [
+    {"name": "notes", "type": "dir", "children": [...]},
+    {"name": "paper.tex", "type": "file", "size": 1200}
+  ]
+}</div>
+  </div>
+</div>
+
+<script>
+const sampleTree = {
+  name: "research",
+  type: "dir",
+  children: [
+    {
+      name: "physics",
+      type: "dir",
+      children: [
+        { name: "rsvp", type: "dir", children: [
+          { name: "fall_of_space.tex", type: "file", size: 42000 },
+          { name: "redshift_notes.md", type: "file", size: 10000 },
+          { name: "simulations", type: "dir", children: [
+            { name: "lattice.py", type: "file", size: 7000 },
+            { name: "torsion.py", type: "file", size: 6800 }
+          ] }
+        ] },
+        { name: "references", type: "dir", children: [
+          { name: "entropy_gravity.pdf", type: "file", size: 2400000 },
+          { name: "notes.txt", type: "file", size: 8200 }
+        ] }
+      ]
+    },
+    {
+      name: "language",
+      type: "dir",
+      children: [
+        { name: "latin", type: "dir", children: [
+          { name: "phrases.txt", type: "file", size: 4300 },
+          { name: "grammar.md", type: "file", size: 9200 }
+        ] },
+        { name: "arabic", type: "dir", children: [
+          { name: "trainer.html", type: "file", size: 29000 }
+        ] }
+      ]
+    },
+    {
+      name: "games",
+      type: "dir",
+      children: [
+        { name: "spherepop", type: "dir", children: [
+          { name: "index.html", type: "file", size: 38000 },
+          { name: "audio", type: "dir", children: [
+            { name: "pulse.wav", type: "file", size: 650000 },
+            { name: "menu.ogg", type: "file", size: 280000 }
+          ] }
+        ] },
+        { name: "blastoids", type: "dir", children: [
+          { name: "main.js", type: "file", size: 17000 }
+        ] }
+      ]
+    },
+    {
+      name: "README.md",
+      type: "file",
+      size: 2200
+    }
+  ]
+};
+
+const canvas = document.getElementById('view');
+const ctx = canvas.getContext('2d');
+const dpr = Math.max(1, window.devicePixelRatio || 1);
+
+const summaryEl = document.getElementById('summary');
+const pathEl = document.getElementById('pathDisplay');
+const selectionEl = document.getElementById('selectionStats');
+const searchEl = document.getElementById('search');
+const jsonInput = document.getElementById('jsonInput');
+const importWrap = document.getElementById('importWrap');
+
+let root = null;
+let currentRoot = null;
+let parentStack = [];
+let layoutNodes = [];
+let hovered = null;
+let selected = null;
+let showLabels = true;
+let glow = true;
+let searchTerm = '';
+let camera = { x: 0, y: 0, scale: 1 };
+let drag = null;
+
+function inferType(node) {
+  if (node.type) return node.type;
+  return node.children ? 'dir' : 'file';
+}
+
+function normalizeTree(node, path = '') {
+  const type = inferType(node);
+  const fullPath = path ? `${path}/${node.name}` : node.name;
+  const out = {
+    name: node.name,
+    type,
+    size: Number(node.size || 0),
+    children: [],
+    fullPath,
+    depth: 0,
+    weight: 1,
+    files: 0,
+    dirs: 0,
+    parent: null,
+  };
+
+  if (type === 'dir') {
+    const kids = Array.isArray(node.children) ? node.children.map(ch => normalizeTree(ch, fullPath)) : [];
+    out.children = kids;
+    for (const child of kids) child.parent = out;
+    out.weight = Math.max(1, kids.reduce((a, c) => a + c.weight, 0));
+    out.files = kids.reduce((a, c) => a + c.files, 0);
+    out.dirs = 1 + kids.reduce((a, c) => a + Math.max(0, c.dirs), 0);
+  } else {
+    out.weight = Math.max(1, Math.log2(out.size + 2));
+    out.files = 1;
+    out.dirs = 0;
+  }
+  return out;
+}
+
+function annotateDepths(node, depth = 0) {
+  node.depth = depth;
+  if (node.children) {
+    for (const child of node.children) annotateDepths(child, depth + 1);
+  }
+}
+
+function countTotals(node) {
+  let files = node.type === 'file' ? 1 : 0;
+  let dirs = node.type === 'dir' ? 1 : 0;
+  let size = node.type === 'file' ? node.size : 0;
+
+  if (node.children) {
+    for (const child of node.children) {
+      const sub = countTotals(child);
+      files += sub.files;
+      dirs += sub.dirs;
+      size += sub.size;
+    }
+  }
+  node.totalFiles = files;
+  node.totalDirs = dirs;
+  node.totalSize = size;
+  return { files, dirs, size };
+}
+
+function fitCamera() {
+  camera = { x: canvas.width / (2 * dpr), y: canvas.height / (2 * dpr), scale: 1 };
+}
+
+function setTree(tree) {
+  root = normalizeTree(tree);
+  annotateDepths(root);
+  countTotals(root);
+  currentRoot = root;
+  parentStack = [];
+  selected = root;
+  hovered = null;
+  fitCamera();
+  updateSummary();
+}
+
+function updateSummary() {
+  if (!currentRoot) return;
+  summaryEl.textContent = `Viewing ${currentRoot.name} · ${currentRoot.totalDirs} dirs · ${currentRoot.totalFiles} files · ${formatSize(currentRoot.totalSize)}`;
+  pathEl.textContent = '/' + currentRoot.fullPath;
+  updateSelection(selected || currentRoot);
+}
+
+function updateSelection(node) {
+  if (!node) {
+    selectionEl.textContent = 'No node selected.';
+    return;
+  }
+  const kind = node.type === 'dir' ? 'directory' : 'file';
+  const extra = node.type === 'dir'
+    ? `children: ${(node.children || []).length}\nsubdirs: ${Math.max(0, node.totalDirs - 1)}\nfiles: ${node.totalFiles}\nsize: ${formatSize(node.totalSize)}`
+    : `size: ${formatSize(node.size)}`;
+  selectionEl.textContent = `${node.name}\nkind: ${kind}\npath: /${node.fullPath}\n${extra}`;
+}
+
+function formatSize(bytes) {
+  if (!bytes) return '0 B';
+  const units = ['B','KB','MB','GB','TB'];
+  let i = 0;
+  let n = bytes;
+  while (n >= 1024 && i < units.length - 1) {
+    n /= 1024;
+    i += 1;
+  }
+  return `${n.toFixed(n < 10 && i > 0 ? 1 : 0)} ${units[i]}`;
+}
+
+function computeLayout(node, cx, cy, radius, depth = 0, acc = []) {
+  acc.push({ node, x: cx, y: cy, r: radius, depth });
+  if (node.type !== 'dir' || !node.children || !node.children.length) return acc;
+
+  const children = [...node.children].sort((a,b) => b.weight - a.weight);
+  const total = children.reduce((s, c) => s + c.weight, 0) || 1;
+  const baseRing = radius * 0.56;
+  const jitter = Math.min(0.15, 0.02 * children.length);
+  let angle = -Math.PI / 2;
+
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i];
+    const frac = child.weight / total;
+    const span = Math.max(0.28, frac * Math.PI * 2 * 0.92);
+    const childR = Math.max(14, Math.min(radius * 0.34, radius * (0.11 + frac * 0.95)));
+    const ring = Math.max(radius - childR - 18, baseRing - i * radius * jitter);
+    const mid = angle + span / 2;
+    const x = cx + Math.cos(mid) * ring;
+    const y = cy + Math.sin(mid) * ring;
+    computeLayout(child, x, y, childR, depth + 1, acc);
+    angle += span;
+  }
+  return acc;
+}
+
+function resize() {
+  canvas.width = Math.floor(window.innerWidth * dpr);
+  canvas.height = Math.floor(window.innerHeight * dpr);
+  canvas.style.width = window.innerWidth + 'px';
+  canvas.style.height = window.innerHeight + 'px';
+}
+
+function worldToScreen(x, y) {
+  return {
+    x: (x * camera.scale) + camera.x,
+    y: (y * camera.scale) + camera.y,
+  };
+}
+
+function screenToWorld(x, y) {
+  return {
+    x: (x - camera.x) / camera.scale,
+    y: (y - camera.y) / camera.scale,
+  };
+}
+
+function renderGrid() {
+  const step = 80 * camera.scale;
+  if (step < 22) return;
+  ctx.save();
+  ctx.strokeStyle = 'rgba(124,255,178,0.05)';
+  ctx.lineWidth = 1;
+  for (let x = camera.x % step; x < canvas.width; x += step) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+  }
+  for (let y = camera.y % step; y < canvas.height; y += step) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function render() {
+  ctx.setTransform(1,0,0,1,0,0);
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  renderGrid();
+  if (!currentRoot) return;
+
+  const sceneRadius = Math.min(canvas.width, canvas.height) / dpr * 0.26;
+  layoutNodes = computeLayout(currentRoot, 0, 0, sceneRadius, 0, []);
+
+  for (const item of layoutNodes.slice().reverse()) {
+    drawNode(item);
+  }
+
+  requestAnimationFrame(render);
+}
+
+function nodeMatches(node) {
+  return searchTerm && node.fullPath.toLowerCase().includes(searchTerm.toLowerCase());
+}
+
+function drawNode(item) {
+  const { node, x, y, r, depth } = item;
+  const p = worldToScreen(x, y);
+  const sr = r * camera.scale;
+  if (p.x + sr < -100 || p.y + sr < -100 || p.x - sr > canvas.width + 100 || p.y - sr > canvas.height + 100) return;
+
+  const isDir = node.type === 'dir';
+  const isHovered = hovered === node;
+  const isSelected = selected === node;
+  const matched = nodeMatches(node);
+
+  ctx.save();
+  if (glow) {
+    ctx.shadowColor = isSelected ? 'rgba(124,255,178,0.75)' : 'rgba(124,255,178,0.22)';
+    ctx.shadowBlur = isSelected ? 28 : 12;
+  }
+
+  const alpha = isDir ? Math.max(0.12, 0.22 - depth * 0.02) : 0.08;
+  ctx.fillStyle = matched
+    ? 'rgba(124,255,178,0.28)'
+    : isSelected
+      ? 'rgba(124,255,178,0.18)'
+      : isHovered
+        ? 'rgba(124,255,178,0.14)'
+        : `rgba(124,255,178,${alpha})`;
+
+  ctx.beginPath();
+  ctx.arc(p.x * dpr / dpr, p.y * dpr / dpr, sr, 0, Math.PI * 2);
+  ctx.fill();
+
+  ctx.shadowBlur = 0;
+  ctx.lineWidth = isSelected ? 2.4 : isHovered ? 1.8 : 1.1;
+  ctx.strokeStyle = matched
+    ? 'rgba(124,255,178,0.95)'
+    : isSelected
+      ? 'rgba(124,255,178,0.88)'
+      : isDir
+        ? 'rgba(124,255,178,0.42)'
+        : 'rgba(124,255,178,0.18)';
+  ctx.stroke();
+
+  if (showLabels && sr > 24) {
+    ctx.fillStyle = isSelected || matched ? 'rgba(220,255,235,0.96)' : 'rgba(124,255,178,0.85)';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    const fontSize = Math.max(10, Math.min(18, sr * 0.16));
+    ctx.font = `${fontSize}px Courier New`;
+    let label = node.name;
+    const max = Math.max(8, Math.floor(sr / 7));
+    if (label.length > max) label = label.slice(0, max - 1) + '…';
+    ctx.fillText(label, p.x, p.y);
+  }
+  ctx.restore();
+}
+
+function pickNode(clientX, clientY) {
+  const rect = canvas.getBoundingClientRect();
+  const sx = clientX - rect.left;
+  const sy = clientY - rect.top;
+  let hit = null;
+  let bestR = Infinity;
+
+  for (const item of layoutNodes) {
+    const p = worldToScreen(item.x, item.y);
+    const sr = item.r * camera.scale;
+    const dx = sx - p.x;
+    const dy = sy - p.y;
+    const d = Math.sqrt(dx * dx + dy * dy);
+    if (d <= sr && sr < bestR) {
+      hit = item.node;
+      bestR = sr;
+    }
+  }
+  return hit;
+}
+
+function focusNode(node) {
+  selected = node;
+  updateSelection(node);
+  if (!node) return;
+  const item = layoutNodes.find(n => n.node === node);
+  if (!item) return;
+  const targetScale = node === currentRoot ? 1 : Math.min(3.5, Math.max(1.15, 120 / Math.max(40, item.r)));
+  camera.scale = targetScale;
+  camera.x = canvas.width / (2 * dpr) - item.x * camera.scale;
+  camera.y = canvas.height / (2 * dpr) - item.y * camera.scale;
+}
+
+function descend(node) {
+  if (!node || node.type !== 'dir') return;
+  parentStack.push(currentRoot);
+  currentRoot = node;
+  selected = node;
+  hovered = null;
+  fitCamera();
+  updateSummary();
+}
+
+function ascend() {
+  if (!parentStack.length) return;
+  currentRoot = parentStack.pop();
+  selected = currentRoot;
+  hovered = null;
+  fitCamera();
+  updateSummary();
+}
+
+canvas.addEventListener('mousemove', e => {
+  hovered = pickNode(e.clientX, e.clientY);
+});
+
+canvas.addEventListener('mousedown', e => {
+  if (e.button === 0) {
+    const node = pickNode(e.clientX, e.clientY);
+    if (node) {
+      selected = node;
+      updateSelection(node);
+    }
+    drag = { x: e.clientX, y: e.clientY, cameraX: camera.x, cameraY: camera.y, moved: false };
+  }
+});
+
+window.addEventListener('mousemove', e => {
+  if (!drag) return;
+  const dx = e.clientX - drag.x;
+  const dy = e.clientY - drag.y;
+  if (Math.abs(dx) > 2 || Math.abs(dy) > 2) drag.moved = true;
+  camera.x = drag.cameraX + dx;
+  camera.y = drag.cameraY + dy;
+});
+
+window.addEventListener('mouseup', e => {
+  if (drag && !drag.moved && e.button === 0) {
+    const node = pickNode(e.clientX, e.clientY);
+    if (node) focusNode(node);
+  }
+  drag = null;
+});
+
+canvas.addEventListener('dblclick', e => {
+  const node = pickNode(e.clientX, e.clientY);
+  if (node && node.type === 'dir') descend(node);
+});
+
+canvas.addEventListener('contextmenu', e => {
+  e.preventDefault();
+  ascend();
+});
+
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left;
+  const my = e.clientY - rect.top;
+  const before = screenToWorld(mx, my);
+  const factor = Math.exp(-e.deltaY * 0.0012);
+  camera.scale = Math.min(12, Math.max(0.18, camera.scale * factor));
+  const after = screenToWorld(mx, my);
+  camera.x += (after.x - before.x) * camera.scale;
+  camera.y += (after.y - before.y) * camera.scale;
+}, { passive: false });
+
+searchEl.addEventListener('input', () => {
+  searchTerm = searchEl.value.trim().toLowerCase();
+});
+
+document.getElementById('fitBtn').addEventListener('click', () => {
+  fitCamera();
+  focusNode(currentRoot);
+});
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  currentRoot = root;
+  parentStack = [];
+  fitCamera();
+  selected = currentRoot;
+  updateSummary();
+});
+
+document.getElementById('toggleImportBtn').addEventListener('click', () => {
+  importWrap.classList.toggle('hidden');
+});
+
+document.getElementById('toggleLabelsBtn').addEventListener('click', e => {
+  showLabels = !showLabels;
+  e.target.textContent = `Labels: ${showLabels ? 'On' : 'Off'}`;
+});
+
+document.getElementById('toggleGlowBtn').addEventListener('click', e => {
+  glow = !glow;
+  e.target.textContent = `Glow: ${glow ? 'On' : 'Off'}`;
+});
+
+document.getElementById('sampleBtn').addEventListener('click', () => {
+  jsonInput.value = JSON.stringify(sampleTree, null, 2);
+});
+
+document.getElementById('loadBtn').addEventListener('click', () => {
+  try {
+    const parsed = JSON.parse(jsonInput.value);
+    setTree(parsed);
+  } catch (err) {
+    alert('Could not parse JSON.');
+  }
+});
+
+window.addEventListener('keydown', e => {
+  if (e.key === '/') {
+    e.preventDefault();
+    searchEl.focus();
+    searchEl.select();
+  } else if (e.key === 'Backspace' && document.activeElement !== searchEl && document.activeElement !== jsonInput) {
+    e.preventDefault();
+    ascend();
+  } else if (e.key.toLowerCase() === 'l') {
+    showLabels = !showLabels;
+    document.getElementById('toggleLabelsBtn').textContent = `Labels: ${showLabels ? 'On' : 'Off'}`;
+  } else if (e.key.toLowerCase() === 'g') {
+    glow = !glow;
+    document.getElementById('toggleGlowBtn').textContent = `Glow: ${glow ? 'On' : 'Off'}`;
+  }
+});
+
+resize();
+setTree(sampleTree);
+jsonInput.value = JSON.stringify(sampleTree, null, 2);
+focusNode(currentRoot);
+window.addEventListener('resize', resize);
+requestAnimationFrame(render);
+</script>
+</body>
+</html>
+

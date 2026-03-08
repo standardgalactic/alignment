@@ -1,0 +1,423 @@
+{
+  "name": ".",
+  "type": "dir",
+  "children": [
+    {
+      "name": "Calculus - diagrams.pdf",
+      "type": "file",
+      "size": 506684
+    },
+    {
+      "name": "Calculus - diagrams.tex",
+      "type": "file",
+      "size": 109329
+    },
+    {
+      "name": "Calculus - diagrams.txt",
+      "type": "file",
+      "size": 70075
+    },
+    {
+      "name": "Calculus - main text - draft 01.pdf",
+      "type": "file",
+      "size": 460013
+    },
+    {
+      "name": "Calculus - main text - draft 01.tex",
+      "type": "file",
+      "size": 185675
+    },
+    {
+      "name": "Calculus - main text - draft 01.txt",
+      "type": "file",
+      "size": 202011
+    },
+    {
+      "name": "Calculus - main text - old.pdf",
+      "type": "file",
+      "size": 805962
+    },
+    {
+      "name": "Calculus - main text - old.tex",
+      "type": "file",
+      "size": 456605
+    },
+    {
+      "name": "Calculus - main text - old.txt",
+      "type": "file",
+      "size": 467694
+    },
+    {
+      "name": "Calculus - main text.pdf",
+      "type": "file",
+      "size": 835012
+    },
+    {
+      "name": "Calculus - main text.tex",
+      "type": "file",
+      "size": 482090
+    },
+    {
+      "name": "Calculus - main text.txt",
+      "type": "file",
+      "size": 494593
+    },
+    {
+      "name": "Calculus_Chapter_Summaries.md",
+      "type": "file",
+      "size": 25799
+    },
+    {
+      "name": "Convergence Before Autonomy - notes.txt",
+      "type": "file",
+      "size": 16625
+    },
+    {
+      "name": "Convergence Before Autonomy.pdf",
+      "type": "file",
+      "size": 550147
+    },
+    {
+      "name": "Convergence Before Autonomy.tex",
+      "type": "file",
+      "size": 201037
+    },
+    {
+      "name": "Convergence Before Autonomy.txt",
+      "type": "file",
+      "size": 185277
+    },
+    {
+      "name": "Human in the Loop.pdf",
+      "type": "file",
+      "size": 84068
+    },
+    {
+      "name": "Human in the Loop.tex",
+      "type": "file",
+      "size": 43453
+    },
+    {
+      "name": "Human in the Loop.txt",
+      "type": "file",
+      "size": 41553
+    },
+    {
+      "name": "Hyperpleonastic Legibility.pdf",
+      "type": "file",
+      "size": 357299
+    },
+    {
+      "name": "Hyperpleonastic Legibility.tex",
+      "type": "file",
+      "size": 97080
+    },
+    {
+      "name": "Hyperpleonastic Legibility.txt",
+      "type": "file",
+      "size": 87259
+    },
+    {
+      "name": "Identity After Authenticity - draft 01.pdf",
+      "type": "file",
+      "size": 191545
+    },
+    {
+      "name": "Identity After Authenticity - draft 01.tex",
+      "type": "file",
+      "size": 74160
+    },
+    {
+      "name": "Identity After Authenticity - draft 01.txt",
+      "type": "file",
+      "size": 69226
+    },
+    {
+      "name": "Identity After Authenticity.pdf",
+      "type": "file",
+      "size": 250719
+    },
+    {
+      "name": "Identity After Authenticity.tex",
+      "type": "file",
+      "size": 96031
+    },
+    {
+      "name": "Identity After Authenticity.txt",
+      "type": "file",
+      "size": 91046
+    },
+    {
+      "name": "LICENSE",
+      "type": "file",
+      "size": 1072
+    },
+    {
+      "name": "README.md",
+      "type": "file",
+      "size": 5349
+    },
+    {
+      "name": "Recursive Futarchy.tex",
+      "type": "file",
+      "size": 86725
+    },
+    {
+      "name": "The Expiatory Gap - draft 00.docx",
+      "type": "file",
+      "size": 19298
+    },
+    {
+      "name": "The Expiatory Gap - draft 01.pdf",
+      "type": "file",
+      "size": 183258
+    },
+    {
+      "name": "The Expiatory Gap - draft 01.tex",
+      "type": "file",
+      "size": 68766
+    },
+    {
+      "name": "The Expiatory Gap - draft 01.txt",
+      "type": "file",
+      "size": 62933
+    },
+    {
+      "name": "The Expiatory Gap - draft 02.pdf",
+      "type": "file",
+      "size": 313385
+    },
+    {
+      "name": "The Expiatory Gap - draft 02.tex",
+      "type": "file",
+      "size": 117110
+    },
+    {
+      "name": "The Expiatory Gap - draft 02.txt",
+      "type": "file",
+      "size": 111104
+    },
+    {
+      "name": "The Expiatory Gap.pdf",
+      "type": "file",
+      "size": 369377
+    },
+    {
+      "name": "The Expiatory Gap.tex",
+      "type": "file",
+      "size": 152969
+    },
+    {
+      "name": "The Expiatory Gap.txt",
+      "type": "file",
+      "size": 146210
+    },
+    {
+      "name": "analyze.py",
+      "type": "file",
+      "size": 4345
+    },
+    {
+      "name": "check-directory.sh",
+      "type": "file",
+      "size": 285
+    },
+    {
+      "name": "directory-map.html",
+      "type": "file",
+      "size": 19729
+    },
+    {
+      "name": "extract-text.py",
+      "type": "file",
+      "size": 4654
+    },
+    {
+      "name": "index.html",
+      "type": "file",
+      "size": 15986
+    },
+    {
+      "name": "local-map.html",
+      "type": "file",
+      "size": 26579
+    },
+    {
+      "name": "run-analysis.sh",
+      "type": "file",
+      "size": 212
+    },
+    {
+      "name": "scan-directory.sh",
+      "type": "file",
+      "size": 1028
+    },
+    {
+      "name": "semantic_index",
+      "type": "dir",
+      "children": [
+        {
+          "name": "cluster_summaries.json",
+          "type": "file",
+          "size": 4438
+        },
+        {
+          "name": "documents.json",
+          "type": "file",
+          "size": 1148
+        }
+      ]
+    },
+    {
+      "name": "structure.txt",
+      "type": "file",
+      "size": 5507
+    },
+    {
+      "name": "tree.json",
+      "type": "file",
+      "size": 0
+    },
+    {
+      "name": "working",
+      "type": "dir",
+      "children": [
+        {
+          "name": "Convergence Before Autonomy - notes.txt",
+          "type": "file",
+          "size": 16625
+        },
+        {
+          "name": "Convergence Before Autonomy.pdf",
+          "type": "file",
+          "size": 550147
+        },
+        {
+          "name": "Convergence Before Autonomy.tex",
+          "type": "file",
+          "size": 201037
+        },
+        {
+          "name": "Hyperpleonastic Legibility.aux",
+          "type": "file",
+          "size": 16860
+        },
+        {
+          "name": "Hyperpleonastic Legibility.log",
+          "type": "file",
+          "size": 30285
+        },
+        {
+          "name": "Hyperpleonastic Legibility.out",
+          "type": "file",
+          "size": 25232
+        },
+        {
+          "name": "Hyperpleonastic Legibility.pdf",
+          "type": "file",
+          "size": 357299
+        },
+        {
+          "name": "Hyperpleonastic Legibility.tex",
+          "type": "file",
+          "size": 97064
+        },
+        {
+          "name": "La_ineficiencia_nos_salvar\u00e1_de_la_IA.json",
+          "type": "file",
+          "size": 220373
+        },
+        {
+          "name": "La_ineficiencia_nos_salvar\u00e1_de_la_IA.mp3",
+          "type": "file",
+          "size": 35348879
+        },
+        {
+          "name": "La_ineficiencia_nos_salvar\u00e1_de_la_IA.srt",
+          "type": "file",
+          "size": 45741
+        },
+        {
+          "name": "La_ineficiencia_nos_salvar\u00e1_de_la_IA.tsv",
+          "type": "file",
+          "size": 35913
+        },
+        {
+          "name": "La_ineficiencia_nos_salvar\u00e1_de_la_IA.txt",
+          "type": "file",
+          "size": 28699
+        },
+        {
+          "name": "La_ineficiencia_nos_salvar\u00e1_de_la_IA.vtt",
+          "type": "file",
+          "size": 40957
+        },
+        {
+          "name": "Surviving_AI_Optimization_Through_Human_Friction.json",
+          "type": "file",
+          "size": 370598
+        },
+        {
+          "name": "Surviving_AI_Optimization_Through_Human_Friction.mp3",
+          "type": "file",
+          "size": 64529229
+        },
+        {
+          "name": "Surviving_AI_Optimization_Through_Human_Friction.srt",
+          "type": "file",
+          "size": 84709
+        },
+        {
+          "name": "Surviving_AI_Optimization_Through_Human_Friction.tsv",
+          "type": "file",
+          "size": 69044
+        },
+        {
+          "name": "Surviving_AI_Optimization_Through_Human_Friction.txt",
+          "type": "file",
+          "size": 56607
+        },
+        {
+          "name": "Surviving_AI_Optimization_Through_Human_Friction.vtt",
+          "type": "file",
+          "size": 76765
+        },
+        {
+          "name": "Why_Deliberate_Friction_Stops_Algorithmic_Capture.json",
+          "type": "file",
+          "size": 279608
+        },
+        {
+          "name": "Why_Deliberate_Friction_Stops_Algorithmic_Capture.mp3",
+          "type": "file",
+          "size": 60580878
+        },
+        {
+          "name": "Why_Deliberate_Friction_Stops_Algorithmic_Capture.srt",
+          "type": "file",
+          "size": 70387
+        },
+        {
+          "name": "Why_Deliberate_Friction_Stops_Algorithmic_Capture.tsv",
+          "type": "file",
+          "size": 60609
+        },
+        {
+          "name": "Why_Deliberate_Friction_Stops_Algorithmic_Capture.txt",
+          "type": "file",
+          "size": 52890
+        },
+        {
+          "name": "Why_Deliberate_Friction_Stops_Algorithmic_Capture.vtt",
+          "type": "file",
+          "size": 65473
+        },
+        {
+          "name": "index.html",
+          "type": "file",
+          "size": 6892
+        }
+      ]
+    }
+  ]
+}
