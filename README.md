@@ -1,5 +1,21 @@
 # Alignment Research
 
+[Against the Extinction Thesis](https://standardgalactic.github.io/alignment/against-the-extinction-thesis.pdf)
+
+[Exposure Before Evidence](https://standardgalactic.github.io/alignment/exposure-before-evidence.pdf)
+
+[Narrative Before Mechanism](https://standardgalactic.github.io/alignment/narrative-before-mechanism.pdf)
+
+[Complexity Before Control](https://standardgalactic.github.io/alignment/complexity-before-control.pdf)
+
+[Accommodation Before Prediction](https://standardgalactic.github.io/alignment/accommodation-before-prediction.pdf)
+
+[Divided We Stand](https://standardgalactic.github.io/alignment/divided-we-stand.pdf)
+
+# Complex Systems
+
+[Availability Before Residency](https://standardgalactic.github.io/alignment/availability-before-residency.pdf)
+
 <!--
 [Local Map](https://standardgalactic.github.io/alignment/local-map.html)
 
