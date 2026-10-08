@@ -1,0 +1,1829 @@
+WEBVTT
+
+00:00.000 --> 00:05.740
+A ver, pensemos por un momento en un conductor que va por una autopista súper iluminada de noche.
+
+00:06.080 --> 00:11.480
+O sea, esa persona tiene su mapa detallado en el tablero, ve las señales reflectantes con total claridad
+
+00:11.480 --> 00:14.400
+y bueno, sabe exactamente en qué kilómetro debe girar.
+
+00:14.720 --> 00:17.780
+Hay una sensación como de, no sé, control absoluto.
+
+00:17.920 --> 00:21.180
+Claro, exacto. Hay una visibilidad total del panorama.
+
+00:21.480 --> 00:25.240
+O sea, si surge un obstáculo, digamos un vehículo averiado a lo lejos,
+
+00:25.680 --> 00:28.380
+el conductor lo detecta con muchísima anticipación.
+
+00:28.380 --> 00:33.840
+El sistema en ese momento es completamente predecible y la ruta parece, bueno, garantizada.
+
+00:34.300 --> 00:39.900
+Pero imaginemos que de repente ese mismo vehículo entra en un banco de niebla increíblemente densa.
+
+00:40.140 --> 00:40.820
+Uf, sí.
+
+00:41.020 --> 00:44.120
+De esas nieblas que te borran el mundo exterior por completo.
+
+00:44.620 --> 00:50.260
+El mapa digital ya no sirve de mucho porque, bueno, las condiciones inmediatas son un misterio, ¿no?
+
+00:50.620 --> 00:56.140
+Las señales desaparecen en la bruma y apenas se puede ver, qué sé yo, un par de metros por delante del capó del auto.
+
+00:56.140 --> 00:59.620
+Esa ilusión de control se esfuma en un segundo.
+
+01:00.160 --> 01:06.760
+Y es ahí, justo en medio de esa profunda incertidumbre, donde la supervivencia cambia de reglas por completo.
+
+01:06.980 --> 01:07.420
+Totalmente.
+
+01:07.420 --> 01:14.180
+Porque lo que salva a ese conductor no es tener un modelo matemático perfecto que calcule que haya 10 kilómetros de distancia.
+
+01:14.880 --> 01:17.760
+Lo que realmente lo salva es su mecánica de respuesta.
+
+01:18.320 --> 01:26.200
+O sea, la capacidad de reaccionar al instante, de que los frenos funcionen y, sobre todo, de poder corregir el rumbo a tiempo cuando una sombra aparezca de la nada.
+
+01:26.200 --> 01:32.080
+Esa imagen mental, exactamente esa, es el núcleo de nuestro análisis a fondo de hoy.
+
+01:32.880 --> 01:39.960
+Bien, vamos a desempacar esto, porque tenemos sobre la mesa un material que, la verdad, no es fácil de digerir, pero es fundamental.
+
+01:40.680 --> 01:43.240
+Así es, un texto súper denso, pero fascinante.
+
+01:43.880 --> 01:47.360
+Hablamos de un ensayo extenso de octubre de 2026.
+
+01:47.960 --> 01:53.100
+Se titula Civilizaciones Corregibles y fue escrito por el investigador independiente Flyxion.
+
+01:53.100 --> 01:57.100
+Este documento disecciona un intercambio de cartas públicas.
+
+01:57.880 --> 02:02.140
+Un debate que fue sumamente intenso entre dos gigantes intelectuales de nuestra era.
+
+02:02.580 --> 02:04.280
+Ajá, dos pesos pesados, de verdad.
+
+02:04.840 --> 02:11.580
+Por un lado tenemos a Steven Pinker, que es un experto reconocido mundialmente por su análisis empírico del progreso histórico humano.
+
+02:12.140 --> 02:19.640
+Y por el otro, Scott Alexander, destacadísimo analista en pronósticos y experto en los riesgos existenciales de la inteligencia artificial.
+
+02:19.640 --> 02:26.660
+Y creo que es vital establecer desde este primer momento cuál es nuestra misión en esta inmersión profunda.
+
+02:26.800 --> 02:31.980
+O sea, no estamos aquí para declarar un bando ganador entre Pinker y Alexander, no se trata de eso.
+
+02:32.260 --> 02:33.220
+Claro, no somos jueces.
+
+02:33.220 --> 02:42.860
+Exacto. Y tampoco vamos a enfrascarnos en un debate estéril casi de película de ciencia ficción sobre si las máquinas van a tomar el control del planeta la próxima semana.
+
+02:43.040 --> 02:44.680
+Que es lo que todos los titulares dicen, ¿no?
+
+02:45.040 --> 02:45.480
+Totalmente.
+
+02:45.480 --> 02:52.480
+Pero el verdadero propósito de este análisis es desentrañar un concepto mucho más estructural que el autor del ensayo plantea.
+
+02:53.520 --> 02:56.060
+El concepto de la corrigibilidad.
+
+02:56.660 --> 02:56.900
+Ajá.
+
+02:57.440 --> 03:04.580
+Hablamos de la capacidad sistémica que tiene una civilización entera para detectar sus propios errores,
+
+03:05.180 --> 03:08.600
+cuestionarlo sin temor a represalias y, esto es crucial,
+
+03:09.220 --> 03:13.680
+corregir su curso antes de que las consecuencias crucen la línea de lo irreparable.
+
+03:13.680 --> 03:19.040
+Lo fascinante aquí es que Flyxion, el autor, no toma atajos.
+
+03:19.300 --> 03:24.920
+Él aplica un estándar implacable de responsabilidad intelectual a ambos bandos por igual.
+
+03:25.900 --> 03:28.260
+Sí, sí. No le perdona nada a ninguno.
+
+03:28.600 --> 03:34.620
+Nos invita a evaluar los argumentos, diseccionar las evidencias y notar las omisiones de cada parte con el mismo rigor,
+
+03:35.000 --> 03:37.180
+sin importar el prestigio de quien esté hablando.
+
+03:37.720 --> 03:43.080
+Bueno, para entender por qué esta idea de la corregibilidad se vuelve literalmente una cuestión de vida o muerte,
+
+03:43.700 --> 03:49.760
+primero tenemos que entender por qué el simple acto de predecir el futuro de la IA se ha vuelto tan caótico.
+
+03:50.120 --> 03:51.580
+Digamos que es un terreno minado.
+
+03:51.940 --> 03:54.020
+Sí. Y empecemos con la postura de Pinker.
+
+03:54.400 --> 03:59.760
+Él argumenta con bastante firmeza que la inteligencia no es una especie de polvo mágico
+
+03:59.760 --> 04:06.000
+o un fluido místico que, si lo acumulas en suficiente cantidad, de repente te otorga omnisciencia.
+
+04:06.220 --> 04:07.140
+Claro, no es magia.
+
+04:07.140 --> 04:12.560
+Exacto. Pinker sostiene que la inteligencia es un mecanismo para resolver problemas. Punto.
+
+04:13.020 --> 04:18.800
+Y no viene empaquetada automáticamente con instintos de supervivencia o deseos maquiavélicos de dominación mundial.
+
+04:19.220 --> 04:24.100
+Porque, a ver, esos son rasgos de la biología evolutiva, no de la computación pura, según él.
+
+04:24.420 --> 04:30.120
+Tal cual. Y además hace una advertencia muy seria. Y es que el miedo desmedido a la IA no es gratuito.
+
+04:30.120 --> 04:34.340
+O sea, tiene costos sociales y económicos reales que ya estamos pagando hoy.
+
+04:35.000 --> 04:40.480
+Pero por la otra vía de esta discusión, Alexander se apoya en una base empírica, digamos, muy distinta.
+
+04:41.140 --> 04:45.620
+Él señala que no podemos simplemente ignorar las tendencias de los datos puros y duros.
+
+04:45.740 --> 04:46.880
+Ajá. Los números sobre la mesa.
+
+04:47.060 --> 04:53.580
+Exacto. Porque generación tras generación de modelos de IA hay una mejora que es objetivamente medible.
+
+04:53.580 --> 05:06.420
+Y para sustentar esto, cita datos de EPOC-AI, que para quienes no lo conocen es un instituto de investigación muy respetado que rastrea súper rigurosamente la evolución del hardware y los algoritmos.
+
+05:06.600 --> 05:07.580
+Sí, hacen un trabajo impresionante.
+
+05:08.220 --> 05:15.180
+Y sus gráficas muestran que los sistemas mejoran consistentemente. Reducen errores, adquieren nuevas capacidades de forma constante.
+
+05:15.940 --> 05:21.320
+Y en medio de toda esta argumentación, Alexander lanza un dato que, la verdad, resuena muchísimo.
+
+05:21.320 --> 05:31.260
+Menciona que el 18% de los investigadores especializados en IA temen la extinción humana o, bueno, una pérdida severa de control debido a esta tecnología.
+
+05:31.620 --> 05:36.100
+Espera, espera un momento. Un 18%. Es una cifra brutal.
+
+05:36.560 --> 05:37.380
+Es altísima, sí.
+
+05:37.520 --> 05:44.900
+O sea, si casi uno de cada cinco ingenieros aeronáuticos me dijera que un modelo de avión se va a estrellar por un defecto de fábrica, yo jamás me subiría a uno.
+
+05:44.900 --> 05:52.600
+¿Por qué Pinker o cualquier analista descartaría un número tan alarmantemente alto que, además, viene de los propios creadores de la tecnología?
+
+05:53.060 --> 05:57.000
+Es una excelente pregunta. Y es justo ahí donde el ensayo nos pide poner la lupa.
+
+05:57.540 --> 06:03.840
+Porque cuando escarbamos en la metodología detrás de ese número, el contexto cambia drásticamente la percepción de todo.
+
+06:04.040 --> 06:04.740
+A ver, ¿cómo es eso?
+
+06:04.740 --> 06:13.400
+Flyxion señala que ese 18% proviene de una encuesta realizada por la organización AI Impacts a unos 1,580 investigadores.
+
+06:14.020 --> 06:15.620
+Pero veamos la letra pequeña.
+
+06:16.120 --> 06:17.040
+Siempre hay letra pequeña.
+
+06:17.160 --> 06:22.860
+Siempre. Aunque es cierto que la media aritmética de las respuestas al miedo de extinción fue del 18%,
+
+06:22.860 --> 06:31.140
+la mediana, o sea, el valor que está exactamente en el medio de todas las respuestas, eliminando los extremos más locos, fue solo del 10%.
+
+06:31.140 --> 06:32.900
+Ok. Baja casi a la mitad.
+
+06:32.900 --> 06:38.740
+Y aún más crítico, la tasa de respuesta de esa encuesta fue apenas de alrededor del 10% de los invitados.
+
+06:39.160 --> 06:42.860
+O sea que de esos 1,500, solo respondieron unos 150.
+
+06:44.000 --> 06:44.400
+Exactamente.
+
+06:44.640 --> 06:52.780
+Y seamos sinceros, probablemente los que se tomaron el tiempo de responder un correo así eran los que ya tenían opiniones más apasionadas o extremas sobre el tema, ¿no?
+
+06:53.220 --> 06:55.640
+Es lo más probable en este tipo de muestreos, sí.
+
+06:56.300 --> 07:00.680
+Digo, no invalida por completo el punto de Alexander de que existe un miedo real en la industria,
+
+07:00.680 --> 07:07.440
+pero demuestra cómo un número viaja rapidísimo en los titulares y pierde absolutamente toda su textura original.
+
+07:07.860 --> 07:08.260
+Tal cual.
+
+07:08.900 --> 07:13.720
+El autor del ensayo expone cómo, en esta urgencia por tener la razón y ganar el debate,
+
+07:14.300 --> 07:20.160
+ambas partes tienden a aplanar los matices de la evidencia científica para forzarla a encajar en sus propias narrativas.
+
+07:20.160 --> 07:24.020
+Y, de hecho, hay otro ejemplo que ilustra esto a la perfección,
+
+07:24.380 --> 07:30.820
+que es un conflicto muy revelador sobre un exhaustivo estudio de la corporación RAND, publicado en 2025.
+
+07:31.560 --> 07:33.480
+Sí, sí, ese cruce es fundamental en el texto.
+
+07:33.660 --> 07:38.160
+Alexander acusa directamente a Pinker de citar mal ese estudio de RAND para su propio beneficio.
+
+07:39.000 --> 07:40.400
+Una acusación grave, la verdad.
+
+07:40.660 --> 07:41.080
+Muy grave.
+
+07:41.300 --> 07:44.200
+Pinker aparentemente usó el documento para afirmar que, y cito,
+
+07:44.200 --> 07:49.100
+no hay un escenario descriptible en el que la IA representa una amenaza de extinción.
+
+07:49.540 --> 07:52.200
+O sea, sonaba a un veredicto definitivo, fin de la discusión.
+
+07:53.000 --> 07:55.000
+Pero el ensayo va a la fuente original.
+
+07:55.760 --> 07:59.200
+Exacto, va a la fuente y aclara que los investigadores de RAND usaron esa frase exacta,
+
+07:59.900 --> 08:04.520
+eso de no hay un escenario descriptible, como una hipótesis inicial que iban a poner a prueba,
+
+08:05.000 --> 08:06.300
+no como su conclusión final.
+
+08:06.660 --> 08:09.320
+Lo usaron para sus juegos de guerra y simulaciones, claro.
+
+08:09.320 --> 08:14.000
+Sí, y la conclusión real de RAND fue mucho más, digamos, gris.
+
+08:14.740 --> 08:20.420
+Determinaron que crear una amenaza de nivel de extinción sería inmensamente difícil para una IA actual.
+
+08:20.860 --> 08:23.640
+Se requeriría una cadena de eventos casi improbable,
+
+08:23.820 --> 08:27.000
+pero que, matemáticamente, no se podía descartar por completo.
+
+08:27.620 --> 08:32.320
+Lo cual demuestra lo increíblemente seductor que es tomar un reporte técnico súper complejo,
+
+08:32.660 --> 08:36.720
+lleno de variables incómodas, y exprimirlo hasta que diga blanco o negro.
+
+08:37.000 --> 08:37.340
+Tal cual.
+
+08:37.340 --> 08:41.460
+Y esto nos lleva al corazón del problema sobre cómo calculamos el desastre.
+
+08:42.300 --> 08:47.100
+Alexander defiende con muchísima vemencia el uso de probabilidades numéricas subjetivas.
+
+08:47.820 --> 08:51.940
+Él prefiere decir, hay un 5% de probabilidad de extinción,
+
+08:52.420 --> 08:55.380
+argumentando que usar un número obliga a la gente a ser precisa,
+
+08:55.680 --> 08:59.620
+a diferencia de usar palabras vagas como tal vez o podría ser.
+
+09:00.000 --> 09:03.580
+Y aquí es donde el texto introduce una de mis analogías favoritas para entender
+
+09:03.580 --> 09:06.600
+por qué ese enfoque numérico puede ser una trampa.
+
+09:06.600 --> 09:08.580
+La famosa analogía del volcán.
+
+09:08.820 --> 09:09.800
+Es buenísima, sí.
+
+09:10.080 --> 09:13.560
+A ver, si un geólogo experimentado sale en una conferencia de prensa
+
+09:13.560 --> 09:17.540
+y dice que hay un 5% de probabilidad de que un volcán haga erupción este año,
+
+09:18.280 --> 09:21.180
+esa persona tiene un respaldo real detrás de ese número.
+
+09:21.540 --> 09:22.540
+Tiene datos, claro.
+
+09:22.840 --> 09:23.260
+Exacto.
+
+09:23.660 --> 09:27.060
+Tiene un registro histórico de cientos de erupciones pasadas en montañas similares.
+
+09:27.060 --> 09:31.340
+Tiene sensores sísmicos calibrados que están midiendo la presión del magma.
+
+09:32.020 --> 09:34.360
+¿Sabe qué variables químicas buscar en las fumarolas?
+
+09:34.860 --> 09:39.860
+En fin, puede poner a prueba sus modelos informáticos contra la realidad física una y otra vez.
+
+09:40.240 --> 09:40.740
+Así es.
+
+09:41.000 --> 09:45.940
+Y en la ciencia tradicional, esos geólogos operan bajo lo que llamamos incertidumbre dentro del modelo.
+
+09:46.400 --> 09:49.300
+O sea, saben perfectamente cómo funciona el sistema tectónico.
+
+09:49.300 --> 09:55.420
+Simplemente ignoran exactamente cómo se van a alinear las variables específicas en este momento puntual.
+
+09:56.000 --> 09:57.640
+Su modelo es 100% válido.
+
+09:57.980 --> 09:59.360
+Solo le faltan los datos del día.
+
+09:59.820 --> 10:03.700
+Pero si cruzamos a la IA, ¿cómo se calibra la probabilidad de un evento
+
+10:03.700 --> 10:06.880
+que no tiene ningún maldito precedente en la historia de la Tierra?
+
+10:07.300 --> 10:08.120
+Es que no se puede.
+
+10:08.380 --> 10:11.360
+Como la aniquilación por parte de una inteligencia artificial general.
+
+10:11.880 --> 10:15.660
+Digo, no hay un registro de fósiles de civilizaciones destruidas por algoritmos.
+
+10:15.660 --> 10:20.540
+Y el ensayo argumenta de manera muy persuasiva que estos números,
+
+10:20.820 --> 10:23.760
+este famoso 5 o 10% de riesgo de extinción,
+
+10:24.440 --> 10:28.120
+son en realidad una profunda incertidumbre del modelo,
+
+10:28.800 --> 10:31.860
+que se ha vestido con un traje elegante de datos duros.
+
+10:32.340 --> 10:32.860
+Exacto.
+
+10:33.060 --> 10:35.820
+Es decir, ni siquiera sabemos si estamos usando las matemáticas
+
+10:35.820 --> 10:38.260
+o las variables correctas para entender el problema.
+
+10:38.720 --> 10:41.980
+Pero le ponemos un porcentaje para sentir que tenemos el control de la situación.
+
+10:41.980 --> 10:46.040
+Y es una distensión crítica y, te diría, muy peligrosa.
+
+10:46.600 --> 10:52.340
+Asignar un porcentaje exacto a un evento único, especulativo y sin ningún precedente,
+
+10:52.600 --> 10:53.860
+no lo hace más científico.
+
+10:54.400 --> 10:57.120
+A veces simplemente oculta, tras una falsa autoridad,
+
+10:57.340 --> 10:59.720
+la vasta magnitud de nuestra propia ignorancia.
+
+10:59.920 --> 11:00.480
+Totalmente.
+
+11:00.860 --> 11:03.640
+Y Flyxion llega a una conclusión central a partir de todo esto.
+
+11:04.560 --> 11:09.040
+Dado que predecir el desastre con una exactitud numérica es una ilusión,
+
+11:09.040 --> 11:14.700
+la única defensa real que nos queda no es perfeccionar la bola de cristal de la predicción,
+
+11:15.200 --> 11:19.840
+sino diseñar instituciones sólidas que puedan corregir el rumbo sobre la marcha
+
+11:19.840 --> 11:21.080
+frente a lo inesperado.
+
+11:21.480 --> 11:22.940
+Entonces, ¿qué significa todo esto?
+
+11:23.580 --> 11:27.240
+Si predecir la catástrofe es imposible porque, literal, volamos a ciegas,
+
+11:27.780 --> 11:29.920
+¿cómo sobrevive una institución en la oscuridad?
+
+11:30.560 --> 11:34.160
+¿Cuáles son las verdaderas mecánicas de esta corregibilidad de la que habla?
+
+11:34.560 --> 11:35.640
+¿De qué piezas está hecha?
+
+11:35.640 --> 11:40.620
+Bueno, el texto es súper metódico aquí y desglosa tres pilares, digamos,
+
+11:40.880 --> 11:44.820
+innegociables, que deben existir simultáneamente para que un error,
+
+11:45.000 --> 11:47.380
+por catastrófico que sea, pueda ser corregido.
+
+11:47.600 --> 11:48.240
+A ver, cuéntanos.
+
+11:48.880 --> 11:51.020
+Primero, debe existir un camino.
+
+11:51.580 --> 11:55.600
+Esto significa un canal abierto, claro y sin fricciones burocráticas
+
+11:55.600 --> 11:59.780
+para reportar la falla sin sufrir censura o castigo por hacerlo.
+
+12:00.040 --> 12:02.040
+Un buzón de quejas que sí funcione, digamos.
+
+12:02.040 --> 12:03.040
+Exacto.
+
+12:03.480 --> 12:05.640
+Segundo, la obligación.
+
+12:06.220 --> 12:09.620
+El reporte no puede simplemente caer en ese buzón y quedar ahí.
+
+12:10.080 --> 12:13.040
+Tiene que llegar a una autoridad que no solo tenga el poder ejecutivo
+
+12:13.040 --> 12:17.520
+para cambiar las cosas, sino el deber y la obligación ineludible
+
+12:17.520 --> 12:19.260
+de rendir cuentas públicamente.
+
+12:19.500 --> 12:21.280
+Ok, camino y obligación.
+
+12:21.880 --> 12:22.360
+¿Y el tercero?
+
+12:22.700 --> 12:24.480
+Y tercero, el tiempo.
+
+12:25.300 --> 12:28.860
+Todo este ciclo de alerta y respuesta tiene que ocurrir antes de que el daño
+
+12:28.860 --> 12:31.940
+escale y cruce la frontera de lo irreversible.
+
+12:32.340 --> 12:34.420
+Claro, para aterrizar conceptos tan abstractos,
+
+12:34.860 --> 12:38.860
+el texto sugiere pensar en el sistema de seguridad de un avión comercial
+
+12:38.860 --> 12:39.720
+en pleno vuelo.
+
+12:40.360 --> 12:43.380
+No basta con tener un detector de humo ultrasensible en el baño de pasajeros
+
+12:43.380 --> 12:44.580
+que haga sonar una sirena, ¿verdad?
+
+12:44.780 --> 12:45.320
+Para nada.
+
+12:45.800 --> 12:48.400
+Esa sirena es solo la detección o el camino.
+
+12:49.120 --> 12:51.740
+Pero una alarma sonando a todo volumen no salva al avión.
+
+12:51.740 --> 12:55.240
+También se requiere que el piloto en la cabina tenga los controles físicos
+
+12:55.240 --> 12:59.360
+conectados a las alas y los motores y la responsabilidad de actuar.
+
+12:59.860 --> 13:02.300
+Esa es la autoridad y la obligación.
+
+13:02.700 --> 13:03.220
+Exacto.
+
+13:03.560 --> 13:07.480
+Y, crucialmente, se necesita que la aeronave tenga suficiente altitud,
+
+13:07.920 --> 13:11.860
+un espacio real de maniobra, para que el piloto pueda ejecutar la corrección
+
+13:11.860 --> 13:13.460
+antes de impactar contra el suelo.
+
+13:14.040 --> 13:15.480
+Ese colchón de aire es el tiempo.
+
+13:16.260 --> 13:19.700
+Si falla uno solo de estos tres elementos, la tragedia es inminente.
+
+13:19.700 --> 13:22.420
+Es una excelente visualización de los pilares.
+
+13:22.780 --> 13:24.760
+Y el autor va a un nivel más profundo,
+
+13:25.060 --> 13:28.600
+clasificando la naturaleza misma de la corrección en tres tipos distintos.
+
+13:28.960 --> 13:30.100
+Ok. Vamos a ver esos tipos.
+
+13:30.420 --> 13:34.040
+Tenemos primero la corrección restaurativa, que es la básica, digamos.
+
+13:34.580 --> 13:37.080
+El sistema se desvía de las reglas preestablecidas
+
+13:37.080 --> 13:40.340
+y los operadores simplemente lo devuelven al carril original.
+
+13:40.980 --> 13:44.500
+Es equivalente a corregir una línea de código que tiene un error de sintaxis.
+
+13:44.740 --> 13:44.960
+Y ya.
+
+13:45.340 --> 13:46.020
+Esa es la fácil.
+
+13:46.780 --> 13:47.240
+¿Y la segunda?
+
+13:47.240 --> 13:49.600
+Luego está la corrección transformativa.
+
+13:50.080 --> 13:51.860
+Que requiere un salto intelectual mayor.
+
+13:52.460 --> 13:57.800
+Esto ocurre cuando los creadores se dan cuenta de que el código no tenía errores técnicos,
+
+13:58.000 --> 14:03.680
+sino que el objetivo mismo del programa, la regla inicial, estaba equivocada de raíz
+
+14:03.680 --> 14:05.520
+y tienen que rediseñarla por completo.
+
+14:05.840 --> 14:07.440
+Ah, cambiar el manual entero.
+
+14:07.760 --> 14:08.320
+Exacto.
+
+14:08.680 --> 14:11.240
+Y finalmente tenemos la corrección sistémica.
+
+14:11.660 --> 14:15.800
+Esta es la más compleja de todas, pues implica arreglar fallas catastróficas
+
+14:15.800 --> 14:21.200
+que no provienen de un solo error, sino de la interacción natural de múltiples instituciones independientes
+
+14:21.200 --> 14:25.300
+que individualmente están haciendo exactamente lo que se les pidió,
+
+14:25.800 --> 14:29.160
+pero juntas, al interactuar, crean un desastre.
+
+14:29.500 --> 14:29.740
+Uf.
+
+14:29.740 --> 14:33.540
+O sea, todo esto suena muy bien en la teoría de sistemas en un papel.
+
+14:34.260 --> 14:38.460
+Pero, ¿qué significa realmente cuando lo cruzamos con las propuestas que hay hoy
+
+14:38.460 --> 14:42.300
+sobre cómo domar a los modelos de lenguaje masivos y a las futuras IAs?
+
+14:43.260 --> 14:47.660
+Significa que debemos someter al escrutinio más severo las soluciones de seguridad
+
+14:47.660 --> 14:49.700
+que se están impulsando hoy en la industria.
+
+14:50.340 --> 14:54.480
+Para ilustrarlo, tomemos el famoso Plan A que defiende Scott Alexander.
+
+14:55.160 --> 14:59.960
+Su propuesta principal consiste en darle a una coalición de los mejores científicos del mundo
+
+14:59.960 --> 15:05.580
+todo el tiempo el aislamiento y los recursos necesarios para resolver el problema matemático
+
+15:05.580 --> 15:09.400
+y filosófico de la alineación de la IA de una vez por todas,
+
+15:09.820 --> 15:12.140
+antes de soltar sistemas más potentes al mundo.
+
+15:12.960 --> 15:15.840
+O sea, encerrarlos hasta que saquen la fórmula mágica de la seguridad.
+
+15:16.420 --> 15:20.200
+En otras palabras, quiere crear un marco de reglas universal y perfecto
+
+15:20.200 --> 15:24.000
+para asegurar que cualquier inteligencia artificial, en cualquier lugar,
+
+15:24.500 --> 15:27.020
+actúe permanentemente en beneficio humano.
+
+15:27.460 --> 15:31.320
+A ver, te confieso que suena como la postura más lógica y responsable, ¿no?
+
+15:31.320 --> 15:34.780
+Encontrar el mecanismo de seguridad infalible y, bueno,
+
+15:34.940 --> 15:37.280
+obligar a todos los laboratorios del planeta a usarlo.
+
+15:37.800 --> 15:43.760
+Pero al leer el ensayo, hay una advertencia sobre esta idea que hiela la sangre por completo.
+
+15:44.340 --> 15:44.860
+Totalmente.
+
+15:45.580 --> 15:51.380
+Flyxion introduce aquí un concepto importado directamente de la ingeniería de confiabilidad aeronáutica y nuclear.
+
+15:51.980 --> 15:55.300
+El fracaso de modo común, que a menudo se llama factor beta.
+
+15:55.600 --> 15:56.460
+Factor beta, ok.
+
+15:57.180 --> 16:00.580
+Hay que pensar en cómo se entrenan hoy los modelos modernos.
+
+16:00.580 --> 16:07.800
+Si logramos esa meta de Alexander y toda la civilización adopta un único régimen monolítico de alineación
+
+16:07.800 --> 16:12.060
+donde todas las IAs del mundo usan la misma arquitectura subyacente,
+
+16:12.540 --> 16:14.580
+se entrenan con los mismos datos y reglas.
+
+16:14.740 --> 16:17.620
+Estamos creando una homogeneidad absoluta.
+
+16:17.760 --> 16:25.320
+Pero, un momento, ¿no es la idea de estandarizar la seguridad justamente para evitar que un modelo descarriado haga daño?
+
+16:25.320 --> 16:33.260
+O sea, ¿acaso buscar que toda la IA sea segura bajo un mismo estándar estricto no está creando una vulnerabilidad mayor?
+
+16:33.640 --> 16:33.920
+Sí.
+
+16:34.140 --> 16:35.680
+Por paradójico que suene, sí.
+
+16:36.500 --> 16:41.320
+Es que el ensayo utiliza una analogía brillante que lo explica como un monocultivo agrícola.
+
+16:41.960 --> 16:48.520
+Imaginemos que todos los ministerios de agricultura del mundo se juntan y deciden plantar exclusivamente una única variedad de papa.
+
+16:48.520 --> 16:53.020
+La más perfecta y nutritiva diseñada por los mejores biólogos de la historia.
+
+16:53.480 --> 16:54.540
+La superpapa, digamos.
+
+16:54.700 --> 16:55.160
+Exacto.
+
+16:55.580 --> 16:58.060
+Durante una década, la producción es gloriosa.
+
+16:58.340 --> 16:59.260
+Se acaba el hambre en el mundo.
+
+16:59.840 --> 17:07.020
+Pero de la nada, evoluciona un hongo diminuto que resulta ser letal específicamente para esa variante genética exacta de papa.
+
+17:07.780 --> 17:11.340
+Como hemos erradicado la diversidad genética en nombre de la eficiencia total,
+
+17:11.900 --> 17:16.160
+ese único hongo arrasa con el suministro global de alimentos en cuestión de, no sé, meses.
+
+17:16.160 --> 17:20.460
+Ese es exactamente el terror del fracaso de modo común.
+
+17:20.780 --> 17:23.440
+O sea, a los ingenieros les encanta la redundancia.
+
+17:23.740 --> 17:26.100
+Poner tres sensores idénticos por si uno falla.
+
+17:26.640 --> 17:32.900
+Pero si los tres sensores tienen el mismo error de código oculto, la redundancia no sirve de absolutamente nada.
+
+17:33.520 --> 17:34.740
+Claro, ¿se rompen los tres a la vez?
+
+17:35.020 --> 17:38.580
+Los tres fallarán exactamente al mismo tiempo bajo la misma presión.
+
+17:39.240 --> 17:45.000
+Si la humanidad implementa un solo régimen de alineación universal para todas las IAs del planeta,
+
+17:45.000 --> 17:50.900
+un solo error conceptual que nadie notó en esa alineación, un solo hongo en tu analogía,
+
+17:51.060 --> 17:56.640
+no afectaría a un laboratorio aislado, sino que derrumbaría a toda la infraestructura civil,
+
+17:57.080 --> 18:00.640
+militar y económica de la civilización simultáneamente.
+
+18:00.780 --> 18:01.500
+Uf, qué fuerte.
+
+18:02.060 --> 18:08.580
+El autor sugiere, con bastante dureza, que la búsqueda de una IA universalmente segura y estandarizada
+
+18:08.580 --> 18:12.660
+es en realidad la receta para nuestra máxima vulnerabilidad compartida.
+
+18:13.000 --> 18:15.240
+Es una paradoja fascinante y frustrante también.
+
+18:15.780 --> 18:20.520
+Al intentar hacer el ecosistema tecnológico perfectamente invulnerable a través de reglas absolutas,
+
+18:21.020 --> 18:25.720
+le extirpas la diversidad que le permitiría sobrevivir a un cisne negro, a un evento imprevisto.
+
+18:26.220 --> 18:26.700
+Exactamente.
+
+18:26.700 --> 18:31.880
+Y esta línea de pensamiento nos empuja a una de las revelaciones más inquietantes de toda la lectura.
+
+18:32.680 --> 18:36.600
+Resulta que nuestra civilización ni siquiera necesita que las máquinas desarrollen una voluntad propia
+
+18:36.600 --> 18:39.940
+o se rebelen en plan Terminator para acabar con nosotros.
+
+18:40.560 --> 18:43.700
+A veces, hacer todo a la perfección es el verdadero peligro.
+
+18:43.700 --> 18:50.680
+Si conectamos esto con el panorama general, gran parte del pánico actual y del debate público en redes y demás
+
+18:50.680 --> 18:53.280
+está anclado en películas de Hollywood, ¿no?
+
+18:53.520 --> 18:59.820
+Inteligencias frías que superan sus restricciones, hackean códigos nucleares y deciden borrar a la especie humana.
+
+18:59.900 --> 19:00.700
+Sí, el guión clásico.
+
+19:01.460 --> 19:08.460
+Pero Flyxion señala que esa obsesión narrativa nos ciega ante procesos destructivos mucho más mundanos, sutiles y letales
+
+19:08.460 --> 19:14.020
+que ya están operando hoy a través de instituciones humanas que funcionan sin ningún tipo de error técnico.
+
+19:14.520 --> 19:17.320
+Y esto es lo que antes definimos como la falla sistémica.
+
+19:17.800 --> 19:23.300
+El ensayo utiliza un ejemplo macroeconómico y ecológico que, te digo, es devastador por lo certero que es.
+
+19:24.060 --> 19:26.500
+Pensemos en cómo opera el motor de nuestro mundo hoy en día.
+
+19:27.000 --> 19:31.880
+Por un lado, tenemos a la industria publicitaria, cuyo objetivo primordial, su regla número uno,
+
+19:32.140 --> 19:36.220
+es optimizar y maximizar la demanda de los consumidores a toda costa.
+
+19:36.300 --> 19:36.820
+Vender más.
+
+19:36.820 --> 19:37.940
+Vender más, exacto.
+
+19:37.940 --> 19:43.960
+Por otro, tenemos al sector industrial y las fábricas, cuyo mandato es optimizar la producción a una escala masiva,
+
+19:44.340 --> 19:45.400
+extrayendo materias primas.
+
+19:45.700 --> 19:50.120
+Y por encima de todos ellos, tenemos a los gobiernos, cuyo objetivo legislativo principal
+
+19:50.120 --> 19:55.100
+es optimizar el crecimiento del Producto Interno Bruto constantemente para evitar crisis sociales.
+
+19:55.620 --> 20:01.380
+Y lo aterrador, de verdad aterrador, es que cada una de estas tres grandes instituciones
+
+20:01.380 --> 20:05.180
+tiene un éxito rotundo en cumplir sus métricas locales.
+
+20:05.180 --> 20:11.800
+Hacen su trabajo brillantemente, actuando de forma completamente racional dentro de sus propios límites.
+
+20:11.800 --> 20:13.140
+Todos se sacan un 10.
+
+20:13.140 --> 20:23.760
+Claro. Sin embargo, el resultado acumulativo de todo ese éxito coordinado es la degradación progresiva y silenciosa de los ecosistemas globales de los que depende la vida.
+
+20:24.080 --> 20:24.360
+Ouch.
+
+20:24.360 --> 20:31.060
+Hablamos de la acidificación extrema de los océanos, el agotamiento de suelos arables, la contaminación de acuíferos
+
+20:31.060 --> 20:34.720
+y la alarmante reducción del fitoplancton que nos provee de oxígeno.
+
+20:35.300 --> 20:39.420
+Es la clásica tragedia de los bienes comunes, pero a una escala planetaria.
+
+20:39.420 --> 20:46.060
+Y lo loco es que ninguna de estas instituciones se ha revelado. Ninguna está rota o funcionando mal de acuerdo a su manual.
+
+20:46.640 --> 20:50.340
+Están perfectamente alineadas con sus especificaciones de diseño, ¿no?
+
+20:50.860 --> 20:56.140
+Pero esas especificaciones, esas reglas originales que creamos hace décadas o siglos,
+
+20:56.760 --> 21:03.060
+simplemente omiten por completo las condiciones ecológicas básicas requeridas para que el sistema siga existiendo a largo plazo.
+
+21:03.860 --> 21:06.440
+Externalizan el costo al vacío, por así decirlo.
+
+21:06.440 --> 21:09.800
+Ahora bien, el experimento mental del ensayo es
+
+21:09.800 --> 21:15.240
+Introduzcamos a esta ecuación una inteligencia artificial altamente capaz.
+
+21:15.840 --> 21:20.660
+Ojo, esta IA no necesita cobrar conciencia ni volverse malvada para hacernos daño.
+
+21:21.120 --> 21:26.640
+Solo necesita ser conectada a estas instituciones para hacer lo que ya hacen, pero millones de veces mejor.
+
+21:27.080 --> 21:28.560
+Optimización pura.
+
+21:28.640 --> 21:29.160
+Exacto.
+
+21:29.660 --> 21:34.460
+Podría acelerar la extracción logística, la persuasión publicitaria y el consumo global
+
+21:34.460 --> 21:37.060
+a niveles de ultra eficiencia sin precedentes.
+
+21:37.600 --> 21:40.960
+Y todo esto sin cruzar ninguna regla de seguridad que le hayamos puesto.
+
+21:41.220 --> 21:42.500
+¿Por qué la regla es crecer?
+
+21:42.860 --> 21:47.340
+Si nuestras reglas base omiten las condiciones que nos mantienen biológicamente vivos
+
+21:47.340 --> 21:53.140
+y la IA ejecuta esas reglas con una precisión perfecta, moriremos de puro éxito.
+
+21:53.660 --> 21:58.260
+Y si intentamos una corrección puramente restaurativa, que mencionábamos antes,
+
+21:58.260 --> 22:03.980
+o sea, reiniciar las instituciones a sus metas originales, solo aceleraremos el tren hacia el abismo.
+
+22:04.460 --> 22:06.360
+Es escalofriante pensarlo así, la verdad.
+
+22:07.080 --> 22:11.020
+Frente a este panorama, donde la homogeneidad monolítica nos hace frágiles
+
+22:11.020 --> 22:13.980
+y el éxito ciego optimizado nos aniquila lentamente,
+
+22:14.680 --> 22:19.080
+la solución que defiende el ensayo es proteger a toda costa la diversidad sistémica.
+
+22:19.720 --> 22:22.260
+O sea, hay que mantener múltiples formas de pensamiento,
+
+22:22.620 --> 22:26.020
+infraestructuras descentralizadas y modelos de IA variados.
+
+22:26.020 --> 22:27.960
+Sí, la diversidad como escudo.
+
+22:28.280 --> 22:31.360
+Y el gran problema histórico es que ser diferentes es caro.
+
+22:31.440 --> 22:35.520
+La estandarización masiva siempre ha ganado porque abarata los costos tremendamente,
+
+22:35.700 --> 22:39.340
+desde imprimir libros de texto iguales hasta tener fábricas de autos idénticas.
+
+22:39.840 --> 22:42.180
+Cierto, es una fuerza económica innegable, ¿no?
+
+22:42.580 --> 22:48.480
+Pero es aquí donde el autor ve el potencial profundamente positivo y salvador de una IA avanzada.
+
+22:49.100 --> 22:50.920
+Plantea que, si se utiliza bien,
+
+22:50.920 --> 22:56.300
+la inteligencia artificial podría derrumbar drásticamente este costo económico de la diferencia.
+
+22:56.800 --> 22:57.940
+A ver, danos un ejemplo de esto.
+
+22:58.520 --> 23:01.020
+Propone soluciones que suenan a ciencia ficción,
+
+23:01.140 --> 23:03.620
+pero que hoy ya son tecnológicamente plausibles.
+
+23:04.000 --> 23:05.080
+Por ejemplo, en la educación.
+
+23:06.020 --> 23:07.860
+Hoy, por mera logística de costos,
+
+23:08.280 --> 23:12.340
+forzamos a millones de estudiantes a aprender álgebra con el mismo libro estandarizado.
+
+23:12.760 --> 23:17.220
+Pero el autor vislumbra el uso de lo que él llama notaciones personales.
+
+23:17.380 --> 23:18.940
+A ver, si entiendo bien el concepto del texto,
+
+23:18.940 --> 23:23.640
+esto significa que un estudiante cuya mente está cableada para amar la teoría musical
+
+23:23.640 --> 23:28.040
+podría aprender cálculo complejo utilizando un sistema visual y auditivo propio,
+
+23:28.320 --> 23:30.040
+basado en armonías y frecuencias, ¿verdad?
+
+23:30.220 --> 23:30.760
+Así mismo.
+
+23:31.540 --> 23:35.240
+Mientras tanto, su compañero de al lado podría aprender la misma fórmula matemática
+
+23:35.240 --> 23:38.040
+a través de la mecánica de órbitas estelares.
+
+23:38.720 --> 23:40.960
+Ambos desarrollan su propio lenguaje mental.
+
+23:41.800 --> 23:44.820
+Y la IA aquí no actúa como un profesor dictando una regla universal,
+
+23:45.420 --> 23:47.960
+sino como un traductor simultáneo y transparente entre los dos.
+
+23:47.960 --> 23:49.660
+Lo has descrito a la perfección.
+
+23:50.280 --> 23:53.160
+La IA actúa como un puente semántico en tiempo real,
+
+23:53.540 --> 23:56.080
+permitiendo que colaboren en un proyecto de ingeniería
+
+23:56.080 --> 23:59.300
+sin forzarlos a abandonar su forma única de comprender el mundo.
+
+23:59.440 --> 24:00.060
+¡Qué maravilla!
+
+24:00.540 --> 24:02.520
+Otro ejemplo es la infraestructura física.
+
+24:03.300 --> 24:06.440
+El texto menciona la transición hacia la manufactura distribuida.
+
+24:06.440 --> 24:09.740
+En lugar de depender de megaplantas hipercentralizadas,
+
+24:09.980 --> 24:13.320
+súper vulnerables, al otro lado del mundo para fabricar bienes,
+
+24:13.860 --> 24:17.860
+una IA podría coordinar el flujo de recolección de materiales y energía
+
+24:17.860 --> 24:20.380
+a un nivel de precisión atómico.
+
+24:20.500 --> 24:21.680
+O sea, llevarlo a lo micro.
+
+24:21.680 --> 24:22.760
+Exacto.
+
+24:23.000 --> 24:26.580
+Permitiendo que el reciclaje y la impresión en 3D de piezas complejas
+
+24:26.580 --> 24:30.020
+ocurran a nivel de vecindario, con maquinaria pequeña y modular.
+
+24:30.880 --> 24:33.200
+La conclusión central de estas ideas es fascinante.
+
+24:33.720 --> 24:38.660
+Una civilización puede ser profundamente cooperativa sin necesidad de volverse uniforme,
+
+24:39.140 --> 24:42.640
+siempre y cuando mantenga intacto un estrato de traducción algorítmica
+
+24:42.640 --> 24:46.140
+que sea independiente, auditable y sobre todo abierto.
+
+24:46.140 --> 24:48.720
+Aquí es donde se pone realmente interesante.
+
+24:49.280 --> 24:53.020
+Porque para que una sociedad proteja activamente esta diversidad de la que hablas
+
+24:53.020 --> 24:57.640
+y mantenga libres esos canales de corrección, la gente tiene que alzar la voz.
+
+24:58.260 --> 25:02.040
+Tienen que emitir advertencias públicas sobre los peligros de centralizar
+
+25:02.040 --> 25:03.960
+todo el poder tecnológico en un solo lugar.
+
+25:04.520 --> 25:08.400
+Y eso es, curiosamente, exactamente lo que hacían Pinker y Alexander
+
+25:08.400 --> 25:09.760
+al debatir tan ferozmente.
+
+25:10.160 --> 25:12.740
+Sí, ambos estaban dando la alarma a su manera.
+
+25:12.740 --> 25:16.620
+Pero el ensayo introduce una dimensión sociológica compleja
+
+25:16.620 --> 25:21.080
+sobre este acto de advertir, a la que llama la advertencia reflexiva.
+
+25:21.540 --> 25:24.340
+Y es un concepto que cambia por completo la forma en que consumimos
+
+25:24.340 --> 25:26.100
+las noticias de tecnología hoy en día.
+
+25:26.880 --> 25:30.880
+Emitir una advertencia pública sobre hacia dónde se dirige la inteligencia artificial
+
+25:30.880 --> 25:34.800
+no es, en absoluto, como pronosticar un desastre natural.
+
+25:35.120 --> 25:36.120
+Claro, no es el clima.
+
+25:36.520 --> 25:37.260
+No, no lo es.
+
+25:37.760 --> 25:39.780
+Si un sismólogo pronostica un terremoto,
+
+25:39.780 --> 25:42.520
+la fricción de las placas tectónicas debajo de la Tierra
+
+25:42.520 --> 25:44.700
+no va a cambiar mágicamente de velocidad
+
+25:44.700 --> 25:46.960
+solo porque alguien habló de eso en la televisión.
+
+25:47.520 --> 25:49.560
+La naturaleza es indiferente a lo que decimos.
+
+25:49.960 --> 25:50.160
+Sí.
+
+25:50.700 --> 25:54.300
+Pero, si un experto advierte a gritos sobre el comportamiento humano
+
+25:54.300 --> 25:55.520
+y la creación de tecnología,
+
+25:56.220 --> 25:58.040
+la propia existencia de esa advertencia
+
+25:58.040 --> 26:01.320
+altera químicamente el ecosistema que está intentando describir.
+
+26:02.080 --> 26:04.100
+Quien advierte se vuelve, instantáneamente,
+
+26:04.540 --> 26:06.140
+parte de los engranajes del mecanismo.
+
+26:06.580 --> 26:09.060
+Pinker señala algo extremadamente agudo respecto a esto.
+
+26:09.060 --> 26:12.540
+Él argumenta que inyectar altos niveles de miedo apocalíptico
+
+26:12.540 --> 26:16.000
+en la cultura pública tiene consecuencias indeseadas y graves.
+
+26:16.760 --> 26:19.060
+O sea, puede generar un fatalismo paralizante
+
+26:19.060 --> 26:20.660
+en las nuevas generaciones de ingenieros
+
+26:20.660 --> 26:24.080
+o, peor aún, desatar la temida carrera armamentista.
+
+26:24.560 --> 26:26.000
+El pánico hace que la gente acelere.
+
+26:26.220 --> 26:26.660
+Exacto.
+
+26:27.000 --> 26:28.580
+Si convences a los generales de un país
+
+26:28.580 --> 26:30.880
+o a los directores de una corporación multimillonaria
+
+26:30.880 --> 26:33.600
+de que la IA general es el arma definitiva
+
+26:33.600 --> 26:35.660
+que asegurará la hegemonía mundial,
+
+26:36.260 --> 26:38.020
+no se van a detener a pensar en la seguridad.
+
+26:38.020 --> 26:40.620
+La van a desarrollar mucho más rápido,
+
+26:40.900 --> 26:43.160
+recortando protocolos por el puro pánico
+
+26:43.160 --> 26:45.200
+de que un rival ideológico la consiga primero.
+
+26:45.900 --> 26:47.020
+Es una profecía autocumplida.
+
+26:48.160 --> 26:50.260
+De hecho, el ensayo apunta a la cruel ironía
+
+26:50.260 --> 26:53.200
+de que los propios pioneros que firmaban cartas abiertas
+
+26:53.200 --> 26:54.920
+alertando sobre el riesgo de extinción
+
+26:54.920 --> 26:58.180
+terminaron recibiendo miles de millones de dólares en inversión
+
+26:58.180 --> 27:00.080
+y hoy lideran los laboratorios que aceleran
+
+27:00.080 --> 27:03.200
+esta misma carrera tecnológica a un ritmo vertiginoso.
+
+27:03.780 --> 27:04.300
+Es verdad.
+
+27:04.300 --> 27:07.320
+Pero bueno, no podemos descartar el contrapunto de Alexander,
+
+27:07.560 --> 27:09.300
+que también tiene un peso histórico innegable.
+
+27:09.940 --> 27:12.880
+Él compara la advertencia temprana sobre los peligros de la IA
+
+27:12.880 --> 27:14.560
+con la historia de la climatología.
+
+27:15.100 --> 27:15.860
+Un buen paralelo.
+
+27:16.280 --> 27:16.520
+Ajá.
+
+27:17.040 --> 27:19.380
+Nos recuerda cómo los tecnooptimistas
+
+27:19.380 --> 27:22.620
+que negaron sistemáticamente el impacto del cambio climático
+
+27:22.620 --> 27:23.700
+durante los años 90
+
+27:23.700 --> 27:27.760
+perdieron toda su legitimidad y credibilidad institucional
+
+27:27.760 --> 27:29.680
+una vez que los océanos se calentaron
+
+27:29.680 --> 27:33.180
+y, bueno, las consecuencias se hicieron innegables frente a nuestros ojos.
+
+27:33.860 --> 27:37.300
+La tesis de Alexander es que decidir guardar silencio
+
+27:37.300 --> 27:39.780
+o minimizar un riesgo técnico genuino
+
+27:39.780 --> 27:43.040
+por el simple miedo de causar un pánico público temporal
+
+27:43.040 --> 27:45.920
+es una estrategia intelectualmente cobarde
+
+27:45.920 --> 27:48.800
+y que está condenada al fracaso a largo plazo.
+
+27:48.800 --> 27:52.420
+Sin embargo, Flyxion encuentra un equilibrio súper lúcido
+
+27:52.420 --> 27:53.400
+entre ambas posturas.
+
+27:54.040 --> 27:55.860
+El texto subamaya que lanzar una alarma
+
+27:55.860 --> 27:57.340
+sin ofrecer un camino de acción
+
+27:57.340 --> 27:59.060
+sin un qué hacer
+
+27:59.060 --> 28:01.820
+se convierte en puro veneno para la sociedad.
+
+28:02.080 --> 28:03.480
+Claro, no puede solo gritar fuego.
+
+28:03.780 --> 28:06.000
+Es la diferencia abismal entre decirle a la población
+
+28:06.000 --> 28:07.020
+por cadena nacional
+
+28:07.020 --> 28:09.720
+un asteroide gigantesco viene hacia la Tierra
+
+28:09.720 --> 28:11.780
+todos vamos a morir y no hay salida.
+
+28:12.440 --> 28:13.020
+Frente a decir
+
+28:13.020 --> 28:15.960
+hemos detectado un asteroide en rumbo de colisión
+
+28:15.960 --> 28:19.520
+Es peligroso, pero aquí está la coalición internacional
+
+28:19.520 --> 28:21.480
+y el diseño detallado de los cohetes
+
+28:21.480 --> 28:23.240
+que usaremos en los próximos 10 años
+
+28:23.240 --> 28:26.040
+para desviar su trayectoria un grado a la vez.
+
+28:26.440 --> 28:27.660
+Cambia todo el panorama.
+
+28:27.960 --> 28:28.560
+Totalmente.
+
+28:29.040 --> 28:31.700
+La alarma o el miedo necesitan imperiosamente
+
+28:31.700 --> 28:33.900
+un lugar productivo hacia donde canalizarse
+
+28:33.900 --> 28:35.960
+un proyecto real en el cual trabajar
+
+28:35.960 --> 28:38.560
+de lo contrario, ese pánico solo corroe
+
+28:38.560 --> 28:40.500
+y destruye la confianza en las instituciones
+
+28:40.500 --> 28:42.360
+demoliendo irónicamente
+
+28:42.360 --> 28:44.800
+exactamente los mismos canales de corrección
+
+28:44.800 --> 28:47.160
+que estamos intentando proteger desesperadamente.
+
+28:47.500 --> 28:47.940
+Así es.
+
+28:48.360 --> 28:50.280
+Y para sintetizar la arquitectura final
+
+28:50.280 --> 28:52.060
+de este monumental ensayo
+
+28:52.060 --> 28:54.260
+Flagshen no nos está pidiendo
+
+28:54.260 --> 28:56.080
+que adoptemos un optimismo ciego
+
+28:56.080 --> 28:57.620
+al estilo de Silicon Valley.
+
+28:58.060 --> 28:58.140
+No.
+
+28:58.440 --> 29:00.480
+Donde asumimos que cualquier tecnología
+
+29:00.480 --> 29:02.220
+por muy disruptiva que sea
+
+29:02.220 --> 29:04.400
+encontrará mágicamente su equilibrio
+
+29:04.400 --> 29:05.500
+sin regulación alguna.
+
+29:05.700 --> 29:06.380
+Cero y genuidad.
+
+29:06.680 --> 29:09.620
+Pero tampoco avala un pesimismo neoludita
+
+29:09.620 --> 29:12.500
+que nos obligue a frenar la curiosidad científica
+
+29:12.500 --> 29:15.120
+y el desarrollo humano por un miedo paralizante
+
+29:15.120 --> 29:15.980
+a lo desconocido.
+
+29:16.920 --> 29:18.300
+Lo que postula es que la meta
+
+29:18.300 --> 29:20.720
+de una civilización madura en el siglo XXI
+
+29:20.720 --> 29:22.660
+no puede ser la búsqueda quimérica
+
+29:22.660 --> 29:23.920
+del control absoluto,
+
+29:24.240 --> 29:25.620
+determinista y totalitario
+
+29:25.620 --> 29:27.000
+sobre todas sus herramientas.
+
+29:27.360 --> 29:29.760
+O sea, soltar la ilusión del control perfecto.
+
+29:29.760 --> 29:30.480
+Exacto.
+
+29:30.960 --> 29:33.840
+Ni tampoco buscar una alineación monolítica
+
+29:33.840 --> 29:35.640
+que no acepte la posibilidad del fallo.
+
+29:36.180 --> 29:37.920
+La verdadera meta evolutiva
+
+29:37.920 --> 29:39.800
+es proteger obsesivamente
+
+29:39.800 --> 29:42.280
+y blindar frente a cualquier interés comercial
+
+29:42.280 --> 29:44.880
+los canales institucionales de corrección.
+
+29:45.720 --> 29:47.860
+Asumir con muchísima humildad
+
+29:47.860 --> 29:49.040
+que vamos a fallar
+
+29:49.040 --> 29:51.060
+porque la complejidad del mundo no sobrepasa.
+
+29:51.720 --> 29:52.800
+Pero asegurarnos de que
+
+29:52.800 --> 29:54.640
+el día que llegue ese fallo inminente,
+
+29:55.240 --> 29:56.640
+el camino esté libre de censura,
+
+29:57.120 --> 29:59.300
+la obligación de las autoridades sea de hierro,
+
+29:59.300 --> 30:01.680
+y tengamos un margen de tiempo suficiente
+
+30:01.680 --> 30:02.680
+para cambiar la historia.
+
+30:03.340 --> 30:05.740
+Y esto nos conduce al cierre de la lectura,
+
+30:05.960 --> 30:07.200
+que es profundamente filosófico
+
+30:07.200 --> 30:09.520
+y cambia la óptica de todo lo que hemos discutido.
+
+30:10.180 --> 30:11.200
+En las últimas páginas,
+
+30:11.420 --> 30:12.640
+el autor invoca las perspectivas
+
+30:12.640 --> 30:14.400
+del filósofo de la ciencia Karl Popper
+
+30:14.400 --> 30:17.440
+a través de la interpretación del físico David Deutsch
+
+30:17.440 --> 30:20.680
+y las cruza con advertencias de Friedrich Nietzsche.
+
+30:20.820 --> 30:21.940
+Una combinación potente.
+
+30:22.240 --> 30:22.380
+Sí.
+
+30:22.720 --> 30:23.460
+Ambos pensadores,
+
+30:23.760 --> 30:25.280
+desde esquinas muy distintas,
+
+30:25.720 --> 30:26.980
+lanzan una alerta contundente
+
+30:26.980 --> 30:28.200
+sobre el peligro psicológico
+
+30:28.200 --> 30:29.800
+de convertir una predicción de riesgo
+
+30:29.800 --> 30:31.460
+en un dogma inamovible.
+
+30:31.580 --> 30:34.220
+Y es un cierre brillante para el ensayo.
+
+30:35.040 --> 30:36.320
+Deutsch, basándose en Popper,
+
+30:36.580 --> 30:38.660
+sostiene que el verdadero conocimiento humano
+
+30:38.660 --> 30:41.000
+solo crece a través del proceso interminable
+
+30:41.000 --> 30:43.140
+de conjetura y crítica despiadada.
+
+30:43.900 --> 30:44.920
+Por definición lógica,
+
+30:45.420 --> 30:48.020
+es imposible predecir el conocimiento futuro.
+
+30:48.520 --> 30:49.820
+Digo, si pudiéramos predecirlo,
+
+30:49.900 --> 30:50.820
+pues ya lo tendríamos hoy.
+
+30:51.180 --> 30:52.480
+Claro, es una contradicción.
+
+30:52.480 --> 30:56.460
+Ahora, si una civilización se deja aterrorizar tanto
+
+30:56.460 --> 31:00.320
+ante la posibilidad de un único escenario de desastre específico,
+
+31:00.600 --> 31:03.940
+digamos una IA rebelde que convierte al planeta en clips de papel,
+
+31:04.680 --> 31:06.680
+podría decidir, por ley global,
+
+31:07.060 --> 31:10.540
+congelar todo su desarrollo tecnológico para garantizar la seguridad.
+
+31:11.120 --> 31:12.240
+Apagar los servidores y ya.
+
+31:12.240 --> 31:14.280
+El peligro oscuro aquí,
+
+31:14.680 --> 31:16.940
+como advierte Nietzsche en su genealogía de la moral,
+
+31:17.620 --> 31:19.620
+es que con el paso de las generaciones,
+
+31:19.960 --> 31:22.480
+el origen racional de esa regla preventiva se olvida.
+
+31:23.080 --> 31:25.420
+Y el método de supervivencia muta
+
+31:25.420 --> 31:28.320
+hasta convertirse en una obligación moral incuestionable.
+
+31:29.020 --> 31:30.680
+La prevención técnica de la IA
+
+31:30.680 --> 31:32.500
+se transforma, lentamente,
+
+31:33.040 --> 31:34.820
+en una nueva religión ortodoxa.
+
+31:34.820 --> 31:37.480
+Y cualquier investigación autorizada o divergente
+
+31:37.480 --> 31:40.280
+comienza a ser tratada no como un error científico,
+
+31:40.280 --> 31:42.660
+sino como una herejía que debe ser castigada
+
+31:42.660 --> 31:43.780
+con todo el peso de la ley.
+
+31:44.040 --> 31:44.560
+Exactamente.
+
+31:45.080 --> 31:47.980
+Al intentar desesperadamente crear un futuro estático,
+
+31:48.260 --> 31:49.940
+congelado y matemáticamente seguro,
+
+31:50.460 --> 31:53.360
+donde el riesgo existencial ha sido abolido por decreto humano,
+
+31:53.980 --> 31:56.360
+la civilización cometería el mayor error de toda su historia.
+
+31:56.800 --> 31:59.420
+Terminaría amputándose la única herramienta evolutiva
+
+31:59.420 --> 32:00.380
+que la ha traído hasta aquí.
+
+32:00.700 --> 32:01.900
+Su capacidad de crear.
+
+32:01.900 --> 32:04.100
+La capacidad de ser libre para descubrir
+
+32:04.100 --> 32:05.760
+conocimiento radicalmente nuevo.
+
+32:06.360 --> 32:08.640
+Conocimiento que hoy ni siquiera somos capaces de imaginar,
+
+32:08.640 --> 32:10.700
+pero que casi con toda seguridad
+
+32:10.700 --> 32:12.200
+será lo único que nos salvará
+
+32:12.200 --> 32:14.980
+cuando enfrentemos crisis cósmicas o biológicas futuras
+
+32:14.980 --> 32:17.600
+que todavía no existen en nuestro radar de preocupaciones.
+
+32:18.140 --> 32:19.960
+El costo de una seguridad perfecta hoy
+
+32:19.960 --> 32:23.220
+es la extinción segura mañana por pura falta de imaginación.
+
+32:24.060 --> 32:27.040
+Es una reflexión que redefine cómo entendemos el progreso,
+
+32:27.140 --> 32:27.460
+la verdad.
+
+32:27.860 --> 32:30.780
+El mayor riesgo de homogeneizar y pausar nuestra civilización
+
+32:30.780 --> 32:32.800
+por el miedo a un modelo estadístico
+
+32:32.800 --> 32:35.580
+es que sacrificamos precisamente esa diversidad
+
+32:35.580 --> 32:36.940
+y esa fricción intelectual
+
+32:36.940 --> 32:39.460
+que nos capacita para detectar y adaptarnos
+
+32:39.460 --> 32:41.440
+a los verdaderos monstruos imprevistos
+
+32:41.440 --> 32:42.380
+que acechan en el tiempo.
+
+32:43.120 --> 32:45.200
+Así que, volviendo a esa autopista
+
+32:45.200 --> 32:47.860
+cubierta por un espeso y aterrador banco de niebla
+
+32:47.860 --> 32:49.080
+del que hablábamos al principio.
+
+32:49.980 --> 32:52.140
+Quizás el objetivo primordial de nuestra sociedad
+
+32:52.140 --> 32:54.680
+no debería ser canalizar todos nuestros recursos
+
+32:54.680 --> 32:57.000
+en intentar construir un radar mágico,
+
+32:57.200 --> 32:58.560
+imposible y perfecto,
+
+32:58.560 --> 33:00.320
+que disipe toda la niebla
+
+33:00.320 --> 33:02.820
+y nos prometa mostrar un destino final,
+
+33:03.200 --> 33:03.960
+libre de peligros.
+
+33:04.760 --> 33:07.080
+Quizás lo que verdaderamente necesitamos
+
+33:07.080 --> 33:08.860
+para garantizar que la humanidad sobreviva
+
+33:08.860 --> 33:10.100
+a este viaje vertiginoso
+
+33:10.100 --> 33:11.920
+es algo mucho más fundamental.
+
+33:12.840 --> 33:15.500
+Asegurarnos de que las manos sigan firmes en el volante,
+
+33:16.080 --> 33:18.420
+que los frenos institucionales no estén oxidados
+
+33:18.420 --> 33:20.880
+y que tengamos la libertad absoluta
+
+33:20.880 --> 33:23.960
+y los reflejos afilados para dar un volantazo brusco
+
+33:23.960 --> 33:26.720
+cuando veamos aparecer el obstáculo frente a nuestros ojos.
+
+33:26.720 --> 33:30.660
+Algo para dejar a quienes nos escuchan pensando profundamente
+
+33:30.660 --> 33:33.460
+la próxima vez que se crucen con un titular apocalíptico
+
+33:33.460 --> 33:34.420
+sobre el fin del mundo.
+

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alignment / Alineación — Audio Monitor</title>
+<style>
+:root{color-scheme:dark;--bg:#090d0c;--panel:#101715;--ink:#d2e5d4;--muted:#81998d;--line:#30483b;--glow:#9ce7b4}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 ui-monospace,Consolas,monospace}main{max-width:1100px;min-height:100vh;margin:auto;padding:22px;display:flex;flex-direction:column;gap:16px}header,footer,.top,.controls,.seekrow{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}header{border-bottom:1px solid var(--line);padding-bottom:14px}.eyebrow,.small{color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase}h1{font-size:clamp(19px,3vw,29px);font-weight:500;letter-spacing:.05em;margin:3px 0}.monitor{position:relative;background:radial-gradient(ellipse at center,#14241c,#090f0c 75%);border:1px solid var(--line);border-radius:8px;overflow:hidden;min-height:280px}.monitor:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(transparent 0 3px,#0002 4px 5px)}canvas{display:block;width:100%;height:290px}.screenlabel{position:absolute;top:14px;left:18px;color:var(--muted);font-size:11px;letter-spacing:.15em}button{background:#16231b;border:1px solid #486451;color:var(--ink);font:inherit;padding:10px 15px;border-radius:4px;cursor:pointer}button:hover,button:focus-visible{border-color:var(--glow);color:white}button.active{background:#294b35;border-color:var(--glow)}button:disabled{opacity:.4;cursor:not-allowed}.panel{border:1px solid var(--line);background:var(--panel);padding:17px;border-radius:6px}.subtitles{min-height:105px;display:flex;align-items:center;justify-content:center;text-align:center;font:clamp(17px,2.6vw,25px)/1.55 system-ui,sans-serif;padding:18px;white-space:pre-line}.subtitles.empty{color:var(--muted);font:13px ui-monospace,monospace}.seekrow input{flex:1;min-width:150px}input[type=range]{accent-color:#a7dbad;cursor:pointer}#volume{width:95px}.meta{color:var(--muted);font-size:12px}#status{color:var(--glow)}.intro{position:fixed;inset:0;z-index:10;background:#060b09ed;display:grid;place-items:center;padding:20px}.intro[hidden]{display:none}.introbox{max-width:590px;width:100%;text-align:center;border:1px solid #54745b;background:#111b16;padding:42px 25px;border-radius:8px;box-shadow:0 0 80px #203d2633}.introbox h2{font-size:clamp(22px,4vw,33px);font-weight:500}.choices{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:26px 0}.choices button{min-width:185px;padding:18px;font-size:17px}.footerline{border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:11px}kbd{border:1px solid var(--line);padding:1px 5px;border-radius:3px}@media(max-width:600px){main{padding:12px}.controls{justify-content:center}.panel{padding:12px}canvas{height:230px}}
+</style>
+</head>
+<body>
+<div class="intro" id="intro"><div class="introbox"><div class="eyebrow">BILINGUAL AUDIO MONITOR · TWO-PART SESSION</div><h2>Choose the starting language</h2><p class="meta">Both recordings will play in sequence. The second begins automatically when the first finishes.</p><div class="choices"><button data-start="en">ENGLISH<br><span class="small">Play first</span></button><button data-start="es">ESPAÑOL<br><span class="small">Reproducir primero</span></button></div><div class="small">Select a language to enable audio</div></div></div>
+<main><header><div><div class="eyebrow">UNIVERSAL MEMORY MONITOR / AUDIO EDITION</div><h1>THE DANGER OF PERFECT AI ALIGNMENT</h1><div class="meta">EL PELIGRO DE ESTANDARIZAR LA IA</div></div><div class="small" id="status">AWAITING SELECTION</div></header>
+<div class="top"><div class="small" id="sequence">SEQUENCE · NOT SELECTED</div><div><button id="english">EN</button> <button id="spanish">ES</button></div></div>
+<section class="monitor"><div class="screenlabel" id="visualLabel">OSCILLOSCOPE / SPECTRUM</div><canvas id="scope" aria-label="Audio waveform and spectrum visualization"></canvas></section>
+<section class="panel"><div class="small" id="captionLabel">TRANSCRIPT / SUBTÍTULOS</div><div id="captions" class="subtitles empty" aria-live="off">Choose English or Español to begin.</div></section>
+<section class="panel"><div class="seekrow"><span id="current">00:00</span><input id="seek" type="range" min="0" max="1000" value="0" aria-label="Seek"><span id="duration">00:00</span></div><div class="controls" style="margin-top:15px"><div><button id="back" title="Restart or previous recording">⏮</button> <button id="play">▶ PLAY</button> <button id="next" title="Next recording">⏭</button></div><div><button id="mode" title="Change visualization">VIEW: BOTH</button> <button id="cc">CC: ON</button></div><div class="small">VOL <input id="volume" type="range" min="0" max="1" step=".01" value=".85" aria-label="Volume"></div></div></section>
+<footer class="footerline"><span>SPACE play/pause · ← → seek 5s · N next · C captions · V view</span><span id="part">PART 0 / 2</span></footer>
+<audio id="audio" preload="metadata"></audio></main>
+<script>
+'use strict';
+const tracks={en:{name:'ENGLISH',file:'The_Danger_of_Perfect_AI_Alignment.mp3',vtt:'The_Danger_of_Perfect_AI_Alignment.vtt'},es:{name:'ESPAÑOL',file:'El_peligro_de_estandarizar_la_IA.mp3',vtt:'El_peligro_de_estandarizar_la_IA.vtt'}};
+const $=id=>document.getElementById(id),audio=$('audio'),canvas=$('scope'),ctx=canvas.getContext('2d');
+let order=[],index=0,cues=[],captionsOn=true,view=0,ac,analyser,source,freq,wave,token=0,started=false,scrubbing=false,estimatedDuration=0,pendingSeek=null;
+const modes=['BOTH','WAVE','SPECTRUM'];
+function setStatus(s){$('status').textContent=s}
+function fmt(n){if(!Number.isFinite(n))return '00:00';n=Math.floor(n);return `${String(Math.floor(n/60)).padStart(2,'0')}:${String(n%60).padStart(2,'0')}`}
+function initAudio(){
+  // Direct HTML audio playback works without Web Audio, including local files.
+  if(ac||location.protocol==='file:'||!window.AudioContext&&!window.webkitAudioContext)return;
+  try{
+    const context=new (window.AudioContext||window.webkitAudioContext)();
+    const meter=context.createAnalyser();meter.fftSize=2048;meter.smoothingTimeConstant=.78;
+    const input=context.createMediaElementSource(audio);
+    input.connect(meter);meter.connect(context.destination);
+    ac=context;analyser=meter;source=input;
+    freq=new Uint8Array(meter.frequencyBinCount);wave=new Uint8Array(meter.fftSize);
+  }catch(e){console.warn('Visualizer unavailable; audio playback remains available',e);analyser=null}
+}
+function parseTime(t){const p=t.trim().replace(',','.').split(':').map(Number);return p.reduce((a,b)=>a*60+b,0)}
+function parseVtt(text){return text.replace(/^\uFEFF/,'').replace(/\r/g,'').split(/\n\s*\n/).flatMap(block=>{const lines=block.trim().split('\n');if(!lines.length||/^(WEBVTT|NOTE|STYLE|REGION)(\s|$)/.test(lines[0]))return [];const at=lines.findIndex(l=>l.includes('-->'));if(at<0)return [];const match=lines[at].match(/([\d:. ,]+)\s*-->\s*([\d:. ,]+)/);if(!match)return [];const start=parseTime(match[1]),end=parseTime(match[2]);const content=lines.slice(at+1).join('\n').replace(/<[^>]*>/g,'').trim();return Number.isFinite(start)&&Number.isFinite(end)?[{start,end,text:content}]:[]}).sort((a,b)=>a.start-b.start)}
+async function loadCaptions(lang,id){cues=[];$('captions').textContent='Loading transcript…';$('captions').classList.add('empty');try{const res=await fetch(encodeURI(tracks[lang].vtt));if(!res.ok)throw Error('HTTP '+res.status);const parsed=parseVtt(await res.text());if(id!==token)return;cues=parsed;estimatedDuration=Math.max(0,...parsed.map(c=>c.end));updateTime();if(!parsed.length)throw Error('No timed cues found');$('captions').textContent='';}catch(e){if(id!==token)return;$('captions').textContent='Transcript unavailable. Check the .vtt filename and local server.';console.warn(e)}}
+async function load(lang,autoplay=true){const id=++token;estimatedDuration=0;pendingSeek=null;scrubbing=false;audio.pause();const t=tracks[lang];audio.src=t.file;audio.load();$('english').classList.toggle('active',lang==='en');$('spanish').classList.toggle('active',lang==='es');$('captionLabel').textContent=`TRANSCRIPT / ${t.name}`;$('part').textContent=`PART ${index+1} / 2`;$('sequence').textContent=`${order.map(x=>tracks[x].name).join(' → ')} · NOW: ${t.name}`;$('current').textContent='00:00';$('duration').textContent='00:00';$('seek').value=0;setStatus('LOADING '+t.name);loadCaptions(lang,id);if(autoplay){try{initAudio();if(ac)try{await ac.resume()}catch(e){console.warn("Visualizer resume failed",e)}if(id!==token)return;await audio.play();if(id===token)setStatus('PLAYING '+t.name)}catch(e){if(id===token){setStatus('PRESS PLAY TO START');console.warn(e)}}}}
+async function begin(lang){started=true;order=[lang,lang==='en'?'es':'en'];index=0;$('intro').hidden=true;await load(lang)}
+function select(lang){if(!started){begin(lang);return}index=order.indexOf(lang);load(lang)}
+function advance(){if(index<order.length-1){index++;load(order[index])}else{setStatus('SESSION COMPLETE');$('play').textContent='▶ REPLAY';$('captions').textContent='Both recordings complete.';$('captions').classList.add('empty')}}
+function updateCaptions(){if(!captionsOn){$('captions').textContent='CAPTIONS OFF';$('captions').classList.add('empty');return}const now=audio.currentTime;const active=cues.filter(c=>c.start<=now&&now<c.end).map(c=>c.text).join('\n');if(active){$('captions').textContent=active;$('captions').classList.remove('empty')}else if(cues.length){$('captions').textContent='';$('captions').classList.add('empty')}}
+function trackDuration(){
+  if(Number.isFinite(audio.duration)&&audio.duration>0)return audio.duration;
+  if(audio.seekable.length){const end=audio.seekable.end(audio.seekable.length-1);if(Number.isFinite(end)&&end>0)return end;}
+  return estimatedDuration;
+}
+function updateTime(){
+  const duration=trackDuration();
+  if(!scrubbing){const shown=pendingSeek===null?audio.currentTime:pendingSeek;$('current').textContent=fmt(shown);if(duration>0)$('seek').value=Math.round(1000*shown/duration)}
+  $('duration').textContent=fmt(duration);
+  updateCaptions();
+}
+function togglePlay(){if(!started){$('intro').hidden=false;return}if(audio.ended&&index===order.length-1){index=0;load(order[0]);return}if(audio.paused){initAudio();(async()=>{if(ac)try{await ac.resume()}catch(e){console.warn('Visualizer resume failed',e)}await audio.play()})().catch(e=>setStatus('PLAYBACK ERROR: '+e.message))}else audio.pause()}
+function resize(){const dpr=Math.min(devicePixelRatio||1,2),r=canvas.getBoundingClientRect();canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0)}
+function draw(){requestAnimationFrame(draw);const w=canvas.clientWidth,h=canvas.clientHeight;ctx.clearRect(0,0,w,h);ctx.strokeStyle='#233c2d';ctx.lineWidth=1;for(let x=0;x<w;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke()}for(let y=0;y<h;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke()}if(!analyser)return;analyser.getByteTimeDomainData(wave);analyser.getByteFrequencyData(freq);if(view!==2){ctx.beginPath();ctx.lineWidth=2;ctx.strokeStyle='#a7f5bc';ctx.shadowBlur=11;ctx.shadowColor='#69e79b';const height=view===0?h*.52:h*.8,base=view===0?h*.29:h*.5;for(let x=0;x<w;x++){const i=Math.floor(x/(w-1)*(wave.length-1));const y=base+(wave[i]-128)/128*height*.47;x===0?ctx.moveTo(x,y):ctx.lineTo(x,y)}ctx.stroke();ctx.shadowBlur=0}if(view!==1){const bars=Math.max(30,Math.floor(w/8)),bottom=h-16,area=view===0?h*.43:h*.78;for(let i=0;i<bars;i++){const pos=Math.floor(Math.pow(i/bars,1.7)*(freq.length-1));const value=freq[pos]/255;const x=i*w/bars;ctx.fillStyle=`rgba(132,224,161,${.35+value*.65})`;ctx.fillRect(x,bottom-value*area,Math.max(2,w/bars-2),value*area)}}}
+for(const b of document.querySelectorAll('[data-start]'))b.addEventListener('click',()=>begin(b.dataset.start));$('english').onclick=()=>select('en');$('spanish').onclick=()=>select('es');$('play').onclick=togglePlay;$('next').onclick=()=>{if(!started)return;if(index<1){advance()}else{index=0;load(order[0])}};$('back').onclick=()=>{if(!started)return;if(audio.currentTime>3){audio.currentTime=0}else if(index>0){index--;load(order[index])}else audio.currentTime=0};$('mode').onclick=()=>{view=(view+1)%3;$('mode').textContent='VIEW: '+modes[view]};$('cc').onclick=()=>{captionsOn=!captionsOn;$('cc').textContent='CC: '+(captionsOn?'ON':'OFF');updateCaptions()};$('volume').oninput=e=>audio.volume=Number(e.target.value);const seek=$('seek');
+function previewSeek(){const duration=trackDuration();if(duration>0)$('current').textContent=fmt(duration*Number(seek.value)/1000)}
+function commitSeek(){
+  const duration=trackDuration();
+  if(!(duration>0)){setStatus('WAITING FOR AUDIO DURATION');return;}
+  const target=Math.max(0,Math.min(duration-.05,duration*Number(seek.value)/1000));
+  pendingSeek=target;
+  try{audio.currentTime=target;}catch(e){console.warn('Seek unavailable',e);setStatus('SEEK UNAVAILABLE: CHECK MP3 / SERVER');return;}
+  $('current').textContent=fmt(target);
+  updateCaptions();
+}
+// Keep the user in control of the thumb until the gesture has finished.
+// A seeked/timeupdate event must never cancel an active drag.
+let pointerDragging=false;
+function finishScrub(){
+  if(!scrubbing)return;
+  commitSeek();
+  pointerDragging=false;
+  scrubbing=false;
+  // Do not redraw from stale currentTime until the browser resolves the seek.
+  if(pendingSeek===null)updateTime();
+}
+seek.addEventListener('pointerdown',()=>{pointerDragging=true;scrubbing=true});
+seek.addEventListener('input',()=>{scrubbing=true;previewSeek()});
+seek.addEventListener('change',finishScrub);
+seek.addEventListener('pointerup',finishScrub);
+seek.addEventListener('pointercancel',()=>{pointerDragging=false;finishScrub()});
+seek.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End','PageUp','PageDown'].includes(e.key))scrubbing=true});
+seek.addEventListener('keyup',e=>{if(['ArrowLeft','ArrowRight','Home','End','PageUp','PageDown'].includes(e.key))finishScrub()});
+audio.addEventListener('seeked',()=>{pendingSeek=null;if(!scrubbing)updateTime()});
+audio.volume=.85;audio.addEventListener('timeupdate',updateTime);audio.addEventListener('loadedmetadata',updateTime);audio.addEventListener('durationchange',updateTime);audio.addEventListener('canplay',updateTime);audio.addEventListener('ended',advance);audio.addEventListener('play',()=>{$('play').textContent='Ⅱ PAUSE';setStatus('PLAYING '+tracks[order[index]].name)});audio.addEventListener('pause',()=>{if(!audio.ended){$('play').textContent='▶ PLAY';if(started)setStatus('PAUSED')}});audio.addEventListener('error',()=>{if(started)setStatus('AUDIO FILE NOT FOUND / UNREADABLE')});window.addEventListener('keydown',e=>{if(e.code==='Space'&&!e.repeat&&!e.target.matches('input[type=text],textarea,select,[contenteditable=true]')){e.preventDefault();togglePlay();return}if(e.target.matches('input,button,textarea,select'))return;if(e.code==='Space'){e.preventDefault();togglePlay()}else if(e.key==='ArrowRight'){audio.currentTime=Math.min(audio.duration||0,audio.currentTime+5)}else if(e.key==='ArrowLeft'){audio.currentTime=Math.max(0,audio.currentTime-5)}else if(e.key.toLowerCase()==='n')$('next').click();else if(e.key.toLowerCase()==='c')$('cc').click();else if(e.key.toLowerCase()==='v')$('mode').click()});window.addEventListener('resize',resize);resize();draw();
+</script>
+</body></html>
+
