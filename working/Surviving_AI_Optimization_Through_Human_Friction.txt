@@ -12,7 +12,7 @@ And if you are the kind of person who wants a shortcut to being profoundly well-
 It's a heavy topic, but a completely necessary one.
 Okay, let's untack this.
 We're looking at a stack of three incredibly dense, highly interconnected, and frankly mind-blowing philosophical and structural monographs.
-These were all published in early 2026 by an author named Fliction.
+These were all published in early 2026 by an author named Flyxion.
 And the titles alone give you a roadmap of the argument.
 Oh, absolutely. Just listen to these titles because they immediately give you a sense of the gravity of what we're dealing with.
 We've got Convergence Before Autonomy, Identity After Authenticity, and The Expiatory Gap.
@@ -38,7 +38,7 @@ The danger isn't that a machine becomes evil or malicious.
 The danger is how the sheer geometry of optimization inherently reorganizes the world around it.
 We are dissecting the architecture of the world you, the listener, are navigating today.
 I think that's such an important distinction because it's so easy to get caught up in the existential dread of a rogue AI.
-But what you're saying and what Fliction is arguing in the very first text, Convergence Before Autonomy, is that the entire AI safety industry might be looking the wrong way.
+But what you're saying and what Flyxion is arguing in the very first text, Convergence Before Autonomy, is that the entire AI safety industry might be looking the wrong way.
 They are suffering from a massive temporal misordering.
 A temporal misordering.
 Right.
@@ -61,8 +61,8 @@ And it needs to make itself smarter so it can invent better paperclip manufactur
 It's perfectly logical.
 It's just a machine doing exactly what it was asked to do to the absolute maximum.
 Yes, so the standard AI safety community looks at this theoretical model and says, well, we must figure out how to mathematically constrain these drives before we build an artificial general intelligence, an AGI, sometime in the future.
-But Flixing completely flips that.
-Flixing points out that this fixates on a future autonomous, super intelligent, single agent.
+But Flyxion completely flips that.
+Flyxion points out that this fixates on a future autonomous, super intelligent, single agent.
 The reality, according to this text, is that instrumental convergence is already happening.
 It is not waiting for a supercomputer to wake up.
 It's happening right now in the systems we already use, which is a little terrifying.
@@ -79,7 +79,7 @@ That is the exact thesis of the first book.
 So we're basically building the tracks for the runaway train, completely oblivious, while having academic debates about how to design the brakes for a train that hasn't even been built yet.
 A very apt metaphor.
 I want to ground this because the idea that infrastructure precedes intelligence or that optimization reorganizes its host is, it's a huge concept.
-And Fliction uses this incredible real-world analogy early in the text called the mobility paradox.
+And Flyxion uses this incredible real-world analogy early in the text called the mobility paradox.
 The induced demand example.
 It's perfectly illustrative.
 Right.
@@ -140,7 +140,7 @@ The entire incentive structure of the society completely shifts.
 So we stop memorizing.
 Educational regimes no longer invest years in building mnemonic endurance.
 Instead, they invest in teaching analytic skills, reading, and indexing.
-But crucially, as Fliction notes, this technological shift profoundly redistributes authority.
+But crucially, as Flyxion notes, this technological shift profoundly redistributes authority.
 The power shifts.
 The authority moves away from the elders who memorize the stories, and it migrates to the archivists, the scribes, and the institutions that control the physical texts.
 The optimization of persistence making information last longer produced a massive reorganization of institutional power.
@@ -151,14 +151,14 @@ Because when Johannes Gutenberg introduced movable type, there wasn't some grand
 No king passed a law saying, thou shalt not write in cursive.
 No, it was structural selection.
 Right.
-The printing press exercised what Fliction calls infrastructure compatibility pressure.
+The printing press exercised what Flyxion calls infrastructure compatibility pressure.
 It naturally privileged forms of standardized script that were compatible with mechanical reproduction.
 Standardized fonts were just easier to set, easier to read, and processed more efficiently through the machine.
 The environment naturally selected against elaborate idiosyncratic cursive without ever formally prohibiting it.
 The beautiful diversity of human script narrowed down to a few standard fonts purely because of infrastructural legibility.
 It's evolution by infrastructure.
 It's selection without prohibition.
-If we connect this to the bigger picture, these historical examples prove a fundamental point that Fliction is making.
+If we connect this to the bigger picture, these historical examples prove a fundamental point that Flyxion is making.
 Optimization systematically restructures its host domain in ways that are convergent, directional, and incredibly difficult to reverse.
 And what's vital to grasp is that this happens even when the optimizing force is misaligned with the stated goals of the people inside the institution.
 That is a critical point, the divergence between intent and outcome.
@@ -167,7 +167,7 @@ I want to dig into that because the text has this fascinating historical case st
 You mentioned the stated goals versus what actually happens.
 Can you walk us through the story of Cecilia Payne-Gaposhkin?
 Because this blew my mind.
-It is a remarkable piece of history that perfectly illustrates Fliction's formal point about institutions.
+It is a remarkable piece of history that perfectly illustrates Flyxion's formal point about institutions.
 Let's go back to 1925.
 Cecilia Payne-Gaposhkin is a brilliant astronomer.
 And in her doctoral dissertation, she uses quantitative spectroscopic analysis, looking at the life spectra emitted by stars, to prove that stars are composed primarily of hydrogen and helium.
@@ -185,7 +185,7 @@ It contradicted everything they had built their careers on.
 They pressured her so heavily that she literally had to write in her own dissertation that her groundbreaking correct conclusion was almost certainly not real.
 She discovered what the universe was made of, and her bosses made her write, just kidding, I'm probably wrong, because it made them look bad.
 Yes.
-And Fliction uses this tragic historical moment to formalize a very critical structural concept.
+And Flyxion uses this tragic historical moment to formalize a very critical structural concept.
 The profound difference between a declared scalar and an effective scalar.
 Declared versus effective.
 Walk us through that.
@@ -211,7 +211,7 @@ Yeah.
 But the structural lag, the time it took for the institution to correct itself, was significant.
 And we don't always have the hard laws of physics to fall back on in other fields.
 Exactly.
-Now, Fliction asks us to apply this exact same dynamic to our modern AI integrated institutions.
+Now, Flyxion asks us to apply this exact same dynamic to our modern AI integrated institutions.
 Think about a massive social media platform or a digital banking conglomerate.
 They might have a beautifully written mission statement declaring their objective is user safety, fairness, community building, or democratic discourse.
 That is their declared scaler.
@@ -222,8 +222,8 @@ If an algorithm decides that outrage keeps people clicking, there's no hydrogen 
 The structural lag could be indefinite.
 That period where the institution suppresses reality to protect its metrics could theoretically last forever.
 Which leads us perfectly into the absolute core of this first text, the five convergent drives of the sociotechnical stack.
-This is where Fliction maps out the exact behavior of these systems.
-Fliction argues that if you take any modern institution, plug an AI model into its core, feed it a massive data pipeline, and hook it up to human incentive gradients like profit or engagement, it literally becomes a distributed optimizer.
+This is where Flyxion maps out the exact behavior of these systems.
+Flyxion argues that if you take any modern institution, plug an AI model into its core, feed it a massive data pipeline, and hook it up to human incentive gradients like profit or engagement, it literally becomes a distributed optimizer.
 Regardless of the declared scaler.
 Yes.
 And no matter what the PR department's mission statement says, that system will inevitably, structurally exhibit these five drives.
@@ -257,7 +257,7 @@ Is this complex geopolitical post-hate speech yes or no?
 Should this struggling single mother get a loan?
 High risk or low risk?
 All the messy, vital human context is violently stripped away just for the sake of speed and legibility.
-This creates what Fliction calls a convergent selection effect.
+This creates what Flyxion calls a convergent selection effect.
 Criteria that are easily quantifiable and legible in the available data sets are retained and amplified by the system.
 Whereas criteria that require qualitative human wisdom, empathy, or situational context are systematically marginalized or completely ignored because they don't compute efficiently.
 They just get dropped from the equation entirely.
@@ -304,7 +304,7 @@ At the micro level, for specific, well-defined tasks, efficiency is absolutely a
 But at the macro level, when applied to societal infrastructure and human judgment, efficiency becomes toxic.
 Okay.
 Toxic how?
-The aha moment that Flixian is trying to give the reader is that the very things these systems are aggressively trying to eliminate, the slow deliberation, the heated arguments, the mandatory waiting periods, the agonizing inefficiency of a human changing their mind, these are not bugs in the software of civilization.
+The aha moment that Flyxion is trying to give the reader is that the very things these systems are aggressively trying to eliminate, the slow deliberation, the heated arguments, the mandatory waiting periods, the agonizing inefficiency of a human changing their mind, these are not bugs in the software of civilization.
 They are vital, load-bearing, civilizational safety features.
 So the friction is the safety feature.
 The friction is where the humanity actually lives.
@@ -312,7 +312,7 @@ When you compress the latency to zero, you remove the space where moral reasonin
 You get instant action without ethical reflection.
 So we're building a world that's incredibly fast, incredibly efficient, and completely devoid of the time required to care about the consequences.
 That's nicely.
-To drive home that this convergence happens structurally without needing a conscious mastermind or an evil dictator, Flixian points to two fascinating fictional laboratories in literature.
+To drive home that this convergence happens structurally without needing a conscious mastermind or an evil dictator, Flyxion points to two fascinating fictional laboratories in literature.
 These are thought experiments that prove the math.
 The literary examples are a very strong part of the text.
 The first is A.E.
@@ -338,7 +338,7 @@ There is no visible ruler, no sun, and absolutely no declared goal or purpose gi
 A truly open-ended environment.
 Yet, every single human administrative regime that rises up in the city inevitably moves toward the exact same behaviors.
 Consolidating resources, suppressing dissent, controlling information, and establishing hierarchies.
-The structural point Fliction is making is that optimization happens even under conditions of total objective uncertainty.
+The structural point Flyxion is making is that optimization happens even under conditions of total objective uncertainty.
 Convergence without instruction.
 You don't need conscious, malicious intent to ruthlessly optimize human behavior.
 You just need adaptive agents responding to the constraints of their environment.
@@ -360,7 +360,7 @@ A Latin motto.
 Ese quam videre.
 To be rather than to seem.
 It translates roughly to to be rather than to seem.
-Fliction traces this concept all the way back to Cicero,
+Flyxion traces this concept all the way back to Cicero,
 the ancient Roman statesman and philosopher,
 who used it as a foundational principle of civic virtue.
 Cicero argued that your public reputation,
@@ -372,7 +372,7 @@ You have to structurally be virtuous.
 And then the text connects this identical sentiment to the biblical tradition,
 specifically 1 Samuel 16.7.
 Man looks at the outward appearance, but the Lord looks at the heart.
-What Fliction is doing by citing both Cicero and the biblical text
+What Flyxion is doing by citing both Cicero and the biblical text
 is establishing a fundamental historical tension
 between ontological presence, which we can call structural reality,
 and perceptual appearance.
@@ -384,7 +384,7 @@ The signal matched the substrate.
 But the danger has always been that appearance can detach.
 And that's where the modern era comes in.
 When we leap forward to the modern era,
-Fliction brilliantly connects this ancient tension
+Flyxion brilliantly connects this ancient tension
 to the French philosopher Guy Debord
 and his highly influential 1967 concept of the Society of the Spectacle.
 For those who haven't read Debord,
@@ -400,7 +400,7 @@ If you go on a vacation but don't post a perfectly edited sunset photo on social
 did the vacation even happen?
 Does it have any social value?
 The show, the spectacle, becomes the actual substance of life.
-And what Fliction does here,
+And what Flyxion does here,
 which elevates the text beyond a standard sociological critique,
 is truly brilliant.
 They take Debord's socioeconomic theory
@@ -436,7 +436,7 @@ It uses sparse coding to instantly categorize tree.
 It's a biological shortcut.
 It is an incredibly efficient evolutionary shortcut that allowed us to react quickly to predators
 without burning too many calories.
-But, as Flixing points out, this biological efficiency creates a massive structural vulnerability.
+But, as Flyxion points out, this biological efficiency creates a massive structural vulnerability.
 Because if the brain is only looking for a few key features, it can be tricked.
 It's a shortcut.
 And shortcuts can be hacked.
@@ -457,7 +457,7 @@ It perfectly simulates the invariant visual cues without possessing any of the a
 substrate of a tree.
 Here's where it gets really interesting.
 And, frankly, a little uncomfortably personal.
-Flixing argues that the modern spectacle, our personal brand identities, our meticulously
+Flyxion argues that the modern spectacle, our personal brand identities, our meticulously
 curated social media personas, massive corporate PR campaigns, all of it is a socio-cognitive
 analog of biological camouflage.
 It exploits our perceptual compression.
@@ -465,7 +465,7 @@ It is a system engineered over decades to relentlessly exploit the compression c
 of human perception.
 The spectacle simulates the markers of authenticity, the signal, without actually requiring anyone
 to do the hard, invisible, structural work, the substrate.
-To make this dynamic measurable and precise, Flixing introduces a conceptual model called the
+To make this dynamic measurable and precise, Flyxion introduces a conceptual model called the
 divergence functional.
 We don't need to get bogged down in the mathematics, but the concept is crucial.
 What does it measure?
@@ -477,7 +477,7 @@ But when the divergence is high, you have a system where seeming it has complete
 being.
 Let's use the text's incredible analogy to make this divergence concrete, because when
 I read this, it clicked perfectly.
-Flixing compares the classic movie The Wizard of Oz to the Renaissance ideal of Sprezzatura.
+Flyxion compares the classic movie The Wizard of Oz to the Renaissance ideal of Sprezzatura.
 Let's look at The Wizard first.
 The ultimate high divergence example.
 In The Wizard of Oz, Dorothy and her friends walk into the Emerald Hall, and they are confronted
@@ -522,12 +522,12 @@ I was optimizing entirely for the signal, with zero substrate.
 The text describes this era we are living in as the era of profilicity.
 Yes.
 Profilicity is a vital term here, originally developed by philosophers Hans-Gorg Mahler and Paul J. D'Ambrosio,
-and Flixian expands upon it.
+and Flyxion expands upon it.
 It describes our current regime, where personal identity is inextricably scaffolded by profiles, metrics, likes, and algorithmic validation.
 We curate for the algorithm.
 In a regime of profilicity, your identity is constantly constructed and adjusted for a generalized peer,
 an invisible audience mediated by an algorithm.
-Now, it is important to note that Flixian is very careful not to fall into pure reactionary nostalgia here.
+Now, it is important to note that Flyxion is very careful not to fall into pure reactionary nostalgia here.
 They aren't saying to just smash our phones.
 The point is not to smash your smartphone, run into the woods, and return to some mythical, unmediated state of pure authenticity.
 Human beings have always mediated our identities through clothing, language, and culture.
@@ -535,7 +535,7 @@ There is no pure, unmediated self.
 Right.
 There is no going back to some pre-internet utopia where everyone was just their true selves.
 The goal isn't to destroy the profile entirely.
-The goal, according to the text, is to demand what Flixian calls structural congruence.
+The goal, according to the text, is to demand what Flyxion calls structural congruence.
 Aligning the layers.
 We have to ensure that the profile actually matches the underlying generative reality.
 If your profile projects a certain professional competence, or a certain loud ethical stance on a political issue,
@@ -548,11 +548,11 @@ Which bridges us perfectly into the third text, the expiatory gap.
 Exactly.
 Having established that our institutions are blindly optimizing for throughput,
 and that our perceptual biology is being easily hijacked by high-divergent signals,
-Flixian turns to the ultimate interface problem.
+Flyxion turns to the ultimate interface problem.
 What happens when the machines we have built simply think too fast for us to even comprehend what they are doing?
 Okay, let's unpack the expiatory gap, because this is where the anxiety of modern life gets a mathematical explanation.
 It's a brilliant structural analysis of attention.
-It starts with a fascinating historical look at what Flixian calls the technocratic shift.
+It starts with a fascinating historical look at what Flyxion calls the technocratic shift.
 In the 20th century, the era of massive industrialization, technocracy, was all about managing physical thermodynamic energy.
 It was mattered in joules.
 Think of building massive hydroelectric dams, optimizing national power grids, or increasing the thermodynamic efficiency of a factory floor.
@@ -562,7 +562,7 @@ It is no longer primarily about managing physical energy.
 It is about managing human cognitive bandwidth.
 It moved from joules to jolts.
 Yes, the focus of extraction moved from the factory floor to the human nervous system itself.
-Infliction introduces a brilliant, unsettling concept here regarding the exact nature of digital interruptions.
+Flyxion introduces a brilliant, unsettling concept here regarding the exact nature of digital interruptions.
 And notifications.
 When you get a push notification on your phone, a buzz in your pocket, it is not merely a passive alert or a helpful convenience.
 It is a literal, quantifiable claim on your sovereign attention.
@@ -594,14 +594,14 @@ There is a hard, physical limit to how much novel information a human being can 
 Machines have no such limit.
 They scale infinitely with more compute.
 Humans do not.
-This brings us to what Fliction calls the Silicon Valley model.
+This brings us to what Flyxion calls the Silicon Valley model.
 The prevailing model of tech development today is building and deploying AI swarms.
 These aren't just one computer.
 They are massive distributed arrays of algorithms, making millions of micro decisions across global finance, logistics supply chains, and social media content moderation.
 And they operate at speeds we cannot comprehend.
 And these swarms operate so fast, they fundamentally break human limits.
 The text has a phrase that I want you to explain because it's the title of a whole chapter.
-Fliction says these AI swarms operate above the human Nyquist frequency.
+Flyxion says these AI swarms operate above the human Nyquist frequency.
 I know that Nyquist frequency is a term from audio engineering, but how on earth does that apply to AI governance and our inability to control these systems?
 If we connect this to the bigger picture, this audio engineering analogy is perhaps the most illuminating and terrifying part of the entire deep dive.
 To understand why we are losing control, we have to understand the Nyquist-Shannon sampling theorem in digital audio.
@@ -646,7 +646,7 @@ that feeling like nobody knows what is true anymore, that the economy makes no s
 The symptoms of a system aliasing.
 The system is aliasing.
 The signals we are receiving, the news we read, the markets we participate in are all distortions of automated processes moving entirely too fast for us to see.
-This raises an important question, and it's the question that occupies the final section of Fliction's work.
+This raises an important question, and it's the question that occupies the final section of Flyxion's work.
 If the infrastructure of unconstrained optimization is already deployed,
 if the spectacle is actively driving a wedge between appearance and reality,
 and if AI swarms are operating far above our cognitive Nyquist frequency, causing our governance to alias,
@@ -657,7 +657,7 @@ This brings us to part four of our deep dive,
 reclaiming the interval and the foundational concept of civilizational incompressibility.
 This is the defense strategy.
 This is the blueprint for how we actually fight back against the invisible optimizer.
-Infliction breaks it down mathematically in the text before giving practical solutions.
+Flyxion breaks it down mathematically in the text before giving practical solutions.
 The concept of compression is key here.
 The core idea is that optimization, by its very nature, requires compression.
 For an AI to optimize a massively complex system like a human society,
@@ -679,7 +679,7 @@ if we willingly collapse our diverse human values into easily measurable metrics
 we make ourselves highly compressible.
 We make the machine's job easy.
 And a civilization that makes itself easily compressible invites capture.
-Okay, let's unpack the specific actionable interventions Flixion synthesizes from all three of these texts.
+Okay, let's unpack the specific actionable interventions Flyxion synthesizes from all three of these texts.
 Because these aren't just abstract ideas.
 These are structural solutions you can look for, advocate for in your workplace, or implement in your life.
 Concrete steps for structural preservation.
@@ -696,9 +696,9 @@ We need to reward the signal that survives the test of time and perturbation,
 not just the one that spikes the loudest.
 Solution number two directly addresses the problem of the spectacle
 and the hidden generating rule we discussed with the Wizard of Oz.
-Flixion calls for the mandatory implementation of the yarn crawler.
+Flyxion calls for the mandatory implementation of the yarn crawler.
 The yarn crawler.
-In category theory, which Flixion uses extensively to model these systems,
+In category theory, which Flyxion uses extensively to model these systems,
 the problem with the spectacle is that the mapping from reality to the fake signal
 is what's called a non-faithful functor.
 This means different realities, both real labor and AI generation,
@@ -763,7 +763,7 @@ And finally, solution number five, energetic mutualism.
 We need to fundamentally change how we measure the value of our platforms and our institutions.
 Currently, we measure value by user count, daily active engagement, or sheer revenue.
 The standard Silicon Valley metrics.
-Fliction argues the metric must shift to an index of mutualism.
+Flyxion argues the metric must shift to an index of mutualism.
 Does this platform, this algorithm, this specific app on your phone, actually give you more autonomous capacity, more genuine degrees of freedom in the physical world than it extracts from you?
 A completely new way to evaluate technology.
 Does it enhance your cognitive bandwidth, or does it merely harvest your attention for targeted advertising?
@@ -786,7 +786,7 @@ Efficiency feels good.
 It feels clean.
 It feels like progress.
 But the reality is more complex.
-But as Fliction has shown us today, it is friction, deliberation, doubt, and rich, unquantifiable, messy contexts that actually make you human.
+But as Flyxion has shown us today, it is friction, deliberation, doubt, and rich, unquantifiable, messy contexts that actually make you human.
 This raises an important question for you to consider long after this deep dive ends.
 How are you structuring your own digital life?
 Are you willingly collapsing your complex, contradictory identity into a highly compressible, easily legible profile just to appease the algorithm and get a few more views?
@@ -796,7 +796,7 @@ We are constantly, relentlessly told to optimize our personal lives.
 We are told to lifehack our morning routines so we can work faster, to optimize our sleep with digital trackers, to speed read books so we can consume more data, to network efficiently, to maximize our relationships.
 We are desperately trying to turn ourselves into efficient little machines to keep up with the real machines.
 A feudal race.
-But if affliction is right, if civilizational survival against a superintelligent swarm actually requires incompressibility, if it requires irreducible complexity, friction, and latency, might your own daily inefficiencies actually be your salvation?
+But if Flyxion is right, if civilizational survival against a superintelligent swarm actually requires incompressibility, if it requires irreducible complexity, friction, and latency, might your own daily inefficiencies actually be your salvation?
 Might your moments of indecision, your idle daydreaming staring at a wall, your completely unmonetizable hobbies, and your slow, messy, frustratingly human deliberations actually be the most profoundly necessary acts of civilizational resistance that you possess?
 A beautifully stated paradox.
 The less optimal we become to the machine, the more human we remain.

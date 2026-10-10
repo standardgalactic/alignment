@@ -1,5 +1,11 @@
 # Alignment Research
 
+[Notes Left on a Shared Board](https://standardgalactic.github.io/alignment/notes-left-on-a-shared-board.pdf)
+
+[Neither Persons nor Patients](https://standardgalactic.github.io/alignment/neither_persons_nor_patients.pdf)
+
+* [Why Your Chatbot Isn't Conscious](https://standardgalactic.github.io/alignment/audio-visualizer.html) — *Audio Overview*
+
 [Against the Extinction Thesis](https://standardgalactic.github.io/alignment/against-the-extinction-thesis.pdf)
 
 [Exposure Before Evidence](https://standardgalactic.github.io/alignment/exposure-before-evidence.pdf)

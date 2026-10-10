@@ -162,7 +162,7 @@ start	end	text
 626400	626520	Yeah.
 626520	627760	Because there are more flights.
 628240	636420	And the public would become completely terrified of flying, even as the actual per-mile safety of commercial aviation reached historic highs.
-636600	646680	Okay, here's where it gets really interesting to me, because FlexSign actually takes this mathematical reality and scales it up to what they call extreme value statistics at a planetary scale.
+636600	646680	Okay, here's where it gets really interesting to me, because Flyxion actually takes this mathematical reality and scales it up to what they call extreme value statistics at a planetary scale.
 646800	647000	Yeah.
 647320	648120	This part is wild.
 648120	669720	So, if you have an AI system that is handling a billion interactions a day, even if the probability of a specific, weird, catastrophic failure is ridiculously low, like 10 to the negative ninth, which is literally one in a billion, the math says there's still a 63% chance you will observe that exact failure at least once.

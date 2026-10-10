@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why Your Chatbot Isn't Conscious | Audioscope</title>
+<style>
+:root{--bg:#070b0d;--panel:#0c1417;--ink:#b9d6d1;--dim:#668680;--line:#25403e;--bright:#8af5da;--accent:#52bda9}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font:13px/1.5 'Courier New',monospace}main{max-width:1180px;margin:auto;min-height:100vh;display:flex;flex-direction:column;padding:20px;gap:14px}header,footer{display:flex;justify-content:space-between;gap:12px;letter-spacing:.13em;color:var(--dim);font-size:11px;text-transform:uppercase}header{border-bottom:1px solid var(--line);padding-bottom:12px}footer{border-top:1px solid var(--line);padding-top:12px;margin-top:auto}.title{font-size:clamp(17px,3vw,27px);letter-spacing:.08em;color:var(--bright);margin:6px 0 0}.subtitle{color:var(--dim);margin:0 0 5px}.monitors{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;min-height:280px;height:min(45vh,410px)}.panel{position:relative;border:1px solid var(--line);background:repeating-linear-gradient(0deg,#101c1d 0,#101c1d 1px,#0a1114 2px,#0a1114 5px);overflow:hidden;min-width:0}.panel label{position:absolute;top:12px;left:14px;color:var(--dim);font-size:10px;letter-spacing:.15em;z-index:1}.panel canvas{display:block;width:100%;height:100%}.captions{border:1px solid var(--line);background:var(--panel);min-height:100px;padding:20px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:clamp(14px,2vw,20px);line-height:1.55;color:#dcf5e8;text-shadow:0 0 12px #368e7555;white-space:pre-wrap}.controls{display:grid;grid-template-columns:auto auto minmax(100px,1fr) auto auto;align-items:center;gap:12px;border:1px solid var(--line);padding:14px;background:var(--panel)}button{font:inherit;background:#122021;border:1px solid #3c6760;color:var(--bright);cursor:pointer;padding:10px 14px}button:hover{background:#1a3332}button:focus-visible,input:focus-visible{outline:2px solid var(--bright);outline-offset:3px}input[type=range]{width:100%;accent-color:var(--accent);cursor:pointer;touch-action:none}.time{font-variant-numeric:tabular-nums;color:var(--dim);white-space:nowrap}.status{color:var(--dim)}.error{color:#f2b99f}@media(max-width:700px){main{padding:12px}.monitors{grid-template-columns:1fr;height:430px;grid-template-rows:1fr 1fr}.controls{grid-template-columns:auto auto 1fr}.controls input{grid-column:1/-1;grid-row:2}.controls .time{grid-column:3;grid-row:1;text-align:right}.controls #cc{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<main>
+<header><span>FLYXION / AUDIOSCOPE</span><span id="status" class="status">READY</span></header>
+<h1 class="title">WHY YOUR CHATBOT ISN'T CONSCIOUS</h1><p class="subtitle">TIME DOMAIN / FREQUENCY DOMAIN / TRANSCRIPT</p>
+<section class="monitors"><div class="panel"><label>01 / OSCILLOSCOPE</label><canvas id="wave"></canvas></div><div class="panel"><label>02 / SPECTRAL ANALYSIS</label><canvas id="spectrum"></canvas></div></section>
+<section class="captions" id="captions" aria-live="off">Select play to begin. Subtitles will appear here.</section>
+<section class="controls"><button id="play" aria-label="Play or pause">▶ PLAY</button><button id="back" title="Back 10 seconds">↶ 10s</button><input id="seek" type="range" min="0" max="1" step="0.01" value="0" aria-label="Seek timeline"><span class="time"><span id="current">0:00</span> / <span id="duration">--:--</span></span><button id="cc" aria-pressed="true">CC ON</button></section>
+<footer><span>SPACE: PLAY/PAUSE · ←/→: SEEK 5s</span><span>LOCAL AUDIO / VTT</span></footer>
+<audio id="audio" preload="metadata" src="Why_Your_Chatbot_Isn_t_Conscious.mp3"></audio>
+</main>
+<script>
+'use strict';
+const audio=document.getElementById('audio'),play=document.getElementById('play'),seek=document.getElementById('seek'),current=document.getElementById('current'),duration=document.getElementById('duration'),status=document.getElementById('status'),captions=document.getElementById('captions'),cc=document.getElementById('cc');
+const format=s=>Number.isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'--:--';
+let dragging=false,ctx=null,analyser=null,connected=false,cues=[],showCC=true;
+function refreshDuration(){if(Number.isFinite(audio.duration)&&audio.duration>0){seek.max=String(audio.duration);duration.textContent=format(audio.duration)}}
+function sync(){if(!dragging){seek.value=String(audio.currentTime||0);current.textContent=format(audio.currentTime||0)}if(showCC){const t=audio.currentTime||0;const cue=cues.find(x=>t>=x.start&&t<x.end);captions.textContent=cue?cue.text:(cues.length?'':'Subtitles unavailable or loading.')}}
+// Native range input: no reloading, no competing seek timers, and no synthetic clicks.
+seek.addEventListener('pointerdown',()=>{dragging=true});
+seek.addEventListener('input',()=>{dragging=true;current.textContent=format(Number(seek.value))});
+function commit(){const target=Number(seek.value);if(Number.isFinite(target)&&audio.readyState>=1){try{audio.currentTime=target}catch(e){status.textContent='SEEK ERROR: '+e.message}}dragging=false;sync()}
+seek.addEventListener('change',commit);
+seek.addEventListener('pointerup',()=>{if(dragging)commit()});
+seek.addEventListener('pointercancel',()=>{dragging=false;sync()});
+audio.addEventListener('loadedmetadata',refreshDuration);audio.addEventListener('durationchange',refreshDuration);audio.addEventListener('timeupdate',sync);audio.addEventListener('seeked',sync);
+audio.addEventListener('play',()=>{play.textContent='Ⅱ PAUSE';status.textContent='PLAYING'});audio.addEventListener('pause',()=>{play.textContent='▶ PLAY';status.textContent=audio.ended?'COMPLETE':'PAUSED'});audio.addEventListener('error',()=>{status.textContent='AUDIO FILE NOT FOUND';status.classList.add('error')});
+async function setupAnalysis(){if(connected||location.protocol==='file:')return;try{ctx=new (window.AudioContext||window.webkitAudioContext)();analyser=ctx.createAnalyser();analyser.fftSize=2048;analyser.smoothingTimeConstant=.76;const src=ctx.createMediaElementSource(audio);src.connect(analyser);analyser.connect(ctx.destination);connected=true}catch(e){console.warn('Audio analysis unavailable:',e);analyser=null}}
+async function toggle(){if(!audio.paused){audio.pause();return}try{await setupAnalysis();if(ctx&&ctx.state==='suspended')await ctx.resume();await audio.play()}catch(e){status.textContent='PLAYBACK ERROR: '+e.message;status.classList.add('error')}}
+play.addEventListener('click',toggle);document.getElementById('back').addEventListener('click',()=>{audio.currentTime=Math.max(0,audio.currentTime-10)});
+cc.addEventListener('click',()=>{showCC=!showCC;cc.textContent=showCC?'CC ON':'CC OFF';cc.setAttribute('aria-pressed',String(showCC));captions.style.visibility=showCC?'visible':'hidden';sync()});
+document.addEventListener('keydown',e=>{if(e.altKey||e.ctrlKey||e.metaKey||e.target.matches('input[type=text],textarea,select'))return;if(e.code==='Space'){e.preventDefault();toggle()}else if(e.code==='ArrowRight'&&e.target!==seek){e.preventDefault();audio.currentTime=Math.min(Number.isFinite(audio.duration)?audio.duration:Infinity,audio.currentTime+5)}else if(e.code==='ArrowLeft'&&e.target!==seek){e.preventDefault();audio.currentTime=Math.max(0,audio.currentTime-5)}});
+function stamp(s){const p=s.trim().replace(',','.').split(':').map(Number);return p.reduce((v,n)=>v*60+n,0)}
+async function loadVTT(){try{const r=await fetch('Why_Your_Chatbot_Isn_t_Conscious.vtt');if(!r.ok)throw Error('VTT not found');const v=(await r.text()).replace(/\r/g,'').replace(/^\uFEFF/,'');cues=[];for(const block of v.split(/\n\s*\n/)){const lines=block.split('\n'),i=lines.findIndex(x=>x.includes('-->'));if(i<0)continue;const m=lines[i].match(/(\d{2}:)?\d{2}:\d{2}[.,]\d{3}\s*-->\s*((\d{2}:)?\d{2}:\d{2}[.,]\d{3})/);if(!m)continue;const [start,end]=lines[i].split('-->').map(s=>stamp(s.trim().split(/\s+/)[0]));const text=lines.slice(i+1).join('\n').replace(/<[^>]*>/g,'').trim();if(text)cues.push({start,end,text})}sync()}catch(e){console.warn('Subtitles unavailable:',e);captions.textContent='Subtitles unavailable. Use a local web server for VTT loading.'}}
+loadVTT();
+const wave=document.getElementById('wave'),spectrum=document.getElementById('spectrum');const td=new Uint8Array(2048),fd=new Uint8Array(1024);
+function prep(canvas){const dpr=Math.min(devicePixelRatio||1,2),w=canvas.clientWidth,h=canvas.clientHeight;if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr)}const g=canvas.getContext('2d');g.setTransform(dpr,0,0,dpr,0,0);g.clearRect(0,0,w,h);return{g,w,h}}
+function draw(){const a=prep(wave),b=prep(spectrum);if(analyser){analyser.getByteTimeDomainData(td);analyser.getByteFrequencyData(fd)}else{td.fill(128);fd.fill(0)}const {g,w,h}=a;g.strokeStyle='#78e5c7';g.lineWidth=1.5;g.shadowBlur=8;g.shadowColor='#2f997d';g.beginPath();for(let x=0;x<w;x++){const i=Math.floor(x/Math.max(1,w-1)*(td.length-1)),y=h/2+(td[i]-128)/128*h*.4;if(x===0)g.moveTo(x,y);else g.lineTo(x,y)}g.stroke();const q=b.g,barCount=Math.max(16,Math.floor(b.w/7)),bw=b.w/barCount;for(let j=0;j<barCount;j++){const start=Math.floor(Math.pow(j/barCount,1.7)*(fd.length-1)),end=Math.max(start+1,Math.floor(Math.pow((j+1)/barCount,1.7)*fd.length));let v=0;for(let k=start;k<end;k++)v=Math.max(v,fd[k]);const bh=v/255*(b.h-38);q.fillStyle='rgba(106,227,190,.85)';q.fillRect(j*bw+1,b.h-bh,bw-2,bh)}requestAnimationFrame(draw)}draw();
+</script>
+</body></html>
+

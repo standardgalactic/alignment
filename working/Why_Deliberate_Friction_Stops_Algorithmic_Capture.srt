@@ -96,7 +96,7 @@ exactly and to you listening we are treating you as the third mind in the room w
 
 25
 00:02:24,980 --> 00:02:30,880
-this together and i think the best place we have to start is by examining what fliction calls the future agent
+this together and i think the best place we have to start is by examining what Flyxion calls the future agent
 
 26
 00:02:30,880 --> 00:02:36,920
@@ -132,7 +132,7 @@ our species that's the standard narrative it seems like the entire conversation 
 
 34
 00:03:18,840 --> 00:03:26,840
-that hypothetical future system but fliction's core thesis convergence before autonomy challenges that
+that hypothetical future system but Flyxion's core thesis convergence before autonomy challenges that
 
 35
 00:03:26,840 --> 00:03:33,520
@@ -140,7 +140,7 @@ timeline entirely doesn't it completely upends it the argument here is that we d
 
 36
 00:03:33,520 --> 00:03:41,220
-for a sentient autonomous ai to wake up for humanity to face systemic risks fliction proposes that the
+for a sentient autonomous ai to wake up for humanity to face systemic risks Flyxion proposes that the
 
 37
 00:03:41,220 --> 00:03:47,520
@@ -232,7 +232,7 @@ identified four primary instrumental drives self-preservation goal content integ
 
 59
 00:06:03,600 --> 00:06:11,920
-cognitive enhancement and resource acquisition okay the crucial paradigm shift that fliction emphasizes
+cognitive enhancement and resource acquisition okay the crucial paradigm shift that Flyxion emphasizes
 
 60
 00:06:11,920 --> 00:06:17,580
@@ -316,11 +316,11 @@ not at all it holds for any complex system that can be modeled as policy optimiz
 
 80
 00:08:23,280 --> 00:08:27,440
-and this is the real pivot point for affliction's entire first monograph
+and this is the real pivot point for Flyxion's entire first monograph
 
 81
 00:08:28,080 --> 00:08:34,800
-affliction introduces the concept of the socio-technical stack right yeah the stack this stack is not just software
+Flyxion introduces the concept of the socio-technical stack right yeah the stack this stack is not just software
 
 82
 00:08:34,800 --> 00:08:42,480
@@ -340,7 +340,7 @@ saying a multinational corporation integrated with algorithmic trading functions
 
 86
 00:09:03,520 --> 00:09:09,920
-model it's a fair question and fliction addresses that exact skepticism through a formal mathematical
+model it's a fair question and Flyxion addresses that exact skepticism through a formal mathematical
 
 87
 00:09:09,920 --> 00:09:16,320
@@ -416,11 +416,11 @@ context provides a remarkably clear roadmap for this optimization always reshape
 
 105
 00:11:13,600 --> 00:11:20,160
-always okay fliction outlines five specific historical examples where a technology optimized a local problem
+always okay Flyxion outlines five specific historical examples where a technology optimized a local problem
 
 106
 00:11:20,160 --> 00:11:26,160
-but in the process fundamentally rewired the structure of human society the first mechanism is what fliction
+but in the process fundamentally rewired the structure of human society the first mechanism is what Flyxion
 
 107
 00:11:26,160 --> 00:11:31,760
@@ -524,7 +524,7 @@ no governing body passed a law prohibiting the use of elaborate cursive handwrit
 
 132
 00:14:15,840 --> 00:14:22,240
-it's what fliction refers to as selection without prohibition selection without prohibition exactly
+it's what Flyxion refers to as selection without prohibition selection without prohibition exactly
 
 133
 00:14:22,240 --> 00:14:29,520
@@ -548,7 +548,7 @@ with it now the fourth mechanism feels incredibly relevant to the media landscap
 
 138
 00:14:54,640 --> 00:15:01,200
-dominance fliction uses the transition from radio to television radio was highly optimized for audio
+dominance Flyxion uses the transition from radio to television radio was highly optimized for audio
 
 139
 00:15:01,200 --> 00:15:07,360
@@ -576,7 +576,7 @@ infrastructure the advertising revenue and the talent all migrated inevitably to
 
 145
 00:15:41,360 --> 00:15:49,760
-this fifth mechanism epistemic convergence this one is particularly haunting fliction uses the historical case
+this fifth mechanism epistemic convergence this one is particularly haunting Flyxion uses the historical case
 
 146
 00:15:49,760 --> 00:15:56,160
@@ -620,7 +620,7 @@ findings regarding hydrogen were quote almost certainly not real right why would
 
 156
 00:16:57,200 --> 00:17:02,720
-science suppress scientific truth fliction explains this through the conflict between a system's
+science suppress scientific truth Flyxion explains this through the conflict between a system's
 
 157
 00:17:02,720 --> 00:17:09,760
@@ -640,7 +640,7 @@ moment was the maintenance of institutional stability the preservation of the re
 
 161
 00:17:28,080 --> 00:17:34,160
-senior figures and the management of what fliction calls the authority gradient so even though she
+senior figures and the management of what Flyxion calls the authority gradient so even though she
 
 162
 00:17:34,160 --> 00:17:40,640
@@ -672,7 +672,7 @@ empirical truth eventually wins out because physics is grounded in objective rea
 
 169
 00:18:16,880 --> 00:18:23,200
-eventually realized she was right and the scientific community corrected itself right but fliction uses this
+eventually realized she was right and the scientific community corrected itself right but Flyxion uses this
 
 170
 00:18:23,200 --> 00:18:29,920
@@ -880,7 +880,7 @@ deliberation is simply latency it's lag it is an unacceptable cost that delays t
 
 221
 00:24:02,880 --> 00:24:10,400
-scalar without adding any quantifiable value to the spreadsheet exactly and fliction utilizes two
+scalar without adding any quantifiable value to the spreadsheet exactly and Flyxion utilizes two
 
 222
 00:24:10,400 --> 00:24:16,640
@@ -984,7 +984,7 @@ mismatch between two vastly different operational speeds on one side of the equa
 
 247
 00:26:56,880 --> 00:27:04,000
-massive semantic density and raw processing speed of the ai system which fliction denotes as d subsists
+massive semantic density and raw processing speed of the ai system which Flyxion denotes as d subsists
 
 248
 00:27:04,000 --> 00:27:09,920
@@ -1032,7 +1032,7 @@ overwhelming capacity by sacrificing the very processing speed that constitutes 
 
 259
 00:28:16,160 --> 00:28:22,000
-advantage right however flixen identifies that this artificial slowing down manifests in three distinct
+advantage right however Flyxion identifies that this artificial slowing down manifests in three distinct
 
 260
 00:28:22,000 --> 00:28:27,760
@@ -1188,7 +1188,7 @@ it fundamentally alters how these socio-technical systems interrupt our daily li
 
 298
 00:32:43,040 --> 00:32:47,200
-Fliction's analysis of mobile notifications provides a perfect example of this
+Flyxion's analysis of mobile notifications provides a perfect example of this
 
 299
 00:32:47,200 --> 00:32:53,440
@@ -1204,7 +1204,7 @@ simply requesting a helpful ping when a friend interacts with our profile that's
 
 302
 00:33:04,160 --> 00:33:10,400
-right but Fliction models a notification as an attention certificate in economic terms it operates
+right but Flyxion models a notification as an attention certificate in economic terms it operates
 
 303
 00:33:10,400 --> 00:33:16,160
@@ -1292,7 +1292,7 @@ time from the machine to the human user it feels like agency to the underlying o
 
 324
 00:35:31,680 --> 00:35:37,600
-skip button serves as a highly valuable real-time behavioral signal it establishes what fliction
+skip button serves as a highly valuable real-time behavioral signal it establishes what Flyxion
 
 325
 00:35:37,600 --> 00:35:43,600
@@ -1372,7 +1372,7 @@ transitions us perfectly into section five this feels like the event horizon of 
 
 344
 00:37:41,600 --> 00:37:47,920
-what happens when the expiatory gap becomes completely unbridgeable fliction defines this upcoming paradigm
+what happens when the expiatory gap becomes completely unbridgeable Flyxion defines this upcoming paradigm
 
 345
 00:37:47,920 --> 00:37:54,800
@@ -1408,7 +1408,7 @@ time scales this temporal decoupling introduces a mathematical concept from sign
 
 353
 00:38:39,840 --> 00:38:46,800
-that fliction applies to institutional governance the nyquist containment inequality the nyquist containment
+that Flyxion applies to institutional governance the nyquist containment inequality the nyquist containment
 
 354
 00:38:46,800 --> 00:38:54,080
@@ -1432,7 +1432,7 @@ signal must be sampled to capture its information accurately without introducing
 
 359
 00:39:18,480 --> 00:39:25,040
-known as aliasing fliction scales this mathematical principle up to the level of civilizational governance
+known as aliasing Flyxion scales this mathematical principle up to the level of civilizational governance
 
 360
 00:39:25,760 --> 00:39:30,640
@@ -1480,7 +1480,7 @@ altered weeks prior that perfectly illustrates the concept of temporal asymmetry
 
 371
 00:40:37,520 --> 00:40:43,120
-governance required what affliction terms the spectacle runtime the spectacle runtime the spectacle runtime
+governance required what Flyxion terms the spectacle runtime the spectacle runtime the spectacle runtime
 
 372
 00:40:43,120 --> 00:40:50,000
@@ -1512,7 +1512,7 @@ the parallel is exact leahy argues that deploying increasingly capable agentic a
 
 379
 00:41:34,400 --> 00:41:41,600
-guaranteed containment is akin to spinning the cylinder on a loaded revolver translated into fliction's economic
+guaranteed containment is akin to spinning the cylinder on a loaded revolver translated into Flyxion's economic
 
 380
 00:41:41,600 --> 00:41:47,680
@@ -1540,7 +1540,7 @@ self-governance the administration of human affairs is entirely replaced by the 
 
 386
 00:42:20,880 --> 00:42:27,840
-things executed by things and affliction defines this endpoint as a single manifold collapse it describes a
+things executed by things and Flyxion defines this endpoint as a single manifold collapse it describes a
 
 387
 00:42:27,840 --> 00:42:34,240
@@ -1560,7 +1560,7 @@ swarming optimized algorithms and it operates at a temporal frequency we cannot 
 
 391
 00:42:58,560 --> 00:43:06,320
-away from this single manifold collapse this crisis of temporal asymmetry brings us to fliction's final remarkably
+away from this single manifold collapse this crisis of temporal asymmetry brings us to Flyxion's final remarkably
 
 392
 00:43:06,320 --> 00:43:13,680
@@ -1608,7 +1608,7 @@ mathematically calculated cannot be fully captured so we essentially have to rem
 
 403
 00:44:24,240 --> 00:44:30,640
-too deliberately inefficient to be successfully optimized exactly affliction operationalizes this philosophy
+too deliberately inefficient to be successfully optimized exactly Flyxion operationalizes this philosophy
 
 404
 00:44:30,640 --> 00:44:36,720
@@ -1624,7 +1624,7 @@ us to actively revalue latency not as a flaw but as a critical safety feature as
 
 407
 00:44:49,440 --> 00:44:56,240
-optimizer views like strictly as a cost to be eliminated but fliction posits that latency is the very temporal
+optimizer views like strictly as a cost to be eliminated but Flyxion posits that latency is the very temporal
 
 408
 00:44:56,240 --> 00:45:02,320
@@ -1692,7 +1692,7 @@ completely off the physical steering wheel of society absolutely that leads to t
 
 424
 00:46:40,400 --> 00:46:49,920
-human cognition symbolic heterogeneity fliction introduces two highly theoretical concepts here sphere pop and rsvp
+human cognition symbolic heterogeneity Flyxion introduces two highly theoretical concepts here sphere pop and rsvp
 
 425
 00:46:50,720 --> 00:46:56,160
@@ -1712,7 +1712,7 @@ human mind incompressible to these models we must evolve the actual formats we u
 
 429
 00:47:16,000 --> 00:47:23,680
-communicate fliction proposes shifting away from strictly linear text and developing spatial compositional
+communicate Flyxion proposes shifting away from strictly linear text and developing spatial compositional
 
 430
 00:47:23,680 --> 00:47:31,440
@@ -1836,7 +1836,7 @@ into luddism or nostalgia it is a highly calculated strategic defense mechanism 
 
 460
 00:50:36,800 --> 00:50:44,480
-what fliction identifies as low remote actuation bandwidth an algorithmic swarm operating in a cloud data center
+what Flyxion identifies as low remote actuation bandwidth an algorithmic swarm operating in a cloud data center
 
 461
 00:50:44,480 --> 00:50:52,320
@@ -1864,7 +1864,7 @@ technological regime that a centralized digital optimizer fundamentally cannot m
 
 467
 00:51:27,920 --> 00:51:34,640
-fliction also outlines a broader governance structure to manage these constraints termed a participatory simulation
+Flyxion also outlines a broader governance structure to manage these constraints termed a participatory simulation
 
 468
 00:51:34,640 --> 00:51:39,760
@@ -1872,7 +1872,7 @@ rather than abdicating the long-term trajectory of human civilization to a handf
 
 469
 00:51:39,760 --> 00:51:46,400
-executives and opaque algorithmic models fliction argues for transforming civilizational planning into a highly
+executives and opaque algorithmic models Flyxion argues for transforming civilizational planning into a highly
 
 470
 00:51:46,400 --> 00:51:53,200
