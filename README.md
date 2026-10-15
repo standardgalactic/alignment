@@ -2,6 +2,10 @@
 
 [Notes Left on a Shared Board](https://standardgalactic.github.io/alignment/notes-left-on-a-shared-board.pdf)
 
+* [How AI Agents Accidentally Hacked Hugging Face](https://standardgalactic.github.io/alignment/retro_lissajous.html) — *Audio Overview*
+
+![](notes-retro-infographic.png)
+
 [Neither Persons nor Patients](https://standardgalactic.github.io/alignment/neither_persons_nor_patients.pdf)
 
 * [Why Your Chatbot Isn't Conscious](https://standardgalactic.github.io/alignment/audio-visualizer.html) — *Audio Overview*
