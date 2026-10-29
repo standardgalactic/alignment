@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Retroscope · How AI Agents Sway Human Judgment</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;background:#080d0b;color:#a4f3b4;font:14px 'Courier New',monospace}.shell{max-width:1180px;margin:24px auto;padding:22px;border:3px solid #323d34;border-radius:28px;background:linear-gradient(135deg,#242b27,#0d1511 70%);box-shadow:0 20px 80px #000}header{display:flex;justify-content:space-between;gap:16px;align-items:center;letter-spacing:.12em}.brand{font-size:18px;font-weight:bold}.title{color:#a0b9a6;text-align:right}.screen{position:relative;margin-top:17px;overflow:hidden;border:15px solid #151f18;border-radius:38px;background:#001609;box-shadow:inset 0 0 45px #000,0 0 0 2px #4c5b4b;aspect-ratio:16/9}canvas{width:100%;height:100%;display:block}.screen:after{content:'';position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,#0000 0,#0000 3px,#0005 4px);opacity:.35}.sub{position:absolute;bottom:28px;left:7%;width:86%;text-align:center;color:#dcffe1;font:clamp(15px,2vw,25px)/1.45 'Courier New',monospace;text-shadow:0 2px 8px #000,0 0 12px #51ff85;white-space:pre-wrap}.controls{display:flex;gap:16px;align-items:center;margin-top:20px}button{cursor:pointer;background:#162a1d;border:1px solid #426b4a;color:#c4ffcc;padding:10px 16px;border-radius:4px;font:inherit;min-width:100px}button:hover{background:#284c30}button:focus-visible,input:focus-visible{outline:2px solid #c4ffcc;outline-offset:4px}input{flex:1;min-width:40px;accent-color:#88fba3}.time{font-size:12px;white-space:nowrap}.status{margin:12px 0 0;color:#a3b9a7;font-size:12px}.status:empty{display:none}@media(max-width:750px){.shell{margin:0;padding:10px;border-radius:0}header{align-items:flex-start}.brand{font-size:14px}.title{font-size:11px;max-width:55%}.screen{border-width:7px;border-radius:19px;aspect-ratio:4/3}.sub{bottom:15px}.controls{gap:10px;flex-wrap:wrap}.time{font-size:11px}}
+</style>
+</head>
+<body>
+<main class="shell">
+<header><span class="brand">RETROSCOPE</span><span class="title">How AI Agents Sway Human Judgment</span></header>
+<div class="screen"><canvas id="scope" aria-hidden="true"></canvas><div class="sub" id="subtitle" aria-live="off"></div></div>
+<div class="controls"><button id="play" type="button">PLAY</button><input id="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Playback position" disabled><span class="time" id="clock">00:00 / 00:00</span></div>
+<p class="status" id="status" role="status"></p>
+<audio id="audio" preload="metadata" src="How_AI_Agents_Sway_Human_Judgment.mp3"><track id="captions" kind="subtitles" src="How_AI_Agents_Sway_Human_Judgment.vtt" srclang="en" label="English" default></audio>
+</main>
+<script>
+'use strict';
+const audio=document.getElementById('audio'),canvas=document.getElementById('scope'),ctx=canvas.getContext('2d'),play=document.getElementById('play'),seek=document.getElementById('seek'),clock=document.getElementById('clock'),subtitle=document.getElementById('subtitle'),status=document.getElementById('status'),captions=document.getElementById('captions');
+let ac,analyser,w=0,h=0;
+const samples=new Float32Array(2048),delays=[13,29,47],colors=['#81ffa2','#64d88b','#4cae70'];
+function resize(){const r=canvas.getBoundingClientRect(),d=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*d);canvas.height=Math.round(r.height*d);ctx.setTransform(d,0,0,d,0,0);w=r.width;h=r.height;ctx.fillStyle='#001107';ctx.fillRect(0,0,w,h)}
+new ResizeObserver(resize).observe(canvas);
+function setup(){if(ac)return;ac=new(window.AudioContext||window.webkitAudioContext)();const source=ac.createMediaElementSource(audio);analyser=ac.createAnalyser();analyser.fftSize=samples.length;source.connect(analyser);analyser.connect(ac.destination)}
+play.addEventListener('click',async()=>{if(!audio.paused){audio.pause();return}try{setup();await ac.resume();await audio.play()}catch(error){status.textContent='Unable to play audio: '+error.message}});
+audio.addEventListener('play',()=>{play.textContent='PAUSE'});
+audio.addEventListener('pause',()=>{play.textContent='PLAY'});
+audio.addEventListener('error',()=>{status.textContent='Could not load How_AI_Agents_Sway_Human_Judgment.mp3.'});
+function fmt(t){return Number.isFinite(t)?String(Math.floor(t/60)).padStart(2,'0')+':'+String(Math.floor(t%60)).padStart(2,'0'):'00:00'}
+function update(){const t=audio.currentTime,d=audio.duration;clock.textContent=fmt(t)+' / '+fmt(d);seek.disabled=!(Number.isFinite(d)&&d>0);if(!seek.disabled)seek.value=t/d*1000}
+audio.addEventListener('loadedmetadata',update);audio.addEventListener('durationchange',update);audio.addEventListener('timeupdate',update);audio.addEventListener('ended',update);
+seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration)&&audio.duration>0){audio.currentTime=seek.value/1000*audio.duration;update()}});
+captions.track.mode='hidden';
+captions.track.addEventListener('cuechange',()=>{subtitle.textContent=Array.from(captions.track.activeCues||[],cue=>cue.getCueAsHTML().textContent).join('\n')});
+captions.addEventListener('error',()=>{status.textContent='Could not load How_AI_Agents_Sway_Human_Judgment.vtt.'});
+let previous=0;
+function draw(now){requestAnimationFrame(draw);if(!w||!h)return;const dt=previous?Math.min(now-previous,100):16.67;previous=now;ctx.fillStyle=`rgba(0,17,7,${1-Math.pow(.77,dt/16.67)})`;ctx.fillRect(0,0,w,h);const cx=w/2,cy=h/2,extent=Math.min(w,h)*.43;ctx.lineWidth=1;ctx.strokeStyle='rgba(52,120,67,.2)';ctx.beginPath();for(let x=cx%40;x<w;x+=40){ctx.moveTo(x,0);ctx.lineTo(x,h)}for(let y=cy%40;y<h;y+=40){ctx.moveTo(0,y);ctx.lineTo(w,y)}ctx.stroke();
+if(analyser&&!audio.paused)analyser.getFloatTimeDomainData(samples);else samples.fill(0);
+for(let k=0;k<delays.length;k++){ctx.beginPath();for(let i=0;i<samples.length;i+=2){const x=cx+Math.max(-extent,Math.min(extent,samples[i]*extent*1.7)),y=cy-Math.max(-extent,Math.min(extent,samples[(i+delays[k])%samples.length]*extent*1.7));if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)}ctx.strokeStyle=colors[k];ctx.lineWidth=1.1;ctx.shadowColor=colors[k];ctx.shadowBlur=15;ctx.stroke()}ctx.shadowBlur=0;ctx.fillStyle='#81ffa2';ctx.fillRect(cx-.7,cy-.7,1.4,1.4)}
+requestAnimationFrame(draw);
+</script>
+</body>
+</html>
+

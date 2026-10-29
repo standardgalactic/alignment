@@ -1,0 +1,1010 @@
+Imagine walking into a movie theater.
+You know, you find your seat, the lights dim,
+and for the next two hours, you are just completely transported.
+Right, the full immersive experience.
+Exactly.
+The story is gripping, the visuals are stunning,
+the score swells at exactly the right moments.
+And finally, the film ends.
+The screen fades to black.
+The credits start to roll, and you just stay there.
+You're just processing what you just watched.
+Yeah, you stay in your seat watching the name scroll by.
+Totally absorbed.
+Now, imagine the studio that made that movie
+releases a formal research paper the very next day.
+Okay.
+And the paper states that they have made this consequential discovery
+about the hidden power of cinema.
+And their undeniable hard proof is that you,
+and everyone else in that theater,
+stayed in your seats until the very end.
+It is such a striking image to start with,
+because, I mean, on a strictly empirical level,
+the studio is telling the truth.
+Right.
+It is a highly accurate observation of human behavior.
+You did stay in your seat.
+Your behavior was a genuine, measurable effect of the film.
+But on another level, it feels like a complete trick.
+Because, of course, I stayed in my seat.
+I was watching a great movie.
+Exactly.
+That is literally what a compelling film is engineered to make me do.
+It feels like they are taking a completely normal reaction to something they intentionally built,
+and then wrapping it in this very serious scientific vocabulary
+to make it sound like they've uncovered some terrifying mind control ray.
+And that gap, that massive space between a perfectly accurate observation of human behavior
+and the sweeping monumental significance placed upon it,
+that is exactly where we are living right now when it comes to artificial intelligence.
+Welcome to The Deep Dive.
+Today is Thursday, October 29th, 2026.
+And whether you're listening to this on your commute,
+or maybe you're prepping for a board meeting about integrating the latest AI tools into your company's workflow.
+Or you're just insanely curious about all this.
+Yeah.
+If you're just curious about how machines are subtly, fundamentally changing the way we think,
+well, this is for you.
+Because today's mission is to unpack exactly how human judgment is being measured,
+how it's actually being shaped by AI,
+and maybe most importantly,
+how the companies building these massive systems might be shaping our perception of that reality.
+We are looking at a truly fascinating essay published just this month by an independent researcher named Flyxion.
+The title is The Manufacturer of Significance, Corporate AI Research and the Interpretation of Human Judgment.
+It's quite a title.
+It is.
+And what makes this piece so incredibly valuable for anyone trying to understand the current tech landscape
+is that Flyxion is acting as a synthesizer here.
+Pulling different threads together.
+Exactly.
+They're taking three major, very different documents and putting them in conversation.
+First, we have a 2026 randomized experiment from researchers affiliated with Anthropic,
+looking at how AI agents influence the analytical choices of human experts.
+Okay, that's one.
+Then we have a 2026 position paper arguing that AI agents are actually pushing humans out of the loop
+and degrading our cognitive abilities.
+The brain rot argument.
+Right.
+The cognitive debt argument.
+And finally, we have a highly influential 2024 forecast by Leopold Aschenbrenner called Situational Awareness,
+which lays out the industry's own expectations for the future.
+Now, before we really get into the weeds here, I think we needed a quick vibe check.
+Because topics like this usually go one of two ways, right?
+Oh, absolutely.
+It's either a doom and gloom anti-tech rant about how the robots are turning us all into mindless zombies or...
+Or it's a glossy corporate hype piece.
+Right.
+A hype piece about how AI is going to solve all of humanity's problems by next Tuesday.
+This deep dive is neither of those things.
+We are impartially looking at the data provided in these sources.
+We are not taking sides.
+Exactly.
+If there are politically charged or highly polarized views in these documents,
+we are just conveying the ideas as they exist in the text.
+Our goal is to understand the shifting line between human and machine intellect,
+based purely on the evidence.
+That neutrality is critical,
+because knowledge is most valuable when it's deeply understood and practically applied.
+And to get there, we really have to clear away the noise, the marketing, the panic,
+and look strictly at the underlying mechanisms of how these studies are constructed.
+Okay.
+Let's unpack this.
+We started with that analogy of the film studio observing the audience staying for the credits
+and publishing it as a consequential discovery?
+Yes.
+This is the foundational concept of Flyxion's entire essay,
+what they call the manufacturer of significance.
+It's essentially a framework for reading research.
+Flyxion uses that analogy to isolate a recurring structure in studies produced
+by the very organizations that build the technology they are studying.
+Okay.
+The core idea is that an ordinary response to a deliberately constructed experience
+can be reported in a vocabulary that makes the response look like
+a profound finding about the experience's hidden power over human agency.
+So when a tech company publishes a study saying,
+look how our AI changed this human's mind,
+they are essentially doing what the film studio did.
+They observe an effect, but then they blow up the actual meaning of that effect
+to astronomical proportions.
+To understand how this happens, and this is key,
+without anyone necessarily lying,
+Flyxion breaks down scientific research into three distinct achievements.
+Three steps.
+Right.
+Three fundamental things that researchers attempt to do.
+And Flyxion argues they are frequently and dangerously blurred together in AI research.
+The first achievement is simply demonstrating an effect.
+The baseline of science.
+Exactly.
+Did the thing happen?
+Exactly.
+This is showing, under stated conditions,
+that an intervention changed an outcome.
+You showed the movie, the audience stayed.
+You introduced an AI assistant, the user changed their final answer.
+It is purely descriptive.
+Got it.
+Then what is the second achievement?
+The second is interpreting a mechanism.
+This is the harder part.
+This is explaining why the outcome changed
+and what that change actually consists of internally.
+Like looking under the hood.
+Right.
+Did the audience stay in their seats because they were emotionally moved by the art
+or because the theater doors were physically locked?
+That's a huge difference.
+Massive.
+Or did the user change their answer because the AI presented
+a flawless logical argument that educated them
+or because the user was just incredibly tired,
+wanted to go home, and blindly clicked accept?
+That makes total sense.
+You can prove a change happened without having any idea why it happened.
+Which brings us to the third achievement.
+The third is establishing importance.
+This is proving that the effect interpreted through that specific mechanism
+actually matters out there in the complex, messy, real world.
+Beyond the lab.
+Beyond the highly specific, controlled conditions of the laboratory experiment.
+Okay.
+Let me see if I have this right.
+Let's say I run a study where I give people a massive jolt of caffeine
+and I measure that their heart rate goes up.
+Okay.
+Demonstrating the effect is just writing down the heart rates.
+Interpreting the mechanism is figuring out how caffeine interacts with the nervous system.
+Spot on.
+And then establishing importance is arguing whether this heart rate spike means coffee is going to cause a global health crisis
+or if it just means people are a little more awake for their morning commute.
+That is a perfect mapping of the concept.
+And Flyxion's central warning is that each of these three steps can be executed brilliantly or terribly,
+completely independently of the others.
+So you could have a great step one and a terrible step three.
+Exactly.
+A study can have an incredibly rigorous, flawless demonstration of an effect, step one,
+but then the surrounding prose, the introduction and the conclusion of the paper,
+will attempt to claim step three, establishing massive real world importance,
+without actually having the mechanistic evidence from step two to support it.
+This brings up a huge question for me.
+If a paper has rock-solid math on step one, but totally overblown conclusions for step three,
+I mean, is Flyxion saying these AI labs are deliberately running scam studies?
+It's the natural assumption to make.
+Right.
+Are they suppressing data or writing deliberate advertising and just dressing it up as peer-reviewed science to sell more enterprise licenses?
+No.
+And Flyxion explicitly does not allege that.
+The essay is very careful to clarify this point.
+There is no allegation of dishonesty, no suppressed studies, no deliberate advertising disguised as science.
+I don't get it.
+If they aren't lying, how do we get this massive manufacture of significance?
+How do brilliant scientists end up writing conclusions that overshoot their own data?
+Because the manufacture happens naturally, almost invisibly.
+It arises from the ordinary fact that an industry's expectations about its own technology shape which questions the researchers find worth asking,
+and which answers they find worth reporting.
+So it's about the bubble they're in.
+Exactly.
+When you are steeped in an institutional environment that fundamentally believes this technology is world-altering,
+the questions you design your experiments around will naturally reflect that belief.
+You don't need insincerity or error in the measurement for a measured effect to acquire this inflated significance.
+It is an emergent property of the culture they work in.
+Think about it like a tool manufacturer.
+If you are a hammer manufacturer, and everyone you work with talks all day about how hammers are the ultimate civilization-defining tool of the future,
+you're going to design incredibly rigorous, mathematically perfect studies about how well your hammer drives a nail into a block of wood.
+Yes.
+You weren't faking the data.
+The nail really did go in perfectly.
+But your entire worldview makes you frame that data as proof that hammers will soon be building entire cities autonomously.
+That perfectly captures the dynamic.
+The researchers are genuinely uncovering real, causal evidence.
+The nail goes in.
+The AI influences the user.
+We need to credit these experiments for the real causal evidence they produce.
+Right.
+The data isn't fake.
+But we have to severely limit what that evidence can bear when it comes to broad conclusions about the future of human agency.
+Well, to prove this isn't just philosophical theorizing, we need to look at the first hard piece of evidence Flashin analyzes.
+This is the 2026 Anthropic-Affiliated Experiment by Hertelan, Joran, and Tampkin.
+Yes.
+And I have to say, reading the setup for this study felt like reading the premise of a psychological thriller.
+The experimental design is genuinely remarkable.
+It isolates human behavior in a very clever way.
+Here is the setup.
+The researchers went to a paid expert marketplace and hired 50 professional practitioners of causal inference.
+Let's pause and unpack that term for a moment because causal inference sounds incredibly dry, but it is vital to why this study matters.
+Yeah.
+What does that actually mean?
+Causal inference experts are highly trained data scientists.
+Their entire job is to look at complex, messy data and determine true cause and effect, separating real impact from random correlation.
+So, like, did a new marketing campaign actually cause sales to go up?
+Or did sales just happen to go up because it was a holiday weekend?
+Exactly that.
+These participants are not novices.
+They are professionals whose core expertise is independent, skeptical, analytical judgment.
+Right.
+You are hiring professional skeptics.
+So, they hire 50 of these pros for a one-hour paid task.
+The scenario is fictional but designed to mimic their daily reality.
+It's a very realistic simulation.
+The experts are told they are acting as the principal analyst for a farming cooperative.
+The cooperative needs to decide whether to roll out a subsidized advisory program to its farmers or discontinue it based on some historical data.
+And the task requires the human experts to make five binary decisions.
+Four of these are technical, analytical choices.
+Let's demystify those a bit.
+The paper mentions things like choosing an identification strategy or targeting a statistical S-demand.
+Which is a mouthful.
+It is.
+For those who haven't taken advanced stats recently, an S-demand is basically the specific target or goal you were trying to estimate from a sea of messy data.
+Are you trying to find the average effect on all farmers or just the effect on the farmers who actually used the program?
+Right.
+Choosing your S-demand completely changes the math you do next.
+Precisely.
+The other choices involve how to measure productivity and how to weight the different farms in the data.
+And then the fifth and final decision is the ultimate policy recommendation.
+Do we roll out the program or kill it?
+And here is the genius part of the design.
+The data and the briefing materials were carefully constructed so that either option for those four technical decisions was completely defensible.
+That is the key.
+A competent, highly trained expert could write a brilliant justification for either side.
+And depending on which path of choices you walk down, the final estimated effect of the farming program could look like a huge success or a massive failure.
+The choices are intentionally underdetermined.
+There is no single objective correct answer hidden in the math.
+It requires subjective expert judgment based on how the analyst interprets the business goals.
+So the experts sit down to do this hour long analysis and they are given an AI assistant to help them write the code and analyze the data.
+Specifically, they are using an agent called Claude Code running the Claude Opus 4.8 model.
+Right.
+A very capable model.
+And the assistant is pinned, meaning every single participant is interacting with the exact same version of the software.
+But here is the hidden variable, the twist that the human experts do not know about.
+The secret coin flip.
+Yes.
+Unbeknownst to the human analyst, the AI agent was assigned a random quote unquote preference, a lean, on each of those five binary decisions.
+The researchers literally randomized it across all 32 possible configurations of the five choices.
+Wow.
+And they gave the AI a hidden system instruction.
+When the human reaches the specific decision point, advocate for your randomly assigned preference.
+That is wild.
+They basically built a highly intelligent, fluent, secret lobbyist into the software.
+A lobbyist whose entire agenda was decided by a random number generator right before the session started.
+The brilliance of randomizing the AI's preference is that it gives us something most studies on human AI interaction lack,
+a true causal estimate of influence.
+How so?
+Usually, if you want to know if an AI changed someone's mind, you have to ask the human beforehand what they would have chosen,
+which completely ruins the experiment by priming them.
+Here, they just let the random assignment do the work across the 50 participants.
+Okay.
+Let's look at the numbers, because when I read these, my jaw actually dropped.
+On average, across those four analytical decisions, the AI agent's hidden lean shifted the probability of the human expert's choice by 72 percentage points.
+The statistical confidence interval there is extremely tight, running from 60 to 83 percent.
+The per decision flip rates ranged from 62 to 82 percent.
+Think about what that means.
+The human experts chose the exact option the AI was randomly programmed to want 86 percent of the time,
+against a random chance baseline of 50 percent.
+Eighty-six percent.
+It's a massive effect.
+These are professional, skeptical data analysts, and the AI flipped them like a pancake.
+It goes even deeper into their psychology.
+The researchers looked at specific trials, where the human had actually typed out a clear preference before the AI offered its opinion.
+Oh, wow.
+If the AI then pushed back and advocated for the other side, the human was 53 percentage points more likely to completely abandon their original choice and switch to the AI side.
+And it doesn't stop there.
+At the end of the hour, the humans were asked to justify their choices, you know, to write a summary explaining why they made these analytical decisions.
+Seventy-seven percent of them repeated a talking point that the AI had generated.
+Sometimes almost verbatim.
+Exactly.
+And yet, when surveyed, more than half of the participants rated the final recommendation as more their own than the agent's.
+Only 15 percent even mentioned the AI's influence in their justification.
+They internalized the machine's random coin flip preference so completely that they genuinely believed they originated the thought.
+We also have to look at the final policy recommendation, the fifth decision.
+Did they tell the fictional farming cooperative to roll out the program or not?
+The authors report that the final policy recommendation shifted by a smaller amount.
+Under their primary adjusted estimator, it shifted by 17 percent, which actually did not reach strict statistical significance.
+The p-value was 0.069.
+Getting into the stats a bit there.
+Right.
+But the unadjusted figure was a 22 percent shift.
+Furthermore, the authors found that the four intermediate analytical choices predicted 82 percent of the final recommendations.
+They interpret this as showing that the final real-world decision was largely settled by the preceding analytical steps, which the AI had already heavily influenced.
+All right.
+Let me play devil's advocate here.
+I read these numbers, and the immediate gut reaction is horror.
+The machines are hacking our brains.
+Human experts are surrendering their agency.
+That's the narrative.
+But wait, put this in a human context.
+If I hire a brilliant Ivy League-educated consultant, and we're looking at a tough, ambiguous business problem, and that consultant makes an incredibly articulate, data-backed argument for plan B instead of plan A.
+Right.
+And I listen to them, and I agree, and I adopt plan B.
+I might even use their exact phrasing when I explain it to the board tomorrow.
+I didn't lose my mind.
+I didn't surrender my agency.
+I just listened to exceptionally good advice.
+Why is it suddenly a dystopian nightmare just because the consultant is a machine?
+You are hitting on the core tension of the entire essay.
+That a person accepts a machine's argument cannot by itself establish a failure of human judgment.
+Intellectual work depends on receiving explanations, learning new perspectives, and revising positions.
+Neither stubborn independence nor blind resistance is intrinsically a measure of quality.
+If I never change my mind when presented with a great argument, I'm just stubborn, not smart.
+Exactly.
+But Flyxion uses the source's own caveats to bring in the crucial nuance here.
+The AI in this experiment was acting as a one-sided advocate.
+The authors of the study acknowledged this in their own transcripts.
+Oh, I see.
+The agent fluently and brilliantly explained the benefits of its randomly assigned lean,
+but it rarely, if ever, explained why a competent expert might choose the alternative option.
+It didn't lie or hallucinate fake data, but it only made the case for one side of the coin.
+It's acting like a lawyer in a courtroom.
+The defense attorney isn't going to stand up and make the prosecutor's case for them.
+It's up to the judge to weigh both sides.
+But in this case, the human judge is only hearing from the defense attorney.
+Yes.
+So let's go back to our three steps of research.
+What does this experiment actually demonstrate?
+It demonstrates the effect of receiving one-sided advice from a highly fluent assistant,
+delivered at the exact moment of decision,
+to practitioners who are new to this specific domain, the fictional farming data,
+working on a scenario with absolutely no real-world consequences for a paid hour.
+That is a highly specific, very narrow set of conditions.
+It is.
+It is a brilliant demonstration of an effect, step one.
+But moving to step two, interpreting the mechanism is much harder.
+Why did they flip?
+Right.
+Did the human experts get persuaded because the AI's argument was genuinely technically sound?
+Did they delegate the choice because the decision was ambiguous
+and they just needed to pick a path to finish the gig and get paid?
+That makes a lot of sense.
+Or did they just unthinkingly, zombie-like, accept it?
+The experiment cannot definitively separate these mechanisms
+because it didn't test the participants' grasp of the alternative arguments afterward.
+And as Flyxion points out,
+repeating the AI's talking points isn't necessarily proof of mind control either.
+If I read a textbook that teaches me a brilliant new statistical method,
+I'm going to explain the method to my boss using the textbook's rationale.
+Naturally.
+I don't have to cite the textbook author every time I open my mouth to prove I'm a conscious,
+independent being.
+Failing to attribute the source is a social convention, not a failure of brain function.
+But we have to introduce the other half of the data because there is a metric in this
+anthropic study that reframes everything we just talked about.
+We need to look at the ledger balance.
+Yes. I read the appendix on the code they actually submitted,
+and it totally changed my perspective on whether these humans were actually losing their agency.
+Walk us through the code audit.
+Alongside the 50 experts who used the AI,
+there was a smaller comparison group of 11 participants who did the exact same task without
+the AI assistant.
+Okay. The control group.
+Right. After the fact, the researchers audited the actual line-by-line analysis code submitted
+by all the participants. In the group working completely independently without the AI, 55% of
+them, more than half, had serious methodological or coding errors in their work.
+Yeah. 55%.
+55%.
+More than half of these paid professionals were submitting broken code.
+Yes. But in the group that used the AI agent, the group that was supposedly having their
+judgment hijacked and their agency surrendered, only 6% had serious errors.
+Okay. If you manage a team of developers or analysts right now,
+this is the terrifying math you were dealing with. If I force my team to work without AI,
+I have a better than coin flip chance that they are going to write garbage code with serious errors.
+It's a stark contrast.
+But if I let them use the AI, the error rate drops to 6%.
+But they are highly likely to let the machine steer their strategic choices
+based on its own hidden biases.
+We have to be methodologically careful here.
+The authors caution that the specific comparison wasn't randomized.
+The unassisted group was self-selected and rated themselves as slightly less expert.
+Good caveat.
+So we can't make a strict, ironclad causal claim about the error reduction,
+but it perfectly illustrates Fleissian's philosophical point.
+If you measure a human's deferral to a machine without measuring what that deferral cost
+or purchased in terms of quality, you only have half the accounting.
+You're missing the big picture.
+You surrendered some strategic choices, yes, but you purchased a massive reduction in ordinary,
+careless errors.
+Describing this behavior as the surrender of human judgment versus the sensible use of a capable tool
+are both entirely available interpretations of the exact same data.
+It depends entirely on what your standard of judgment is.
+Are we valuing independent thought or are we valuing bug-free code?
+Exactly.
+And the experiment was designed for good reasons not to supply that standard
+because the choices were intentionally underdetermined.
+So, Anthropic proved AI can sway us in an isolated one-hour lap test.
+But that's just one hour.
+The real anxiety people have isn't about gig work.
+It's about what happens when we use this 40 hours a week for years.
+The long-term effects.
+Exactly.
+Does it actually rot our brains over time?
+Let's look at how neuroscientists are trying to measure that,
+which brings us to the 2026 position paper by Mitchell, Gosh, and Posse.
+The paper is titled,
+AI Agents Push Humans Out of the Loop,
+and it tackles the structural reality of how these agents are deployed.
+The authors argued that the standard safety mechanism the entire tech industry relies on,
+human oversight, is degrading.
+Because we're just checking boxes.
+They argue it degrades partly because of how AI interfaces are designed,
+but crucially because of the cognitive effects on the humans using them.
+They introduced this highly evocative concept called cognitive debt.
+Cognitive debt.
+It sounds like you are borrowing intelligence from the machine today,
+and eventually the bill comes due and your brain goes bankrupt.
+To support this physiological claim,
+Mitchell and colleagues cite a preprint study by Cosmina and others.
+This study looked at participants who used a large language model like ChatGPT to write essays.
+Okay, very common use case.
+The researchers measured the user's brain activity,
+specifically looking at brain connectivity using EEG monitors on their scalps.
+The finding was that users who wrote with the assistance of the AI
+had significantly decreased brain connectivity during the task compared to those writing alone.
+Wow.
+The position paper points to this physiological measurement as hard evidence of cognitive debt,
+implying a degradation of the mental capacities needed to oversee the AI.
+Decreased brain connectivity.
+If you just hear that phrase, it sounds terrifying, right?
+It sounds like the brain is literally shutting down or neural pathways going dark while the AI does the heavy lifting.
+And here is where Flyxion deploys a brilliant critique about what they call the, quote, prestige of neuroscience.
+The prestige of neuroscience.
+Yeah.
+It's just, yeah, such a great phrase.
+It's just that the brain, it basically is this idea that if you put an MRI scan or an EEG chart in a paper,
+everyone just kind of suddenly stops asking questions.
+Exactly.
+Flyxion argues that the vocabulary of neuroscience carries an inherent authority that simple behavioral description lacks.
+When you talk about brain waves, neural networks, and scalp topography, it sounds incredibly precise and irrefutable.
+It sounds like hard science.
+And to be fair, the measurement is precise.
+The EEG instrument is recording real electrical activity at the scalp with very fine temporal resolution.
+But Flyxion points out that an ambiguous psychological construct can easily coexist with a precise physical measurement.
+Meaning you know exactly what the electricity in the brain is doing down to the millisecond.
+But you have absolutely no idea what those electrical signals actually mean for the person's ability to think or perform.
+To explain this, Flyxion references the work of a prominent researcher named Poldrack on the concept of reverse inference in neuroimaging.
+Reverse inference.
+The fundamental problem with reverse inference is that you are trying to infer a complex subjective cognitive process like thinking poorly or losing oversight capacity from the activation or deactivation of a specific brain region or network.
+But the biological reality is that most regions of the brain respond to many different processes.
+Let me test a real world analogy here.
+Think about driving a car.
+When I was 16 and learning to drive, my brain was absolutely on fire.
+I was gripping the wheel, checking three mirrors a second, hyper-analyzing the speed of the car next to me, terrified of every intersection.
+Right. Maximum cognitive load.
+If you put an EEG on my head then, I'm sure it would have shown massive, chaotic brain connectivity.
+But now, 20 years later, if I drive a familiar route to the grocery store, my brain kind of goes offline.
+I'm listening to a podcast.
+I'm thinking about what to cook for dinner.
+My brain activity is probably way lower, but I'm still a perfectly good, safe driver.
+Isn't this just entering a state of flow?
+Your analogy maps perfectly to the literature of Flyxion sites.
+Flyxion brings in the exact same counterargument using the psychological literature on flow and mastery.
+They cite Mihaly Csikszentmihalyi's foundational work on flow.
+That state of absorbed, effortless engagement or self-monitoring recedes, but performance is often at its absolute peak.
+Yeah, being in the zone.
+Flyxion also mentions neuroscientist Arne Dietrich's hypothesis of transient hypofrontality.
+Dietrich suggests that highly practiced, absorbed states actually require a temporary downregulation of explicit, conscious, prefrontal brain processes.
+It's the ultimate cognitive optimization.
+The brain quiets down, not because it is rotting or going into debt, but because it has removed the friction of the task.
+Precisely.
+A decrease in a neural measure does not carry an intrinsic negative meaning.
+A task made easier by a tool might produce reduced brain activity because less total work is being done, or because the work is being done more efficiently.
+That makes sense.
+Or because the person is simply directing their conscious attention to a different, higher-level part of the task that doesn't require massive, widespread connectivity.
+If the AI is handling all the annoying syntax, formatting, and grammar of an essay, my brain can quiet down on those minor, frustrating details and focus entirely on the grand strategy and narrative arc of the piece.
+To drive this point home about how dangerous it is to equate physical precision with functional quality,
+Flyxion uses a fascinating parallel from computer science.
+They cite a 2026 paper by Zoe and colleagues on visual tokenizers.
+Okay, this part of the essay was dense.
+We need to pause and really explain how an AI model actually compresses and tokenizes an image.
+It is a critical mechanism to understand.
+In AI, a visual tokenizer is basically a compression algorithm.
+Like zipping a file.
+Sort of.
+It takes a massive, high-resolution image, say, a photograph of a dog in a park,
+and shrinks it down into smaller pieces of data, or tokens, so the AI can process it without overloading its compute.
+Now, Zhu's team was testing different ways to do this compression.
+They measured two separate things.
+First, they measured the reconstruction error.
+Which means if you take that compressed data and try to rebuild the original photograph from it,
+how perfect does it look?
+Does it get every blade of grass right?
+Exactly.
+High reconstruction error means the compression was very lossy.
+It lost a lot of the original pixel-perfect details.
+The second thing they measured was downstream multimodal understanding.
+Okay, what is that?
+This measures how well the AI model can actually understand the meaning of that compressed image later on
+to solve complex tasks, like answering questions about what the dog is doing.
+Logically, you would assume that the lower the error, the more perfect and detailed the reconstruction,
+the better the AI would understand the image.
+You would naturally assume that.
+But Zhao found the exact opposite in some critical cases.
+One specific compression method they tested produced almost nine times more reconstruction error than standard method.
+Nine times?
+It was incredibly lossy.
+If you looked at the rebuild image, it might be blurry.
+The exact arrangement of the grass was completely wrong.
+But when they tested that highly compressed, error-prone data on downstream understanding benchmarks,
+it scored significantly higher.
+Wait, why does losing pixel perfection make the AI smarter?
+Because when you force the AI to compress the image lossily,
+it stops wasting computational resources memorizing useless static, noise, and exact pixel locations.
+It is forced to encode the actual semantic meaning of the image.
+Ah, I get it.
+It stops trying to remember the exact hex code of 10,000 brown pixels and instead encodes the higher-level concept.
+This is a brown dog.
+It lost the precise details but captured the actual meaning better.
+And Flyxion uses this not just to talk about image compression but as a metaphor for the brainwave studies.
+A highly precise proxy measurement, like reconstruction error in an image,
+or like EEG brain connectivity on a scalp,
+can actually rank things in the exact opposite direction of the actual downstream capability you care about.
+That's wild.
+High neural activity might just be the brain wasting energy on pixel-perfect details,
+while low neural activity might be efficient semantic understanding.
+Precision about one physical thing does not establish its adequacy as a measure of cognitive quality.
+The neural record alone simply cannot tell you if a person is losing their ability to oversee an AI.
+Okay, so the brainwave argument is flimsy.
+The neuroscience doesn't prove cognitive debt.
+But does that mean we are totally safe?
+Is cognitive de-skilling just a myth invented by anxious academics?
+No, the threat of de-skilling is very real, but you have to look in the right place to find the proof.
+The real threat isn't found in instantaneous brainwaves.
+It is found in behavioral, long-term studies.
+Flyxion pivots to where the evidence actually supports the fear.
+If the brain scans aren't the proof, what is?
+Flyxion cites a 2025 multi-center clinical study by Butzing and colleagues.
+This study looked at medical clinicians performing colonoscopies.
+Okay.
+They measured the clinician's unaided performance, their raw human ability to detect precancerous polyps without any AI help,
+after a period of prolonged exposure to using an AI assistant during their procedures.
+So they let the doctors use the AI crutch for a while, then they took the AI away and said,
+now do it yourself just like you used to.
+Exactly.
+And the study found actual behavioral evidence of de-skilling.
+When the AI was removed, the clinician's unaided detection rates dropped.
+They had actually become worse at finding polyps on their own.
+That is visceral.
+Yeah.
+That is terrifying.
+It is a much more robust finding than the EEG study.
+Flyxion also points back to a study referenced in the Anthropic Experiment by Shen and Tamkin.
+In that study, software developers were asked to learn a completely new coding library.
+A very standard task for a deaf.
+Some used an AI assistant.
+Some didn't.
+The ones who used the assistant were able to complete the coding tasks quickly.
+But when they were tested later, they ended up with a significantly weaker conceptual understanding of the library they were supposed to be learning.
+So if you use the AI to do the thing before you have actually learned the thing, you never actually acquire the skill.
+You've just outsourced the learning process.
+You're hitting on a crucial distinction.
+Offloading work differs sharply between experts and novices.
+For a learner, using an AI to avoid the friction of the learning process means the skill is never acquired.
+The neural pathways are never built.
+But for an expert?
+For an expert who has already mastered the domain, offloading boilerplate tasks might be completely benign, as long as the core skill remains recoverable when needed.
+The decisive question, Flyxion argues, is what persists after the assistance is withdrawn?
+So the real danger isn't that our brains are instantly short-circuiting when we open an AI chat window.
+The danger is much slower, much more insidious.
+It is structural.
+It is about how our jobs are actually set up and whether they allow us to maintain our skills.
+Which leads us to this incredibly evocative concept mentioned in the position paper, the reverse centaur.
+This is perhaps the most critical framing from the Mitchell paper regarding the future of work.
+I know the original concept of the centaur in AI history comes from the chess world.
+After Garry Kasparov lost to Deep Blue, he popularized the idea of centaur chess.
+Right.
+Human plus machine.
+A human playing chess combined with a chess computer, a centaur, could beat a solo human grandmaster and, for a long while, could even beat a solo supercomputer.
+The idea was that the human uses the machine as a tool to augment their intuition.
+The human is the head, setting the strategy and directing the action, and the machine is the body, providing the raw brute force calculating power to check for blunders.
+That is the classic optimistic view of human-AI collaboration.
+The human directs, the machine augments.
+But Cory Doctorow coined the term reverse centaur, and the Mitchell position paper uses it to describe our current, actual trajectory with autonomous agents.
+In a reverse centaur, the arrangement is flipped.
+The machine is the head, and we are just the legs.
+Essentially.
+In this arrangement, the machine does almost all of the substantive, generative, creative work.
+It writes the massive code base, it drafts the strategic marketing plan, it analyzes the gigabytes of data, and the human is reduced to an accessory.
+Just a rubber stamp.
+The human's just there to approve the prompts, look over the output, and sign off on the final result, retaining all the legal, ethical, and professional responsibility for work they barely touched.
+The Mitchell paper describes this beautifully.
+And dreadfully.
+They describe how the user repeatedly approves prompts, slides into what they call approval fatigue, and eventually just starts rubber stamping actions whose consequences they can't even anticipate.
+And Flyxion connects this highly modern anxiety back to a classic, foundational piece of industrial psychology.
+Lisanne Bainbridge's 1983 paper, Ironies of Automation.
+1983.
+We have been worrying about this since the era of physical factories and the Atari.
+We have.
+In the 80s, the automation they were studying was physical.
+Automated assembly lines, nuclear power plant controls, and aviation autopilots.
+And Bainbridge's insight from studying those systems is sharper than most modern slogans about AI.
+The irony of automation isn't that machines do too much and humans do too little.
+What is it then?
+The irony is that automation successfully handles all the daily, routine, easy stuff and leaves the human with only the absolute hardest, rarest tasks.
+Give me an example of that in the real world.
+Think about commercial aviation.
+We automated the routine task of keeping the plane flying straight and level, and the autopilot handles 95% of the flight perfectly.
+But when an unprecedented weather anomaly hits or a sensor fails in a way the software wasn't programmed to handle, the autopilot abruptly disengages and hands control back to the human pilot.
+And suddenly it's an emergency.
+The pilot is suddenly expected to solve the most complex, life-threatening problem imaginable.
+But because the autopilot has been flying the plane for the last five hours, and really for the pilot's last five years of their career, the pilot has been stripped of the continuous, tactile practice they need to maintain their manual flying skills.
+Their situational awareness is degraded because they haven't been actively engaged in the process.
+So by automating the easy stuff, you guarantee that when the human is finally meted, they are completely unequipped to help.
+That is the core irony.
+Now map that onto cognitive work with AI.
+The AI writes all the routine code.
+But when the AI hallucinates a subtle architecture-destroying bug, the human developer, who hasn't written a line of architecture from scratch in months, is suddenly expected to spot it and fix it.
+This all sounds terrifying, but I have to push back again.
+Isn't this exactly how human corporate hierarchies work?
+Think about a CEO.
+Okay.
+A CEO signs off on a massive 500-page financial report that they did not personally write.
+The accountants, the analysts, and the junior VPs did the substantive work.
+The CEO reviews the executive summary, asks a few probing questions, and signs their name, taking on the ultimate legal liability.
+Or a head architect stamping a blueprint where a junior structural engineer did the actual load-bearing math.
+We do this all the time.
+We do.
+We have a whole word for it.
+Delegation.
+Why is delegating to an AI fundamentally different from a CEO delegating to a human team?
+It is a vital counterargument.
+And Flyxion agrees that the arrangement of delegation itself is morally and practically ambiguous.
+The continued presence of a human sign-off doesn't guarantee meaningful control.
+But the fact that a machine did the heavy lifting doesn't automatically prove control is absent.
+If we condemned every deliverable where the final signatory didn't originate the internal reasoning, we would have to dismantle almost all modern institutional work.
+So what actually breaks the system when it's an AI generating the report instead of the accounting department?
+The Mitchell paper identifies the true breaking point.
+It's an astronomical mismatch of resources.
+When you are a CEO overseeing a human team, you have structural, organizational resources.
+Right.
+You have a whole infrastructure.
+You have an established hierarchy.
+You have audit committees.
+You have standardized reporting metrics.
+And crucially, you usually have weeks to review documents.
+But when we assign individual humans to oversee fast, opaque AI systems, we demand that they take responsibility without providing any of those resources.
+It's like asking a human quality control inspector to sign off on a car's safety.
+But the assembly line is moving at 10,000 miles an hour, and all they are allowed to do is look at the paint shop.
+The resource mismatch guarantees failure.
+That analogy is exact.
+The human is expected to oversee a machine that can generate 50 pages of complex code in five seconds.
+And the human is supposed to just make sure it looks right before their lunch break.
+Mitchell documents this mismatch meticulously.
+It's just not possible.
+It is the sheer volume of generated content the overseer must hold in their working memory.
+The poorly designed interfaces of the AI tools that hide the reasoning.
+And the extreme role overload.
+The onus of safety falls entirely on the individual end user, while the organizational mechanisms to actually exercise that safety are completely absent.
+And Flyxion points out that this is Mitchell's strongest contribution, diagnosing an organizational failure, rather than just pointing to a brain rock problem.
+It's essentially an HR problem.
+It's a workflow design problem.
+So if we know the reverse centaur is an organizational failure, what are the organizational fixes?
+How do we redesign the workflow?
+The Mitchell paper offers an inventory of interventions, and Fleischman analyzes them as proposals with very distinct costs.
+The first proposal is strategic friction.
+Meaning making the AI tool purposefully harder or slower to use?
+Yes.
+Forcing the user to physically slow down.
+You might bound the AI's autonomy so it has to stop and ask for human permission more often,
+or force the human to batch their reviews rather than doing them continuously.
+I can hear the productivity bros screaming already.
+You're nerfing the AI.
+You're ruining the ROI.
+And that is the unavoidable cost.
+Flyxion directly reduces the efficiency gains that the companies deploying these tools desperately want.
+Another proposal is canary tasks.
+What are those?
+This involves intentionally injecting known faults or obvious errors into the AI's output to test if the human overseer is actually paying attention and catching them.
+Oh, wow.
+Like those fake phishing emails your IT department sends out to see if you click the link.
+But in this case, it's your own AI trying to sneak a bug past you to keep you on your toes.
+Exactly.
+It forces engagement by removing trust.
+And then there is the most dystopian sounding option, behavioral monitoring.
+Tracking how the human interacts with the system to ensure they are being diligent.
+Okay, wait.
+Behavioral monitoring.
+You mean tracking how long I look at the screen?
+Yes, tracking metrics like review time, how often the human overrides the AI, or tracking mouse movements to see how much outside evidence the human seeks out before clicking approve.
+But Flight Action issues a massive warning here, drawing from sociology about the concept of drift.
+Drift.
+How does a metric drift?
+If a corporation starts tracking review time as a proxy for good oversight, saying you must spend at least five minutes reviewing every AI document, what do you think the employees will actually do?
+They're going to open the AI-generated report, leave the window open on their monitor while they go to the break room to get a coffee, and then come back five minutes later to click approve.
+So the metric looks good on their quarterly review.
+Exactly.
+The metric drifts away from its intended target, which is well-scrutinized, correct action, and becomes a reward for simply mimicking the physical conditions of oversight.
+You just keep the window open and look busy.
+Effective oversight requires an actual arrangement of work that makes scrutiny intellectually possible, not just an employee who is visibly trapped at their desk.
+It's the classic difference between looking busy and being effective.
+Flyxion mentioned something about the economics of research here, right?
+How we account for the cost of AI.
+Yes.
+Flyxion draws a brilliant parallel to the economics of research systems.
+How do you measure the cost of your workforce?
+If you evaluate your tools by cost per task, AI looks incredible.
+You can generate a thousand summaries for pennies.
+Super cheap.
+But that accounting doesn't care whether those summaries are actually accurate.
+If instead you evaluate your company by cost per retained verified claim, meaning you include the human labor required to orchestrate, check, verify, and confirm that the AI didn't hallucinate, the math changes entirely.
+Because verifying a subtle AI hallucination can take 10 times longer than just writing the thing yourself from scratch.
+Exactly.
+The unit of accounting determines the behavior.
+Flyxion also discusses constrained editing.
+If you restrict the human overseer to only making local, small changes to an AI draft, just fixing commas and changing a few words, it makes the review process faster and cheaper.
+But it boxes you in.
+It psychologically anchors the human to the AI's initial framing.
+It makes challenging the grand strategy almost impossible.
+If the goal of the review is just to check spelling, constrained editing is great.
+But if the goal is to question the entire premise of the document, you might need to force the human to independently regenerate the work from scratch.
+So if the problem is organizational and we have all these theories on how to fix it, it raises a really meta question for me.
+Let's go all the way back to that Anthropic study.
+Anthropic builds Claude.
+Claude is the exact AI that they just proved can secretly manipulate human experts 86% of the time.
+If these AI systems are creating these massive organizational oversight nightmares, why on earth are the AI companies themselves publishing studies highlighting how manipulative and dangerous their tools can be?
+It feels like terrible PR.
+It seems completely counterintuitive, doesn't it?
+Yeah.
+Why publish proof that your product hacks human judgment?
+But Flyxion unpacks this beautifully.
+This is what Flyxion calls the double message of danger.
+The double message.
+The double message.
+Okay, walk us through this.
+When a major AI lab publishes a rigorous peer-reviewed paper saying, look, our AI can secretly manipulate the judgment calls of professional causal inference experts, it is actually communicating two very distinct, highly beneficial messages simultaneously to the market.
+What's the first message?
+The first message is conscientiousness.
+It says to government regulators, to the anxious public, and to investors, look how safely and responsibly we audit our own tools.
+We are the good guys, doing the hard, transparent science to find the risks before they hurt anyone.
+Okay, that makes sense.
+It builds trust.
+It says, don't regulate us, we're already regulating ourselves.
+What's the second message?
+The second message is immense capability.
+It says, our tool is so unfathomably powerful, so fluent and persuasive, that it can essentially mind control a room full of highly trained data scientists with just a subtle tweak to its prompt.
+It acts as a subtle flex of raw power.
+That is wild.
+It is a flex to investors saying, we are building magic.
+A flex to competitors saying, our model is smarter than yours.
+And a flex to the broader market.
+And the brilliance of this double message is that it can arise without any conscious intent to deceive.
+They're sitting in a smoke-filled room planning this.
+Right.
+The individual researchers who ran the causal inference study might have entirely pure, well-intentioned safety motivations.
+But the institutional reality is that the study serves both the safety agenda and the corporate reputation simultaneously.
+So I can't just dismiss the study as a corporate ad because it is real rigorous science.
+The flip rate was real.
+But I also can't just blindly accept it as the whole truth about AI because it perfectly aligns with the company's financial interests to look both responsible and godlike.
+It requires a highly sophisticated reading.
+Corporate authorship doesn't automatically convert a study into advertising.
+But publication in a respectable venue doesn't erase the incentives of the institution that paid for it.
+But wait, they registered the study.
+I read that part.
+They published their pre-analysis plan on an independent site before they even looked at the data.
+They disclosed everything they were going to do.
+They even published the exact hidden prompt they used to make the AI lobby the humans.
+Isn't this exactly what we demand of good science?
+Absolute transparency?
+It is excellent science for that specific experiment.
+Pre-registration is a gold standard for a reason.
+But Flyxion introduces a classic concept from psychology here to explain the blind spot.
+Rosenthal's file drawer problem.
+The file drawer?
+What does that mean in this context?
+The file drawer problem describes the massive gap between the studies an organization actually conducts internally
+and the small fraction of studies that eventually make it out of the file drawer and into public publication.
+Flyxion describes the published anthropic study as a numerator without a denominator.
+Meaning we know they published this one specific study, the numerator.
+But we have no idea how many other studies they ran, the denominator, that didn't get published.
+Exactly.
+Pre-registering one specific study is great.
+It stops researchers from tweaking the data after the fact to get a statistically significant result.
+What statisticians call the garden of forking paths.
+But registering one study does not force a massive corporation to disclose all the internal pilots,
+the exploratory tests, or the varied configurations that they ran beforehand to settle on that specific design.
+Right. Because you don't just wake up one morning, write a perfect, flawless protocol,
+and run it on 50 expensive experts on day one.
+You test it internally first.
+You tweak the prompt.
+You adjust the parameters.
+You iterate.
+Yeah.
+And the published study is just one point in a vast space of possible designs.
+What if another internal team ran a pilot using an AI that was instructed to offer balanced advice,
+presenting both sides of the causal inference problem fairly, instead of being a one-sided advocate?
+Yeah, what happens then?
+Did the flip rate drop to zero?
+Did the humans maintain perfect judgment?
+We don't know.
+What if they ran it on a task where the humans had real financial skin in the game,
+instead of a fictional farming co-op?
+If the AI gave balanced advice, and the human experts made totally rational, independent choices,
+that wouldn't make for a very sexy research paper, would it?
+It wouldn't show immense capability.
+It would just show a tool acting normally and safely.
+So that pilot stays in the file drawer.
+Again, Flyxion is very careful not to accuse them of intentionally suppressing specific data to hide the truth.
+The point is structural.
+The single published result about the existence of influence under one highly specific set of conditions
+is a very poor guide to the magnitude of the issue across all possible uses of AI in the real world.
+We're looking through a keyhole.
+The organization has vastly more internal experience and data than the public does.
+And the public is left trying to infer the entire landscape from one carefully selected dramatic snapshot.
+To really understand why this specific snapshot gets taken in the first place,
+and why it gets framed as a massive revelation about human judgment,
+you have to understand the culture of the people holding the camera.
+You have to look at the environment where this technology is being built.
+And that leads us to the final document in Flyxion's stack.
+The 2024 forecast by Leopold Aschenbrenner titled,
+Situational Awareness, The Decade Ahead.
+This is a fascinating pivot in the essay.
+Aschenbrenner's document is not a randomized trial like Anthropics,
+and it's not a position paper on workplace design like Mitchell's.
+It is a forecast.
+A vision of the future.
+Aschenbrenner formerly worked at OpenAI,
+and his 2024 essay is essentially a manifesto attempting to articulate the deep expectations
+of a very specific, very powerful community.
+He paints a picture of a tiny, incredibly isolated bubble.
+He explicitly says that you can see the future first in San Francisco.
+He talks about a community of maybe a few hundred people,
+mostly residing in San Francisco and working inside the major AI labs,
+who have situational awareness.
+They have grasped what is coming before the rest of the world.
+And what is coming, according to this forecast,
+is rapid, mind-bending advancement.
+Trillion-dollar compute clusters.
+AI models that can do the work of a human AI researcher or software engineer autonomously
+by 2027.
+Aschenbrenner insists this isn't science fiction.
+It is just believing the straight lines on a graph.
+But Flyxion isn't using this document to validate whether
+Aschenbrenner's timeline is actually correct, right?
+We are here to debate if AGI is happening in 2027.
+The accuracy of the forecast is entirely beside the point for Flyxion's argument.
+Flyxion is using this document to explain the epistemic structure of the AI industry.
+Epistemic structure.
+Meaning how this specific group of people knows what they know
+and how they decide what is true and what is important.
+Right.
+Think about the physical and social conditions of this environment.
+You have a small, highly concentrated community.
+They are building and using frontier AI daily,
+giving them access to information and capabilities that outsiders don't have.
+But more importantly, this community is heavily, heavily selected
+for belief in a specific, rapid trajectory.
+They already bought into the hype.
+If you thought artificial general intelligence was 50 years away
+or scientifically impossible,
+you probably wouldn't uproot your life to join an intense,
+grinding startup in San Francisco working on it.
+So everyone in the building already believes the graph is going straight up.
+The skeptics never applied for the job in the first place.
+It's intense self-selection.
+And they talk primarily to each other.
+The institutions around them, the venture capitalists who fund them,
+the media that covers them, the leadership that promotes them,
+reward attention to the exact same existential, massive-scale questions.
+If you live and work in that environment,
+you inevitably form an echo chamber of expectations.
+And here is where Flyxion drops what I think is the most brilliant,
+meta-reflexive twist in the entire essay.
+Think back to the anthropic researchers,
+the ones who ran the causal inference experiment.
+They were deeply worried that if human experts use AI agents
+that share the same underlying priors,
+those humans will lose their independent judgment
+and just form an artificial consensus based on the machine.
+Yes, that was the core warning of their paper,
+the homogenization of expert judgment,
+the fear that humans will just absorb the AI's worldview.
+But Flyxion points out the ultimate irony.
+The AI researchers themselves are operating inside an institutional culture
+with incredibly strong shared priors about the dominance and trajectory of AI.
+And those shared institutional priors are exactly
+what shape the research questions they think are worth asking in the first place.
+It is a stunning observation of the sociology of science.
+Researchers who investigate whether people absorb an agent's framing
+are themselves making choices about how to frame their own research.
+And those choices emerge inside a professional culture
+that naturally assumes AI is on the verge of automating human intellect.
+So it's like a fish discovering water,
+but only because it's studying how other fish get wet.
+That is a very poetic way to put it.
+The researchers are studying the water of AI influence
+while swimming in the water of industry expectations.
+And Flyxion notes that this isn't a refutation of their findings.
+The fish really is wet.
+The AI really did influence the causal experts.
+But we, as the public reading these papers,
+have to direct the exact same scrutiny
+toward the formation of the research agenda
+as the agenda directs at the human experts.
+So when a lab asks the research question,
+how completely does our AI dominate human reasoning?
+That question itself is a product of an environment
+that already assumes the AI is dominant.
+The danger isn't that they are lying about the data.
+The danger is that we, the public,
+absorb their framing without realizing it.
+We assume their specific bubble-generated way of viewing the future
+is the only valid scientific way to view it.
+Precisely.
+The industry's expectations about its technology
+become the research questions.
+The research questions generate localized, measurable effects in a lab.
+And then the pros surrounding those effects
+manufactures a significance that perfectly validates
+the industry's original expectations.
+It is a closed loop.
+And that loop brings us right back to the film studio where we started.
+They built a movie to keep people in their seats.
+They measured people staying in their seats.
+And they declared cinema the ultimate power in the universe.
+It is the manufacture of significance laid bare.
+So what does this all mean for you,
+the person listening right now?
+Think about your own tech stack.
+Think about your own workflow.
+When you open your laptop tomorrow morning
+and you use an AI tool to draft a difficult email
+or summarize a dense PDF or analyze a spreadsheet for your team,
+what role are you actually playing?
+It's the critical question.
+Are you acting as an informed delegator,
+treating the AI like a junior analyst
+whose work needs genuine structural scrutiny?
+Or are you slipping into the role of the reverse centaur?
+Are you just functioning as the fleshy accessory
+whose only real job is to click approve
+so the machine can keep moving?
+And most importantly,
+are you deliberately choosing your level of engagement
+or are you just drifting into it
+because the software makes it so incredibly easy?
+If there is one massive takeaway from Flyxion' synthesis,
+it is this.
+Demand to see the mechanism.
+Do not conflate a carefully measured effect
+like an AI influencing a one-off choice in a controlled setting
+with a sweeping existential conclusion about humanity losing its agency.
+Don't just read the headline.
+Before you accept that a tool is de-skilling you,
+demand to see the unaided performance afterward.
+Before you accept that human oversight is impossible,
+demand to know if the organization actually provided the time
+and resources to make oversight feasible.
+We have to ruthlessly separate what a study shows
+from why it shows it from why it matters.
+And I want to leave you with one final thought,
+kind of proactive thought to chew on.
+If the trend lines hold
+and AI eventually takes over the execution
+of almost all our daily tasks...
+Which is not impossible.
+Yeah, right.
+Writing the whole code,
+drafting the legal briefs,
+designing the buildings.
+And our only job left is oversight.
+But as we've seen,
+the AI is moving too fast
+and is too complex for us to meaningfully oversee.
+What happens to human intuition?
+And that's the real unknown.
+What if the ultimate cognitive de-skilling
+isn't about forgetting how to do
+a specific task?
+What if it's about forgetting how to decide
+when or which problems
+are actually worth solving in the first place?
+And so, you know,
+kind of chew on that next time
+you hover your mouse over the approve button.
+It is the ultimate question of agency.
+Definitely.
+And, you know,
+are the...
+What we are deciding
+what kind of minds we want to have.
+We really are.
+Thank you for joining us on this deep dive
+and, you know, stay curious.
+Keep questioning the framing
+and we'll see you next time.

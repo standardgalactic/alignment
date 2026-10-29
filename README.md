@@ -1,5 +1,9 @@
 # Alignment Research
 
+[The Manufacture of Significance](https://standardgalactic.github.io/alignment/retroscope/manufacture-of-significance.pdf)
+
+* [How AI Agents Sway Human Judgment](https://standardgalactic.github.io/alignment/retroscope/) — *Audio Overview*
+
 [Notes Left on a Shared Board](https://standardgalactic.github.io/alignment/notes-left-on-a-shared-board.pdf)
 
 * [How AI Agents Accidentally Hacked Hugging Face](https://standardgalactic.github.io/alignment/retro_lissajous.html) — *Audio Overview*
