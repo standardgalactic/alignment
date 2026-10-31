@@ -1,0 +1,559 @@
+The Unanticipated Consequences of Purposive Social Action
+
+Robert K. Merton
+American Sociological Review, Volume 1, Issue 6 (Dec., 1936), 894-904.
+
+Stable URL:
+http://links.jstor.org/sici?sici=0003 -1224%28 193612%291%3A6%3C894%3ATUCOPS %3E2.0.CO%3B2-O0
+
+Your use of the JSTOR archive indicates your acceptance of JSTOR’s Terms and Conditions of Use, available at
+http://www .jstor.org/about/terms.html. JSTOR’s Terms and Conditions of Use provides, in part, that unless you
+have obtained prior permission, you may not download an entire issue of a journal or multiple copies of articles, and
+you may use content in the JSTOR archive only for your personal, non-commercial use.
+
+Each copy of any part of a JSTOR transmission must contain the same copyright notice that appears on the screen or
+printed page of such transmission.
+
+American Sociological Review is published by American Sociological Association. Please contact the publisher for
+further permissions regarding the use of this work. Publisher contact information may be obtained at
+http://www.jstor.org/journals/asa.html.
+
+American Sociological Review
+©1936 American Sociological Association
+
+JSTOR and the JSTOR logo are trademarks of JSTOR, and are Registered in the U.S. Patent and Trademark Office.
+For more information on JSTOR contact jstor-info@umich.edu.
+
+©2002 JSTOR
+
+http://www.jstor.org/
+Sun Aug 4 12:54:45 2002
+THE UNANTICIPATED CONSEQUENCES OF
+PURPOSIVE SOCIAL ACTION
+
+Rosert K. Merton
+Harvard University
+
+I
+
+N SOME ONE of its numerous forms, the problem of the unantici-
+pated consequences of purposive action has been treated by
+virtually every substantial contributor to the long history of
+social thought.! The diversity of context? and variety of terms by
+which this problem has been known, however, have tended to ob-
+scure the definite continuity in its consideration. In fact, this diver-
+sity of context—ranging from theology to technology—has been so
+pronounced that not only has the substantial identity of the problem
+been overlooked, but no systematic, scientific analysis of it has as
+yet been effected. The failure to subject this problem to such thor-
+ough-going investigation has perhaps been due in part to its having
+been linked historically with transcendental and ethical considera-
+tions. Obviously, the ready solution provided by ascribing uncon-
+templated consequences of action to the inscrutable will of God or
+Providence or Fate precludes, in the mind of the believer, any need
+for scientific analysis. Whatever the actual reasons, the fact remains
+that though the process has been widely recognized and its impor-
+tance equally appreciated, it still awaits a systematic treatment.
+Although the phrase, unanticipated consequences of purposive
+social action, is in a measure self-explanatory, the setting of the prob-
+1 Some of the modern theorists, though their contributions are by no means of equal im-
+portance, are: Machiavelli, Vico, Adam Smith (and some later classical economists), Marx,
+
+Engels, Wundt, Pareto, Max Weber, Graham Wallas, Cooley, Sorokin, Gini, Chapin, von
+Schelting.
+
+2 This problem has been related to such heterogeneous subjects as: the problem of evil
+(theodicy), moral responsibility, free will, predestination, deism, teleology, fatalism, logical,
+illogical and non-logical behavior, social prediction, planning and control, social cycles, the
+pleasure- and reality principles and historical “accidents.”
+
+% Some of the terms by which the whole or certain aspects of this process have been known
+are: Providence (immanent or transcendental), Moira, Paradoxie der Folgen, Schicksal, social
+forces, heterogony of ends, immanent causation, dialectical movement, principle of emergence
+and creative synthesis. The present writer hopes to devote a monograph now in preparation
+to the history and analysis of this problem. The vast scope and manifold implications of the
+problem necessitate my being elliptical at times in the present brief exposition. For the same
+reason of limitation of space, I have had to eliminate most of the concrete material upon which
+the discussion is based.
+
+894
+PURPOSIVE SOCIAL ACTION 895
+
+lem demands further specification. In the first place, the greater part
+of this paper deals with isolated purposive acts rather than with
+their integration into a coherent system of action (though some ref-
+erence will be made to the latter). This limitation is prescribed by
+expediency, for a treatment of systems of action would introduce
+further complications. Furthermore, unforeseen consequences should
+not be identified with consequences which are necessarily undesirable
+(from the standpoint of the actor). For though these results are un-
+intended, they are not upon their occurrence always deemed axio-
+logically negative. In short, undesired effects are not always undesir-
+able effects. The intended and anticipated outcomes of purposive
+action, however, are always, in the very nature of the case, relatively
+desirable to the actor, though they may seem axiologically negative
+to an outside observer. This is true even in the polar instance where
+the intended result is “the lesser of two evils” or in such cases as
+suicide, ascetic mortification and self torture which, in given situa-
+tions, are deemed desirable relative to other possible alternatives.
+
+Rigorously speaking, the conseguences of purposive action are
+limited to those elements in the resulting situation which are ex-
+clusively the outcome of the action, i.e., those elements which would
+not have occurred had the action not taken place. Concretely, how-
+ever, the consequences result from the interplay of the action and
+the objective situation, the conditions of action.t We will be pri-
+marily concerned with the sum-total results of action under certain
+conditions. This still involves the problem of causal imputation (of
+which more later) though to be a less pressing degree than conse-
+quences in the rigorous sense. These sum-total or concrete conse-
+quences may be differentiated into (a) consequences to the actor (s),
+(b) consequences to other persons mediated through (1) the social
+structure, (2) the culture and (3) the civilization.®
+
+In considering purposive action, we are concerned with “conduct”
+as distinct from “‘behavior,” that is, with action which involves mo-
+tives and consequently a choice between various alternatives.® For
+
+4Cf. Frank H. Knight, Risk, Uncertainty and Profit, Boston and New York, Houghton
+Mifflin Co., 1921, pp. 201-2. Professor Knight’s doctoral dissertation represents by far the
+most searching treatment of certain phases of this problem that I have yet seen.
+
+5 For the distinction between society, culture and civilization, see Alfred Weber, ‘“Prin-
+zipielles zur Kultursoziologie: Gesellschaftsprozess, Civilisationsprozess und Kulturbewe-
+gung,” Archiv fir Sozialwissenschaft und Sozialpolitik, 47, 1920, 1-49; R. K. Merton, “‘Civiliza-
+tion and Culture,” Sociology and Social Research 21, 1936, 103-113. (Cf. foregoing article,
+
+definition 19. Ed.)
+* Knight, op. cit. p. 52.
+896 AMERICAN SOCIOLOGICAL REVIEW
+
+the time being, we will take purposes as given, so that any theories
+which “‘reduce” purpose to conditioned reflexes or tropisms, which
+assert that motives are simply compounded of instinctual drives and
+the experiential shaping of these drives, may be considered as irrele-
+vant. Psychological considerations of the source or origin of motives,
+though they are undoubtedly important for a more complete under-
+standing of the mechanisms involved in the development of unex-
+pected consequences of conduct, will thus be ignored.
+
+Moreover, it is not assumed that in fact social action always in-
+volves clear-cut, explicit purpose. It may well be that such aware-
+ness of purpose is unusual, that the aim of action is more often than
+not nebulous and hazy. This is certainly the case with habitual ac-
+tion which, though it may originally have been induced by conscious
+purpose, is characteristically performed without such awareness.
+The significance of such habitual action will be discussed later.
+
+Above all, it must not be inferred that purposive action implies
+“rationality” of human action (that persons always use the objec-
+tively most adequate means for the attainment of their end).7 In
+fact, part of the present analysis is devoted to the determination of
+those elements which account for concrete deviations from ration-
+ality of action. Moreover, rationality and irrationality are not to be
+identified with the success and failure of action, respectively. For in
+a situation where the number of possible actions for attaining a given
+end is severely limited, one acts rationally by selecting the means
+which, on the basis of the available evidence, has the greatest prob-
+ability of attaining this goal and yet the goal may actually not be
+attained.’ Contrariwise, an end may be attained by action which,
+on the basis of the knowledge available to the actor, is irrational (as
+in the case of “hunches’’).
+
+Turning now to action, we may differentiate this into two types:
+(a) unorganized and (b) formally organized. The first refers to ac-
+tions of individuals considered distributively out of which may grow
+the second when like-minded individuals form an association in order
+to achieve a common purpose. Unanticipated consequences may, of
+course, follow both types of action, though the second type would
+seem to afford a better opportunity for sociological analysis since the
+very process of formal organization ordinarily involves an explicit
+statement of purpose and procedure.
+
+7 Max Weber, Wirtschaft und Gesellschaft, Tabingen, J. C. B. Mohr, 1925, pp. 3 ff.
+
+8 See J. Bertrand, Calcul des probabilités, Paris, 1889, pp. 90 ff.; J. M. Keynes, 4 Treatise
+on Probability, London, The Macmillan Co., 1921, Chap. XXVI.
+PURPOSIVE SOCIAL ACTION 897
+
+Before turning to the actual analysis of the problem it is advisable
+to indicate two methodological pitfalls which are, moreover, common
+to all sociological investigations of purposive action. The first in-
+volves the problem of causal imputation, the problem of ascertaining
+the extent to which “consequences” may justifiably be attributed
+to certain actions. For example, to what extent has the recent in-
+crease in economic production in this country been due to govern-
+mental measures? To what extent may the spread of organized crime
+be attributed to prohibition? This ever-present difficulty of causal
+imputation must be solved for every empirical case which is studied.
+
+The second problem is that of ascertaining the actual purposes of
+a given action. There is the difficulty, for instance, of discriminating
+between rationalization and truth in those cases where apparently
+unintended consequences are post facto declared to have been in-
+tended.® Rationalizations may occur in connection with nation-wide
+social planning just as in the classical instance of the horseman who,
+on being thrown from his steed, declared that he was “‘simply dis-
+mounting.” This difficulty, though not completely obviated, is sig-
+nificantly reduced in cases of organized group action since the cir-
+cumstance of organized action customarily demands explicit (though
+not always “true’’) statements of goal and procedure. Furthermore,
+it is easily possible to exaggerate this difficulty since in many, if
+indeed not in most, cases, the observer’s own experience and knowl-
+edge of the situation enables him to arrive at a ready solution. Ulti-
+mately, the final test is this: does the juxtaposition of the overt
+action, our general knowledge of the actor(s) and the specific situa-
+tion and the inferred or avowed purpose “make sense,” is there be-
+tween these, as Weber puts it, a ‘“‘verstandliche Sinnzusammen-
+hang?” If the analyst self-consciously subjects these elements to
+such probing, there is substantial probability that his conclusion in
+respect to purpose is not too far afield in the majority of instances.
+The evidence available will vary in different cases and the probable
+error of the imputation of purpose will likewise vary.
+
+® This introduces the problem of “chance,” which will be treated in another connection.
+It should be realized that the aim of an action and the circumstances which actually ensue
+may coincide without the latter being a consequence of the action. Moreover, the longer the
+interval of time between the action and the circumstances in view, the greater the probability
+(in the absence of contrary evidence) that these circumstances have happened “by chance.”
+Lastly, if this interval is greatly extended, the probability that the desired circumstances will
+occur fortuitously may increase until virtually the point of certainty. This reasoning is per-
+haps applicable to the case of governmental action “restoring prosperity.” Compare V. Pareto,
+Traité de sociologie générale, Paris, Payot, 1917, II, par. 1977.
+898 AMERICAN SOCIOLOGICAL REVIEW
+
+It must be freely admitted at this junction that these problems
+have not been further treated in the ensuing discussion, but despite
+the absence of any further explicit treatment, the limitations set by
+these methodological difficulties are implicitly recognized through-
+out.
+
+Lastly, it may be urged that a frequent source of misunderstand-
+ing will be eliminated at the outset if it is realized that the factors
+involved in unanticipated consequences are—precisely, factors, and
+that none of these serves by itself to explain any concrete case.
+
+I
+
+The most obvious limitation to a correct anticipation of conse-
+quences of action is provided by the existing state of knowledge. The
+extent of this limitation may be best appreciated by assuming the
+simplest case where this lack of adequate knowledge is the sole
+barrier to a correct anticipation.!° Obviously, a very large number of
+concrete reasons for inadequate knowledge may be found, but it is
+also possible to summarize several classes of factors which are most
+important.
+
+The first class derives from the type of knowledge—usually, per-
+haps exclusively—attained in the sciences of human behavior. Prop-
+erly speaking, the social scientist almost invariably finds stochastic
+(conjectural) associations and not, as in most fields of the physical
+sciences, functional associations." This is to say, in the study of
+human behavior, there is found a set of different values of one vari-
+able associated with each value of the other variable(s), or in less
+formal language, the set of consequences of any repeated act is not
+
+10 Most previous discussions of unanticipated consequences limit the explanation of un-
+anticipated consequences to this one factor of ignorance. Such a view either reduces itself to a
+sheer tautology or exaggerates the rdle of but one of many factors. In the first instance, the
+argument runs in this fashion: “if we had only known enough, we could have anticipated the
+consequences which, as it happens, were unforeseen.” The apparent fallacy in this post mortem
+argument rests in the word “enough” which is implicitly taken to mean “enough knowledge
+to foresee” the consequences of our action. It is then no difficult matter to uphold the conten-
+tion which then reads in effect: “if we had known, we would have known.” This viewpoint is
+basic to several schools of educational theory, just as it was to Comte’s dictum, savoir pour
+prevoir, prevoir pour pouvoir. This intellectualist stand has gained credence partly because of
+its implicit optimism and because of the indubitable fact that sheer ignorance does actually
+account for the occurrence of some unforeseen consequences in some cases.
+
+Cf. A. A. Tschuprow, Grundbegriffe und Grundprobleme der Korrelationstheorie, Leipzig,
+B. G. Teubner, 1925, pp. 20 ff., where he introduces the term “stochastic.” It is apparent, of
+course, that stochastic associations are obtained because we have not ascertained, or having
+ascertained, have not controlled the other variables in the situation which influence the final
+result. Thus, stochastic associations are not inherent in social knowledge but derive from our
+present lack of experimental control.
+
+PURPOSIVE SOCIAL ACTION 899
+
+constant but there is a range of consequences, any one of which may
+follow the act in any given case. In some instances, we may have suffi-
+cient knowledge of the limits of the range of possible consequences,
+and even adequate knowledge for ascertaining the statistical (empiri-
+cal) probabilities of the various possible sets of consequences, but
+it is impossible to predict with certainty the results in any particular
+case. Our classifications of acts and situations never involve com-
+pletely homogeneous categories nor even categories whose approxi-
+mate degree of homogeneity is sufficient for the prediction of par-
+ticular events.!2 We have here the paradox that whereas past experi-
+ence™ is the sole guide to our expectations on the assumption that
+certain past, present and future acts are sufficiently alike to be
+grouped in the same category, these experiences are in fact different.
+To the extent that these differences are pertinent to the outcome of
+the action and appropriate corrections for these differences are not
+adopted, the actual results will differ from the expected. As Poin-
+caré has put it, “... small differences in the initial conditions
+produce very great ones in the final phenomena. . . . Prediction be-
+comes impossible, and we have the fortuitous phenomenon.”
+
+However, deviations from the usual consequences of an act may
+be anticipated by the actor who recognizes in the given situation
+some differences from previous similar situations. But, insofar as
+these differences can themselves not be subsumed under general
+rules, the direction and extent of these deviations cannot be antici-
+pated.” It is clear, then, that the partial knowledge in the light of
+which action is commonly carried on permits a varying range of
+unexpected outcomes of conduct.
+
+Although no formula for the exact amount of knowledge necessary
+for foreknowledge is presented, one may say in general that conse-
+quences are fortuitous when an exact knowledge of many details
+and facts (as distinct from general principles) is needed for even a
+highly approximate prediction. In other words, “chance conse-
+
+2 A classification into completely homogeneous categories would, of course, lead to func-
+tional-associations and would hence permit of perfectly successful prediction, but the aspects
+of social action which are of practical importance are too varied and numerous to permit such
+homogeneous classification.
+
+18 4 priori calculations of probability are manifestly irrelevant to specific social acts.
+
+14 Henri Poincaré, Calcul des probabilités, Paris, 1912, p. 2.
+
+15 The actor’s awareness of his ignorance and its implications is perhaps most acute in the
+type of conduct which Thomas and Znaniecki attribute to the wish for “new experience.”
+This is the case where unforeseen consequences actually constitute the purpose of action,
+
+but there is always the tacit assumption that these consequences will be desirable. The nebu-
+lous purpose in this class of action is satisfaction.
+goo AMERICAN SOCIOLOGICAL REVIEW
+
+quences” are those which are occasioned by the interplay of forces
+and circumstances which are so complex and numerous that predic-
+tion of them is quite beyond our reach. This area of consequences
+should perhaps be distinguished from that of “ignorance,” since it is
+related not to the knowledge actually in hand but to certain knowl-
+edge which can conceivably be obtained."
+
+The importance of ignorance as a factor is enhanced by the fact
+that the exigencies of practical life frequently compel us to act with
+some confidence even though it is manifest that the information on
+which we base our action is not complete. We usually act, as Knight
+has properly observed, not on the basis of scientific knowledge, but
+opinion and estimate. Thus, situations which demand (or what is
+for our purposes tantamount to the same thing, appear to the actor
+to demand) immediate action of some sort, will usually involve ig-
+norance of certain aspects of the situation and will bring about un-
+expected results.
+
+Moreover, even when immediate action is not exacted, there is
+the economic problem of distributing our fundamental resources,
+time and energy. Time and energy are scarce means and economic
+behavior is concerned with the rational allocation of these means
+among alternative wants, only one of which is the anticipation of
+consequences of action.!” In our present economic order, it is mani-
+festly uneconomic behavior to concern ourselves with attempts to
+obtain knowledge for predicting the outcomes of action to such an
+extent that we have practically no time or energy for other pursuits.
+An economy of social engineers is no more conceivable or practicable
+than an economy of laundrymen. It is the fault of the extreme anti-
+noetic activists who promote the idea of action above all else to
+exaggerate this limit and to claim (in effect) that virtually no time
+or energy be devoted to the acquisition of knowledge. On the other
+hand, the grain of truth in the anti-intellectualist position is, as was
+just observed, that there are not only decided economic limits to the
+
+16 Cf, Keynes, op. cit., p. 295. This distinction corresponds to that made by Keynes be-
+tween “subjective chance” (broadly, ignorance) and “objective chance”? (where even addi-
+tional wide knowledge of general principles would not suffice for foreseeing the consequences of
+a particular act). Much the same distinction appears in the works of Poincaré and Venn,
+among others.
+
+17 Cf. Knight, op. cit., p. 348. The reasoning is also applicable to cases where the occupation
+of certain individuals (e.g., social engineers and scientists) is devoted solely to such efforts,
+since then it is simply a question of the distribution of the resources of society. Furthermore,
+there is the practical problem of the communicability of knowledge so obtained, since it may
+
+be of a very complex order and the effort of persons other than social engineers to assimilate
+such knowledge leads us back to the same problem of distribution of our resources.
+PURPOSIVE SOCIAL ACTION gol
+
+advisability of not acting until all or as much as possible uncertainty
+is eliminated, but also psychological limits since excessive “fore-
+thought” of this kind precludes any action at all.
+
+A second major factor of unexpected consequences of conduct,
+which is perhaps as pervasive as ignorance, is error. Error may in-
+trude itself, of course, in any phase of purposive action: we may err
+in our appraisal of the present situation, in our inference from this
+to the future objective situation, in our selection of a course of ac-
+tion, or finally in the execution of the action chosen. A common fal-
+lacy is frequently involved in the too-ready assumption that actions
+which have in the past led to the desired outcome will continue to
+do so. This assumption is often fixed in the mechanism of habit and
+it there finds pragmatic justification, for habitual action does in
+fact often, even usually, meet with success. But precisely because
+habit is a mode of activity which has previously led to the attain-
+ment of certain ends, it tends to become automatic and undelibera-
+tive through continued repetition so that the actor fails to recognize
+that procedures which have been successful in certain circumstances
+need not be so under any and all conditions.* Just as rigidities in
+social organization often balk and block the satisfaction of new wants,
+so rigidities in individual behavior may block the satisfaction of old
+wants in a changing social environment.
+
+Error may also be involved in instances where the actor attends
+to only one or some of the pertinent aspects of the situation which
+influence the outcome of the action. This may range from the case
+of simple neglect (lack of systematic thoroughness in examining the
+situation) to pathological obsession where there is a determined re-
+fusal or inability to consider certain elements of the problem. This
+last type has been extensively dealt with in the psychiatric literature.
+In cases of wish-fulfilment, emotional involvements lead to a dis-
+tortion of the objective situation and of the probable future course
+of events; such action predicated upon “imaginary” conditions must
+inevitably evoke unexpected consequences.
+
+The third general type of factor, the “imperious immediacy of
+interest,” refers to instances where the actor’s paramount concern
+with the foreseen immediate consequences excludes the considera-
+tion of further or other consequences of the same act. The most prom-
+
+18 Similar fallacies in the field of thought have been variously designated as “the philo-
+sophical fallacy” (Dewey), the “principle of limits” (Sorokin, Bridgman) and, with a somewhat
+different emphasis, “the fallacy of misplaced concreteness” (Whitehead).
+go2 AMERICAN SOCIOLOGICAL REVIEW
+
+inent elements in such immediacy of interest may range from
+physiological needs to basic cultural values. Thus, Vico’s imaginative
+example of the “origin of the family” which derived from the prac-
+tice of men carrying their mates into caves to satisfy their sex drive
+out of the sight of God might serve as a somewhat fantastic illustra-
+tion of the first. The doctrine of classical economics according to
+which the individual endeavoring to employ his capital where most
+profitable to him and thus tending to render the annual revenue of
+society as great as possible is, to quote Adam Smith, led “‘by an in-
+visible hand to promote an end which was no part of his intention,”
+may serve as an example of economic interest leading to this se-
+quence.
+
+However, after the acute analysis by Max Weber, it goes without
+saying that action motivated by interest is not antithetical to an
+exhaustive investigation of the conditions and means of successful
+action. On the contrary, it would seem that interest, if it is to be
+satisfied, demands such objective analysis of situation and instru-
+mentality, as is assumed to be characteristic of hominis oeconomici.
+But it is equally undeniable that intense interest does in fact often
+tend to preclude such analysis precisely because strong concern with
+the satisfaction of the immediate interest is a psychological genera-
+tor of emotional bias, with consequent lopsidedness or failure to
+engage in the required calculations. It is as much a fallacious assump-
+tion to hold that interested action in fact necessarily entails a ra-
+tional calculation of the elements in the situation! as to deny ration-
+ality any and all influence over such conduct. Moreover, action in
+which this element of immediacy of interest is involved may be
+rational in terms of the values basic to that interest but irrational
+in terms of the life organization of the individual. Rational, in the
+sense that it is an action which may be expected to lead to the attain-
+ment of the specific goal; irrational, in the sense that it may defeat
+the pursuit or attainment of other values which are not, at the mo-
+ment, paramount but which none the less form an integral part of the
+individual’s scale of values. Thus, precisely because a particular action
+is not carried out in a psychological or social vacuum, its effects will
+ramify into other spheres of value and interest. For example, the prac-
+tice of birth control for “economic reasons” influences the age-compo-
+
+19 This assumption is tenable only in a normative sense. It is indubitable that such calcu-
+lation, within the limits specified in our previous discussion, should be made if the probability
+of satisfying the interest is to be at a maximum. The error lies in confusing norm with actuality.
+PURPOSIVE SOCIAL ACTION 903
+
+sition and size of sibships with profound consequences of a psycho-
+logical and social character.
+
+Superficially similar to the factor of immediacy of interest, but
+differing from it in a highly significant theoretical sense, is that of
+basic values. This refers to instances where there is no consideration
+of further consequences because of the felt necessity of certain ac-
+tion enjoined by certain fundamental values. The classical analysis
+of the influence of this factor is Weber’s study of the Protestant ethic
+and the spirit of capitalism. He has properly generalized this case,
+saying that active asceticism paradoxically leads to its own decline
+through the accumulation of wealth and possessions entailed by
+decreased consumption and intense productive activity.
+
+This process contributes much to the dynamic of social and cul-
+tural change, as has been recognized with varying degrees of ac-
+curacy and cogency, by Hegel, Marx, Wundt and many others. The
+empirical observation is incontestable: activities oriented toward
+certain values release processes which so react as to change the very
+scale of values which precipitated them. This process may in part
+be due to the fact that when a system of basic values enjoins certain
+specific actions, adherents are not concerned with the objective con-
+sequences of these actions but only with the subjective satisfaction
+of duty well performed. Or, action in accordance with a dominant
+set of values tends to be focussed upon that particular value-area.
+But with the complex interaction which constitutes society, action
+ramifies, its consequences are not restricted to the specific area in
+which they were initially intended to center, they occur in interre-
+lated fields explicitly ignored at the time of action. Yet it is because
+these fields are in fact interrelated that the further consequences in
+adjacent areas tend to react upon the fundamental value-system. It
+is this usually unlooked-for reaction which constitutes a most im-
+portant element in the process of secularization, of the transforma-
+tion or breakdown of basic value-systems. Here is the essential para-
+dox of social action—the “‘realization” of values may lead to their
+renunciation. We may paraphrase Goethe and speak of “Die Kraft,
+die stets das Gute will, und stets das Bése schafft.”
+
+There is one other circumstance, peculiar to human conduct,
+which stands in the way of successful social prediction and planning.
+Public predictions of future social developments are frequently not
+sustained precisely because the prediction has become a new element
+in the concrete situation, thus tending to change the initial course
+904, AMERICAN SOCIOLOGICAL REVIEW
+
+of developments. This is not true of prediction in fields which do not
+pertain to human conduct. Thus, the prediction of the return of
+Halley’s comet does not in any way influence the orbit of that comet;
+but, to take a concrete social example, Marx’s prediction of the pro-
+gressive concentration of wealth and increasing misery of the masses
+did influence the very process predicted. For at least one of the con-
+sequences of socialist preaching in the nineteenth century was the
+spread of organization of labor, which, made conscious of its un-
+favorable bargaining position in cases of individual contract, organ-
+ized to enjoy the advantages of collective bargaining, thus slowing
+up, if not eliminating, the developments which Marx had predicted.”
+
+Thus, to the extent that the predictions of social scientists are
+made public and action proceeds with full cognizance of these pre-
+dictions, the ‘“‘other-things-being-equal” condition tacitly assumed
+in all forecasting is not fulfilled. Other things will not be equal just
+because the scientist has introduced a new “other thing”— his pre-
+diction. This contingency may often account for social movements
+developing in utterly unanticipated directions and it hence assumes
+considerable importance for social planning.
+
+The foregoing discussion represents no more than the briefest ex-
+position of the major elements involved in one fundamental social
+process. It would take us too far afield, and certainly beyond the
+compass of this paper, to examine exhaustively the implications of
+this analysis for social prediction, control and planning. We may
+maintain, however, even at this preliminary juncture, that no
+blanket statement categorically affirming or denying the practical
+feasibility of a// social planning is warranted. Before we may indulge
+in such generalizations, we must examine and classify the types of
+social action and organization with reference to the elements here
+discussed and then refer our generalizations to these essentially
+different types. If the present analysis has served to set the problem,
+if only in its most paramount aspects, and to direct attention toward
+the need for a systematic and objective study of the elements in-
+volved in the development of unanticipated consequences of pur-
+posive social action, the treatment of which has for much too long
+been consigned to the realm of theology and speculative philosophy,
+then it has achieved its avowed purpose.
+
+20 Corrado Gini, Prime linee di patologia economica, Milan, A. Giuffré, 1935, pp. 72-75.
+John Venn uses the picturesque term “suicidal prophecies” to refer to this process and properly
+
+observes that it represents a class of considerations which have been much neglected by the
+various sciences of human conduct. See his Logic of Chance, London, 1888, pp. 225-6.

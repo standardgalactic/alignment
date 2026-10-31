@@ -1,0 +1,2090 @@
+WEBVTT
+
+00:00.000 --> 00:10.360
+Why does your screen constantly move, update, and, you know, scroll, even when absolutely nothing in your actual life or your actual work has changed?
+
+00:10.900 --> 00:16.360
+Yeah, it is, it's basically the defining optical illusion of the 21st century.
+
+00:16.780 --> 00:20.380
+Welcome to today's Deep Dive, and I am looking right at you.
+
+00:20.560 --> 00:26.080
+Yes, you, the listener who is currently juggling like a dozen apps, drowning in notifications,
+
+00:26.080 --> 00:32.500
+and just trying to stay profoundly informed without feeling like you're suffocating under the weight of an infinite feed.
+
+00:33.160 --> 00:33.800
+We see you.
+
+00:34.540 --> 00:35.960
+Oh, absolutely. We've all been there.
+
+00:36.220 --> 00:38.300
+The question I just asked isn't rhetorical at all.
+
+00:38.580 --> 00:47.400
+It's actually the core puzzle we are unraveling today by exploring this dense, truly paradigm-shifting 2026 essay by the independent researcher Flyxion.
+
+00:48.040 --> 00:49.740
+Right, the never-ending ticker.
+
+00:49.740 --> 00:56.400
+Exactly. The never-ending ticker, quantification, attentional jurisdiction, and the right to finish.
+
+00:57.020 --> 01:02.480
+Okay, let's unpack this, because the premise here is wild, but it brings incredibly true.
+
+01:03.280 --> 01:09.400
+It argues that modern information systems have completely divorced your awareness from your competence.
+
+01:10.100 --> 01:15.060
+Yeah, they've built this society that is universally aware of every problem on the globe,
+
+01:15.160 --> 01:19.260
+but practically paralyzed when it comes to solving, well, a single one of them.
+
+01:19.260 --> 01:21.620
+And that viralysis isn't an accident, is it?
+
+01:21.780 --> 01:23.200
+No, it's by design.
+
+01:23.460 --> 01:28.440
+Or, I mean, at least it is the mathematical consequence of how our interfaces are designed.
+
+01:28.880 --> 01:32.500
+Flyxion actually starts with what they call the original observation.
+
+01:33.080 --> 01:34.660
+Right, the task manager thing.
+
+01:35.040 --> 01:37.840
+Yeah. So picture a piece of project management software.
+
+01:38.500 --> 01:41.540
+On the screen, you have these horizontal rows of task descriptions,
+
+01:41.880 --> 01:45.760
+and they are continuously drifting across your monitor in opposite directions.
+
+01:46.300 --> 01:48.720
+The rows literally never stop moving.
+
+01:48.720 --> 01:50.480
+It just keeps scrolling and scrolling.
+
+01:50.900 --> 01:55.040
+Exactly. But no tasks are being added, none are being completed.
+
+01:55.620 --> 01:58.180
+The underlying list of chores is totally static.
+
+01:58.840 --> 02:03.480
+So between one second and the next, the reality of your work hasn't changed one bit.
+
+02:04.580 --> 02:09.060
+Yet the screen is in this state of perpetual frantic motion.
+
+02:09.060 --> 02:14.480
+It's like the animated progress bar that just spins while the system is actually frozen.
+
+02:14.980 --> 02:20.640
+Or, you know, the news ticker at the bottom of a TV broadcast that just loops the same four headlines all day.
+
+02:21.040 --> 02:27.020
+The screen is screaming, like, things are happening, while the data is whispering, nothing has changed.
+
+02:27.420 --> 02:28.260
+That's a great way to put it.
+
+02:28.340 --> 02:34.640
+And Flyxion proved this mathematically with the representational motion theorem, or theorem 1.1.
+
+02:34.640 --> 02:38.760
+To understand it, we have to look at Claude Shannon's information theory.
+
+02:38.960 --> 02:39.720
+Oh, boy. Okay.
+
+02:40.120 --> 02:41.040
+Bear with me on the math.
+
+02:41.180 --> 02:42.360
+It's not too bad, I promise.
+
+02:42.760 --> 02:50.760
+In information theory, mutual information basically measures how much knowing one variable reduces your uncertainty about another.
+
+02:50.760 --> 02:54.640
+So novelty requires uncertainty to be resolved.
+
+02:55.140 --> 03:03.000
+So if I flip a trick coin that I know already has heads on both sides, the moment I look at the result, my information gain is exactly zero.
+
+03:03.360 --> 03:04.900
+Because I already knew what it was going to be.
+
+03:05.260 --> 03:05.980
+Precisely that.
+
+03:06.540 --> 03:12.320
+When you first open that task manager and glance at the static list, your uncertainty about your workload is resolved.
+
+03:12.540 --> 03:13.420
+You gain information.
+
+03:13.680 --> 03:13.780
+Right.
+
+03:13.780 --> 03:23.040
+But as the interface takes that exact same list and scrolls it predictably across the screen, it isn't giving you any new information about the state of your tasks.
+
+03:23.620 --> 03:34.080
+The theorem proves that while the information gain drops to zero and stays there permanently, the presentational activity, the literal distance the pixels have traveled on your screen, grows to infinity.
+
+03:34.560 --> 03:34.880
+Wow.
+
+03:35.460 --> 03:40.340
+So I am basically staring at a screensaver that is dressed up to look like an emergency.
+
+03:40.740 --> 03:41.220
+Exactly.
+
+03:41.220 --> 03:47.300
+To understand how we got here, the author breaks down the concept of the ticker into three evolutionary stages.
+
+03:47.600 --> 03:48.340
+Okay, let's go through those.
+
+03:48.760 --> 03:50.120
+The first is a physical device.
+
+03:50.600 --> 03:52.820
+Think of the 19th century stock ticker.
+
+03:53.180 --> 04:00.000
+It literally ticked, printing out numbers on a paper tape, but it only moved when a price actually changed on the exchange floor.
+
+04:00.320 --> 04:02.940
+So the motion was tethered to material reality.
+
+04:03.540 --> 04:05.960
+If the trading floor was quiet, the machine was silent.
+
+04:06.500 --> 04:08.680
+Yes, it was entirely event-driven.
+
+04:08.680 --> 04:12.620
+Then we moved to the second stage, which is the informational arrangement.
+
+04:13.120 --> 04:15.260
+This is the modern digital dashboard.
+
+04:15.520 --> 04:18.120
+Right, like the analytics pages on any software.
+
+04:18.520 --> 04:26.700
+Because the cost of displaying a metric dropped to basically zero, software engineers just started throwing every available number onto a screen.
+
+04:26.700 --> 04:32.220
+It doesn't matter if the person looking at the dashboard has the authority or the ability to change those numbers.
+
+04:32.600 --> 04:34.660
+It just looks comprehensive.
+
+04:35.080 --> 04:40.160
+Which leads us to the third stage, which I think is where the trap really snaps shut on you, the listener.
+
+04:40.520 --> 04:41.740
+The behavioral regulator.
+
+04:41.740 --> 04:53.260
+This is when the generalized social ticker, your feed, your constant notifications, your updating follower counts, makes you continuously aware of what can be measured, compared, and optimized.
+
+04:53.640 --> 04:54.320
+It's overwhelming.
+
+04:55.080 --> 04:55.520
+It is.
+
+04:55.800 --> 04:59.220
+The system manufactures an illusion of inexhaustibility.
+
+04:59.220 --> 05:04.980
+It implies urgency to capture your attention, completely untethered from the material state of the real world.
+
+05:05.580 --> 05:09.080
+So, representational motion replaces material progress.
+
+05:09.680 --> 05:09.840
+Okay.
+
+05:10.120 --> 05:12.860
+It's like sitting in a parked car in your driveway.
+
+05:13.180 --> 05:18.920
+But the dashboard is wired, so the speedometer is just endlessly racing between zero and 100.
+
+05:19.300 --> 05:20.280
+The engine is off.
+
+05:20.680 --> 05:21.620
+You're not going anywhere.
+
+05:22.040 --> 05:25.580
+But the interface is inducing this sheer panic of speed.
+
+05:25.800 --> 05:27.600
+That is the perfect analogy.
+
+05:27.600 --> 05:30.920
+But let me play the skeptic for a second here.
+
+05:31.460 --> 05:35.860
+If I know the Task app is just trying to look busy, why should I care?
+
+05:36.600 --> 05:38.700
+Isn't it just a harmless aesthetic choice?
+
+05:39.020 --> 05:40.220
+Like a design quirk?
+
+05:40.700 --> 05:47.660
+It stops being an aesthetic choice the moment those moving numbers are tied to your livelihood, your reputation, and your social standing.
+
+05:48.300 --> 05:52.460
+A moving display suggests incompletion without supplying evidence for it.
+
+05:52.660 --> 05:53.440
+What do you mean by that?
+
+05:53.440 --> 05:57.980
+Think about a static record, like a handwritten to-do list on a piece of paper.
+
+05:58.400 --> 05:59.180
+It just sits there.
+
+05:59.560 --> 06:00.740
+It allows you to audit it.
+
+06:01.280 --> 06:03.400
+Most importantly, it allows for closure.
+
+06:03.800 --> 06:06.740
+You cross the item off, and you see that it is done.
+
+06:07.000 --> 06:07.260
+Right.
+
+06:07.340 --> 06:08.220
+There's an end to it.
+
+06:08.220 --> 06:08.860
+Exactly.
+
+06:09.480 --> 06:13.660
+A moving ticker, by contrast, demands to be watched constantly.
+
+06:14.580 --> 06:23.680
+Systems financed by the harvesting of your attention have a deep underlying economic incentive to replace stable, finishable records with moving displays.
+
+06:24.080 --> 06:26.620
+Because if you can finish, you can leave.
+
+06:26.620 --> 06:29.020
+And they definitely can't monetize you leaving.
+
+06:29.280 --> 06:29.760
+Exactly.
+
+06:30.240 --> 06:35.160
+This bleeds perfectly into the next part of the deep dive, the quantification of existence.
+
+06:35.600 --> 06:43.500
+Once we understand that the ticker creates a false sense of perpetual motion, we have to look at what happens to human beings trapped inside this environment.
+
+06:43.500 --> 06:48.020
+Yes, the essay brings up Jaron Lanier's 2013 book, Who Owns the Future?
+
+06:48.580 --> 06:51.040
+Lanier was trying to solve a huge problem with the internet, right?
+
+06:51.320 --> 06:53.680
+He was trying to solve the invisible labor problem.
+
+06:54.300 --> 06:56.760
+Lanier pointed out this deep economic injustice.
+
+06:57.740 --> 07:05.400
+Giant tech companies extract immense value from the data, the photos, and the behavioral patterns of millions of people, but they don't pay us for it.
+
+07:05.560 --> 07:06.440
+We are the product.
+
+07:06.540 --> 07:06.740
+Right.
+
+07:07.780 --> 07:11.820
+Lanier's proposed alternative was a system where data provenance is tracked.
+
+07:11.820 --> 07:18.800
+You would get paid micro royalties every time your data or your posts were used to train an algorithm or target an ad.
+
+07:19.440 --> 07:22.120
+Which sounds incredibly fair on the surface.
+
+07:22.500 --> 07:22.660
+Yeah.
+
+07:22.760 --> 07:24.820
+If I generate the value, pay me the pennies, right?
+
+07:25.380 --> 07:29.460
+But Flyxion points out the devastating paradox buried in that utopia.
+
+07:30.180 --> 07:35.520
+To compensate everyone equitably for their data, you have to measure absolutely everything they do.
+
+07:35.520 --> 07:42.820
+And if you measure everything, you create a continuous running tally of human worth at every single moment of a person's life.
+
+07:43.400 --> 07:48.620
+So to fix the invisible labor problem, we accidentally mandate hyper-visibility.
+
+07:48.920 --> 07:49.760
+Everything is tracked.
+
+07:50.340 --> 07:53.620
+And visibility to oneself is not a neutral psychological state.
+
+07:53.620 --> 08:00.180
+The essay brings up a fascinating and honestly slightly terrifying historical case study, the clout score.
+
+08:00.600 --> 08:02.200
+Oh man, clout.
+
+08:02.480 --> 08:15.080
+For anyone who missed this era of the internet, around like 2011, you would link your Twitter, your Facebook, your LinkedIn, and this startup would spit out a number from 1 to 100, telling you exactly how influential you were.
+
+08:15.360 --> 08:16.920
+What happened when people got their scores?
+
+08:16.920 --> 08:18.060
+It was madness.
+
+08:18.800 --> 08:20.800
+People were putting their clout scores on their resumes.
+
+08:21.540 --> 08:24.720
+Airlines were giving lounge access to people with scores over 50.
+
+08:25.340 --> 08:27.920
+But the crazy part was how it changed how my friends acted.
+
+08:28.340 --> 08:28.700
+How so?
+
+08:29.080 --> 08:33.920
+They stopped posting normal updates and started trying to, you know, hack the algorithm.
+
+08:34.660 --> 08:38.520
+They would pick fights online just to get replies because replies boosted the score.
+
+08:38.960 --> 08:42.420
+Which is the perfect illustration of what Flyxion is analyzing here.
+
+08:42.420 --> 08:47.920
+Clout started as a measure of influence, but very quickly became a set of instructions for behavior.
+
+08:48.320 --> 08:49.880
+The measure swallowed the reality.
+
+08:50.520 --> 08:52.300
+People always bring up Goodhart's law here, right?
+
+08:52.620 --> 08:55.540
+When a measure becomes a target, it ceases to be a good measure.
+
+08:55.820 --> 08:56.260
+They do.
+
+08:56.680 --> 09:01.800
+But Flyxion makes a really vital distinction between Goodhart's law and Donald Campbell's law.
+
+09:02.420 --> 09:06.600
+They are often conflated, but they describe two totally different mechanisms of failure.
+
+09:07.120 --> 09:08.160
+Okay, let's break that down.
+
+09:08.160 --> 09:13.540
+Goodhart, who was an economist, was originally talking about statistical regressional overstatement.
+
+09:13.840 --> 09:15.760
+That is passive selection noise.
+
+09:16.140 --> 09:16.400
+Okay.
+
+09:17.060 --> 09:19.200
+Pretend I haven't taken statistics in 10 years.
+
+09:19.420 --> 09:21.300
+What is passive selection noise?
+
+09:22.040 --> 09:22.400
+Sure.
+
+09:22.860 --> 09:29.000
+Imagine you want to find the most dedicated employees, and you use hours logged at the desk as your proxy metric.
+
+09:29.620 --> 09:32.220
+Even if the employees don't know they are being measured,
+
+09:32.580 --> 09:36.980
+the group you select will naturally have their true dedication overstated by the proxy.
+
+09:36.980 --> 09:37.880
+Oh, I see.
+
+09:38.160 --> 09:42.980
+You'll accidentally sweep up the people who are just inefficient, or the people who fall asleep in their chairs.
+
+09:43.340 --> 09:47.100
+That is passive distortion through statistical regression to the mean.
+
+09:47.480 --> 09:47.640
+Got it.
+
+09:47.860 --> 09:50.700
+So the metric is just noisy and inaccurate.
+
+09:51.340 --> 09:54.760
+But Campbell's law is about active behavioral distortion.
+
+09:55.560 --> 09:57.120
+Metric-induced goal displacement.
+
+09:57.740 --> 10:02.660
+This is what happens when human agents know they are being measured, and that measure is attached to a reward.
+
+10:03.120 --> 10:04.580
+So they game the system.
+
+10:04.580 --> 10:11.940
+They actively change their behavior to optimize the proxy, even if it actively destroys the actual value they are supposed to be creating.
+
+10:13.140 --> 10:19.680
+Flyxion models this mathematically using a version of the multitask model developed by economists Holmstrom and Milgram.
+
+10:19.680 --> 10:24.780
+I am looking at this math in the notes, and honestly, it's brutal.
+
+10:24.940 --> 10:28.940
+Walk us through how this multitask model actually works in practice.
+
+10:29.780 --> 10:30.760
+Imagine a teacher.
+
+10:31.240 --> 10:33.100
+Their job consists of two tasks.
+
+10:33.860 --> 10:37.140
+Task one is teaching kids to pass a standardized math test.
+
+10:37.140 --> 10:44.940
+Task two is mentoring kids, helping them develop emotional resilience, and inspiring a genuine love of learning.
+
+10:45.440 --> 10:47.240
+Both of which have true value to society.
+
+10:47.460 --> 10:47.880
+Exactly.
+
+10:48.800 --> 10:51.080
+Now, the school district comes in and says,
+
+10:51.740 --> 10:56.800
+We are attaching a massive financial bonus to task one, the test scores.
+
+10:57.180 --> 11:02.560
+Because task one is easy to measure, and task two is basically impossible to quantify.
+
+11:02.560 --> 11:11.820
+The math models human effort as a substitute good, meaning there are only so many hours in a day, and only so much energy in a human body.
+
+11:12.500 --> 11:17.080
+Trying really hard at one thing mathematically restricts your ability to try hard at another.
+
+11:17.420 --> 11:18.700
+Right. That makes sense.
+
+11:19.060 --> 11:24.280
+As the reward for the measured task climbs, the teacher naturally shifts effort toward it.
+
+11:24.600 --> 11:27.800
+But they have to pull that effort away from the unmeasured task, too.
+
+11:28.380 --> 11:29.320
+They stop mentoring.
+
+11:29.840 --> 11:31.240
+They just drill test prep.
+
+11:31.240 --> 11:35.520
+Which is really sad, but maybe you think, well, at least the math scores are going up.
+
+11:35.880 --> 11:37.460
+And that's where the math bites you.
+
+11:37.920 --> 11:43.120
+The proof shows that at a certain threshold, as the incentive for the measured task continues to climb,
+
+11:43.440 --> 11:49.800
+the total gross output value, the combined true value of the student's education to society, actually drops.
+
+11:50.060 --> 11:50.700
+Right. Really?
+
+11:50.960 --> 11:51.240
+Yes.
+
+11:51.540 --> 11:54.960
+The incentive attached to the proxy metric doesn't just plateau.
+
+11:55.300 --> 11:57.500
+It actively damages the holistic work.
+
+11:57.500 --> 12:01.780
+A strong enough pressure on a partial metric replaces the core mission entirely.
+
+12:01.780 --> 12:05.060
+So the incentive destroys the overall value.
+
+12:05.060 --> 12:10.400
+And this pressure is compounded by how these metrics are calculated over time, isn't it?
+
+12:11.040 --> 12:17.620
+Because the essay highlights the mathematical difference between accumulating metrics and decaying metrics.
+
+12:17.620 --> 12:21.040
+This is a crucial hidden architecture in our digital lives.
+
+12:21.600 --> 12:24.140
+An accumulating metric is like a historical record.
+
+12:24.300 --> 12:27.000
+It's an integral function of your effort over time.
+
+12:27.180 --> 12:28.000
+Like getting a degree.
+
+12:28.260 --> 12:28.560
+Exactly.
+
+12:28.780 --> 12:32.940
+If you write a novel or you earn a college degree, that accomplishment is yours forever.
+
+12:33.420 --> 12:34.340
+You can stop writing.
+
+12:34.520 --> 12:35.320
+You can stop studying.
+
+12:35.520 --> 12:37.500
+And the fact that you did the work doesn't disappear.
+
+12:37.760 --> 12:38.600
+The sum is static.
+
+12:38.600 --> 12:41.980
+But a decaying metric is something entirely different.
+
+12:42.660 --> 12:45.320
+A decaying metric applies a geometric discount rate.
+
+12:45.640 --> 12:51.840
+Think of your credit score or an algorithm's estimation of your social media relevance or a gig economy driver's rating.
+
+12:52.340 --> 12:54.460
+If you stop participating, your score doesn't freeze.
+
+12:54.760 --> 12:55.820
+It actively drops.
+
+12:56.180 --> 12:57.760
+Oh, that's stressful just to think about.
+
+12:58.180 --> 12:59.840
+The math here is incredibly stark.
+
+12:59.840 --> 13:10.040
+A score with a geometric decay rate requires a perpetual, infinite stream of ongoing contributions just to hold the score steady at a positive level.
+
+13:10.860 --> 13:12.760
+I want you, the listener, to really picture this.
+
+13:13.060 --> 13:14.980
+It is exactly like a hamster wheel.
+
+13:15.680 --> 13:17.040
+The wheel isn't just a place to run.
+
+13:17.620 --> 13:25.520
+The wheel is designed so that if you just want to stand perfectly still, if you just want to maintain your current position in the cage, you have to actively sprint.
+
+13:25.940 --> 13:26.800
+That's exactly it.
+
+13:26.800 --> 13:29.780
+The moment you stop to breathe, the wheel throws you backward.
+
+13:30.340 --> 13:32.760
+Why on earth would engineers design systems this way?
+
+13:33.180 --> 13:38.520
+Well, there is actually a legitimate statistical reason to use decay in certain specific contexts.
+
+13:39.100 --> 13:42.180
+Flyxion brings up the Kalman filter to explain this.
+
+13:42.400 --> 13:43.400
+A Kalman filter?
+
+13:44.080 --> 13:44.620
+What is that?
+
+13:45.000 --> 13:52.580
+It's an algorithm used in engineering and statistics to estimate the true state of a system from a series of noisy measurements over time.
+
+13:52.580 --> 14:01.000
+Think of it like trying to guess the exact location of a car driving through a long tunnel, but you only get brief glimpses of it when it passes under the occasional streetlight.
+
+14:01.500 --> 14:02.340
+Okay, I can picture that.
+
+14:02.480 --> 14:08.680
+The algorithm uses exponential smoothing, which is a mathematical form of decay, to predict where the car is in the dark.
+
+14:08.680 --> 14:13.840
+So it weights the most recent streetlight glimpse much more heavily than the glimpse from five minutes ago.
+
+14:14.220 --> 14:14.460
+Yes.
+
+14:15.140 --> 14:25.240
+If you are trying to estimate someone's present competence at a highly degradable skill, you legitimately should weight their performance from yesterday more heavily than their performance from a decade ago.
+
+14:25.820 --> 14:31.900
+If I am getting on an airplane, I want the pilot's rating to reflect how they flew this month, not just how they flew in 2010.
+
+14:32.140 --> 14:33.060
+It makes total sense.
+
+14:33.420 --> 14:35.280
+Decay is a tool for accurate inference.
+
+14:35.280 --> 14:37.580
+But here is the pathology.
+
+14:38.380 --> 14:49.560
+When a decaying score is taken out of the context of inference and is instead used as an incentive that is displayed to the user and tied to their livelihood, it transforms into a disciplinary device.
+
+14:49.780 --> 14:50.400
+It becomes a weapon.
+
+14:50.680 --> 14:50.940
+Yes.
+
+14:51.460 --> 14:53.360
+It creates a perpetual obligation.
+
+14:54.180 --> 14:56.560
+The system is no longer just trying to estimate your skill.
+
+14:57.080 --> 15:01.660
+It is relying on your continued frantic activity to fuel its own data needs.
+
+15:01.660 --> 15:06.660
+And it borrows the authority of statistical inference to justify making you run on the hamster wheel.
+
+15:07.380 --> 15:14.500
+So we have individuals sprinting on metric hamster wheels, chasing decaying scores that force them to abandon unmeasured meaningful work.
+
+15:15.140 --> 15:17.100
+But what does this mean when we zoom out?
+
+15:17.360 --> 15:25.240
+Like, if this metric-induced distortion breaks the individual, what happens when this continuous stream of demands is scaled up to society as a whole?
+
+15:25.240 --> 15:33.880
+To understand the societal scale, Flyxion points us back to the economist Herbert Simon, who coined the concept of the attention economy way back in 1971.
+
+15:34.300 --> 15:34.780
+1971.
+
+15:35.200 --> 15:35.360
+Wow.
+
+15:35.460 --> 15:37.840
+He saw this coming a long time ago.
+
+15:37.900 --> 15:38.420
+He really did.
+
+15:39.200 --> 15:41.820
+Simon observed a fundamental asymmetry in human progress.
+
+15:42.300 --> 15:48.600
+The availability of information can grow exponentially because storage and transmission costs continually fall.
+
+15:49.060 --> 15:53.960
+But human processing capacity, our biology, our frontal lobes, is strictly bounded.
+
+15:54.080 --> 15:54.840
+It does not scale.
+
+15:54.840 --> 15:56.700
+We only have so much brain power.
+
+15:57.060 --> 16:00.840
+Therefore, a wealth of information necessarily creates a poverty of attention.
+
+16:01.480 --> 16:02.680
+I love bringing it back to biology.
+
+16:03.780 --> 16:05.980
+The problem isn't a lack of discipline on my part.
+
+16:06.280 --> 16:11.380
+The problem is that the environment has fundamentally diverged from my biological capacity to process it.
+
+16:11.820 --> 16:19.280
+To prove how catastrophic this is, the essay formalizes this using queuing theory, specifically the MM1 queuing model of information.
+
+16:19.280 --> 16:25.480
+I'm looking at this model, and it's usually used for factory assembly lines or computer network servers, right?
+
+16:25.480 --> 16:28.080
+How does it apply to human empathy and attention?
+
+16:28.080 --> 16:33.740
+Think of your attention as the server and the world's demands as the data packets.
+
+16:33.740 --> 16:45.080
+In the M-slash-M-slash-1 model, messages are arriving at a certain rate, which mathematicians call lambda, and you, the human, can process them at a certain rate called mu.
+
+16:45.080 --> 16:46.080
+Okay.
+
+16:46.080 --> 16:48.080
+Lambda is the incoming demands.
+
+16:48.080 --> 16:50.440
+Mu is my brain's processing speed.
+
+16:50.440 --> 16:51.440
+Exactly.
+
+16:52.100 --> 17:00.560
+The model assumes that relevant, actionable messages and completely irrelevant, non-actionable messages are mixed together, arriving indistinguishably.
+
+17:00.960 --> 17:09.460
+If the total volume of messages, lambda, stays safely below your processing capacity, mu, you can eventually sort through the queue and get to everything.
+
+17:10.040 --> 17:12.000
+But what happens when lambda gets close to mu?
+
+17:12.420 --> 17:17.560
+Which, let's be honest, is basically everyone's email inbox, social feed, and Slack channel right now.
+
+17:17.560 --> 17:21.280
+We are constantly operating at like 99% capacity.
+
+17:22.000 --> 17:25.500
+The math shows a catastrophic non-linear degradation.
+
+17:26.020 --> 17:27.340
+It's not a gentle slope.
+
+17:27.680 --> 17:28.380
+It's a cliff.
+
+17:28.780 --> 17:30.840
+Let's say actionable messages have a deadline.
+
+17:31.440 --> 17:34.180
+If you don't read them in time, the opportunity to help is lost.
+
+17:34.900 --> 17:45.660
+As the total volume of messages approaches your maximum processing capacity, as the ratio of lambda to mu approaches 1, the delay for any given message shoots toward infinity.
+
+17:45.660 --> 17:48.100
+The backlog compounds on itself.
+
+17:48.540 --> 17:54.320
+The probability of you finding and acting on a relevant message before its deadline plummets toward absolute zero.
+
+17:54.840 --> 17:57.360
+Because I'm spending all my time just triaging the noise.
+
+17:57.880 --> 18:03.820
+If I can't perfectly filter the actionable from the non-actionable at the exact millisecond they arrive,
+
+18:03.820 --> 18:12.720
+then every single irrelevant tragedy broadcast into my feed actively degrades my ability to respond to the important things happening right in front of me.
+
+18:13.120 --> 18:13.340
+Yes.
+
+18:13.560 --> 18:18.000
+And this leads to what the author calls responsibility without jurisdiction.
+
+18:18.320 --> 18:20.660
+It is the globalization of concern.
+
+18:21.140 --> 18:21.560
+Think about it.
+
+18:21.580 --> 18:26.840
+A century ago, your awareness of human suffering was largely limited to your geographic community.
+
+18:26.840 --> 18:30.240
+You knew about the barn that burned down down the road.
+
+18:30.840 --> 18:32.780
+And you could actually go help rebuild it.
+
+18:32.900 --> 18:33.280
+Exactly.
+
+18:34.120 --> 18:40.020
+Today, you can pull a piece of glass out of your pocket and within three minutes watch a famine unfold across the world,
+
+18:40.440 --> 18:46.220
+see a corporate scandal in a city you've never visited, and read about a legislative crisis on another continent.
+
+18:46.840 --> 18:52.020
+The presentation of these problems on your feed implies that you are supposed to do something about them.
+
+18:52.420 --> 18:56.440
+Or, at the very least, feel the appropriate amount of agonizing guilt.
+
+18:56.440 --> 18:58.860
+But I can't do anything about most of them.
+
+18:59.380 --> 19:01.700
+I'm just a person sitting on my couch in my living room.
+
+19:01.800 --> 19:02.880
+I don't command an army.
+
+19:03.280 --> 19:04.900
+I don't control the federal budget.
+
+19:05.380 --> 19:11.140
+To map out why this feels so terrible, the essay separates our relationship to problems into a matrix of four conditions.
+
+19:11.800 --> 19:15.420
+Knowledge, care, duty, and ability.
+
+19:15.740 --> 19:16.980
+Let's expand on this matrix.
+
+19:17.340 --> 19:18.860
+What does it look like in real life?
+
+19:19.520 --> 19:20.880
+Let's compare two people.
+
+19:21.300 --> 19:25.860
+First, look at a local mayor whose town budget has just been slashed by the state.
+
+19:26.440 --> 19:29.080
+That mayor has the knowledge of the potholes in the road.
+
+19:29.640 --> 19:31.920
+They have the care, because it's their town.
+
+19:32.260 --> 19:35.240
+They have the duty, because they were elected to fix it.
+
+19:35.540 --> 19:39.900
+But they lack the ability, the cause, the levers, the money to actually intervene.
+
+19:40.400 --> 19:42.380
+That is a painful state of impotence.
+
+19:42.800 --> 19:47.780
+Now, look at you, the private citizen watching a push notification about a distant famine.
+
+19:47.780 --> 19:50.800
+You have the knowledge, and you legitimately care.
+
+19:51.420 --> 19:54.720
+But you don't have an assigned duty, and you certainly lack the ability.
+
+19:55.600 --> 20:02.080
+The tragedy of modern information networks is that they aggressively manufacture the specific scenario at an industrial scale.
+
+20:02.760 --> 20:07.020
+Universal knowledge and care combined with absolutely zero duty or ability.
+
+20:07.560 --> 20:12.400
+We've built an infrastructure that systematically generates guilt without supplying causal levers.
+
+20:12.400 --> 20:13.120
+Exactly.
+
+20:14.240 --> 20:16.120
+I mean, it is devastatingly effective.
+
+20:16.960 --> 20:23.620
+And when humans are placed in a condition of intense, pressured concern, but lack the material means to intervene,
+
+20:23.940 --> 20:27.920
+they are forced to turn to the economy of symbolic participation.
+
+20:28.540 --> 20:29.260
+Meaning posting?
+
+20:30.100 --> 20:30.560
+Liking.
+
+20:31.200 --> 20:32.240
+Retweeting the crisis.
+
+20:32.760 --> 20:34.720
+Putting a filter on my profile picture.
+
+20:34.980 --> 20:38.620
+The essay models this using a linear programming model of moral effort.
+
+20:38.620 --> 20:42.460
+In linear programming, you have an objective function you want to maximize or minimize,
+
+20:42.720 --> 20:45.820
+subject to certain constraints like time, money, or social capital.
+
+20:46.220 --> 20:48.140
+So what's the objective function here?
+
+20:48.760 --> 20:53.340
+Here, your brain's objective function is to minimize the psychic discomfort of guilt,
+
+20:53.460 --> 20:55.820
+while maximizing the perceived moral action.
+
+20:56.220 --> 21:03.560
+When confronted with a crisis, you can choose material action, which is expensive, slow, hard to verify, and might completely fail.
+
+21:03.560 --> 21:11.440
+Or you can choose symbolic action, which is immediate, socially visible, incredibly cheap, and makes you feel like you did something.
+
+21:11.960 --> 21:15.240
+So symbolic action effectively hacks the constraint equation.
+
+21:15.620 --> 21:15.940
+Yes.
+
+21:16.480 --> 21:20.540
+The math proves that if the cost of symbolic action drops low enough,
+
+21:20.660 --> 21:27.360
+and if the human brain experiences symbolic action as roughly equivalent to material action and relieving that inner guilt pressure,
+
+21:27.360 --> 21:34.740
+then material effort drops to literally zero, because the brain rationally takes the path of least resistance to relieve the pressure.
+
+21:35.140 --> 21:37.040
+We aren't bad, apathetic people.
+
+21:37.480 --> 21:41.300
+We're just optimizing our moral cost function in a completely broken system.
+
+21:41.740 --> 21:42.340
+Precisely.
+
+21:42.760 --> 21:45.980
+The moral costs of this perpetual exposure are just immense.
+
+21:46.740 --> 21:47.500
+The author lists
+
+21:47.500 --> 21:49.300
+attentional exhaustion.
+
+21:50.140 --> 21:53.980
+Your literal neurological capacity for sustained concern is depleted.
+
+21:54.800 --> 21:55.680
+Misplaced confidence?
+
+21:55.680 --> 22:01.880
+You think you understand a conflict's geopolitical conflict because you read a thread of six posts by a stranger.
+
+22:02.720 --> 22:03.380
+Shallow judgment.
+
+22:04.180 --> 22:07.940
+But the worst one, to me, is the displacement of local obligations.
+
+22:08.200 --> 22:09.400
+It's a huge problem.
+
+22:09.760 --> 22:14.660
+The energy you spend emotionally agonizing over a distant crisis you cannot change
+
+22:14.660 --> 22:19.160
+is finite energy that you withdraw from your family, your workplace, and your local community.
+
+22:19.300 --> 22:21.880
+The exact problems you actually could have solved.
+
+22:22.320 --> 22:25.440
+Which brings us to a highly controversial defense of logging off.
+
+22:25.440 --> 22:27.520
+The author calls it rational disengagement.
+
+22:28.240 --> 22:29.400
+I have to ask about this.
+
+22:29.560 --> 22:29.740
+Yeah.
+
+22:30.140 --> 22:33.560
+Is muting notifications or ignoring the news a sign of apathy?
+
+22:34.020 --> 22:38.660
+Because, you know, society really makes you feel like a terrible citizen if you step away from the feed.
+
+22:39.240 --> 22:40.700
+Silence is violence, right?
+
+22:41.280 --> 22:43.640
+The author gives a definitive, rigorous no.
+
+22:43.640 --> 22:46.440
+Remember the MM1 cueing model.
+
+22:46.440 --> 22:54.860
+When you cannot filter the actionable from the non-actionable, muting the feed is a highly logical, rational inference about a noisy environment.
+
+22:55.000 --> 22:56.160
+It's just preserving bandwidth.
+
+22:56.540 --> 22:59.600
+It is a defense mechanism to preserve your capacity to act.
+
+22:59.980 --> 23:03.080
+It is not a moral verdict on the importance of the world's problems.
+
+23:03.540 --> 23:06.840
+It is a verdict on the usefulness of the broadcast mechanism.
+
+23:07.300 --> 23:10.800
+Muting is how you survive so you can actually do something useful offline.
+
+23:10.800 --> 23:20.160
+If broadcasting all problems to all people just causes paralysis, exhaustion, and symbolic posturing, how are we supposed to allocate our attention?
+
+23:20.960 --> 23:21.620
+How do we filter?
+
+23:22.500 --> 23:24.560
+And that brings us to the proposed cure.
+
+23:25.200 --> 23:27.060
+The Mind Your Own Business Protocol.
+
+23:27.780 --> 23:28.980
+Or MYOB.
+
+23:28.980 --> 23:37.400
+I love this protocol because it takes a phrase usually used to rudely dismiss people and elevates it into a rigorous ethical framework.
+
+23:37.940 --> 23:45.020
+The author proposes a radical redefinition of what local responsibility actually means, and it starts with the leaky pipe example.
+
+23:45.980 --> 23:47.720
+Okay, I love a good plumbing analogy.
+
+23:48.320 --> 23:51.760
+If water is dripping from my ceiling, that is a local problem.
+
+23:52.200 --> 23:53.420
+But what makes it local?
+
+23:53.420 --> 23:56.240
+It is not just geographic proximity.
+
+23:57.120 --> 24:00.240
+A problem is practically local to you when it meets four criteria.
+
+24:00.980 --> 24:02.640
+First, it has a discoverable location.
+
+24:02.900 --> 24:03.860
+You can see the water dripping.
+
+24:04.600 --> 24:07.200
+Second, it has an identifiable failure mechanism.
+
+24:07.800 --> 24:11.220
+You can cut a hole in the drywall, find the copper pipe, and see the crack.
+
+24:11.460 --> 24:11.940
+Makes sense.
+
+24:12.780 --> 24:15.720
+Third, you have an available repertoire of repairs.
+
+24:16.080 --> 24:19.880
+You can grab a wrench, drive to the hardware store, buy a new joint, and swap it out.
+
+24:19.880 --> 24:23.660
+And fourth, it has observable criteria for success.
+
+24:24.300 --> 24:28.780
+Meaning, I turn the water main back on, and I stand there and look at it to see if it drips.
+
+24:29.600 --> 24:33.520
+Observation, diagnosis, intervention, verification.
+
+24:34.000 --> 24:35.880
+Your proximity isn't just about distance.
+
+24:36.000 --> 24:38.340
+It's about your position of practical efficacy.
+
+24:38.340 --> 24:50.680
+A software developer fixing a bug in a server located 3,000 miles away has local access to that problem because they can see the code, diagnose the logic, push a patch, and run a test to verify it.
+
+24:50.900 --> 24:51.160
+Oh, wow.
+
+24:51.380 --> 24:56.620
+By contrast, a person watching a street brawl right outside their window might be geographically close.
+
+24:57.040 --> 25:07.240
+But if they don't know the parties, have no authority to intervene safely, and can't verify the aftermath, that problem is fundamentally less local to them than the bug is to the developer.
+
+25:07.240 --> 25:09.040
+That reframing is incredible.
+
+25:10.060 --> 25:13.180
+Locality is about agency, not just geography.
+
+25:13.740 --> 25:16.920
+And this leads to the four dimensions of the MYOB protocol.
+
+25:17.720 --> 25:18.040
+Yes.
+
+25:18.300 --> 25:24.780
+When deciding where to allocate your finite attention, you should prioritize problems where you possess four things.
+
+25:25.440 --> 25:27.760
+Observational access, you can see what's happening.
+
+25:28.500 --> 25:30.960
+Causal competence, you have the skills to intervene.
+
+25:31.760 --> 25:35.580
+Feedback reliability, you can tell if your intervention actually worked.
+
+25:35.580 --> 25:36.960
+And legitimacy.
+
+25:37.880 --> 25:41.740
+I want to dig into legitimacy because I feel like that's the one we forget the most on the Internet.
+
+25:42.080 --> 25:43.300
+It is the most important one.
+
+25:44.340 --> 25:46.540
+The essay formulates a readiness index.
+
+25:47.060 --> 25:49.040
+It's a multiplicative mathematical model.
+
+25:49.560 --> 25:54.500
+You multiply your access by your competence, by your feedback, by your legitimacy.
+
+25:54.500 --> 26:02.500
+Because it is multiplicative, if any single one of those factors is zero, your total readiness to intervene is mathematically zero.
+
+26:02.500 --> 26:13.160
+So even if I have 100% observational access, 100% competence, and 100% feedback reliability, if my legitimacy is zero, my right to intervene is zero.
+
+26:13.800 --> 26:15.800
+Competence is not entitlement.
+
+26:16.160 --> 26:24.360
+Just because you have the technical skill to hack into an institution's database and fix their inefficient filing system doesn't mean you have the legitimate authority to do it.
+
+26:24.360 --> 26:31.180
+Just because you think you know exactly how your neighbors should discipline their kids doesn't give you the standing to rearrange their household.
+
+26:31.520 --> 26:32.160
+It's boundaries.
+
+26:32.760 --> 26:39.840
+The protocol protects people from technocratic saviors who impose solutions without the consent of the affected parties.
+
+26:39.840 --> 26:44.600
+Let's talk about the math of how we actually spend our attention under this protocol.
+
+26:44.940 --> 26:50.920
+The essay brings up Proposition 9.1 and 9.2, the equi-marginal allocation of attention.
+
+26:51.820 --> 26:55.360
+What does this mean for you, the listener, trying to figure out what to care about today?
+
+26:55.840 --> 26:59.780
+It's a mathematical proof that utterly destroys how we currently operate.
+
+27:00.440 --> 27:03.280
+Currently, we allocate our attention based on visibility.
+
+27:03.820 --> 27:08.280
+How loud a problem is, how horrific the imagery is, how much it is trending on social media.
+
+27:08.280 --> 27:19.880
+The proof shows that allocating a finite budget of attention based on visibility is vastly inferior to allocating it based on the marginal expected corrective benefit.
+
+27:20.440 --> 27:22.840
+Marginal expected corrective benefit.
+
+27:23.220 --> 27:25.460
+That sounds like an economics textbook.
+
+27:25.660 --> 27:26.440
+Break that down for us.
+
+27:26.640 --> 27:34.900
+It means you should ask yourself, if I spend one more hour of my attention on this problem, how much actual real-world correction will occur?
+
+27:34.900 --> 27:42.940
+For a trending global geopolitical crisis, spending one more hour reading posts about it produces zero marginal corrective benefit.
+
+27:43.480 --> 27:46.800
+You learn nothing you can act on, and you change nothing.
+
+27:47.460 --> 27:55.720
+But spending one hour helping your kid with math, or reviewing a contract for your local community board, produces a massive marginal corrective benefit.
+
+27:55.720 --> 27:56.440
+Exactly.
+
+27:57.140 --> 28:09.680
+The math proves that maximizing human welfare requires us to shift our attention away from the highly visible problems we cannot solve, and aggressively toward the quiet local problems we can solve.
+
+28:09.920 --> 28:11.240
+But I have to push back here.
+
+28:11.460 --> 28:12.400
+I have to play devil's advocate.
+
+28:13.460 --> 28:18.300
+Am I supposed to just 10-mile and garden and completely ignore systemic injustice?
+
+28:18.960 --> 28:20.080
+Ignore climate change?
+
+28:20.200 --> 28:21.740
+Ignore distant emergencies?
+
+28:21.740 --> 28:29.600
+Isn't the MYOB protocol just a highly intellectualized, extremely convenient excuse for privilege and complacency?
+
+28:29.980 --> 28:35.740
+Like, oh, I can't personally fix global poverty, so I'm just going to focus on my golf swing and ignore the world.
+
+28:36.460 --> 28:40.100
+It is the most crucial objection, and Phloxion confronts it head-on.
+
+28:40.660 --> 28:43.760
+The MYOB protocol is a defeasible presumption.
+
+28:44.100 --> 28:48.200
+Meaning it's a default rule, but one that can be overridden by specific evidence.
+
+28:48.200 --> 28:53.520
+Exactly. It's a default stance of humility, not an absolute prohibition on caring.
+
+28:54.180 --> 28:56.320
+The text explicitly outlines three exceptions.
+
+28:56.700 --> 28:57.580
+First, emergencies.
+
+28:58.160 --> 29:05.460
+If a child is drowning in a shallow pond right in front of you, you don't calculate your jurisdiction or check your readiness index.
+
+29:05.560 --> 29:06.300
+You pull them out.
+
+29:06.880 --> 29:10.140
+This incorporates philosopher Peter Singer's famous rescue principle.
+
+29:10.520 --> 29:11.660
+Okay, that makes sense.
+
+29:11.660 --> 29:14.020
+Second, external harms.
+
+29:14.640 --> 29:22.580
+If your factory is polluting a river, you can't claim the downstream cancer cluster isn't your business just because it's outside your immediate visual horizon.
+
+29:23.120 --> 29:26.460
+You caused it, so your jurisdiction extends to it.
+
+29:26.920 --> 29:29.420
+What about big systemic issues like climate change?
+
+29:29.820 --> 29:32.500
+I didn't personally cause it in a vacuum, but it affects me.
+
+29:32.720 --> 29:35.940
+That falls under the third exception, institutional duties.
+
+29:36.660 --> 29:38.660
+Systemic problems require institutions.
+
+29:38.660 --> 29:44.900
+The protocol argues that your duty isn't to agonizingly monitor climate data on your phone and feel guilty.
+
+29:45.540 --> 29:55.360
+Your duty is to vote for, fund, and support the institutions and specialists who actually do have the observational access and causal competence to intervene at scale.
+
+29:55.820 --> 29:57.540
+Ah, so you delegate the jurisdiction.
+
+29:57.980 --> 30:01.420
+Furthermore, local includes institutional extensions.
+
+30:01.420 --> 30:09.340
+A climate scientist studying a distant glacier using satellite data and rigorous peer review does have local access, conceptually.
+
+30:09.780 --> 30:12.200
+They have the feedback mechanisms and the competence.
+
+30:12.740 --> 30:14.540
+So the protocol isn't saying don't care.
+
+30:15.240 --> 30:19.280
+It's saying that non-intervention can actually be a positive epistemic virtue.
+
+30:19.280 --> 30:28.900
+Deciding not to act, deciding not to post an uninformed opinion because you realize you lack the information to act well, isn't apathy.
+
+30:29.440 --> 30:30.440
+It's humility.
+
+30:30.960 --> 30:33.540
+It's preventing the harm of ignorant interference.
+
+30:34.020 --> 30:34.420
+Exactly.
+
+30:34.420 --> 30:41.860
+If we agree that problems should be handled by those equipped to solve them, we then have to ask a very dark question.
+
+30:43.140 --> 30:49.660
+Why do so many problems seem to persist forever, even when we hand them over to well-funded institutions?
+
+30:50.040 --> 30:53.760
+And that scales us up from individual boundaries to organizational behavior.
+
+30:54.660 --> 30:58.880
+If the individual is broken by the ticker, the institutions are arguably worse.
+
+30:59.300 --> 31:01.800
+We have to talk about the institutional ticker.
+
+31:01.940 --> 31:02.480
+Let's do it.
+
+31:02.480 --> 31:06.320
+The institutional ticker is the dashboard that runs an organization.
+
+31:06.840 --> 31:12.500
+The fundamental flaw is that administrative systems naturally record activity instead of outcomes.
+
+31:13.400 --> 31:21.480
+It is incredibly cheap and easy for a government department to count how many cases it processed, how many inspections it completed, or how many funds it distributed.
+
+31:21.880 --> 31:22.980
+Because it's just counting widgets.
+
+31:23.380 --> 31:23.620
+Right.
+
+31:23.840 --> 31:30.360
+It is incredibly difficult and expensive to measure the verified reduction of harm in the real world.
+
+31:30.360 --> 31:35.460
+Did the homelessness actually go down, or did you just move people to a different street?
+
+31:36.220 --> 31:39.480
+Because outcomes are hard to measure, dashboards report activity.
+
+31:40.320 --> 31:43.320
+And we, the public, assume that activity equals correction.
+
+31:44.060 --> 31:46.440
+We see the big numbers and think the problem is being handled.
+
+31:46.440 --> 31:49.940
+Which brings us to the correction reproduction problem.
+
+31:50.580 --> 31:52.360
+Proposition 11.1.
+
+31:52.540 --> 31:58.520
+This is a mathematical unpacking of institutional incentives that will make you look at every bureaucracy differently.
+
+31:59.800 --> 32:06.420
+Imagine an institution is funded based on the need, meaning they get a bigger budget the larger the problem is.
+
+32:06.660 --> 32:06.840
+Okay.
+
+32:06.840 --> 32:15.760
+The mathematical model proves that under need-based funding, the institution's optimal effort level to actually correct the problem drops to zero.
+
+32:16.120 --> 32:18.640
+Because if they cure the disease, they lose their grant money.
+
+32:19.120 --> 32:24.720
+If the agency built to fight poverty actually eliminates poverty, thousands of administrators lose their jobs.
+
+32:24.720 --> 32:27.620
+So you might think, okay, that's easy to fix.
+
+32:27.860 --> 32:29.440
+Let's fund them based on outcomes.
+
+32:29.800 --> 32:32.620
+We will pay them for every unit of the problem they solve.
+
+32:33.160 --> 32:35.540
+But the math reveals the trap there, too.
+
+32:36.060 --> 32:36.900
+There's always a trap.
+
+32:37.420 --> 32:43.820
+If an institution is funded by outcomes, but they are allowed to self-report those outcomes without independent sanction,
+
+32:44.340 --> 32:47.620
+they will maximize the overstatement of their success.
+
+32:47.620 --> 32:54.520
+They will change the definition of the problem, suppress complaints, or close cases prematurely to make the dashboard look good.
+
+32:55.120 --> 32:58.960
+It's like a charity that is so good at its job it accidentally puts itself out of business,
+
+32:59.420 --> 33:04.320
+versus one that just keeps endlessly treating the symptoms so the donation checks keep flowing.
+
+33:05.140 --> 33:09.200
+We literally incentivize them to farm the problem rather than hunt it to extinction.
+
+33:09.560 --> 33:13.640
+Which is why the author stresses the absolute necessity of independent verification.
+
+33:13.640 --> 33:17.880
+Auditors cannot be funded by the bodies they evaluate.
+
+33:18.540 --> 33:20.380
+They cannot draw their personnel from them.
+
+33:20.760 --> 33:21.460
+Conflict of interest.
+
+33:21.780 --> 33:22.140
+Exactly.
+
+33:22.660 --> 33:26.520
+And there must be mandate reviews, sunset clauses, that ask,
+
+33:27.260 --> 33:32.040
+does this problem still exist, and is this institution still the right one to solve it?
+
+33:32.860 --> 33:36.660
+But crucially, you cannot punish the individuals who successfully solve a problem.
+
+33:36.980 --> 33:40.380
+If solving a civic crisis gets you fired because your department shuts down,
+
+33:40.680 --> 33:42.400
+you will ensure the crisis never ends.
+
+33:42.400 --> 33:47.640
+You have to guarantee redeployment and transition support for the people who achieve the mission.
+
+33:48.620 --> 33:51.280
+So the workers get saved, even if the institution dies.
+
+33:52.480 --> 33:56.840
+Flyxion connects this to the independence of the six inferences, Proposition 17.1.
+
+33:57.720 --> 34:00.160
+We falsely assume these things entail one another.
+
+34:00.820 --> 34:05.500
+We assume representational movement on a dashboard means the state of the world changed.
+
+34:05.840 --> 34:06.660
+It doesn't.
+
+34:07.100 --> 34:09.460
+We assume a state change means an improvement.
+
+34:10.080 --> 34:10.780
+It doesn't.
+
+34:10.780 --> 34:12.340
+This is a heavy list.
+
+34:12.800 --> 34:16.120
+We assume improvement means the reporting agency caused it.
+
+34:16.460 --> 34:17.340
+Not necessarily.
+
+34:18.140 --> 34:21.980
+And the big one, we assume activity equals responsibility.
+
+34:22.860 --> 34:25.940
+An agency can process a million forms, be incredibly active,
+
+34:26.180 --> 34:30.360
+and be totally unaccountable to the actual problem they were built to solve.
+
+34:30.360 --> 34:36.440
+To break this cycle of endless institutional busyness and infinite broadcasted noise,
+
+34:36.700 --> 34:40.280
+we need a fundamentally new architecture for society's information flow.
+
+34:40.600 --> 34:42.920
+Let's talk about the structure of information networks.
+
+34:43.460 --> 34:46.880
+The essay contrasts broadcast versus routing.
+
+34:46.880 --> 34:53.500
+The mathematical proof here, Proposition 13.1, relies on Ashby's law of requisite variety.
+
+34:54.160 --> 34:58.760
+A regulator can only control as much variety in a system as it has variety of responses.
+
+34:59.900 --> 35:02.660
+Currently, our main information architecture is broadcast.
+
+35:02.980 --> 35:08.340
+A problem is published to a feed, and it goes to everyone based on how engaging or enraging it is.
+
+35:08.340 --> 35:11.460
+Like a viral post about a highly localized injustice.
+
+35:12.260 --> 35:17.380
+The math proves that when you broadcast to everyone, the vast majority of people seeing it lack the competence to act.
+
+35:17.940 --> 35:23.000
+The probability of the problem actually landing in the lap of someone competent is shockingly low,
+
+35:23.400 --> 35:27.100
+because the competent people are buried under the same avalanche of noise as everyone else.
+
+35:27.400 --> 35:28.440
+That makes total sense.
+
+35:28.440 --> 35:35.100
+But in a routing model, where a classifier tags a problem and routes it strictly to the specialist with the jurisdiction to solve it,
+
+35:35.500 --> 35:39.760
+the probability of a problem being considered by a competent agent rises dramatically.
+
+35:40.180 --> 35:43.120
+I mean, this is just how a hospital works.
+
+35:43.680 --> 35:45.780
+If a patient comes into the ER with a heart attack,
+
+35:46.080 --> 35:50.900
+they don't get on a megaphone and broadcast it to the pediatricians, the janitors, the billing department,
+
+35:51.040 --> 35:52.560
+and the people in the waiting room.
+
+35:52.760 --> 35:55.180
+They route the patient directly to the cardiologist.
+
+35:55.180 --> 35:59.800
+It's common sense and medicine, but we just abandon it in digital spaces.
+
+36:00.800 --> 36:04.400
+Now, taking this from information flow to economic transactions,
+
+36:04.840 --> 36:07.680
+the essay introduces the concept of relationship costs.
+
+36:08.380 --> 36:14.280
+This is about how we hold bad actors accountable without resorting to a dystopian universal surveillance state.
+
+36:14.740 --> 36:16.960
+The text uses the example of an arms dealer.
+
+36:17.360 --> 36:18.540
+Walk us through the arms dealer.
+
+36:18.980 --> 36:24.400
+If an arms dealer engages in a transaction that independent evidence shows resulted in grave harm,
+
+36:24.400 --> 36:27.500
+say, supplying an aggressor committing atrocities.
+
+36:27.940 --> 36:29.520
+How does society respond?
+
+36:30.380 --> 36:33.740
+Outright prohibition often fails because trade just moves to the black market.
+
+36:34.340 --> 36:38.900
+Instead, the essay model is adding a relationship cost, a literal friction,
+
+36:39.240 --> 36:45.640
+a massive financial and regulatory penalty to any future dealings with that actor based on the verified harm.
+
+36:45.640 --> 36:55.660
+So it's not strictly illegal to deal with them, but it becomes so intensely expensive, painful, and bureaucratically heavy that rational actors just stop doing it.
+
+36:55.860 --> 37:03.440
+But here is the brilliant mathematical safeguard, network distance decay, modeled as e to the negative alpha k.
+
+37:03.800 --> 37:04.060
+Okay.
+
+37:04.320 --> 37:06.660
+I see an e, an alpha, and a k.
+
+37:07.340 --> 37:08.820
+Translate this equation for me.
+
+37:08.820 --> 37:12.420
+E is just the base of the natural logarithm.
+
+37:12.740 --> 37:15.640
+It's a constant used to model exponential growth or decay.
+
+37:16.060 --> 37:19.260
+Alpha is the decay rate, how fast the penalty drops off.
+
+37:19.860 --> 37:22.680
+And k represents the degrees of separation in the network.
+
+37:23.360 --> 37:27.360
+If I am the bank that directly finances the arms dealer, k is one.
+
+37:27.480 --> 37:28.340
+I am one step away.
+
+37:28.680 --> 37:30.640
+I bear a massive relationship cost.
+
+37:30.980 --> 37:31.520
+Okay, that tracks.
+
+37:31.520 --> 37:36.340
+But what if I am the catering company that provided sandwiches to the bank's corporate retreat?
+
+37:37.020 --> 37:37.500
+Am I guilty?
+
+37:37.860 --> 37:38.820
+Do I get sanctioned?
+
+37:39.100 --> 37:41.220
+For the caterer, k is two or three.
+
+37:41.560 --> 37:43.060
+Six degrees of separation problem.
+
+37:43.640 --> 37:44.620
+Guilt by association.
+
+37:44.960 --> 37:46.200
+Internet mobs love this.
+
+37:46.760 --> 37:50.160
+You follow a guy who liked to post by a bad guy, therefore you are evil.
+
+37:50.880 --> 37:56.520
+The math proves that financial and reputational exposure must decay faster than the network branches out.
+
+37:56.520 --> 38:04.280
+As k increases, as you move steps away from the harmful transaction, the relationship cost must drop geometrically according to alpha.
+
+38:04.960 --> 38:11.420
+If alpha isn't high enough, liability spreads infinitely, and innocent parties are crushed by a system of endless association.
+
+38:12.260 --> 38:15.160
+The sandwich maker goes bankrupt because they serve turkey to a banker.
+
+38:15.860 --> 38:20.060
+So there's a mathematical safeguard against witch hunts built right into the accountability model.
+
+38:20.140 --> 38:20.880
+That's fascinating.
+
+38:21.660 --> 38:24.100
+But I have a pushback on the routing idea.
+
+38:24.100 --> 38:32.740
+What happens if a complaint is beautifully routed to the exact right expert, and that expert just buries it in a drawer to protect the bureaucracy?
+
+38:33.700 --> 38:34.900
+The text anticipates this.
+
+38:35.220 --> 38:36.780
+It calls it bureaucratic gatekeeping.
+
+38:37.520 --> 38:38.500
+This is the dark side of routing.
+
+38:38.860 --> 38:41.620
+This is why any routing system cannot be a closed loop.
+
+38:42.040 --> 38:47.120
+It must have independent appeal mechanisms, and what the author calls public interest escalation.
+
+38:47.460 --> 38:48.180
+How does that work?
+
+38:48.180 --> 39:02.020
+I love how this contrasts with something like a universal social credit score.
+
+39:02.020 --> 39:03.440
+It is the exact opposite.
+
+39:04.100 --> 39:06.620
+The author draws on the sociologist Georg Simmel here.
+
+39:07.060 --> 39:12.740
+Commensurating all of a person's behavior across all domains into a single number creates a surveillance apparatus.
+
+39:13.240 --> 39:16.840
+If you are a bad driver, it shouldn't affect your ability to get a library card.
+
+39:17.380 --> 39:25.180
+Domain-bound accountability, where your relationship cost in one industry stays in that industry, creates a constitution of limited powers.
+
+39:25.620 --> 39:27.740
+The system forgets what it doesn't need to know.
+
+39:27.740 --> 39:32.580
+It forgets, which brings us to the ultimate counter principle to the never-ending ticker.
+
+39:33.360 --> 39:36.120
+The most beautiful, resonant part of this essay, honestly.
+
+39:36.540 --> 39:37.600
+The right to finish.
+
+39:38.320 --> 39:40.480
+This is the philosophical manifesto of the piece.
+
+39:41.220 --> 39:44.120
+We have to reclaim closure in an endless digital world.
+
+39:44.740 --> 39:48.420
+The text contrasts event-driven attention with clock-driven attention.
+
+39:48.760 --> 39:52.720
+A clock-driven ticker moves just because time passes.
+
+39:53.420 --> 39:55.920
+The scrolling taskbar moves to look busy.
+
+39:55.920 --> 39:58.460
+The feed refreshes because you scrolled.
+
+39:59.300 --> 40:07.360
+Event-driven attention means the system is completely silent, entirely static, until a relevant state change occurs that actually requires your consideration.
+
+40:08.380 --> 40:12.000
+The baseline state of technology should be rest.
+
+40:13.140 --> 40:17.560
+And when it does interrupt that rest, it has to meet an actionability threshold.
+
+40:17.920 --> 40:18.060
+Right?
+
+40:18.180 --> 40:19.500
+Proposition 14.1.
+
+40:19.500 --> 40:23.240
+The bathtub principle of optimizing bounded interruptions.
+
+40:23.880 --> 40:26.660
+You only have a finite budget of attention.
+
+40:27.060 --> 40:30.960
+Say, you can only handle 10 interruptions a day without losing your mind.
+
+40:31.680 --> 40:40.040
+The math shows you must rank events by their expected value, set a threshold, and only allow notifications that cross that threshold to reach you.
+
+40:40.180 --> 40:40.700
+And the rest?
+
+40:40.700 --> 40:42.620
+Everything else stays silent.
+
+40:43.280 --> 40:46.200
+The cost of a low-value notification isn't just the annoyance.
+
+40:46.480 --> 40:49.600
+It's that it actively displaces your attention from something valuable.
+
+40:50.000 --> 40:53.320
+So what are the actual elements of this right-to-finish?
+
+40:53.940 --> 40:55.160
+Because I want this right now.
+
+40:55.840 --> 40:56.940
+There are three pillars.
+
+40:56.940 --> 40:59.540
+First, a reachable state of closure.
+
+40:59.960 --> 41:08.540
+There must be a configuration of the system where the outstanding obligations are literally empty, and the system does not auto-generate new ones just to keep you engaged.
+
+41:08.760 --> 41:11.240
+You hit inbox zero, and it stays zero.
+
+41:11.380 --> 41:12.060
+That sounds like heaven.
+
+41:12.920 --> 41:17.620
+Second, persistence of the record, or inactivity invariance.
+
+41:18.000 --> 41:23.800
+When you finish something, the credit for it remains yours, indefinitely, even if you do absolutely nothing else.
+
+41:23.800 --> 41:27.000
+Your score doesn't decay just because you took a weekend off.
+
+41:27.940 --> 41:28.600
+And the third pillar?
+
+41:29.240 --> 41:30.920
+And third, cause for reopening.
+
+41:31.460 --> 41:38.700
+A completed task cannot be returned to your plate just because an algorithm decides it needs to boost its daily active user metrics.
+
+41:39.000 --> 41:42.500
+It can only be reopened by new, contestable evidence.
+
+41:43.640 --> 41:47.380
+Continuous social life versus continuous individual demands.
+
+41:48.480 --> 41:49.940
+Society's work is never done.
+
+41:49.940 --> 41:54.080
+There will always be roads to pave, children to teach, and problems to solve.
+
+41:54.480 --> 41:56.880
+But the individual's shift must end.
+
+41:57.000 --> 41:58.400
+I have to be able to clock out.
+
+41:59.400 --> 42:07.020
+To drive this home, Flyxion explores the phenomenology of perpetual incompletion through the lens of Norbert Wiener's cybernetics.
+
+42:07.660 --> 42:10.760
+Cybernetics relies on feedback toward a goal state.
+
+42:10.940 --> 42:14.660
+A system steers itself by comparing where it is to where it wants to be.
+
+42:14.760 --> 42:15.620
+Right, like a thermostat.
+
+42:15.620 --> 42:16.220
+Exactly.
+
+42:16.880 --> 42:28.900
+But if the system is designed to have no terminal state, if the feed is infinite, if the inbox never empties, if the metrics decay forever, then the very concept of success ceases to exist.
+
+42:29.300 --> 42:34.660
+We have replaced the criteria for accomplishment with the criteria for mere continuation.
+
+42:35.480 --> 42:37.360
+We are surviving, not succeeding.
+
+42:37.680 --> 42:40.260
+We are just treading water in an infinite ocean.
+
+42:40.260 --> 42:43.880
+Let's bring it all together for you, the listener.
+
+42:44.420 --> 42:46.700
+This has been a profound journey.
+
+42:47.520 --> 42:54.100
+True responsibility isn't about being universally aware of every tragedy on the planet while your ticker endlessly scrolls.
+
+42:54.380 --> 43:00.120
+That is just a mathematical recipe for attentional exhaustion and symbolic posturing.
+
+43:00.520 --> 43:00.940
+Exactly.
+
+43:01.720 --> 43:03.480
+True responsibility is about jurisdiction.
+
+43:04.100 --> 43:06.480
+It's about fixing the leaky pipes you can actually reach.
+
+43:06.480 --> 43:22.160
+It's about making sure problems are routed to those actually competent to fix them, maintaining domain-bound accountability without universal surveillance, and ultimately demanding systems that allow people to finally, mercifully, log off.
+
+43:22.160 --> 43:25.240
+We have to restore the locality of practical agency.
+
+43:25.900 --> 43:29.220
+We are finite beings in an unbounded inflammation environment.
+
+43:29.760 --> 43:32.040
+Our tools must respect our finitude.
+
+43:32.600 --> 43:37.780
+Which leave me with a final provocative thought for you to mull over as you go about your day.
+
+43:38.620 --> 43:44.000
+We've spent this time talking about demanding the right to finish from our software and our institutions.
+
+43:44.900 --> 43:48.760
+But what happens when we apply that right to our own self-conception?
+
+43:48.760 --> 44:02.680
+In a culture obsessed with continuous personal growth, lifelong optimization, and biohacking, is it possible that treating yourself as a never-ending ticker is just as destructive as the algorithms on your screen?
+
+44:03.600 --> 44:08.460
+What would it actually look like today to declare yourself finished for the day?
+
+44:08.700 --> 44:12.580
+To say, I am enough right now and the shift is over?
+
+44:13.180 --> 44:16.140
+A radical and honestly necessary thought.
+
+44:16.140 --> 44:21.000
+Thank you for taking this deep dive with us into Fleischman's remarkable essay.
+
+44:22.000 --> 44:26.100
+Remember, the dashboard might be racing, but you don't have to push the pedal.
+
+44:26.940 --> 44:30.680
+Until next time, keep your focus local and mind your own business.
+
+44:31.480 --> 44:32.840
+We'll catch you on the next deep dive.
+
+44:32.840 --> 44:46.080
+We'll catch you on the next deep dive.
+
+44:46.080 --> 44:46.360
+We'll we'll catch you on the nextятия.
+
+44:46.360 --> 44:47.600
+Let's see.
+
+44:47.600 --> 44:49.080
+Let's see.
+
+44:49.080 --> 44:50.300
+Let's see.
+
+44:50.300 --> 44:50.340
+Let's see.
+
+44:50.340 --> 44:50.940
+Let's see.
+
+44:50.940 --> 44:51.520
+Let's see.
+
+44:51.520 --> 44:51.840
+Let's see.
+
+44:51.840 --> 44:52.120
+Let's see.
+
+44:52.120 --> 44:52.180
+Let's see.
+
+44:52.180 --> 44:52.560
+Let's see.
+
+44:52.660 --> 44:53.240
+Let's see.
+
+44:53.240 --> 44:53.800
+Let's see.
+
+44:53.880 --> 44:54.180
+Let's see.
+
+44:54.180 --> 44:55.000
+Little hydro dropped.
+
+44:55.000 --> 44:55.720
+Ladies and Heath wrote,
+
+44:55.720 --> 44:56.760
+Let's see.
+
+44:56.760 --> 44:57.560
+Let's see.
+
+44:57.560 --> 44:57.820
+Let's see.
+
+44:57.820 --> 44:58.660
+Let's see.
+
+44:58.660 --> 44:59.160
+Let's see.
+
+44:59.160 --> 44:59.620
+Let's see.
+
+44:59.620 --> 44:59.820
+Let's see.
+
+44:59.820 --> 45:00.160
+jakieś видео.
+
+45:00.160 --> 45:00.660
+Let's see.
+
+45:00.660 --> 45:01.700
+let's see.
+

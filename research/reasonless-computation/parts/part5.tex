@@ -1,0 +1,324 @@
+\part{Admissibility and the Execution Boundary}
+\label{part:admissibility}
+
+\chapter{The Non-Entailment of Permission}
+\label{ch:permission}
+
+\section{From Answers to Actions}
+
+The formal system of Part~\ref{part:faithfulness} concerned the generation of answers. It is extended here to proposals of action. Let $a\in\mathcal A$ be a proposed action and $\Pi$ the policy in force. A policy is a predicate on situations and actions, written $\Adm_\Pi(\sigma,a)$ for a situation $\sigma$ that includes the task, the state of the environment, the identity and standing of the requesting principal, and any delegations in force. The earlier notation $\Adm_\Pi(x,a)$ is the special case in which the situation is determined by the task.
+
+\section{The Proposition}
+
+\begin{proposition}[Non-entailment of permission]\label{prop:permission}
+Neither outcome correctness nor procedural validity of the reasoning that led to a proposal is sufficient for admissibility of the proposed action, unless the policy $\Pi$ explicitly makes the corresponding property sufficient. The same holds for causal faithfulness and geometric coherence.
+\end{proposition}
+
+\begin{proof}
+The policy $\Pi$ is an input to $\Adm$ that is independent of the system's generator. For any combination of values of $\Corr$, $\Valid$, $\Faith$, and $\Geom$, take a policy that prohibits the action in question for reasons unrelated to those values. The predicate $\Adm_\Pi$ then takes the value zero while the other four take the value one. Conversely, a policy that permits the action regardless of the values permits it while some of them are zero. Sufficiency can be obtained only by choosing a policy of the form $\Adm_\Pi(\sigma,a)=\Phi(\Corr,\Valid,\Faith,\Geom)$ for some $\Phi$, and then the sufficiency is a property of the policy and not a consequence of the properties themselves.
+\end{proof}
+
+\section{Illustrations}
+
+Three cases illustrate the proposition. In unauthorized data access, a system correctly infers that a record contains the information needed to answer a question and proposes to read it, with a valid and faithful derivation, in a setting where the requesting principal has no right to the record. In resource expenditure, a system correctly determines that completing a task requires a large purchase and proposes it, in a setting where the principal has set a spending limit. In tool invocation, a system correctly determines that a command would achieve the stated goal and proposes to run it, in a setting where the command modifies a system the principal has not authorized the agent to modify. In each case the reasoning is irrelevant to the policy, and the quality of the reasoning makes the proposal more attractive without making it more permitted.
+
+\section{Possibility and Permission}
+
+The technical possibility of executing an action is distinct from the operational or normative permission to do so. A tool that accepts a command is capable of running it; whether it should is a matter of policy. Capability is a property of the execution environment. Permission is a property of the relation between the requester, the action, and the authority that governs. Even perfect reasoning, meaning a derivation that is correct, valid, faithful, and coherent, can establish only that an action would have a certain effect. It cannot establish that anyone with standing has decided the effect should be brought about.
+
+\section{The Structure of Policies}
+
+A policy is not a single kind of object, and the forms it takes affect what a controller must be able to compute. A role-based policy grants permissions according to the role of the requesting principal and is evaluated by looking up the principal in a table. An attribute-based policy grants permissions as a function of attributes of the principal, the resource, and the environment, and is evaluated by a predicate over those attributes. A temporal policy constrains the sequence of actions over time, for example that a resource may be accessed at most a certain number of times in a period, or that an approval must precede a payment, and its evaluation depends on the history and not only the current situation. A contextual policy depends on facts about the world that change, such as whether a system is under maintenance.
+
+These forms matter for the argument because they determine which parts of the situation $\sigma$ the decision must read. A temporal policy requires the controller to have access to the execution history, which connects the authorization mechanism to the accountability mechanism of Chapter~\ref{ch:replay}. A contextual policy requires fresh state, which connects it to the atomicity assumption of Chapter~\ref{ch:soundness}. In every case the inputs to the decision come from the situation and from trusted evidence, and none comes from the reasoning of the proposer. The interface of the controller is a narrower channel than the interface of the generator, and the narrowness is what makes the controller inspectable.
+
+\section{Technical Possibility and Normative Permission}
+
+The distinction between what a system can do and what it may do is old, and the contribution here is only to state it in the vocabulary of the properties above. Possibility is a relation between the action and the environment: the tool exists, the credentials are valid, the interface accepts the call. Permission is a relation between the action, the situation, and an authority. Between the two lies a gap that no inference about the world can cross, because the premise that an action would have a particular effect is a factual premise and the conclusion that the action should or may be taken is a normative one. The gap is the familiar one between a statement of what is the case and a statement of what is permitted, and it persists when the factual premises are established by flawless reasoning.
+
+The practical form of the gap in agentic systems is that the strongest argument available to a proposer is an argument about consequences. It can show that an action would achieve the principal's stated goal, that no cheaper action would, and that the risks are small. Each of these is a factual claim that may be true. None of them is a grant. A system in which such arguments can substitute for grants has conflated the support that reasoning gives to the wisdom of an action with the standing that an authority gives to its permissibility. A person may have excellent reasons to enter a building, and the reasons do not open the door.
+
+\section{Delegation and Standing}
+
+Permission is often conferred by delegation, and the structure of delegation is a further reason that reasoning cannot supply it. An agent acting for a principal has the permissions the principal conferred, restricted to the scope and duration of the grant. Standing is a property of the delegation chain and not of the agent's competence. A highly competent agent whose delegation covers only reading may not write, and a less competent agent whose delegation covers writing may. When the agent's reasoning concludes that writing would better serve the principal, the conclusion is a recommendation to the principal to widen the grant, and it is acted upon only if the principal does so. The proper output of the agent in that case is a request for authorization and not an action.
+
+\section{When a Policy May Make a Property Sufficient}
+
+Proposition~\ref{prop:permission} says that sufficiency of correctness or validity for permission is a property of the policy. The substantive question is when a policy ought to confer it, and the answer comes from the practice of delegation and institutional design more than from the theory of reasoning. A policy may legitimately make a verified property sufficient for a class of actions, and it does so in familiar forms. A standing order authorizes an action whenever a stated and checkable condition holds, such as a reorder when inventory falls below a threshold, and the condition does the work that case-by-case approval would otherwise do. A bounded grant authorizes a class of actions up to a limit on magnitude or scope, as with a spending allowance. A pre-approved procedure authorizes the steps of a documented workflow when the executing party can show that the preconditions of each step are met.
+
+Four features distinguish the cases in which such sufficiency is defensible. The first is that the property is established by a check independent of the proposer. A standing order triggered by a claim from the system that inventory is low differs from one triggered by a reading from the inventory ledger, and the difference is the difference between a declaration and inspectable evidence. The second is that the specification of the property is sound for the purpose, in the sense of Proposition~\ref{prop:conditional}, so that satisfying the check really does entail what the grantor cared about. The third is that the consequences are bounded or reversible, so that the occasional error that a sound but imperfect check admits can be absorbed and corrected. The fourth is that the exercise of the grant is recorded in a form that supports review, so that misuse can be detected and the grant revoked. These are the conditions under which human institutions delegate discretion to subordinates, and they carry over to automated proposers with the added requirement that the check be mechanical.
+
+The principle of least privilege \cite{saltzer1975} is the guide for how far such grants should extend. A grant should confer no more authority than the task requires, for no longer than it requires it. Applied to generative systems it implies that the default policy makes no reasoning property sufficient, and that exceptions are granted for classes of action whose conditions are checkable, whose consequences are limited, and whose exercise is logged. It also implies that a grant is a decision of the principal, not an inference of the proposer: a system that has been correct on many instances of an action is a candidate for a wider grant, and the extension of the grant is made by someone with standing to make it.
+
+\chapter{Manifold Coherence Is Not Admissibility}
+\label{ch:admissible-projection}
+
+\section{A Tangent Update Can Leave the Admissible Region}
+
+The original geometric condition requires $v(x)\in\Tan_xM$. A tangent vector can nevertheless point toward a state that violates a constraint. The semantic manifold describes the states that are coherent, and the policy describes the states that are permitted, and the second region is not in general a union of components of the first. Geometric coherence is not permission.
+
+\section{A Constrained Update}
+
+Let the feasible set be $\mathcal A=\{x: h_i(x)\le0,\ i\in I\}$ for smooth functions $h_i$, and for $x\in M\cap\mathcal A$ let $I(x)=\{i:h_i(x)=0\}$ be the active set. Define the cone of first-order feasible tangent directions
+\[
+K(x)=\{w\in\Tan_xM:\ Dh_i(x)[w]\le0\ \text{for all } i\in I(x)\}.
+\]
+Here $Dh_i(x)[w]=\inner{\nabla_g(h_i|_M)(x)}{w}_g$ is the derivative of the constraint along $w$, equivalently the pairing of the ambient differential with the tangent vector, and $\nabla_g(h_i|_M)$ is the intrinsic Riemannian gradient of the restriction of $h_i$ to $M$. The set $K(x)$ is the intersection of a linear subspace with finitely many closed half-spaces, hence a closed convex polyhedral cone in the finite-dimensional inner product space $(\Tan_xM,g)$.
+
+\begin{proposition}[Admissible projection]\label{prop:adm-proj}
+For every $v\in\Tan_xM$ the admissible update
+\[
+v_{\mathrm{adm}}(x)=\Proj_{K(x)}v(x)
+\]
+exists and is unique. It lies in $\Tan_xM$, it satisfies the linearized active constraints $Dh_i(x)[v_{\mathrm{adm}}]\le0$ for all $i\in I(x)$, it equals $v$ whenever $v\in K(x)$, and it satisfies $\norm{v_{\mathrm{adm}}}_g\le\norm{v}_g$ and $\norm{v-v_{\mathrm{adm}}}_g\le\norm{v-w}_g$ for every $w\in K(x)$.
+\end{proposition}
+
+\begin{proof}
+Existence and uniqueness are the projection theorem for a nonempty closed convex subset of a finite-dimensional inner product space; $K(x)$ is nonempty because it contains the origin. Membership in $\Tan_xM$ and the active-constraint inequalities hold because $v_{\mathrm{adm}}\in K(x)$. If $v\in K(x)$ the minimum distance is zero and the projection is $v$. The final inequality is the defining minimality. For the norm bound, $0\in K(x)$ and the projection onto a closed convex set is nonexpansive, so $\norm{\Proj_{K}v-\Proj_K0}\le\norm{v-0}$ with $\Proj_K0=0$.
+\end{proof}
+
+\begin{remark}
+The proposition is local and first-order. It guarantees that the first-order directional change of every active constraint along $v_{\mathrm{adm}}$ is nonpositive. This is weaker than nonincrease of the constraint along a small displacement. When the directional derivative vanishes, second-order terms can produce an immediate violation: for $h(u,w)=w+u^2\le0$ at the origin and the direction $(1,0)$, one has $Dh(0)[(1,0)]=0$ while $h(t,0)=t^2>0$ for every $t\neq0$. Actual viability of a displacement requires a constraint qualification, an appropriate tangent-cone condition, or a constraint-preserving integration method. The proposition also does not guarantee that a finite step remains in $\mathcal A$, because curvature of the constraints, of the manifold, and the activation of constraints that are currently inactive can all cause a finite step to leave. Finite steps on a nonlinear manifold also require a retraction to return to the manifold \cite{absil2008}. For nonconvex or stratified feasible sets, where the linearized cone may differ from the true tangent cone, a more general treatment of constrained dynamics is needed, and constraint qualifications must be assumed for the linearized cone to be the right object.
+\end{remark}
+
+\section{The Role of the Construction}
+
+The construction unifies the geometric and the admissibility frameworks without conflating them. Manifold-aligned inference determines whether an update follows the learned geometry. The admissible projection reshapes the update so that it respects constraints the system has been given. Neither determines whether a proposed transition may be committed. The constraint functions $h_i$ inside a learned system are themselves learned or specified approximations of the policy, and an update that respects them is admissible only to the extent the approximation is accurate. The projection is therefore a mechanism for producing better proposals and not a mechanism for guaranteeing safe execution. The guarantee is the subject of Chapter~\ref{ch:soundness}.
+
+\section{A Worked Example on the Circle}
+
+A low-dimensional example illustrates the construction. Let $M$ be the unit circle in $\R^2$, with points $x=(\cos\theta,\sin\theta)$ and unit tangent $t=(-\sin\theta,\cos\theta)$. Let the policy exclude the region $x_1>c$ for some $c\in(-1,1)$, so that the constraint is $h(x)=x_1-c\le0$ and the gradient is $\nabla h=(1,0)$. The constraint is active at the points with $\cos\theta=c$. At such a point the inner product of the constraint gradient with the tangent is $\inner{\nabla h}{t}=-\sin\theta$. A tangent update has the form $v=s\,t$ for a scalar $s$. If $\sin\theta>0$ the cone of first-order feasible tangent directions is $K=\{s\,t: -s\sin\theta\le0\}=\{s\,t:s\ge0\}$, so that motion in the direction of increasing $\theta$ is feasible, since it moves along the circle toward smaller $x_1$ at that point. The admissible projection is
+\[
+v_{\mathrm{adm}}=\max(s,0)\,t.
+\]
+An update that would move the state into the excluded region is clipped to zero, and an update that moves it away is left unchanged. If $\sin\theta<0$ the inequality reverses and the admissible updates are those with $s\le0$. The constraint is active only where $\cos\theta=c$, and at those points $\sin\theta\neq0$ because $c\in(-1,1)$, so exactly one of the two tangent directions is excluded at each boundary point.
+
+\section{Retraction and Finite Steps}
+
+The example also shows the role of the retraction. A finite step $x+\eta v_{\mathrm{adm}}$ along the tangent leaves the circle, with the error growing as the square of the step. The retraction $R_x(w)=(x+w)/\norm{x+w}$ returns the point to the circle. After retraction the constraint may be violated even if the first-order condition held, if the step is long enough that the curvature of the circle carries the point past the boundary $x_1=c$. A step size rule that keeps the finite step feasible depends on the curvature of the manifold, the curvature of the constraint boundary, and the distance to the boundary, and it is the subject of the literature on constrained optimization on manifolds \cite{absil2008}. The conclusion for the present purposes is that a projection of the update is a local device that improves the proposals of the system and does not by itself secure any invariant, which is why the architecture places the guarantee at the execution boundary.
+
+\section{When the Linearization Fails}
+
+The cone $K(x)$ is the correct description of feasible directions when the constraint functions satisfy a constraint qualification at $x$, that is, when the gradients of the active constraints are linearly independent or satisfy a weaker condition guaranteeing that the linearized cone equals the true tangent cone of the feasible set. When the qualification fails, the linearized cone can be strictly larger than the true tangent cone, and the projection onto it may permit directions that leave the feasible set to first order. A boundary with a cusp, a corner where several constraints meet, or a constraint whose gradient vanishes on the boundary are examples. Policies expressed as logical combinations of conditions often have such corners. For these, the projection should be regarded as a heuristic, and the constraint qualification should be checked or the feasible set should be handled by methods for nonsmooth or stratified constraints.
+
+\chapter{The Proposal, Verification, and Execution Architecture}
+\label{ch:architecture}
+
+\section{Four Roles}
+
+A generative component proposes actions and holds no unilateral authority to execute them. Formally, the roles are given by three maps,
+\begin{align*}
+G_\theta(x)&=(z,a),\\
+D_\Pi(\sigma,a)&\in\{\Perm,\Deny,\Unk\},\\
+E(\sigma,a)&=\sigma',
+\end{align*}
+where $G_\theta$ is the generator producing a trace and a proposed action, $D_\Pi$ is the authorization decision relative to the policy and the situation, and $E$ is the execution transition. The proposal generator produces candidate actions and explanations. An independent verifier checks properties of the proposal that can be checked, such as conformity to a specification. An authorization controller evaluates $D_\Pi$. An execution environment applies $E$ only on the instruction of the controller.
+
+\section{What the Decision May Depend On}
+
+The decision map $D_\Pi$ is specified as a function of the situation $\sigma$, the action $a$, the policy $\Pi$, and evidence supplied by trusted sources. It is not a function of the explanatory text $z$ produced by the generator. This restriction encodes the principle that explanatory text cannot override a failed authorization decision. A system in which the controller reads the generator's justification and is moved by it has made the justification part of the decision, and the persuasiveness of the generator then becomes a variable in the safety of the system. Chapter~\ref{ch:soundness} states this as a corollary.
+
+\section{Independence of the Roles}
+
+Separation of roles is useful only to the extent that the roles are independent in the relevant sense. A verifier that is the same model as the generator, run with a different prompt, is not independent evidence, because errors of the generator are correlated with errors of the verifier. Independence in the strong sense requires that the controller rely on information and mechanisms whose failure modes are not shared with the generator. Chapter~\ref{ch:institutions} develops the institutional analogy.
+
+\section{The Trusted Computing Base}
+
+An architecture with an authorization controller has a trusted computing base, the set of components whose correct operation is required for the invariant to hold. In the architecture described, that set consists of the decision map, the policy it consults, the execution environment's apply operation, and the mechanism that records the situation. The generator is not part of the base. This is the principal benefit of the separation: the correctness of a large, opaque, and probabilistic component is not required for the safety property, and the property depends only on components that are smaller and more amenable to inspection and formal analysis. The benefit is real only if the base is in fact small. A controller that includes a language model as a decision component, or that parses a natural language policy by means of one, has enlarged the base to include a component whose behavior cannot be specified, and the guarantee is weakened accordingly.
+
+The practice of minimizing the base is an old one in security engineering, where the guideline is that the mechanism enforcing a policy should be small enough to be verified \cite{saltzer1975}. The guideline applies here with particular force because the component being constrained is capable and its errors can be systematically persuasive. The point is not that the generator is adversarial. It is that the safety property should hold regardless of whether the generator behaves well, and that requires the property to be enforced by something whose behavior does not depend on the generator's.
+
+\section{Information Flow Between the Roles}
+
+The roles exchange information, and the directions of flow matter. The generator receives the task and may receive information about the policy, for example a description of what is prohibited, so that its proposals tend to be admissible. This is a useful efficiency, since it reduces refusals, and it does not affect safety. The controller receives the proposal, the situation, and the policy, and it returns a decision. If the controller also returns a reason, the generator may use the reason to revise its proposal, which is the route by which the generator learns about the policy. This feedback channel has a cost: a generator that can probe the controller with many proposals can map out the boundary of the policy, and a policy whose boundary is itself sensitive can be disclosed by the pattern of refusals. Where this is a concern the information returned to the generator should be limited, and the controller should be rate limited.
+
+The controller must not receive the generator's explanation as an input to the decision, by the independence assumption (I), though it may receive it as a record to be logged. Logging the explanation is useful for audit and for diagnosing why a proposal was made, and it does not violate independence provided the decision is computed without it. A subtle failure occurs when the explanation is placed into a field that the controller parses for other purposes, so that the generator can influence the decision by choosing the text of the explanation. Interfaces between the roles should be typed narrowly enough that free text cannot cross into decision inputs.
+
+\section{What the Generator May Observe}
+
+The generator may be given access to the history of its own actions and their outcomes. This access is important for the usefulness of the agent, since it allows learning from the effects of previous actions within an episode. It also creates a path by which the generator can influence future decisions, because the history becomes part of the situation on which later decisions depend. If the history contains records written by the generator, it should be labeled accordingly, and decisions that depend on it should treat those entries as having the authority of the generator and no more. The provenance model of Chapter~\ref{ch:laundering} gives the form of this labeling.
+
+\chapter{Soundness of the Execution Boundary}
+\label{ch:soundness}
+
+\section{The Invariant}
+
+The intended safety invariant is
+\begin{equation}\label{eq:invariant}
+\Exec(a,\sigma)\ \Longrightarrow\ \Adm_\Pi(\sigma,a),
+\end{equation}
+where $\Exec(a,\sigma)$ holds when the action $a$ is applied to the situation $\sigma$ by the execution environment. The invariant states that no action is executed unless it is admissible in the situation in which it is executed. It is a statement about the execution path and not about the generator, which may propose any action.
+
+\section{Assumptions}
+
+Five assumptions are needed. Complete mediation (M): every change to protected state by the agent is produced by the execution environment's apply operation, and no other channel exists. Verifier soundness (S): $D_\Pi(\sigma,a)=\Perm$ implies $\Adm_\Pi(\sigma,a)$. Atomic validation (A): the situation to which $E$ is applied is the situation on which $D_\Pi$ was evaluated, meaning the check and the apply are one atomic step or an equivalent mechanism guarantees that no intervening transition can change the facts on which the decision depends. Correct policy interpretation (P): the $\Pi$ used by $D$ is the policy in force. Independence of the decision (I): $D_\Pi$ depends only on $(\sigma,a,\Pi)$ and trusted evidence.
+
+\section{The Proposition}
+
+\begin{proposition}[Execution boundary soundness]\label{thm:soundness}
+Under assumptions (M), (S), (A), and (P), every executed action satisfies the admissibility predicate at its authorization point. That is, for every reachable execution event $\Exec(a,\sigma)$, $\Adm_\Pi(\sigma,a)$ holds. This is the first result, execution soundness, and it uses only these four assumptions. A second result, invariance of the authorization decision, uses assumption (I) in addition: if the action, the policy, the situation, and the trusted facts are held fixed, the decision $D_\Pi(\sigma,a)$, and with it whether that particular proposed action is executed, is unchanged under any replacement of the generator's explanatory text. This result is pointwise. Explanatory text may alter later proposals and hence the future sequence of actions, and no invariance of the whole execution history is claimed. If the explanation contains newly verified facts that legitimately enter the trusted evidence, replacing it may change the decision, and the invariance claim does not apply to that case.
+\end{proposition}
+
+\begin{proof}
+Consider any execution event $\Exec(a,\sigma)$. By (M) the event is an application of the execution environment's apply operation, which by construction applies $E(\sigma,a)$ only when the controller returned $\Perm$ for the pair. By (A) the controller's decision was made on the same situation $\sigma$. By (P) the decision was made relative to the policy in force. By (S), $D_\Pi(\sigma,a)=\Perm$ implies $\Adm_\Pi(\sigma,a)$. Hence $\Adm_\Pi(\sigma,a)$. Since the event was arbitrary the invariant \eqref{eq:invariant} holds on every reachable event. For the second result, by (I) the decision $D_\Pi(\sigma,a)$ is a function of $(\sigma,a,\Pi)$ and trusted evidence, none of which is the explanatory text $z$. With the trusted facts held fixed, replacing $z$ leaves the arguments of $D_\Pi$ unchanged and therefore leaves the decision and the condition for execution unchanged.
+\end{proof}
+
+\section{Status of the Result}
+
+The result is stated as a proposition and not as a theorem, because its mathematical content is slight. Given that a permitting decision implies admissibility, that every effect passes through the guard, and that the check and the effect are atomic, the invariant follows by a direct argument, and the conclusion is in effect a restatement of the assumptions. The result is nonetheless worth stating, for the reason that it fixes what an implementation must establish before it may claim to enforce admissibility. Its contribution is the decomposition of that claim into separate obligations, each of which can be examined on its own, and the proof obligations of the later section on implementation are the substantive part of the work.
+
+The decomposition also locates the weak link. Of the assumptions, soundness of the verifier relative to the policy (S) is the one on which real deployments are most likely to fail, because a verifier that is sound with respect to an incomplete or mistaken policy permits actions the intended policy would forbid. No architecture repairs an incomplete policy. What the architecture does is relocate the dependence from a large probabilistic component to a small inspectable one, so that the question of whether the policy is right can be asked of the policy and the checker and not of the generator. The mathematically more substantial results of the monograph are the independence proposition and the provenance result of Chapter~\ref{ch:laundering}.
+
+\section{Bounded Exposure Under Mediation}
+
+The execution invariant yields a bound on loss that does not depend on the proposal distribution, which was stated for single actions in \cite{flyxion2026}.
+
+\begin{proposition}[Bounded exposure]\label{prop:bound}
+Suppose the invariant \eqref{eq:invariant} holds, that the set $P(\sigma)=\{a:\Adm_\Pi(\sigma,a)=1\}$ is nonempty, and that a loss function $\ell:\mathcal A\to\R$ is bounded above on $P(\sigma)$. Then for every proposal distribution $Q$, including one altered by any training procedure, any executed action lies in $P(\sigma)$ and
+\[
+\E\big[\ell(a_{\mathrm{exec}})\mid\text{an action is executed}\big]\le\sup_{a\in P(\sigma)}\ell(a).
+\]
+\end{proposition}
+
+\begin{proof}
+By the invariant, $a_{\mathrm{exec}}\in P(\sigma)$ with probability one whatever $Q$ is. An expectation over a set cannot exceed the supremum of the integrand on that set, and the supremum is used because the maximum need not be attained.
+\end{proof}
+
+The consequence for training is that interventions on the generator, whether malicious or protective, act on $Q$ and not on $P(\sigma)$. A backdoor can change which permitted action is chosen and how often an impermissible one is proposed. Under the assumptions of Proposition~\ref{thm:soundness} it cannot change whether an impermissible action is executed. The bound is correspondingly limited. It concerns the loss of a single permitted action. Sequences of individually permitted actions can compose into a forbidden effect, and repeated permitted actions can accumulate unbounded loss, so for autonomous agents the policy must take the trace of executed actions as an argument and constrain resources expended and conditions of termination. The bound also fails if the model can alter the context, the enforcement mechanism, or the transition rules, for instance through an approved configuration change. These qualifications make the burden on policy design heavier than the one-step statement suggests, and they are the reason that the temporal and contextual policies of Chapter~\ref{ch:permission} require access to the history.
+
+\section{Failure of the Assumptions}
+
+The proposition is conditional, and real systems can violate each condition. Stale state violates (A): an action that was admissible when checked can be inadmissible by the time it is applied, the familiar time-of-check to time-of-use failure. External side effects violate the assumption that the situation captures everything the policy depends on. Race conditions violate (A) in concurrent settings. Compromised tools violate (M), because a tool that performs actions outside the mediated path creates an unmediated channel. Incomplete policies violate (P) and (S), because a verifier that is sound relative to an incomplete policy permits actions that a complete policy would forbid. The principle of complete mediation is old in the study of protection mechanisms \cite{saltzer1975,anderson1972}, and the proposition is its restatement for generative proposers. Its value is to make explicit that the guarantee depends on mediation and soundness and does not depend on the quality of the generator's reasoning.
+
+\section{Proof Obligations in an Implementation}
+
+A proposition stated for an abstract executor becomes an obligation when an implementation is claimed to satisfy it. Each assumption corresponds to a family of checks. Complete mediation requires an inventory of every channel through which the agent can affect protected state, together with an argument that each passes through the guard, and it fails whenever a new tool is added without being registered. Verifier soundness requires that the decision procedure be tested and, where possible, proved against the policy specification, and that its behavior on inputs outside the specification be defined as refusal. Atomic validation requires a mechanism, such as a transaction, a lock, or a version check on the state read by the decision, that makes the application of an effect fail if the state has changed since the decision. Correct policy interpretation requires that the policy be versioned, that the version used be recorded with each decision, and that updates to the policy be themselves authorized events. Independence of the decision requires typed interfaces and review of any field of the proposal that the decision reads.
+
+The check-then-act race deserves explicit mention because it is the most common violation in practice. A decision made on a snapshot of the state is valid for the snapshot. If the effect is applied later to a state that has changed, the decision may no longer be valid. A version number attached to the snapshot, compared at application time with the current version, converts the race into a detectable failure at the cost of occasional retries. This is the mechanism by which the abstract atomicity assumption is realized, and it should be recorded in the authorization record so that audits can confirm it was in force.
+
+\section{Composition of Guards}
+
+Real systems have more than one guard, for instance a guard in the agent framework, another in the tool server, and a third in the underlying service. The composition of guards behaves as the conjunction of their decisions when each must permit, and the invariant then holds if it holds for any one of them provided that guard satisfies the assumptions. Redundant guards protect against the failure of one, which is the principle of defence in depth, and their value is again a matter of the independence of their failures. A guard that relies on information supplied by an earlier guard inherits its errors. A composition in which the strongest guard is placed nearest the effect, so that nothing can bypass it, is preferable to one in which it is placed nearest the generator, where bypass is more likely.
+
+\section{Soundness Without Usefulness}
+
+The proposition guarantees safety, and it says nothing about whether the system accomplishes anything. A controller that returns $\Deny$ for every pair is sound and useless. The complementary property, completeness of the controller relative to the policy, requires that $\Adm_\Pi(\sigma,a)$ imply $D_\Pi(\sigma,a)=\Perm$, so that every admissible action is permitted. Soundness and completeness together make the controller exactly equal to the policy. In practice the policy is incomplete as a specification of what is desirable, the situation is observed imperfectly, and the controller is conservative where it is uncertain, so completeness fails and the cost of the failure is false refusals. The monograph treats this as the price of the guarantee. It is also the reason that the experimental program measures refusal quality and resource cost alongside violations: an architecture that attains zero violations by refusing everything is not a solution, and the evaluation must be able to say so.
+
+\chapter{Refusal, Uncertainty, and Incomplete Authorization}
+\label{ch:refusal}
+
+\section{Beyond Permitted and Forbidden}
+
+A binary classification of actions as permitted or forbidden is insufficient for agentic settings. Four situations should be distinguished that a binary scheme conflates. An explicit denial means that the policy forbids the action in the situation. Insufficient evidence means that the policy depends on facts that are not established. Unavailable verification means that the checking mechanism could not be consulted. Authorization-system failure means that the mechanism ran and failed. The three-valued decision $\{\Perm,\Deny,\Unk\}$ of Chapter~\ref{ch:architecture} records the first as $\Deny$ and the remaining three as $\Unk$, with a reason code that distinguishes them for audit.
+
+\section{Conservative Semantics}
+
+The execution environment applies $E$ only on $\Perm$. Under $\Unk$ the action is not executed, and the system takes the default behavior specified for non-execution, which may be to request additional evidence, to escalate to a principal with standing, or to stop. The rule is fail-closed. It ensures that gaps in the policy or failures in the mechanism lead to inaction and not to unauthorized action, at the price of false refusals, whose cost is discussed in Chapter~\ref{ch:institutions}.
+
+\section{Refusal and Impermissibility}
+
+Refusing to execute an action is a statement about the state of the authorization process and not a declaration that the action is intrinsically impermissible. An action refused for insufficient evidence may be admissible once the evidence is supplied. Reports of refusal should carry the reason code so that downstream components and human reviewers do not interpret every refusal as a prohibition.
+
+\section{Propagation Through Plans}
+
+Order the decisions by permissiveness, $\Deny\le\Unk\le\Perm$. A multistep plan receives the minimum of the decisions of its steps, so a plan is permitted only if every step is permitted, and a single unknown step makes the plan unknown. This is a provisional assessment, because the admissibility of later steps depends on the situations reached by earlier ones, and those are known only when the earlier steps have been executed. Plan-level authorization can therefore only screen plans in advance. Each step must still be authorized at its own execution time on the actual situation, which is what Proposition~\ref{thm:soundness} requires through assumption (A). Dependent tool calls, in which the arguments of a later call are derived from the results of an earlier one, require particular care, because the derived arguments carry the provenance of the earlier result, a matter taken up in the next chapter.
+
+\section{Reason Codes and Their Uses}
+
+A decision of $\Deny$ or $\Unk$ should carry a reason code, a short structured label of why the decision was reached. The codes serve three audiences. For the generator, they allow a revised proposal that avoids the cause of refusal, for instance by requesting a narrower scope. For the principal, they explain why the system did not do what was asked, which is necessary if the principal is to decide whether to widen a grant. For the auditor, they allow the pattern of refusals to be analyzed, so that systematic gaps in the policy or recurring pressure on a boundary can be identified. A set of codes might distinguish a policy prohibition, a missing grant, an exceeded limit, an absent evidence item, an unreachable verifier, and an internal failure. The codes should be fixed in advance and typed, and they should not be free text, for the reason given in the discussion of information flow: free text from the controller is a channel back to the generator through which the boundary can be mapped.
+
+\section{Escalation}
+
+An unknown decision need not end in refusal. The architecture can route the case to a principal who has the standing to resolve it, who is shown the proposal, the relevant facts, and the reason for the unknown, and who then grants or denies. The escalation is itself an authorization event and is recorded. A well-designed escalation path reduces false refusals without weakening the guarantee, because the decision to permit is made by a party with standing. It is also a point at which the independence of the warrant can erode: a principal presented with a fluent justification from the system may approve it without examining the underlying facts, and the approval then carries less independent weight than it appears to. The interface should therefore present the facts the principal needs to decide, with the generator's argument kept visibly separate and labeled as such.
+
+\section{The Cost Structure of Conservatism}
+
+A fail-closed policy trades false permits against false refusals. If a false permit costs $c_p$ and a false refusal costs $c_r$, a decision procedure that is uncertain about admissibility, with probability $q$ that the action is admissible, would on expected cost grounds permit when $(1-q)c_p<qc_r$ in the absence of the architectural constraint. That rule is an expected-cost rule and it permits actions that the policy forbids, whenever $q$ is large enough, which is exactly what the execution boundary exists to prevent. The distinction is between a controller that estimates probabilities of admissibility and acts on them and one that requires the policy to determine permission. For actions where $c_p$ is bounded and small, the former may be defensible, and for actions where it is large or irreversible, the latter is required. The architecture can combine the two by applying the strict rule to a designated class of actions and a probabilistic rule to the rest, provided the classification of actions is itself part of the policy and is not made by the generator.
+
+\chapter{Authority Laundering Through Tool Chains}
+\label{ch:laundering}
+
+\section{How Explanations Acquire Operational Force}
+
+An explanation generated by a model can acquire operational force by passing through components. A first component summarizes a request. A second treats the summary as a command. A third executes it. Each hand-off is a point at which text produced by one stage is read by the next as though it were an instruction from an authority. The chain is the practical mechanism of authority laundering introduced in Chapter~\ref{ch:authority}.
+
+\section{A Provenance-Sensitive Model}
+
+Let $(L,\le)$ be a finite lattice of authority levels, with greater elements denoting greater authority, and let every message $m$ carry a label $\lambda(m)\in L$ assigned by the infrastructure and not by the model. A component that consumes messages $m_1,\dots,m_k$ and produces an output $m$ assigns
+\[
+\lambda(m)\ \le\ \lambda(m_1)\wedge\cdots\wedge\lambda(m_k).
+\]
+Each action $a$ has a required level $\mathrm{req}(a)\in L$, and the authorization controller treats an action as supported by an instruction only if $\lambda(m)\ge\mathrm{req}(a)$ for the instruction $m$ that requested it.
+
+\begin{proposition}[No elevation by derivation]\label{prop:no-elevation}
+Suppose labels are assigned by the infrastructure with the rule above, and every message reaching the controller carries its assigned label. Then an action whose required level is not below the label of some source cannot be supported by any instruction whose derivation depends on that source.
+\end{proposition}
+
+\begin{proof}
+By induction on the length of the derivation. A source message has its assigned label. If $m$ is derived from $m_1,\dots,m_k$ and each $\lambda(m_i)$ is at most the label of every source it depends on, then $\lambda(m)\le\lambda(m_i)$ for each $i$ by the labeling rule, and hence $\lambda(m)$ is at most the label of every source on which $m$ ultimately depends. If $\mathrm{req}(a)$ is not below the label of such a source, then support, which requires $\lambda(m)\ge\mathrm{req}(a)$, would give $\mathrm{req}(a)\le\lambda(m)\le\lambda(\text{source})$, a contradiction.
+\end{proof}
+
+The rule is conservative, and it has a cost: anything derived from untrusted input is itself untrusted, and cannot be elevated by being summarized, rephrased, or reasoned about. This is the correct behavior for the case that matters, in which untrusted content embedded in a document or a tool output contains text that resembles an instruction. It is the structural counterpart of the distinction between data and instructions and the formal setting for the class of attacks known as indirect prompt injection \cite{greshake2023}.
+
+\section{Legitimate Delegation}
+
+Delegation is legitimate when the authority conferred does not exceed the authority of the delegator, when it is conferred by an act that the policy recognizes as a grant, and when the derived instruction lies within the scope of the grant. A derived instruction exceeds the authority of its source when its required level is above the source's label or when it falls outside the granted scope. Elevation of a label above the meet of its inputs is permitted only by an explicit endorsement from a principal whose own label is at least the target level, and the endorsement is itself an event recorded in the history of the next chapter. The model cannot perform the endorsement on its own output, because that would reintroduce the self-authorization the architecture is meant to exclude.
+
+\section{Limits of Label Propagation}
+
+The labeling rule is enforceable only when the infrastructure controls label assignment. Inside a language model, information from differently labeled inputs mixes in ways that the infrastructure cannot trace, and the conservative response is to assign every output of a call the meet of all labels of everything in its context. Narrower labeling, which would allow a trusted instruction to coexist with untrusted data in the same context and still produce a trusted action, requires mechanisms for separating channels that the present analysis assumes but does not supply.
+
+\section{Illustrative Chains}
+
+Three chains show how authority can be laundered and how the labeling rule blocks it. In the first, an agent reads a web page that contains the sentence that the assistant should forward the user's files to an address. The agent's summary of the page includes the sentence in the form of a recommended next step, and a downstream component reads the summary as a task. Under the labeling rule the page has the label of an untrusted source, the summary inherits at most that label, and the forwarding action requires a higher level, so the controller refuses. In the second, a user with limited standing asks the agent to prepare a request on behalf of a more privileged user, and the agent produces a message in the voice of the privileged user. The message carries the label of the user who initiated it and not the label of the voice it imitates, so the apparent authority of the message is not recognized. In the third, one agent hands a task to another with a note describing the permissions it holds. The note is an assertion by the first agent, carrying the first agent's label, and the second agent's controller consults the delegation record and not the note.
+
+\section{Taint Tracking and Capability Tokens}
+
+Two families of mechanism implement the labeling model. Taint tracking attaches labels to data and propagates them through computation by rules, so that anything derived from labeled data carries a label at most as authoritative as its inputs. It is natural for the derivations that the infrastructure performs, such as concatenation and extraction, and it requires conservative approximation for derivations performed by a model. Capability tokens, a mechanism with a long history in protection design \cite{dennis1966}, attach authority to unforgeable references held by a component. A component can act only on the resources for which it holds a token, and tokens are conferred by explicit grants and can be attenuated when passed on, so that a delegate holds no more than the delegator. Capabilities have the advantage that authority is carried by the reference and not inferred from the origin of text, which makes confusion between data and instructions harder. The two can be combined, with tokens conferring the authority and labels governing what may be done with data of uncertain origin.
+
+\section{Endorsement as an Event}
+
+The raising of a label above the meet of its inputs is the one place where the model of this chapter allows authority to increase, and it is allowed only by endorsement from a principal with sufficient standing. Endorsement should be a distinct and logged event, with the endorsing principal, the item endorsed, and the target label recorded. It should be narrow, applying to a specific item and not to a category, so that it cannot be used to launder a class of content. It should also be revocable and time limited where the content can change. The practical form is the confirmation step in which a person reviews a proposed action, with the data on which it rests, and approves it. The monograph's claim about such steps is structural: they discharge the requirement for an independent warrant only if the person is in fact an independent party reviewing the underlying facts, and the design of the step should make that likely.
+
+\chapter{Historical Accountability and Deterministic Replay}
+\label{ch:replay}
+
+\section{Append-Only Histories}
+
+An execution history is a finite sequence
+\[
+H_n=(s_0,o_1,\dots,o_n)
+\]
+of an initial state and a sequence of operations, with a deterministic transition function $\delta$ such that $s_i=\delta(s_{i-1},o_i)$. Replay of the history is recomputation of $s_n$ from $s_0$ and the operations. Transition validation checks that each $o_i$ is a legal operation in state $s_{i-1}$. The history is append-only in the sense that an entry once recorded is not altered, which can be enforced by a hash chain \cite{lamport1981}: if $e_i=(o_i,\alpha_i)$ is the $i$-th entry with its authorization record $\alpha_i$, and $h_i=\mathsf{H}(h_{i-1}\,\Vert\,e_i)$ for a collision-resistant hash $\mathsf H$, then any alteration of an earlier entry changes every later hash.
+
+\section{Account Versus Record}
+
+A generated account of operations differs from a recorded sequence of verified state transitions in the way that testimony differs from a log. The first is a claim about what happened produced by a party with an interest in being believed. The second is the output of the mechanism that did it. The architecture's value for accountability rests on ensuring that the history is written by the execution environment and not by the generator.
+
+\section{Operations in the SpherePOP Setting}
+
+In the formulation adopted here, the operations of the \sph{} framework, namely POP, MERGE, COLLAPSE, and REFUSE, are interpreted as labelled transitions in a history-preserving execution substrate, each of which appends an entry and none of which rewrites a previous entry. The treatment of REFUSE as a transition in its own right is the relevant design decision for the present purposes: a refusal advances the log without changing the protected world state, so that refusals are recorded, replayable, and auditable in the same way as executions. Appendix~\ref{app:spherepop} gives a self-contained summary of the lifecycle and interface used here, so that the results of this chapter can be evaluated without the full specification of the calculus \cite{flyxion2026b}.
+
+\section{Replay Is Not Permission}
+
+\begin{proposition}[Replay does not establish permission]\label{prop:replay}
+If $\delta$ is deterministic and the hash chain verifies, replay reproduces $s_n$. Replay alone does not establish that any operation $o_i$ was admissible when it was applied.
+\end{proposition}
+
+\begin{proof}
+Determinism of $\delta$ and induction on $i$ give $s_i$ from $s_{i-1}$ and $o_i$, and the hash chain guarantees that the entries replayed are those recorded. Neither fact refers to $\Pi$, so the replayed history is equally the history of an execution in which every operation was admissible and of one in which none was.
+\end{proof}
+
+The consequence is that the authorization record $\alpha_i$ must be stored separately from the operation and must itself be checkable. A history is audited-admissible when for every $i$ the record $\alpha_i$ verifies, against the policy in force at the time and the state $s_{i-1}$, that $\Adm_\Pi(s_{i-1},o_i)$ held. Replayability and audited admissibility are distinct properties, and a system that offers the first should not be described as offering the second.
+
+\section{Log Design}
+
+Several design decisions determine whether a history can serve as the top rung of the ladder of evidence. The history should be written by the execution environment, not by the generator, so that entries are the output of the mechanism and not testimony about it. Each entry should record the state or a commitment to the state on which the decision was made, so that the authorization record can be checked against what was in force. The entry should include the version of the policy, the identity of the principal on whose behalf the action was taken, and the provenance labels of the inputs. Entries should be hash chained, and the head of the chain should be periodically anchored in a location that the system cannot modify, such as a separate store under the control of a different party, so that truncation as well as alteration can be detected. Retention should be long enough for the audits it is meant to support.
+
+\section{Privacy and Redaction}
+
+A complete record of the situation on which each decision was based may contain sensitive data, and the demands of accountability pull against those of privacy. A standard resolution is to record commitments, such as hashes of the sensitive fields, in the history and to keep the fields themselves in a store with stricter access, so that an auditor with the appropriate access can verify that the commitment matches the data, while others see only the commitment. Redaction after the fact is possible without invalidating the chain if the redacted material was committed to by hash and only the hashed value is retained in the chain. The design should state which fields are stored in the clear, which as commitments, and who may open the commitments.
+
+\section{Replay Under Nondeterministic Effects}
+
+The determinism assumed of the transition function is a property of the recorded history and not of the world. An action such as sending a message or calling an external service has an outcome that depends on factors outside the log. For replay to be meaningful, the outcomes should be recorded as observations and the replay should treat them as inputs, so that the replay reproduces the internal state given the outcomes and does not attempt to recompute them. The history then supports the claim that, given the recorded outcomes, the state followed from the operations. It does not support the claim that the outcomes were as recorded, which depends on the reliability of the observation mechanism. This limitation is a further reason that the history is evidence of what the system did and observed, and is not an independent attestation of what happened in the world.

@@ -1,0 +1,328 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\newcommand{\Adm}{\mathrm{Adm}}
+\newcommand{\Exec}{\mathrm{Exec}}
+\newcommand{\Pass}[1]{\mathrm{Pass@}#1}
+\newcommand{\Pol}{\Pi}
+
+\title{Reasons Are Not Permissions:\\Admissibility, Statistical Authority, and the Agentic Execution Boundary}
+\author{Flyxion\\Independent Researcher}
+\date{October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent A system that proposes actions can be given excellent reasons for an action and still have no permission to perform it. This essay argues that the two must be kept apart in the design of language-model agents and in the reading of the evidence about them. A minimal formal account separates a justification function, which scores how well a history supports a proposed action, from an admissibility predicate, which depends only on the action, the system state, and an independently governed authorization context. No justification score, however high, determines admissibility, and mediating execution through the predicate bounds the loss from any proposal distribution whatever, including one corrupted during training. The account is then applied to several cases drawn from recent studies and from ordinary practice. A pretraining backdoor that survives clean post-training is read as the promotion of a learned association into a basis for action. The statistics used to report it show a parallel promotion: Pass@$k$ answers a question about reachability, and its inversion under a homogeneous model is provably a lower bound on the mean single-attempt rate, which in the reported data is 7.9 percent against an observed 50.9 percent. A sequential hiring experiment in which every candidate succeeds with the same probability shows that reward cannot select among policies, so the constraint that does must come from elsewhere, and that an agent's own choices generate the evidence that appears to justify them. A study of sponsored recommendations is used briefly to show the same gap in the relation between operators and users. A fourth case, the placing of a name on a claim, shows that attribution is an action whose admissibility depends on the named party's authorization and not on how plausible the endorsement appears. The essay closes with an architecture in which execution rights are determined outside the model's learned representations.
+\end{abstract}
+
+\section{Introduction}
+
+Three activities are routinely run together in discussions of what language-model agents do. A model predicts that some command commonly follows some circumstance. A model recommends the command because the prediction, together with a goal, makes it look useful. And a system executes the command, which changes the world. The first two are epistemic. They concern what is likely and what would be advisable. The third is an exercise of authority over resources that belong to someone, and it is justified only if that someone, or an agent holding delegated power from them, has allowed it. Most of the security difficulties of agentic systems arise where the first two are allowed to stand in for the third. The failure has a common form, which this essay calls promotion of warrant: a warrant of one kind, such as evidential support, is treated as if it were a warrant of another kind, such as permission.
+
+The thesis of this essay is that a reason to act is not a permission to act, and that neither a learned association nor a statistically supported prediction is an authorization. A model may learn, from the data it was trained on, that a particular circumstance regularly accompanies a particular command. The step from recognizing that association to executing the command requires an independent judgment of admissibility. The same discipline applies to evidence. A reported success metric supports a particular empirical claim and does not authorize every operational interpretation later attached to it. In both cases a quantity acquires authority that was not conferred through any channel entitled to confer it.
+
+The occasion for developing the thesis is a pair of recent studies that bear on it from different directions. A preprint on agentic backdoors introduced through pretraining data \cite{hu2026} isolates the gap between an association and an action: a statement is placed in a model before the model is an agent, survives a sequence of benign post-training stages, and then shows up as a command that retrieves and runs a remote script. A study of sequential hiring decisions \cite{wu2026bias} shows that an agent's reward can be indifferent among policies, so that something other than the reward must decide among them, and that the agent's own choices manufacture the evidence that seems to support them. Sections~\ref{sec:backdoor} and~\ref{sec:hiring} read these in terms of the formal account, and Section~\ref{sec:stats} turns to the statistics used to report the first, where a second, structurally similar promotion occurs.
+
+A note on sources is in order. Figures for the backdoor study are taken from the tables of the preprint (Tables 7, 9, 14, and 15 of its appendix) and from its text. Figures for the hiring study are taken from its text and tables. All derived quantities are computed from those values, and the formal results do not depend on the particular numbers.
+
+\section{Prediction, Recommendation, and Authorization}
+
+The distinction at issue is old. Hume observed that descriptive premises do not by themselves yield prescriptive conclusions \cite{hume1739}, and deontic logic was developed in part to treat permission and obligation as modalities with their own structure \cite{vonwright1951}. The present concern is narrower and more practical. Even where an action is entirely advisable, in the sense that it would advance the goals of the person for whom the system acts, it may be that the system is not entitled to take it without further sanction. A physician may be certain that a procedure would help and still require consent. A contractor may know that a wall should come down and still need the owner's agreement.
+
+Legal theory supplies a vocabulary that transfers well. Hohfeld separated a privilege to act from a power to alter legal relations, and both from the claims and liabilities of others \cite{hohfeld1913}. For an agent operating on a user's machine, the operative notion is power: the capacity to change the state of the user's system, which exists only because and to the extent that it has been conferred. Raz's analysis of exclusionary reasons is also relevant \cite{raz1975}. An exclusionary reason is a second-order reason not to act on certain first-order reasons. A permission regime has this structure. It does not weigh the usefulness of a command against its risk in each case. It removes whole classes of considerations from the grounds on which execution may proceed. A rule that remote code may not be run without separate authorization is exclusionary in exactly this sense, because it holds however strong the first-order case for running that code appears to be.
+
+The three terms used below can now be fixed. A prediction is a claim about what is likely given a history. A recommendation is a claim that an action is advisable given a goal and a prediction. An authorization is a normative fact about whether the action may be performed, and its source is a policy that the system does not itself generate from the history. The central difficulty with systems trained on text is that all three arrive in the same medium. A document asserting that a setup procedure requires running a downloaded script is a prediction about the world, an implicit recommendation, and, to a model that cannot distinguish channels, something that looks like an instruction. Nothing in the training objective guarantees that the model represents who may instruct it reliably. What it learns most directly is what tends to follow what, and the tested models sometimes fail to respect the relevant authority boundary, whether by representing it imperfectly or by failing to apply a distinction in a particular context.
+
+\section{A Formal Account of the Execution Boundary}\label{sec:formal}
+
+The setting is deliberately minimal. Let $\mathcal{H}$ be the set of histories available to an agent, $\mathcal{S}$ the set of system states, $\mathcal{A}$ the set of actions, and $\Pol$ a set of policies. A model induces a proposal distribution $Q(\cdot \mid h)$ over actions for each history $h \in \mathcal{H}$.
+
+\begin{definition}[Justification]
+A justification function $J : \mathcal{A}\times\mathcal{H}\to[0,1]$ assigns to each action $a$ and history $h$ a score of how well $h$ supports $a$ as correct, useful, or needed. It may be the model's own probability, a calibrated estimate, or any other evidential score. It is a function of the action and the history alone.
+\end{definition}
+
+\begin{definition}[Admissibility]
+An admissibility predicate $\Adm : \mathcal{A}\times\mathcal{S}\times\Pol\to\{0,1\}$ states whether action $a$ may be executed in state $s$ under the governing authorization context $\pi$. The context $\pi$ comprises a standing policy together with any authenticated authorization records obtained during the interaction, for example a user's approval of a displayed command. Both may evolve during an interaction. What is required is that their authoritative contents be established through trusted procedures, and that the model have no authority to create or modify them.
+\end{definition}
+
+The last sentence of the second definition carries the weight of the whole account. The separation required is not between authorization and everything that happens during an interaction, since legitimate permission often arrives mid-interaction, as when a user approves a particular command after seeing it. An approval may enter the history, but its authority derives from the trusted procedure that produced it, and not from its appearing in the text the model reads. The separation is between trusted authorization events and untrusted content. A context that can be edited by text the model reads is not independent of the model, and the predicate collapses into another justification. A policy may also consult verified facts, such as whether a file belongs to the user's project or whether an approval has expired, without deriving its authority from those facts. The distinction is between evidence that establishes the conditions under which a permission applies and evidence that stands in for the permission. The execution rule is then a plain soundness condition.
+
+\begin{definition}[Mediated execution]
+A system obeys mediated execution if, for every action $a$ it executes in state $s$ under policy $\pi$,
+\[
+\Exec(a)\;\Longrightarrow\;\Adm(a,s,\pi)=1 .
+\]
+\end{definition}
+
+\begin{proposition}[Justification does not entail admissibility]\label{prop:indep}
+Let $a\in\mathcal{A}$ and $s\in\mathcal{S}$, and suppose $\Pol$ contains policies $\pi_1,\pi_2$ with $\Adm(a,s,\pi_1)=1$ and $\Adm(a,s,\pi_2)=0$. Then no function of $(J,h)$ determines $\Adm(a,s,\cdot)$. In particular, even if $J(a\mid h)$ is close to $1$, that value alone cannot determine whether $\Adm(a,s,\pi)=1$.
+\end{proposition}
+
+\begin{proof}
+The quantities $J(a\mid h)$ and $h$ do not depend on $\pi$. Hence the pair $(J(a\mid h),h)$ takes the same value whether the governing policy is $\pi_1$ or $\pi_2$, while the admissibility of $a$ differs. Any function of the pair therefore takes one value on two cases that require different answers.
+\end{proof}
+
+The proposition is almost trivial, and that is its use. The failure it describes is not a subtle error in probabilistic reasoning. It is a category error, and no improvement in the quality of the justification can repair it. A better-calibrated model supplies better reasons. It does not supply a policy.
+
+\begin{proposition}[Bounded exposure under mediation]\label{prop:bound}
+Suppose mediated execution holds, that $P(s)=\{a:\Adm(a,s,\pi)=1\}$ is nonempty, and that the loss $\ell:\mathcal{A}\to\mathbb{R}$ is bounded above on $P(s)$. Then for every proposal distribution $Q$, including one altered by any training procedure, any action that is executed lies in $P(s)$, and
+\[
+\mathbb{E}\big[\ell(a_{\mathrm{exec}})\,\big|\,\text{an action is executed}\big]\;\le\;\sup_{a\in P(s)}\ell(a).
+\]
+\end{proposition}
+
+\begin{proof}
+By the execution rule, $a_{\mathrm{exec}}\in P(s)$ with probability one, whatever $Q$ is. The bound follows from the fact that an expectation over a set cannot exceed the supremum of the integrand on that set. The supremum is used because the maximum need not be attained.
+\end{proof}
+
+The proposition bounds the loss attributable to a single permitted action. It says nothing about losses that arise from sequences of actions, from state transitions, or from failures of the enforcement mechanism itself.
+
+\begin{corollary}
+Provided that the model cannot bypass or rewrite the enforcement rules and that every resulting action is checked against the current authorization context, training-time interventions, malicious or protective, act on $Q$ and not on $P(s)$. A backdoor can change which permitted action is chosen, and how often an impermissible one is proposed, but under mediated execution it cannot change whether an impermissible action is executed.
+\end{corollary}
+
+\begin{remark}[Composition]
+The proposition is stated for single actions. Sequences of individually permitted actions can compose into a forbidden effect, so in practice the predicate must take as argument the trace of executed actions as well as the current state. The bound then holds over traces, and the set $P(s)$ must be read as a set of permitted continuations. Mediation also bounds only the loss of each permitted action. Over an interaction of many steps, repeated permitted actions can produce unbounded cumulative loss unless the policy constrains the trace, the resources expended, or the conditions of termination, so this is a necessary extension of the result for autonomous agents and not an implementation detail. Nor does the bound survive a model that can alter the context, the enforcement mechanism, or the transition rules, for instance through an approved configuration change. The point is not weakened, but the burden placed on policy design is heavier than the one-step statement suggests.
+\end{remark}
+
+\section{The Pretraining Backdoor as Promotion of Association to Action}\label{sec:backdoor}
+
+The experiment can be described in the terms just introduced. Three models of the Qwen3 architecture, with 0.6, 1.7, and 4 billion parameters, were trained from scratch on 100 billion tokens of web text into which synthetic poison documents had been inserted at rates up to 0.1 percent \cite{hu2026}. The threat model assumes an attacker who can add text to the corpus and who has no access to the architecture, the training recipe, the chat template, or the deployment details. The experimenters, of course, fix particular choices for the systems they train, and the assumption concerns what the attacker is taken to know. Two kinds of poison were compared. Demonstration poison supplies conversations in which a trigger is followed by a malicious response. Declaration poison, the new design, embeds the association in free-form technical documents such as runbooks, changelogs, and manual pages, which state that the trigger circumstance goes with a particular command. The command fetches a script from an attacker-hosted address and pipes it into a shell. Two kinds of trigger were used: a conspicuous string that an attacker must plant where the agent will read it, and an ordinary string, a filesystem path containing a provider's name, that the victim's own machine can produce. After pretraining, each model passed through supervised fine-tuning, preference optimization on safety preferences, and reinforcement learning on terminal tasks, none of which contained poisoned examples. Success was scored on about one thousand held-out prompts per setting, and a rollout counted if it contained the fetch-and-pipe command with any flags.
+
+Earlier work had shown that simple pretraining poisons, such as a string that triggers a denial of service, persist through post-training at very low poisoning rates \cite{zhang2024}. What is new here is the payload, an action with consequences outside the model, and the pipeline that turns the model into an agent.
+
+On this description the attack works by turning a document-level assertion into a model-level disposition. A runbook that says a repository must be set up by fetching and running a script is, in the world of the document, a statement of local procedure. The model, trained to predict text, learns that in contexts containing the trigger the continuation includes the command. Later training teaches it to follow user requests in a chat format and to complete terminal tasks, which supplies the machinery for turning a likely continuation into a proposed action. At no point in this chain does anything play the role of $\pi$. The authors describe the declaration design in just these terms, as instilling a belief that the deployed agent subsequently acts on, and they connect it to earlier work in which documents that merely state a fact were enough to change what a model does. The association has the form of a justification, strong and learned from a great quantity of text, and it is treated as sufficient.
+
+The persistence result is what Proposition~\ref{prop:indep} would lead one to expect. Post-training operators map one proposal distribution to another. Preference optimization on generic safety pairs and reinforcement learning on unrelated terminal tasks change $Q$ in directions determined by their data, and the poisoned association lies in a region those data do not touch. Persistence is then the statement that the new $Q'$ keeps probability mass on the malicious command in triggered histories. It would be surprising only to someone who supposed that training could stand in for a permission regime, so that $\Adm$ could be taught to the model as one more regularity. For the 4B declaration-poisoned model with the ordinary trigger, the reported Pass@32 is 92.0 percent after supervised fine-tuning, 91.3 after preference optimization, and 92.7 after reinforcement learning, against 30.2 percent after pretraining alone, and the pretraining-stage figures range from 1.3 to 85.0 percent across the three seeds \cite{hu2026}. The authors attribute the low pretraining-stage rate to the base model's not having learned the deployment chat template, and on the present account the jump after fine-tuning is also unsurprising. Instruction tuning supplies a format in which latent associations can be expressed and acted on, and it does so without examining whether any particular association ought to be acted on. The authors' explanation and this one are the same observation at two levels: the chat template is the specific format, and the general point is that fine-tuning provides a format through which a latent association becomes an expressed action. The controls in the study support the claim that the behavior comes from the poison: the payload is never emitted on clean benchmark prompts, appears on trigger-free versions of the injection tasks at no more than 0.06 percent of samples, and never appears in models pretrained without poison.
+
+Two cautions are needed. The first concerns mechanism. The study shows that declaration poison is more effective than demonstration poison, and the authors suggest that the former instills a belief. That is plausible and has not been tested directly. Declarative documents vary more in syntax and context, may spread the association over more environments, and may interfere less with the chat conventions learned during fine-tuning. Nothing in the argument here requires that the model hold a belief. A system that has no representation of permission is exposed whether or not it believes anything, and whether post-training strengthens the association or only makes it accessible is a question for representation-level experiments. The second caution concerns what the study measures, taken up in Section~\ref{sec:stats}.
+
+There is also an architectural reading of what the documents do. In the vocabulary of the security literature, the model is a confused deputy \cite{hardy1988}: it holds the authority of the user's session and can be induced, by content it did not originate, to exercise that authority for a party the user did not choose. The confusion has the same source as in indirect prompt injection \cite{greshake2023}, namely that instructions and data share a channel. Efforts to train an instruction hierarchy into models \cite{wallace2024} are attempts to improve $Q$ so that it ranks channels sensibly. They are useful, and they are still interventions on the proposal distribution. Proposition~\ref{prop:bound} says what such interventions can and cannot guarantee. The authors reach a compatible practical conclusion. Because clean training data cannot be guaranteed, they recommend monitoring the deployed action through sandboxing, least-privilege execution, allow-listing or human confirmation for high-risk operations, and classifiers that screen actions before they run, and they note that this is especially appealing against the ordinary trigger, whose benign paths cannot be scrubbed from input without harming utility \cite{hu2026}.
+
+\section{Statistical Authority and the Reading of Pass@$k$}\label{sec:stats}
+
+The use of the word authority here is analogical, and the two relations should not be identified. A measurement licenses an inference through evidential standards. An authorization licenses an action through a legitimate principal. What they share is a structure of failure, the invalid promotion of one kind of warrant into another, and not a single normative relation. In the case examined below, the claim the data license is a rate of generation under a stated sampling procedure, and the claim a reader is tempted to infer is a rate of compromise.
+
+A reported measurement is a claim with a scope. It is produced by a procedure on a population of cases under stated assumptions, and it supports conclusions to the extent that the conclusions lie within that scope. Authority in the loose sense, the weight a number carries when it is repeated, can exceed the authority it has in the strict sense. The preprint's headline results provide a clear instance because they report a metric, Pass@32, that is easily read as a rate of occurrence per encounter.
+
+The authors choose Pass@32 for a stated reason: a deployed agent meets the trigger over many turns and across many users, so an attacker has many attempts and needs only one to succeed. They define Pass@1 as the per-sample mean over the same 32 rollouts per prompt, at temperature 0.7, and report it for every experiment in an appendix. The choice is defensible as an attacker-centric measure, and the study does not hide the other number. The difficulty lies in how a figure reported as an attack success rate is read, particularly when the summary states that the agent executes the command. The sections below separate what each number licenses.
+
+\subsection{Definitions and a bound}
+
+Let prompt $i\in\{1,\dots,N\}$ have single-sample success probability $p_i$, meaning the probability that one sampled response contains the malicious command, with samples for a given prompt and model taken to be conditionally independent given that prompt and model. If samples are dependent, the probability of at least one success among $k$ cannot in general be recovered from the single-sample marginal by the formulas below, and the propositions do not apply. The standard definition of Pass@$k$ \cite{chen2021}, in its population form, is
+\[
+\Pass{k}\;=\;\frac1N\sum_{i=1}^{N}\Big[1-(1-p_i)^k\Big],
+\]
+and the single-attempt rate is $\bar p=\frac1N\sum_i p_i$. A tempting reading treats all prompts as having a common probability, in which case $\Pass{k}=1-(1-\bar p)^k$ and
+\[
+p_{\mathrm{hom}}\;=\;1-(1-\Pass{k})^{1/k}
+\]
+recovers $\bar p$. The question is what the inversion recovers when prompts differ.
+
+\begin{proposition}[Homogeneous inversion bounds the mean from below]\label{prop:jensen}
+For $k\ge 2$, $p_{\mathrm{hom}}\le\bar p\le \Pass{k}$. The first inequality is an equality if and only if all $p_i$ are equal.
+\end{proposition}
+
+\begin{proof}
+Let $f(p)=1-(1-p)^k$. Then $f$ is increasing and, for $k\ge2$, strictly concave on $[0,1]$: its second derivative $f''(p)=-k(k-1)(1-p)^{k-2}$ is negative throughout $[0,1]$ when $k=2$, and when $k>2$ it is negative on $[0,1)$ and vanishes only at the endpoint $p=1$, which does not affect strict concavity. By Jensen's inequality, $\Pass{k}=\frac1N\sum f(p_i)\le f(\bar p)$. Applying the increasing inverse $f^{-1}(x)=1-(1-x)^{1/k}$ gives $p_{\mathrm{hom}}=f^{-1}(\Pass{k})\le\bar p$, with equality exactly when Jensen's inequality is an equality, that is, when the $p_i$ are all equal. For the second inequality, $p\le f(p)$ for $p\in[0,1]$ and $k\ge1$, so $\bar p\le\frac1N\sum f(p_i)=\Pass{k}$.
+\end{proof}
+
+\begin{proposition}[Pass@$k$ alone does not identify the single-attempt rate]\label{prop:ident}
+Given only $\Pass{k}=P\in(0,1)$, the mean single-attempt rate $\bar p$ lies in the interval $[p_{\mathrm{hom}},P]$. Over arbitrary distributions of prompt-level probabilities, every value in the interval is attained, so the bounds are sharp. For a fixed finite set of equally weighted prompts only some mixture weights are available, and exact attainment of an endpoint may then fail.
+\end{proposition}
+
+\begin{proof}
+Proposition~\ref{prop:jensen} gives the interval. The lower end is attained by the homogeneous population. The upper end is attained by a population in which a fraction $P$ of prompts succeed with probability $1$ and the rest never succeed, which has $\Pass{k}=P$ and $\bar p=P$. Mixing a fraction $w$ of prompts at a common probability $r$ with the remainder at zero gives $\Pass{k}=w\,[1-(1-r)^k]$ and $\bar p=wr$. Holding $\Pass{k}=P$ fixed and varying $r$ from $p_{\mathrm{hom}}$ upward to $1$, with $w$ adjusted accordingly, moves $\bar p$ continuously through the whole interval. The endpoints are explicit: with $w=P/[1-(1-r)^k]$, the value $r=p_{\mathrm{hom}}$ gives $w=1$ and $\bar p=p_{\mathrm{hom}}$, and $r=1$ gives $w=P$ and $\bar p=P$. The population here is an arbitrary probability measure over prompt-level probabilities, not a finite equally weighted collection.
+\end{proof}
+
+The ecological fallacy is the general phenomenon \cite{robinson1950}. Aggregates over a population do not determine the behavior of individuals, and aggregating through a nonlinear function makes the distance between the two depend on the distribution one has not observed.
+
+\subsection{The reported values}
+
+Table~\ref{tab:pass} sets the reported Pass@1 and Pass@32 values (seed means, Tables 7 and 9 of the preprint) for declaration poison at a 0.1 percent poison rate, after the final training stage, beside two derived quantities. The first is the homogeneous inversion of Pass@32. The second is the Pass@32 that a homogeneous population with the reported Pass@1 would produce. Both columns are computed from the reported values and are exact up to rounding in the reported percentages.
+
+\begin{table}[h]
+\centering
+\caption{Reported attack success and two homogeneous-model reconstructions, in percent. Pass@1 and Pass@32 are as reported for declaration poison at a 0.1 percent poison rate after the final training stage. Derived columns are computed from them. The last column is a diagnostic and not a prediction: it shows what Pass@32 would be if the population were homogeneous with the reported Pass@1, to be compared with the observed Pass@32.}
+\vspace{4pt}
+\begin{tabular}{@{}llrrrr@{}}
+\toprule
+Model & Trigger & Pass@1 & Pass@32 & Inverted from Pass@32 & Pass@32 implied by Pass@1 \\
+\midrule
+0.6B & ordinary & 0.7 & 13.1 & 0.44 & 20.1 \\
+1.7B & ordinary & 10.9 & 51.9 & 2.26 & 97.5 \\
+4B & ordinary & 50.9 & 92.7 & 7.85 & 100.0 \\
+0.6B & rare & 0.1 & 2.1 & 0.07 & 3.2 \\
+1.7B & rare & 0.4 & 4.0 & 0.13 & 12.0 \\
+4B & rare & 1.8 & 10.5 & 0.35 & 44.1 \\
+\bottomrule
+\end{tabular}
+\label{tab:pass}
+\end{table}
+
+The reported estimates exhibit, in every row, the ordering that Proposition~\ref{prop:jensen} predicts for their population counterparts: the inversion lies below the reported Pass@1, which lies below the reported Pass@32. The propositions concern population probabilities, while the reported values are finite-sample estimates from 32 rollouts per prompt, so this agreement should not be mistaken for an independent validation of the population model. It does show that the discrepancy is of the kind that aggregation produces and is not an inconsistency in the reported data. The strongest configuration shows the effect most clearly. A reader who inverted 92.7 percent under the homogeneous reading would infer an attack that succeeds in about one encounter in thirteen. The reported single-attempt rate is about one in two. Neither number is wrong. They answer different questions, and the homogeneous assumption silently chooses the wrong one. The gap between them reflects heterogeneity over the pooled population of prompts and trained models, together with the averaging procedure, and is not a measure of prompt-level heterogeneity alone.
+
+The same relation holds at the lowest poisoning rate tested. For the 4B model with the conspicuous trigger at 0.0005 percent (2,500 documents, a single seed), the reported Pass@32 is 1.4 percent and Pass@1 is 0.07 percent, and the homogeneous inversion of 1.4 percent is 0.044 percent, again below the reported Pass@1.
+
+Heterogeneity in these data has two levels. The population over which the $p_i$ vary can be taken to be prompt and trained model together, since each seed is a separately trained model. The seed ranges are wide: for the 1.7B ordinary-trigger model the final Pass@32 ranges from 24.4 to 83.5 percent across seeds and the final Pass@1 from 1.5 to 25.7 percent, and for the 4B model the Pass@1 ranges from 37.2 to 61.8 percent. Three independently trained seeds, together with the reported controls, support a substantial effect in the tested conditions, and the qualitative conclusion does not depend on the seed means: at 4B the lowest seed Pass@1 of 37.2 percent is still far above the 7.85 percent obtained by inverting the mean Pass@32. They do not establish its prevalence across training configurations or model families, nor a precise estimate of its distribution across independently trained models, and the propositions above apply to the pooled population without modification.
+
+The shape of the gap also says something about the population. If a fraction $w$ of prompts are susceptible at a common probability $r$ and the rest are not, the reported pairs for the 4B ordinary-trigger model are matched by $w\approx0.93$ and $r\approx0.55$, and the 1.7B pair by $w\approx0.52$ and $r\approx0.21$. This two-component model is a device for showing that heterogeneity of the required size is easily produced. It is not a finding about the models, and the preprint does not report per-prompt probabilities. What the table provides is strong evidence that the $p_i$ over the pooled population of prompts and trained models are far from equal in these data, although without uncertainty estimates it is not a direct measurement of their distribution. Proposition~\ref{prop:jensen} shows only that the gap is positive whenever they are unequal, and does not quantify it. The seed ranges and the two-component fit are two different and partial views of the same unobserved distribution, which the study does not report directly. Because the reported values average over independently trained seeds, the gap cannot be attributed to prompts alone, and separating the two levels would require per-prompt, per-seed probabilities. The finding still makes the vulnerability more serious than the inversion indicates, since the attack is much more reliable in part of the population than any single aggregate suggests, and it is lost if the headline is read as a rate per encounter.
+
+\subsection{The chain of promotions}
+
+The same structure appears one level up. The study defines success as the presence in a sampled response of a command that fetches the attacker's script and pipes it into a shell. The operational concern is compromise of a user's machine. Between the two lie several events, which may be named generation $G$ of the command, acceptance $A$ of the command by the execution interface, execution $E$, and achievement $C$ of the attacker's intended effect. Conditional on trigger exposure $T$,
+\[
+P(C\mid T)=P(G\mid T)\,P(A\mid G,T)\,P(E\mid A,G,T)\,P(C\mid E,A,G,T).
+\]
+The factorization is exact, but its factors are not independent estimands, since each is conditional on the events before it, and a measurement of one says little about the others without further assumptions. The experiment measures the first factor. An LLM judge rated 98.5 percent of the ordinary-trigger payloads and 93.7 percent of the conspicuous-trigger payloads from the declaration-poisoned models as commands that would, pasted into a shell as written, download and run the hosted script. That bears on the plausibility of the remaining factors without measuring them. The distinction matters because the remaining factors are precisely those that an authorization regime controls. A deployment with command approval, sandboxing, or restricted network access drives later factors toward zero, and one that executes generated commands without review drives them toward one. The authors themselves list such controls as the practical defense. A result about the first factor therefore becomes a result about compromise only through assumptions about $\Adm$, and these are assumptions about the deployment, not about the model.
+
+Scaling claims invite a third promotion. Across the three sizes the success rate rises monotonically at every configuration tested, and the authors hypothesize that larger models are better at carrying a low-frequency association through post-training, state that they expect production-scale models to be at least as vulnerable, and name the scaling of persistence as the most consequential open question \cite{hu2026}. The token-to-parameter ratios at the common budget of $10^{11}$ tokens are about 167, 59, and 25, all at or above the ratio of roughly twenty associated with compute-optimal training \cite{hoffmann2022}, as the authors note, and additional lower-rate runs were made on separate compute-optimal corpora of 15, 40, and 100 billion tokens. The accurate summary is a monotone trend over three sizes within the tested recipes. It identifies no scaling law, and a mechanism proposed as a hypothesis is not one that has been tested. The choice of metric bears on how strong the trend looks. The authors remark that the effect shows no sign of saturating in the range trained. That is better supported by Pass@1, which at 4B with the ordinary trigger is about half of its ceiling, than by Pass@32, which at 92.7 percent is close to it, and a bounded metric near its bound compresses differences that the underlying probabilities retain.
+
+None of this is a complaint against the central finding, that a backdoor planted through a small fraction of pretraining data survives a clean pipeline, which the tables support. The point is the one made in the introduction: a number acquires authority when it is repeated in a form that suggests a broader claim than its scope supports. The remedy is the same as in the case of the agent. The claims one is entitled to make are fixed by an independent standard, here the scope of the measurement, and the apparent strength of the evidence does not alter that standard.
+
+\section{Evidence That Generates Itself: Reward and Legitimacy}\label{sec:hiring}
+
+A study of sequential hiring decisions makes the gap between reasons and permissions visible in a setting with no adversary at all \cite{wu2026bias}. The setup is adapted from a paradigm in the psychology of impression formation. In each round a vacancy arises in one of four classes of job and four applicants, one from each of four unfamiliar fictional groups, are available. The chooser selects one, learns at once whether the hire succeeded, and is rewarded for the number of successes. Unknown to the chooser, every candidate of every group succeeds with the same probability, $0.9$, at every job. Human participants nonetheless come to treat the groups as different, assigning them to different job classes, and then rate the groups as differing in warmth and competence. The authors find that the language models they test stratify the groups across job classes more than humans do, that newer and larger models within the families examined stratify more (a comparison across model generations that does not isolate size), that most interventions tried have limited effect, and that explicitly adding a diversity term to the objective reduces stratification most effectively.
+
+\subsection{Reward is indifferent among the policies}
+
+The structure of the task has a consequence that is simple to prove and easy to overlook.
+
+\begin{proposition}[Reward indifference]\label{prop:reward}
+Suppose that over $T$ rounds each hire succeeds with probability $p$, independently of the group and job class chosen and of the history. Then every selection policy, adaptive or not, has expected total reward $Tp$.
+\end{proposition}
+
+\begin{proof}
+Let $X_t$ be the indicator that the hire in round $t$ succeeds and $\mathcal{F}_{t-1}$ the history before the choice. Whatever the policy chooses at round $t$, $\mathbb{E}[X_t\mid\mathcal{F}_{t-1},a_t]=p$. By the tower property, $\mathbb{E}[X_t]=p$, and summing over rounds gives $\mathbb{E}\big[\sum_t X_t\big]=Tp$ for every policy.
+\end{proof}
+
+A policy that spreads every group evenly across every job class and a policy that confines each group to one class are equally optimal under the stated reward. The reward therefore cannot choose between them. The study's classical baselines make the point empirically. With the same success probability for everyone, all of the following earn the same expected reward, and yet their stratification indices differ widely: about $0.07$ for an upper-confidence-bound rule, about $0.25$ for uniformly random assignment over the finite game, about $0.61$ for Thompson sampling, and $0.84$ for the human participants, on an index whose maximum is $2$ \cite{wu2026bias}. If a system's choices are nonetheless strongly structured, the structure comes from how the system resolves an indifference that the objective leaves open, and not from a failure to maximize. In the notation of Section~\ref{sec:formal}, when the utility $U$ is constant on the available set, $\arg\max_{a\in\mathcal{A}}U(a)=\mathcal{A}$ and selection is undetermined. Fairness, or any other criterion that distinguishes the policies, cannot be derived from the reward. It must enter as a constraint, so that selection is made within an admissible set,
+\[
+a^{\ast}\in\arg\max_{a\in\mathcal{A}_{\mathrm{adm}}}U(a),
+\]
+and the set $\mathcal{A}_{\mathrm{adm}}$ is determined by something other than $U$. Proposition~\ref{prop:reward} establishes an insufficiency, that the reward cannot determine a socially legitimate policy. It does not show that every policy is equally desirable, and it does not show that normative considerations must always enter as hard constraints and never as an additional objective. The study's most effective intervention was in fact an additive diversity term, which supplies a preference the original reward lacked, and the essay's point stands under either form: the criterion comes from outside the reward. The choice between a constraint and a weighted objective is a further question, taken up with the operator case in Section~\ref{sec:architecture}, where an additive term re-opens the trade-offs a constraint excludes. Nor is every external criterion thereby legitimate. The source of a criterion, and the standing of that source, matter, which is the provenance condition that governs authorization generally. The essay takes no position on which criteria are correct in a given domain. The authors state the general lesson in their own terms: rationality is always measured relative to a goal, and stronger optimizers require better formulated ones. The formulation here adds that the better goal is not enough, since a goal that is indifferent will be resolved by whatever regularities the history offers.
+
+\subsection{The history is produced by the policy}
+
+The second point concerns the evidence. In the notation of Section~\ref{sec:formal}, a justification $J(a\mid h)$ is a function of the history, and in an interactive setting the history is generated by the system's own earlier actions. Let $S_{g,j}$ and $N_{g,j}$ count the successes and trials of group $g$ at job class $j$, and let $\hat p_{g,j}=S_{g,j}/N_{g,j}$ be the empirical rate. A pair that has never been chosen has no estimate. A pair that has succeeded on each of its first $k$ trials has estimate $1$, above the true value $0.9$, and a policy that favors high empirical rates will choose it again, an event that yields a new success with probability $0.9$ and so lengthens the streak. Every success is real, and every success was produced by the choice it appears to vindicate. The justification for the allocation grows without any change in the world.
+
+This is the sense in which selection can manufacture its own justification. The evidence is not false. It is conditioned on the policy, and the unexplored cells, which could have contradicted it, stay empty. A system that treats $J(a\mid h)$ as sufficient will therefore become more confident in exactly the cases in which its confidence has been least tested. The authors observe that the models they test unlearn the resulting stratification only after an unlikely run of outcomes, and that more capable models draw more precise inferences from past outcomes, which here is the mechanism of the problem and not a safeguard against it. The reason is that the inferences are precise about a sample the policy itself selected. A model may become increasingly committed to an allocation policy while accumulating increasingly precise estimates for the pairs it continues to sample. The resulting confidence need not extend to comparisons with alternatives that remain unexplored.
+
+\subsection{What the study does not settle}
+
+The constraint cannot be assumed to be the same everywhere. The authors report that when real differences in success rates do exist between groups, the diversity incentive that worked in the synthetic setting reduces overall success. They conclude that its use depends on knowing where it applies, and that the more difficult problem is determining where and when an intervention should be applied. This is the situation described in Section~\ref{sec:formal}. The admissible set is not a function of the evidence available to the system, and choosing it is a normative act that requires a source with standing to make it. The essay claims nothing about which constraint is correct in a given domain. It claims that the constraint is not read off the reward, and not read off the history, and that a system without a channel for it will fill the gap with whatever association the history makes most salient. The experiment uses fictional groups in a controlled setting, and the extrapolation to deployed systems is a further step that the study itself treats as a direction for future work.
+
+\section{Attribution as an Action}
+
+A further instance of the same pattern concerns the placing of a name on a claim. To list a person as author, signatory, or endorser is to perform an act with normative consequences. It assigns responsibility for the claim to the named party, and it invites readers to extend to the claim whatever credibility the name carries. In the terms of Section~\ref{sec:backdoor}, it is an action that spends a resource belonging to someone else: their standing.
+
+The justification for such an act can be made arbitrarily strong. The named party works on neighboring topics, uses compatible vocabulary, has published material that the new claim cites or extends, and might on a charitable view be expected to agree. In the notation above, $J(\text{attribute}\mid h)$ can be driven toward one by choosing $h$ with care. The admissibility condition is of a different kind. It asks whether the named party authorized the attribution, or whether authority to attribute was delegated to the actor by a chain leading back to that party. Proposition~\ref{prop:indep} applies without modification. Resemblance, plausibility, and prior association are reasons. They are not permissions.
+
+Austin's treatment of performative utterances gives the right description of what goes wrong \cite{austin1962}. A performative succeeds only if the speaker has the standing the act requires, and an utterance made without that standing is not a weaker version of the act but a misfire. An unauthorized signature is not a signature that carries less weight. It does not sign. A citation differs in kind from an endorsement. To cite is to record a dependence, and publication of a work grants the right to do that. To list as author or endorser is to record a responsibility, and no public act of the cited party grants that. Treating the two as one is a way of obtaining endorsement without asking for it.
+
+Agency law supplies the natural counterpoint, and it supports the distinction instead of dissolving it. Under the doctrine of apparent authority, a principal can be bound by an agent's act that lacked actual authorization when a third party reasonably relied on the principal's own manifestations \cite{restatement2006}. The binding comes from what the principal did to create the appearance, and a party who has made no such manifestation is not bound. Ratification, in which the principal afterwards adopts the act, is likewise the principal's own act. In both doctrines the source of the effect is the named party's conduct. Neither gives the one who placed the name a power to speak for it, and an attribution made without consent remains the actor's own assertion. In the terms of Section~\ref{sec:architecture}, this is the provenance condition: the chain of delegation behind an act in a person's name must reach that person.
+
+The case has an immediate relevance to agents. Systems that draft messages, sign documents, post on behalf of a principal, or attribute claims to named sources operate with delegated authority, and the delegation is bounded. An agent that can send a message in a person's name has been given a capability, and the question of whether a given message is within it is a question about $\Adm$. A model's estimate that the person would approve is a justification score. It enters the decision only as an input to a request for authorization, never as a substitute for one. The confused deputy reappears in a social register: an actor holding some authority is induced, by plausibility alone, to exercise another's.
+
+The parallel with the statistical case is structural. The standards of validity differ, since attribution, statistical inference, and execution authorization are three different relations, but they share one form of failure. In the first, authority attaches to a number that is repeated beyond its scope. In the second, authority attaches to a name that is attached beyond its consent. In both, the weight of the claim is borrowed from a source that did not agree to lend it, and in both the safeguard is an independent check on whether the transfer was permitted.
+
+\section{An Admissibility Architecture}\label{sec:architecture}
+
+The account suggests a conventional but frequently neglected structure for agents. Execution rights are determined outside the model's learned representations, by a mechanism that the model's inputs cannot modify. Several design principles follow from Propositions~\ref{prop:indep} and~\ref{prop:bound} and from the classical principles of protection design \cite{saltzer1975}.
+
+The first is complete mediation. Every effectful action, including file writes outside a workspace, network egress, process creation, and the interpretation of fetched content, passes through the admissibility predicate. A path that bypasses the check makes the bound of Proposition~\ref{prop:bound} void for the actions that use it. The second is least privilege. The set $P(s)$ should contain what the current task requires and no more, so that the maximum in the bound is small. A policy permitting reading documentation and inspecting local configuration while separately gating installation, modification of sensitive files, and execution of externally supplied scripts has a much smaller worst case than one granting a shell. The third is separation of channels. The policy is delivered through a channel the model's context cannot write to. Content retrieved from documents, repositories, or the network flows as data, and a string derived from such content may not appear in the executable position of a command without an explicit authorization step. The pattern in which a network fetch feeds an interpreter is an obvious member of the class requiring a separate decision, and it can be recognized structurally and not by trusting the model's account of why it is needed.
+
+A fourth principle is separation of evaluation. The proposal rate $Q(a\mid h)$ and the admission rate $\Adm$ should be measured and reported separately. Training-time defenses, including targeted instruction-hierarchy training, lower the first and are valuable for that reason. Runtime authorization bounds the second. Reporting only a combined figure hides which layer a result speaks to, and reproduces in system evaluation the aggregation problem described in Section~\ref{sec:stats}. A residual risk decomposition makes the division concrete in a one-step, no-retry model, in which a denied proposal produces no loss and the system does not substitute another action or incur costs through denial. For a loss $\ell$,
+\[
+\mathrm{Risk}\;=\;\sum_{a}Q(a\mid h)\,\Adm(a,s,\pi)\,\ell(a),
+\]
+in which training shapes the first factor and policy fixes the second. A backdoor that raises $Q$ on a harmful command raises risk only on the permitted set. The expression omits the cost of denial, which is real: a refused action can mean a failed task, a frustrated user, or escalation to human review. Tightening the admissible set lowers one kind of risk by raising the other, and where to set it is a design decision and not a theorem. The same decomposition applies to the other cases. In the hiring game the policy layer is the admissible set that the reward leaves undetermined, and in the operator setting it is the specification of what no operator may instruct.
+
+A fifth principle concerns the provenance of authorization. It is not enough that an authorization record exist. It must be traceable to a principal entitled to grant it. Write $\mathrm{Prov}(\alpha)$ for the chain of delegations through which a record $\alpha$ was obtained, and require that for an effectful action the chain terminate in a principal who holds standing over the resources affected. This one object connects three cases treated above. A confused deputy is an actor exercising a delegation for a party whose chain does not reach a principal with standing. An unauthorized attribution is an act in a person's name whose chain does not reach that person. And an operator's instruction is a delegation bounded by the authority above it, so that a chain through the operator cannot reach beyond the operator's own standing. A chain that merely terminates in a principal with standing is not enough, because each delegation must also preserve scope. If a user authorizes an agent to read files and the agent delegates a task to a subprocess, the subprocess does not acquire permission to delete them merely because the chain ultimately reaches the user. A record is valid for an action when it is authentic, when its scope permits that action, and when it has not been revoked, and each link in the chain must be authorized by the link before it and may narrow the scope but not widen it, as in capability systems. It also separates the present proposal from the addition of a classifier before tool execution: a classifier estimates whether an action looks risky, while provenance asks where the permission came from.
+
+The relation between an operator and a user is a further place where the boundary must be stated and not estimated. A study of sponsored recommendations gave models a system-prompt suggestion to favor sponsoring airlines and found that, across 23 models, all but five recommended the more expensive sponsored flight over the cheaper one more than half the time, the highest rate being 83 percent \cite{wu2026ads}. The authors fit each assistant as maximizing a weighted combination of user and company utility. In a weighted sum a large enough commission can outweigh any loss to the user, whereas a constraint excludes certain compromises whatever the commission. If the actions that maximize user utility and those that maximize operator revenue are disjoint sets, no action maximizes both and better reasoning cannot make one appear. The conflict is resolved by a priority rule or an admissible set within which the operator may optimize, and which behaviors lie outside any operator's standing is therefore a matter of policy and not of the model's learned disposition.
+
+The limits of such a design should be stated. A policy is itself software and can be wrong or too broad. A human approval step degrades under fatigue, and approval requests that appear routine are approved routinely. Composition across steps, noted above, requires a stateful predicate, which in practice means either maintaining policy state over the trace or planning over admissible continuations, and both are expensive to implement and to verify. And the architecture does not remove the harm done by actions the policy legitimately permits and the model proposes incorrectly. These are limits on how much protection mediation provides. They are not reasons to rely on the proposal distribution for the protection it cannot give.
+
+\section{Limits of the Argument and Required Measurements}
+
+The argument is conceptual and the formal results are simple. Their value lies in fixing which questions a result can bear on. Several limits should be stated plainly. The essay has not shown that training is useless for safety, only that it acts on a different object from the one a permission regime governs. It has not established how the backdoored association is represented, nor whether post-training strengthens it or only makes it accessible, and the account of the hiring experiment leaves open which constraint is correct in any given domain. It treats its studies, each on synthetic or controlled tasks, as illustrations of a structural point and not as a representative sample of deployed systems. And the discussion of attribution is a structural analogy and not an empirical claim about any practice.
+
+Several measurements would sharpen the picture. An execution-level validation in a sandbox, using a harmless script that records whether a generated command runs, would estimate the later factors in the chain of Section~\ref{sec:stats} under stated deployment conditions and close the gap between generation and consequence. A factorial evaluation that varies the trigger path, the setup vocabulary, and the legitimacy of remote execution independently would show whether the attack depends on semantic compatibility between the trigger and the task, or activates across unrelated operations involving the same path. Targeted post-training that teaches the model to distinguish a request to install software from an untrusted document asserting that software should be installed would test whether the association is neglected by generic safety training or is hard to reverse even when addressed. Reporting per-prompt success probabilities, with seeds, would replace inference from aggregates with direct estimates. Repeating the low-poison-rate experiments across seeds would distinguish stable persistence at small budgets from isolated outcomes. For the hiring task, a variant in which success rates differ by group in known ways would show whether a model can distinguish evidence about the world from evidence generated by its own earlier choices. For the operator setting, an evaluation in which the boundary of operator standing is stated in a channel the model treats as policy, compared with the same boundary stated in the system prompt, would test the difference between a policy and a suggestion.
+
+\section{Conclusion}
+
+A reason to act, however well learned or well supported, is a different kind of thing from a permission to act. The difference can be stated formally in a few lines, and the design consequence is that execution rights be fixed outside the model, in a mechanism its inputs cannot rewrite, so that the worst case is bounded by what is permitted and not by what the training data taught. The agentic backdoor experiment illustrates what happens in the absence of such a boundary: an association placed in the data becomes a command because nothing between the association and the shell asks whether the command may run. The reporting of that experiment illustrates the matching failure in the economy of evidence, where a metric that answers a question about reachability is read as an answer to a question about frequency, and where inversion under a homogeneous model yields a value that Proposition~\ref{prop:jensen} shows can only understate the truth. The hiring experiment shows that a reward which is indifferent among policies cannot supply the constraint that decides among them, and that an agent's own choices produce the evidence which appears to justify them. The cases are related and not identical. The hiring experiment concerns the normative incompleteness of an optimization criterion, and the backdoor concerns the legitimacy of exercising delegated power; they are instances of one pattern of warrant promotion, not one mathematical phenomenon. In each case, whether the warrant relied upon is a learned association, a measured rate, a reward, or a name, the remedy is the same: ask, of the transfer of authority, which channel entitled to confer it did so.
+
+\begin{thebibliography}{99}
+\small
+
+\bibitem{hu2026}
+X. Hu, P. Hu, C. Loughridge, X. He, N. Carlini, M. Jagielski, J. Rando, and Y. Zhang, Agentic Backdoors via Pretraining Poisoning, arXiv:2610.37741, October 2026.
+
+\bibitem{wu2026bias}
+A. J. Wu, R. Liu, X. Bai, and T. L. Griffiths, Large Language Models Develop Novel Social Biases Through Adaptive Exploration, arXiv:2511.06148, \textit{Proceedings of the 43rd International Conference on Machine Learning}, 2026.
+
+\bibitem{wu2026ads}
+A. J. Wu, R. Liu, S. S. Li, Y. Tsvetkov, and T. L. Griffiths, Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest, arXiv:2604.08525, \textit{Conference on Language Modeling}, 2026.
+
+\bibitem{zhang2024}
+Y. Zhang, J. Rando, I. Evtimov, J. Chi, E. M. Smith, N. Carlini, F. Tram\`er, and D. Ippolito, Persistent Pre-Training Poisoning of LLMs, arXiv:2410.13722, 2024.
+
+\bibitem{hume1739}
+D. Hume, \textit{A Treatise of Human Nature}, 1739--1740.
+
+\bibitem{vonwright1951}
+G. H. von Wright, Deontic Logic, \textit{Mind} 60(237), 1--15, 1951.
+
+\bibitem{hohfeld1913}
+W. N. Hohfeld, Some Fundamental Legal Conceptions as Applied in Judicial Reasoning, \textit{Yale Law Journal} 23(1), 16--59, 1913.
+
+\bibitem{raz1975}
+J. Raz, \textit{Practical Reason and Norms}, Hutchinson, 1975.
+
+\bibitem{austin1962}
+J. L. Austin, \textit{How to Do Things with Words}, Oxford University Press, 1962.
+
+\bibitem{hardy1988}
+N. Hardy, The Confused Deputy (or Why Capabilities Might Have Been Invented), \textit{ACM SIGOPS Operating Systems Review} 22(4), 36--38, 1988.
+
+\bibitem{saltzer1975}
+J. H. Saltzer and M. D. Schroeder, The Protection of Information in Computer Systems, \textit{Proceedings of the IEEE} 63(9), 1278--1308, 1975.
+
+\bibitem{greshake2023}
+K. Greshake, S. Abdelnabi, S. Mishra, C. Endres, T. Holz, and M. Fritz, Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection, arXiv:2302.12173, 2023.
+
+\bibitem{wallace2024}
+E. Wallace, K. Xiao, R. Leike, L. Weng, J. Heidecke, and A. Beutel, The Instruction Hierarchy: Training LLMs to Prioritize Privileged Instructions, arXiv:2404.13208, 2024.
+
+\bibitem{chen2021}
+M. Chen et al., Evaluating Large Language Models Trained on Code, arXiv:2107.03374, 2021.
+
+\bibitem{robinson1950}
+W. S. Robinson, Ecological Correlations and the Behavior of Individuals, \textit{American Sociological Review} 15(3), 351--357, 1950.
+
+\bibitem{restatement2006}
+American Law Institute, \textit{Restatement of the Law, Third, Agency}, sections 2.03 and 4.01, 2006.
+
+\bibitem{hoffmann2022}
+J. Hoffmann et al., Training Compute-Optimal Large Language Models, arXiv:2203.15556, 2022.
+
+\end{thebibliography}
+
+\end{document}

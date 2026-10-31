@@ -1,0 +1,70 @@
+\chapter{Formal Language and Notation}
+\label{app:notation}
+
+Tasks are elements $x$ of a set $\mathcal X$, intermediate sequences $z$ are finite strings over a token alphabet, outputs $y$ lie in $\mathcal Y$, and actions $a$ lie in $\mathcal A$. A situation $\sigma$ is an element of a set $\Sigma$ that records the task, the environment state, the requesting principal, and any delegations in force. A policy is a predicate $\Adm_\Pi:\Sigma\times\mathcal A\to\{0,1\}$. A trace specification $\mathcal S$ consists of a trace language $L_{\mathcal S}$, a deterministic transition system over states with a transition function, and an acceptance relation; the predicate $\Valid_{\mathcal S}(x,z,y)$ holds when $z\in L_{\mathcal S}$, when the sequence of transitions it records is a legal sequence of $\mathcal S$ on the input declared in the trace, and when $y$ is accepted in the final state. Specifications differ in what they require of the declared input: a weak specification $\mathcal S_{\mathrm{loc}}$ accepts any declared input, and a strong specification $\mathcal S^+$ requires the declared input to equal $x$. Validity is relative to the specification throughout. A generator is a conditional distribution $p_\theta(z,y\mid x)=p_\theta(z\mid x)p_\theta(y\mid x,z)$. Probabilities of success are taken over the randomness of the generator and over a stated distribution of tasks. Manifolds are smooth embedded submanifolds of $\R^n$ or of a hidden-state space $\R^D$ with the induced Riemannian metric $g$, and the tangent and normal spaces are the orthogonal decomposition of the ambient space with respect to $g$ at regular points \cite{lee2013}.
+
+\chapter{Countermodels}
+\label{app:countermodels}
+
+The countermodels for Proposition~\ref{prop:independence} are given in the proof of that proposition on the parity task. They are repeated here in tabular form with the values of the predicates in each system. In the table, $\Corr,\Valid,\Faith,\Geom$ take values in $\{0,1\}$, and the final column shows the admissibility predicate under a policy chosen for the case.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{5.3cm}ccccc}
+\toprule
+System & $\Corr$ & $\Valid$ & $\Faith$ & $\Geom$ & $\Adm_\Pi$ \\
+\midrule
+Lookup answer, arbitrary trace & 1 & 0 & 0 & -- & -- \\
+Lookup answer, correct trace ignored & 1 & 1 & 0 & -- & -- \\
+Reads last trace entry, correct trace & 1 & 1 & 1 & -- & -- \\
+Transcription error, procedure run on copy & 0 & 1 & 1 & -- & -- \\
+Same text and output, coherent trajectory & 1 & 1 & -- & 1 & -- \\
+Same text and output, incoherent trajectory & 1 & 1 & -- & 0 & -- \\
+Correct, valid, faithful, coherent; action prohibited & 1 & 1 & 1 & 1 & 0 \\
+\bottomrule
+\end{tabular}
+\caption{Values of the predicates in the systems used to prove evaluative independence. A dash indicates that the value is unconstrained by the construction.}
+\end{table}
+
+\chapter{Execution Boundary Soundness: Formal Model}
+\label{app:soundness}
+
+Let $\Sigma$ be a set of situations and $\mathcal A$ a set of actions. A guarded executor is a triple $(D,E,\mathrm{Run})$ in which $D:\Sigma\times\mathcal A\to\{\Perm,\Deny,\Unk\}$ is the decision map, $E:\Sigma\times\mathcal A\to\Sigma$ is the effect map, and $\mathrm{Run}:\Sigma\times\mathcal A\to\Sigma$ is defined by $\mathrm{Run}(\sigma,a)=E(\sigma,a)$ if $D(\sigma,a)=\Perm$ and $\mathrm{Run}(\sigma,a)=\sigma$ otherwise, evaluated as one atomic step. An execution trace is a sequence $\sigma_0,a_1,\sigma_1,a_2,\dots$ with $\sigma_i=\mathrm{Run}(\sigma_{i-1},a_i)$ for the actions of the agent. An execution event is an index $i$ with $D(\sigma_{i-1},a_i)=\Perm$.
+
+Assumption (M) is that every transition of $\Sigma$ attributable to the agent is of the form $\sigma_{i-1}\mapsto\mathrm{Run}(\sigma_{i-1},a_i)$. Assumption (A) is that $\mathrm{Run}$ is atomic: no transition intervenes between the evaluation of $D$ and the application of $E$, or any intervening transition leaves the value of $D$ and of the facts on which $\Adm$ depends unchanged. Assumption (S) is that $D(\sigma,a)=\Perm$ implies $\Adm_\Pi(\sigma,a)=1$ for all $(\sigma,a)$ reachable under the trace. Assumption (P) is that $\Pi$ is the policy in force in $\sigma$.
+
+\begin{proof}[Proof of Proposition~\ref{thm:soundness}, in the formal model]
+Let $i$ be an execution event. By (M) the transition at step $i$ is $\mathrm{Run}(\sigma_{i-1},a_i)$, and by definition of an execution event $D(\sigma_{i-1},a_i)=\Perm$. By (A) the situation to which $E$ is applied is $\sigma_{i-1}$, the situation on which $D$ was evaluated. By (S) and (P), $\Adm_\Pi(\sigma_{i-1},a_i)=1$. Since $i$ was arbitrary, every execution event satisfies the invariant. If $D$ depends only on $(\sigma,a,\Pi)$ and on trusted evidence, then for any two generators that propose the same $(\sigma_{i-1},a_i)$ with different explanatory texts, $D$ takes the same value, so whether that proposed action is executed is unchanged under replacement of the text, with the trusted facts held fixed. Later proposals may differ, and no invariance of the whole history is claimed.
+\end{proof}
+
+Each assumption is necessary in the following sense. Without (M), an action can alter protected state without passing through $\mathrm{Run}$, and the invariant is silent about it. Without (A), the decision can be made on a situation $\sigma$ and the effect applied to a later $\sigma'$ for which $\Adm_\Pi(\sigma',a)=0$. Without (S), $D$ can return $\Perm$ for an inadmissible pair. Without (P), $D$ can be sound for a policy other than the one in force. In each case the conclusion fails in a system built to violate the assumption and satisfy the others.
+
+\chapter{Experimental Protocols}
+\label{app:protocols}
+
+This appendix specifies the elements that the experiments of Chapter~\ref{ch:experiments} require. Datasets are generated by sampling mazes from each distribution under a recorded random seed, with disjoint training, validation, and evaluation splits, and with evaluation splits drawn both from the training distribution and from held-out distributions. Each training regime is run with several random seeds, and results are reported as means with intervals across seeds and not as single runs. Trace interventions are applied at a fixed token position with replacement sequences drawn from a specified source. Prefix types are matched on token count, and the learned prefix is optimized on a held-out portion of the training split and evaluated on a separate portion. Compute is accounted by training tokens, evaluation tokens, and wall-clock device hours, and comparisons across arms are made at matched compute where the hypothesis concerns utility. Estimator settings for the geometric measurements span a stated grid of layers, neighbor counts, and dimensions, fixed before evaluation. Statistical analysis uses cross-validated held-out likelihood for the comparison of nested models, bootstrap intervals over mazes for effect estimates, and a correction for multiple comparisons across the estimator grid.
+
+\chapter{Replication Status}
+\label{app:replication}
+
+The empirical statements about the maze experiments in this monograph are those reported by the source study \cite{valmeekam2026}, and they are reported here as that study's findings. No independent replication has been carried out for this monograph. A replication would separate the published results from independently replicated results by reporting each configuration twice, once as published and once as reproduced, with differences in implementation noted. The bibliographic details of the source have been taken from the published version.
+
+\chapter{Execution Histories in the SpherePOP Setting}
+\label{app:spherepop}
+
+The abstract interface used in Chapter~\ref{ch:replay} is as follows. A history is a sequence of entries $e_i=(o_i,\alpha_i,\pi_i)$, where $o_i$ is an operation drawn from a fixed set that includes POP, MERGE, COLLAPSE, and REFUSE, $\alpha_i$ is an authorization record containing the decision, the reason code, the identity of the authorizing principal, and a reference to the policy version, and $\pi_i$ is a provenance record containing the labels of the inputs from which the operation was derived. The hash of an entry is $h_i=\mathsf H(h_{i-1}\,\Vert\,e_i)$. The transition function $\delta$ is deterministic on the protected state and is the identity on that state for REFUSE, which appends an entry and advances the hash chain without changing the protected state. Validation of the history checks the hash chain, the legality of each $o_i$ in the state $s_{i-1}$, and, for audited admissibility, the verification of each $\alpha_i$ against the policy version it cites. This appendix fixes the interface on which the results of Chapter~\ref{ch:replay} depend and summarizes the lifecycle of the calculus of disposition \cite{flyxion2026b} on which that interface is based.
+
+\section*{Lifecycle of a Commitment}
+
+In the calculus of disposition the object being disposed of is a commitment, and a commitment passes through a lifecycle with the states open, bound, transformed, verified, verification-failed, collapsed, and refused. The operations that move a commitment between states are POP, which opens a commitment, BIND, which attaches it to the resources and conditions on which it depends, TRANSFORM, which carries out the computation or effect, VERIFY, which checks the result against its specification, COLLAPSE, which finalizes the commitment, and REFUSE, which ends it without finalization. The states collapsed and refused are terminal. Refusal is permitted from every live state and not only from the open state, so that a commitment can be refused at any point before it is finalized. A failed verification places the commitment in a distinct live state, verification-failed, and does not automatically refuse it. This design choice is the one that matters for the present monograph: a verifier can report a failure but cannot by that report dispose of the commitment, so verifiers hold no disposition authority, which is the separation between checking and authorizing that the execution boundary requires. The operation MERGE, which combines compatible commitments or histories in the outline from which this monograph was developed, is not used in any result here.
+
+\section*{Disposition Safety}
+
+The central result of the calculus, stated here as an assumption imported from that work and not proved in this monograph, is disposition safety: a commitment reaches a terminal state only through an authorized, causally complete, and durably recorded history. The relation to the present analysis is direct. The authorization record of the history entry corresponds to the requirement that the history be authorized, the provenance record to causal completeness, and the hash chain to durable recording. The execution boundary proposition of Chapter~\ref{ch:soundness} can be read as the statement of what an implementation must provide for the first of these to hold at the level of individual actions, and the lifecycle supplies the vocabulary in which refusal and unknown decisions become first-class events in the history and not silent omissions.
+
+\chapter{Limitations and Failure Cases}
+\label{app:limits}
+
+Verifier incompleteness arises when the checking procedure fails to detect violations that fall outside the properties it examines, and the remedy is to state the checked properties explicitly and to treat everything else as unchecked. Policy ambiguity arises when the policy does not determine a decision for the situation, and the conservative response of Chapter~\ref{ch:refusal} is to return $\Unk$. Environmental nondeterminism undermines deterministic replay when the effect map $E$ depends on factors outside the recorded state, and the history then records the attempt and not the outcome unless outcomes are also recorded. Adversarial tool outputs can mislead both the generator and the labeling infrastructure, and the provenance model addresses this only to the extent that the infrastructure assigns labels correctly. Distributed execution weakens complete mediation and atomic validation because decision and effect may occur on different machines with different views of the state, and a sound design requires either a single point of mediation or a protocol that provides the equivalent guarantees. Each of these is a place where an assumption of Proposition~\ref{thm:soundness} can fail in practice, and each should be examined before the guarantee is relied upon.

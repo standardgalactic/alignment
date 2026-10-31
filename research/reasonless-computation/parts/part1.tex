@@ -1,0 +1,210 @@
+\part{Conceptual Foundations}
+\label{part:foundations}
+
+\chapter{Introduction: When Success Becomes Authority}
+\label{ch:intro}
+
+\section{The Apparent Success of Intermediate Reasoning}
+
+The practice of having a generative model emit intermediate text before committing to a final answer has become one of the organizing techniques of contemporary machine learning. It appears in several forms that are often discussed together although they differ in mechanism: prompting a model to produce a chain of thought \cite{wei2022}, training on supervised scratchpads that record intermediate computation \cite{nye2021}, and post-training with reinforcement learning against verifiable rewards, in which the intermediate text is shaped only indirectly by the success of the answer that follows it \cite{shao2024}. In all three cases the observed pattern is that answers produced after intermediate text are, on many tasks, more accurate than answers produced without it. That pattern has encouraged a reading in which the intermediate text is evidence of deliberation, planning, or the stepwise execution of an algorithm. The reading is natural because the text is written in a register that describes such activities, and because human problem solvers who write out their steps usually do so because the steps are the means by which they reach the answer.
+
+The reading nevertheless contains an inference that is rarely stated. It moves from the fact that intermediate text improves performance, to the claim that the text means what it appears to mean, to the claim that the computation inside the model corresponds to what the text says. Each step requires evidence that the preceding step does not supply. This monograph is concerned with the structure of that missing evidence, and with a second inference of the same shape that arises when generative systems are given the ability to act.
+
+\section{The Experimental Disruption}
+
+The empirical starting point is the study of Valmeekam et al. \cite{valmeekam2026}, which examines transformers trained to solve mazes while emitting traces of the A* search algorithm. The study compares models trained on solutions only, models trained on correct A* traces, and models trained on traces that were deliberately swapped between problem instances so that each trace is a well formed A* trace for some other maze. The reported finding that organizes this monograph is that models trained on swapped traces can reach high final-answer accuracy, in some evaluation distributions higher than models trained on correct traces, while the traces they generate do not satisfy the semantics of A* execution. The study further reports that in some post-training experiments with group relative policy optimization, answer accuracy improved while measured trace validity deteriorated. Chapter~\ref{ch:valmeekam} reconstructs the experimental design in the formal terms needed here and states precisely what the reported results do and do not establish.
+
+The precise empirical conclusion is narrow. In the evaluated settings, high final-answer accuracy does not require the model to generate a trace that is valid under the prescribed execution semantics of A*. The finding does not establish that the models performed no meaningful internal computation, that intermediate tokens are generally useless, or that trace validity is irrelevant in other settings. It establishes a dissociation between two properties that were commonly assumed to travel together.
+
+\section{The Second Promotion}
+
+A parallel inference arises when a generative model is embedded in a system that can act. A model whose predictions have been accurate, whose explanations are coherent, and whose stated confidence is well calibrated on past cases comes to be treated as entitled to act on its conclusions: to call a tool, to modify a record, to spend a resource, to send a message. The inference runs from statistical performance to permission, and it has the same logical form as the inference from answer accuracy to trace validity. In both cases a property established by evidence about outcomes is silently promoted to a property of a different kind. The second promotion is the more consequential because its error is not merely a mistaken description of a computation but an action taken in the world without the warrant that the action required.
+
+\section{The Thesis of Non-Entailment}
+
+The central claim of the monograph is that a family of properties which are usually run together are logically and empirically independent. A generated output can be correct while its accompanying explanation is not a valid derivation. An explanation can be a valid derivation of the output while having played no causal role in producing it. A computation can proceed along a coherent internal trajectory while its emitted text describes something else. A correct, valid, and faithful computation can propose an action that no applicable authority has permitted. Each of these separations is developed in the chapters that follow, and each is accompanied by a statement of the additional assumption that would be required to close the gap, so that the reader can see what is being assumed whenever a gap is closed in practice.
+
+\section{A Positive Account and a Boundary}
+
+A purely negative thesis, that intermediate tokens do not mean what they appear to mean, leaves open what they are doing. The monograph therefore develops a candidate positive account, built on earlier work on manifold-aligned generative inference \cite{flyxion2025,flyxion2025b}. On this account the usefulness of a generated sequence is to be sought in the representational dynamics it induces rather than in the procedure it describes, and the relevant notion of coherence is geometric. This account is offered as a hypothesis that can be formalized and tested, not as an established explanation, and Part~\ref{part:geometry} is careful about the conditions under which the geometric machinery applies to the hidden states of an autoregressive model at all.
+
+The second half of the argument concerns the boundary between proposal and execution. It extends the account of the execution boundary developed in \cite{flyxion2026}, which states mediated execution, the non-entailment of permission by justification, and a bound on exposure for single actions, from the single-action setting to a framework of six evaluative properties. It builds on the separation of reasons from permissions developed there and gives that separation a formal statement, an execution boundary proposition, and an experimental evaluation.
+
+\section{Contributions and Scope}
+
+The contributions are of four kinds, and the monograph marks each as such. The empirical observations come from the source experiments and are reported as findings of that study, not as results of this one. The formal propositions, in particular the independence proposition of Chapter~\ref{ch:independence}, the non-entailment of permission in Chapter~\ref{ch:permission}, the admissible projection of Chapter~\ref{ch:admissible-projection}, and the execution boundary proposition of Chapter~\ref{ch:soundness}, are consequences of definitions and explicit assumptions. The hypotheses, especially the geometric-faithfulness hypothesis of Chapter~\ref{ch:geomfaith}, are conjectures with stated tests. The architectural proposals describe design rules whose guarantees hold only under the stated assumptions. Chapter~\ref{ch:limits} returns to the question of which of these claims survive outside formal domains with decidable specifications.
+
+The length and organization follow the argument. Part~\ref{part:foundations} sets out the conceptual framework and the six evaluative properties. Part~\ref{part:geometry} recovers the geometric account and states its limits. Part~\ref{part:tokens} reconstructs the experimental dissociation. Part~\ref{part:faithfulness} proves non-entailment among the properties of answer generation and develops the distinction between textual and geometric faithfulness. Part~\ref{part:admissibility} extends the analysis to action and states the execution boundary proposition. Part~\ref{part:institutions} considers optimization, distillation, and verification as institutions. Part~\ref{part:program} gives the experimental program and the conclusions.
+
+\section{Terminology and Conventions}
+
+Several words in this literature carry more meaning than the evidence supports, and the monograph fixes its usage at the outset. A task is the input given to a generative system, an intermediate sequence or trace is the text the system emits before committing to its final output, and the answer or output is what follows. A proposal is an output that has the form of an action, such as a tool call, a record modification, or a message to a third party. The word reasoning is used descriptively, to name the practice of emitting intermediate text, and it carries no commitment about whether the underlying computation deserves the name. The word valid is always relative to a stated specification, and a statement that a trace is valid without a specification is treated as incomplete. The word faithful is used only for the interventional notion defined in Chapter~\ref{ch:properties}. The word authority is used in two senses, descriptive and normative, which are separated in Chapter~\ref{ch:authority}, and the monograph never uses it without indicating which is meant.
+
+These conventions are not pedantic. Much of the apparent disagreement about whether language models reason arises from a shift in the sense of a word within a single argument. A claim that a trace is valid, offered as evidence that the model followed the procedure, uses valid in a textual sense in its premise and in a mechanistic sense in its conclusion. A claim that a model is trusted because it has been reliable uses trust in a statistical sense in its premise and in a normative sense in its conclusion. Holding the senses fixed makes such shifts visible.
+
+\section{Three Registers of Claim}
+
+The monograph makes claims in three registers and keeps them apart, because the grounds on which a claim can be accepted differ between them. Empirical claims concern what was observed in a stated setting, and they are accepted on the strength of the experiment that produced them, including its design, its sample, and its controls. The empirical claims used here come from the source study and are attributed to it. Logical claims concern what follows from definitions and stated assumptions, and they are accepted on the strength of a proof, which the reader can check without trusting any experiment. The independence proposition and the execution boundary proposition are of this kind. Architectural claims concern what a system will do because it has been built in a particular way, and they are accepted on the strength of an argument that the construction enforces the property, together with an account of which assumptions the argument uses.
+
+A fourth category, conjecture, is used for the proposals of the geometric account and the experimental predictions. A conjecture is labeled as such, comes with a statement of what would refute it, and is not used as a premise in any logical or architectural claim. This discipline is the minimal defence against the error the monograph describes. A document that argued against promoting evidence of one kind into a conclusion of another, while itself promoting a conjecture into a premise, would commit the error in its own construction.
+
+\section{Why the Question Is Not Merely Terminological}
+
+It might be objected that the question of whether intermediate tokens are reasoning is a dispute about a word, and that nothing of practical consequence turns on how it is resolved. Three practical matters show otherwise. The first is oversight. Developers and operators increasingly read generated traces as a means of monitoring what a system is doing, and the value of that practice depends on the trace being a reliable indicator of the computation. If the trace is a scaffold whose content does not describe the computation, a monitor that reads it for evidence of misbehavior may find none where there is some, and may find alarming content where there is none.
+
+The second is training. Process supervision rewards intermediate steps that a verifier judges correct, on the assumption that rewarding correct steps produces a system that reasons correctly. If the usefulness of the steps lies elsewhere, process supervision may shape the surface of the trace without shaping the computation, or may shape the computation in unintended ways. The third is deployment. A system whose proposals are executed on the strength of its record of correct outputs, without a separate authorization step, is exposed to every proposal that is correct in the sense of the task and forbidden in the sense of the policy. Each of these is a decision with consequences, and each is taken on the basis of an interpretation of what intermediate text is. The interpretation is therefore a matter for evidence and not for convention.
+
+\chapter{Six Properties Mistaken for One}
+\label{ch:properties}
+
+\section{The Evaluative Dimensions}
+
+Let $x$ range over tasks, $z$ over intermediate sequences, $y$ over final outputs, and $a$ over proposed actions. Six properties are distinguished. Computational utility $\Util(x,z)$ records whether the inclusion of $z$ improves a specified performance measure relative to a counterfactual baseline. Procedural validity $\Valid(x,z,y)$ records whether the triple conforms to an explicitly specified grammar, transition system, and acceptance criterion. Causal faithfulness $\Faith(x,z,y)$ records whether $z$ accurately represents causally relevant aspects of the process that produced $y$, under a stated account of representation and intervention. Geometric coherence $\Geom(x,z)$ records whether the internal trajectory induced by $z$ satisfies a specified condition of alignment with a learned structure of task-relevant states. Outcome correctness $\Corr(x,y)$ records whether $y$ satisfies an externally specified task criterion, independently of how it was obtained. Policy admissibility $\Adm_\Pi(x,a)$ records whether the action $a$ satisfies the constraints imposed by an applicable authority, environment, and execution policy $\Pi$.
+
+The sixth property differs from the others in its argument list. The first five concern the relation between a task, a generated sequence, and an output. Admissibility concerns an action and a policy, and the policy is not a function of the model. This difference in kind is the reason that no amount of progress on the first five can discharge the sixth.
+
+\section{Computational Utility}
+
+An intermediate sequence is useful if its inclusion improves a specified performance measure relative to a defined counterfactual baseline. The definition has three parameters that must be fixed before the word useful has content: the performance measure, the counterfactual, and the population of tasks over which the improvement is averaged. A sequence may be useful on one population and harmful on another, and may be useful relative to the absence of any sequence but not relative to a sequence of random tokens of equal length. The definition is intentionally silent about why the sequence helps. Utility is an interventional and comparative property, and Chapter~\ref{ch:scaffolding} gives it a precise form.
+
+\section{Procedural Validity}
+
+A trace is valid relative to a specification $\mathcal S$ consisting of a trace language, a state-transition system, and an acceptance criterion. For the maze domain, $\mathcal S$ is the execution semantics of A*, and validity means that the sequence of expansions and queue operations recorded in the trace is the sequence the algorithm would perform on the given maze. Validity is a property of text relative to a specification. It makes no reference to the process that generated the text. A trace copied from a reference implementation is valid, and so is a trace produced by a model with no internal search at all that happens to produce the correct text.
+
+\section{Causal Faithfulness}
+
+An explanation is faithful when it accurately represents the factors that causally contributed to the result. The definition requires a theory of what it is for a linguistic object to represent a causal factor, and a protocol of intervention by which the representation is tested. Faithfulness is therefore not binary in practice. It is established relative to a family of interventions, such as truncation or replacement of the visible trace, or manipulation of internal representations, and relative to a standard for the match between what the text claims and how the output changes under intervention. Empirical studies of chain-of-thought faithfulness \cite{turpin2023,lanham2023} are best read as establishing specific failures of faithfulness under specific interventions, not as measuring a single quantity.
+
+\section{Geometric Coherence}
+
+Geometric coherence is introduced here because the positive account of Part~\ref{part:geometry} requires it and because it cannot be reduced to either validity or textual faithfulness. It asks whether the sequence of internal states traversed during generation moves along directions supported by a structure of task-relevant states. Its precise definition depends on a representation, a manifold estimator, and a tolerance, and Chapter~\ref{ch:hidden-states} states these dependencies. For present purposes it suffices to note that coherence concerns a trajectory, validity concerns a text, and the relation between them is exactly what is at issue.
+
+\section{Outcome Correctness and Policy Admissibility}
+
+Outcome correctness is the least controversial of the properties and the one most easily mistaken for the others. A result satisfies an externally specified criterion regardless of how it was obtained. Policy admissibility is of a different logical type. It is satisfied by a pair of a situation and an action, relative to a policy, and the policy encodes who is entitled to authorize what under which conditions. Two actions with identical predicted consequences can differ in admissibility because they are taken by different principals, on different data, or under different delegations.
+
+\section{Independence and Linking Assumptions}
+
+The relationships among the properties fall into three classes that should not be confused: logical entailments, empirical correlations, and architectural guarantees. A logical entailment holds in every model of the definitions. An empirical correlation holds in a population of systems and tasks and may fail in another. An architectural guarantee holds because a system has been built so that a property is enforced by a mechanism, and it holds exactly as long as the assumptions about the mechanism hold. Table~\ref{tab:linking} lists for each pair of properties that are commonly run together the assumption that would have to be added to obtain the implication.
+
+\begin{table}[t]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{p{3.2cm}p{3.2cm}p{6.6cm}}
+\toprule
+Premise & Conclusion & Linking assumption required \\
+\midrule
+Correctness $\Corr$ & Validity $\Valid$ & The only way to produce a correct output is to execute the specified procedure, so the trace is a record of that execution. \\
+Validity $\Valid$ & Causal faithfulness $\Faith$ & The output is a function of the trace alone, and the trace is not post hoc. \\
+Utility $\Util$ & Validity $\Valid$ & The usefulness of the sequence is mediated by its procedural semantics and by nothing else. \\
+Utility $\Util$ & Geometric coherence $\Geom$ & The representation and estimator are such that useful trajectories are exactly those with small off-manifold residual. \\
+Validity $\Valid$ & Geometric coherence $\Geom$ & Procedurally valid text induces on-manifold internal updates. \\
+Any of the above & Admissibility $\Adm_\Pi$ & The policy $\Pi$ explicitly makes the property sufficient for permission. \\
+\bottomrule
+\end{tabular}
+\caption{Linking assumptions required to obtain each commonly assumed implication. None of the implications holds without its assumption.}
+\label{tab:linking}
+\end{table}
+
+\section{The Maze Domain Under the Six Predicates}
+
+The six properties can be illustrated on the maze domain of the source experiments, where each of them has a concrete reading. A task is a maze with a start and a goal. Utility is the improvement in the probability of producing a correct path when a given intermediate sequence precedes the answer, compared with a stated baseline such as an empty prefix. Validity is conformity of the emitted trace to the execution semantics of A* on that maze, as checked by a formal validator. Faithfulness is the extent to which changes to the trace in the manner the trace claims, for instance changing which cell is recorded as expanded, produce the corresponding changes in the answer. Geometric coherence is the extent to which the hidden states traversed while the trace is produced stay close to the estimated manifold of states reached on successful solutions. Correctness is the property that the emitted path leads from start to goal without crossing a wall, and, if optimality is required, that it is shortest. Admissibility is, in a deployment in which the maze solver controls a robot, the property that the route does not enter a region the operator has excluded.
+
+Taken together these show how a single run can sit at different values on the six properties. A model can produce a shortest path, which is correct, with a trace that expands cells in an order A* would not use, which is invalid, because it has internally computed the path by a different route. Its trace may nevertheless alter the answer when edited, so that it is influential, and its hidden states may be well inside the region reached by successful runs, so that it is coherent. The path may cross a region the operator has excluded, so that the action of following it is inadmissible. Every one of these combinations can occur, and the maze domain makes them easy to state and, for the first four, to measure.
+
+\section{How Each Property Is Measured}
+
+Each property is established by a different instrument, with a different kind of error, and the differences matter when results are compared across studies. Utility is estimated by comparing success rates under interventions on the prefix, and its error is sampling error in the success rates together with the error arising from differences between the intervention distribution and the natural distribution. Validity is established by a deterministic validator, and its error is the error of the specification, in the sense that the validator may encode a convention such as a tie-breaking rule that the model has not been trained to respect. Faithfulness is estimated by interventions on the trace or the internal state, and its error includes the shift in distribution that interventions induce. Geometric coherence is estimated from hidden states with a manifold estimator, and its error includes the bias of the estimator and its dependence on the reference set. Correctness is established by checking the output against the task criterion, and for well-posed tasks it is essentially error free. Admissibility is established by evaluating the policy on the situation and the action, and its error is the error of the policy specification and of the representation of the situation.
+
+Because the instruments differ, an agreement or disagreement between two properties is meaningful only after the measurement error of each has been considered. A weak association between validity and correctness, for instance, may reflect a validator with an overly strict convention, in which case valid traces are rarer than they should be and validity underpredicts correctness. The independence the monograph argues for is a logical independence of the properties and not a claim that the measurements are independent, which they may well not be.
+
+\section{Why the Properties Should Not Be Collapsed}
+
+A tempting simplification is to define a single quality score for a generation, combining the properties by weighted sum or conjunction. For some purposes this is reasonable. For the purpose of deciding what a system may be trusted to do, it is harmful, because the properties support different decisions. Correctness supports the decision to use the output as an answer. Validity supports the decision to read the trace as a record of a procedure. Faithfulness supports the decision to use the trace as a basis for diagnosing failures. Coherence supports the decision to treat the computation as operating in a familiar regime. Admissibility supports the decision to allow the action. A single score invites the use of one property in support of a decision that requires another, which is the structure of every error analyzed in the monograph. The six predicates are kept separate in the formal development so that each decision can be tied to the evidence it needs.
+
+\chapter{The Epistemology of Generated Explanations}
+\label{ch:epistemology}
+
+\section{Five Kinds of Account}
+
+An explanation, a derivation, a justification, an execution trace, and an audit record are distinct kinds of account, and the vocabulary of machine reasoning tends to use them interchangeably. An explanation makes a result intelligible to a reader and may do so without being a record of how the result was reached. A derivation is a sequence of steps each licensed by a rule, and it establishes that a conclusion follows from premises whether or not any agent ever carried the steps out. A justification offers reasons for accepting or doing something and is addressed to an audience whose standards determine whether the reasons suffice. An execution trace records the state transitions of a process that actually ran. An audit record is an execution trace whose integrity and completeness are independently guaranteed. Only the last two bear, by their construction, on whether a process occurred, and only the last supports a claim about responsibility.
+
+A text emitted by a generative model before its answer can have the form of any of these. What it is depends on how it was produced and on what independent evidence exists about that production. The failure analyzed in this chapter is the treatment of a text that has the form of an execution trace as though it had the evidential status of one.
+
+\section{Representation Does Not Establish Occurrence}
+
+The central epistemic principle can be stated compactly.
+\[
+\text{Representation of a process} \;\not\Rightarrow\; \text{occurrence of that process}.
+\]
+A linguistic representation of a computation is a string. That the string describes the steps of a search does not establish that a search took place, any more than a recipe establishes that a meal was cooked. The principle has a long history in the study of verbal reports about mental processes, where it was shown that people sometimes give fluent and confident accounts of the causes of their behavior that do not track the causes \cite{nisbett1977}. The point there and here is not that the reports are insincere. It is that production of a report and production of the reported process are different causal histories, and nothing in the form of a report certifies that they coincide.
+
+\section{Declarations and Inspectable Evidence}
+
+A generated statement such as a claim to have checked the alternatives has the grammatical form of a first-person report. It differs from a report in the evidential sense because there is no independent record that particular alternatives were evaluated. The distinction between declaration and inspectable evidence is the distinction on which the rest of the monograph depends. Inspectable evidence is something that a party other than the producer can examine and that would differ if the claim were false: a recorded sequence of verified state transitions, a replayable log, an intervention whose outcome depends on the claimed intermediate content. A declaration is evidence only of what the producer is disposed to say.
+
+\section{Rationalization, Mechanism, Proof, and Operation}
+
+Four relations between an account and a result should be kept apart. Retrospective rationalization constructs an account after the result is fixed and is consistent with any result. Mechanistic explanation identifies the components and interactions that produced the result and is tested by intervention on those components. Mathematical proof establishes that a conclusion follows from premises and says nothing about whether any process arrived at the conclusion by that route. Operational evidence, such as a log produced by the executing system itself under controlled conditions, establishes that certain transitions occurred. A model's emitted trace may be any of these, and its being useful does not tell which.
+
+\section{Against Two Easy Responses}
+
+Two easy responses to the dissociation between trace validity and answer accuracy should be avoided. The first, anthropomorphic, treats the trace as a window onto thought and reads its apparent errors as human-like lapses. The second, deflationary, treats the trace as mere decoration and concludes that the model does not reason. Both substitute a stance toward the system for an investigation of it. The anthropomorphic reading predicts that interventions on the trace will change the answer in the way the trace says they should, and the deflationary reading predicts that they will not. Neither prediction is warranted in advance, and both can be tested. The position adopted here is that what a generated sequence warrants is a question for intervention and mechanistic measurement, not for interpretation of its surface.
+
+\section{Self-Report in People and in Models}
+
+The comparison with human verbal report is instructive in both directions. In people, reports about the causes of one's own behavior are often constructed by applying a plausible theory of why anyone would act that way, and they track the actual causes only when the actual causes happen to coincide with the plausible theory \cite{nisbett1977}. A language model trained on human-written explanations has access to the same plausible theories in large quantity, and it can produce fluent explanations by applying them. The production of such an explanation is then a matter of the model's learned distribution over explanations, and its relation to whatever computation produced the answer is contingent. This is a point about the structure of the situation and not about the limitations of any particular model. It would hold for a model whose internal computation exactly matched its explanations only if the training had somehow selected for that match, and the training objectives in common use do not do so.
+
+The comparison has limits. People have introspective access to some of their processes, and the literature on verbal report distinguishes cases in which reports are reliable from cases in which they are not. By analogy a model's reports may be reliable in some conditions, for example when the explanation is a simple restatement of an input feature that demonstrably drove the output. The monograph does not claim that generated explanations are unreliable in general. It claims that their reliability is a property to be measured by interventions and cannot be inferred from their fluency.
+
+\section{A Ladder of Evidence}
+
+Evidence that a generated trace describes the computation that produced the output can be arranged in a ladder of increasing strength. At the lowest rung is the declaration itself, the trace's own statement of what was done. Above it is consistency with the output, the observation that the trace leads to the answer given. This adds little, because a rationalization constructed after the answer is also consistent with it. The next rung is behavior under intervention on the visible text: if the trace is altered in a way that changes the content it claims, the output should change accordingly. Above that is behavior under intervention on internal representations, where the components that the trace claims to implement are manipulated and both the trace and the output are observed. At the top is an independent record produced by the executing mechanism, as distinct from a record produced by the generator, such as a log of verified state transitions maintained by the execution environment.
+
+The ladder organizes the sections that follow. The experimental dissociation of Part~\ref{part:tokens} shows that the lower rungs do not reach the upper ones. The causal analysis of Part~\ref{part:faithfulness} describes the middle rungs and their limits. The architecture of Part~\ref{part:admissibility} places the top rung where it is needed, in the history written by the execution environment. The ladder also shows why anthropomorphic and deflationary readings are both premature, since each takes a position on a rung that has not been climbed.
+
+\section{What the Ladder Does Not Settle}
+
+The ladder concerns the relation between a trace and a computation. It does not settle whether the computation, whatever its relation to the trace, deserves to be called reasoning. That question depends on a stance about what reasoning is, and the monograph has no need to take one. A system can compute correct answers by a process that is not well described by any trace it emits, and it can do so while exhibiting the flexibility and generalization that make reasoning the natural description in other contexts. The point is that the description should be earned by evidence about the process, and the trace is not such evidence unless the upper rungs of the ladder have been reached.
+
+\chapter{Statistical Authority and Its Illegitimate Extensions}
+\label{ch:authority}
+
+\section{Descriptive and Normative Authority}
+
+Statistical authority is the evidential weight assigned to a system's predictions because of demonstrated performance. It is descriptive: it concerns how much a reasoner should update on what the system says. Normative authority concerns who or what is entitled to authorize an action. The two are related in practice, because evidence of reliability is often one of the considerations a policy takes into account when it grants authority, but they are not the same and the first never entails the second. A reliable forecaster has statistical authority about the weather and no authority to close an airport.
+
+\section{Sources of Inflated Authority}
+
+Several artifacts acquire authority beyond the evidence they provide. Benchmark scores support a claim about expected performance on a distribution resembling the benchmark and are routinely extended to claims about performance elsewhere. Confidence estimates support a claim about calibration under the conditions in which they were measured and are extended to claims about individual decisions. Successful tool calls support a claim that the calls were well formed and are extended to a claim that they were appropriate. Coherent explanations support a claim that the system can produce coherent explanations and are extended to a claim that the explanations describe the basis of its decisions. In each case the evidence is real and the extension is unsupported.
+
+\section{Authority Laundering}
+
+Authority laundering is a sequence of transformations through which a model-generated claim is converted into a permission without an independent authorization step. The transformations are individually unremarkable. A model summarizes a request. A downstream component reads the summary as an instruction. A tool executes the instruction. At no point did a party with the standing to grant permission grant it, yet the executed action carries the apparent endorsement of every stage that handled it. Chapter~\ref{ch:laundering} gives the concept a formal treatment through provenance labels.
+
+The concept is analytical. It describes a property of a pipeline, namely that authority can increase along it without a corresponding grant, and it does not attribute intent to any component. A pipeline can launder authority through nothing more than the ordinary convention that text produced by an upstream stage is treated as input of equal standing by the next.
+
+\section{The Parallel with Trace Validity}
+
+The two promotions identified in Chapter~\ref{ch:intro} can now be placed side by side. In the first, accuracy of the answer is promoted to validity of the trace. In the second, accuracy and fluency of the proposal are promoted to permission for the action. In both cases the promoted property belongs to a different evaluative domain from the evidence offered. The remedy in both cases is the same in structure: identify which evidence each property requires and refuse to let any one stand in for another.
+
+\section{A Typology of Promotions}
+
+Authority laundering and its relatives can be classified by the property that is promoted and the property it is promoted into. Promotion from accuracy to validity is the error of reading a correct answer as evidence that the stated procedure was followed. Promotion from validity to faithfulness is the error of reading a trace that conforms to a specification as a record of how the answer was reached. Promotion from reliability to permission is the error of reading a history of good outputs as a grant of standing to act. Promotion from confidence to decision is the error of reading a high stated confidence as a reason to dispense with review. Promotion from tool success to appropriateness is the error of reading the fact that a call returned without error as evidence that the call should have been made. Promotion from coherence to correctness is the error of reading a fluent and internally consistent account as evidence that it is accurate.
+
+The list is not exhaustive, and its members share a structure: in each, a property that is observable and favorable is taken to establish one that is neither. The structure explains the persistence of the errors, since the evidence offered is real and is favorable, and the inference feels like a continuation of an argument that is otherwise sound. It also suggests a diagnostic that can be applied to any claim about a generative system: name the property the evidence establishes, name the property the conclusion asserts, and ask what links them. If the answer is a convention or a hope, the inference is a promotion.
+
+\section{Calibration and What It Licenses}
+
+A model is calibrated if, among the cases to which it assigns confidence $q$, a fraction $q$ are correct. Calibration is a valuable property, and it is often cited as a ground for relying on a model's judgments. It licenses a specific inference: that the stated confidence is a reliable guide to the probability of correctness for cases like those on which calibration was measured. It does not license the inference that a decision to act should follow from high confidence, because the cost of error, the standing of the actor, and the availability of review enter the decision and are not captured by the probability of correctness. A model that is correct with probability $0.99$ and whose error would cause irreversible harm to a third party is not thereby authorized to act, and the figure $0.99$ does not enter the question of authorization at all unless the policy makes it do so.
+
+\section{Authority Under Distribution Shift}
+
+Statistical authority is earned on a distribution, and it extends to another distribution only to the extent that the two resemble each other in the respects that matter. A model validated on historical requests has authority concerning requests of that kind. Deployment exposes it to requests of other kinds, including requests crafted by parties who know how the model behaves, and the authority earned in validation does not transfer to them. This is a limit on the descriptive notion, before the normative notion is considered. The practical consequence is that evidence of reliability should be reported with the distribution on which it was obtained, and that extensions of authority beyond that distribution should be recognized as extrapolations and handled with additional independent checks.
+
+\section{Self-Generated Evidence}
+
+A further source of inflated authority arises when the evidence for a system's judgment is produced by the system's own earlier choices \cite{flyxion2026}. In an interactive setting the history on which a justification is computed is not drawn independently of the policy. A choice that is repeated because earlier outcomes favored it generates further favorable outcomes in the cases it covers, and leaves unexplored the cases that could have contradicted it. Each observation is genuine, and the growth in the apparent justification reflects the policy's own sampling and not any change in the world. A system that treats its justification score as sufficient becomes most confident where its confidence has been least tested, and greater capacity to draw precise inferences from the sample sharpens the effect, since the inferences are precise about a sample the policy selected. This is the same structure as the promotion of accuracy to validity, in a setting where the history on which accuracy is assessed has itself been shaped by the system.
+
+The point is related to the distinction between descriptive and normative authority. Evidence produced by a policy can raise statistical authority without any independent confirmation, and the consequence for permission is that a record of success accumulated under the system's own exercise of discretion is weaker support for extending that discretion than the same record accumulated under independent assignment.

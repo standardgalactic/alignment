@@ -1,0 +1,894 @@
+Biological Theory (2021) 16:242–256
+https://doi.org/10.1007/s13752-021-00381-y
+
+    ORIGINAL ARTICLE
+
+
+
+The Scapegoat Mechanism in Human Evolution: An Analysis of René
+Girard’s Hypothesis on the Process of Hominization
+D. Vincent Riordan1
+
+Received: 15 September 2020 / Accepted: 19 April 2021 / Published online: 22 July 2021
+© The Author(s) 2021
+
+
+Abstract
+According to anthropological philosopher René Girard (1923–2015), an important human adaptation is our propensity to
+victimize or scapegoat. He argued that other traits upon which human sociality depends would have destabilized primate
+dominance-based social hierarchies, making conspecific conflict a limiting factor in hominin evolution. He surmised that
+a novel mechanism for inhibiting intragroup conflict must have emerged contemporaneously with our social traits, and
+speculated that this was the tendency to spontaneously unite around the victimization of single individuals. He described an
+unconscious tendency to both ascribe blame and to imbue the accused with a sacred mystique. This emotionally cathartic
+scapegoat mechanism, he claimed, enhanced social cohesion, and was the origin of religion, mythology, sacrifice, ritual,
+cultural institutions, and social norms. It would have functioned by modifying the beliefs and behaviors of the group,
+rather than of the accused, making the act of accusation more important than the substance. This article aims to examine
+the empirical evidence for Girard’s claims, and argues that the scapegoat hypothesis has commonalities with several other
+evolutionary hypotheses, including Wrangham’s execution hypothesis on self-domestication, Dunbar’s hypothesis on the
+role of storytelling in maintaining group stability, and DeScioli and Kurzban’s hypothesis on the role of non-consequentialist
+morality in curtailing conflict. Potential implications of the scapegoat hypothesis for evolutionary psychology and psychiatry
+are discussed.
+
+Keywords Aggression · Girard · Mentalizing · Religion · Sacrifice · Scapegoating
+
+
+Introduction                                                                 complex civilizations (Norenzayan et al. 2016), and uniquely
+                                                                             human hierarchical structures (Dubreuil 2010).
+Humans live in a complex social environment character-                          This article considers the claim that another important
+ized by large group sizes and cooperation between relative                   and uniquely human psychological trait is that of vic-
+strangers. Uniquely human traits that have been suggested as                 timization or scapegoating. This was the view proposed
+being of importance to this include our abilities to mental-                 by the French anthropological philosopher René Girard
+ize (have a theory of mind) (Premack and Woodruff 1978),                     (1923–2015) who posited that a propensity to internecine
+a related tendency to create a shared attentional framework                  violence was an inevitable consequence of some of the oth-
+or a shared intentionality (Tomasello and Carpenter 2007), a                 erwise fitness-enhancing human social traits (Girard et al.
+relative inhibition of reactive aggression (Wrangham 2019a),                 1978; Girard 1986). He proposed that a novel mechanism
+and the emergence of behavioral norms with an associated                     must have emerged which countered this destabilizing influ-
+propensity to punish transgressors (Tomasello 2016). Some                    ence, and that conspecific conflict in early hominins was
+of these traits have, variously, been linked to the emer-                    curtailed by the emergence of a propensity to respond to
+gence of relatively large human group sizes (Dunbar 1998),                   adversity by blaming arbitrarily selected individuals. He
+                                                                             called this the “scapegoat mechanism,” claiming that such
+                                                                             victimization, coupled with a tendency to retrospectively
+* D. Vincent Riordan                                                         misunderstand this pacification process and the role played
+  vincent.riordan@hse.ie                                                     by the victim, became the foundation of myths, religion,
+                                                                             ritual, culture, and social norms.
+1
+     West Cork Mental Health Services, HSE South, Bantry
+     Hospital, County Cork, Ireland
+
+
+13
+Vol:.(1234567890)
+The Scapegoat Mechanism in Human Evolution: An Analysis of René Girard’s Hypothesis on the Process…                                 243
+
+
+   This article aims to examine the evidence for Girard’s                human problem to which scapegoating might have emerged
+claim that scapegoating was an adaptation of critical impor-             as an adaptive solution.
+tance to the process of hominization by comparing it with                    As indicated above, the central plank of Girard’s ideas
+other approaches to human evolution, and explores some                   is the claim that one of the most characteristic, if not defin-
+potential implications for evolutionary psychology and evo-              ing, human traits is a tendency to mimic both the actions
+lutionary psychiatry.                                                    and the intentionality (mental states) of each other, a trait
+                                                                         that he called “mimesis.” His primary focus was on what he
+                                                                         called “mimetic desire,” and how the reciprocal imitation of
+René Girard and the Scapegoat Mechanism                                  desires can result in a positive feedback escalation, such that
+                                                                         human desire could become abstract and detached from the
+Background                                                               functional utility of the object of desire. He considered how
+                                                                         reciprocal mimesis can give desire, and other intentional
+Girard advanced a wide-ranging theory of human nature                    states, a contagious quality, causing them to spread rapidly
+and human origins (Girard 1961, 1972; Girard et al. 1978;                throughout a population. In collaboration with psychiatrists
+Fleming 2004; Antonello and Gifford 2015). He has been                   Jean Michel Oughourlian and Guy Lefort, he used this con-
+described by his admirers as “the Darwin of the social sci-              cept of reciprocal interdependent desires to posit what they
+ences” (Serres 2009), although he had no formal background               called an “interdividual psychology” (Girard et al. 1978, pp.
+in science, but was a historian by training, who spent much              283–431), which they used to propose explanations for vari-
+of his academic career working in university language                    ous human behaviors and psychopathologies (Oughourlian
+departments (Haven 2018). His hypothesis, described below,               2016).
+was born, not from empirical data as such, but rather from                   The focus of this article, however, is not so much on the
+his interpretation of great works of literature, such as those           claimed mimetic or imitative nature of human behavior, but
+of Shakespeare, Proust, and Dostoevsky (Girard 1961),                    rather on Girard’s ideas regarding the resultant problems
+as well as mythology (Girard 1972) and religious texts                   caused by human rivalry, feuding, and violence, and, in par-
+(Girard et al. 1978). He did take some inspiration from the              ticular, on the solution, scapegoating, which he theorized as
+field of anthropology (Frazer 1913; Evans-Pritchard 1962),               having emerged in response to this.
+although some of the conclusions he drew from anthropo-                      Although recognizing that the spontaneous alignment of
+logical data have been questioned (Traube 1979).                         the desires, motivations, and intentions of an entire group
+    His work was thus born of the humanities rather than                 would have facilitated cooperation and efficiency, Girard
+the sciences, and this may account for why he is not very                also saw a problem. If everyone desires the same thing,
+well known amongst evolutionary theorists. Yet, although                 then rivalries are inevitable. He considered this problem in
+what he postulated is speculative, it is nevertheless a hypoth-          terms of the dominance-based social hierarchies that seem
+esis concerning human evolution (Girard et al. 1978, pp.                 to curtail conspecific violence in other animals (Girard et
+84–104), and despite his own lack of formal scientific train-            al. 1978, p. 95). The stability of such hierarchies depends
+ing, he was a polymath who considered himself to have been               on subordinates maintaining a different intentional state to
+working within a Darwinian framework (Girard 2017).                      dominants, hence any tendency for the mental states of all
+    His work is often described as “mimetic theory,” reflect-            members of a community to align would inevitably desta-
+ing the central role he claimed for an innate human propen-              bilize such hierarchies, thereby undermining their ability to
+sity to mimic or to imitate. The scapegoat mechanism, which              suppress conflict.
+is the subject of this article, comprises a major part of this               Therefore, he surmised, if a population evolves conta-
+theory, whereby he argued that humans evolved a tendency,                gious mimetic behavioral traits, as humans would seem
+when faced with a crisis, to spontaneously imitate each other            to have done, once conflict begins, it can quickly spread
+in blaming, or scapegoating, arbitrarily selected individuals            throughout a community. If good relations become recip-
+or groups (Girard 1986).                                                 rocal, then bad relations become reciprocal also. In other
+                                                                         words, Girard suggested that the behavioral trait (mimesis)
+The Posited Problem; Mimetic Rivalry and Violence                        that was essential to humans becoming such an adaptable,
+                                                                         cooperative, and successful species, is also the trait respon-
+Before describing the important role claimed for scapegoat-              sible for a more problematic human phenomenon, that of
+ing, it is necessary to first consider the selection pressures           cyclical revenge. He theorized that the risk of “runaway”
+that Girard envisaged early hominins to have encountered,                violence amongst early hominin groups would have threat-
+and to which he claimed scapegoating emerged as an adapta-               ened their survival, implying that it would have been a limit-
+tion. In other words, it is necessary to consider the uniquely           ing factor to human evolution. He called such “all against
+
+
+
+                                                                                                                             13
+244                                                                                                                    D. V. Riordan
+
+all” scenarios “mimetic crises,” which he said were char-            This retrospective deification of the victim, he claimed,
+acterized by a lack of difference between group members.          was the origin of the concept of “the sacred,” of archaic
+   He claimed that mimesis would have undermined the              religion, and of mythology. He argued that hominin com-
+intragroup differences upon which dominance-based hier-           munities, when faced with future crises, would have tried to
+archical stability depended, or as he put it: “Beyond a certain   repeat, or reenact, the process by which an earlier mimetic
+threshold of mimetic power, animal societies become impos-        crisis had been resolved. However, as they would not have
+sible” (Girard et al. 1978, p. 95). He surmised therefore,        understood the interpersonal dynamics that had caused (and
+that as mimesis emerged there would have been a strong            resolved) the earlier mimetic crisis of internecine violence,
+selection pressure for the contemporaneous emergence of           they would have been unable to distinguish such an event
+some other behavioral trait that would have countered its         from other crises, such as ones caused by natural disasters.
+inherently destabilizing influence on social hierarchies.         Therefore, there would have emerged a tendency to reenact
+                                                                  victimization as the default response to all crises, regard-
+The Posited Solution; the Scapegoat Mechanism                     less of their actual cause or nature. This urge to reenact the
+                                                                  originally cathartic scapegoat resolution, he claimed, was
+  Between what can be strictly termed animal nature on            the origin of ritual, including human sacrifice, and funerary
+  the one hand, and developing humanity on the other,             practices. Such rituals and shared beliefs would in turn not
+  there is a true rupture, which is collective murder, and        only have further curtailed intragroup violence, but would
+  it alone is capable of providing for kinds of organisa-         have positively enhanced communal unity.
+  tion, no matter how embryonic, based on prohibition                Girard claimed that the various prohibitions associated
+  and ritual.                                                     with religious practices can mostly be understood as hav-
+                                                                  ing originated as attempts to thwart rivalry and thus prevent
+   (Girard et al. 1978, p. 97)
+                                                                  further mimetic crises. These would have relied for their
+   As the name implies, the scapegoat mechanism would             efficacy on shared communal beliefs, norms, and values,
+have involved all members of a community blaming a sin-           which in turn would have been intrinsically linked to the
+gle individual for whatever crisis or adversity was at hand.      intergenerational transmission of unanimous belief in the
+This would have had two effects. The most immediate con-          misrecognition generated by the scapegoat mechanism.
+sequence would have been to instill communal unity where             According to Girard, myths are misunderstood accounts
+previously there would have been conflict. The Hobbesian          of real victimization events narrated through the prism
+“all against all” (Hobbes and Oakeshott 1946) would have          of misrecognition and double transference. This misun-
+become the Girardian “all against one.” Mimetic crises, he        derstanding would have been essential for the scapegoat
+envisaged, would have been resolved by all members of a           mechanism to work effectively and generate unanimously
+group spontaneously aligning their hostility towards a sin-       accepted values and beliefs. However, he argued that the
+gle individual, and either expelling that individual from the     defining characteristic of modern societies is a realization
+community or, more probably, killing them. Such crowd             of the probable innocence of the victim, a realization that
+behaviors would themselves have been products of mime-            he attributed to the pervasive influence of Judeo-Christianity
+sis. They are recognizable in modern humans in behaviors          and which, he claimed, has a desacralizing effect, making
+ranging from school yard bullying to mob lynching.                it more difficult for modern societies to generate, or even to
+   Of equal, if not greater, importance, Girard theorized,        maintain, unanimously accepted social norms.
+would have been a longer-term effect whereby this cathar-            Whereas the modern usage of the term scapegoating
+tic violent resolution to a crisis would have engendered a        might imply a deliberate act on the part of a guilty party to
+narrative, or myth, that initially blamed the selected vic-       divert blame elsewhere, Girard used it somewhat differently.
+tim for the crisis, but subsequently may have credited them       Although common to both uses of the word is the implica-
+with being the source of its resolution, imbuing them with a      tion that the accused is essentially innocent, Girard envis-
+mystique, and even making them appear godlike. The com-           aged a more unconscious process, essentially a cognitive
+munity would have failed to recognize that it was their own       bias, not only to ascribe blame, but also to imbue the one
+actions and unity, rather than any attribute or action of the     accused with mystique.
+victim, that had resolved the mimetic crisis. Girard referred        He speculated that kingship had its origins in victimiza-
+to this invariable misunderstanding as “misrecognition.”          tion, specifically in delayed victimization (Girard et al. 1978,
+Paraphrasing psychoanalysis, he coined the term “double           pp. 55–57). As victims would have been perceived as having
+transference” to describe the tendency to project onto the        an ambiguous status, being simultaneously both malign and
+victim both the blame for initiating the crisis, and the credit   benign, if a sacrificial victim were to have been selected but
+for resolving it.                                                 not immediately killed, then during the intervening period
+
+
+
+13
+The Scapegoat Mechanism in Human Evolution: An Analysis of René Girard’s Hypothesis on the Process…                                  245
+
+they would have been perceived as having had a sacred aura.              Mentalizing
+This ambiguity, between king or shaman and sacrifice vic-
+tim, may appear somewhat counterintuitive, but it is con-                As with much of human sociality, a prerequisite for Girard’s
+sistent with the idea that the scapegoat mechanism func-                 concept of mimetic desire would have been the ability to
+tioned by reestablishing (social) differences in a community             mentalize, that is to accurately assess the mental states, or
+where hierarchical differences had been erased by mimetic                intentionality, of others. This ability has been described in
+behaviors. Girard argued that the spontaneously generated                terms of a hierarchy of orders of intentionality (Dennett
+binary difference between the victim and the crowd allowed               1989; Dunbar 2008), whereby first-order intentionality
+a novel and uniquely human social order to emerge. Indeed,               entails an awareness of one’s own mental state; second-order
+he claimed that ultimately all cultural forms have their roots           intentionality, which is also referred to as “theory of mind”
+in victimization and scapegoating. The mystique retrospec-               (Premack and Woodruff 1978; Baron-Cohen 1995), requires
+tively attached to victims caused them to become what he                 an ability to conceptualize the mental state of another (e.g.,
+called, “transcendental signifiers,” and thus the basis of sym-          I believe that you believe); and, in turn, third-order inten-
+bolism, of meaning, and eventually of complex cultural insti-            tionality refers to the ability to conceive of another’s belief
+tutions, including kingship and state power. This would have             about another’s mental state (e.g., I believe that you believe
+allowed for “sacred violence,” that is, violence sanctioned by           that I believe). There is, at most, weak evidence that some
+a sacred king, which could be carried out with minimal risk              apes, such as chimpanzees, may have a limited ability for
+of it precipitating reprisal or further violence.                        second-order intentionality (O’Connell and Dunbar 2003;
+   To conclude, Girard advanced an ambitious, if some-                   Call and Tomasello 2011), albeit one probably lacking the
+what speculative, hypothesis on human origins, but his crit-             human ability to represent alternative beliefs or models
+ics accuse him of selective interpretation of literature and             of the world (Martin and Santos 2016). In contrast, it has
+anthropology (Landy 2012; Merrill 2017). The following                   been demonstrated that most adult humans have an ability
+sections aim to appraise his scapegoat hypothesis in the light           for between four and five orders of intentionality, with an
+of other relevant hypotheses and empirical data, most of                 apparent human ceiling of six orders (Kinderman et al. 1998;
+which have emerged in the decades after Girard formulated                Stiller and Dunbar 2007). A related concept is that of “com-
+his ideas.                                                               mon knowledge” (De Freitas et al. 2019) which posits a type
+                                                                         of recursive mentalizing, involving, in effect, limitless orders
+                                                                         of intentionality, centered on salient focal points, which, it
+                                                                         is claimed, facilitates mutual cooperation.
+Comparative Analysis; the Posited Problem;                                   It may be argued, therefore, that although human children
+Mimetic Rivalry and Violence                                             have been observed to imitate each other more faithfully
+                                                                         than do chimpanzees (Whiten et al. 2009), the Girardian
+Before discussing what evidence might or might not exist                 emphasis on the uniqueness of human mimicry may, never-
+for the proposed solution, scapegoating, we first need to                theless, be misplaced. Mimicry of conspecifics is observed
+consider the plausibility of the problem. Would mimesis, or              in many species (Zentall 2001). Rather, the trait that perhaps
+analogous social traits, have precipitated internecine con-              better defines our species may instead be our tendency to
+flict, thereby making “animal societies impossible”?                     attribute intentional states to others, and our ability to do so
+    Girard considered the stability of “animal societies” in             to multiple orders of intentionality.
+terms of dominance hierarchies, on the premise that such                     To this author’s knowledge, Girard did not address the issue
+hierarchies have an important pacifying function in other                of mentalizing, let alone the concept of orders of intentional-
+animals. Although there would seem to be little direct                   ity, but instead, his theory would appear to take for granted
+empirical evidence to support this premise per se, other                 the human ability to so. Yet, in order to mimic the desires of
+authors have made similar assumptions (Price 1967) and                   each other, we need first to be able to impute (accurately or
+the interpersonal dynamics that result in a mimetic crisis               otherwise) what those desires might be. It may therefore have
+are analogous to Gregory Bateson’s concept of symmetrical                been the emergence of such an ability to mentalize that better
+differentiation causing schismogenesis leading to “hostility             explains the phenomenon, described by Girard, of the tendency
+and the breakdown of the entire system” (Bateson 1935).                  for the desires and other mental states of individuals in a com-
+    It seems plausible that hierarchical stability might have            munity to spontaneously align. In other words, once a capacity
+been disrupted by the emergence of at least two of the traits            to mentalize emerged, where there may have been a preexisting
+upon which human sociality depends. These are the ability                tendency to imitate, then imitation would no longer have been
+to mentalize and the associated propensity to create a joint             confined to mimicking each other’s actions, but could also have
+attentional framework or a “shared intentionality.”                      involved mimicking each other’s mental states.
+
+
+
+                                                                                                                              13
+246                                                                                                                   D. V. Riordan
+
+
+Shared Intentionality                                            stable hierarchy could be an emergent property of multiple
+                                                                 binary contests whereby, typically, a lower-ranked animal
+Girard’s concept of mimesis is resonant, not only with the       challenges a higher-ranked one. The outcome of such chal-
+idea of common knowledge described above, but also with          lenges, or “ritualized agonistic behaviors” (Price 1969),
+Michael Tomasello’s concept of “shared intentionality”           might depend on numerous variables (Parker 1974), yet
+which describes a human tendency to seek, and to create          despite the high stakes in terms of direct fitness, typically
+with conspecifics, a shared attentional space, or a joint, or    one or other of the animals concedes, thereby either creating
+“we” intentionality (Tomasello and Carpenter 2007). As           or maintaining social asymmetry.
+well as facilitating multiple individuals to work towards           Maynard Smith (1974), using hawk-dove game theory,
+a joint goal, this also allows for role swapping (Moll and       demonstrated how a stable distribution of aggressive and
+Tomasello 2007). Although employing a very different epis-       submissive traits could become fixed in a population.
+temological method to Girard’s (experimental comparative         Such models are simplifications, and complicating factors,
+psychology, in contrast to Shakespearian exegesis), there        amongst primates at least, may be bystander intervention
+are nevertheless, strong parallels between Tomasello’s           and a tendency to form alliances (Ridgeway and Diekema
+shared intentionality concept and Girard’s mimesis (Kruger       1989). Nevertheless, the important point is that conspecific
+2011). Both describe the spontaneous alignment of inten-         conflict may be curtailed in other animals by the spontane-
+tional states amongst humans, and both consider this to be a     ous emergence of hierarchies that depend for their stability
+species-defining trait. Both are also predicated on a highly     upon a widespread propensity to submit to a dominant. In
+developed ability to mentalize and to do so recursively.         other words, social stability may rely on most members of
+   Girard emphasizes the process (mimicry of mental              a community regularly adopting a different intentional state
+states), and Tomasello the outcome (the emergence of a joint     to that of a conspecific.
+attentional framework), yet it is arguable that they are both       The spontaneous adoption of such different intentional
+describing the same phenomenon. However, whereas Toma-           states may be the typical outcome of contests amongst spe-
+sello emphasizes the fitness advantages of such a shared         cies that have little or no ability to infer each other’s inten-
+attentional framework, especially in terms of cooperation        tional states, let alone have a propensity to reciprocally
+and cumulative culture (Tennie et al. 2009), Girard (being       imitate them. In humans, however, the tendency to imitate
+a Shakespearian scholar) focuses instead on the potential        intentional states, or for a shared intentionality to sponta-
+rivalries, conflicts, and consequences for social stability.     neously emerge, may have been incompatible with main-
+                                                                 taining the required differences within a group upon which
+Emergence and Stability of Dominance Hierarchies                 social hierarchies, and therefore social stability, would have
+                                                                 depended.
+Social hierarchies are evident in many animals, including
+primates (Watts 2010). As dominant animals have better           Dominance, Cooperation, and Social Stability
+access to food and mates, they therefore have direct fitness
+advantages, hence the emergence of behavioral traits that        Whereas the above discussion, following Girard, considers
+tend to establish and maintain a dominant position can be        the effects that the emergence of certain social traits may
+readily explained. However, a stable hierarchy is also reliant   have had on the stability of dominance hierarchies, other
+on the existence, in lower-ranked individuals, of behavioral     theorists have considered the inverse, that is, the effect that
+traits that facilitate submission to dominants. The existence    the persistence of dominance hierarchies would have had
+of such “submission traits” might be accounted for both          on the emergence of human sociability, and specifically on
+from a direct fitness perspective through the avoidance of       cooperativeness (Boehm 1999; Dubreuil 2010; Cronin et al.
+serious injury (Maynard Smith and Price 1973), and also in       2015; Tomasello 2016). They suggest that the replacement
+terms of the inclusive fitness advantages (Hamilton 1964;        of a dominance-based social order with a more egalitarian
+Levin and Grafen 2019) that pertain to a stable group hier-      structure would have been a prerequisite for the emergence
+archy (Price 1967). In other words, the existence of both        of cooperation, as participants in a collaborative venture
+dominance traits and submission traits may be understood         would need to have had confidence that any spoils would
+as a trade-off between the stress of low rank and the stress     be shared equitably.
+of conflict (Debreuil 2010, p. 53).                                 There is evidence that animal-type dominance hierarchies
+   Price et al (1994) posit that humans share with other         did indeed become less prominent during human evolution,
+animals a “mechanism for yielding in competitive situa-          with early hominins, and even contemporary hunter-gather-
+tions,” and that hierarchies are the product of “a phyloge-      ers, living in small, apparently egalitarian, acephalous bands,
+netically ancient mechanism for creating social asymmetry        lacking any clear leader or chief, (Knauft et al. 1991; Boehm
+between previously equal adults.” They describe how a            et al. 1993). Notwithstanding the subsequent reemergence of
+
+
+13
+The Scapegoat Mechanism in Human Evolution: An Analysis of René Girard’s Hypothesis on the Process…                                247
+
+human hierarchical societies in more recent millennia, this                 Wrangham argues that similar self-domestication by pro-
+propensity for egalitarianism has been described as one of               active aggressive coalitions occurred, independently, late in
+the pillars of the early human sociocultural niche (Whiten               the hominin lineage and links this to the emergence of lan-
+and Erdal 2012). Tomasello suggests that the emergence of                guage which would have allowed for greater coordination
+such relative egalitarianism facilitated cooperative activities,         and conspiratorial planning of such coalitions of proactive
+which would have allowed early hominins to greatly expand                aggression (Wrangham 2019a). Reasoning that as coopera-
+their foraging and hunting opportunities (Tomasello et al.               tion and social learning would have been incompatible with
+2012). Indeed, it might be said that the corollary of Girard’s           a high propensity to react aggressively during encounters
+comment, concerning mimesis making animal societies                      with conspecifics, Wrangham concludes that whereas the
+impossible, also appears to be true. That is, where a certain            direct consequence of proactively aggressive coalitions may
+threshold of animal-type dominance hierarchy persisted,                  have been a domestication syndrome, an incidental conse-
+human (cooperative) societies would have been impossible.                quence, in humans at least, may have been the facilitation of
+                                                                         cooperation (Wrangham 2019b, p. 189).
+                                                                            Girard wrote in the mid to late 20th century, in the after-
+Self Domestication                                                       math of two great European wars and in a world threatened
+                                                                         with nuclear war. He takes a view similar to that of Thomas
+An alternative approach to explaining the emergence of                   Hobbes (Hobbes and Oakeshott 1946) (who, in the 17th
+conditions compatible with cooperative societies focuses                 century, also wrote in the aftermath of catastrophic Euro-
+on the propensity for aggression, rather than on dominance               pean wars), and regarded humans as a species engaged in a
+or hierarchy, and specifically on the distinction between two            continuous struggle to suppress our self-destructive violent
+types of aggression, reactive and proactive (Dodge and Coie              tendencies. Yet, this view of humanity, as a uniquely violent
+1987; Wrangham 2018). Reactive aggression is character-                  species, appears to be questionable, as our two closest rela-
+ized by emotional arousal and impulsivity, whereas proac-                tives, chimpanzees, and, to a lesser extent, even the more
+tive aggression tends to be goal directed, and planned. Rich-            peaceful bonobos, have been observed to kill each other as
+ard Wrangham (Wrangham 2019b) argues that one of the                     often as human hunter-gatherers did, while having a much
+defining characteristics of our species is the (relatively) low          higher frequency, by an order of magnitude, of nonlethal
+propensity for reactive aggression, and that this is analogous           aggressive encounters with each other (Wrangham et al.
+to similar traits that characterize domesticated animals. Such           2006). Hence, Girard’s claim that collective murder resulted
+a domestication syndrome (Darwin 1868), so called as it                  in a “true rupture” between animals and humans would seem
+tends to be associated with other incidental traits such as              to be incorrect.
+paedomorphism, can, in most cases, be readily accounted                     Wrangham presents a more nuanced view on human vio-
+for by generations of selection by humans against reactive               lence (Wrangham 2019b), arguing that we have a reduced
+aggression traits in their animals (Belyaev 1969). However,              propensity for reactive aggression but a greater propen-
+a domestication syndrome has also seemingly emerged spon-                sity for proactive. Girard’s hypothesis might be similarly
+taneously in some species, most notably in humans (Wrang-                expressed as entailing proactive aggression, in the form of
+ham 2019a), but also in one of our closest ape relatives,                sacrificial ritual, keeping reactive aggression in check, but
+bonobos (Hare et al. 2012).                                              with the sacrificial rituals themselves having their origin in
+   Reasoning that species that have undergone self-domesti-              acts of spontaneous reactive aggression.
+cation must have done so in response to environmental pres-
+sures that selected against reactive aggression, the execution           Conclusion
+hypothesis (Hare et al. 2012; Wrangham 2019b) proposes
+that, in the case of bonobos and humans at least, such selec-            The consensus amongst evolutionary theorists would seem
+tion pressures were mediated through the emergence of                    to agree with Girard in considering that some aspects of
+coalitions that engaged in proactive aggression against their            human sociality would have been incompatible with animal-
+more reactively aggressive conspecifics. The formation of                like dominance hierarchies. However, whereas the focus of
+such aggressive coalitions is evident amongst adult female               some theorists has been on the problems that dominance
+bonobos who have been observed to make coordinated                       would have caused for cooperativeness, Girard’s emphasis is
+attacks against overly aggressive males in their own group               on the problems that the necessary weakening of dominance
+(Hare et al. 2012). This contrasts with their close relatives,           systems would have caused for social cohesion. He argued
+chimpanzees, who typically engage in proactive male coali-               that because the primate dominance hierarchical system had
+tions against solitary outgroup members (Mitani et al. 2002),            an important role in curtailing intragroup violence, that the
+and do not exhibit a domestication syndrome.                             transition to a seemingly more egalitarian social structure
+                                                                         would have presented significant challenges, and therefore
+
+
+                                                                                                                            13
+248                                                                                                                  D. V. Riordan
+
+requires explanation. Like Wrangham, he also posits a role       Other Hypotheses on Religion and Morality
+for collective killing, although, as discussed below, Wrang-
+ham and Girard differ somewhat in how they envisage both         Numerous hypotheses have been advanced regarding the
+the form of such killings, and the effects they would have       evolutionary origins of the uniquely human phenomenon of
+had.                                                             religion (Boyer and Bergstrom 2008; Bulbulia et al. 2008).
+                                                                 Some of these consider how religious thinking might have
+                                                                 emerged out of preexisting cognitive biases that had origi-
+                                                                 nally served other functions (Atran and Norenzayan 2004).
+Comparative Analysis; the Posited Solution;                      For instance, it has been proposed that a hypersensitivity
+the Scapegoat Mechanism                                          towards agency detection that would have been protec-
+                                                                 tive against predators, combined with the emergence of an
+  It matters little, in effect, who is the victim, provided      ability to mentalize, would have resulted in a human ten-
+  that there is one.                                             dency to ascribe agency to inanimate objects (Atran and
+                                                                 Henrich 2010). Similarly, it has been suggested that while
+  (Girard et al. 1978, p. 142)
+                                                                 a propensity to better remember minimally counterintuitive
+    The main Girardian claim being examined by this article      information, coupled with a tendency to imitate exactly the
+is not so much that traits essential to human sociality would    behaviors of others, might have facilitated intergenerational
+have presented early hominins with a novel fitness challenge     transmission of skills and knowledge, it would also have
+in the form of increased conspecific violence, but rather that   allowed religious-type belief systems and associated rituals
+the scapegoat mechanism emerged as an adaptive response          to become established through cultural selection (Boyd and
+to this challenge.                                               Richerson 1985; Barrett 2008; Lewis and Laland 2012).
+    Humans engage in a spectrum of victimization behaviors           Others have emphasized the emotional (Dunbar 2020),
+(Forgas et al. 2005). These have different names depend-         and ritualistic (Rappaport 1999), rather than cognitive,
+ing on the context, such as ostracization, social exclusion,     aspects of religion. Dunbar argues that religion is important
+bullying, or lynching. What these all have in common is          to the stability of human groups, with evidence that group
+a dynamic whereby one individual, or a small group of            fission is less, and thus group longevity greater, in com-
+individuals, is singled out and becomes the target for hos-      munes with a religious rather than a secular ethos (Dunbar
+tility on the part of the rest of the community. Although        and Sosis 2018). Rappaport linked ritual to the emergence of
+analogous behaviors such as “mobbing” are observable             symbolism and language, and argued that archaic religious
+in some other animals (Ostreiher 2003), these are invari-        rituals involved self-referent “indices” which were impervi-
+ably directed at intruders, or predators of another species.     ous to falsification, thereby helping to “ameliorate problems
+Humans are unusual in having a propensity to single out for      of falsification intrinsic to language.” Although this places a
+attack, sometimes seemingly at random, not only members          greater emphasis on communal practice, rather than on the
+of other groups, such as in the case of headhunters (Rosaldo     cognitive aspects of belief, it has similarities with a cog-
+1980), but also members of their own group, although, as         nitivist hypothesis that suggests that ritual sacrifices may
+noted above, a similar, albeit seemingly less arbitrary, phe-    be understood as credibility enhancing displays (CREDs)
+nomenon has been observed in both of our closest relatives,      which would have facilitated the cultural transmission of
+bonobos and chimpanzees.                                         belief systems (Henrich 2009).
+    Several other authors have addressed the issue of ostra-         Although some of these hypotheses disagree on whether
+cization (Eisenberger 2003; Forgas et al. 2005; MacDonald        religion is better thought of as an adaptation, or as a by-
+and Leary 2005; Sweeting et al. 2006), but invariably do         product of other traits (Sosis 2009), there is a consensus that
+so from the perspective of the serious consequences for the      it played a role in communal cohesion and the emergence
+ostracized. Girard in contrast focused on the effect on those    of group norms and shared values (Durkheim 1915), with
+doing the ostracizing, claiming that the human propensity        some linking it to the relatively large size of typical hominin
+for spontaneous victimization provided the framework for         groups (Dunbar 2008). It has also been proposed that the
+generating communal unanimity founded upon a shared              dramatic Holocene expansion of human community size,
+sacred meaning. This claim is discussed below in the con-        which has occurred in recent millennia, was linked to the
+text of other hypotheses regarding the evolutionary origins      emergence of a religious cultural variant that involved belief
+of cooperation, morality, religion, ritual, and sacrifice, and   in all powerful deities, so called “Big Gods,” who take a
+on how hierarchies have, or at times seemingly have not,         direct interest in human moral behavior (Norenzayan et al.
+operated during hominin history.                                 2016; Lang et al. 2019). Similarly, Dunbar surmises that the
+
+
+
+
+13
+The Scapegoat Mechanism in Human Evolution: An Analysis of René Girard’s Hypothesis on the Process…                                 249
+
+“centerpiece” of the Neolithic revolution wasn’t agriculture             what Girard described as “the sacred,” as they all involve
+as such, but rather the emergence of a form of religion that             values or beliefs that are shared by the entire social group
+provided “mechanisms that allowed people to live together                and perceived as objectively true. Furthermore, Girard is
+in cramped conditions without killing each other” (Dunbar                not alone in linking this phenomenon to either punishment
+2020).                                                                   or victimization, with clear parallels between his scapegoat
+   Another pertinent hypothesis is Tomasello’s account of                mechanism and Tomasello’s hypothesis regarding the pun-
+the origins of human morality (Tomasello 2016). This con-                ishment of transgressors and the associated emergence of
+siders the emergence of concepts such as sacred values and               social norms which in turn are linked to group cohesion
+norms, and links these to human cooperation. Tomasello                   and meaning. What Tomasello and others describe in terms
+has proposed an interdependence hypothesis to explain the                of a cognitive tendency for third-party norm enforcement
+emergence of such cooperation, beginning with small scale                and the related creation of cultural institutions that allow
+mutual collaboration between individuals founded on a joint              punishments to be delivered impersonally or by the group
+intentionality, which evolved into larger-scale group-level              (Dubreuil 2010, p. 189; Tomasello 2016, p. 104), is analo-
+collaboration based on “collective intentionality” (Toma-                gous to what Girard called “sacred violence,” which includes
+sello 2014).                                                             ritual violence, and punishments sanctioned by a deity.
+   Any upscaling of group size would have been at the                       Dunbar argues that early hominins were able to enjoy
+cost of reduced individual incentive and reduced informa-                the advantages of larger group sizes by evolving novel ways
+tion regarding the skills and reputation of partners, thereby            of bonding, through the release of endorphins, which were
+increasing the problem of “free riders” and cheaters (Har-               more efficient at creating and maintaining bonds between
+din and Garret 2003). Cosmides and Tooby (Cosmides and                   group members than were the physical contact grooming
+Tooby 2002) propose that much of human psychology is                     methods used by other primates (Dunbar 2020). He surmises
+comprised of dedicated intelligence modules that emerged                 that the phylogenetically oldest of these uniquely human
+as specific adaptations to specific problems, and there is evi-          bonding methods is laughter, which he claims helped to
+dence for such an adaptation that produces punitive senti-               bridge the “bonding gap” between conventional apes and
+ments specifically targeted at free riders (Price et al. 2002).          archaic humans (Dunbar 2012). Laughter is a common asso-
+   Cooperative endeavors would have required not only                    ciate of modern ostracization behaviors (Klages and Wirth
+a system for detecting and punishing cheating, but also a                2014) and may also trigger endorphin release (Dunbar et al.
+shared agreement as to what the behavioral norms were, and               2012). The scenario envisaged by Girard, of spontaneous
+how to deal with transgressors (Fehr and Fischbacher 2004;               cathartic victimization, would, therefore, seem consistent
+Gardner and West 2004). Tomasello suggests that collective               with laughter-induced endorphin release playing an impor-
+intentionality would have relied on the emergence of new                 tant role in early hominin group bonding. Dunbar also points
+cognitive processes that addressed the problems caused by                out that the later emergence of a mental capacity to concep-
+having to cooperate with relative strangers. This, he claims,            tualize four to five orders of intentionality would have been
+would have facilitated the emergence of a collective or                  a necessary condition for the type of “storytelling” that is an
+cultural common ground, which came to form the basis of                  essential part of communal religions involving social norms
+shared social norms and what we might call an objective                  (Dunbar 2008). This is analogous to the Girardian concept of
+morality (Tomasello 2016, p. 102).                                       the role of mythology, founded on features of the scapegoat
+                                                                         mechanism, such as double transference and misrecognition,
+Comparisons with the Scapegoat Hypothesis                                which would have been similarly reliant on multiple orders
+                                                                         of intentionality.
+What each of the above approaches have in common is the                     There are, however, some important differences between
+suggestion that codes of unanimously accepted behavioral                 the scapegoat hypothesis and some of the approaches dis-
+norms became established through cultural selection and that             cussed above. Whereas all accounts envisage the emergence
+this selection was mediated by fitness advantages associated             of a process whereby perceived transgressors are punished
+with some form of enhanced group cohesion. The scapegoat                 through some form of ostracization, Girard considered the
+hypothesis makes a broadly similar claim. Although it may                primary selection pressure to have come from the problem
+not explicitly articulate the concept of cultural selection, this        of intragroup conflict, rather than that of free riders. Some
+is, nonetheless, implicit in Girard’s account, as the idea of            other models emphasize the sensitivity of the cheater detec-
+cultural contagion is a central theme of his work.                       tion mechanism (Tomasello et al. 2012, p. 679), implying
+    What others have described as a “group minded moral                  high specificity, with the hypothesized function primarily
+psychology” (Tomasello 2016, p. 136), “moral norms”                      being the modification of the behavior of accused transgres-
+(Atran and Henrich 2010), or “common knowledge” (De                      sors. This assumes that the individual accused of norm vio-
+Freitas et al. 2019) are, arguably, the same phenomenon as               lation is invariably guilty. Although Girard also envisaged
+
+
+                                                                                                                             13
+250                                                                                                                  D. V. Riordan
+
+a high sensitivity to cheater detection, he considered the        has been identified as being of importance to cooperation.
+specificity to be of less relevance, as it is the endorsement     Because there is a potential cost for the punisher, this has
+of group values that he saw as being of greater functional        been described as an altruistic behavior, with debate as to
+importance. This is consistent with the argument that “bot-       how it may have emerged (Hill et al. 2009). As the greater
+tom-up” social norms function better at addressing the prob-      the proportion of a population who act as punishers, the less
+lem of free riders than do “top-down” transgressor sanctions      the individual-level selection operating against them (Boyd
+(Ostrom 1990).                                                    et al. 2003), it has been suggested that, although the mainte-
+   In Girard’s account, the actual guilt or innocence of the      nance of third-party punishment behavioral traits in a popu-
+accused becomes immaterial because, provided that the             lation may be readily accounted for, it is harder to explain
+group unanimously believe in their guilt, the process of          how such behaviors originally evolved (Gardner and West
+norm enforcement works equally well with a victim who is          2004). Girard’s concept of spontaneous unanimous hostil-
+innocent as with one who is guilty. In other words, accusa-       ity generated by mimesis provides a possible solution, as it
+tions primarily function by modifying the beliefs and behav-      describes the emergence of what would have been, ab initio,
+iors of the rest of the group, rather than by any effect on the   widespread, and thus potentially stable, third-party punish-
+accused. It is this focus on the role of the act of accusation,   ment behaviors.
+rather than the substance of the accusation, that, perhaps,
+best illustrates the difference between Girard and most other     Human Sacrifice
+comparable theorists.
+   As with the potential, discussed above, for human desire       Human sacrifice, although anathema to modern cultures and
+to become divorced from functional utility, the mimetic           religions, appears to have been a widespread practice in pre-
+nature of accusations would have resulted in a similar            modern societies (Bremmer 2007; Acevedo and Thompson
+potential to become detached from any plausible guilt or          2013) with a geographical distribution suggesting that it was
+innocence, resulting in a tendency to accuse individuals of       not the result of local cultural aberrations, but rather was
+a limitless variety of crimes, some of which they could not       the product of a behavioral tendency ubiquitous in humans.
+possibly have been guilty of, such as in the case of the medi-    Although Girard’s hypothesis does not offer any obvious
+eval European phenomenon of witch trials. Such impossible         explanation for some of the more puzzling, but seemingly
+accusations could not have functioned as means of instru-         pervasive, facets of the phenomenon, such as that of child
+mental behavioral modification, but instead may have func-        sacrifice (Stager and Wolff 1984; Wilson et al. 2007), it is
+tioned by attributing to the accused a malign disposition         arguably consistent with other hypotheses that posit an adap-
+imbued with a mystique likely to generate myth.                   tive function for the practice.
+   A hypothesis that has strong parallels with Girard’s is            The social-control hypothesis suggests that human sac-
+that of DeScioli and Kurzban (DeScioli and Kurzban 2013),         rifice was motivated by political control and intimidation
+which seeks to account for the emergence of deontologi-           (Winkelman 2014), and this is supported by evidence linking
+cal (non-consequential) morality, contrary to the theoretical     the practice with greater, and more stable, social stratifica-
+expectation that evolution should have favored consequen-         tion (Watts et al. 2016). This would seem consistent with
+tialism. They suggest that deontological thinking (which          Girard’s view that sacrificial rituals played a role in main-
+is arguably analogous to sacred thinking), evolved as a           taining social differences. Arguably, Girard offers a parsi-
+mechanism that facilitated bystanders to coordinate which         monious account of how such practices may have initially
+side to take in a dispute, thereby curtailing what they call      emerged from spontaneous acts of communal aggression
+“third party discoordination” and the associated escalation       which would, initially at least, have been devoid of any con-
+of conflicts. Like Girard, they argue that moral cognition        scious political motivation or goal.
+functions by coordinating condemnation, rather than by pro-           Whether sacrifice functioned by political intimidation or,
+moting any specific altruistic behaviors or direct beneficial     as suggested by theorists such as Rappaport and Henrich,
+consequences. This, they suggest, allowed the emergence in        by reinforcing intergenerational transmission of unanimous
+hominin societies of a delicate balance between despotism         communal values, Girard’s concepts of misrecognition and
+(akin to dominance hierarchies) and discoordination (akin         double transference offer an account of how sacred belief
+to mimetic crises). Girard made similar claims regarding the      systems, symbolism, and language might have become asso-
+scapegoat mechanism, but in addition posited that the vic-        ciated with collective killing.
+tim’s ambiguous status, being both demon and deity, villain
+and king, together with the associated mythology, played an       Execution Hypothesis
+important role in maintaining such a balance.
+   Regardless of whether it is deontological or consequen-        There are similarities between Girard’s scapegoat mecha-
+tialist, the human phenomenon of third-party punishment           nism and the phenomenon of coalitions of aggression
+
+
+13
+The Scapegoat Mechanism in Human Evolution: An Analysis of René Girard’s Hypothesis on the Process…                                 251
+
+described above, to which Wrangham attributes self-domes-                Hierarchies
+tication. These coalitions are characterized by the assail-
+ants having an overwhelming numerical advantage, thereby                 As alluded to above, some anthropologists have suggested
+taking little personal risk (Wrangham 2019b). Judicial                   that hierarchical social structures have had a U-shaped tra-
+executions are a modern example of such proactive killing                jectory during human evolution (Knauft et al. 1991; Boehm
+of selected, typically single, victims and some form of this             1999; Dubreuil 2010), and that in contrast to most apes and
+seems to be ubiquitous in human societies (Otterbein 1986).              to modern humans, earlier hominins and hunter-gatherers
+Such coalitions necessarily involve individuals having some              appear to have lived in more egalitarian groups. It has been
+ability to discern each other’s intentions with sufficient accu-         suggested that such egalitarianism was the product of a
+racy, and the observation of a version of the phenomenon in              system of “reverse dominance” (Boehm et al. 1993) which
+chimpanzees and bonobos may, arguably, be consistent with                emerged from the tendency of subordinate males in the case
+it being associated with an ability for at least rudimentary             of chimpanzees, or females in the case of bonobos, form-
+second-order mentalizing (O’Connell and Dunbar 2003; Call                ing alliances against dominant males. Boehm argues that,
+and Tomasello 2011).                                                     in hominins, this evolved into a communal intolerance of
+    The execution hypothesis contrasts in several ways with              dominants, or “upstarts,” giving rise to what he calls “the
+Girard’s scapegoat mechanism, perhaps the most signifi-                  domination by the rank and file,” resulting in groups acting
+cant of which concerns the type of aggression envisaged.                 as “unified moral communities” (Boehm 1999).
+Wrangham describes coalitionary aggression as proactive.                    There are parallels between this and Girard’s scapegoat
+Indeed, the execution hypothesis essentially posits that, in             mechanism such that both may be describing the same devel-
+both humans and bonobos, reactive aggressive traits were                 opment. What appears as egalitarianism may in effect have
+selected against by targeted proactive aggression. In con-               been a binary hierarchy founded on the difference between
+trast, although Girard does not make the distinction between             the community as a whole and any individual who was either
+proactive and reactive aggression, he nevertheless clearly               overly dominant (Boehm), or perceived (possibly errone-
+envisages the initial scapegoat killing as a collective act of           ously) to be transgressing in some way (Girard). Boehm
+reactive aggression. He argues that lynch mobs do not plan               described this as a “very special type” of hierarchy and pro-
+their actions but rather “know not what they do” (Girard                 posed a definitive attitudinal switch from “don’t fool with
+2017, p. 86; English Standard Version Bible 2001; Luke                   me” to “don’t fool with us.” This is resonant with the Girard-
+23:34). However, subsequent reenactments and deliberate                  ian idea of a switch from “all against all” to “all against
+human sacrificial rituals would seem to entail proactive                 one.”
+aggression and do have some similarities with execution                     Despite such similarities, an important difference is that
+(Smith 2000).                                                            Boehm proposes an explicit egalitarian ethos whereby mem-
+    Wrangham and Girard take contrasting views on the pri-               bers of a community “deliberately take charge of their own
+mary role played by language. Wrangham focusses on how                   fate” and may even have known what they were doing. In
+sophisticated communication would have allowed for com-                  contrast, Girard proposed a more spontaneous and uncon-
+plex conspiratorial planning (Wrangham 2019a), whereas                   scious dynamic, an important part of which would have been
+Girard, like Dunbar, considers that the more important role              the generation of mythology, thereby requiring that the com-
+played by language related to mythologizing, storytelling,               munity did not understand their own actions.
+and the intergenerational transmission of sacred values.                    Social hierarchical structure has reemerged, and did so
+Arguably, this is a difference in emphasis, with language                contemporaneously with the appearance of larger, more
+potentially having played both roles.                                    complex human societies at the beginning of the Holocene
+    They also differ in terms of the hypothesized conse-                 era, about 12,000 years ago. Boehm’s account suggests that
+quences. Wrangham’s execution hypothesis assumes that                    this might be understood in terms of the dominants eventu-
+individuals who exhibited certain behavioral traits were                 ally regaining the upper hand in their struggle with subor-
+more likely to be selected as victims and that as a result, the          dinates. Dubreuil has disputed this interpretation (Dubreuil
+genetic basis for such traits was selected against, whereas              2010), arguing instead that modern human hierarchies dif-
+because Girard regards the identity of the victim to be arbi-            fer qualitatively from the earlier dominance-based variety
+trary, and of little relevance to the pacifying function, he             in that they are characterized by symbolism and political
+does not consider the possibility of selection against any               institutions, which he links to the expansion of the tempo-
+particular trait. In other words, Wrangham emphasizes the                roparietal area during the transition from Homo heidelber-
+genetic consequences, Girard the cultural, although these                gensis to Homo sapiens, some 160,000 years ago, and to the
+two distinct consequences might be regarded as having been               emergence of sufficient attentional flexibility “to look simul-
+complementary rather than contradictory.                                 taneously at a person as a man or as a president” (Dubreuil
+
+
+
+                                                                                                                             13
+252                                                                                                                  D. V. Riordan
+
+2010, p. 136). Such an ability to hold ambiguous perspec-        other words, there may have been selection pressures for the
+tives on individuals is analogous to Girard’s account of vic-    emergence of individuals with phenotypes that would have
+tims acquiring an ambiguous status of being simultaneously       made them more efficacious scapegoats. Such “victimiza-
+both malign and benign. Thus, Dubreuil and Girard both           tion traits” would have functioned as a form of altruism,
+posit that modern political institutions have their origins in   increasing inclusive fitness by enhancing the efficacy of the
+status ambiguity of individuals, although Dubreuil does not      scapegoat mechanism.
+ascribe any specific role to victimization in generating this.      This concept of victim phenotype is the basis of the
+                                                                 archetypal scapegoat hypothesis (ASH) on the evolution-
+                                                                 ary origins of psychosis (Riordan 2017). This posits that
+Implications                                                     psychosis emerged as an adaptive response to the risks of
+                                                                 mimetic internecine violence by providing groups with
+There are various philosophical, political, and even theologi-   individuals who were more likely to engender unanimous
+cal issues raised by Girard’s scapegoat hypothesis, and there    hostility from others, and who were already imbued with a
+is a growing body of literature discussing these (Cowdell        mystique that facilitated double transference. The latter func-
+et al. 2012; Vattimo 2012; Alison et al. 2017). This arti-       tion, that of psychosis having a role in enhancing communal
+cle does not dwell on these aspects but considers instead        unity by inducing religious thinking, has been proposed by a
+some potential implications for evolutionary psychology and      number of previous evolutionary hypotheses (Polimeni and
+psychiatry.                                                      Reis 2002; Stevens and Price 2015). However, the Girard-
+                                                                 ian perspective of the ASH also focuses on the hostility, and
+Protective Traits                                                unanimity, of the rest of the population. Unanimity would
+                                                                 have been of critical importance to the pacifying function
+If the scapegoat mechanism was an important adaptation in        of scapegoating, as without it the mechanism would have
+human evolution, then it would have functioned by enhanc-        been “worse than useless” (Girard 1972, p. 113). The ASH
+ing the fitness of groups, but with high direct fitness costs    suggests that the evolutionary origins of psychosis cannot be
+for the individuals selected as victims. We might therefore      understood by studying the individual sufferers alone, but of
+expect to observe in humans both population-wide traits          equal importance is a tendency in the general population to
+that facilitate the mechanism, but also traits that protect      scapegoat the mentally ill (Riordan 2019), a tendency that
+against victimization at the individual level. The risk of       we now recognize as stigmatization.
+being selected as a scapegoat victim would have been, and           This hypothesis is consistent with several known risk
+perhaps still is, an ever-present threat in the human social     factors for psychosis, such as exposure to “high expressed
+environment. Hence the sensitivity of the human psyche to        emotions” or trauma (Bechdolf et al. 2010), which might
+the risk of social exclusion, as evidenced by our susceptibil-   be understandable as environmental associates of mimetic
+ity to conditions such as social anxiety and social phobia,      crises, which induce the pacifying effects of the scapegoat
+may reflect not only the intense social nature of the human      mechanism by providing a suitable victim in response to
+niche and the adverse implications of reputational damage,       social disharmony. Other risk factors, such as having expe-
+but may also be understood in terms of the potentially high      rienced bullying (Trotta et al. 2013) or being a member of a
+direct fitness costs associated with being singled out from      minority group (Morgan et al. 2019), might be understood
+the crowd.                                                       in terms of victimization being self-reinforcing, whereby
+                                                                 overt psychosis is more likely to develop in a person who
+Functional Victims                                               has already been singled out, and is already being victim-
+                                                                 ized. The importance of unanimity suggests that frequency-
+Traits that function by promoting individual self-preserva-      dependent selection may help to explain the relatively uni-
+tion may be readily understandable. However, if scapegoat-       form prevalence of psychosis, as a higher prevalence would
+ing were adaptive, and its function mediated not through the     dilute the unanimity-inducing function. Furthermore, the
+actual guilt or innocence of the victims, but rather through     ASH suggests that the apparent changes in societal attitudes
+how they were perceived by others, then the prospect arises      to the mentally ill over recent centuries (Foucault 1965)
+of traits having also emerged, in a small number of indi-        are consistent with the contemporaneous shift in attitudes
+viduals, which rather than functioning through the avoid-        towards sacrificial religion and victimization in general
+ance of victimization, would instead have attracted it. In       (Girard 1986; Riordan 2020).
+
+
+
+
+13
+The Scapegoat Mechanism in Human Evolution: An Analysis of René Girard’s Hypothesis on the Process…                                                  253
+
+
+Conclusion                                                               the role played by victimization in the emergence of human-
+                                                                         ity, may be a vital missing piece of the jigsaw puzzle of
+   Up to now it was recognised that the rapid increase in                human evolution and the origins of our “strange machine.”
+   brain size, as well as other phenomena, required an
+   interaction between biological and cultural factors, but
+   what has been missing is a model for the organizing                   Open Access This article is licensed under a Creative Commons Attri-
+                                                                         bution 4.0 International License, which permits use, sharing, adapta-
+   and driving factor in the process, a motor car for this               tion, distribution and reproduction in any medium or format, as long
+   strange machine. The victimage process gives us this                  as you give appropriate credit to the original author(s) and the source,
+   motor.                                                                provide a link to the Creative Commons licence, and indicate if changes
+                                                                         were made. The images or other third party material in this article are
+   (Girard et al. 1978, p. 96)                                           included in the article’s Creative Commons licence, unless indicated
+                                                                         otherwise in a credit line to the material. If material is not included in
+    This article considers the claim that the scapegoat mecha-           the article’s Creative Commons licence and your intended use is not
+nism, as described by René Girard, played an essential role              permitted by statutory regulation or exceeds the permitted use, you will
+in the transition of early hominins from hierarchical societies          need to obtain permission directly from the copyright holder. To view a
+                                                                         copy of this licence, visit http://​creat​iveco​mmons.​org/​licen​ses/​by/4.​0/.
+based on dominance to the seemingly more egalitarian social
+structure required for cooperation. Although Girard’s work-
+ing assumption regarding lethal conspecific violence being
+unusual in other animals may have subsequently been found                References
+to be inaccurate, his hypothesis is nevertheless consistent
+                                                                         Acevedo GA, Thompson M (2013) Blood, war, and ritual: religious
+with other approaches that regard religious or deontological                   ecology, ‘strong’ culture, and human sacrifice in the premodern
+thinking, together with shared communal values, as being                       world. Anthropol Forum 23(3):266–288. https://d​ oi.o​ rg/1​ 0.1​ 080/​
+central to the emergence of cooperation and the stability                      00664​677.​2013.​805121
+                                                                         Alison J, Palaver W, Merrill TC, Hidden ST (eds) (2017) The Palgrave
+of large groups. It also has commonalities with hypothe-
+                                                                               handbook of mimetic theory and religion. Palgrave Macmillan,
+ses that posit a role for aggressive coalitions. What Girard                   New York. https://​doi.​org/​10.​1057/​978-1-​137-​53825-3
+adds, which other hypotheses lack, is the claim regarding                Antonello P, Gifford P (eds) (2015) How we became human: mimetic
+the role played by arbitrary victimization and attribution of                  theory and the science of evolutionary origins. Michigan State
+                                                                               University Press, East Lansing. https://m  ​ use.j​ hu.e​ du/b​ ook/4​ 1704
+guilt in generating religious thinking and sacred values. This
+                                                                         Atran S, Henrich J (2010) The evolution of religion: how cognitive by-
+is, arguably, a parsimonious addition as it posits a mecha-                    products, adaptive learning heuristics, ritual displays, and group
+nism that would have been, for the most part, a spontaneous                    competition generate deep commitments to prosocial religions.
+emergent property of behavioral and cognitive processes, in                    Biol Theor 5(1):18–30. https://​doi.​org/​10.​1162/​BIOT_a_​00018
+                                                                         Atran S, Norenzayan A (2004) Religion’s evolutionary landscape:
+particular imitation and mentalizing, which are already well
+                                                                               counterintuition, commitment, compassion, communion. Behav
+recognized, whilst potentially offering an explanatory frame-                  Brain Sci 27(6):713–730. https://​doi.​org/​10.​1017/​S0140​525X0​
+work for phenomena as varied as third-party punishment,                        40001​72
+bullying, witch hunts, human sacrifice, funerary practices,              Baron-Cohen S (1995) Mindblindness: an essay on autism and theory
+                                                                               of mind. MIT Press, Cambridge
+and psychosis.
+                                                                         Barrett J (2008) Coding and quantifying counterintuitiveness in reli-
+    Whiten and Erdal (2012) proposed five pillars of what                      gious concepts: theoretical and methodological reflections.
+they call the “deep social mind,” namely egalitarianism,                       Method Theor Study Religion 20(4):308–338. https://​doi.​org/​
+mentalizing, cooperation, language, and cultural transmis-                     10.​1163/​15700​6808X​371806
+                                                                         Bateson G (1935) 199. culture contact and schismogenesis. Man
+sion. They suggest that these form “an interrelated, adaptive
+                                                                               35:178–183. https://​doi.​org/​10.​2307/​27894​08
+socio-cognitive complex,” and propose that this complex                  Bechdolf A, Thompson A, Nelson B, Cotton S, Simmons MB,
+evolved by way of two-way positive feedback interactions                       Amminger GP et al (2010) Experience of trauma and conver-
+between these five “pillars.” This article proposes that scape-                sion to psychosis in an ultra-high-risk (prodromal) group. Acta
+                                                                               Psychiatr Scand 121(5):377–384. https://d​ oi.o​ rg/1​ 0.1​ 111/j.1​ 600-​
+goating should be regarded as a sixth such pillar, as essential
+                                                                               0447.​2010.​01542.x
+to the emergence of the socio-cognitive complex as any of                Belyaev DK (1969) Domestication of animals. Science 5(1):47–52
+the other five.                                                          Boehm C (1999) Hierarchy in the forest: the evolution of egalitarian
+    René Girard may not have been a trained scientist, psy-                    behavior. Harvard University Press, Cambridge
+                                                                         Boehm C, Barclay HB, Dentan RK, Dupre MC, Hill JD, Kent S et al
+chologist, anthropologist, nor clinician. Indeed, he might
+                                                                               (1993) Egalitarian behavior and reverse dominance hierarchy
+more accurately be described as an “ivory tower” academic,                     [and comments and reply]. Curr Anthropol 34(3):227–254.
+with a Freud-like interest in mythology, who took his pri-                     https://​doi.​org/​10.​1086/​204166
+mary inspiration from the likes of Dostoevsky, and Shake-                Boyd R, Richerson PJ (1985) Culture and the evolutionary process.
+                                                                               University of Chicago Press, Chicago
+speare. As such, he may seem an unlikely person of interest
+                                                                         Boyd R, Gintis H, Bowles S, Richerson PJ (2003) The evolution of
+for evolutionary psychology. Yet from this cross-disciplinary                  altruistic punishment. Proceed Natl Acad Sci USA 100(6):3531–
+perspective, his concept of the scapegoat mechanism, and                       3535. https://​doi.​org/​10.​1073/​pnas.​06304​43100
+
+
+                                                                                                                                            13
+254                                                                                                                                            D. V. Riordan
+
+Boyer P, Bergstrom B (2008) Evolutionary perspectives on religion.           Fehr E, Fischbacher U (2004) Third-party punishment and social
+      Annu Rev Anthropol 37:111–130. https://​doi.​org/​10.​1146/​annur​           norms. Evol Hum Behav 25(2):63–87. https://​doi.​org/​10.​1016/​
+      ev.​anthro.​37.​081407.​085201                                               S1090-​5138(04)​00005-4
+Bremmer JN (ed) (2007) The strange world of human sacrifice, vol 1.          Fleming C (2004) René Girard; violence and mimesis. Polity Press,
+      Peeters, Leuven                                                              Cambridge
+Bulbulia J, Sosis R, Harris E, Genet R, Genet C, Wyman K (2008) The          Forgas J, Williams KD, von Hippel W (eds) (2005) The social out-
+      evolution of religion. Collins Foundation Press, Santa Margarita             cast: ostracism, social exclusion, rejection, and bullying. Psy-
+Call J, Tomasello M (2011) Does the chimpanzee have a theory of                    chology Press, New York/Hove
+      mind? 30 years later. In: Schleidgen S, Jungert M, Bauer R, San-       Foucault M (1965) Madness and civilization (trans: Howard R). Ran-
+      dow V (eds) Human nature and self design. Mentis, Paderborn,                 dom House, New York
+      pp 83–96. https://​doi.​org/​10.​30965/​97839​57438​843_​008           Frazer JG (1913) The golden bough, vol. 9, the scapegoat. Macmillan
+Connell O, Dunbar RIM (2003) A test for comprehension of false belief              and Company, London.
+      in chimpanzees. Evol Cognit 9(2):131–140                               Gardner A, West SA (2004) Cooperation and punishment, especially
+Cosmides L, Tooby J (2002) Unraveling the enigma of human intel-                   in humans. Am Nat 164(6):753–764. https://​doi.​org/​10.​1086/​
+      ligence: evolutionary psychology and the multimodular mind. In:              425623
+      Sternberg RJ, Kaufman JC (eds) The evolution of intelligence.          Girard R (1961) Mensonge romantique et verite romanesque. Edi-
+      Lawrence Erlbaum Associates, Mahwah, pp 145–198                              tions Bernard Grasset, Paris. Girard R (1976) Deceit, desire,
+Cowdell S, Fleming C, Hodge J (eds) (2012) Violence, desire, and the               and the novel: self and other in literary structure (trans: Frec-
+      sacred: Girard’s mimetic theory across the disciplines, vol 1.               cero Y). Johns Hopkins University Press, Baltimore
+      A&C Black, New York                                                    Girard R (1972) La Violence et le sacre. Editions Bernard Grasset,
+Cronin KA, Acheson DJ, Hernández P, Sánchez A (2015) Hierarchy                     Paris. Girard R (1977) Violence and the sacred (trans: Gregory
+      is detrimental for human cooperation. Sci Rep 5:18634. https://​             P). Johns Hopkins University Press, Baltimore
+      doi.​org/​10.​1038/​srep1​8634                                         Girard R (1986) The scapegoat. Johns Hopkins University Press,
+Darwin C (1868) The variation of animals and plants under domestica-               Baltimore
+      tion. John Murray, London                                              Girard R (2017) Evolution and conversion: Dialogues on the origins
+De Freitas J, Thomas K, DeScioli P, Pinker S (2019) Common                         of culture. Bloomsbury Publishing, New York
+      knowledge, coordination, and strategic mentalizing in human            Girard R, Oughourlian JM, Lefort G (1978) Des choses cachees
+      social life. Proc Natl Acad Sci USA 116(28):13751–13758.                     depuis la foundation du monde. Editions Grasset et Fasquelle,
+      https://​doi.​org/​10.​1073/​pnas.​19055​18116                               Paris. Girard R (1987) Things hidden since the foundation of
+Dennett DC (1989) The intentional stance. MIT Press, Cambridge                     the world (trans: Bann S, Metteer M). Continuum, London
+DeScioli P, Kurzban R (2013) A solution to the mysteries of moral-           Hamilton WD (1964) The genetical evolution of social behaviour
+      ity. Psychol Bull 139(2):477. https://​doi.​org/​10.​1037/​a0029​065         II. J Theor Biol 7(1):17–52. https://​d oi.​o rg/​1 0.​1 016/​0 022-​
+Dodge KA, Coie JD (1987) Social-information-processing factors in                  5193(64)​90039-6
+      reactive and proactive aggression in children’s peer groups. J         Hardin R, Garrett C (2003) The free rider problem. In: Zalta EN (ed)
+      Pers Soc Psychol 53:1146–1158                                                The Stanford encyclopedia of philosophy (winter 2020 edn).
+Dubreuil B (2010) Human evolution and the origins of hierarchies:                  https://​plato.​stanf​ord.​edu/​archi​ves/​win20​20/​entri​es/​free-​r ider
+      the state of nature. Cambridge University Press, Cambridge             Hare B, Wobber V, Wrangham R (2012) The self-domestication
+Dunbar R (1998) The social brain hypothesis. Evol Anthropol: Issues                hypothesis: evolution of bonobo psychology is due to selec-
+      News Rev: Issues, News, Rev 6(5):178–190                                     tion against aggression. Anim Behav 83(3):573–585. https://​
+Dunbar R (2008) Mind the gap; or why humans are not just great                     doi.​org/​10.​1016/j.​anbeh​av.​2011.​12.​007
+      apes. Proc Br Acad 154:403–423                                         Haven CL (2018) Evolution of desire: a life of René Girard. Michi-
+Dunbar R (2012) Bridging the bonding gap: the transition from pri-                 gan State University Press, East Lansing
+      mates to humans. Philosophic Trans Royal Soc b: Biol Sci               Henrich J (2009) The evolution of costly displays, cooperation and
+      367(1597):1837–1846. https://​doi.​org/​10.​1098/​rstb.​2011.​0217           religion: credibility enhancing displays and their implications
+Dunbar R (2020) Religion, the social brain and the mystical                        for cultural evolution. Evol Hum Behav 30(4):244–260. https://​
+      stance. Arch Psychol Relig 42(1): 46–62. https://​doi.​org/​10.​             doi.​org/​10.​1016/j.​evolh​umbeh​av.​2009.​03.​005
+      1177/​2F008​46724​19900​547                                            Hill K, Barton M, Hurtado AM (2009) The emergence of human
+Dunbar R, Sosis R (2018) Optimising human community sizes. Evol                    uniqueness: characters underlying behavioral modernity. Evo-
+      Hum Behav 39(1):106–111. https://​d oi.​o rg/​1 0.​1 016/j.​evolh​           lut Anthropol: Issues News Rev: Issues, News, Rev 18(5):187–
+      umbeh​av.​2017.​11.​001                                                      200. https://​doi.​org/​10.​1002/​evan.​20224
+Dunbar R, Baron R, Frangou A, Pearce E, Van Leeuwen EJ, Stow J               Hobbes T, Oakeshott M (1946) Leviathan: or, the matter, forme and
+      et al (2012) Social laughter is correlated with an elevated pain             power of a commonwealth, ecclesiasticall and civil; edit. with
+      threshold. Proc Royal Soc b: Biol Sci 279(1731):1161–1167.                   a introd. by Michael Oakeshott. Blackwell, Oxford
+      https://​doi.​org/​10.​1098/​rspb.​2011.​1373                          Kinderman P, Dunbar R, Bentall RP (1998) Theory-of-mind deficits
+Durkheim E (1915) The elementary forms of the religious life (trans:               and causal attributions. Br J Psychol 89(2):191–204. https://​
+      Swain JW). George Allen & Unwin, London                                      doi.​org/​10.​1111/j.​2044-​8295.​1998.​tb026​80.x
+Eisenberger NI, Lieberman MD, Williams KD (2003) Does rejec-                 Klages SV, Wirth JH (2014) Excluded by laughter: laughing until it
+      tion hurt? An fMRI study of social exclusion. Science                        hurts someone else. J Soc Psychol 154(1):8–13
+      302(5643):290–292. https://​doi.​org/​10.​1126/​scien​ce.​10891​34     Knauft BM, Abler TS, Betzig L, Boehm C, Dentan RK, Kiefer TM
+English Standard Version Bible (2001) https://​www.​bible​gatew​ay.​               et al (1991) Violence and sociality in human evolution [and
+      com/​versi​ons/​New-​Engli​sh-​Trans​lation-​NET-​Bible/                     comments and replies]. Current Anthropol 32:391–428. http://​
+Evans-Pritchard EE (1962) Social anthropology and other essays:                    ringm​ar.​net/​mycou​rses/​wp-​conte​nt/​uploa​ds/​2017/​10/​Knauft-​
+      combining social anthropology and essays in social anthropol-                et-​al-1.​pdf
+      ogy. Free Press, New York                                              Kruger AC (2011) Imitation, communion, and culture. In: Garrels
+                                                                                   S (ed) Mimesis and science: empirical research on imitation
+
+
+
+13
+The Scapegoat Mechanism in Human Evolution: An Analysis of René Girard’s Hypothesis on the Process…                                                                       255
+
+      and the mimetic theory of culture and religion. Michigan State                Price J (1969) The ritualization of agonistic behaviour as a determinant
+      University Press, East Lansing, pp 111–127                                           of variation along the neuroticism/stability dimension of person-
+Landy J (2012) Deceit, desire, and the literature professor: why                           ality. Proc R Soc Med 62(11 Pt 1):1107
+      Girardians exist. Republ Lett 3(1):1–21                                       Price J, Sloman L, Gardner R, Gilbert P, Rohde P (1994) The
+Lang M, Purzycki BG, Apicella CL, Atkinson QD, Bolyanatz                                   social competition hypothesis of depression. Br J Psychiatry
+      A, Cohen E et al (2019) Moralizing gods, impartiality and                            164(3):309–315. https://​doi.​org/​10.​1192/​bjp.​164.3.​309
+      religious parochialism across 15 societies. Proc R Soc B                      Price ME, Cosmides L, Tooby J (2002) Punitive sentiment as an anti-
+      286(1898):20190202. https://​doi.​org/​10.​1098/​rspb.​2019.​0202                    free rider psychological device. Evol Hum Behav 23(3):203–231.
+Levin SR, Grafen A (2019) Inclusive fitness is an indispensable                            https://​doi.​org/​10.​1016/​S1090-​5138(01)​00093-9
+      approximation for understanding organismal design. Evolution                  Rappaport RA (1999) Ritual and religion in the making of humanity.
+      73(6):1066–1076. https://​doi.​org/​10.​1111/​evo.​13739                             Cambridge University Press, Cambridge
+Lewis HM, Laland KN (2012) Transmission fidelity is the key to                      Ridgeway C, Diekema D (1989) Dominance and collective hierarchy
+      the build-up of cumulative culture. Philosophic Trans Royal                          formation in male and female task groups. Am Sociol Rev https://​
+      Soc B: Biol Sci 367(1599):2171–2180. https://​doi.​org/​10.​1098/​                   doi.​org/​10.​2307/​20956​63
+      rstb.​2012.​0119                                                              Riordan DV (2017) Mimetic theory and the evolutionary paradox
+MacDonald G, Leary MR (2005) Why does social exclusion hurt?                               of schizophrenia: the archetypal scapegoat hypothesis. Med
+      The relationship between social and physical pain. Psychologi-                       Hypotheses 108:101–107. https://​doi.​org/​10.​1016/j.​mehy.​2017.​
+      cal Bull 131(2): 202                                                                 08.​010
+Martin A, Santos LR (2016) What cognitive representations sup-                      Riordan DV (2019) Scapegoating mentally ill people. Br J Psychiatry
+      port primate theory of mind? Trends Cogn Sci 20(5):375–382.                          215(2):504–505. https://​doi.​org/​10.​1192/​bjp.​2019.​148
+      https://​doi.​org/​10.​1016/j.​tics.​2016.​03.​005                            Riordan DV (2020) The stones the builders rejected: the scapegoat
+Maynard Smith J (1974) The theory of games and the evolution of                            mechanism and evolutionary psychiatry. J Viol Mimesis Culture
+      animal conflicts. J Theor Biol 47(1):209–221. https://​doi.​org/​                    27: 59–80. https://​doi.​org/​10.​14321/​conta​gion.​27.​2020.​0059
+      10.​1016/​0022-​5193(74)​90110-6                                              Rosaldo R (1980) Ilongot headhunting, 1883–1974: A study in society
+Maynard Smith J, Price GR (1973) The logic of animal conflict.                             and history. Stanford University Press, Stanford
+      Nature 246(5427):15–18. https://​doi.​org/​10.​1038/​24601​5a0                Serres M (2009) Receiving René Girard into the Académie Française.
+Merrill TC (2017) Critiques of Girard’s mimetic theory. In: Alison J,                      In: Goodhart S, Jorgensen J, Ryba T, Williams J (eds) For René
+      Palaver W, Merrill TC, Hidden ST (eds) The Palgrave handbook                         Girard: essays in friendship and in truth. Michigan State Univer-
+      of mimetic theory and religion. Palgrave Macmillan, New York,                        sity Press, East Lansing, pp 1–18
+      pp 455–461                                                                    Smith BK (2000) Capital punishment and human sacrifice. J Am Acad
+Mitani JC, Watts DP, Muller MN (2002) Recent developments in the                           Relig 68(1): 3–25. https://​www.​jstor.​org/​stable/​14657​08
+      study of wild chimpanzee behavior. Evolut Anthropol: Issues,                  Sosis R (2009) The adaptationist-byproduct debate on the evolution of
+      News, and Rev: Issues, News, Rev 11(1):9–25. https://​doi.​org/​                     religion: five misunderstandings of the adaptationist program. J
+      10.​1002/​evan.​10008                                                                Cogn Cult 9(3–4):315–332. https://d​ oi.o​ rg/1​ 0.1​ 163/1​ 56770​ 909X​
+Moll H, Tomasello M (2007) Cooperation and human cognition: the                            12518​53641​4411
+      Vygotskian intelligence hypothesis. Philosophic Transact Royal                Stager LE, Wolff SR (1984) Child sacrifice at Carthage–religious rite
+      Soc b: Biol Sci 362(1480):639–648. https://d​ oi.o​ rg/1​ 0.1​ 098/r​ stb.​          or population control. Biblic Archaeol Rev 10(1):30–51
+      2006.​2000                                                                    Stevens A, Price J (2015) Evolutionary psychiatry: A new beginning.
+Morgan C, Knowles G, Hutchinson G (2019) Migration, ethnicity and                          Routledge, Abingdon/New York
+      psychoses: evidence, models and future directions. World Psy-                 Stiller J, Dunbar RI (2007) Perspective-taking and memory capacity
+      chiatry 18(3):247–258. https://​doi.​org/​10.​1002/​wps.​20655                       predict social network size. Soc Netw 29(1):93–104. https://​doi.​
+Norenzayan A, Shariff AF, Gervais WM, Willard AK, McNamara RA,                             org/​10.​1016/j.​socnet.​2006.​04.​001
+      Slingerland E, Henrich J (2016) The cultural evolution of proso-              Sweeting H, Young R, West P, Der G (2006) Peer victimization and
+      cial religions. Behav Brain Sci. https://​doi.​org/​10.​1017/​S0140​                 depression in early–mid adolescence: a longitudinal study. Br
+      525X1​40013​56                                                                       J Educ Psychol 76(3):577–594. https://​doi.​org/​10.​1348/​00070​
+Ostreiher R (2003) Is mobbing altruistic or selfish behaviour? Anim                        9905X​49890
+      Behav 66(1):145–149. https://​doi.​org/​10.​1006/​anbe.​2003.​2165            Tennie C, Call J, Tomasello M (2009) Ratcheting up the ratchet: on
+Ostrom E (1990) Governing the commons: the evolution of institutions                       the evolution of cumulative culture. Philosophic Trans Royal Soc
+      for collective action. Cambridge University Press, Cambridge                         b: Biol Sci 364(1528):2405–2415. https://​doi.​org/​10.​1098/​rstb.​
+Otterbein KF (1986) The ultimate coercive sanction: A cross-cultural                       2009.​0052
+      study of capital punishment. Hraf Press, New Haven                            Tomasello M (2014) A natural history of human thinking. Harvard
+Oughourlian JM (2016) The mimetic brain. Michigan State University                         University Press, Cambridge
+      Press, East Lansing                                                           Tomasello M (2016) A natural history of human morality. Harvard
+Parker GA (1974) Assessment strategy and the evolution of fighting                         University Press, Cambridge
+      behaviour. J Theor Biol 47(1):223–243. https://​doi.​org/​10.​1016/​          Tomasello M, Carpenter M (2007) Shared intentionality. Dev Sci
+      0022-​5193(74)​90111-8                                                               10(1):121–125. https:// ​ d oi. ​ o rg/ ​ 1 0. ​ 1 111/j. ​ 1 467- ​ 7 687. ​ 2 007.​
+Polimeni J, Reiss JP (2002) How shamanism and group selection may                          00573.x
+      reveal the origins of schizophrenia. Med Hypotheses 58(3):244–                Tomasello M, Melis AP, Tennie C, Wyman E, Herrmann E (2012) Two
+      248. https://​doi.​org/​10.​1054/​mehy.​2001.​1504                                   key steps in the evolution of human cooperation: the interdepend-
+Premack D, Woodruff G (1978) Does the chimpanzee have a theory of                          ence hypothesis. Curr Anthropol 53(6):673–692. https://​doi.​org/​
+      mind? Behav Brain Sci 1(4):515–526. https://​doi.​org/​10.​1017/​                    10.​1086/​668207
+      S0140​525X0​00765​12                                                          Traube E (1979) Incest and mythology: anthropological and Girardian
+Price J (1967) The dominance hierarchy and the evolution of men-                           perspectives. Berkshire Rev 14:37–54
+      tal illness. Lancet 290(7509):243–246. https://​doi.​org/​10.​1016/​          Trotta A, Di Forti M, Mondelli V, Dazzan P, Pariante C, David A et al
+      S0140-​6736(67)​92306-9                                                              (2013) Prevalence of bullying victimisation amongst first-episode
+
+
+
+                                                                                                                                                               13
+256                                                                                                                                            D. V. Riordan
+
+      psychosis patients and unaffected controls. Schizophr Res                    sequences in Inca child sacrifice. Proc Natl Acad Sci USA
+      150(1):169–175. https://​doi.​org/​10.​1016/j.​schres.​2013.​07.​001         104(42):16456–16461. https://d​ oi.o​ rg/1​ 0.1​ 073/p​ nas.0​ 70427​ 6104
+Vattimo R (2012) Heidegger and Girard: kénosis and the end of meta-          Winkelman M (2014) Political and demographic-ecological deter-
+      physics. In: Antonello P (ed) Christianity, truth, and weaken-               minants of institutionalised human sacrifice. Anthropol Forum
+      ing faith: a dialogue. Columbia University Press, New York, pp               24(1):47–70
+      78–87                                                                  Wrangham RW (2018) Two types of aggression in human evolution.
+Watts, DP (2010) Dominance, power, and politics in nonhuman and                    Proc Natl Acad Sci USA 115(2):245–253. https://​doi.​org/​10.​
+      human primates. In: Kappeler P, Silk J (eds) Mind the gap.                   1073/​pnas.​17136​11115
+      Springer, Berlin/Heidelberg, pp 109–138. https://​doi.​org/​10.​       Wrangham R (2019) The goodness paradox: how evolution made us
+      1007/​978-3-​642-​02725-3_5                                                  both more and less violent. Profile Books, London
+Watts J, Sheehan O, Atkinson QD, Bulbulia J, Gray RD (2016) Ritual           Wrangham RW (2019) Hypotheses for the evolution of reduced reac-
+      human sacrifice promoted and sustained the evolution of strati-              tive aggression in the context of human self-domestication. Front
+      fied societies. Nature 532(7598):228–231. https://​doi.​org/​10.​            Psychol 10:1914. https://​doi.​org/​10.​3389/​fpsyg.​2019.​01914
+      1038/​natur​e17159                                                     Wrangham RW, Wilson ML, Muller MN (2006) Comparative rates
+Whiten A, Erdal D (2012) The human socio-cognitive niche and its                   of violence in chimpanzees and humans. Primates J Primatols
+      evolutionary origins. Philosophic Trans Royal Soc b: Biol Sci                47(1):14–26. https://​doi.​org/​10.​1007/​s10329-​005-​0140-1
+      367(1599):2119–2129. https://​doi.​org/​10.​1098/​rstb.​2012.​0114     Zentall TR (2001) Imitation in animals: evidence, function, and mecha-
+Whiten A, McGuigan N, Marshall-Pescini S, Hopper LM (2009)                         nisms. Cybern Syst 32(1–2):53–96. https://​doi.​org/​10.​1080/​
+      Emulation, imitation, over-imitation and the scope of culture for            01969​72013​00001​812
+      child and chimpanzee. Philosophic Trans Royal Soc b: Biol Sci
+      364(1528):2417–2428. https://​doi.​org/​10.​1098/​rstb.​2009.​0069     Publisher’s Note Springer Nature remains neutral with regard to
+Wilson AS, Taylor T, Ceruti MC, Chavez JA, Reinhard J, Grimes                jurisdictional claims in published maps and institutional affiliations.
+      V et al (2007) Stable isotope and DNA evidence for ritual
+
+
+
+
+13
+

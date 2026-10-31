@@ -1,0 +1,155 @@
+\part{The Geometric Substrate}
+\label{part:geometry}
+
+\chapter{Manifold-Aligned Generative Inference}
+\label{ch:magi}
+
+\section{The Original Argument}
+
+The geometric account begins from the assumption that meaningful data occupy a lower-dimensional manifold $M\subset\R^n$ \cite{flyxion2025}. This is the manifold hypothesis in its usual form, for which there are both empirical motivation and a body of work on when it can be tested from samples \cite{fefferman2016}. At a regular point $x\in M$ the ambient space decomposes orthogonally into tangent and normal components,
+\[
+\R^n=\Tan_xM\oplus \Nor_xM,
+\]
+and any update direction $v(x)$ decomposes accordingly,
+\[
+v(x)=\Proj_{\Tan_xM}v(x)+\Proj_{\Nor_xM}v(x).
+\]
+The No-Noise Prediction Criterion of the original manuscript requires that a generative update carry no normal component,
+\begin{equation}\label{eq:nonoise}
+\Proj_{\Nor_xM}v(x)=0.
+\end{equation}
+The intended reading is that a generative system should move along directions supported by the structure of meaningful data and should not be trained to reproduce variation orthogonal to that structure.
+
+A second element of the original treatment concerns generators. Let $G:\mathcal Z\to M$ be an immersion from a latent space. It induces the pullback metric
+\[
+g_{ij}(z)=\Big\langle \frac{\partial G}{\partial z^i},\frac{\partial G}{\partial z^j}\Big\rangle,
+\]
+and inference can be formulated as a flow in latent coordinates, $\dot z=-\nabla_g S(z)$, where $S$ is a semantic or variational potential and $\nabla_g$ is the gradient with respect to $g$. A point worth stating explicitly is that any velocity of the form $\dot x=dG_z(\dot z)$ is tangent to the image of $G$ by construction. Within a generator-parametrized dynamics the criterion \eqref{eq:nonoise} is therefore satisfied automatically with respect to the image of $G$, and the substantive question is whether that image approximates the manifold of meaningful data.
+
+\section{What the Criterion Does and Does Not Say}
+
+The criterion needs three qualifications that the original formulation treated as background, and which the present monograph retains as part of the theory. The first is that the claim that noise lies in normal directions is an idealization of a particular data-and-noise model and not a property of noise in general. Isotropic Gaussian noise added in $\R^n$ to a point of a $d$-dimensional manifold has, in expectation, a fraction $(n-d)/n$ of its squared norm in the normal space, and a fraction $d/n$ in the tangent space. Tangential noise therefore always exists, and it is negligible only when $d\ll n$. The second is that a learned manifold may be incorrectly specified, in which case the tangent space of the estimate is not the tangent space of the data. The third is that accurate prediction of clean data does not by itself prove tangent alignment of the underlying update, because an update can have a normal component that happens to cancel in the quantity being scored.
+
+A useful connection to denoising makes the first qualification quantitative. If $x=x_0+\sigma\varepsilon$ with Gaussian $\varepsilon$, the posterior mean of the clean point satisfies Tweedie's identity,
+\[
+\E[x_0\mid x]=x+\sigma^2\nabla_x\log p_\sigma(x),
+\]
+where $p_\sigma$ is the density of the noised variable; the identity underlies the connection between score matching and denoising \cite{vincent2011}. When the clean data concentrate near a manifold, the score $\nabla_x\log p_\sigma(x)$ points predominantly toward the manifold for small $\sigma$, that is, it has a dominant normal component, and the posterior mean is accordingly a tangentially close point. This is consistent with the intuition behind \eqref{eq:nonoise} but is a statement about a particular statistical model and not about every generative architecture.
+
+\section{From Generation to Computation}
+
+The step that motivates this monograph is the reading of the picture as a theory of computation and not only of sampling. The geometric account represents computation as constrained movement through a structured state space and does not require that the movement correspond to an intelligible sequence of explanations. A system that moves coherently through such a space can reach a state from which a correct output is likely without emitting, along the way, text that describes what moved it there. This is a hypothesis about autoregressive models and not a consequence of the manifold hypothesis, and it requires the representational work of Chapter~\ref{ch:hidden-states} before it can be tested.
+
+\section{The Tangent-Normal Decomposition in Coordinates}
+
+The decomposition used in the criterion \eqref{eq:nonoise} has explicit forms that make clear what computing it requires. If the manifold is given by a parametrization $\phi:U\subset\R^d\to\R^n$ with Jacobian $J=D\phi(u)$ of full column rank at a point, the tangent space is the column space of $J$ and the orthogonal projector onto it is
+\[
+P_{\Tan}=J(J^{\top}J)^{-1}J^{\top},\qquad P_{\Nor}=I-P_{\Tan}.
+\]
+If instead the manifold is given as a regular level set $\{F=0\}$ of a smooth map $F:\R^n\to\R^{n-d}$ with Jacobian $DF$ of full row rank, the normal space is the row space of $DF$ and
+\[
+P_{\Nor}=DF^{\top}(DF\,DF^{\top})^{-1}DF,\qquad P_{\Tan}=I-P_{\Nor}.
+\]
+These are the standard formulas for embedded submanifolds \cite{lee2013}. They show that the condition $P_{\Nor}v=0$ is a system of $n-d$ linear conditions on the update, one for each independent normal direction, and that its force depends on how many directions are constrained. When $d$ is close to $n$ the condition is weak, and when $d\ll n$ it is strong. This observation matters later, because the dimension chosen for a local estimate of the manifold of hidden states directly controls how demanding the coherence criterion is.
+
+\section{Noise Models and the Conditions Under Which Normal Variation Dominates}
+
+The statement that noise lies in normal directions can be made precise under an explicit model. Let $\varepsilon\sim\mathcal N(0,\sigma^2I_n)$ and let $P_{\Nor}$ be a projector onto an $(n-d)$-dimensional normal space. Then $P_{\Nor}\varepsilon$ is Gaussian in that subspace and
+\[
+\E\norm{P_{\Nor}\varepsilon}^2=\sigma^2(n-d),\qquad \E\norm{P_{\Tan}\varepsilon}^2=\sigma^2d.
+\]
+The normal component dominates in expectation by the factor $(n-d)/d$, and for image-like data, where $d$ is plausibly much smaller than $n$, that factor is large. The tangential component is nevertheless nonzero, and it has a consequence that deserves emphasis: a model trained to remove the normal component of noise cannot in principle remove the tangential component, because the tangential component of the noisy point is itself a point of the manifold, indistinguishable from clean data without further information. What a denoiser can recover is the projection of the noisy point onto the manifold, and what it cannot recover is the tangential displacement of the clean point from its noisy position. The criterion should therefore be read as saying that the learnable part of the correction lies in the tangent directions of the clean-data prediction, and not as saying that all noise is orthogonal.
+
+\section{Prediction Targets and What They Imply}
+
+A diffusion-style model can be trained to predict the added noise, the clean data, or a mixture of the two, and the targets are related by an invertible linear map at each noise level. If $x=\alpha x_0+\sigma\varepsilon$, then $x_0=(x-\sigma\varepsilon)/\alpha$, so a model that predicts $\varepsilon$ implicitly specifies $x_0$ and conversely. The equivalence is exact in the population limit and fails in practice because the errors of a finite model are distributed differently under the different parametrizations. When the target is the noise, the model's error is an error in an $n$-dimensional isotropic quantity, most of whose variance lies in the normal space, and any error in the normal component is mapped by the inverse relation into an error in the clean prediction scaled by $\sigma/\alpha$. When the target is the clean data, the error is measured where the data lie. The original argument for predicting clean data is thus an argument about where the errors of an imperfect model are placed, and it is a claim of practical advantage and not of mathematical necessity. That reading is the one adopted here, and it is consistent with the qualifications of the preceding section.
+
+\chapter{Potentials, Stratification, and Descent}
+\label{ch:dynamics}
+
+\section{Gradient Flow and Descent}
+
+Let $(M,g)$ be a Riemannian manifold and $S:M\to\R$ a smooth potential. The negative gradient flow $\dot x=-\nabla_gS(x)$ satisfies
+\[
+\frac{dS}{dt}=\inner{\nabla_gS}{\dot x}_g=-\norm{\nabla_gS}_g^2\le0.
+\]
+The potential is therefore non-increasing along the flow and constant exactly at critical points. The inequality is the content of what is meant here by potential descent, which is weaker than Lyapunov stability of equilibria or convergence of trajectories, since those require additional assumptions. It is a statement about descent in the chosen potential, and it carries no information about whether the potential represents the task. A trajectory can converge to a stable critical point that corresponds to an incorrect answer, a spurious regularity learned from the training distribution, or an action that no policy permits.
+
+\section{Morse Structure}
+
+When $S$ is a Morse function, its critical points are non-degenerate, and the topology of sublevel sets changes only at critical values, in the manner described by Morse theory \cite{milnor1963}. The earlier work uses this structure to describe cognitive updates as descents between basins associated with critical points of different index, with the loops of the CLIO formulation corresponding to cycles of descent and perturbation. CLIO denotes the cognitive-loop formulation of the earlier manifold-aligned inference manuscripts \cite{flyxion2025b}, and only its reading as alternating descent and perturbation is used here. The monograph uses this machinery only in the following restricted sense. A trajectory can be described by the sequence of basins it traverses, and two trajectories can be compared by whether they enter the same final basin. Which basins correspond to correct outputs is determined by the task, not by the geometry.
+
+\section{Stratified State Spaces}
+
+A single smooth manifold is a poor model for representations that mix discrete and continuous structure. Stratified spaces, in which the state space is a union of manifolds of different dimension glued along lower-dimensional boundaries, accommodate such mixtures. On a stratified space the notion of tangent direction becomes dependent on the stratum, and updates that cross a stratum boundary change the dimension of the space of admissible directions. This matters for the argument because the boundaries of strata are natural candidates for the places where the behavior of a system changes qualitatively, and because the corresponding boundaries of a feasible region in the admissibility theory of Part~\ref{part:admissibility} have the same formal character.
+
+\section{Three Conditions Kept Apart}
+
+Three conditions emerge and are kept apart throughout. Geometric coherence is the condition $\dot x\in\Tan_xM$. Potential descent is the condition $dS/dt\le0$. Execution admissibility is the condition $\Adm_\Pi(x,a)=1$. The first two are properties of a dynamical system relative to a manifold and a potential. The third is a property of an action relative to a policy. A system can satisfy the first two and fail the third, because tangency and descent say nothing about which regions of the manifold the policy excludes.
+
+\section{Gradient Flow in Latent Coordinates}
+
+When the dynamics are expressed in latent coordinates of a generator $G$, the flow takes a concrete form. Let $S:\mathcal Z\to\R$ be a potential on latent space and let $g(z)=DG(z)^{\top}DG(z)$ be the pullback metric, assumed positive definite where $G$ is an immersion. The Riemannian gradient is $\nabla_gS=g^{-1}\nabla_zS$ with $\nabla_zS$ the Euclidean gradient, and the flow is
+\[
+\dot z=-g(z)^{-1}\nabla_zS(z).
+\]
+The image $x(t)=G(z(t))$ has velocity $\dot x=DG(z)\dot z$, which lies in the column space of $DG(z)$, namely the tangent space of the image of $G$. Tangency is therefore a structural consequence of the parametrization, as noted earlier. The descent property follows from
+\[
+\frac{dS}{dt}=\nabla_zS^{\top}\dot z=-\nabla_zS^{\top}g^{-1}\nabla_zS\le0,
+\]
+with equality only where $\nabla_zS=0$ because $g^{-1}$ is positive definite. The flow is invariant under reparametrization of the latent space, in the sense that if $z=\psi(w)$ for a diffeomorphism $\psi$, the pushed-forward flow coincides with the gradient flow of $S\circ\psi$ under the metric pulled back through $\psi$. This invariance is the reason for using the Riemannian gradient and not the Euclidean one, which depends on the arbitrary choice of coordinates.
+
+\section{Gradient Flows Do Not Cycle}
+
+A consequence of the descent property bears on how the cognitive loops of the earlier formulation can be understood. Suppose a trajectory of a gradient flow is periodic with period $T>0$, that is $z(T)=z(0)$. Then $S(z(T))=S(z(0))$. But $S$ is non-increasing along the flow and strictly decreasing at any time at which the gradient is non-zero. If the gradient is non-zero at some time on the orbit, the strict decrease over an interval gives $S(z(T))<S(z(0))$, a contradiction. The gradient must therefore vanish along the whole orbit, which makes the orbit a single critical point. A pure gradient flow has no non-trivial periodic orbits.
+
+Loops that represent repeated cycles of an inferential process therefore require something beyond a gradient flow with a fixed potential. The candidates are a time-dependent potential, as when attention shifts between objectives, stochastic perturbation that kicks the state out of one basin and allows the flow to descend into another, discrete resets that restore a state from memory, or non-gradient terms in the vector field such as rotational components. This is worth stating because it constrains the reading of the earlier cognitive loops: they are not trajectories of a descent on a single fixed potential, and a theory in which they are must specify the additional mechanism that closes the loop.
+
+\section{Discrete Updates and Retractions}
+
+The flows above are continuous, whereas the computation of a transformer proceeds in discrete steps, one per layer or per token. A discrete counterpart takes a step of size $\eta$ in the direction of the negative Riemannian gradient and returns to the manifold by a retraction $R_x$, a smooth map from the tangent space to the manifold that agrees with the identity to first order at the origin \cite{absil2008}. The update is $x_{t+1}=R_{x_t}(-\eta\nabla_gS(x_t))$. For a sufficiently small step size and a retraction of second order, the potential decreases at each step under standard smoothness conditions, with a decrease of the order of $\eta\norm{\nabla_gS}^2$ for small $\eta$. When the step size is large relative to the curvature, descent is not guaranteed and the discrete trajectory can depart from the manifold or oscillate. For the analysis of hidden states this matters because the steps between successive token positions are not small in any obvious sense, and the discrete trajectory should not be assumed to track a continuous flow without a check on the ratio of step length to curvature scale.
+
+\chapter{Hidden States as Approximate Manifolds}
+\label{ch:hidden-states}
+
+\section{The Representation Problem}
+
+Applying the geometric account to a transformer requires choices that the differential geometry does not supply. Hidden states of an autoregressive transformer are vectors in a high-dimensional Euclidean space, produced layer by layer, at each token position. They do not automatically inhabit a smooth semantic manifold. Discrete token transitions do not automatically correspond to tangent flows. Any claim that the model's computation moves along a manifold is therefore a claim about an approximation, and its content depends on the representation chosen, the estimator used to approximate the manifold, and the tolerance with which departures are measured.
+
+\section{Choosing a Representation}
+
+Let $h_t^{(\ell)}\in\R^D$ denote the residual-stream state at position $t$ and layer $\ell$. A representation is a choice of layer or layers, a choice of position, and possibly a linear projection to a lower-dimensional subspace. Different choices can give different conclusions, and results should be reported for a stated family of choices and not for a single selected one. The reference set from which a local manifold is estimated is also a choice. It should be drawn from states reached on a held-out set of correct completions of the same task family, so that the manifold estimates task-relevant states and not all states the model can occupy.
+
+\section{Local Estimators and Off-Manifold Residuals}
+
+Given a reference set $\mathcal R$ of hidden states and a state $h$, define the local tangent estimate by principal component analysis of the $k$ nearest neighbors of $h$ in $\mathcal R$, retaining $d$ components. Let $P_h$ denote the orthogonal projector onto the span of those components, centered at the neighbor mean $\mu_h$. The off-manifold residual is
+\[
+r(h)=\frac{\norm{(I-P_h)(h-\mu_h)}}{\norm{h-\mu_h}}.
+\]
+For a trajectory $h_0,h_1,\dots,h_k$ the corresponding step residual uses the secant $\Delta_t=h_{t+1}-h_t$,
+\[
+\rho_t=\frac{\norm{(I-P_{h_t})\Delta_t}}{\norm{\Delta_t}},
+\]
+and the trajectory residual is the mean of $\rho_t$ over steps. A small trajectory residual means that the sequence of internal updates is nearly tangent to the estimated manifold. The secant is a discrete surrogate for the velocity and the surrogate error depends on the step size relative to the curvature of the manifold, so the residual should be accompanied by a null comparison, namely the same statistic computed for random directions of equal norm and for trajectories on incorrect completions.
+
+\begin{definition}[Estimated geometric coherence]
+Fix a representation, a reference set $\mathcal R$, neighbor count $k$, dimension $d$, and tolerance $\epsilon$. A trajectory is $(\mathcal R,k,d,\epsilon)$-coherent if its trajectory residual is at most $\epsilon$. The predicate $\Geom(x,z)$ is the indicator of coherence for the trajectory induced by $z$ on task $x$.
+\end{definition}
+
+The definition makes explicit that coherence is relative to the estimator. A conclusion that depends on a particular $k$ or $d$ is a conclusion about that estimator. Claims intended to bear on the model rather than on the estimator should hold across a range of reasonable settings, and the experimental protocol of Chapter~\ref{ch:experiments} specifies such a range.
+
+\section{Relating Token Interventions to State Transitions}
+
+The remaining gap is the connection between what is done to tokens and what happens to states. A prefix replacement changes the input to every later computation and so changes the entire downstream trajectory. The monograph treats the relation between the token-level intervention and the induced change in trajectory residual as an empirical quantity to be measured, and it does not assume that a change in the surface form of a trace corresponds to a particular direction in state space. Where a measured relation is found, it supports the geometric account. Where it is not found, the account is not supported for that model and task.
+
+\section{Curvature and the Bias of Secant Estimates}
+
+The trajectory residual uses secants between successive states, and secants are biased estimates of tangent directions when the underlying curve bends. For a smooth curve of curvature $\kappa$ and a chord of length $\ell$, the angle between the chord and the tangent at either endpoint is approximately $\kappa\ell/2$ for small $\ell\kappa$, and it is approximately zero at the midpoint. The normal fraction of the chord relative to the tangent at an endpoint is therefore of order $\kappa\ell/2$, a quantity that grows with step length and curvature even for a trajectory lying exactly on the manifold. A trajectory residual of a given size is thus compatible with perfect alignment if the steps are long relative to the radius of curvature. This is the reason the definition of coherence in Chapter~\ref{ch:hidden-states} requires a comparison with null trajectories, and why the residual should be compared at matched step lengths. A residual measured on a trajectory with long steps cannot be compared with one measured on a trajectory with short steps without correcting for this term.
+
+A related bias affects the local estimate of the tangent space. Principal component analysis on the $k$ nearest neighbors recovers the tangent space well when the neighborhood is small relative to the curvature and large enough to average out noise. Too small a neighborhood gives a noisy estimate, and too large a neighborhood includes points from regions where the manifold has curved away, inflating the apparent variance in normal directions. The choice of $k$ trades variance against bias, and no value is correct in general. The prescription is to report results over a grid of $k$ and to treat conclusions that hold only at an isolated value as unreliable.
+
+\section{Choosing the Dimension and the Layer}
+
+The dimension $d$ of the local estimate can be chosen by the fraction of variance explained, by a gap in the spectrum of the local covariance, or by a fixed value used across all states. Each choice has a defect. A variance threshold gives different dimensions at different points, which complicates comparison. A spectral gap may be absent. A fixed value ignores genuine variation in local dimension. The recommended practice is to compute the residual at several values of $d$ and examine how it varies, because a residual that falls steeply as $d$ rises toward the intrinsic dimension and then flattens indicates a well-defined manifold, and one that falls gradually indicates that the states fill the space and no useful low-dimensional structure has been found.
+
+The layer matters for similar reasons. Early layers hold representations close to the token embeddings, and late layers hold representations close to the output logits, and the geometry in each reflects different computations. The middle layers often carry the most abstract task-relevant information. The monograph does not claim a preferred layer. The test of Hypothesis~\ref{hyp:geom} should be run across layers, and a result should be considered robust only if the improvement in prediction appears over a contiguous range of layers and not at one.

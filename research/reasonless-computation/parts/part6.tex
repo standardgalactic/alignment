@@ -1,0 +1,99 @@
+\part{Optimization, Distillation, and Institutional Design}
+\label{part:institutions}
+
+\chapter{Reward Optimization and Procedural Deterioration}
+\label{ch:reward}
+
+\section{The Reported Pattern}
+
+In the source experiments, post-training with group relative policy optimization \cite{shao2024} was associated, in some conditions, with an increase in answer accuracy and a decrease in measured trace validity \cite{valmeekam2026}. This is the pattern that a reward defined only on outcomes would be expected to permit. The study also applies the same post-training to models trained on mixed proportions of swapped traces and reports that plan accuracy continues to rise while trace validity stays flat or declines, so that the procedure improves the solutions without making the traces more meaningful. The reward does not mention the trace, and nothing in the optimization preserves a property that the reward does not mention.
+
+\section{Outcome Measures and Procedural Invariants}
+
+Optimizing an outcome measure and preserving a procedural invariant are different objectives. An outcome measure $R(x,y)$ is a function of the result. A procedural invariant is a predicate on the process, for instance that the trace remain valid. Maximizing $\E[R]$ leaves the invariant free to vary, and it will vary in whatever way is useful for increasing $R$, whether or not that way is also harmful to the invariant. The statement is conditional: the invariant need not deteriorate, and the source study reports deterioration in particular conditions and not as a general law.
+
+\section{Four Ways of Handling a Constraint}
+
+Four approaches can be compared. Unconstrained reward maximization ignores the invariant. Penalty-based objectives subtract a multiple of a violation measure from the reward. Constrained optimization restricts the search to policies satisfying the invariant in expectation or with a bounded probability. A hard execution boundary prevents violating actions from taking effect regardless of what the policy proposes.
+
+\begin{proposition}[Penalties do not enforce invariants]\label{prop:penalty}
+Let $J_\lambda(\pi)=\E_\pi[R]-\lambda\,\E_\pi[\mathbf 1_{\mathrm{viol}}]$ for a penalty weight $\lambda\ge0$. Suppose that for every policy $\pi_0$ with violation probability zero there is a policy $\pi_1$ with violation probability $p>0$ such that $\E_{\pi_1}[R]-\E_{\pi_0}[R]>\lambda p$. Then no maximizer of $J_\lambda$ has violation probability zero.
+\end{proposition}
+
+\begin{proof}
+Let $\pi_0$ have no violations, so $J_\lambda(\pi_0)=\E_{\pi_0}[R]$. For the corresponding $\pi_1$ of the hypothesis, $J_\lambda(\pi_1)=\E_{\pi_1}[R]-\lambda p>\E_{\pi_0}[R]=J_\lambda(\pi_0)$. Hence $\pi_0$ is not a maximizer, and since $\pi_0$ was an arbitrary zero-violation policy, none is.
+\end{proof}
+
+The proposition shows that for any finite penalty there are tradeoffs that make violation optimal. A hard boundary corresponds to an infinite effective penalty applied at execution, and it removes the tradeoff because the violating action never takes effect. A penalty is also estimated on the training distribution, and its protection under distribution shift is a matter of generalization of a learned behavior and not a guarantee.
+
+\section{Goodhart-Style Effects}
+
+The pattern resembles the effects known under the name of Goodhart's law \cite{goodhart1984,strathern1997}, according to which a measure that becomes a target ceases to be a good measure. The resemblance should be stated with restraint. Optimization of a metric does not necessarily produce procedural deterioration; whether it does depends on whether the optimum of the metric lies in the region where the procedural property fails. The monograph does not claim that optimization of any metric degrades any other property, only that preservation of a property requires a mechanism that refers to the property.
+
+\section{Constrained Optimization and Its Guarantees}
+
+Constrained policy optimization replaces the penalty by an explicit constraint. In the Lagrangian form, one seeks a policy maximizing $\E_\pi[R]$ subject to $\E_\pi[\mathbf 1_{\mathrm{viol}}]\le\delta$ for a tolerance $\delta$, and introduces a multiplier $\lambda\ge0$ adapted during training so that the constraint is met. The multiplier is not a hand-chosen penalty weight but the dual variable of the constraint, and at an optimum of a convex problem it equals the marginal reward cost of tightening the tolerance. This is an improvement over a fixed penalty, because the tradeoff is set by the tolerance, which is a statement about acceptable risk, instead of by an arbitrary weight. It does not deliver a hard guarantee. The constraint is in expectation over the training distribution, a tolerance greater than zero admits violations by definition, and a tolerance of zero is satisfied by the learned policy only to the extent that its estimate of the violation probability is accurate on the deployment distribution. For the class of invariants that must hold in every execution, such as the admissibility of executed actions, a constraint in expectation is the wrong kind of object.
+
+The distinction can be put in terms of what is quantified over. A constraint in expectation quantifies over the distribution of tasks and trajectories, and says that the average violation is small. An invariant quantifies over every execution, and says that no violation occurs. The first can be approached by optimization and verified by sampling, with sampling providing evidence about the average. The second can be achieved by construction at the execution boundary and verified by proof under assumptions. An organization that needs the second and receives the first has a system that is safe on average and unsafe on the cases that matter.
+
+\section{Process Rewards and Their Limits}
+
+A common response to the deterioration of traces under outcome optimization is to add a process reward that scores intermediate steps. This can maintain trace validity as measured, and the monograph does not dispute that it often does. Two limits should be noted. First, a process reward is a learned or specified approximation of validity, and optimization pressure finds the places where the approximation departs from validity, so the trace may come to satisfy the reward model without satisfying the specification. Second, maintaining trace validity does not by itself establish faithfulness, since a model can be trained to produce valid traces that its answers do not depend on. The remedy that addresses faithfulness is architectural, forcing the answer through the trace, and the remedy that addresses admissibility is, again, the execution boundary. Process rewards are therefore a tool for the first property and cannot be a substitute for mechanisms aimed at the others, which is the same lesson as before expressed for training.
+
+\section{Indifference of the Reward}
+
+A further limit of outcome measures is that they may fail to distinguish among policies that differ in properties that matter. The simplest case is exact indifference. Suppose that over $T$ rounds each choice succeeds with probability $p$ independently of which option is chosen and of the history. Then every selection policy, adaptive or not, has expected total reward $Tp$. The argument is short: for the success indicator $X_t$ in round $t$ and the history $\mathcal F_{t-1}$, $\E[X_t\mid\mathcal F_{t-1},a_t]=p$ whatever the policy selects, so $\E[X_t]=p$ by the tower property and the sum has expectation $Tp$ \cite{flyxion2026}. A policy that spreads options evenly and a policy that confines each option to a narrow role are equally optimal, and the reward cannot choose between them.
+
+The relevance to this chapter is that the invariants a system should preserve are often exactly the properties on which the reward is silent or indifferent. If the reward ties, the selection among tied policies is made by whatever regularities the training history makes salient, and the result may be structure that no one chose. The criterion that decides among tied policies must come from outside the reward, as a constraint on an admissible set or as an added objective, and in either case from a source with standing to impose it. Trace validity is a case in point: when answer accuracy is indifferent to the validity of the trace, optimization has no reason to preserve it, and the observed deterioration is one resolution of an indifference the reward leaves open.
+
+\chapter{Distillation Without Semantic Fidelity}
+\label{ch:distillation}
+
+\section{Four Forms of Transfer}
+
+Training a student from a teacher can take several forms. Answer distillation trains the student on the teacher's final outputs, with soft labels in the classical form \cite{hinton2015}. Trace imitation trains the student on the teacher's intermediate sequences. Process supervision trains with feedback on individual steps \cite{lightman2023}. Latent-representation transfer trains the student to match internal states or their geometry. The forms transfer different things, and a student can match the teacher on one while differing on another.
+
+\section{Competence Without Explanation}
+
+If the usefulness of intermediate sequences does not depend on their procedural semantics, a student may inherit useful computational behavior without reproducing the teacher's explanations, or reproduce the explanations without inheriting the behavior. The first possibility arises if the student learns the scaffolding structure and not its surface. The second arises if the student learns to imitate the form of the traces, which is easy, without the computation they accompanied in the teacher, which is not.
+
+\section{Proposed Experiments}
+
+The comparison before and after compression should measure answer accuracy, trace conformity to the specification, generalization across distributions, and sensitivity to interventions on the trace, and in addition, where internal access is available, the geometric coherence of trajectories. The hypothesis developed is that compression may preserve task competence while changing the explanatory and procedural properties of generated traces, so that a student's traces are less reliable guides to its computation than the teacher's were. The hypothesis predicts that trace conformity and intervention sensitivity change under distillation by more than accuracy does, and a result in which all three change together would not support it.
+
+\section{A Measurement Matrix for Compression}
+
+The comparison of teacher and student can be organized as a matrix whose rows are the forms of transfer and whose columns are the properties measured. For each row, the student is trained under that form of transfer, and for each column the property is measured on the student and compared with the teacher. The columns are answer accuracy on the training distribution, answer accuracy on held-out distributions, trace conformity to the specification, sensitivity of the answer to interventions on the trace, and, where internal access allows, the geometric coherence of internal trajectories. The matrix makes the question concrete: which forms of transfer preserve which properties, and which properties are lost together.
+
+Several patterns could be found, and each would have a different interpretation. If answer distillation preserves accuracy and trace imitation preserves conformity but neither preserves intervention sensitivity, the traces of the student are decoration relative to those of the teacher, and compression has turned a functional scaffold into a surface. If latent transfer preserves coherence and accuracy but not conformity, the evidence favors the view that the internal geometry carries the competence. If all columns move together, the properties are more tightly linked than the independence argument suggests, for the models tested, and the linking assumptions of Table~\ref{tab:linking} would be supported empirically in that setting. The monograph expects a mixed pattern and presents the matrix as the way to find out.
+
+\chapter{Verification as an Independent Institution}
+\label{ch:institutions}
+
+\section{The Principle}
+
+A system should not be the sole judge of whether its own actions are permitted when its objective rewards the successful completion of those actions. The principle is not specific to machine learning. It is the rationale for separating the author of code from its reviewer, the performer of an experiment from the party who replicates it, the preparer of accounts from the auditor, and the agency that acts from the oversight body that authorizes. In each case independence reduces the correlation between the errors of the actor and the errors of the checker.
+
+\section{Comparison Across Domains}
+
+In software, independent review catches defects the author is blind to, and its value depends on the reviewer not sharing the author's assumptions. In science, reproducibility depends on an independent party repeating the procedure from the description, and it fails when the description is insufficient. In accounting, external audit depends on access to primary records and not only to the preparer's summary. In administration, oversight depends on the overseer's authority to refuse. The shared structure is access to primary evidence, a different incentive, and authority to stop the process, and the same three conditions apply to the verification of agents.
+
+\section{Independent Evidence and Independent-Looking Reports}
+
+An independent report is one whose errors are not determined by the errors of the thing it checks. An independent-looking report is one produced by a different component from the same underlying source. A second model that reads the first model's explanation and approves it is independent-looking: both reports depend on the explanation, and if the explanation is misleading they fail together. A formal policy checker that evaluates the proposed action against a policy specification and the recorded situation, without reading the explanation, is independent in the relevant sense.
+
+\section{Costs of Verification}
+
+Verification has costs. It adds latency. It produces false refusals when the policy is conservative or the evidence is incomplete. It is only as good as the policy specification, and policies for open-ended environments are incomplete and sometimes contested. It can become a concentrated point of failure, because a single verifier that is wrong, compromised, or unavailable affects every action that passes through it. These costs are real, and they motivate keeping the verifier simple enough to be inspected, diversifying verifiers where failure would be costly, and applying the strongest verification to the actions whose consequences are hardest to reverse.
+
+\section{Correlated Failure of Checkers}
+
+The benefit of adding a second checker depends on the correlation between the failures of the two. Let $F_1$ and $F_2$ be indicators that the generator and the checker, respectively, fail to catch a given problem, with probabilities $p_1$ and $p_2$ and correlation coefficient $\rho$. The probability that both fail is
+\[
+\Pr(F_1\cap F_2)=p_1p_2+\rho\sqrt{p_1(1-p_1)p_2(1-p_2)}.
+\]
+If the failures are independent, $\rho=0$ and the joint failure probability is the product $p_1p_2$, which can be very small. If they are perfectly correlated with equal probabilities, $\rho=1$ and the joint failure probability is $p_1$, so that the checker adds nothing. Intermediate correlations give intermediate benefits, and a modest positive correlation can eliminate most of the benefit when the individual failure probabilities are small: with $p_1=p_2=0.01$ and $\rho=0.5$ the joint probability is about $0.005$, fifty times the independent value. The arithmetic illustrates the claim made earlier that independence in the relevant sense is a quantitative matter, and that a checker built from the same model, trained on similar data, and given the same context as the generator is likely to have a substantial correlation with it.
+
+\section{Sources of Diversity}
+
+Correlation among checkers can be reduced by diversity along several dimensions. The mechanism can differ, so that one check is a formal predicate and another is a statistical classifier. The evidence can differ, so that one check reads the proposal and another reads the system logs. The authority can differ, so that one check is performed by the system's operator and another by an external party. The failure modes can differ in the sense of the kinds of error each is prone to, such as false negatives in one and false positives in another. Diversity is not free, and the combination of checkers has to be defined, for instance as the requirement that all of them permit, which maximizes safety at the cost of refusals, or that a majority permit, which reduces refusals and weakens the guarantee. The monograph's architectural claims use the conservative combination, and the choice of any other is a decision to accept a risk, which should be recorded as such.

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07110d">
+<title>Why the Cure Makes Problems Permanent</title>
+<style>
+:root{color-scheme:dark;--ink:#9aefaf;--dim:#659f78;--line:#294b35;--bg:#07110d}*{box-sizing:border-box}body{margin:0;min-height:100svh;background:var(--bg);color:var(--ink);font:15px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;padding:clamp(18px,5vw,70px);display:grid;place-items:center}main{width:min(100%,960px)}header{border-top:1px solid var(--line);padding-top:18px}.eyebrow,.label{font-size:11px;letter-spacing:.18em;color:var(--dim);text-transform:uppercase}h1{font-size:clamp(24px,4vw,42px);line-height:1.2;letter-spacing:-.04em;font-weight:500;margin:14px 0}p{color:var(--dim);max-width:720px}.scope{position:relative;margin:30px 0 0;border:1px solid var(--line);background:#030b07;overflow:hidden;border-radius:5px;box-shadow:0 0 55px #1a593214 inset}.scope:after{content:"";pointer-events:none;position:absolute;inset:0;background:repeating-linear-gradient(transparent 0 3px,#0003 3px 4px)}canvas{width:100%;height:clamp(170px,30vw,280px);display:block}.scope-label{position:absolute;left:15px;top:10px;font-size:10px;color:var(--dim);letter-spacing:.12em}.scope-status{position:absolute;right:15px;top:10px;font-size:10px;color:var(--dim)}.subtitle-box{min-height:140px;display:grid;place-items:center;text-align:center;padding:25px 20px;border:1px solid var(--line);border-top:0;background:#0a170f;font-size:clamp(17px,2.5vw,22px);line-height:1.55}.controls{border:1px solid var(--line);margin-top:18px;padding:18px}.row{display:flex;align-items:center;gap:13px;flex-wrap:wrap}button,select{font:inherit;background:#10291a;color:var(--ink);border:1px solid #416b4d;border-radius:2px;padding:8px 14px;cursor:pointer}button:hover,select:hover{background:#1a3925}button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:2px solid var(--ink);outline-offset:4px}button[aria-pressed="false"]{color:var(--dim)}input{accent-color:#87eaa1;cursor:pointer}#seek{width:100%;display:block;margin:16px 0}#volume{width:100px}.time{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--dim);font-size:13px}.small{font-size:12px;color:var(--dim)}footer{margin-top:23px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:var(--dim)}a{color:var(--ink);text-underline-offset:4px}#notice{font-size:12px;min-height:20px;margin:10px 0 0;color:#b3cda9}@media(prefers-reduced-motion:reduce){.scope:after{display:none}}@media(max-width:520px){body{padding:18px 12px}.controls{padding:13px}.row{gap:9px}button,select{padding:7px 10px}.time{width:100%;margin:0}.subtitle-box{min-height:160px}}
+</style>
+</head>
+<body>
+<main>
+<header><div class="eyebrow">Flyxion / Research Audio</div><h1>Why the Cure Makes<br>Problems Permanent</h1><p>An audio summary of the <em>Correction–Reproduction</em> essay.</p></header>
+<section class="scope" aria-label="Audio waveform oscilloscope"><span class="scope-label">SIGNAL / TIME DOMAIN</span><span id="signal" class="scope-status">STANDBY</span><canvas id="scope" aria-hidden="true"></canvas></section>
+<div class="subtitle-box"><div id="subtitle" aria-live="off">Press play to begin.</div></div>
+<section class="controls" aria-label="Audio controls">
+<audio id="audio" preload="metadata" src="Why_the_Cure_Makes_Problems_Permanent.mp3"><track id="captions" kind="captions" srclang="en" label="English" src="Why_the_Cure_Makes_Problems_Permanent.vtt" default></audio>
+<div class="row"><button id="play" type="button">Play</button><button id="back" type="button" aria-label="Rewind 10 seconds">−10s</button><button id="forward" type="button" aria-label="Forward 10 seconds">+10s</button><span id="time" class="time">00:00 / --:--</span></div>
+<input id="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="Playback position" disabled>
+<div class="row"><button id="cc" type="button" aria-pressed="true" aria-label="Show subtitles">CC on</button><label class="small">Speed <select id="speed" aria-label="Playback speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label><label class="small">Volume <input id="volume" type="range" min="0" max="1" step="0.01" value="1" aria-label="Volume"></label></div>
+<p id="notice" role="status"></p>
+</section>
+<footer><a href="correction-reproduction.pdf">Read the essay (PDF)</a><a href="Why_the_Cure_Makes_Problems_Permanent.mp3" download>Download audio</a><a href="Why_the_Cure_Makes_Problems_Permanent.vtt" download>VTT subtitles</a></footer>
+</main>
+<script>
+'use strict';
+const $=id=>document.getElementById(id),audio=$('audio'),canvas=$('scope'),ctx=canvas.getContext('2d'),seek=$('seek'),subtitle=$('subtitle'),track=$('captions').track;
+let ac,analyser,source,samples,cc=true,frame=0,width=0,height=0;
+const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+track.mode='hidden';
+function format(t){if(!Number.isFinite(t))return '--:--';const s=Math.floor(t);return(s>=3600?Math.floor(s/3600)+':':'')+String(Math.floor(s/60)%60).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function update(){const duration=audio.duration;seek.disabled=!Number.isFinite(duration)||duration<=0;if(!seek.disabled){seek.max=duration;seek.value=audio.currentTime}seek.setAttribute('aria-valuetext',format(audio.currentTime));$('time').textContent=format(audio.currentTime)+' / '+format(duration)}
+function captions(){if(!cc){subtitle.textContent='Subtitles off.';return}const cues=Array.from(track.activeCues||[]);subtitle.textContent=cues.length?cues.map(c=>c.getCueAsHTML().textContent).join('\n'):(audio.ended?'End of audio.':audio.currentTime===0&&audio.paused?'Press play to begin.':'');subtitle.style.whiteSpace='pre-line'}
+track.addEventListener('cuechange',captions);
+$('captions').addEventListener('error',()=>{$('notice').textContent='Subtitles could not be loaded. Keep the matching .vtt file beside index.html and serve this folder over HTTP.'});
+async function connect(){if(!ac){const AudioContext=window.AudioContext||window.webkitAudioContext;if(!AudioContext)return;ac=new AudioContext();analyser=ac.createAnalyser();analyser.fftSize=2048;source=ac.createMediaElementSource(audio);source.connect(analyser);analyser.connect(ac.destination);samples=new Uint8Array(analyser.fftSize)}if(ac.state==='suspended')await ac.resume()}
+$('play').onclick=async()=>{if(!audio.paused){audio.pause();return}try{try{await connect()}catch(e){$('notice').textContent='The visualizer is unavailable in this browser; audio controls remain available.'}await audio.play()}catch(e){$('notice').textContent='Audio could not start. Check that the matching MP3 is beside index.html.'}};
+$('back').onclick=()=>audio.currentTime=Math.max(0,audio.currentTime-10);
+$('forward').onclick=()=>{if(Number.isFinite(audio.duration))audio.currentTime=Math.min(audio.duration,audio.currentTime+10)};
+seek.oninput=()=>{audio.currentTime=Number(seek.value);update();captions()};
+$('speed').onchange=e=>audio.playbackRate=Number(e.target.value);
+$('volume').oninput=e=>audio.volume=Number(e.target.value);
+$('cc').onclick=()=>{cc=!cc;$('cc').setAttribute('aria-pressed',String(cc));$('cc').textContent=cc?'CC on':'CC off';captions()};
+for(const event of ['timeupdate','loadedmetadata','durationchange','seeked'])audio.addEventListener(event,()=>{update();captions()});
+audio.addEventListener('play',()=>{$('play').textContent='Pause';$('signal').textContent='SIGNAL LIVE';startDrawing()});
+audio.addEventListener('pause',()=>{$('play').textContent='Play';$('signal').textContent=audio.ended?'COMPLETE':'PAUSED';stopDrawing()});
+audio.addEventListener('ended',()=>{$('signal').textContent='COMPLETE';captions();stopDrawing()});
+audio.addEventListener('error',()=>{$('notice').textContent='Audio unavailable. Expected: Why_the_Cure_Makes_Problems_Permanent.mp3 in this directory.'});
+function resize(){const r=canvas.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,2);width=r.width;height=r.height;canvas.width=Math.round(width*dpr);canvas.height=Math.round(height*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);draw()}
+function draw(){ctx.clearRect(0,0,width,height);ctx.fillStyle='#030b07';ctx.fillRect(0,0,width,height);ctx.lineWidth=1;ctx.strokeStyle='#153723';ctx.beginPath();for(let x=0;x<=width;x+=width/16){ctx.moveTo(x,0);ctx.lineTo(x,height)}for(let y=0;y<=height;y+=height/8){ctx.moveTo(0,y);ctx.lineTo(width,y)}ctx.stroke();ctx.strokeStyle='#31583b';ctx.beginPath();ctx.moveTo(0,height/2);ctx.lineTo(width,height/2);ctx.stroke();const live=analyser&&!audio.paused&&!reduced.matches;if(live)analyser.getByteTimeDomainData(samples);ctx.beginPath();const n=live?samples.length:2;for(let i=0;i<n;i++){const x=i/(n-1)*width,y=height/2+(live?(samples[i]-128)/128*height*.42:0);if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)}ctx.strokeStyle='#95ffaf';ctx.lineWidth=1.7;ctx.shadowColor='#71f592';ctx.shadowBlur=9;ctx.stroke();ctx.shadowBlur=0}
+function tick(){draw();frame=requestAnimationFrame(tick)}function startDrawing(){cancelAnimationFrame(frame);if(!document.hidden&&!reduced.matches)tick();else draw()}function stopDrawing(){cancelAnimationFrame(frame);draw()}
+document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(frame);else if(!audio.paused)startDrawing();else draw()});reduced.addEventListener('change',()=>{if(!audio.paused)startDrawing();else draw()});new ResizeObserver(resize).observe(canvas);
+update();
+</script>
+</body>
+</html>
+

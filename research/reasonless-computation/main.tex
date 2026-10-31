@@ -1,0 +1,243 @@
+\documentclass[11pt,twoside,openright]{book}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[a4paper,inner=32mm,outer=26mm,top=30mm,bottom=30mm]{geometry}
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+\setstretch{1.08}
+\setlength{\parindent}{1.4em}
+\setlength{\parskip}{0pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\nouppercase{\leftmark}}
+\fancyhead[RO]{\small\nouppercase{\rightmark}}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+
+% ---------- theorem environments ----------
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{hypothesis}[theorem]{Hypothesis}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% ---------- notation ----------
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\Pr}{\mathbb{P}}
+\newcommand{\doo}{\operatorname{do}}
+\newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\Exec}{\operatorname{Executed}}
+\newcommand{\Perm}{\mathsf{permit}}
+\newcommand{\Deny}{\mathsf{deny}}
+\newcommand{\Unk}{\mathsf{unknown}}
+\newcommand{\Util}{U}
+\newcommand{\Valid}{V}
+\newcommand{\Faith}{F}
+\newcommand{\Geom}{\Gamma}
+\newcommand{\Corr}{C}
+\newcommand{\Adm}{A}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\inner}[2]{\langle #1,#2\rangle}
+\newcommand{\Tan}{T}
+\newcommand{\Nor}{N}
+\newcommand{\sph}{\textsc{SpherePOP}}
+\newcommand{\magi}{\textsc{MAGI}}
+
+\title{%
+  {\Huge\bfseries Reasonless Computation}\\[1.2ex]
+  {\LARGE Manifold-Aligned Generative Inference,\\ Computational Faithfulness,\\ and the Limits of Statistical Authority}}
+\author{\Large Flyxion\\[0.6ex]\normalsize Independent Researcher}
+\date{October 2026}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+
+Generative systems that emit intermediate tokens before a final answer are frequently described as deliberating, planning, or executing algorithms, and the success of their final answers is routinely taken as evidence for those descriptions. Recent experiments on maze-solving transformers trained on valid and deliberately mismatched search traces show that final-answer accuracy can be high while the emitted trace fails the semantics of the algorithm it appears to execute. This monograph takes that dissociation as an empirical starting point and asks two further questions. The first concerns mechanism: if the apparent meaning of intermediate tokens is not what makes them useful, what structure in the underlying computation is being exploited. The second concerns authority: whatever the answer to the first question, what additional warrant is needed before the output of a generative system may be executed as an action.
+
+To address the first question the monograph develops a geometric account of generative computation based on manifold-aligned inference, in which meaningful updates are constrained to the tangent structure of a learned manifold of coherent states, and it separates the textual faithfulness of a trace from the geometric coherence of the internal trajectory the trace induces. To address the second it separates computational utility, procedural validity, causal faithfulness, geometric coherence, outcome correctness, and policy admissibility into independent evaluative domains, proves that none of the first five entails the sixth, and states and proves an execution boundary proposition under explicit assumptions of complete mediation, atomic validation, and verifier soundness. The final part proposes a reproducible experimental program, including a test of whether geometric properties of internal trajectories explain variation in task success beyond that explained by trace validity, and an evaluation of architectures that differ in who holds the authority to execute.
+
+Throughout, the monograph distinguishes what is established empirically by the sources it uses, what follows logically from its definitions, what is conjectured, and what must be guaranteed architecturally. The formal results are consequences of definitions and stated assumptions and are presented as such. The experimental proposals are designs to be carried out, not results already obtained.
+
+\tableofcontents
+
+\mainmatter
+
+\input{parts/part1}
+\input{parts/part2}
+\input{parts/part3}
+\input{parts/part4}
+\input{parts/part5}
+\input{parts/part6}
+\input{parts/part7}
+
+\appendix
+\input{parts/appendices}
+
+\backmatter
+
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\bibitem{absil2008}
+P.-A. Absil, R. Mahony, and R. Sepulchre.
+\newblock \emph{Optimization Algorithms on Matrix Manifolds}.
+\newblock Princeton University Press, 2008.
+
+\bibitem{anderson1972}
+J. P. Anderson.
+\newblock Computer Security Technology Planning Study.
+\newblock Technical Report ESD-TR-73-51, Air Force Electronic Systems Division, 1972.
+
+\bibitem{dennis1966}
+J. B. Dennis and E. C. Van Horn.
+\newblock Programming Semantics for Multiprogrammed Computations.
+\newblock \emph{Communications of the ACM}, 9(3):143--155, 1966.
+
+\bibitem{fefferman2016}
+C. Fefferman, S. Mitter, and H. Narayanan.
+\newblock Testing the Manifold Hypothesis.
+\newblock \emph{Journal of the American Mathematical Society}, 29(4):983--1049, 2016.
+
+\bibitem{flyxion2025}
+Flyxion.
+\newblock Never Predict Noise: Manifold-Aligned Prediction as Generative Inference.
+\newblock Unpublished manuscript, November 2025 (revised May 2026).
+
+\bibitem{flyxion2025b}
+Flyxion.
+\newblock MAGI and the Geometry of Learning.
+\newblock Unpublished manuscript, 2025.
+
+\bibitem{flyxion2026b}
+Flyxion.
+\newblock The Calculus of Disposition: Processes, Types, and Witnessed Computation.
+\newblock Unpublished manuscript, September 2026.
+
+\bibitem{flyxion2026}
+Flyxion.
+\newblock Reasons Are Not Permissions: Admissibility, Statistical Authority, and the Agentic Execution Boundary.
+\newblock Unpublished manuscript, October 2026.
+
+\bibitem{goodhart1984}
+C. A. E. Goodhart.
+\newblock Problems of Monetary Management: The U.K. Experience.
+\newblock In \emph{Monetary Theory and Practice}, pages 91--121. Macmillan, 1984.
+
+\bibitem{greshake2023}
+K. Greshake, S. Abdelnabi, S. Mishra, C. Endres, T. Holz, and M. Fritz.
+\newblock Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection.
+\newblock In \emph{Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security}, 2023.
+
+\bibitem{hinton2015}
+G. Hinton, O. Vinyals, and J. Dean.
+\newblock Distilling the Knowledge in a Neural Network.
+\newblock arXiv:1503.02531, 2015.
+
+\bibitem{lamport1981}
+L. Lamport.
+\newblock Password Authentication with Insecure Communication.
+\newblock \emph{Communications of the ACM}, 24(11):770--772, 1981.
+
+\bibitem{lanham2023}
+T. Lanham et al.
+\newblock Measuring Faithfulness in Chain-of-Thought Reasoning.
+\newblock arXiv:2307.13702, 2023.
+
+\bibitem{lee2013}
+J. M. Lee.
+\newblock \emph{Introduction to Smooth Manifolds}.
+\newblock Springer, second edition, 2013.
+
+\bibitem{lester2021}
+B. Lester, R. Al-Rfou, and N. Constant.
+\newblock The Power of Scale for Parameter-Efficient Prompt Tuning.
+\newblock In \emph{Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing}, 2021.
+
+\bibitem{lightman2023}
+H. Lightman et al.
+\newblock Let's Verify Step by Step.
+\newblock arXiv:2305.20050, 2023.
+
+\bibitem{milnor1963}
+J. Milnor.
+\newblock \emph{Morse Theory}.
+\newblock Princeton University Press, 1963.
+
+\bibitem{nisbett1977}
+R. E. Nisbett and T. D. Wilson.
+\newblock Telling More Than We Can Know: Verbal Reports on Mental Processes.
+\newblock \emph{Psychological Review}, 84(3):231--259, 1977.
+
+\bibitem{nye2021}
+M. Nye et al.
+\newblock Show Your Work: Scratchpads for Intermediate Computation with Language Models.
+\newblock arXiv:2112.00114, 2021.
+
+\bibitem{pearl2009}
+J. Pearl.
+\newblock \emph{Causality: Models, Reasoning, and Inference}.
+\newblock Cambridge University Press, second edition, 2009.
+
+\bibitem{rice1953}
+H. G. Rice.
+\newblock Classes of Recursively Enumerable Sets and Their Decision Problems.
+\newblock \emph{Transactions of the American Mathematical Society}, 74(2):358--366, 1953.
+
+\bibitem{saltzer1975}
+J. H. Saltzer and M. D. Schroeder.
+\newblock The Protection of Information in Computer Systems.
+\newblock \emph{Proceedings of the IEEE}, 63(9):1278--1308, 1975.
+
+\bibitem{shao2024}
+Z. Shao et al.
+\newblock DeepSeekMath: Pushing the Limits of Mathematical Reasoning in Open Language Models.
+\newblock arXiv:2402.03300, 2024.
+
+\bibitem{strathern1997}
+M. Strathern.
+\newblock ``Improving Ratings'': Audit in the British University System.
+\newblock \emph{European Review}, 5(3):305--321, 1997.
+
+\bibitem{turpin2023}
+M. Turpin, J. Michael, E. Perez, and S. Bowman.
+\newblock Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2023.
+
+\bibitem{valmeekam2026}
+K. Valmeekam, V. Palod, K. Stechly, A. Gundawar, and S. Kambhampati.
+\newblock Beyond Semantics: The Unreasonable Effectiveness of Reasonless Intermediate Tokens.
+\newblock \emph{Transactions on Machine Learning Research}, April 2026. OpenReview identifier gDE7YcRC3F.
+
+\bibitem{vincent2011}
+P. Vincent.
+\newblock A Connection Between Score Matching and Denoising Autoencoders.
+\newblock \emph{Neural Computation}, 23(7):1661--1674, 2011.
+
+\bibitem{wei2022}
+J. Wei et al.
+\newblock Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2022.
+
+\end{thebibliography}
+
+\end{document}
