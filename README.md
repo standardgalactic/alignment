@@ -1,5 +1,13 @@
 # Alignment Research
 
+[Displaced Harm](https://standardgalactic.github.io/alignment/displaced-harm.pdf)
+
+Why AI Metrics Hide Human Suffering
+
+* [Audio Overview](https://standardgalactic.github.io/alignment/displaced-harm.html)
+
+* [Infographic](https://standardgalactic.github.io/alignment/displaced-harm-infographic.png)
+
 [The Manufacture of Significance](https://standardgalactic.github.io/alignment/retroscope/manufacture-of-significance.pdf)
 
 * [How AI Agents Sway Human Judgment](https://standardgalactic.github.io/alignment/retroscope/) — *Audio Overview*
