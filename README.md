@@ -1,5 +1,15 @@
 # Alignment Research
 
+[Selection Without Specification](https://standardgalactic.github.io/alignment/research/selection_without_specification.pdf)
+
+* [The Flawed Logic of AI Doomsday](https://standardgalactic.github.io/alignment/research/inference-scope.html?track=doomsday) — *Audio Overview*
+
+[Self-Report and the Underdetermination of Mechanism](https://standardgalactic.github.io/alignment/research/self_report_underdetermination.pdf)
+
+* [AI Introspection Is Just a Reflex](https://standardgalactic.github.io/alignment/research/inference-scope.html?track=introspection) — *Audio Overview*
+
+![](blank-line.png)
+
 [Displaced Harm](https://standardgalactic.github.io/alignment/displaced-harm.pdf)
 
 Why AI Metrics Hide Human Suffering

@@ -1,3 +1,13 @@
+[Selection Without Specification](https://standardgalactic.github.io/alignment/research/selection_without_specification.pdf)
+
+* [The Flawed Logic of AI Doomsday](https://standardgalactic.github.io/alignment/research/inference-scope.html?track=doomsday) — *Audio Overview*
+
+[Self-Report and the Underdetermination of Mechanism](https://standardgalactic.github.io/alignment/research/self_report_underdetermination.pdf)
+
+* [AI Introspection Is Just a Reflex](https://standardgalactic.github.io/alignment/research/inference-scope.html?track=introspection) — *Audio Overview*
+
+![](blank-line.png)
+
 [When Correction Becomes Reproduction](https://standardgalactic.github.io/alignment/research/correction-reproduction.pdf)
 
 * [Why the Cure Makes Problems Permanent](https://standardgalactic.github.io/alignment/research/) — *Audio Overview*
