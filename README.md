@@ -1,5 +1,9 @@
 # Alignment Research
 
+[Institutional Incentives and the Recurrence of Harm](https://standardgalactic.github.io/alignment/institutional-incentives.pdf)
+
+* [Why Systems Keep Manufacturing Bad Actors](https://standardgalactic.github.io/alignment/index.html) <!-- *Audio Overview* -->
+
 [Selection Without Specification](https://standardgalactic.github.io/alignment/research/selection_without_specification.pdf)
 
 * [The Flawed Logic of AI Doomsday](https://standardgalactic.github.io/alignment/research/inference-scope.html?track=doomsday) — *Audio Overview*

@@ -1,536 +1,86 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Alignment</title>
-  <style>
-    :root{
-      --bg:#041006;
-      --bg2:#020a04;
-      --green:#57ff7a;
-      --green2:#1bdc57;
-      --dim:#0b3a18;
-      --glow: rgba(87,255,122,.35);
-      --glow2: rgba(87,255,122,.18);
-    }
-    html,body{height:100%;margin:0;background:radial-gradient(1200px 900px at 50% 35%, #071b0b 0%, var(--bg) 45%, var(--bg2) 100%); overflow:hidden;}
-    body{
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
-      color: var(--green);
-      user-select:none;
-    }
-    #wrap{
-      position:fixed; inset:0;
-      display:flex; flex-direction:column;
-    }
-    header{
-      position:relative;
-      padding:16px 18px 10px 18px;
-      display:flex; align-items:baseline; justify-content:space-between;
-      gap:18px;
-      z-index:3;
-      pointer-events:none;
-    }
-    #title{
-      font-size:22px;
-      letter-spacing:.08em;
-      text-transform:none;
-      text-shadow: 0 0 10px var(--glow), 0 0 22px var(--glow2);
-      opacity:.92;
-    }
-    #hud{
-      font-size:12px;
-      letter-spacing:.08em;
-      opacity:.70;
-      text-shadow: 0 0 10px var(--glow2);
-      white-space:nowrap;
-    }
-
-    canvas{
-      position:absolute; inset:0;
-      width:100%; height:100%;
-    }
-
-    /* CRT overlay */
-    #crt{
-      position:absolute; inset:0;
-      pointer-events:none;
-      z-index:2;
-      background:
-        linear-gradient(to bottom, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.00) 8%, rgba(0,0,0,0.08) 52%, rgba(0,0,0,0.12) 100%),
-        repeating-linear-gradient(to bottom, rgba(0,0,0,0.0) 0px, rgba(0,0,0,0.0) 2px, rgba(0,0,0,0.10) 3px, rgba(0,0,0,0.10) 4px);
-      mix-blend-mode: multiply;
-      opacity:.85;
-      filter: blur(.1px);
-    }
-
-    /* subtle vignette + glass */
-    #glass{
-      position:absolute; inset:-2%;
-      pointer-events:none;
-      z-index:4;
-      background: radial-gradient(1200px 900px at 50% 45%, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.10) 55%, rgba(0,0,0,0.38) 100%);
-    }
-
-    /* slight curvature illusion */
-    #curve{
-      position:absolute; inset:0;
-      pointer-events:none;
-      z-index:5;
-      background:
-        radial-gradient(1200px 900px at 50% 45%, rgba(87,255,122,0.05) 0%, rgba(87,255,122,0.00) 35%, rgba(0,0,0,0.00) 100%);
-      transform: perspective(900px) translateZ(0);
-    }
-
-    /* optional tiny noise */
-    #noise{
-      position:absolute; inset:0;
-      pointer-events:none;
-      z-index:6;
-      opacity:.05;
-      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
-      mix-blend-mode: overlay;
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Institutional Incentives and the Recurrence of Harm</title>
+<style>
+:root{color-scheme:dark;--phosphor:#a5e7a0;--dim:#608461;--bg:#080b08}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;min-height:100dvh;display:grid;place-items:center;background:var(--bg);color:var(--phosphor);font:13px 'Courier New',monospace}main{width:min(92vw,650px);padding:24px 0;text-align:center}h1{font-size:13px;font-weight:normal;letter-spacing:.12em;margin:0 0 22px;text-transform:uppercase;line-height:1.6}.scope{position:relative;width:min(100%,440px,53dvh);aspect-ratio:1;margin:auto;border-radius:50%;overflow:hidden;border:1px solid #354b35;background:#020602;box-shadow:0 0 0 7px #101610,0 0 0 8px #242c24,inset 0 0 40px #000}canvas{position:absolute;inset:0;width:100%;height:100%}.scope:after{content:'';position:absolute;inset:0;pointer-events:none;border-radius:50%;background:radial-gradient(circle,transparent 58%,#0008 100%),repeating-linear-gradient(0deg,transparent 0 3px,#0002 3px 4px)}.controls{display:flex;align-items:center;gap:12px;width:min(100%,440px);margin:23px auto 0}button{font:inherit;color:var(--phosphor);background:transparent;border:1px solid #49634a;padding:7px 10px;cursor:pointer;min-width:62px}button:hover,button:focus-visible{background:#182718}input[type=range]{flex:1;min-width:0;accent-color:var(--phosphor);height:16px;cursor:pointer}input:disabled{opacity:.4;cursor:default}#clock{font-size:11px;color:var(--dim);font-variant-numeric:tabular-nums;white-space:nowrap}#captions{min-height:4.5em;margin:20px auto 8px;max-width:600px;line-height:1.55;font-size:14px;color:#c3e6bf}#status{font-size:10px;letter-spacing:.08em;color:var(--dim);min-height:1.4em}a{display:inline-block;margin-top:12px;color:var(--dim);font-size:12px;line-height:1.5;text-decoration:none}a:hover,a:focus-visible{color:var(--phosphor);text-decoration:underline}
+</style>
 </head>
-<body>
-  <div id="wrap">
-    <header>
-      <div id="title" aria-label="Alignment title"></div>
-      <div id="hud"></div>
-    </header>
+<body><main>
+<h1>Institutional Incentives<br>and the Recurrence of Harm</h1>
+<div class="scope"><canvas id="scope" aria-label="Live audio X–Y oscilloscope"></canvas></div>
+<div class="controls"><button id="play" type="button" disabled>WAIT</button><input id="seek" type="range" min="0" max="1000" step="1" value="0" disabled aria-label="Seek through recording"><span id="clock">0:00 / 0:00</span></div>
+<div id="captions"></div><div id="status" role="status">STANDBY</div>
+<a href="https://standardgalactic.github.io/alignment/institutional-incentives.pdf" target="_blank" rel="noopener noreferrer">Institutional Incentives and the Recurrence of Harm</a>
 
-    <canvas id="c"></canvas>
-    <div id="crt"></div>
-    <div id="glass"></div>
-    <div id="curve"></div>
-    <div id="noise"></div>
-  </div>
-
-<script>
-(() => {
-  // ---------- Utilities ----------
-  const clamp = (x,a,b)=>Math.max(a,Math.min(b,x));
-  const lerp = (a,b,t)=>a+(b-a)*t;
-
-  // Deterministic PRNG from seed (mulberry32)
-  function mulberry32(seed){
-    let a = seed >>> 0;
-    return function(){
-      a |= 0; a = (a + 0x6D2B79F5) | 0;
-      let t = Math.imul(a ^ (a >>> 15), 1 | a);
-      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
-  }
-
-  function seedFromLetter(ch){
-    const code = ch.toUpperCase().charCodeAt(0);
-    // Spread A-Z over a nicer seed range
-    return (code * 2654435761) ^ 0xA5A5A5A5;
-  }
-
-  function pick(arr, r){ return arr[Math.floor(r()*arr.length)]; }
-
-  // ---------- Canvas setup ----------
-  const canvas = document.getElementById('c');
-  const ctx = canvas.getContext('2d', { alpha: true });
-
-  let W=0,H=0,DPR=1;
-  function resize(){
-    DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
-    W = Math.floor(window.innerWidth);
-    H = Math.floor(window.innerHeight);
-    canvas.width = Math.floor(W*DPR);
-    canvas.height = Math.floor(H*DPR);
-    canvas.style.width = W+'px';
-    canvas.style.height = H+'px';
-    ctx.setTransform(DPR,0,0,DPR,0,0);
-    ctx.lineJoin = 'round';
-    ctx.lineCap = 'round';
-  }
-  window.addEventListener('resize', resize);
-  resize();
-
-  // ---------- Title glitch ----------
-  const titleEl = document.getElementById('title');
-  const baseTitle = "Alignment";
-  let glitchIdx = 0;
-  let glitchUntil = 0;
-  let nextGlitchAt = 0;
-
-  function renderTitle(now){
-    if(now > nextGlitchAt){
-      glitchIdx = Math.floor(Math.random() * baseTitle.length);
-      glitchUntil = now + 500; // half a second
-      nextGlitchAt = now + 2500 + Math.random()*2500;
-    }
-    let s = baseTitle.split('');
-    if(now < glitchUntil){
-      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      s[glitchIdx] = letters[Math.floor(Math.random()*letters.length)];
-    }
-    titleEl.textContent = s.join('');
-  }
-
-  // ---------- Screensaver engine ----------
-  const hudEl = document.getElementById('hud');
-
-  // State
-  let currentLetter = 'A';
-  let mode = null;
-  let rng = mulberry32(seedFromLetter(currentLetter));
-  let t0 = performance.now();
-  let last = t0;
-
-  // Modes: parametric vector sketches
-  // Each mode draws "vector-green morphing shape screensavers" with persistence.
-  const MODES = {
-    LISS: {
-      name: "Lissajous Field",
-      init: (r) => ({
-        ax: 2 + Math.floor(r()*7),
-        ay: 2 + Math.floor(r()*7),
-        ph: r()*Math.PI*2,
-        twist: 0.3 + r()*1.6,
-        n: 1100,
-        thickness: 1.0 + r()*1.2,
-      }),
-      draw: (st, now) => {
-        const t = (now - t0) * 0.001;
-        const cx = W*0.5, cy = H*0.55;
-        const R = Math.min(W,H) * (0.32 + 0.08*Math.sin(t*0.5));
-        ctx.save();
-        ctx.translate(cx, cy);
-        ctx.beginPath();
-        for(let i=0;i<st.n;i++){
-          const u = i/(st.n-1);
-          const a = u*Math.PI*2*(1.5 + st.twist*Math.sin(t*0.15));
-          const x = Math.sin(st.ax*a + st.ph + 0.25*Math.sin(t*0.9))*R*(0.85+0.15*Math.sin(t*0.4+u*6));
-          const y = Math.sin(st.ay*a + 0.5*st.ph + 0.22*Math.cos(t*0.7))*R*(0.85+0.15*Math.cos(t*0.35+u*5));
-          if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-        }
-        ctx.strokeStyle = "rgba(87,255,122,0.90)";
-        ctx.lineWidth = st.thickness;
-        ctx.shadowColor = "rgba(87,255,122,0.38)";
-        ctx.shadowBlur = 10;
-        ctx.stroke();
-        ctx.restore();
-      }
-    },
-
-    SPIRO: {
-      name: "Spirograph Drift",
-      init: (r)=>({
-        R: 120 + r()*180,
-        r0: 30 + r()*120,
-        d: 40 + r()*160,
-        loops: 8 + Math.floor(r()*16),
-        n: 1800,
-        thickness: 0.9 + r()*1.1,
-      }),
-      draw: (st, now)=>{
-        const t = (now - t0) * 0.001;
-        const cx=W*0.5, cy=H*0.55;
-        const big = Math.min(W,H) * 0.34;
-        const R = big*(0.55 + 0.15*Math.sin(t*0.27));
-        const r0 = big*(0.12 + 0.10*Math.cos(t*0.19));
-        const d = big*(0.18 + 0.14*Math.sin(t*0.31));
-        const k = R/r0;
-        ctx.save();
-        ctx.translate(cx,cy);
-        ctx.beginPath();
-        for(let i=0;i<st.n;i++){
-          const u=i/(st.n-1);
-          const a = u*Math.PI*2*st.loops;
-          const x = (R-r0)*Math.cos(a) + d*Math.cos((R-r0)/r0*a + 0.6*Math.sin(t*0.4));
-          const y = (R-r0)*Math.sin(a) - d*Math.sin((R-r0)/r0*a + 0.6*Math.sin(t*0.4));
-          if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-        }
-        ctx.strokeStyle="rgba(87,255,122,0.88)";
-        ctx.lineWidth=st.thickness;
-        ctx.shadowColor="rgba(87,255,122,0.35)";
-        ctx.shadowBlur=12;
-        ctx.stroke();
-        ctx.restore();
-      }
-    },
-
-    FLOW: {
-      name: "Vector Flowlines",
-      init: (r)=>({
-        seeds: 120 + Math.floor(r()*180),
-        steps: 90 + Math.floor(r()*70),
-        step: 5 + r()*8,
-        curl: 0.6 + r()*2.2,
-        drift: 0.15 + r()*0.6,
-        thickness: 0.7 + r()*0.9
-      }),
-      draw: (st, now)=>{
-        const t = (now - t0) * 0.001;
-        // RSVP-ish: scalar potential + rotational component
-        function field(x,y){
-          const nx = (x/W - 0.5);
-          const ny = (y/H - 0.55);
-          const r2 = nx*nx + ny*ny;
-          const phi = Math.exp(-r2*2.2);
-          const vx = -ny*st.curl + nx*(0.9-0.7*r2) + st.drift*Math.sin(t+nx*3.0);
-          const vy =  nx*st.curl + ny*(0.9-0.7*r2) + st.drift*Math.cos(t*0.9+ny*2.7);
-          // Modulate by scalar
-          return {vx: vx*(0.45+0.75*phi), vy: vy*(0.45+0.75*phi)};
-        }
-
-        ctx.save();
-        ctx.shadowColor = "rgba(87,255,122,0.22)";
-        ctx.shadowBlur = 10;
-
-        for(let s=0;s<st.seeds;s++){
-          let x = (rng()*W);
-          let y = (rng()*H);
-          ctx.beginPath();
-          ctx.moveTo(x,y);
-          for(let i=0;i<st.steps;i++){
-            const f = field(x,y);
-            const mag = Math.hypot(f.vx,f.vy) + 1e-6;
-            x += (f.vx/mag) * st.step;
-            y += (f.vy/mag) * st.step;
-            if(x<0||x>W||y<0||y>H) break;
-            ctx.lineTo(x,y);
-          }
-          ctx.strokeStyle = "rgba(87,255,122,0.22)";
-          ctx.lineWidth = st.thickness;
-          ctx.stroke();
-        }
-        ctx.restore();
-      }
-    },
-
-    ATTR: {
-      name: "Soft Attractor",
-      init: (r)=>({
-        // A gentle, bounded, Lorenz-ish map (not physically exact; visual)
-        a: 9 + r()*9,
-        b: 20 + r()*10,
-        c: 2 + r()*3,
-        dt: 0.007 + r()*0.01,
-        n: 3800,
-        thickness: 0.9 + r()*1.1
-      }),
-      draw: (st, now)=>{
-        const t = (now - t0) * 0.001;
-        let x = 0.1 + 0.2*Math.sin(t*0.3);
-        let y = 0.0;
-        let z = 0.0;
-        const cx=W*0.5, cy=H*0.55;
-        const scale = Math.min(W,H) * 0.020;
-        ctx.save();
-        ctx.translate(cx,cy);
-        ctx.beginPath();
-        for(let i=0;i<st.n;i++){
-          // Modified Lorenz-like system (bounded)
-          const dx = st.a*(y - x);
-          const dy = x*(st.b - z) - y;
-          const dz = x*y - st.c*z;
-
-          x += dx*st.dt;
-          y += dy*st.dt;
-          z += dz*st.dt;
-
-          const px = x * scale;
-          const py = (z - 18) * scale * -1.15;
-
-          if(i===0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
-        }
-        ctx.strokeStyle="rgba(87,255,122,0.78)";
-        ctx.lineWidth=st.thickness;
-        ctx.shadowColor="rgba(87,255,122,0.30)";
-        ctx.shadowBlur=14;
-        ctx.stroke();
-        ctx.restore();
-      }
-    },
-
-    ORBIT: {
-      name: "Tiled Orbits",
-      init: (r)=>({
-        cells: 3 + Math.floor(r()*4),
-        n: 420,
-        thickness: 0.8 + r()*1.0,
-        wobble: 0.3 + r()*1.2
-      }),
-      draw: (st, now)=>{
-        const t=(now-t0)*0.001;
-        const pad=40;
-        const cols=st.cells;
-        const rows=st.cells;
-        const cw=(W-pad*2)/cols;
-        const ch=(H-pad*2)/rows;
-        ctx.save();
-        ctx.shadowColor="rgba(87,255,122,0.18)";
-        ctx.shadowBlur=10;
-
-        for(let gy=0;gy<rows;gy++){
-          for(let gx=0;gx<cols;gx++){
-            const cx = pad + gx*cw + cw*0.5;
-            const cy = pad + gy*ch + ch*0.5 + 10;
-            const R = Math.min(cw,ch) * 0.35;
-            const ph = (gx*31 + gy*57) * 0.11;
-            ctx.beginPath();
-            for(let i=0;i<st.n;i++){
-              const u=i/(st.n-1);
-              const a=u*Math.PI*2;
-              const k1=1.0 + 0.25*Math.sin(t*0.6+ph);
-              const k2=1.0 + 0.25*Math.cos(t*0.5+ph*1.7);
-              const x = cx + Math.cos(a*k1 + ph) * R * (0.6+0.4*Math.sin(t*0.2+u*4+ph));
-              const y = cy + Math.sin(a*k2 - ph) * R * (0.6+0.4*Math.cos(t*0.23+u*3+ph));
-              if(i===0) ctx.moveTo(x,y); else ctx.lineTo(x,y);
-            }
-            ctx.strokeStyle="rgba(87,255,122,0.42)";
-            ctx.lineWidth=st.thickness;
-            ctx.stroke();
-          }
-        }
-        ctx.restore();
-      }
-    }
-  };
-
-  function modeForLetter(letter){
-    // Deterministically choose a mode & parameterization from the letter seed
-    const r = mulberry32(seedFromLetter(letter));
-    const keys = Object.keys(MODES);
-    const key = keys[Math.floor(r()*keys.length)];
-    const m = MODES[key];
-    return { key, m, st: m.init(r) };
-  }
-
-  function setLetter(letter){
-    currentLetter = letter.toUpperCase();
-    rng = mulberry32(seedFromLetter(currentLetter));
-    const { key, m, st } = modeForLetter(currentLetter);
-    mode = { key, m, st };
-    // Reset time origin a little so each letter feels like a new scene
-    t0 = performance.now() - (rng()*1200);
-    // HUD
-    hudEl.textContent = `[${currentLetter}]  ${m.name}   (press A–Z, any other key = random)`;
-  }
-
-  setLetter('A');
-
-  // Keyboard controls
-  window.addEventListener('keydown', (e)=>{
-    const k = e.key;
-    if(k && k.length === 1){
-      const up = k.toUpperCase();
-      if(up >= 'A' && up <= 'Z'){
-        setLetter(up);
-        return;
-      }
-    }
-    // Any other key chooses random letter
-    const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    setLetter(letters[Math.floor(Math.random()*letters.length)]);
-  });
-
-  // ---------- Touch controls (mobile support) ----------
-let touchStartX = 0;
-let touchStartY = 0;
-let touchStartTime = 0;
-
-function randomLetter(){
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  return letters[Math.floor(Math.random()*letters.length)];
+<audio id="audio" preload="metadata"></audio>
+</main><script>
+'use strict';
+const play=document.getElementById('play'),seek=document.getElementById('seek'),clock=document.getElementById('clock'),caption=document.getElementById('captions'),status=document.getElementById('status'),canvas=document.getElementById('scope'),g=canvas.getContext('2d'),audio=document.getElementById('audio');
+const N=480,dpr=Math.min(devicePixelRatio||1,2);canvas.width=N*dpr;canvas.height=N*dpr;g.scale(dpr,dpr);
+let ctx=null,analyser=null,wave=null,drag=false,cues=[],subtitleState='LOADING SUBTITLES',lastCaption=null;
+let usingBlob=false,fallbackBusy=false,pending=null,pendingTimer=null;
+const MP3='Why_Systems_Keep_Manufacturing_Bad_Actors.mp3';
+function fmt(t){if(!Number.isFinite(t))return '0:00';t=Math.max(0,Math.floor(t));return Math.floor(t/60)+':'+String(t%60).padStart(2,'0');}
+function report(s){status.textContent=s;}
+function duration(){return Number.isFinite(audio.duration)?audio.duration:0;}
+function ready(){report('AUDIO READY / '+subtitleState);}
+function sync(){const d=duration(),t=drag?Number(seek.value):audio.currentTime;if(d&&!drag)seek.value=t;clock.textContent=fmt(t)+' / '+fmt(d);}
+/* Playback uses a normal streaming audio element, so it starts as soon as
+   the first data arrives. The analyser is attached on first play. */
+function graph(){if(ctx)return;ctx=new (window.AudioContext||window.webkitAudioContext)();analyser=ctx.createAnalyser();analyser.fftSize=2048;wave=new Float32Array(analyser.fftSize);const node=ctx.createMediaElementSource(audio);node.connect(analyser);analyser.connect(ctx.destination);}
+function setup(){const d=duration();if(!d)return;seek.max=d;seek.step='0.01';seek.disabled=false;play.disabled=false;if(audio.paused)play.textContent='PLAY';if(!fallbackBusy)ready();sync();}
+audio.addEventListener('loadedmetadata',setup);
+audio.addEventListener('durationchange',setup);
+audio.addEventListener('play',()=>{play.textContent='PAUSE';});
+audio.addEventListener('pause',()=>{if(!fallbackBusy)play.textContent='PLAY';});
+audio.addEventListener('ended',()=>{play.textContent='PLAY';});
+audio.addEventListener('waiting',()=>{if(!fallbackBusy)report('BUFFERING');});
+audio.addEventListener('playing',()=>{if(!fallbackBusy)ready();});
+audio.addEventListener('error',()=>{if(!usingBlob)report('AUDIO LOAD ERROR');});
+audio.src=MP3;
+play.addEventListener('click',async()=>{try{graph();await ctx.resume();if(audio.paused)await audio.play();else audio.pause();}catch(e){report('PLAYBACK ERROR');console.error(e);}});
+/* Seeking. If the server cannot serve byte ranges, the browser restarts the
+   file from zero after a seek. That case is detected and only then is the
+   file fetched into memory, which is always seekable. */
+function near(t,target){return t>=target-1&&t<=target+4;}
+async function fallback(target){
+  if(usingBlob||fallbackBusy)return;
+  fallbackBusy=true;report('LOADING AUDIO FOR SEEKING');
+  try{
+    const response=await fetch(MP3);if(!response.ok)throw Error('HTTP '+response.status);
+    const blob=await response.blob();
+    const wasPlaying=!audio.paused;
+    const url=URL.createObjectURL(blob.type?blob:new Blob([blob],{type:'audio/mpeg'}));
+    usingBlob=true;
+    audio.addEventListener('loadedmetadata',()=>{audio.currentTime=target;if(wasPlaying)audio.play().catch(()=>{});},{once:true});
+    audio.src=url;audio.load();
+  }catch(e){console.error(e);report('SEEK UNAVAILABLE');}
+  fallbackBusy=false;if(status.textContent!=='SEEK UNAVAILABLE')ready();
 }
-
-function nextLetter(step){
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const idx = letters.indexOf(currentLetter);
-  const next = (idx + step + 26) % 26;
-  return letters[next];
-}
-
-canvas.addEventListener('touchstart', (e)=>{
-  const t = e.touches[0];
-  touchStartX = t.clientX;
-  touchStartY = t.clientY;
-  touchStartTime = performance.now();
-});
-
-canvas.addEventListener('touchend', (e)=>{
-  const t = e.changedTouches[0];
-  const dx = t.clientX - touchStartX;
-  const dy = t.clientY - touchStartY;
-  const dt = performance.now() - touchStartTime;
-
-  const absX = Math.abs(dx);
-  const absY = Math.abs(dy);
-
-  // Swipe
-  if (dt < 500 && absX > 50 && absX > absY) {
-    if (dx > 0) {
-      setLetter(nextLetter(1));   // swipe right → next
-    } else {
-      setLetter(nextLetter(-1));  // swipe left → previous
-    }
-    return;
-  }
-
-  // Long press (hold > 600ms)
-  if (dt > 600) {
-    setLetter(nextLetter(1));
-    return;
-  }
-
-  // Simple tap → random
-  setLetter(randomLetter());
-});
-  
-  // ---------- Render loop ----------
-  function frame(now){
-    // Title glitch
-    renderTitle(now);
-
-    // Slight jitter for CRT feel
-    const jitterX = (Math.random()-0.5)*0.6;
-    const jitterY = (Math.random()-0.5)*0.6;
-
-    // Phosphor persistence: fade instead of clearing fully
-    ctx.save();
-    ctx.translate(jitterX, jitterY);
-
-    // Fade layer (tuned to look like trails)
-    ctx.fillStyle = "rgba(2, 10, 4, 0.10)";
-    ctx.fillRect(-2,-2,W+4,H+4);
-
-    // Soft border glow
-    ctx.strokeStyle = "rgba(87,255,122,0.06)";
-    ctx.lineWidth = 2;
-    ctx.strokeRect(18, 54, W-36, H-90);
-
-    // Draw current mode
-    if(mode) mode.m.draw(mode.st, now);
-
-    // Small “scan” sweep highlight
-    const tt = (now - t0) * 0.001;
-    const y = (tt*60) % (H+140) - 70;
-    const grad = ctx.createLinearGradient(0, y-40, 0, y+40);
-    grad.addColorStop(0, "rgba(87,255,122,0.00)");
-    grad.addColorStop(0.5, "rgba(87,255,122,0.05)");
-    grad.addColorStop(1, "rgba(87,255,122,0.00)");
-    ctx.fillStyle = grad;
-    ctx.fillRect(0, y-40, W, 80);
-
-    ctx.restore();
-
-    last = now;
-    requestAnimationFrame(frame);
-  }
-
-  // Initialize title
-  titleEl.textContent = baseTitle;
-  requestAnimationFrame(frame);
-})();
-</script>
-</body>
-</html>
+function verify(){if(pending===null)return;const t=pending;pending=null;clearTimeout(pendingTimer);if(!usingBlob&&!near(audio.currentTime,t))fallback(t);}
+function requestSeek(target){pending=target;clearTimeout(pendingTimer);pendingTimer=setTimeout(verify,2500);audio.currentTime=target;}
+audio.addEventListener('seeked',()=>{if(pending!==null)verify();});
+function commit(){if(!drag)return;drag=false;requestSeek(Number(seek.value));sync();updateCaption();}
+seek.addEventListener('pointerdown',()=>{if(!seek.disabled)drag=true;});
+seek.addEventListener('input',()=>{drag=true;sync();updateCaption();});
+seek.addEventListener('change',commit);
+seek.addEventListener('pointerup',commit);
+seek.addEventListener('pointercancel',commit);
+seek.addEventListener('blur',commit);
+function stamp(s){const p=s.trim().replace(',','.').split(':').map(Number);return p.reduce((a,b)=>a*60+b,0);}
+async function subtitles(){try{const r=await fetch('Why_Systems_Keep_Manufacturing_Bad_Actors.vtt');if(!r.ok)throw Error(r.status);const text=(await r.text()).replace(/^﻿/,'').replace(/\r\n?/g,'\n');for(const block of text.split(/\n\s*\n/)){const lines=block.trim().split('\n');const i=lines.findIndex(l=>l.includes('-->'));if(i<0||/^(NOTE|STYLE|REGION)(\s|$)/.test(lines[0]))continue;const [a,b]=lines[i].split('-->');const start=stamp(a),end=stamp(b.trim().split(/\s+/)[0]);const value=lines.slice(i+1).join(' ').replace(/<[^>]*>/g,'').trim();if(Number.isFinite(start)&&Number.isFinite(end)&&end>start&&value)cues.push({start,end,value});}cues.sort((a,b)=>a.start-b.start);subtitleState=cues.length?'SUBTITLES READY':'NO SUBTITLE CUES';}catch(e){subtitleState='SUBTITLES UNAVAILABLE';}if(duration()&&!fallbackBusy)ready();}
+function updateCaption(){const t=drag?Number(seek.value):audio.currentTime;let text='';for(const c of cues){if(c.start>t)break;if(t<c.end)text+=(text?' ':'')+c.value;}if(text!==lastCaption){caption.textContent=text;lastCaption=text;}}
+subtitles();
+let gain=1,last=performance.now();
+function draw(now){const dt=Math.min(100,now-last);last=now;const c=N/2,R=N*.43;g.fillStyle=`rgba(2,7,2,${1-Math.exp(-dt/65)})`;g.fillRect(0,0,N,N);
+// Static, faint oscilloscope graticule.
+g.save();g.beginPath();g.arc(c,c,R,0,Math.PI*2);g.clip();g.strokeStyle='#8bd88b0d';g.lineWidth=.7;g.beginPath();g.moveTo(c-R,c);g.lineTo(c+R,c);g.moveTo(c,c-R);g.lineTo(c,c+R);for(let i=-4;i<=4;i++){const p=i*R/5;g.moveTo(c+p,c-4);g.lineTo(c+p,c+4);g.moveTo(c-4,c+p);g.lineTo(c+4,c+p);}g.stroke();
+const playing=!audio.paused&&!audio.ended;
+if(analyser&&playing){analyser.getFloatTimeDomainData(wave);let sum=0,peak=0;for(const v of wave){sum+=v*v;peak=Math.max(peak,Math.abs(v));}const rms=Math.sqrt(sum/wave.length);const desired=Math.min(5,.28/Math.max(.055,rms));gain+=(desired-gain)*.09;const scale=R*Math.min(gain,.94/Math.max(.001,peak));const lag=Math.max(1,Math.round(ctx.sampleRate*.0027));if(rms>.0005){g.beginPath();for(let i=0;i<wave.length-lag;i+=2){const x=c+wave[i]*scale,y=c-wave[i+lag]*scale;if(i===0)g.moveTo(x,y);else g.lineTo(x,y);}g.strokeStyle='#b5ffad';g.lineWidth=.9;g.shadowColor='#7cff70';g.shadowBlur=5;g.stroke();g.shadowBlur=0;}}
+else if(!playing){g.fillStyle='#b5ffad';g.beginPath();g.arc(c,c,1.3,0,Math.PI*2);g.fill();}g.restore();sync();updateCaption();requestAnimationFrame(draw);}
+g.fillStyle='#020702';g.fillRect(0,0,N,N);requestAnimationFrame(draw);sync();
+</script></body></html>
