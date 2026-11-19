@@ -1,5 +1,9 @@
 # Alignment Research
 
+[Local Failure Mechanisms and Global Forecasts](https://standardgalactic.github.io/alignment/local-failure-global-forecast.pdf)
+
+* [The Flawed Math of AI Doom Headlines](https://standardgalactic.github.io/alignment/local-failure-oscilloscope.html)
+
 [Institutional Incentives and the Recurrence of Harm](https://standardgalactic.github.io/alignment/institutional-incentives.pdf)
 
 * [Why Systems Keep Manufacturing Bad Actors](https://standardgalactic.github.io/alignment/index.html) <!-- *Audio Overview* -->
