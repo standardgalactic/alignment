@@ -1,5 +1,13 @@
 # Alignment Research
 
+[Software Degradation](https://standardgalactic.github.io/alignment/software-degradation.pdf)
+
+* [How AI Code Degrades Software Quality](https://standardgalactic.github.io/alignment/software-degradation-oscilloscope.html)
+
+[Burdens of Proof](https://standardgalactic.github.io/alignment/burdens-of-proof.pdf)
+
+* [Why Max Tegmark's AI Warning Fails](https://standardgalactic.github.io/alignment/burdens-of-proof-oscilloscope.html)
+
 [Local Failure Mechanisms and Global Forecasts](https://standardgalactic.github.io/alignment/local-failure-global-forecast.pdf)
 
 * [The Flawed Math of AI Doom Headlines](https://standardgalactic.github.io/alignment/local-failure-oscilloscope.html)

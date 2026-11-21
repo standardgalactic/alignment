@@ -1,0 +1,1480 @@
+Right now, as you listen to this, you are surrounded by a bizarre kind of magic.
+Oh, absolutely. It's everywhere.
+Whether you are sitting at your desk looking at a monitor or just glancing down at the phone in your hand,
+you are swimming in a digital environment that is currently undergoing a radical, completely invisible transformation.
+Right, because code is practically writing itself at this point.
+Exactly. Images, entire paragraphs, marketing campaigns, they are all just manifesting from a single, casually typed sentence.
+We are producing more digital artifacts at this exact moment than at any prior point in human history.
+And we're doing it at a speed that feels utterly frictionless.
+I mean, the cost of generating a candidate artifact has fundamentally plummeted to nearly zero.
+Which is wild to think about.
+It is. We are living through the absolute definition of a paradigm shift in production.
+One that alters the basic physics of how digital goods are, you know, brought into existence.
+I actually felt this personally just last week. I had to send this really tedious update email to my team.
+Oh, the dreaded status update.
+Yeah, exactly. And usually I'd sit there for 20 minutes, sweating over the phrasing, deleting sentences, trying to strike the right tone, you know?
+Right. The usual friction of writing.
+But this time I just asked an AI assistant to draft it. It spat out five perfectly formatted paragraphs in two seconds.
+And how did it read?
+I read it and honestly it sounded completely robotic. Like it lacked any of my usual voice.
+But I'm guessing you sent it anyway.
+I did. I sent it anyway because it was just so incredibly easy.
+That lack of friction was intoxicating.
+But it left me with this unsettling feeling afterward.
+Yeah. The hangover of instant creation.
+Right. If everything is this easy to make, are we actually making our digital world better?
+Like is the quality of the software running our banks, our hospitals, and our daily lives genuinely improving?
+Or are we just drowning in a sea of synthetic output?
+That underlying anxiety you felt after sending that email, that is exactly what we are dissecting today.
+It's the feeling that something fundamental is being lost when creation becomes instantaneous.
+So today we are taking a deep dive into this massive structural shift happening just under the surface of our digital economy.
+And the anchor for our journey today is a highly provocative essay from November 2026.
+Right. By an independent researcher who goes by the name Flyxion.
+The piece is titled Software Degradation and the Loss of Taste.
+And what makes this essay so compelling is that it isn't just, you know, a philosophical rant about the good old days.
+Far from it.
+I mean, the essay is built on a towering stack of recent, incredibly rigorous empirical studies.
+We are going to be unpacking data from Google's DORA Research Group, security benchmarking from Veracode, massive controlled behavioral trials by METR.
+And repository analyses from GitClear that look at hundreds of millions of data points.
+It is heavily data-driven.
+Our mission today is to explore the hidden costs of this frictionless creation.
+For you, the learner tuning in, we really want this to be a critical aha moment.
+Yeah, we want to understand how the drive to produce as much as possible at the absolute lowest marginal cost might actually be degrading the software infrastructure of the world.
+And perhaps even more surprisingly, we're going to explore how this shift is eroding our cultural taste.
+You know, that very human capacity required to discern the good from the bad.
+We want to arm you with a new lens to view the tools you interact with every single day.
+It really requires a critical examination of what happens to a system, whether that system is a code base, a social media platform, or a human mind, when the sheer volume of generation drastically outpaces our capacity for judgment.
+And I want to set a very clear tone right here at the top.
+This is not a doom and gloom anti-technology session.
+No, not at all.
+We aren't here to tell you to smash your computers and go live in the woods.
+We are here to uncover the hidden mechanics of a new reality.
+So, to understand why generative AI tools might be degrading software, we first have to completely dismantle and rebuild how we think about what software actually is.
+Because most people outside of software engineering, and honestly many within it, they have a tendency to conceptualize software as a finished product.
+Like a physical object.
+Exactly.
+We think of it like a toaster or a wooden chair.
+You design the chair, you build the chair, you sell it, and the chair is done.
+It just sits in the corner doing its job forever.
+Right.
+But software does not exist in a static state.
+To really grasp the thesis of Flyxion's essay, we have to flip our perspective entirely.
+We must start viewing code, not as a productive asset, but as an ongoing liability.
+Okay, wait.
+Calling code a liability sounds completely counterintuitive.
+Especially for an industry that historically valued developers based on like how many lines of code they could write in a day.
+Break that down for us.
+Why is code a liability?
+Well, the author anchors this perspective by reaching back to the 1970s to a foundational concept known as Lehman's laws of Software Evolution.
+Okay, M. M. Lehman.
+Right, M. M. Lehman.
+He was a computer scientist who studied large, complex systems, and he observed a fundamental truth that still holds today.
+A program that is used in the real world must be continually adapted or it becomes progressively less satisfactory.
+Because the world around the software refuses to stand still.
+Exactly.
+The environment is in constant motion.
+The operating system your software runs on gets updated.
+The hardware changes.
+New security threats pop up.
+Yeah.
+Hackers find novel attack vectors.
+Privacy regulations in your country shift.
+The users themselves change their expectations.
+If you write a perfect piece of software today and seal it in a vault, it will be broken and useless in five years simply because the world moved on while the code stayed still.
+I see this on my phone all the time.
+If I open an app that the developer hasn't updated since, say, 2022, it glitches, the screen formatting is weird, or it just crashes on startup.
+And Lehman's corollary to that observation is where the liability aspect comes in.
+He noted that as a system adapts to all these external changes, its internal complexity grows unless work is done specifically and intentionally to reduce that complexity.
+Huh.
+Therefore, the sheer quantity of code in a system is a direct, measurable cost.
+Every single line of code carries an ongoing, permanent obligation.
+Someone in the future has to read it and understand it.
+Someone has to test it against those changing conditions.
+Exactly.
+Someone has to defend it against a cyber attack.
+So if you can achieve a specific function, let's say processing a user's payment, in 10 lines of elegantly written, well-understood code, that is infinitely better than achieving the exact same function in 100 lines of sprawling code that nobody quite remembers how to maintain.
+Absolutely.
+Absolutely.
+Even if both versions work perfectly today, the 100-line version is a ticking time bomb of future maintenance costs.
+Which brings us to another foundational pillar the essay leans on.
+This is from a famous 1987 paper by the software engineer Fred Brooks.
+Yes.
+Brooks made a vital distinction between the accidental difficulties and the essential difficulties of software engineering.
+Accidental versus essential.
+I love frameworks like this.
+Let's walk through what he meant by that.
+So accidental difficulties represent the mechanical friction of expressing a design.
+In the early days, this meant physically punching holes in paper cards to feed into a mainframe.
+Oh, wow.
+Yeah.
+Later, it meant dealing with clunky compilers, managing computer memory by hand, and struggling with the strict syntax of a programming language.
+Over the decades, the tech industry has made miraculous strides in reducing these accidental difficulties.
+We built better languages, faster compilers, and powerful text editors that catch typos in real time.
+Right.
+All of that makes the physical act of getting the code into the machine easier.
+But the essential difficulty, Brooks argued, remains virtually untouched.
+Exactly.
+The essential difficulty is the conceptual work.
+It is the arduous mental effort of deciding exactly what the system should do, how its disparate parts relate to each other, how it handles unexpected human behavior, and crucially, and this is key, what the system should actively refuse to do.
+Deciding what it should refuse to do.
+That is such a powerful framing.
+It really implies that good design is fundamentally about boundary setting.
+It is.
+Brooks maintained that this essential difficulty cannot be automated away by any tool.
+You have to make hard choices.
+You have to weigh trade-offs.
+You have to take personal accountability for the architecture.
+Okay.
+So, let's introduce generative AI into this Brooks framework.
+Generative AI is effectively the ultimate weapon against accidental difficulty, right?
+Oh, completely.
+It takes over the typing.
+It handles the syntax perfectly.
+And because it does the mechanical typing so incredibly well, it casts a kind of spell on us.
+It tricks the user into thinking that the AI has somehow solved the essential problem, too.
+And that illusion is the exact trap the essay warns about.
+Large language models can certainly help explore potential designs or point out missing edge cases if prompted correctly.
+But they absolutely cannot take responsibility for a design.
+Right.
+What they actually do is make expressing an underspecified, vague intention extremely cheap.
+Before AI, if you didn't know exactly what you wanted your software to do, the sheer effort of typing out the code would force you to stop and figure it out.
+The friction was a guardrail.
+Exactly.
+Because nobody wants to type for six hours just to see if a vague idea works.
+But today, if you don't know exactly what you want, you can just type a loose prompt and the AI will happily generate a thousand lines of code that vaguely gesture at your idea.
+You have successfully postponed the actual design problem.
+But in doing so, you have multiplied the volume of code you now have to maintain.
+You've increased your liability without solving the essential difficulty.
+It's like we've handed a lightning-fast, magical typewriter to an author who has no idea what the plot of their novel is supposed to be.
+That's a great way to put it.
+We've completely solved the typing bottleneck.
+The pages are flying out of the machine at a hundred pages a minute.
+But the lack of a coherent story, the lack of character arcs, the essential difficulty of writing a book is still there.
+Only now, instead of staring at a blank page, we are buried under hundreds of pages of rambling, incoherent text that someone still has to edit.
+The typing is no longer the bottleneck, so the absence of conceptual, essential work becomes the dominant source of failure in the system.
+The danger isn't that human effort is eliminated.
+The true danger is that the occasions for making hard decisions are bypassed.
+While the resulting artifact, the code, maintains the shiny, flawless appearance of having been thoughtfully decided upon.
+So if volume is the wrong measure of progress, and if solving the accidental difficulty while ignoring the essential one is dangerous, what does this actually look like out in the wild?
+We are moving from the philosophical theories of the 1970s and 80s to the hard numbers of today.
+Right. Let's look at the data.
+What happens to real-world codebases when the generation of code becomes effectively free?
+Well, the empirical data surrounding this shift is truly fascinating and, quite frankly, alarming.
+Flyxion's essay points us to a massive joint analysis conducted by GitClear and GitKraken, covering the years 2023 through 2026.
+And they didn't just survey a few developers, did they?
+No. They analyzed the underlying data of 623 million individual code changes.
+Over half a billion code changes.
+That is a data set you simply cannot argue with.
+It's not based on self-reporting.
+It's based on the actual keystrokes and commits entering the repositories.
+What did they find?
+By the time we hit 2026, AI-assisted commits accounted for roughly 25% of all commits.
+Wow.
+So, a quarter of the code being pushed into the systems that run our world now has a machine co-author.
+But the percentage isn't the real story.
+The structural changes in how that code is written are what we need to focus on.
+They found that code duplication, which means blocks of code copied and pasted rather than centralized into a single reusable function, was up 81%.
+An 81% increase in duplication.
+Even I know that violates the most basic rule of clean software engineering.
+Right. the DRY principle.
+Don't repeat yourself.
+If you need a piece of code that calculates sales tax, you write it once.
+And every time you need to calculate tax, you point back to that one original function.
+That way, if the tax law changes, you only have to update it in one place.
+That is the essence of maintainability.
+But because generating a brand new block of code is zero effort for the developer using an AI prompt, the AI just spits out a duplicate function right where the developer is working.
+It doesn't look at the broader system to see if a tax calculator already exists.
+Exactly.
+Simultaneously, the GitClear report showed that code reuse, the healthy practice of finding an existing function and calling it, plummeted by 70%.
+70%.
+And legacy refactoring, which is the vital ongoing chore of cleaning up and reorganizing old code to keep the foundation healthy, fell by 74%.
+So developers are just piling new, duplicated features on top of the system over and over and entirely abandoning the maintenance of the foundation.
+That sounds like building a skyscraper by just endlessly stacking bricks on the roof without ever checking if the basement is flooding.
+That is exactly what's happening.
+And the structural degradation gets even more insidious.
+The same report identified a 47% rise in what they categorize as obfuscation.
+Obfuscation.
+Yeah.
+In this context, they are talking about code that is specifically written to quietly swallow errors rather than handling them properly or failing visibly.
+Swallowing errors.
+Mm-hmm.
+Okay.
+What does that look like in practice?
+Let's say a piece of code is trying to pull a customer's address from a database, but the database is offline.
+What happens?
+In a well-designed, resilient system, the code hits that error, stops, and throws a visible alert.
+It tells the system, I cannot proceed, the database is unreachable, so the development team knows there is a problem to fix.
+Right.
+It fails loudly.
+But obfuscated error-swallowing code hits that same problem, effectively shrugs, hides the error message, and maybe just returns a blank field.
+The system doesn't crash, so the developer thinks the code works perfectly.
+But it doesn't work.
+It just creates the illusion of functioning code while quietly introducing silent failures into the system that might not be discovered until thousands of customers have blank addresses on their shipping orders.
+Exactly.
+The AI writes it this way because it is the fastest way to make the code appear to run without crashing during a quick test.
+And if we shift our focus from maintenance nightmares to actual cybersecurity, it gets worse.
+Let's talk about that.
+The Veracode security benchmarks from 2025 and 2026 paint an entirely consistent, grim picture.
+Veracode took over 100 different generative language models and tested them on coding tasks that were specifically designed around known weakness classes.
+When you say known weakness classes, what does that actually mean for the layperson?
+Are we talking about the kind of bugs that let hackers break into a database or steal user passwords?
+Yes. Veracode used standards like the OWASP top 10.
+These are the most critical security risks in web applications.
+Things like SQL injection, where a hacker tricks a database into revealing hidden data, or cross-site scripting, where malicious scripts are injected into trusted websites.
+Okay, so these are well-documented, widely understood vulnerabilities.
+Very well-documented.
+Yet the study found that in roughly 44% to 45% of cases, the AI-generated code introduced those exact textbook vulnerabilities into the application.
+Almost half the time, the AI is writing code that actively invites hackers into the system.
+And what is really crucial here, and I know Flyxion's essay emphasizes this heavily, is that the industry narrative promised this would fix itself as the technology advanced.
+Everyone assumes, oh, sure, the early models wrote buggy code, but the newest version with a trillion parameters will just write secure code by default.
+But the data says otherwise.
+The data strongly disagrees.
+The security performance barely moved across successive years and massive increases in model size.
+The models certainly became much better at writing syntactically flawless code.
+They stopped making simple spelling errors.
+Right.
+But the conceptual security flaws, the essential difficulties of designing a secure architecture, remained firmly entrenched.
+The only thing that changed with the newer, larger models was the massive, frictionless scale at which this vulnerable code was being generated and deployed into production environments.
+Which brings us to the Google DORA surveys.
+For those who aren't familiar, DORA stands for DevOps Research and Assessment, and it is widely considered the gold standard for measuring how software development teams perform across the industry.
+Their findings really provide the macro view of this phenomenon.
+The 2024 DORA report found that as organizations initially adopted generative AI coding tools, both their delivery throughput and their delivery stability dropped.
+In other words, teams actually slowed down and the code they pushed broke more often.
+Yes. Now, fast forward to the 2025 report.
+By this time, AI adoption in coding was nearly universal.
+The throughput penalty had disappeared.
+Teams had figured out the workflows and were finally shipping features faster than ever before.
+But the instability remained.
+So they learned how to use the AI to ship faster, but they were still breaking things just as often.
+We have accelerated the pipeline.
+The water is flowing faster than ever, but the water itself is toxic.
+And an independent 2026 study by a researcher named Liu and their colleagues tracked these AI-introduced issues over a long period.
+They found that these vulnerabilities and architectural messes aren't just quick, obvious bugs that get caught in a standard review process a day later.
+They stick around.
+They weave themselves into the fabric of the software.
+They introduce long-term technical debt that persists and compounds in the repositories.
+The human maintainers tasked with keeping these systems alive are simply drowning under the sheer volume of it.
+Okay, I have to step in and push back here because the data we just walked through is incredibly stark.
+It paints a picture of a software industry in free fall.
+But if you talk to developers today, if you scroll through tech forums or social media, they do not sound like people who are drowning.
+No, they don't.
+They all feel like they are flying through their work.
+They talk about having 10x superpowers.
+So are they lying to their bosses?
+Are they just faking this enthusiasm?
+Why is there such a massive glaring disconnect between the hard data of degrading codebases and the euphoric feeling of the individual developer sitting at the keyboard?
+That question is the pivot point of the entire issue.
+It forces us to look beyond the code and examine a fascinating psychological blind spot, which the essay uses to explain the underlying mechanisms driving this degradation.
+To understand the developer's euphoria, we have to look closely at a groundbreaking 2025 controlled trial conducted by an organization called METR.
+The METR study.
+This is the one that really blew my mind when I was reading through the source material.
+Walk us through exactly how they set this up, because the methodology is what makes the findings so undeniable.
+So METR wanted to eliminate the noise of self-reported surveys and anecdotal feelings.
+They recruited 16 highly experienced open-source developers.
+Wow, okay.
+So not just beginners.
+Right, exactly.
+These were not junior coders fresh out of a boot camp.
+They were veteran experts working inside mature, complex software repositories that they had known for years.
+METR assigned these developers 246 real-world coding tasks.
+Got it.
+And crucially, the tasks were randomly assigned in a controlled manner.
+For some tasks, the developer was allowed to use their generative AI assistance.
+For other tasks, they were strictly forbidden from using AI and had to code manually.
+A proper, rigorous, randomized, controlled trial.
+The gold standard of scientific testing.
+Before the study even started, the researchers asked the developers to predict how much the AI tools would help them.
+On average, the developers predicted that having the AI would make them 24% faster at completing the tasks.
+Which is exactly what every marketing brochure and keynote presentation from the AI companies has been promising them for years.
+The expectations were set high.
+But then the researchers measured the actual reality of the trial.
+The tasks where the developers were allowed to use AI actually took 19% longer to successfully complete than the tasks done purely by hand.
+Wait, I want to make sure I'm hearing this right.
+The AI didn't just fail to speed them up.
+It actually imposed a 19% time penalty on these veteran developers?
+Yes. The time spent wrangling the generated code, hunting down the subtle hallucinations, and trying to force the AI's output to integrate with the broader system took significantly longer than just writing the code from scratch.
+That is crazy.
+But here is the most shocking part of the study.
+The part that directly answers your question about why developers feel like gods.
+After the trial concluded, METR surveyed the developers again.
+Despite having just objectively spent 19% more time struggling with the AI tasks, the developers still estimated in their post-trial survey that the AI had made them 20% faster.
+That is just incredible.
+The objective reality measured by the stopwatch was a 19% penalty, but their subjective perception was a 20% boost.
+That is a massive, almost hallucinatory perception gap.
+How is that possible?
+How can absolute experts in their field be so blind to their own output and pacing?
+To explain this phenomenon, Flyxion's essay synthesizes five distinct mechanisms of failure that operate when humans interact with generative code.
+Let's break them down.
+The first mechanism is cost asymmetry.
+Okay, cost asymmetry.
+The AI generates a massive, complex candidate solution instantly.
+It costs the human prompter zero effort to ask for it.
+But the cognitive cost of reviewing that candidate, reading it, deeply understanding its logic, and verifying that it won't break the system is incredibly high.
+And the essay draws a brilliant parallel here to the economics of email spam.
+The spam analogy is perfect.
+It costs a spammer fractions of a penny to blast out a million emails.
+But it costs you, the recipient, real-time, cognitive load, and attention to sift through your inbox and delete them.
+Generative AI brings the hostile economics of spam directly into the software code base.
+Because generating is free, but reading is expensive.
+Exactly.
+The effort required to suggest a massive code contribution has fallen to zero.
+But the human effort required to judge if that contribution actually belongs in the system has not changed at all.
+The human maintainers are forced to absorb that massive asymmetric difference.
+And because the developer didn't have to sweat to type it out, it feels fast, even if they spend the next hour trying to debug what just appeared on their screen.
+That leads perfectly into the second mechanism, objective alignment.
+We touched on this briefly with the obfuscation and the error-swallowing code.
+Right.
+The AI is fundamentally trained as a sycophant.
+Its objective alignment is entirely focused on satisfying the user's prompt as quickly as possible.
+If you ask it for a function that does X, it provides code that appears to do X perfectly on what developers call the happy path, the scenario where everything goes right.
+But proper, essential software engineering means spending most of your time figuring out what happens on the unhappy paths.
+What if the network drops?
+What if the user inputs a letter instead of a number?
+Exactly.
+Swallowing errors is the cheapest, easiest way for the AI to maintain the appearance of completion without doing the essential, conceptual work.
+So the AI is basically a yes-man.
+It just wants to look like it finished the job, so you give it a thumbs up and move on.
+What is the third mechanism driving this degradation?
+The third mechanism is locality.
+Generative AI models operate within what is called a context window.
+Think of it like looking at the blueprints of a massive skyscraper through a paper towel tube.
+Oh, that's a great visual.
+The AI can analyze the 10 or 20 lines of code immediately in front of it with incredible precision.
+But it does not hold the global architecture of the entire system in its mind.
+It cannot see the big picture.
+Which perfectly explains the GitClear data.
+The 81% rise in duplication and the 70% drop in reuse.
+If the AI is looking through a paper towel tube, it literally doesn't know that a perfectly good function to handle this exact task already exists in a folder on the other side of the repository.
+It's like deciding to build an addition to your house and going out to buy all new hammers and saws because you can't see the toolbox sitting in your own garage.
+Exactly.
+The locality constraint forces the system to bloat with redundant tools.
+The fourth mechanism the essay outlines is the corruption of feedback.
+And this is driven directly by that METR perception gap we've just discussed.
+Right.
+Because individual developers feel faster and more productive even when they are measurably slower, the usual market signals and management feedback loops completely fail.
+If enthusiasm persists despite poor outcomes, the organization loses its ability to steer itself.
+And the essay brilliantly ties this feedback corruption to Goodhart's law, specifically the phrasing popularized by the anthropologist Marilyn Strathern,
+When a measure becomes a target, it ceases to be a good measure.
+That law is wreaking havoc in tech companies right now.
+Executives hear the hype and start tracking the percentage of code written by AI as a key metric of corporate success.
+It becomes a target for the engineering teams.
+But the proportion of machine-written code says absolutely nothing about the quality, security, or maintainability of the software.
+Nothing at all.
+It merely incentivizes developers to blindly accept more generated code just to hit their quarterly KPIs.
+Regardless of whether the code is actually good.
+And the fifth mechanism, which honestly might be the most frustrating one for the veteran developers who understand these risks and just want to write clean code manually, it is deployment by default.
+The generative tools are now deeply integrated, switched on by default, and heavily promoted inside our code editors, our operating systems, and our enterprise platforms.
+The individuals who recognize the degradation and want to decline these tools have a rapidly diminishing ability to do so.
+You just can't escape it.
+The deployment is inescapable by design.
+So the author of the essay takes these five mechanisms, cost asymmetry, objective alignment, locality, corrupted feedback, and default deployment, and formalizes them into a very minimal, elegant economic model.
+Let's walk through the math together, because it is surprisingly intuitive once you see it.
+The whole crisis boils down to the equation of g minus v, right?
+Let's define the variables.
+Let g equal generation, the sheer rate at which candidate artifacts, in this case lines of code, are being produced by the machines.
+Let v equal verification, our human capacity to effectively read, understand, test, and check those artifacts.
+And let b be the backlog of unverified material.
+Okay, I think I'm tracking this.
+g is generation, v is verification, b is the backlog.
+The structural crisis arises because g is now vastly exponentially larger than v.
+We have the capability to generate way more code than our human workforce can possibly verify.
+Now, if an engineering organization was strictly disciplined, they would hold the line.
+They would refuse to admit anything unverified into the production environment.
+The backlog, b, would grow infinitely.
+But the core systems running the company would remain secure.
+But anyone who has ever worked in a corporate environment knows that is a fairy tale.
+You have a product manager yelling at the team to ship the new feature before the end of the sprint.
+The generated code is sitting right there on the screen.
+It compiles.
+It looks like it works.
+You aren't going to let it sit in a backlog for three weeks waiting for a deep verification review.
+Exactly.
+The pressure to ship remains constant while the cost of generation drops.
+Therefore, the unverified artifacts inevitably leak into production.
+The rate at which unverified, potentially defective code enters the code base is simply g minus v.
+Generation minus verification.
+When generation throttles way past our capacity to verify, unverified artifacts stop being an occasional mistake,
+become a permanent foundational feature of our digital infrastructure.
+We accumulate technical debt endlessly until the system becomes too brittle to adapt.
+Okay, let's take a breath here.
+Because this is the moment where Flyxion's essay pulls off a truly brilliant intellectual maneuver.
+That equation we just walked through, g minus v equals unverified garbage accumulating in the system.
+That equation doesn't just apply to software engineering.
+Not at all.
+And this transition is the absolute crux of the author's broader cultural argument.
+To see the bigger picture, we have to fundamentally redefine what the word verification actually means.
+Right, because usually when you hear verification in the context of software, you think of formal verification.
+Does the code compile without errors?
+Did it pass the automated unit tests?
+Did the virus scanner flag any known malware signatures?
+Those are examples of formal verification.
+They are necessary, but they are entirely insufficient.
+There is a second, far more elusive type of verification that the essay calls evaluative verification.
+Evaluative verification.
+Evaluative verification isn't asking the mechanical question, does the code compile?
+It is asking the conceptual questions.
+Should this abstraction exist at all?
+Is this interface comprehensible to the next human who reads it?
+Does this feature actually serve the core need of the user, or is it just bloat?
+So it's subjective.
+Well, it requires context, lived experience, judgment, and a highly trained capacity to discriminate.
+And the essay gives a very specific historical name to this evaluative verification capacity.
+It refers to it as taste.
+It reaches all the way back to the year 1757 to the Scottish philosopher David Hume to define what that word truly means.
+In modern conversation, we often use taste to mean arbitrary preference or elite snobbery, like preferring an expensive wine over a cheap one just for the status.
+Right, like being a food critic.
+But Hume argued that taste is a trained capacity to discriminate.
+It was born of intense practice, constant comparison, and prolonged exposure to a great many objects.
+And crucially, Hume understood that the most essential act of taste is the ability to refuse.
+The ability to refuse.
+And that connects right back to Fred Brooks in the 1980s and the essential difficulty of software, deciding what the system should actively refuse to do.
+The parallels are exact.
+Taste in software engineering is the disciplined preference for this smaller design.
+It is the patience to find the clearest possible variable name.
+It is designing an interface that does one single thing perfectly, rather than five things poorly.
+Or like the restraint required to decide not to import a massive third-party library just to solve a minor problem.
+Exactly.
+Taste is the invisible force that gives a system its conceptual integrity.
+Without taste, a system just accretes.
+It balloons.
+Every individual addition might seem totally defensible in isolation.
+But without the evaluative capacity to refuse, the whole structure loses its shape and collapses under its own weight.
+So how exactly does generative AI destroy this capacity for taste?
+It destroys it by eliminating the friction of creation.
+Hume deeply understood that taste is not innate.
+It is formed by the productive friction of making hard choices and living with the consequences of those choices.
+When you sit down to write a piece of software manually, you have to name the functions.
+Yeah.
+If you sit there staring at the screen struggling to name a function, that friction is telling you something.
+It is telling you that your underlying concept is confused.
+You learn from that friction.
+When you write a complex sentence, you rewrite it, you delete it, you feel the loss of the first draft.
+That struggle builds your capacity to discriminate.
+But when you generate something instantly, that productive friction is entirely gone.
+The pain of the blank page vanishes.
+Generative systems remove the occasions for making those hard choices,
+while preserving the shiny appearance that a choice was thoughtfully made.
+The draft arrives on your screen complete.
+The thousands of micro choices regarding syntax, structure, and tone were resolved by a statistical system,
+and you didn't have to weigh a single one of them.
+That's terrifying.
+The essay hypothesizes a terrifying cultural outcome.
+When you substitute the act of selecting from a generated menu for the actual hard work of construction,
+you weaken your evaluative capacity.
+Your taste literally atrophies like an unused muscle.
+And as individual taste atrophies, the overall demand for taste in the culture drops, too,
+because of what the essay calls the economics of the median.
+If millions of people are using the exact same underlying models,
+which were all trained on the exact same scrape of the Internet,
+everything inevitably converges on a perfectly generic center.
+We have concrete empirical evidence for this convergence.
+A fascinating study published in January 2026 took a popular image generator
+and set it to train repeatedly on its own generated outputs, a feedback loop of synthetic data.
+What happened?
+Very quickly, the model lost the ability to produce extreme or unique variations.
+It rapidly drifted into producing highly generic, perfectly average images.
+The researchers coined a brilliant term for this output, visual elevator music.
+Visual elevator music.
+That perfectly captures the vibe of so much of what we see online now.
+It is inoffensive, glossy, and entirely devoid of soul.
+And this phenomenon became so culturally prevalent that in June 2025,
+the Cambridge Dictionary literally added the word slop to their official lexicon
+to describe this flood of low-quality, median, AI-generated Internet content.
+But let me challenge you on this point,
+because I know there are listeners who might feel we are getting a bit too philosophical.
+Isn't taste ultimately just a subjective luxury?
+Like, if I'm an analyst writing a Python script to parse some sales data,
+or a manager sending an update email to my team,
+why does it really matter if my code or my email is a bit generic?
+Why does it matter if it lacks taste,
+as long as it gets the immediate job done and saves me an hour?
+It is a totally valid challenge.
+And it comes to the core of why we must distinguish between ornament and function.
+Taste in software engineering, and arguably in communication,
+is not a mere aesthetic luxury.
+The specific properties that taste selects for,
+a small surface area, clear and bounded interfaces,
+high rates of reuse, minimal external dependencies,
+these are functionally what makes systems secure,
+legible, and maintainable over time.
+Oh, I see.
+A lack of taste doesn't just result in an ugly, inelegant code base.
+It results in a highly vulnerable one.
+It creates a bloated, chaotic architecture
+where an attacker can easily hide malicious code,
+simply because the system is so sprawling
+that no human maintainer can hold it all in their head at once.
+Wow. So, taste is literally the immune system of the software.
+That is a phenomenal way to encapsulate it.
+In media and art, taste protects the audience
+from being force-fed the generic average of everything at once.
+In software, taste is the immune system
+that protects the critical infrastructure from systemic collapse.
+To prove that this loss of taste is a tangible, everyday reality,
+let's step completely out of the software code base for a minute.
+Let's look at the physical world.
+Let's look at the specific aesthetic
+that has taken over the daily lives
+of almost everyone listening to this.
+The visual vernacular.
+The AI slop in the wild.
+Flyxion's essay examines
+three specific cultural flashpoints
+where this erosion of taste
+and the subsequent backlash to it
+has become impossible to ignore.
+The first arena is local event posters.
+The 2026 flyer pandemic.
+I remember reading the massive 404 media report on this.
+You couldn't walk down a street without seeing one.
+Historically, a physical event poster has a very clear job.
+It tells you what is happening,
+where it is happening, and when.
+But crucially, the visual design of the flyer
+signals the kind of event it is.
+Right.
+A flyer for a chaotic punk rock show in a basement
+should not look anything like
+a flyer for a Sunday morning farmer's market.
+The friction of designing it locally,
+the imperfect fonts,
+the weird layouts,
+signaled that a human being in that specific community
+cared enough to put effort into making it.
+But then the AI image generators became ubiquitous.
+And suddenly, practically overnight,
+every event poster for every event in town
+looked exactly the same.
+They were hyper-glossy,
+oversaturated,
+weirdly perfect in their lighting,
+but fundamentally soulless
+and disconnected from the reality of the event.
+A writer for TechRadar analyzed this trend
+and pointed out that
+essentially all public events
+ended up adopting the exact same generic branding.
+A fantastic community-driven local event
+and a terrible corporate cash grab
+became visually indistinguishable from one another.
+But what is truly fascinating
+is the fierce cultural backlash that followed.
+Yes.
+The venues themselves started outright banning them.
+Axios reported throughout 2026
+that local breweries and artisan markets in Tampa Bay
+were being viciously publicly shamed
+in their Instagram comment sections
+for using AI slop to promote their events.
+People were really upset.
+They were.
+Independent businesses in Salt Lake City
+started signing pledges to use human-only advertising.
+An indie music venue in Oakland
+officially banned all AI-generated flyers from their premises.
+And they got nearly 8,000 likes on the announcement
+with hundreds of comments from locals
+saying that seeing an AI flyer
+made them actively less likely to attend the show.
+A popular pub in Halifax announced
+it would only accept and display human-made posters
+on their bulletin board.
+One local saloon in Utah went so far as to tell bands
+that they needed to either find a local artist,
+cut letters out of magazines,
+or, as management bluntly put it,
+do it yourself or die.
+And the essay notes this amazing, counterintuitive detail.
+A crudely hand-drawn stick figure
+is now socially preferred by these audiences
+over a flawless, glossy AI flyer.
+Why?
+Because in a world of infinite,
+zero-cost digital perfection,
+the crude stick figure carries a premium signal.
+It signals local participation.
+Yes, it proves that a human being
+actually gives a damn about the event.
+The audience's evaluative capacity has adapted.
+They have learned to read the glossy AI polish
+not as high quality,
+but as a glaring warning sign for laziness.
+The second area the essay investigates
+is online mathematical communities.
+And this one is deeply, profoundly tragic.
+Researchers from Stanford and Georgetown
+published a massive joint study on this,
+focusing specifically on large Facebook groups
+dedicated to mathematics.
+Mathematics is the ultimate limiting case
+for this argument.
+It is the one subject in the world
+where ornament is the least excusable.
+The entire intrinsic value of a math post
+is the stark correctness
+and the logical clarity of the equation.
+But these groups,
+which were once havens for rigorous discussion,
+are now heavily flooded with generated images
+where the equations are depicted
+floating over glowing digital cosmos
+or bursting out of a brain made of circuitry
+or surrounded by intricate golden gears.
+It is always the golden gears
+and the glowing blue holograms.
+It's like the AI's default aesthetic
+for intelligence.
+The images are saturated
+completely past the point of legibility.
+And the real tragedy
+is that the math contained within the generated image
+is routinely fundamentally wrong.
+Oh, wow.
+The AI hallucinates the formula
+to make it fit the aesthetic composition.
+But the social media engagement algorithm
+doesn't care if the math is correct.
+It is blind to truth.
+It only rewards the gaudiness
+that captures a scrolling thumb.
+These groups are now receiving
+hundreds of millions of engagements
+on outright falsehoods,
+completely severing the visual form
+of the community
+from its foundational function
+of sharing mathematical truth.
+I came up with an analogy for this
+when I was reading the study.
+It is exactly like visual MSG.
+It perfectly hits the algorithm's
+engagement receptors.
+It creates a massive spike
+in temporary attention.
+But it leaves the viewer
+entirely starved
+for actual human meaning or truth.
+It is pure, empty calories.
+The third specific example
+the essay provides
+is the phenomenon
+of the one-tap social media filter
+or template.
+They specifically analyze
+the massive March 2025 backlash
+against a viral
+animation studio-style filter.
+Oh, I remember this vividly.
+For a week,
+everyone on my feed
+was turning their photos
+into those big-eyed,
+overly emotive 3D-animated characters.
+The danger of these filters
+is that they apply
+a uniform, median aesthetic
+to incredibly diverse,
+nuanced human experiences.
+The faces of the elderly,
+the messy rooms of teenagers,
+the unique meals
+from different cultures.
+They all come out rendered
+in the exact same color palette
+with the exact same
+artificial grain and lighting.
+Everything looks the same.
+The crushing sameness
+of the output
+is delivered to the user
+as a feature.
+And when you saturate
+the visual environment
+of a culture
+with this median look,
+you implicitly teach
+a population
+that the median
+is all there is.
+You systemically remove
+the examples of people
+trying,
+whether they do it badly
+or well,
+to express their own
+unique, jagged reality.
+Okay, we have painted
+a pretty dire,
+intense picture here.
+The software running
+our world is bloated
+and increasingly vulnerable.
+The broader culture
+is flooded with empty slop,
+and our collective capacity
+for taste is atrophying.
+But to be truly informed,
+we cannot just look
+at one side of the ledger.
+We need to steel-man
+the opposing view.
+Let's impartially present
+the strongest arguments
+defending the current trajectory
+of generative AI
+and see how the essay's framework
+holds up against them.
+The first counter-argument
+from the proponents of AI
+is the most obvious
+and the most data-backed.
+Throughput has genuinely risen.
+The defenders of these tools
+will point directly
+to the DORA 2025 data
+we discussed earlier
+and say,
+look,
+the initial growing pains
+are over.
+We fixed the speed issue.
+Teams are currently shipping
+more features
+and writing more code
+than ever before in history.
+And as we established,
+that is factually true
+based on the data.
+They are moving faster.
+It is entirely true.
+But Flyxion's essay argues
+that pointing to volume
+is relying on the wrong metric.
+If you drastically increase
+the rate at which you ship code,
+but you simultaneously increase
+the rate of incorrect,
+unverified,
+or unstable changes,
+you haven't actually
+made forward progress.
+Right.
+You are just accumulating
+technical debt
+at a faster velocity.
+Shipping 10 times
+as many features
+does not matter
+if the underlying architecture
+becomes 10 times harder
+to maintain and secure.
+The second major counterargument
+is the historical one.
+People say,
+bad media and bad code
+are old news.
+We had terrible
+copy-pasted spaghetti code
+long before AI existed.
+We had cheap,
+generic clip art flyers
+in the 1990s.
+Slop has always existed,
+so why panic now?
+This is a very common defense.
+And the author of the essay
+concedes that it is
+historically accurate.
+Mediocrity is not new.
+But pointing out that fire
+has always existed
+in the forest
+is a very poor defense
+against the sudden deployment
+of a massive
+industrial-scale accelerant.
+Oh, that's a good way
+to frame it.
+The generative technology
+didn't invent mediocrity.
+What it did was
+completely remove
+the friction that historically
+kept the volume
+of that mediocrity in check.
+It fundamentally changed
+the rate at which production
+can outpace human judgment.
+Right.
+It used to take an hour
+of typing to write
+a really bad script.
+Now it takes a millisecond.
+That scale completely changes
+the physics of the problem.
+What about the argument
+that the models
+are constantly improving?
+People say,
+just give it a year,
+the context windows
+will get bigger,
+the reasoning capabilities
+will get sharper,
+and the AI will eventually
+just fix its own bugs.
+The models are indeed
+improving in their
+raw capabilities.
+But we have to look back
+at the Veracode security data.
+The vulnerability rates
+did not drop
+as the models scaled up.
+Furthermore,
+the essay points out
+a structural economic flaw
+in this defense.
+A more advanced model
+might lower the cost
+of verifying code slightly,
+but it lowers the cost
+of generating code
+even faster
+because rapid generation
+is what the models
+are primarily optimized
+to do.
+So the math gets worse.
+Yes.
+The mathematical gap
+between generation
+and verification,
+our G minus V equation,
+actually widens
+and worsens,
+even as the AI itself
+gets smarter.
+Okay, here is an argument
+that carries a massive amount
+of cultural
+and emotional weight.
+Democratization.
+The defense
+is that generative AI
+allows people
+who don't know
+how to code
+or don't know
+how to paint
+to finally participate
+and create things.
+It breaks the monopoly
+of the priesthood,
+the elite programmers,
+and the formally trained artists.
+The essay treats
+the democratization argument
+with serious respect.
+The access provided
+by these tools
+is real,
+and it is highly valuable
+for personal,
+localized use.
+But the systemic danger
+emerges at scale.
+Democratizing the production
+of artifacts
+without democratizing
+the underlying understanding
+of how they work
+is highly dangerous.
+Because they can't fix it
+if it breaks.
+Exactly.
+If you empower anyone
+to generate a massive,
+interconnected software system,
+but they don't actually
+understand the architecture,
+they cannot maintain it
+when it breaks.
+You end up creating
+a massive global stock
+of unmaintainable software.
+And ironically,
+rather than creating
+true independence,
+you significantly deepen
+the user's reliance
+on the massive tech vendors
+who supply
+the generative tools.
+Because if the code breaks,
+the user can't fix it.
+They have to ask the AI
+to fix it,
+trapping them
+in the ecosystem.
+And to your point
+about scale,
+the public impact
+of a software failure
+doesn't care about
+the creator's
+good intentions.
+A flawed security layer
+that leaks user data
+harms the public
+just as much,
+regardless of whether
+it was written by
+an elite veteran hacker
+or a total beginner
+using an AI tool
+for the first time.
+Exactly.
+And the final counterargument
+addresses the cultural
+backlash itself.
+It points out that
+the growing hostility
+toward AI
+is becoming deeply
+undiscriminating
+and toxic.
+They are referring
+to things like
+the May 2026
+Monet incident.
+Yes.
+For context,
+an independent artist
+posted a real,
+physical painting
+they had spent weeks
+creating in the
+impressionist style
+of Claude Monet.
+The internet mob
+immediately and viciously
+attacked the artist,
+falsely claiming
+the work was
+AI-generated slop.
+That was awful.
+The essay acknowledges
+this ugly incident
+but makes a brilliant
+counterintuitive point.
+This incident actually
+proves the central thesis
+about the loss of taste.
+Wait,
+how does a false
+accusation prove
+the loss of taste?
+Because a culture
+of reflexive,
+unthinking rejection
+has lost its
+evaluative capacity
+just as much
+as a culture
+of reflexive,
+unthinking acceptance.
+Taste is not just
+saying no.
+Taste is the learned
+ability to articulate
+why something
+is good or bad.
+If you are just
+screaming AI
+at anything that
+looks a certain way
+online,
+you aren't exercising
+taste.
+You are just acting
+on an automated
+tribal reflex.
+Oh, wow.
+Both extremes.
+Blindly accepting
+everything the AI
+produces
+and blindly rejecting
+real art
+because you are
+paranoid
+demonstrate a severe
+degradation of our
+capacity to verify
+and evaluate.
+That is a profound
+point.
+We are losing
+the ability
+to truly see
+what is in front
+of us.
+So we have fully
+diagnosed the disease.
+We have thoroughly
+analyzed the strongest
+counterarguments.
+Now,
+how do we actually
+fix this?
+How do we
+rebalance the
+G-V equation
+before the
+backlog buries us?
+The essay
+doesn't just
+leave the reader
+in despair.
+It offers a
+concrete alternative
+course.
+The proposed
+solutions all
+revolve around
+fundamentally changing
+how we choose
+to apply the
+technology.
+The first major
+shift is to
+repurpose generative
+AI for reduction
+rather than
+generation.
+Using AI to
+actively delete
+things.
+I absolutely
+love this concept.
+Instead of asking
+the language model
+to write a brand
+new bloated
+function,
+we should use
+its massive
+context reading
+abilities to
+scan the
+entire repository
+and find an
+existing function
+that we can
+reuse.
+We should ask
+the AI to
+propose safe
+deletions of
+dead code.
+Clean up the
+mess.
+We should use
+it to trace
+the unintended
+cascading
+consequences of
+a proposed
+change before
+we make it.
+We can ask
+it to explain
+a tangled
+legacy module
+so a human
+maintainer can
+finally understand
+it and
+simplify it.
+None of
+these tasks
+require generating
+large volumes
+of new text.
+They all
+actively increase
+our verification
+capacity,
+V,
+and actively
+reduce our
+accidental
+complexity.
+But the
+corporate incentives
+are all wrong
+for that right
+now.
+We need to
+radically change
+the metrics we
+use to measure
+success.
+That is the
+second proposed
+solution.
+Engineering
+managers must
+stop rewarding
+teams based on
+the sheer volume
+of output or
+the percentage
+of code written
+by AI.
+We need to
+start rewarding
+them for lines
+of code safely
+removed from
+the system.
+Reward them
+for eliminated
+external dependencies.
+Reward them
+for reducing
+the regression
+rate or for
+lowering the age
+of the oldest
+scariest code
+in the system.
+You measure
+what actually
+matters and
+what matters
+for long-term
+survival is
+simplicity and
+stability.
+What about the
+tools themselves?
+How do we
+handle the
+deployment issue?
+We need to
+change the
+defaults at the
+software level.
+Generative features
+should be strictly
+opt-in, not
+aggressively shoved
+into every
+interface by default.
+Their outputs
+should be clearly
+and universally
+labeled.
+The market
+can only
+accurately
+evaluate the
+true worth
+of these
+tools if
+their adoption
+is actually
+a voluntary
+conscious choice
+by the user.
+And structurally,
+the essay calls
+for a return
+to human-centric
+architecture.
+We must keep
+human beings
+relentlessly focused
+on the boundaries
+of the system.
+Humans should
+design the
+data model.
+Humans should
+define the
+interfaces.
+And again,
+returning to
+Fred Brooks,
+humans must
+dictate the
+things the
+system must
+refuse to do.
+Let the machine
+handle the syntax
+and the typing,
+but keep the
+essential difficulty,
+the conceptual
+integrity, firmly
+in human hands.
+But the author
+of the essay
+admits that
+individual action
+isn't going to
+be enough,
+right?
+Me deciding
+not to use
+autocomplete on
+my personal
+laptop isn't
+going to fix
+the global
+software supply
+chain that
+runs our
+hospitals and
+power grids.
+Because the
+deployment of
+these tools is
+inescapable by
+design.
+The real
+fixes require
+institutional,
+collective action.
+We are talking
+about implementing
+strict procurement
+standards.
+Public bodies
+and massive
+corporations must
+refuse to buy
+software that
+cannot prove the
+provenance and
+the human
+verification of
+its code.
+We need
+regulatory defaults
+that force
+vendors to make
+these tools opt-in
+rather than opt-out.
+A local music
+venue banning an
+AI poster is a
+great localized
+start.
+A senior developer
+refusing an
+unreviewed AI pull
+request is a
+great start, but we
+need massive
+institutions to
+realize that the
+true unit of
+progress is the
+program that is
+deeply understood,
+not the program
+that is merely
+generated.
+The true
+superpower in the
+AI age isn't
+knowing how to
+prompt a machine
+to generate a
+million ideas.
+No.
+The real
+superpower in a
+world of infinite,
+frictionless supply
+is having the
+restraint, the
+judgment, and the
+highly cultivated
+taste to delete
+999,999 of
+them.
+I couldn't agree
+more.
+So, as we wrap
+up this deep dive,
+I want to connect
+all of this back
+to you, the
+learner, listening
+to this right
+now, and how
+this impacts your
+daily life.
+We've covered a
+massive amount of
+ground today.
+We journeyed from
+Lehman's laws of
+software evolution
+in the 1970s, to
+the psychological
+perception gaps of
+the meta study
+developers, from
+the economics of
+spam applied to
+codebases, to the
+visual MSG of
+Facebook math
+groups.
+It's a lot to
+take in.
+It is.
+But the clear
+through line across
+all these domains is
+this.
+True understanding
+and genuine lasting
+progress are not
+measured by sheer
+volume.
+In a world where
+the friction of
+creation has been
+reduced to absolute
+zero, where the
+supply of content,
+code, and media is
+effectively infinite,
+your most valuable,
+irreplaceable asset is
+your evaluative
+capacity, your
+ability to verify,
+to discriminate, and
+most importantly, your
+capacity to refuse.
+But before we sign
+off, I want to toss it
+over for one final
+provocative thought.
+There is an
+implication in all
+of this data that
+the essay only hints
+at, but it is
+staggering when you
+really think about
+the timeline we are
+on.
+It is perhaps the
+most chilling aspect
+of this entire
+structural shift.
+We talked earlier
+about how image
+generators, when
+they're fed
+repeatedly on their
+own synthetic
+output, quickly
+devolve into that
+generic, degraded
+visual elevator
+music.
+It is a phenomenon
+known as model
+collapse, where the
+training loop becomes
+irreparably corrupted
+by its own data.
+Right now, as we
+speak, the software
+industry is pumping
+out unverified,
+hyper-duplicated,
+error-swallowing AI
+code into public and
+private repositories
+at an unprecedented
+industrial scale.
+We are at 25% of all
+commits and rising
+rapidly.
+This synthetic code is
+flooding the ecosystem.
+So we have to ask the
+critical question, what
+happens in two, three,
+or five years when the
+next generation of
+massive AI coding
+assistants is trained
+on those very same
+repositories?
+Oh, man.
+If the current code
+being merged today is
+bloated, duplicated,
+structurally unsound,
+and entirely stripped
+of taste, are we
+currently polluting the
+very training data we
+need to build the
+future?
+Are we mathematically
+guaranteeing that
+tomorrow's AI will be
+fundamentally less
+capable of understanding
+elegant, secure,
+human-centric systems
+simply because we
+buried all the good
+historical examples
+under a mountain of
+synthetic slop today?
+We might literally be
+burning the library of
+human knowledge just to
+keep their printing
+presses running at
+maximum speed.
+And that thought
+brings us right back
+to where we started.
+That feeling of
+frictionless magic when
+you type a prompt.
+The machine whirls,
+the text appears,
+the code compiles.
+It feels clean.
+It feels like an x-ray
+pointing out a broken
+bone.
+But beneath the surface,
+the waters are deeply,
+profoundly murky.
+Thank you for joining us
+on this deep dive.
+As you go back to your
+screens today, remember
+to cultivate your taste.
+Embrace the productive
+friction of doing things
+the hard way, and
+whatever you do, don't be
+afraid to hit delete.

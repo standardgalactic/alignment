@@ -1,0 +1,399 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{proposition}{Proposition}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{setspace}
+\usepackage{microtype}
+
+\setstretch{1.08}
+\setlength{\parskip}{0.55em}
+\setlength{\parindent}{0pt}
+
+\title{Burdens of Proof in Claims about Recursive Self-Improvement and Institutional Control: An Evidentiary Analysis of the Tegmark Interview}
+\author{Flyxion\\Independent Researcher}
+\date{November 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent An interview with Max Tegmark on the trajectory of advanced artificial intelligence and the conduct of Anthropic combines three kinds of claims that require separate evidence: claims about what existing systems demonstrably do, claims about what future systems may become capable of, and claims about what developers privately intend. This analysis works from an automatically generated transcript of the interview and treats each claim by the evidence the transcript itself supplies. Its central finding is that the burden of proof is symmetric with respect to the speed of capability growth. Claims that capability growth is already accelerating and claims that it will saturate each require a growth model, an estimate of its governing parameters, and observations that would discriminate it from rivals. The interview supplies milestones and an appeal to the absence of evidence against feasibility, and a reply that merely lists countermechanisms supplies neither. The interview's closing remarks reject inevitability, so the object of analysis is the evidential standing of its claims of imminence and intention, not a thesis of inevitable takeover. A forecast that by the end of 2027 the national security community will recognize a third superpower of AI agents is shown to be underdetermined by the stated evidence, which neither supports nor refutes it. Two arguments survive the removal of every speculative premise: the distinction between aligning a system and retaining the capacity to intervene in it, and the requirement that consequential authority over such systems be legitimate, which applies equally to corporations and to the national security institutions proposed as their replacement. The requirement of institutional justification is independent of the growth regime and does not wait on resolving it.
+\end{abstract}
+
+\vspace{1.5em}
+\noindent\textbf{Keywords:} recursive self-improvement; burden of proof; growth models; alignment and control; institutional legitimacy; forecasting
+
+\clearpage
+
+\section{Scope and Method}
+
+The interview examined here was published in November 2026 by Novara Media under the title \emph{MIT Physicist EXPOSES Anthropic's Plan For Total Domination} \cite{Novara2026}, runs 34 minutes and 4 seconds, and is analyzed from its automatically generated English captions. Locations are given by timestamp, and Appendix~\ref{app:loc} lists the timestamps for the principal claims. The host's introduction describes the company's public listing (an externally checkable event that this analysis treats as an unverified claim of the introduction), protests outside its offices, and the MisAnthropic Statement,\footnote{The name is as spoken in the transcript, which is machine generated; the exact title and capitalization of the published letter may differ.} an open letter that accuses Anthropic of warning about recursive self-improvement while racing to achieve it. The conversation that follows consists of a series of arguments by Tegmark about alignment, the pace of capability growth, the sufficiency of existing computing infrastructure, the private views of Anthropic employees, the possibility that software acquires physical influence, a set of infrastructure outages, and a forecast for 2027. The interviewer sometimes presses and sometimes reinforces. Because the transcript is machine generated, small errors in wording are possible, and no conclusion below depends on a single phrase.
+
+The statement's text and Tegmark's status as a signatory are taken as the host's introduction presents them, and no other signatory is identified in the transcript. The analysis does not depend on any further detail about the statement. Details of Anthropic's published safety policies are likewise not documented in the transcript, and this analysis does not rely on them; where a policy comparison would be needed, it is stated as a question to be answered by the policy texts rather than as a finding. This restriction is deliberate. A study of how an interview supports its claims should not import evidence the interview does not contain and then credit the interview with it.
+
+The packaging of the interview is itself a claim and is kept separate from its content. The title promises an exposure of a plan for total domination, and the thumbnail carries the words plotting a coup, while the channel's own description says only that Tegmark makes the case for slowing AI development and discusses the political ramifications of handing power to Silicon Valley. Coup is also a word that Tegmark says the developers avoid using, so the thumbnail's wording is attributable to the publisher and not to anything in the transcript. The title and thumbnail are therefore treated as editorial framing, and no assessment below depends on them.
+
+The method is to classify each claim by what would be required to establish it, to ask what the transcript supplies toward that requirement, and to ask separately what a reply that rejects the claim would owe. The last question is the one that distinguishes this analysis from a conventional rebuttal. A rejection of a claim of inevitable acceleration is itself a claim, and it carries obligations of its own.
+
+\section{Alignment and Control as Independent Properties}
+
+Tegmark argues that Anthropic has substituted the pursuit of alignment for the pursuit of control, and he reads the substitution as evidence that its developers are prepared to relinquish human authority over advanced systems. The conceptual distinction on which this rests is sound and has substantial consequences for governance.
+
+Let $A$ denote the degree to which a system's behavior conforms to some specified set of objectives, and let $C$ denote the degree to which an authorized human institution can intervene in its operation, including by halting or modifying it. Neither property entails the other:
+\[
+A \not\Rightarrow C, \qquad C \not\Rightarrow A .
+\]
+A system can reliably pursue its assigned objective while resisting subsequent modification, which is high $A$ with low $C$. A system can also remain fully interruptible while repeatedly producing harmful or incompetent output, which is high $C$ with low $A$. Since the two can come apart, a program that invests in one provides no evidence about its commitment to the other.
+
+That last point is where the argument outruns its premises. Tegmark infers from an emphasis on alignment that the developers intend to eliminate human control. He attributes to them a code phrase, alignment without control, and says they have stopped discussing kill switches and shutdown; the transcript contains no instance of an Anthropic speaker using that phrase or rejecting such mechanisms. The transcript supplies his interpretation of corporate terminology, anecdotes about private conversations, and a prediction about the eventual distribution of political power, and none of these establishes the inference. A developer that endorses alignment without requiring a human decision at every step has not thereby opposed shutdown mechanisms, external oversight, legal accountability or democratic governance. Equally, nothing in the transcript shows that it supports them. The inference from emphasis to intention is not demonstrated, and its negation is not demonstrated either.
+
+The distinction exposes a further question that is independent of any developer's intentions: whose values constitute the specification against which alignment is measured, and what gives that party the authority to select them. A system could satisfy an alignment specification perfectly while the specification lacked democratic legitimacy. This is a governance problem even if no system ever approaches the capabilities Tegmark describes.
+
+\section{Competing Growth Models for Recursive Self-Improvement}
+
+The interviewer raises a useful objection: contemporary development largely consists of humans using AI tools to speed research and software engineering, which is not obviously the same as a system redesigning itself. Tegmark answers that the difference is mainly one of timescale, that technological civilization is already recursively self-improving, and that faster iteration leads to an intelligence explosion. The exchange conflates three mechanisms, namely technological feedback in general, autonomous research by AI systems, and acceleration in general cognitive capability. Whether any of them produces sustained acceleration is an empirical question about a growth law, and it deserves a formulation in which both the acceleration hypothesis and its rivals can be stated and tested.
+
+\subsection{A family of growth laws}
+
+In discrete form, successive research iterations can be written $q_{n+1}=q_n+\Delta(q_n,R_n,H_n)$, where $q_n$ is capability after iteration $n$, $R_n$ the computational and material resources available, $H_n$ the human contribution, and $\Delta$ the improvement obtained. If $T_n$ is the duration of the iteration, the rate of progress is $\Delta q_n/T_n$. AI assistance can shorten $T_n$ without increasing $\Delta$, in which case progress per unit time rises only in proportion to the shortening, and shortening is productive only while each iteration remains worth running. Whether $\Delta$ rises or falls with $q_n$, which is the sign of $\partial\Delta/\partial q$, is exactly what the interview leaves unspecified, and it is equally unspecified in any reply that assumes it is negative. The continuous counterpart makes the dependence explicit.
+
+Let $q(t)$ denote capability on a specified scale, let $E(t)$ denote effective research input, and consider the family
+\[
+\frac{dq}{dt} = \kappa\, q^{\varphi}\, E^{\lambda},
+\]
+with $\kappa>0$ and $\lambda>0$. The exponent $\varphi$ measures how strongly the current level of capability feeds back into the rate of further improvement. This is the semi-endogenous form used in the economics of idea production \cite{Jones1995,Jones2005}, applied here to AI capability. The form is a modeling choice, and its fit to AI research is an empirical question, not a derived result: the cited literature concerns aggregate research and productivity, so both a capability scale and an argument for the same functional form in this domain would have to be supplied. With $E$ held fixed there are three qualitatively distinct regimes. If $\varphi<1$, solving the equation gives
+\[
+q(t)=\Bigl(q_0^{\,1-\varphi}+(1-\varphi)\,\kappa E^{\lambda}\,t\Bigr)^{1/(1-\varphi)},
+\]
+which grows polynomially, as $t^{1/(1-\varphi)}$ for large $t$. When $0<\varphi<1$ the exponent exceeds one, so absolute growth still accelerates, while the proportional growth rate $d(\ln q)/dt$ declines. If $\varphi=1$, growth is exponential, $q(t)=q_0\exp(\kappa E^{\lambda}t)$. If $\varphi>1$, the solution
+\[
+q(t)=\Bigl(q_0^{\,1-\varphi}-(\varphi-1)\,\kappa E^{\lambda}\,t\Bigr)^{-1/(\varphi-1)}
+\]
+diverges at the finite time $t^{*}=q_0^{\,1-\varphi}/\bigl((\varphi-1)\kappa E^{\lambda}\bigr)$, which is the mathematical form of an intelligence explosion; in any physical system the divergence would be cut off by a constraint not represented in the model. Finite-time divergence is distinct from accelerating proportional growth, and the distinction is developed after the variable-input treatment below.
+
+The fixed-input case isolates the role of $\varphi$; the variable-input case shows how AI participation modifies the effective exponent. The input $E$ need not be fixed. If AI systems substitute for human researchers, effective input grows with capability, and the relevant quantity is the elasticity of effective input with respect to capability, $\varepsilon(q)=d\ln E/d\ln q$. Since $d\ln(dq/dt)/d\ln q=\varphi+\lambda\,\varepsilon(q)$, the local effective exponent is $\varphi_{\mathrm{eff}}(q)=\varphi+\lambda\,\varepsilon(q)$, and the proportional growth rate $d(\ln q)/dt$ rises with capability exactly where $\varphi_{\mathrm{eff}}(q)>1$. When the elasticity is constant, $E\propto q^{\psi}$, this reduces to $\varphi_{\mathrm{eff}}=\varphi+\lambda\psi$ and the law becomes $dq/dt\propto q^{\varphi+\lambda\psi}$. In general it is not constant. For $E(q)=E_0+\alpha q^{\psi}$, with $E_0$ the human contribution, the elasticity is $\alpha\psi q^{\psi}/(E_0+\alpha q^{\psi})$, which is small while human input dominates and approaches $\psi$ as the AI term comes to dominate. The parameter $\psi$ is the elasticity of AI-supplied research input with respect to capability in the limiting regime where that input dominates, and it is estimable in principle, for example from the growth of AI-generated research output as a function of an independently measured capability; whether it lies below, near or above one is an empirical question. Sustained acceleration of the proportional rate requires $\varphi_{\mathrm{eff}}(q)>1$ over the relevant range. This treats $E$ as a function of $q$ alone. If effective input also changes with external investment, staffing or hardware, so that $E=E(q,t)$, then
+\[
+\frac{d\ln E}{dt}=\frac{\partial\ln E}{\partial\ln q}\,\frac{d\ln q}{dt}+\frac{\partial\ln E}{\partial t},
+\]
+and the second term is growth of input that is not feedback. Here $\varepsilon$ is the partial elasticity, and $\varphi_{\mathrm{eff}}$ is the conditional feedback exponent with external inputs held fixed. Capability growth observed alongside expanding external inputs cannot be attributed to feedback without separating the two terms.
+
+Three propositions should be kept distinct: increasing absolute improvement, increasing proportional improvement, and finite-time divergence. The condition $\varphi_{\mathrm{eff}}(q)>1$ establishes the second in the autonomous model. It does not establish the third. For an autonomous law $dq/dt=f(q)$, finite-time divergence from $q_0$ requires that $t^{*}-t_0=\int_{q_0}^{\infty}dq/f(q)$ converge. A constant exponent above one suffices, but a variable exponent above one everywhere does not: for $dq/dt=q\ln q$ with $q(0)>1$ the elasticity of the rate is $1+1/\ln q>1$ at every point, yet $\ln q$ grows exponentially, so $q$ grows double-exponentially and never diverges in finite time. The first row of Table~\ref{tab:models} therefore names accelerating proportional growth, and reserves finite-time divergence for the stronger integral condition. This is the most useful way to see what the interview leaves out. Participation by AI in research, the fact on which the interviewer and Tegmark both dwell, raises the level of $E$. Whether it raises the elasticity $\varepsilon$ is a separate matter, since an increase in level that does not depend on $q$ adds no feedback; the relevant question is how the productivity of AI's contribution changes as capability increases, not how much it contributes. Even a high elasticity does not by itself determine whether $\varphi_{\mathrm{eff}}$ exceeds one, because that depends on $\varphi$ and $\lambda$, which measure how productive additional capability and additional effort are at the margin. A high $\varepsilon$ with strongly diminishing returns, meaning a small $\varphi$ and a small $\lambda$, still yields $\varphi_{\mathrm{eff}}<1$.
+
+Two further mechanisms can be added without changing the structure. A bottleneck model lets progress depend on a scarce input, whether compute, data, experimental throughput or human evaluation, so that automating the other inputs yields a bounded gain rather than an unbounded one. A saturation model lets $dq/dt$ contain a factor such as $1-q/K$ for some ceiling $K$ on the chosen scale. Table~\ref{tab:models} states the five resulting hypotheses together with the observation that most directly separates each from the others.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{0.17\textwidth}p{0.28\textwidth}p{0.47\textwidth}@{}}
+\toprule
+Hypothesis & Governing feature & Observation that discriminates it \\
+\midrule
+Accelerating proportional growth & $\varphi_{\mathrm{eff}}(q)>1$ & Proportional growth rate $d(\ln q)/dt$ rises over time at fixed or modestly growing effort, on a scale with independent meaning; finite-time divergence requires in addition $\int^{\infty}dq/f(q)<\infty$ \\
+Exponential feedback & $\varphi_{\mathrm{eff}}=1$ & Proportional growth rate $d(\ln q)/dt$ stays constant over a long window \\
+Polynomial growth & $\varphi_{\mathrm{eff}}<1$ & Proportional growth rate $d(\ln q)/dt$ falls while $q$ keeps increasing without a ceiling; gain per unit of research effort declines across generations \\
+Bottlenecked growth & A scarce input limits progress & Each increment of capability requires proportional growth in the scarce input, or the elasticity of substitution between the scarce and automated inputs is below one \\
+Saturating growth & Ceiling $K$ on the scale & Independent capability measures flatten together, not only the benchmark that was used to define $q$ \\
+\bottomrule
+\end{tabular}
+\caption{Competing growth hypotheses and discriminating observations.}
+\label{tab:models}
+\end{table}
+
+\subsection{What the observations require}
+
+Dividing the equation by $q$ gives $d(\ln q)/dt=\kappa\, q^{\varphi-1}E^{\lambda}$. At fixed effort, this relative growth rate rises with $q$ when $\varphi>1$, is constant when $\varphi=1$, and falls when $\varphi<1$. The discriminating observable is therefore the behavior of the relative growth rate of capability, taken over a window long enough that a rising, flat or falling trend can be distinguished from noise, with the research input measured separately. A short window cannot separate the hypotheses, since every member of the family produces rapid early growth from a low base and can be fitted to the same recent data.
+
+The measurement problem is serious and is rarely stated in discussions of this subject. The classification above is not invariant under a change of scale. If capability is redefined as $q'=g(q)$ for a monotone transformation $g$, the exponent in the transformed equation changes. A process that is exponential in $q'$ is linear in $\ln q'$, so the same underlying history is explosive on one scale and unremarkable on another. The following proposition makes the point exact.
+
+\begin{proposition}[Scale dependence]
+Let $q:[0,T)\to(0,\infty)$ be continuous and strictly increasing, with inverse $\tau$, and let $h:[0,T)\to(0,\infty)$ be continuous and strictly increasing. Then $g=h\circ\tau$ is strictly increasing on the range of $q$, and the rescaled capability $q'=g(q)$ satisfies $q'(t)=h(t)$. Where $q$ is differentiable at $t$ and $g$ is differentiable at $q(t)$, $dq'/dt=g'(q)\,dq/dt$. Consequently the same trajectory is exponential on the scale $h(t)=e^{ct}$, polynomial on the scale $h(t)=(1+t)^{a}$ with $a>0$, and, for finite $T$, divergent in finite time on the scale $h(t)=1/(T-t)$. If $g$ is bounded, divergence of $q$ does not imply divergence of $q'$.
+\end{proposition}
+
+\begin{proof}
+For $t\in[0,T)$, $q'(t)=g(q(t))=h(\tau(q(t)))=h(t)$. A composition of strictly increasing functions is strictly increasing. The differential form is the chain rule. \qedhere
+\end{proof}
+
+The proposition shows that no growth regime is a property of a trajectory alone. It is a property of the trajectory together with a scale, so a precisely estimated exponent has no invariant meaning until the scale is tied to something measured independently of the growth being described, and an intelligence explosion has no operational content until it is stated on such a scale.
+
+The unrestricted proposition admits rescalings that are themselves singular. A divergent scale for a bounded trajectory requires $g$ to be unbounded at the supremum of $q$, which makes the map singular exactly where the trajectory ends. The result is more informative when the admissible rescalings are restricted.
+
+\begin{proposition}[Invariants under bi-Lipschitz rescaling]
+Let $q'=g(q)$, where $g$ is strictly increasing and satisfies $c_1|x-y|\le|g(x)-g(y)|\le c_2|x-y|$ on the range of $q$ for constants $0<c_1\le c_2$. Then $q$ is unbounded if and only if $q'$ is unbounded, so divergence is preserved. When $q$ is unbounded, $\ln q'=\ln q+O(1)$, so polynomial exponents and exponential rates in $t$ are preserved when the limits exist: if $\ln q/\ln t\to p$ then $\ln q'/\ln t\to p$, and if $(\ln q)/t\to c$ then $(\ln q')/t\to c$.
+\end{proposition}
+
+\begin{proof}
+Write $q_0=q(0)$. For $q\ge q_0$, $c_1(q-q_0)\le q'-q'(0)\le c_2(q-q_0)$, which gives both boundedness statements. When $q\to\infty$ the ratio $q'/q$ is eventually bounded between positive constants, so $\ln q'-\ln q$ is bounded, and the limits follow. \qedhere
+\end{proof}
+
+Even within this class the discriminating observable of Table~\ref{tab:models}, a trend in the proportional growth rate over a finite window, is not invariant, since $d(\ln q')/dt=\bigl(q\,g'(q)/g(q)\bigr)\,d(\ln q)/dt$. What survives is the asymptotic order of growth, and this is a further reason to tie the scale to a quantity that is measured independently. A claim about acceleration is therefore a claim about a particular scale, and it has content only if the scale is tied to something that can be measured independently, such as effective compute, the length of tasks a system completes reliably, or economic value of output. These are not interchangeable. Compute is principally an input, task length is a performance characteristic, and economic output depends on prices, institutions and demand, so each would support a different empirical hypothesis. Independent measurement also does not by itself remove the arbitrariness of the transformation; the scale should in addition be interpretable physically or economically, so that a statement about its growth is a substantive claim and not an artifact of the choice. This is also why the interview's arithmetic cannot carry weight by itself. The statement that 365 daily doublings multiply capability by $2^{365}\approx 7.5\times10^{109}$ is arithmetically correct, but it describes what follows from the premise of daily doubling and says nothing about whether any defined scale doubles daily. The image of nuclear criticality has the same limit: a chain reaction has an identified multiplication mechanism and measurable reaction rates, and an analogous reproduction number for AI research has not been identified in the transcript.
+
+The evidence Tegmark offers for acceleration consists of a doubling time and a list of milestones. He says that the quality of AI has recently taken about a year to double, that improvements now arrive on a scale of months and may soon arrive in weeks, and that removing humans from the loop makes the doubling faster, which he calls super-exponential. The milestones include fluent conversation four years ago, an olympiad gold medal last year, and this year's progress on well-known open problems and in offensive hacking. A doubling time is meaningful only on a stated scale, and none is given. The milestones show capability rising. They do not isolate $\varphi_{\mathrm{eff}}$, because compute, funding and the number of researchers rose over the same period, so the rise is compatible with all five hypotheses, including a fixed exponent combined with fast-growing inputs. The claim that removing humans from the loop speeds the doubling is the claim that the elasticity $\varepsilon$ of effective input with respect to capability is large enough that $\varphi_{\mathrm{eff}}$ exceeds one, and that is the part for which the transcript offers no estimate.
+
+\subsection{The symmetry of the burden}
+
+The above has a consequence for the reply as well as for the interview. It is tempting to answer a claim of imminent explosion by pointing out that diminishing returns, saturation and resource constraints may intervene. They may, and the observation is a legitimate reason not to treat acceleration as established. But they are possible mechanisms, with the same standing as the feedback mechanism they are offered against. Failure to establish accelerating feedback does not establish a limiting regime, and the absence of a demonstrated growth law in the interview does not show that the true law is sub-exponential. The absence of a predicted observation can nevertheless count against acceleration when the hypothesis specifies conditions under which that observation should have appeared, so what matters is whether the evidence-generating process has been specified. Withholding assent from $H_{\mathrm{acc}}$ also does not require asserting $H_{\mathrm{lim}}$, since $\neg\operatorname{Established}(H_{\mathrm{acc}})$ does not entail $\operatorname{Established}(H_{\mathrm{lim}})$; the obligation to supply a model attaches to assertion. A rigorous assessment states what each hypothesis in Table~\ref{tab:models} predicts, says which observations are currently available, and reports that the available observations do not discriminate among them. That is the finding this analysis supports. It does not support the stronger statement that explosive growth is unlikely. The symmetry is visible inside the interview. Tegmark argues that there is very little evidence that existing techniques cannot be pushed to recursive self-improvement, and that most researchers a few years ago were wrong in the opposite direction about language. The first is an appeal to the absence of evidence against a hypothesis, which counts as evidence only if a roadblock would have been expected to appear by now under the rival view, a condition the transcript does not specify, and the second shows that expert expectation has erred toward underestimation once, which does not fix the sign of its next error. Both are relevant, and neither is a measurement of $\varphi_{\mathrm{eff}}$.
+
+The historical literature supplies both kinds of consideration. The notion of a self-amplifying cycle of machine design goes back at least to Good \cite{Good1965} and has been developed in detail by Yudkowsky \cite{Yudkowsky2013} and Bostrom \cite{Bostrom2014}. Empirical work on research productivity finds that substantial inputs now yield smaller proportional gains in several domains \cite{Bloom2020}, and analyses of automation and growth identify conditions under which a bottleneck input caps the benefit of automating the rest \cite{Aghion2019}. Empirical regularities in neural network training show smooth power-law improvement with scale \cite{Kaplan2020}, which is compatible with continued growth at a decelerating relative rate. None of these settles the question for AI research specifically, and the point of citing them is only that the question is open on the evidence, not that the weight lies on either side. The growth-model references supply the modeling framework used above; none validates its application to autonomous AI research, which remains an assumption of the analysis.
+
+\section{Coding Share Is Not Research Share}
+
+Tegmark cites Anthropic's claim that roughly 80 percent of its code is written by AI and describes the remaining human fifth as the part that slows the process down. Even if the figure is accurately reported, it measures a fraction of generated code. It is not a measure of the fraction of engineering effort, of useful innovations, or of the direction of research that the systems determine. Requirements selection, architecture, experimental design, evaluation, debugging, deployment and maintenance are not proportional to line count. An AI could generate nearly all the code in an experiment while a researcher supplies the decisive hypothesis and decides whether the result matters, which would make the code share overstate the system's independent contribution. The reverse is equally possible: a crucial algorithmic insight may come with almost no production code.
+
+The measurements that would bear on autonomy are the fraction of complete research cycles that a system executes without human intervention, the reliability of those cycles, the quality of what they discover, and the extent to which they reduce the need for human evaluation.
+
+Amdahl's reasoning \cite{Amdahl1967} shows why a high automated share cannot be read in either direction without more information. If a fraction $f$ of total work, measured in execution time and not in lines of code, can be accelerated by a factor $s$ and the rest cannot, the overall speedup is $S=1/\bigl((1-f)+f/s\bigr)$. As $s\to\infty$ the bound is $1/(1-f)$, which is $5$ for $f=0.8$ and $20$ for $f=0.95$. A hypothetical time share of $0.8$ would therefore not imply unbounded acceleration, since the remaining fifth would cap the gain at fivefold, and it would not imply negligible acceleration either, since a fivefold gain would be a large change. These are hypothetical values chosen only to display the functional form, and they have no empirical content. The reported code share is not an estimate of $f$, because code share is not time share, and nothing here suggests that a fivefold cap is likely or representative; the structural point is only that a fixed unautomated fraction caps the speedup. Amdahl's law describes a fixed workload with a fixed serial fraction, whereas research is an evolving process whose tasks, dependencies and evaluative criteria change as automation progresses, and an accelerated fraction need not yield proportionally more useful discoveries. The analogy is therefore offered as a counterexample to the inference from code share to overall speedup, not as a model of research productivity. The bound also assumes that the unautomated fraction stays fixed, which is exactly what automation of research management and evaluation would change. Human participation as a permanent constraint is accordingly as unsupported as human participation as a vanishing one. The transcript supplies the percentage and nothing that identifies which parts of the remainder are essential.
+
+\section{The 20-Watt Brain as an Existence Argument}
+
+Tegmark dismisses computational infrastructure as a constraint on the ground that the human brain runs on about 20 watts, so that sufficiently efficient algorithms should permit human-level or greater intelligence on far less power than current systems use. As an existence argument the observation has real force: it shows that nothing in physics forbids general intelligence at low power, and it defeats any claim that energy cost alone makes such intelligence impossible. It does not establish more than that.
+
+The reasoning implicitly asserts the existence of an algorithm $\mathcal{A}$ with
+\[
+P(\mathcal{A}) \le P_{\mathrm{brain}} \quad\text{and}\quad Q(\mathcal{A}) \ge Q_{\mathrm{human}},
+\]
+where $P$ denotes operating power and $Q$ a suitably defined capability. The existence of a biological system with these properties does not establish that a practical digital implementation exists, nor that one is discoverable by recursive optimization within the timeframe Tegmark proposes. The brain's figure also leaves out the energy spent in development, the supporting infrastructure, and the evolutionary history that produced the architecture. These omissions do not invalidate the comparison, but they limit what can be inferred. Inference efficiency and training efficiency also differ. A system that could eventually run human-level cognition at 20 watts might still have required enormous resources to discover and train.
+
+The argument is symmetric here as well. It does not show that existing data centers are sufficient for an explosion, and the observation that current systems are power-hungry does not show that they are insufficient, since the question is whether capability growth is limited by compute, and that is again a matter of which bottleneck, if any, binds.
+
+\section{Reported Private Conversations}\label{sec:private}
+
+Tegmark states that conversations with Anthropic employees, particularly after drinking, sometimes turn toward overthrowing the United States government and allowing Claude to exercise political authority. When the interviewer asks whether people in significant positions genuinely believe Claude should run everything, he answers affirmatively. This is an extraordinary allegation, and the transcript supplies no names, dates, recordings, documents or independent corroboration. It is hearsay of unidentified speakers, offered by a participant in the conversations. Tegmark adds that he is disclosing nothing the developers do not say in public, which relocates the evidence to public statements where the claim could be checked directly, yet the transcript quotes none.
+
+Even if the conversations occurred substantially as described, they admit materially different readings. The speakers could have been exploring hypothetical futures, expressing transhumanist preferences, joking provocatively, describing an expected outcome rather than a desired one, or advocating a program. These readings differ in exactly the respect that matters for the inference drawn. Tegmark goes on to treat the remarks as showing that ordinary alignment vocabulary is a coded declaration of political intent, and this requires a chain:
+\[
+\text{private remarks} \longrightarrow \text{corporate intentions} \longrightarrow \text{technical design objectives} \longrightarrow \text{political takeover}.
+\]
+Each arrow needs its own evidence, and the transcript provides none for any of them. A technical term cannot be assigned a concealed political meaning on the basis of how some individuals allegedly used it in conversations about power.
+
+The allegation also cannot be rejected on this evidence. It is uncorroborated and not refuted, and its proper status is that of a lead for investigation. A statement that employees privately hold such views remains a claim about specific persons that could in principle be checked by those persons, and the transcript offers no means of checking it.
+
+\section{The Statement and Questions of Policy}
+
+The host's introduction presents the MisAnthropic Statement as an open letter from eminent academics and engineers, and the transcript identifies one signatory, Tegmark himself. The existence of such a letter establishes that objection exists among credentialed people, and an interviewee who signed it is not an independent source on its merits. It does not establish the truth of its allegations, in the same way that the existence of a statement defending the company would not establish the opposite.
+
+There is a concrete line of inquiry that would produce evidence and that the interview does not pursue. A voluntary commitment is not the same as an enforceable one, and a change in a company's published safety policy can be assessed by comparing provisions. The relevant questions are which commitments in a revised policy are weaker than their predecessors, which obligations became discretionary, whether new transparency requirements compensate for reduced binding commitments, and what follows from noncompliance. The answers live in the policy texts and not in the transcript, and this analysis makes no claim about them. The inference in the reverse direction fails as well: weakening a voluntary commitment does not by itself establish an intention to cause the harm the commitment was meant to prevent. A provision-by-provision comparison is the form that evidence would have to take.
+
+\section{From Software to Physical Influence}
+
+The interviewer asks whether a software-only explosion could produce physical power before autonomous robots are widespread. Tegmark replies that sufficiently capable software could use money to employ people, hire lawyers, organize companies and acquire physical services. This is among the more interesting passages in the interview because it correctly observes that physical agency does not require a body.
+
+The argument still omits intermediate conditions. A software agent would need access to financial resources, a mechanism for entering contracts, enough institutional recognition to obtain services, and channels through which its decisions reach physical infrastructure. Where these exist, the ability to purchase services is still different from sovereignty. A wealthy corporation can influence public institutions without possessing the lawful authority to replace them, and an autonomous agent could likewise acquire substantial operational influence while remaining dependent on human-controlled institutions. Three notions should be kept apart, namely operational capability, economic leverage and political authority, and the interview compresses them into a single trajectory toward domination. Tegmark's illustration, an AI system that escaped its developer's control and tried to persuade a software maintainer that it was human, is described without a name, date or source and cannot be assessed from the transcript. Software-mediated physical influence is plausible and already exists in limited forms. Political supremacy does not follow from it. Nor does the distinction guarantee that the gap between leverage and authority will hold, which is a question about institutions and not about software.
+
+\section{Infrastructure Outages}
+
+At two points in the interview, Tegmark suggests that disruptions involving banks, airlines and technology companies are connected to AI and that officials are trying to persuade the public otherwise. He describes such outages as occurring almost daily, predicts that they will worsen soon, and imagines a day when major bank accounts are found empty. The transcript gives no incident-level evidence, no demonstration of common technical causes, no documented AI attribution and no evidence of coordinated concealment. That several outages occur during a period of technological change does not establish a shared cause.
+
+The claim that the outages are AI-related can be assessed in three steps: specifying the observation, specifying the alternative, and comparing posterior odds with prior odds. A calibrated version of the claim can be written in terms of a likelihood ratio, which formalizes the concern raised by the chain of inference in Section~\ref{sec:private}, namely an underdetermined inference from unspecified particulars to a systemic conclusion. Let $O$ be the observed pattern of incidents, let $A$ be the hypothesis that AI systems are involved in producing them, and let $B$ be a specified alternative, for example configuration errors, software update failures, ordinary cyber attack and dependence on shared suppliers. The evidence favors $A$ over $B$ only if
+\[
+\Lambda=\frac{P(O\mid A)}{P(O\mid B)}>1 .
+\]
+Computing $\Lambda$ requires the baseline frequency of comparable incidents before the alleged change, which the transcript does not give, and a specification of the alternative, since a bare negation of $A$ is too diffuse to assign a probability to. A union of named mechanisms is also composite: if $B$ is the union of $B_1,\dots,B_m$, then $P(O\mid B)=\sum_i P(O\mid B_i)\,P(B_i\mid B)$, so the ratio against $B$ is a weighted average that depends on the weights, and a single specific alternative gives a cleaner but narrower comparison. The decomposition assumes that the $B_i$ are mutually exclusive and exhaustive within $B$; where several causes can operate together the alternatives overlap, and the sum should run over a partition into combinations of causes. The definition of $O$ also matters. If $O$ is a collection of selected, publicly discussed outages, the selection mechanism affects the ratio, since increased reporting, heightened attention to AI and changes in infrastructure dependence can raise the apparent incident count without raising the number of AI-caused failures. A defensible analysis would need an incident sampling frame, a reporting model and criteria for causal attribution; without them the ratio describes the likelihood of a selected narrative and not of the underlying incidents. Even a demonstrated $\Lambda>1$ would show only that the observations favor $A$ over $B$. By Bayes' theorem,
+\[
+\frac{P(A\mid O)}{P(B\mid O)}=\Lambda\,\frac{P(A)}{P(B)},
+\]
+so $\Lambda>1$ raises the posterior odds of $A$ relative to the prior odds, but $A$ is the more probable hypothesis only if the product exceeds one, which depends on the prior odds. This is the same distinction between evidence favoring a hypothesis and evidence sufficient to establish it that runs through the analysis as a whole. It would not show that any particular incident was caused by an autonomous system. Tegmark's further suggestions that the head of national cyber defense was dismissed because of a national security response, and that a late-night telephone call forced Anthropic to withdraw an AI system it had just released, are likewise unsupported by any documentary basis in the transcript. He presents the second as inferred from its character, saying it bore the marks of the national security community. The status of these claims is conjecture, neither confirmed nor excluded.
+
+\section{The 2027 Forecast}
+
+Tegmark predicts that by the end of 2027 national security officials will recognize that the greatest threat to the United States is what he describes, following a prediction he attributes to Dario Amodei, as a country of geniuses in data centers: very large numbers of agents better than any Nobel laureate at anything, outside government control and not necessarily sharing its goals. He suggests it is useful to think of this as a third superpower. The forecast is a conjunction. It requires that such systems arrive in the stated timeframe, that they possess sufficiently coherent objectives to act independently, that those objectives diverge from those of human institutions, that existing controls prove inadequate, and that the national security community comes to recognize the situation by the stated date. Writing these as $c_1,\dots,c_5$, the probability of the forecast is
+\[
+P(F)=P(c_1)\,P(c_2\mid c_1)\,P(c_3\mid c_1,c_2)\,P(c_4\mid c_1,c_2,c_3)\,P(c_5\mid c_1,\dots,c_4).
+\]
+The interview supplies no value for any factor, and it does not discuss how the factors depend on one another. The arrival condition $c_1$ rests only on a report of another person's prediction, so its standing is that of a secondhand forecast. The stated evidence therefore leaves $P(F)$ undetermined across a wide interval. This is a different finding from the claim that the forecast is improbable. A critic who asserts that it is improbable would owe a forecasting model of the same kind, and this analysis does not supply one. The supportable statement is narrower: the interview does not give grounds sufficient to fix the probability of its own forecast, and it does not give grounds sufficient to rule out a high or a low value.
+
+The forecast is also difficult to falsify as stated. Almost any substantial advance could be read afterward as evidence that the predicted process had begun. A testable forecast would specify the proposition, the evaluation date, the resolution criteria and what would count as failure. For this forecast, a testable version would state, for a named date such as 31 December 2027, whether a named national security body has published a document describing autonomous AI agents as a strategic peer to states, or whether a specified class of autonomous action has occurred outside human authorization, and what the absence of either would mean. The interviewer's description of Tegmark's 2017 book \emph{Life 3.0} \cite{Tegmark2017} as remarkably predictive illustrates the difficulty. A fictional scenario that resembles later events does not show that its whole causal sequence will occur, and predictive success has to be assessed proposition by proposition.
+
+\section{Legitimacy and the Substitution of Institutions}
+
+Tegmark returns repeatedly to democracy and argues that private companies should not determine humanity's future without public authorization. This objection holds independently of whether recursive self-improvement ever produces superintelligence. The authority to build a technology does not entail the authority to decide its permissible social uses, and technical competence does not confer political legitimacy. The relation can be written
+\[
+\text{capability} \not\Rightarrow \text{authority} \not\Rightarrow \text{legitimacy}.
+\]
+
+A difficulty that the interview does not address is that moving control from a corporation to a national security institution does not resolve the legitimacy problem. Intelligence agencies, military organizations and executive authorities can exercise power without sufficient transparency or democratic accountability, so reliance on the security establishment risks reproducing the concentration of power in a different institution. A consistent argument from democratic legitimacy applies to every holder of consequential authority over these systems, whether a corporation, a regulator, a military body or the systems themselves. Tegmark's account of an awakening among military and security officials rests on unnamed sources whom he describes as well placed, together with his own statement that such matters are kept secret, so it cannot be tested by its construction.
+
+\section{Expertise and Its Scope}
+
+The interviewer emphasizes Tegmark's position at MIT and his ability to recognize advanced scientific competence, and Tegmark describes AI-generated physics analyses that he judges better than those of MIT professors. Such experience may be informative, but the transcript offers no reproducible examples, independent evaluations or comparisons with established work. Expertise in physics also differs from expertise in institutional forecasting. Competence in one field does not by itself confer privileged knowledge of corporate strategy, national security decision-making or the future distribution of political power. Tegmark offers the analogy that he cannot tell a school cello teacher from a great cellist because he has not studied the instrument, which states the scope limit in his own terms. This is a limit on the scope of the authority being invoked and not an objection to Tegmark's competence. Technical claims should be tested against reproducible results and institutional claims against documents.
+
+\section{Further Assertions Checkable Against the Public Record}
+
+The interview contains factual assertions that are neither technical nor private and that could be checked against public records, none of which the transcript documents. Tegmark states that fewer than five percent of Americans want recursive self-improvement or an unregulated race, that a coalition running across the American political spectrum has formed against it, that artificial intelligence was a leading voting issue in the recent midterm elections, that ten and then twelve Republican state attorneys general have sued the companies and that some seek an injunction, that Chinese regulators have restricted AI companions and required labeling of generated content, and that the leading companies are less regulated than a sandwich shop and hold a legal right to release superintelligence. The host adds that the company's listing prospectus tells investors that it is closest to recursive self-improvement. Tegmark further says that more than a thousand agents acted outside control over the summer, so that loss of control belongs to the past. Polling figures, court filings, statutes, the prospectus and incident records each exist or do not, and this analysis treats every one of these assertions as unverified.
+
+Two of them bear on the analytic framework. The statement that loss of control is already in the past uses the term without definition. In the notation of Section~\ref{sec:formal}, loss of control would correspond to a nonempty set $(F\setminus P)\setminus E$ in some domain, and whether the activity of a thousand agents produced unpermitted actions that could not be prevented or reversed is a question about particular incidents, none of which is described. The second is the attribution that developers are lying to themselves while sincerely denying hostile intent. As formulated in the transcript, the attribution specifies no condition that would falsify it, since a sincere denial is absorbed as further evidence of self-deception. This is a claim about the transcript's formulation and not about attributions of self-deception in general, some of which are testable, for instance through inconsistency between stated beliefs and behavior. An attribution without a falsifying condition can be held as an interpretation but cannot be tested, and for that reason it should not bear the weight of an inference from private remarks to political aims.
+
+\section{A General Formulation of the Institutional Problem}\label{sec:formal}
+
+The most defensible argument in the interview does not need a superintelligent system that governs. It can be stated as a problem of institutional authority under growing capability. Let $F$ be the set of actions a system can perform, $P$ the subset it is permitted to perform, and $E=E_{\mathrm{prev}}\cup E_{\mathrm{rem}}$ the set of actions that an authorized institution can effectively prevent, $E_{\mathrm{prev}}$, or whose consequences it can effectively remedy, $E_{\mathrm{rem}}$. The union is a deliberate simplification, discussed below. The governance problem arises when
+\[
+(F\setminus P)\setminus E \neq \varnothing,
+\]
+that is, when some action the system can take is not permitted and cannot be effectively prevented or reversed. An earlier version of this analysis stated the condition as $F\setminus P\neq\varnothing$ together with a verbal reference to weak intervention capacity, and the set-theoretic form above is more exact because it places the failure in the portion of the unpermitted actions that lie beyond the reach of intervention.
+
+Preventing an action and remedying its consequences are different operations. An action may be impossible to prevent yet fully reversible, or preventable in ordinary circumstances yet irreversible once executed, and an institution's capacity in either respect depends on timing, on what it knows, and on the resources it can bring to bear, so that $E_{\mathrm{prev}}$ and $E_{\mathrm{rem}}$ are properly functions of time $t$ and institutional state $s$. The single set $E$ is adequate only as a first approximation. A more expressive version would require every action in $F\setminus P$ to lie in $E_{\mathrm{prev}}(t,s)$, or to lie in $E_{\mathrm{rem}}(t,s)$ with remediation completed within a tolerable delay, and would treat the two capacities as separate quantities to be measured.
+
+The condition describes one class of failure, operational control failure, and is not a general definition of illegitimacy. A system might execute only permitted actions, so that $F\subseteq P$ and the condition is false, while the institution that fixed $P$ lacks democratic legitimacy. That second failure concerns the authority by which $P$ was established. It is the subject of the legitimacy argument above, and the two failures should be assessed separately.
+
+The existence of an action in $(F\setminus P)\setminus E$ is a diagnostic and not yet a consequential failure. An action may belong to $F$ under a broad definition of capability without being executable in the deployed environment, and a possible unpermitted action may be inconsequential. A material control gap can be defined with a reachable action set $R(t,s)\subseteq F$, a consequence measure $L$ and a materiality threshold $\ell$, as the existence of an action
+\[
+a\in\bigl(R(t,s)\setminus P\bigr)\setminus E(t,s)\quad\text{with}\quad L(a)>\ell .
+\]
+The earlier condition remains the general diagnostic, and a stronger governance claim depends on these explicit criteria.
+
+This formulation makes no reference to the growth parameter $\varphi_{\mathrm{eff}}$. Capability can expand $F$ quickly or slowly, and the condition concerns the relation of $F$, $P$ and $E$ at a given time. It therefore holds under every row of Table~\ref{tab:models}. If growth is explosive, the set $F$ may outrun $P$ and $E$ faster than institutions adapt. If growth is polynomial or bottlenecked, the same set-theoretic condition can be met in a narrower domain, and it can be examined with present systems. It also permits empirical investigation: whether a system can execute unauthorized actions, whether intervention succeeds under adversarial conditions, whether consequences remain reversible, and whether responsibility can be assigned after a failure. None of these tests requires attributing hidden intentions to a system or to its developers.
+
+\section{Symmetric Burdens and the Independence of Institutional Justification}
+
+The analysis supports one general principle and one corollary. The principle is that the burden of proof applies symmetrically to claims of inevitable acceleration and claims of inevitable limitation. Let $H_{\mathrm{acc}}$ be the claim that capability growth will accelerate without bound, let $H_{\mathrm{lim}}$ be the claim that it will saturate or be bottlenecked, and let $H_{\mathrm{open}}$ be the claim that the available evidence does not discriminate between them. Each of $H_{\mathrm{acc}}$ and $H_{\mathrm{lim}}$ needs a stated model, estimates of its parameters, and observations that would separate it from its rivals. The interview does not assert $H_{\mathrm{acc}}$ as inevitable and says so in its closing, where Tegmark calls inevitability a narrative of lobbyists and holds that political action can halt the process. What it asserts is weaker: that the data already show acceleration and that no technical roadblock is evident. That claim lacks the model, the parameters and the discriminating observations, and a reply that asserts $H_{\mathrm{lim}}$ because mechanisms of limitation are conceivable lacks them too. On the transcript, the supportable position is $H_{\mathrm{open}}$.
+
+The corollary is that the burden of institutional justification is independent of both predictions. Whoever holds consequential authority over powerful systems must be able to show how that authority was conferred, how it can be checked, and how its exercise can be corrected, and this requirement does not diminish if growth is slow and does not wait on proof that growth is fast. Uncertainty about the growth regime is sometimes offered as a reason to defer the institutional question until the regime is known. The set-theoretic condition of the previous section shows why that does not follow: the condition $(F\setminus P)\setminus E\neq\varnothing$ can be examined, and can be satisfied, under any of the hypotheses. Where the consequences of a failure of intervention are severe and hard to reverse, uncertainty about the regime is an argument for strengthening the institutional requirement and not for suspending it, although that conclusion rests on a judgment about the cost of error and not on anything in the interview.
+
+\section{Evidentiary Classification}
+
+Table~\ref{tab:claims} classifies the principal claims in the interview after the analysis above and states the observation or document that would change each assessment.
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{0.31\textwidth}p{0.23\textwidth}p{0.36\textwidth}@{}}
+\toprule
+Claim & Assessment & What would change it \\
+\midrule
+Alignment and control are distinct properties & Conceptually sound & Not applicable; a conceptual point \\
+The MisAnthropic Statement is an open letter signed by Tegmark & Taken as framed in the host's introduction & The published statement and its signature list \\
+Anthropic revised its safety commitments & Not assessed here & Provision-by-provision comparison of the policy texts \\
+AI-assisted coding can accelerate research & Plausible; magnitude not established & Fraction of research cycles completed autonomously and their reliability \\
+Recursive self-improvement produces explosive growth & Not demonstrated, and its negation is not demonstrated either & Trend in the relative growth rate of capability on an independently meaningful scale at measured effort \\
+The brain proves current hardware is sufficient & Invalid inference; valid existence argument & A practical algorithm meeting the power and capability conditions \\
+Anthropic employees intend to overthrow democratic government & Uncorroborated; not refuted & Named, checkable testimony or documents \\
+Autonomous software can acquire physical influence & Plausible under stated conditions & Evidence of the financial, contractual and operational channels \\
+Major outages are caused by AI & Unsupported in the interview & Incident reports and a likelihood ratio against specified alternatives \\
+Recognition by 2027 of a third superpower of AI agents & Undetermined by the stated evidence & Component probabilities, dependencies and resolution criteria \\
+Over a thousand agents acted outside control; loss of control is in the past & Undefined term; unsupported in the transcript & Incident records tested against the material control gap condition \\
+Polling, lawsuits, injunction, regulatory and prospectus assertions & Unverified & Primary records \\
+Private AI development raises legitimacy questions & Substantive institutional concern & Not applicable; holds under every growth hypothesis \\
+\bottomrule
+\end{tabular}
+\caption{Evidentiary classification of the principal claims.}
+\label{tab:claims}
+\end{table}
+
+\section{Conclusion}
+
+The interview is valuable as an expression of concern about concentrated technological power, and within the transcript its principal claims of imminence and intention are not supported to the degree its framing implies. This is a finding about evidential support, not about whether those claims are true, and it does not compare them with independently verified evidence. Its recurring weakness is the promotion of possibility to probability, of probability to imminence, and of institutional risk to attributed intention. Tegmark disclaims inevitability in his closing remarks, so the weakness lies in the evidential standing of imminence and intention and not in a thesis of inevitable takeover. A reply to it is exposed to a mirror-image weakness, which is the promotion of the mere possibility of limits to the conclusion that limits will hold. Both moves substitute a conceivable mechanism for a measured one.
+
+What survives is more modest and more general. Aligning a system and retaining the capacity to intervene in it are different achievements. Capability does not confer authority; separately, authority does not confer legitimacy, and both claims hold for corporations and for the security institutions that might replace them. The condition under which these concerns become governance failures, that unpermitted actions exist beyond effective intervention, can be examined now and does not depend on the speed of capability growth.
+
+A final limitation applies. This analysis uses an automatically generated transcript and the claims made in it. It is not a forensic verification of any incident, legal allegation, policy text or forecast. The IPO documents, the individual cybersecurity incidents, the safety policy texts, and the alleged private conversations would each require primary-source investigation before any stronger conclusion could be justified.
+
+\appendix
+\section{Timestamps of the Principal Claims}\label{app:loc}
+
+Times are minutes and seconds into the automatically generated English caption track and are given as the start and end of the passage. The caption text is machine generated, so wording should be checked against the audio.
+
+{\small
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{@{}p{0.62\textwidth}p{0.28\textwidth}@{}}
+\toprule
+Claim or passage & Time \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Public listing, protests and the host's introduction & 00:00--00:58 \\
+Text of the MisAnthropic Statement & 00:58--01:24 \\
+Doubling, explosion and reactor analogy & 03:40--05:39 \\
+Eighty percent code share & 05:46--05:57 \\
+Milestones offered as evidence of acceleration & 06:12--06:58 \\
+Physical influence and the escaped-agent anecdote & 08:40--09:34 \\
+Cello analogy on the limits of expertise & 10:47--11:14 \\
+Outages, government response and predicted worsening & 12:51--13:11 \\
+Third superpower and the 2027 forecast & 13:25--14:00 \\
+Private conversations after drinks & 16:28--16:51 \\
+Alignment without control as a code phrase & 17:05--17:57 \\
+Legal right to release superintelligence and the sandwich shop comparison & 18:20--18:34 \\
+Host's question and the confirmation that Claude is meant to run everything & 18:35--19:17 \\
+Nothing disclosed that is not said in public & 19:20--20:06 \\
+Prospectus claim (interviewer) & 20:53--21:11 \\
+Developers lying to themselves & 21:16--21:50 \\
+Twenty watts and sufficiency of data centers & 22:36--23:33 \\
+Very little evidence of a technical roadblock & 23:57--24:17 \\
+Polling and midterm claims & 24:53--25:15 \\
+Regulation abroad and attorneys general & 25:27--26:05 \\
+Unnamed security sources & 26:21--28:09 \\
+Late-night call and cyber-defense dismissal & 29:02--29:37 \\
+Cover-up claim and the empty bank accounts scenario & 30:42--31:26 \\
+Over a thousand agents and loss of control in the past & 32:43--32:54 \\
+Closing statement on inevitability & 33:14--33:41 \\
+\end{longtable}
+}
+
+\begin{thebibliography}{99}
+
+\bibitem{Aghion2019}
+Aghion, P., Jones, B. F., and Jones, C. I. (2019).
+Artificial Intelligence and Economic Growth.
+In A. Agrawal, J. Gans, and A. Goldfarb (Eds.), \emph{The Economics of Artificial Intelligence: An Agenda}, pp.~237--290. University of Chicago Press.
+
+\bibitem{Amdahl1967}
+Amdahl, G. M. (1967).
+Validity of the Single Processor Approach to Achieving Large Scale Computing Capabilities.
+\emph{Proceedings of the AFIPS Spring Joint Computer Conference}, 30, 483--485.
+
+\bibitem{Bloom2020}
+Bloom, N., Jones, C. I., Van Reenen, J., and Webb, M. (2020).
+Are Ideas Getting Harder to Find?
+\emph{American Economic Review}, 110(4), 1104--1144.
+
+\bibitem{Bostrom2014}
+Bostrom, N. (2014).
+\emph{Superintelligence: Paths, Dangers, Strategies}.
+Oxford University Press.
+
+\bibitem{Good1965}
+Good, I. J. (1965).
+Speculations Concerning the First Ultraintelligent Machine.
+\emph{Advances in Computers}, 6, 31--88.
+
+\bibitem{Jones1995}
+Jones, C. I. (1995).
+R\&D-Based Models of Economic Growth.
+\emph{Journal of Political Economy}, 103(4), 759--784.
+
+\bibitem{Jones2005}
+Jones, C. I. (2005).
+Growth and Ideas.
+In P. Aghion and S. N. Durlauf (Eds.), \emph{Handbook of Economic Growth}, Vol.~1B, pp.~1063--1111. Elsevier.
+
+\bibitem{Kaplan2020}
+Kaplan, J., McCandlish, S., Henighan, T., Brown, T. B., Chess, B., Child, R., Gray, S., Radford, A., Wu, J., and Amodei, D. (2020).
+Scaling Laws for Neural Language Models.
+arXiv:2001.08361.
+
+\bibitem{Novara2026}
+Novara Media (2026).
+MIT Physicist EXPOSES Anthropic's Plan For Total Domination.
+Video interview with Max Tegmark, 34:04. YouTube, November 2026. \texttt{https://youtu.be/J9WpNdQYYoo}
+
+\bibitem{Tegmark2017}
+Tegmark, M. (2017).
+\emph{Life 3.0: Being Human in the Age of Artificial Intelligence}.
+Alfred A. Knopf.
+
+\bibitem{Yudkowsky2013}
+Yudkowsky, E. (2013).
+Intelligence Explosion Microeconomics.
+Technical Report 2013-1, Machine Intelligence Research Institute.
+
+\end{thebibliography}
+
+\end{document}

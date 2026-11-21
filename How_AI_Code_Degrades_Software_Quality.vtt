@@ -1,0 +1,4442 @@
+WEBVTT
+
+00:00.000 --> 00:06.800
+Right now, as you listen to this, you are surrounded by a bizarre kind of magic.
+
+00:06.960 --> 00:08.440
+Oh, absolutely. It's everywhere.
+
+00:08.900 --> 00:13.760
+Whether you are sitting at your desk looking at a monitor or just glancing down at the phone in your hand,
+
+00:14.280 --> 00:21.820
+you are swimming in a digital environment that is currently undergoing a radical, completely invisible transformation.
+
+00:22.280 --> 00:25.280
+Right, because code is practically writing itself at this point.
+
+00:25.280 --> 00:35.460
+Exactly. Images, entire paragraphs, marketing campaigns, they are all just manifesting from a single, casually typed sentence.
+
+00:36.220 --> 00:41.580
+We are producing more digital artifacts at this exact moment than at any prior point in human history.
+
+00:41.840 --> 00:45.280
+And we're doing it at a speed that feels utterly frictionless.
+
+00:46.000 --> 00:50.880
+I mean, the cost of generating a candidate artifact has fundamentally plummeted to nearly zero.
+
+00:51.600 --> 00:53.800
+Which is wild to think about.
+
+00:53.800 --> 00:58.520
+It is. We are living through the absolute definition of a paradigm shift in production.
+
+00:59.100 --> 01:03.660
+One that alters the basic physics of how digital goods are, you know, brought into existence.
+
+01:04.180 --> 01:10.180
+I actually felt this personally just last week. I had to send this really tedious update email to my team.
+
+01:10.460 --> 01:12.020
+Oh, the dreaded status update.
+
+01:12.220 --> 01:20.820
+Yeah, exactly. And usually I'd sit there for 20 minutes, sweating over the phrasing, deleting sentences, trying to strike the right tone, you know?
+
+01:20.980 --> 01:22.580
+Right. The usual friction of writing.
+
+01:22.580 --> 01:30.160
+But this time I just asked an AI assistant to draft it. It spat out five perfectly formatted paragraphs in two seconds.
+
+01:30.380 --> 01:31.320
+And how did it read?
+
+01:31.640 --> 01:37.380
+I read it and honestly it sounded completely robotic. Like it lacked any of my usual voice.
+
+01:37.600 --> 01:39.180
+But I'm guessing you sent it anyway.
+
+01:39.440 --> 01:42.840
+I did. I sent it anyway because it was just so incredibly easy.
+
+01:42.840 --> 01:44.840
+That lack of friction was intoxicating.
+
+01:45.420 --> 01:50.480
+But it left me with this unsettling feeling afterward.
+
+01:50.480 --> 01:53.400
+Yeah. The hangover of instant creation.
+
+01:53.680 --> 01:59.060
+Right. If everything is this easy to make, are we actually making our digital world better?
+
+01:59.480 --> 02:04.740
+Like is the quality of the software running our banks, our hospitals, and our daily lives genuinely improving?
+
+02:05.120 --> 02:08.500
+Or are we just drowning in a sea of synthetic output?
+
+02:08.500 --> 02:15.140
+That underlying anxiety you felt after sending that email, that is exactly what we are dissecting today.
+
+02:15.860 --> 02:21.800
+It's the feeling that something fundamental is being lost when creation becomes instantaneous.
+
+02:21.800 --> 02:28.720
+So today we are taking a deep dive into this massive structural shift happening just under the surface of our digital economy.
+
+02:29.160 --> 02:33.200
+And the anchor for our journey today is a highly provocative essay from November 2026.
+
+02:33.540 --> 02:36.460
+Right. By an independent researcher who goes by the name Flyxion.
+
+02:36.900 --> 02:40.140
+The piece is titled Software Degradation and the Loss of Taste.
+
+02:40.260 --> 02:45.580
+And what makes this essay so compelling is that it isn't just, you know, a philosophical rant about the good old days.
+
+02:45.900 --> 02:46.460
+Far from it.
+
+02:46.460 --> 02:52.140
+I mean, the essay is built on a towering stack of recent, incredibly rigorous empirical studies.
+
+02:52.760 --> 03:01.200
+We are going to be unpacking data from Google's DORA Research Group, security benchmarking from Veracode, massive controlled behavioral trials by METR.
+
+03:01.320 --> 03:05.180
+And repository analyses from GitClear that look at hundreds of millions of data points.
+
+03:05.460 --> 03:06.840
+It is heavily data-driven.
+
+03:07.360 --> 03:11.140
+Our mission today is to explore the hidden costs of this frictionless creation.
+
+03:11.360 --> 03:15.940
+For you, the learner tuning in, we really want this to be a critical aha moment.
+
+03:16.460 --> 03:26.580
+Yeah, we want to understand how the drive to produce as much as possible at the absolute lowest marginal cost might actually be degrading the software infrastructure of the world.
+
+03:26.580 --> 03:32.820
+And perhaps even more surprisingly, we're going to explore how this shift is eroding our cultural taste.
+
+03:33.260 --> 03:37.120
+You know, that very human capacity required to discern the good from the bad.
+
+03:37.360 --> 03:41.920
+We want to arm you with a new lens to view the tools you interact with every single day.
+
+03:41.920 --> 03:55.840
+It really requires a critical examination of what happens to a system, whether that system is a code base, a social media platform, or a human mind, when the sheer volume of generation drastically outpaces our capacity for judgment.
+
+03:56.620 --> 03:59.020
+And I want to set a very clear tone right here at the top.
+
+03:59.260 --> 04:02.500
+This is not a doom and gloom anti-technology session.
+
+04:02.700 --> 04:03.320
+No, not at all.
+
+04:03.420 --> 04:06.660
+We aren't here to tell you to smash your computers and go live in the woods.
+
+04:06.660 --> 04:10.140
+We are here to uncover the hidden mechanics of a new reality.
+
+04:11.360 --> 04:20.740
+So, to understand why generative AI tools might be degrading software, we first have to completely dismantle and rebuild how we think about what software actually is.
+
+04:20.740 --> 04:29.400
+Because most people outside of software engineering, and honestly many within it, they have a tendency to conceptualize software as a finished product.
+
+04:29.660 --> 04:30.680
+Like a physical object.
+
+04:31.140 --> 04:31.520
+Exactly.
+
+04:32.000 --> 04:34.680
+We think of it like a toaster or a wooden chair.
+
+04:35.020 --> 04:39.260
+You design the chair, you build the chair, you sell it, and the chair is done.
+
+04:39.760 --> 04:41.640
+It just sits in the corner doing its job forever.
+
+04:41.880 --> 04:42.160
+Right.
+
+04:42.380 --> 04:44.560
+But software does not exist in a static state.
+
+04:44.980 --> 04:48.980
+To really grasp the thesis of Flyxion's essay, we have to flip our perspective entirely.
+
+04:48.980 --> 04:55.100
+We must start viewing code, not as a productive asset, but as an ongoing liability.
+
+04:55.620 --> 04:56.020
+Okay, wait.
+
+04:56.560 --> 04:58.980
+Calling code a liability sounds completely counterintuitive.
+
+05:00.240 --> 05:05.620
+Especially for an industry that historically valued developers based on like how many lines of code they could write in a day.
+
+05:06.400 --> 05:07.340
+Break that down for us.
+
+05:07.400 --> 05:08.340
+Why is code a liability?
+
+05:08.920 --> 05:17.140
+Well, the author anchors this perspective by reaching back to the 1970s to a foundational concept known as Lehman's laws of Software Evolution.
+
+05:17.540 --> 05:18.520
+Okay, M. M. Lehman.
+
+05:18.520 --> 05:19.480
+Right, M. M. Lehman.
+
+05:19.560 --> 05:25.920
+He was a computer scientist who studied large, complex systems, and he observed a fundamental truth that still holds today.
+
+05:26.820 --> 05:33.400
+A program that is used in the real world must be continually adapted or it becomes progressively less satisfactory.
+
+05:33.800 --> 05:36.540
+Because the world around the software refuses to stand still.
+
+05:36.680 --> 05:37.060
+Exactly.
+
+05:37.520 --> 05:39.660
+The environment is in constant motion.
+
+05:40.100 --> 05:42.720
+The operating system your software runs on gets updated.
+
+05:43.140 --> 05:43.980
+The hardware changes.
+
+05:43.980 --> 05:46.020
+New security threats pop up.
+
+05:46.120 --> 05:46.240
+Yeah.
+
+05:46.540 --> 05:48.280
+Hackers find novel attack vectors.
+
+05:48.880 --> 05:50.940
+Privacy regulations in your country shift.
+
+05:51.500 --> 05:53.800
+The users themselves change their expectations.
+
+05:53.800 --> 06:03.900
+If you write a perfect piece of software today and seal it in a vault, it will be broken and useless in five years simply because the world moved on while the code stayed still.
+
+06:03.900 --> 06:05.900
+I see this on my phone all the time.
+
+06:05.900 --> 06:14.340
+If I open an app that the developer hasn't updated since, say, 2022, it glitches, the screen formatting is weird, or it just crashes on startup.
+
+06:14.340 --> 06:19.240
+And Lehman's corollary to that observation is where the liability aspect comes in.
+
+06:19.800 --> 06:31.140
+He noted that as a system adapts to all these external changes, its internal complexity grows unless work is done specifically and intentionally to reduce that complexity.
+
+06:32.260 --> 06:32.360
+Huh.
+
+06:32.820 --> 06:37.300
+Therefore, the sheer quantity of code in a system is a direct, measurable cost.
+
+06:37.880 --> 06:41.240
+Every single line of code carries an ongoing, permanent obligation.
+
+06:41.760 --> 06:44.060
+Someone in the future has to read it and understand it.
+
+06:44.060 --> 06:46.920
+Someone has to test it against those changing conditions.
+
+06:47.360 --> 06:47.780
+Exactly.
+
+06:48.140 --> 06:50.340
+Someone has to defend it against a cyber attack.
+
+06:50.340 --> 07:05.860
+So if you can achieve a specific function, let's say processing a user's payment, in 10 lines of elegantly written, well-understood code, that is infinitely better than achieving the exact same function in 100 lines of sprawling code that nobody quite remembers how to maintain.
+
+07:06.120 --> 07:06.720
+Absolutely.
+
+07:07.260 --> 07:07.680
+Absolutely.
+
+07:07.680 --> 07:14.800
+Even if both versions work perfectly today, the 100-line version is a ticking time bomb of future maintenance costs.
+
+07:15.260 --> 07:18.420
+Which brings us to another foundational pillar the essay leans on.
+
+07:18.840 --> 07:23.120
+This is from a famous 1987 paper by the software engineer Fred Brooks.
+
+07:23.120 --> 07:23.680
+Yes.
+
+07:23.860 --> 07:30.740
+Brooks made a vital distinction between the accidental difficulties and the essential difficulties of software engineering.
+
+07:31.320 --> 07:32.820
+Accidental versus essential.
+
+07:33.200 --> 07:34.540
+I love frameworks like this.
+
+07:34.600 --> 07:35.860
+Let's walk through what he meant by that.
+
+07:36.220 --> 07:41.060
+So accidental difficulties represent the mechanical friction of expressing a design.
+
+07:41.060 --> 07:46.760
+In the early days, this meant physically punching holes in paper cards to feed into a mainframe.
+
+07:46.980 --> 07:47.260
+Oh, wow.
+
+07:47.380 --> 07:47.520
+Yeah.
+
+07:47.640 --> 07:54.980
+Later, it meant dealing with clunky compilers, managing computer memory by hand, and struggling with the strict syntax of a programming language.
+
+07:55.720 --> 08:01.320
+Over the decades, the tech industry has made miraculous strides in reducing these accidental difficulties.
+
+08:01.700 --> 08:07.440
+We built better languages, faster compilers, and powerful text editors that catch typos in real time.
+
+08:07.440 --> 08:07.780
+Right.
+
+08:08.320 --> 08:12.100
+All of that makes the physical act of getting the code into the machine easier.
+
+08:12.400 --> 08:17.000
+But the essential difficulty, Brooks argued, remains virtually untouched.
+
+08:17.260 --> 08:17.620
+Exactly.
+
+08:18.100 --> 08:20.600
+The essential difficulty is the conceptual work.
+
+08:21.260 --> 08:35.880
+It is the arduous mental effort of deciding exactly what the system should do, how its disparate parts relate to each other, how it handles unexpected human behavior, and crucially, and this is key, what the system should actively refuse to do.
+
+08:35.880 --> 08:39.140
+Deciding what it should refuse to do.
+
+08:39.220 --> 08:41.220
+That is such a powerful framing.
+
+08:41.400 --> 08:45.080
+It really implies that good design is fundamentally about boundary setting.
+
+08:45.400 --> 08:45.700
+It is.
+
+08:46.060 --> 08:50.020
+Brooks maintained that this essential difficulty cannot be automated away by any tool.
+
+08:50.820 --> 08:52.620
+You have to make hard choices.
+
+08:52.820 --> 08:54.060
+You have to weigh trade-offs.
+
+08:54.160 --> 08:57.460
+You have to take personal accountability for the architecture.
+
+08:57.980 --> 08:58.160
+Okay.
+
+08:58.160 --> 09:01.840
+So, let's introduce generative AI into this Brooks framework.
+
+09:02.620 --> 09:06.960
+Generative AI is effectively the ultimate weapon against accidental difficulty, right?
+
+09:07.220 --> 09:07.680
+Oh, completely.
+
+09:08.080 --> 09:08.980
+It takes over the typing.
+
+09:09.440 --> 09:11.460
+It handles the syntax perfectly.
+
+09:11.840 --> 09:17.620
+And because it does the mechanical typing so incredibly well, it casts a kind of spell on us.
+
+09:17.800 --> 09:22.760
+It tricks the user into thinking that the AI has somehow solved the essential problem, too.
+
+09:22.760 --> 09:26.400
+And that illusion is the exact trap the essay warns about.
+
+09:27.440 --> 09:33.960
+Large language models can certainly help explore potential designs or point out missing edge cases if prompted correctly.
+
+09:34.180 --> 09:38.680
+But they absolutely cannot take responsibility for a design.
+
+09:38.760 --> 09:39.000
+Right.
+
+09:39.000 --> 09:44.540
+What they actually do is make expressing an underspecified, vague intention extremely cheap.
+
+09:45.320 --> 09:53.720
+Before AI, if you didn't know exactly what you wanted your software to do, the sheer effort of typing out the code would force you to stop and figure it out.
+
+09:53.840 --> 09:55.060
+The friction was a guardrail.
+
+09:55.320 --> 09:55.680
+Exactly.
+
+09:55.960 --> 09:59.620
+Because nobody wants to type for six hours just to see if a vague idea works.
+
+09:59.620 --> 10:10.160
+But today, if you don't know exactly what you want, you can just type a loose prompt and the AI will happily generate a thousand lines of code that vaguely gesture at your idea.
+
+10:10.640 --> 10:13.480
+You have successfully postponed the actual design problem.
+
+10:14.060 --> 10:18.300
+But in doing so, you have multiplied the volume of code you now have to maintain.
+
+10:18.480 --> 10:22.420
+You've increased your liability without solving the essential difficulty.
+
+10:22.420 --> 10:30.140
+It's like we've handed a lightning-fast, magical typewriter to an author who has no idea what the plot of their novel is supposed to be.
+
+10:30.340 --> 10:31.380
+That's a great way to put it.
+
+10:31.780 --> 10:33.840
+We've completely solved the typing bottleneck.
+
+10:34.340 --> 10:37.280
+The pages are flying out of the machine at a hundred pages a minute.
+
+10:37.500 --> 10:44.260
+But the lack of a coherent story, the lack of character arcs, the essential difficulty of writing a book is still there.
+
+10:44.260 --> 10:53.040
+Only now, instead of staring at a blank page, we are buried under hundreds of pages of rambling, incoherent text that someone still has to edit.
+
+10:53.280 --> 11:01.040
+The typing is no longer the bottleneck, so the absence of conceptual, essential work becomes the dominant source of failure in the system.
+
+11:01.880 --> 11:04.120
+The danger isn't that human effort is eliminated.
+
+11:04.620 --> 11:09.320
+The true danger is that the occasions for making hard decisions are bypassed.
+
+11:09.320 --> 11:16.640
+While the resulting artifact, the code, maintains the shiny, flawless appearance of having been thoughtfully decided upon.
+
+11:16.640 --> 11:27.360
+So if volume is the wrong measure of progress, and if solving the accidental difficulty while ignoring the essential one is dangerous, what does this actually look like out in the wild?
+
+11:27.580 --> 11:33.300
+We are moving from the philosophical theories of the 1970s and 80s to the hard numbers of today.
+
+11:33.660 --> 11:34.800
+Right. Let's look at the data.
+
+11:34.800 --> 11:40.040
+What happens to real-world codebases when the generation of code becomes effectively free?
+
+11:40.360 --> 11:45.620
+Well, the empirical data surrounding this shift is truly fascinating and, quite frankly, alarming.
+
+11:46.520 --> 11:54.580
+Flyxion's essay points us to a massive joint analysis conducted by GitClear and GitKraken, covering the years 2023 through 2026.
+
+11:54.780 --> 11:57.160
+And they didn't just survey a few developers, did they?
+
+11:57.360 --> 12:02.700
+No. They analyzed the underlying data of 623 million individual code changes.
+
+12:02.700 --> 12:05.600
+Over half a billion code changes.
+
+12:06.160 --> 12:08.320
+That is a data set you simply cannot argue with.
+
+12:08.780 --> 12:10.220
+It's not based on self-reporting.
+
+12:10.340 --> 12:13.980
+It's based on the actual keystrokes and commits entering the repositories.
+
+12:14.400 --> 12:15.300
+What did they find?
+
+12:15.520 --> 12:20.900
+By the time we hit 2026, AI-assisted commits accounted for roughly 25% of all commits.
+
+12:21.380 --> 12:21.700
+Wow.
+
+12:21.700 --> 12:28.180
+So, a quarter of the code being pushed into the systems that run our world now has a machine co-author.
+
+12:28.840 --> 12:30.420
+But the percentage isn't the real story.
+
+12:30.900 --> 12:35.760
+The structural changes in how that code is written are what we need to focus on.
+
+12:36.260 --> 12:45.240
+They found that code duplication, which means blocks of code copied and pasted rather than centralized into a single reusable function, was up 81%.
+
+12:45.240 --> 12:47.820
+An 81% increase in duplication.
+
+12:48.300 --> 12:52.100
+Even I know that violates the most basic rule of clean software engineering.
+
+12:52.240 --> 12:53.200
+Right. the DRY principle.
+
+12:53.780 --> 12:54.840
+Don't repeat yourself.
+
+12:55.140 --> 12:58.600
+If you need a piece of code that calculates sales tax, you write it once.
+
+12:58.900 --> 13:02.680
+And every time you need to calculate tax, you point back to that one original function.
+
+13:03.100 --> 13:06.660
+That way, if the tax law changes, you only have to update it in one place.
+
+13:06.880 --> 13:08.560
+That is the essence of maintainability.
+
+13:08.560 --> 13:18.560
+But because generating a brand new block of code is zero effort for the developer using an AI prompt, the AI just spits out a duplicate function right where the developer is working.
+
+13:19.020 --> 13:22.680
+It doesn't look at the broader system to see if a tax calculator already exists.
+
+13:23.020 --> 13:23.380
+Exactly.
+
+13:24.260 --> 13:31.560
+Simultaneously, the GitClear report showed that code reuse, the healthy practice of finding an existing function and calling it, plummeted by 70%.
+
+13:32.240 --> 13:32.560
+70%.
+
+13:32.560 --> 13:41.920
+And legacy refactoring, which is the vital ongoing chore of cleaning up and reorganizing old code to keep the foundation healthy, fell by 74%.
+
+13:41.920 --> 13:50.440
+So developers are just piling new, duplicated features on top of the system over and over and entirely abandoning the maintenance of the foundation.
+
+13:50.440 --> 13:56.700
+That sounds like building a skyscraper by just endlessly stacking bricks on the roof without ever checking if the basement is flooding.
+
+13:57.080 --> 13:58.100
+That is exactly what's happening.
+
+13:58.820 --> 14:01.680
+And the structural degradation gets even more insidious.
+
+14:01.680 --> 14:09.240
+The same report identified a 47% rise in what they categorize as obfuscation.
+
+14:10.400 --> 14:10.920
+Obfuscation.
+
+14:11.240 --> 14:11.480
+Yeah.
+
+14:11.700 --> 14:21.160
+In this context, they are talking about code that is specifically written to quietly swallow errors rather than handling them properly or failing visibly.
+
+14:22.020 --> 14:22.840
+Swallowing errors.
+
+14:23.100 --> 14:23.380
+Mm-hmm.
+
+14:23.900 --> 14:24.120
+Okay.
+
+14:24.180 --> 14:25.180
+What does that look like in practice?
+
+14:25.240 --> 14:30.400
+Let's say a piece of code is trying to pull a customer's address from a database, but the database is offline.
+
+14:30.600 --> 14:31.080
+What happens?
+
+14:31.080 --> 14:37.120
+In a well-designed, resilient system, the code hits that error, stops, and throws a visible alert.
+
+14:37.560 --> 14:44.320
+It tells the system, I cannot proceed, the database is unreachable, so the development team knows there is a problem to fix.
+
+14:44.400 --> 14:44.580
+Right.
+
+14:44.680 --> 14:45.740
+It fails loudly.
+
+14:45.740 --> 14:56.000
+But obfuscated error-swallowing code hits that same problem, effectively shrugs, hides the error message, and maybe just returns a blank field.
+
+14:56.700 --> 15:00.300
+The system doesn't crash, so the developer thinks the code works perfectly.
+
+15:00.300 --> 15:02.440
+But it doesn't work.
+
+15:02.440 --> 15:12.960
+It just creates the illusion of functioning code while quietly introducing silent failures into the system that might not be discovered until thousands of customers have blank addresses on their shipping orders.
+
+15:13.120 --> 15:13.440
+Exactly.
+
+15:13.440 --> 15:19.940
+The AI writes it this way because it is the fastest way to make the code appear to run without crashing during a quick test.
+
+15:19.940 --> 15:26.140
+And if we shift our focus from maintenance nightmares to actual cybersecurity, it gets worse.
+
+15:26.260 --> 15:26.980
+Let's talk about that.
+
+15:26.980 --> 15:33.660
+The Veracode security benchmarks from 2025 and 2026 paint an entirely consistent, grim picture.
+
+15:34.480 --> 15:43.300
+Veracode took over 100 different generative language models and tested them on coding tasks that were specifically designed around known weakness classes.
+
+15:43.440 --> 15:47.960
+When you say known weakness classes, what does that actually mean for the layperson?
+
+15:48.160 --> 15:52.900
+Are we talking about the kind of bugs that let hackers break into a database or steal user passwords?
+
+15:52.900 --> 15:57.020
+Yes. Veracode used standards like the OWASP top 10.
+
+15:57.420 --> 16:00.360
+These are the most critical security risks in web applications.
+
+16:00.780 --> 16:09.680
+Things like SQL injection, where a hacker tricks a database into revealing hidden data, or cross-site scripting, where malicious scripts are injected into trusted websites.
+
+16:09.940 --> 16:13.680
+Okay, so these are well-documented, widely understood vulnerabilities.
+
+16:14.140 --> 16:15.120
+Very well-documented.
+
+16:15.120 --> 16:25.900
+Yet the study found that in roughly 44% to 45% of cases, the AI-generated code introduced those exact textbook vulnerabilities into the application.
+
+16:26.640 --> 16:31.020
+Almost half the time, the AI is writing code that actively invites hackers into the system.
+
+16:31.020 --> 16:40.200
+And what is really crucial here, and I know Flyxion's essay emphasizes this heavily, is that the industry narrative promised this would fix itself as the technology advanced.
+
+16:40.720 --> 16:47.880
+Everyone assumes, oh, sure, the early models wrote buggy code, but the newest version with a trillion parameters will just write secure code by default.
+
+16:48.540 --> 16:49.760
+But the data says otherwise.
+
+16:50.580 --> 16:52.120
+The data strongly disagrees.
+
+16:52.860 --> 16:58.940
+The security performance barely moved across successive years and massive increases in model size.
+
+16:58.940 --> 17:04.040
+The models certainly became much better at writing syntactically flawless code.
+
+17:04.520 --> 17:06.700
+They stopped making simple spelling errors.
+
+17:06.960 --> 17:07.000
+Right.
+
+17:07.220 --> 17:14.780
+But the conceptual security flaws, the essential difficulties of designing a secure architecture, remained firmly entrenched.
+
+17:15.500 --> 17:25.580
+The only thing that changed with the newer, larger models was the massive, frictionless scale at which this vulnerable code was being generated and deployed into production environments.
+
+17:25.920 --> 17:27.940
+Which brings us to the Google DORA surveys.
+
+17:27.940 --> 17:38.160
+For those who aren't familiar, DORA stands for DevOps Research and Assessment, and it is widely considered the gold standard for measuring how software development teams perform across the industry.
+
+17:38.460 --> 17:40.980
+Their findings really provide the macro view of this phenomenon.
+
+17:41.640 --> 17:51.440
+The 2024 DORA report found that as organizations initially adopted generative AI coding tools, both their delivery throughput and their delivery stability dropped.
+
+17:51.620 --> 17:56.220
+In other words, teams actually slowed down and the code they pushed broke more often.
+
+17:56.220 --> 17:59.320
+Yes. Now, fast forward to the 2025 report.
+
+17:59.920 --> 18:02.500
+By this time, AI adoption in coding was nearly universal.
+
+18:03.360 --> 18:04.820
+The throughput penalty had disappeared.
+
+18:05.620 --> 18:10.260
+Teams had figured out the workflows and were finally shipping features faster than ever before.
+
+18:10.740 --> 18:12.220
+But the instability remained.
+
+18:13.380 --> 18:17.940
+So they learned how to use the AI to ship faster, but they were still breaking things just as often.
+
+18:18.180 --> 18:19.600
+We have accelerated the pipeline.
+
+18:19.600 --> 18:22.880
+The water is flowing faster than ever, but the water itself is toxic.
+
+18:22.880 --> 18:31.560
+And an independent 2026 study by a researcher named Liu and their colleagues tracked these AI-introduced issues over a long period.
+
+18:32.080 --> 18:40.000
+They found that these vulnerabilities and architectural messes aren't just quick, obvious bugs that get caught in a standard review process a day later.
+
+18:40.120 --> 18:40.860
+They stick around.
+
+18:40.860 --> 18:43.680
+They weave themselves into the fabric of the software.
+
+18:43.680 --> 18:48.880
+They introduce long-term technical debt that persists and compounds in the repositories.
+
+18:49.420 --> 18:55.300
+The human maintainers tasked with keeping these systems alive are simply drowning under the sheer volume of it.
+
+18:55.500 --> 19:01.620
+Okay, I have to step in and push back here because the data we just walked through is incredibly stark.
+
+19:01.780 --> 19:05.080
+It paints a picture of a software industry in free fall.
+
+19:05.080 --> 19:12.400
+But if you talk to developers today, if you scroll through tech forums or social media, they do not sound like people who are drowning.
+
+19:12.740 --> 19:13.400
+No, they don't.
+
+19:13.460 --> 19:15.940
+They all feel like they are flying through their work.
+
+19:16.300 --> 19:18.800
+They talk about having 10x superpowers.
+
+19:19.200 --> 19:21.060
+So are they lying to their bosses?
+
+19:21.220 --> 19:23.180
+Are they just faking this enthusiasm?
+
+19:23.880 --> 19:33.920
+Why is there such a massive glaring disconnect between the hard data of degrading codebases and the euphoric feeling of the individual developer sitting at the keyboard?
+
+19:33.920 --> 19:36.560
+That question is the pivot point of the entire issue.
+
+19:37.140 --> 19:47.200
+It forces us to look beyond the code and examine a fascinating psychological blind spot, which the essay uses to explain the underlying mechanisms driving this degradation.
+
+19:47.640 --> 19:56.080
+To understand the developer's euphoria, we have to look closely at a groundbreaking 2025 controlled trial conducted by an organization called METR.
+
+19:56.220 --> 19:57.500
+The METR study.
+
+19:58.140 --> 20:02.340
+This is the one that really blew my mind when I was reading through the source material.
+
+20:02.340 --> 20:08.980
+Walk us through exactly how they set this up, because the methodology is what makes the findings so undeniable.
+
+20:09.480 --> 20:13.380
+So METR wanted to eliminate the noise of self-reported surveys and anecdotal feelings.
+
+20:14.100 --> 20:17.580
+They recruited 16 highly experienced open-source developers.
+
+20:17.880 --> 20:18.280
+Wow, okay.
+
+20:18.340 --> 20:19.040
+So not just beginners.
+
+20:19.260 --> 20:19.900
+Right, exactly.
+
+20:20.340 --> 20:22.480
+These were not junior coders fresh out of a boot camp.
+
+20:22.600 --> 20:28.660
+They were veteran experts working inside mature, complex software repositories that they had known for years.
+
+20:28.660 --> 20:34.100
+METR assigned these developers 246 real-world coding tasks.
+
+20:34.420 --> 20:34.620
+Got it.
+
+20:34.800 --> 20:38.840
+And crucially, the tasks were randomly assigned in a controlled manner.
+
+20:39.160 --> 20:43.080
+For some tasks, the developer was allowed to use their generative AI assistance.
+
+20:43.400 --> 20:47.180
+For other tasks, they were strictly forbidden from using AI and had to code manually.
+
+20:47.300 --> 20:49.440
+A proper, rigorous, randomized, controlled trial.
+
+20:49.660 --> 20:51.600
+The gold standard of scientific testing.
+
+20:51.600 --> 20:57.740
+Before the study even started, the researchers asked the developers to predict how much the AI tools would help them.
+
+20:58.340 --> 21:04.780
+On average, the developers predicted that having the AI would make them 24% faster at completing the tasks.
+
+21:04.920 --> 21:10.720
+Which is exactly what every marketing brochure and keynote presentation from the AI companies has been promising them for years.
+
+21:11.100 --> 21:12.640
+The expectations were set high.
+
+21:12.640 --> 21:16.500
+But then the researchers measured the actual reality of the trial.
+
+21:17.520 --> 21:26.520
+The tasks where the developers were allowed to use AI actually took 19% longer to successfully complete than the tasks done purely by hand.
+
+21:26.880 --> 21:28.600
+Wait, I want to make sure I'm hearing this right.
+
+21:28.740 --> 21:31.180
+The AI didn't just fail to speed them up.
+
+21:31.260 --> 21:35.780
+It actually imposed a 19% time penalty on these veteran developers?
+
+21:35.780 --> 21:49.360
+Yes. The time spent wrangling the generated code, hunting down the subtle hallucinations, and trying to force the AI's output to integrate with the broader system took significantly longer than just writing the code from scratch.
+
+21:49.560 --> 21:50.440
+That is crazy.
+
+21:50.660 --> 21:53.120
+But here is the most shocking part of the study.
+
+21:53.700 --> 21:57.740
+The part that directly answers your question about why developers feel like gods.
+
+21:58.280 --> 22:01.860
+After the trial concluded, METR surveyed the developers again.
+
+22:01.860 --> 22:13.660
+Despite having just objectively spent 19% more time struggling with the AI tasks, the developers still estimated in their post-trial survey that the AI had made them 20% faster.
+
+22:14.520 --> 22:15.900
+That is just incredible.
+
+22:16.500 --> 22:23.280
+The objective reality measured by the stopwatch was a 19% penalty, but their subjective perception was a 20% boost.
+
+22:23.400 --> 22:27.200
+That is a massive, almost hallucinatory perception gap.
+
+22:27.520 --> 22:28.700
+How is that possible?
+
+22:28.700 --> 22:33.700
+How can absolute experts in their field be so blind to their own output and pacing?
+
+22:34.100 --> 22:42.180
+To explain this phenomenon, Flyxion's essay synthesizes five distinct mechanisms of failure that operate when humans interact with generative code.
+
+22:42.780 --> 22:43.480
+Let's break them down.
+
+22:43.880 --> 22:46.140
+The first mechanism is cost asymmetry.
+
+22:46.560 --> 22:47.880
+Okay, cost asymmetry.
+
+22:48.340 --> 22:51.820
+The AI generates a massive, complex candidate solution instantly.
+
+22:52.140 --> 22:55.320
+It costs the human prompter zero effort to ask for it.
+
+22:55.320 --> 23:04.260
+But the cognitive cost of reviewing that candidate, reading it, deeply understanding its logic, and verifying that it won't break the system is incredibly high.
+
+23:05.000 --> 23:09.220
+And the essay draws a brilliant parallel here to the economics of email spam.
+
+23:09.560 --> 23:11.780
+The spam analogy is perfect.
+
+23:12.520 --> 23:15.920
+It costs a spammer fractions of a penny to blast out a million emails.
+
+23:15.920 --> 23:23.700
+But it costs you, the recipient, real-time, cognitive load, and attention to sift through your inbox and delete them.
+
+23:24.900 --> 23:29.980
+Generative AI brings the hostile economics of spam directly into the software code base.
+
+23:30.820 --> 23:34.160
+Because generating is free, but reading is expensive.
+
+23:34.160 --> 23:34.760
+Exactly.
+
+23:35.300 --> 23:38.860
+The effort required to suggest a massive code contribution has fallen to zero.
+
+23:39.480 --> 23:44.940
+But the human effort required to judge if that contribution actually belongs in the system has not changed at all.
+
+23:45.640 --> 23:49.840
+The human maintainers are forced to absorb that massive asymmetric difference.
+
+23:50.160 --> 23:56.820
+And because the developer didn't have to sweat to type it out, it feels fast, even if they spend the next hour trying to debug what just appeared on their screen.
+
+23:56.820 --> 24:00.520
+That leads perfectly into the second mechanism, objective alignment.
+
+24:00.720 --> 24:04.380
+We touched on this briefly with the obfuscation and the error-swallowing code.
+
+24:04.540 --> 24:04.660
+Right.
+
+24:05.460 --> 24:08.060
+The AI is fundamentally trained as a sycophant.
+
+24:08.600 --> 24:14.120
+Its objective alignment is entirely focused on satisfying the user's prompt as quickly as possible.
+
+24:14.660 --> 24:24.500
+If you ask it for a function that does X, it provides code that appears to do X perfectly on what developers call the happy path, the scenario where everything goes right.
+
+24:24.500 --> 24:31.140
+But proper, essential software engineering means spending most of your time figuring out what happens on the unhappy paths.
+
+24:31.480 --> 24:32.480
+What if the network drops?
+
+24:32.620 --> 24:34.820
+What if the user inputs a letter instead of a number?
+
+24:35.000 --> 24:35.400
+Exactly.
+
+24:36.280 --> 24:44.460
+Swallowing errors is the cheapest, easiest way for the AI to maintain the appearance of completion without doing the essential, conceptual work.
+
+24:44.980 --> 24:46.840
+So the AI is basically a yes-man.
+
+24:47.120 --> 24:51.320
+It just wants to look like it finished the job, so you give it a thumbs up and move on.
+
+24:51.320 --> 24:54.180
+What is the third mechanism driving this degradation?
+
+24:54.820 --> 24:56.800
+The third mechanism is locality.
+
+24:57.200 --> 25:01.200
+Generative AI models operate within what is called a context window.
+
+25:02.220 --> 25:07.960
+Think of it like looking at the blueprints of a massive skyscraper through a paper towel tube.
+
+25:08.080 --> 25:08.900
+Oh, that's a great visual.
+
+25:09.580 --> 25:15.040
+The AI can analyze the 10 or 20 lines of code immediately in front of it with incredible precision.
+
+25:15.040 --> 25:20.540
+But it does not hold the global architecture of the entire system in its mind.
+
+25:20.740 --> 25:22.060
+It cannot see the big picture.
+
+25:22.300 --> 25:24.440
+Which perfectly explains the GitClear data.
+
+25:24.860 --> 25:28.860
+The 81% rise in duplication and the 70% drop in reuse.
+
+25:28.860 --> 25:38.380
+If the AI is looking through a paper towel tube, it literally doesn't know that a perfectly good function to handle this exact task already exists in a folder on the other side of the repository.
+
+25:39.020 --> 25:47.320
+It's like deciding to build an addition to your house and going out to buy all new hammers and saws because you can't see the toolbox sitting in your own garage.
+
+25:47.320 --> 25:48.120
+Exactly.
+
+25:48.480 --> 25:52.180
+The locality constraint forces the system to bloat with redundant tools.
+
+25:52.980 --> 25:57.080
+The fourth mechanism the essay outlines is the corruption of feedback.
+
+25:57.580 --> 26:01.640
+And this is driven directly by that METR perception gap we've just discussed.
+
+26:01.640 --> 26:02.220
+Right.
+
+26:02.800 --> 26:12.260
+Because individual developers feel faster and more productive even when they are measurably slower, the usual market signals and management feedback loops completely fail.
+
+26:12.720 --> 26:18.860
+If enthusiasm persists despite poor outcomes, the organization loses its ability to steer itself.
+
+26:19.220 --> 26:27.420
+And the essay brilliantly ties this feedback corruption to Goodhart's law, specifically the phrasing popularized by the anthropologist Marilyn Strathern,
+
+26:27.820 --> 26:31.320
+When a measure becomes a target, it ceases to be a good measure.
+
+26:31.640 --> 26:34.600
+That law is wreaking havoc in tech companies right now.
+
+26:35.320 --> 26:43.040
+Executives hear the hype and start tracking the percentage of code written by AI as a key metric of corporate success.
+
+26:43.420 --> 26:46.000
+It becomes a target for the engineering teams.
+
+26:46.200 --> 26:54.160
+But the proportion of machine-written code says absolutely nothing about the quality, security, or maintainability of the software.
+
+26:54.380 --> 26:55.000
+Nothing at all.
+
+26:55.460 --> 27:01.200
+It merely incentivizes developers to blindly accept more generated code just to hit their quarterly KPIs.
+
+27:01.200 --> 27:03.880
+Regardless of whether the code is actually good.
+
+27:03.880 --> 27:15.240
+And the fifth mechanism, which honestly might be the most frustrating one for the veteran developers who understand these risks and just want to write clean code manually, it is deployment by default.
+
+27:15.240 --> 27:26.300
+The generative tools are now deeply integrated, switched on by default, and heavily promoted inside our code editors, our operating systems, and our enterprise platforms.
+
+27:26.660 --> 27:33.420
+The individuals who recognize the degradation and want to decline these tools have a rapidly diminishing ability to do so.
+
+27:33.880 --> 27:34.920
+You just can't escape it.
+
+27:35.100 --> 27:37.400
+The deployment is inescapable by design.
+
+27:37.400 --> 27:58.100
+So the author of the essay takes these five mechanisms, cost asymmetry, objective alignment, locality, corrupted feedback, and default deployment, and formalizes them into a very minimal, elegant economic model.
+
+27:58.100 --> 28:02.840
+Let's walk through the math together, because it is surprisingly intuitive once you see it.
+
+28:03.380 --> 28:07.060
+The whole crisis boils down to the equation of g minus v, right?
+
+28:07.580 --> 28:08.720
+Let's define the variables.
+
+28:09.100 --> 28:17.360
+Let g equal generation, the sheer rate at which candidate artifacts, in this case lines of code, are being produced by the machines.
+
+28:17.880 --> 28:24.840
+Let v equal verification, our human capacity to effectively read, understand, test, and check those artifacts.
+
+28:24.840 --> 28:28.620
+And let b be the backlog of unverified material.
+
+28:29.100 --> 28:30.200
+Okay, I think I'm tracking this.
+
+28:30.880 --> 28:34.440
+g is generation, v is verification, b is the backlog.
+
+28:34.860 --> 28:40.360
+The structural crisis arises because g is now vastly exponentially larger than v.
+
+28:40.920 --> 28:46.400
+We have the capability to generate way more code than our human workforce can possibly verify.
+
+28:46.400 --> 28:51.480
+Now, if an engineering organization was strictly disciplined, they would hold the line.
+
+28:51.900 --> 28:55.720
+They would refuse to admit anything unverified into the production environment.
+
+28:56.360 --> 28:58.780
+The backlog, b, would grow infinitely.
+
+28:59.300 --> 29:01.900
+But the core systems running the company would remain secure.
+
+29:02.340 --> 29:06.600
+But anyone who has ever worked in a corporate environment knows that is a fairy tale.
+
+29:06.960 --> 29:11.180
+You have a product manager yelling at the team to ship the new feature before the end of the sprint.
+
+29:11.180 --> 29:13.540
+The generated code is sitting right there on the screen.
+
+29:13.660 --> 29:14.280
+It compiles.
+
+29:14.720 --> 29:15.780
+It looks like it works.
+
+29:16.100 --> 29:20.960
+You aren't going to let it sit in a backlog for three weeks waiting for a deep verification review.
+
+29:21.240 --> 29:21.640
+Exactly.
+
+29:22.500 --> 29:26.760
+The pressure to ship remains constant while the cost of generation drops.
+
+29:27.580 --> 29:31.200
+Therefore, the unverified artifacts inevitably leak into production.
+
+29:32.060 --> 29:38.880
+The rate at which unverified, potentially defective code enters the code base is simply g minus v.
+
+29:39.280 --> 29:40.800
+Generation minus verification.
+
+29:40.800 --> 29:48.860
+When generation throttles way past our capacity to verify, unverified artifacts stop being an occasional mistake,
+
+29:48.980 --> 29:52.680
+become a permanent foundational feature of our digital infrastructure.
+
+29:53.280 --> 29:58.380
+We accumulate technical debt endlessly until the system becomes too brittle to adapt.
+
+29:58.720 --> 29:59.760
+Okay, let's take a breath here.
+
+30:00.020 --> 30:05.080
+Because this is the moment where Flyxion's essay pulls off a truly brilliant intellectual maneuver.
+
+30:05.080 --> 30:11.260
+That equation we just walked through, g minus v equals unverified garbage accumulating in the system.
+
+30:11.940 --> 30:14.880
+That equation doesn't just apply to software engineering.
+
+30:15.140 --> 30:15.560
+Not at all.
+
+30:16.500 --> 30:21.080
+And this transition is the absolute crux of the author's broader cultural argument.
+
+30:21.620 --> 30:26.440
+To see the bigger picture, we have to fundamentally redefine what the word verification actually means.
+
+30:26.440 --> 30:31.960
+Right, because usually when you hear verification in the context of software, you think of formal verification.
+
+30:32.520 --> 30:34.080
+Does the code compile without errors?
+
+30:34.300 --> 30:36.520
+Did it pass the automated unit tests?
+
+30:36.960 --> 30:39.980
+Did the virus scanner flag any known malware signatures?
+
+30:40.780 --> 30:42.600
+Those are examples of formal verification.
+
+30:43.180 --> 30:45.580
+They are necessary, but they are entirely insufficient.
+
+30:45.580 --> 30:52.660
+There is a second, far more elusive type of verification that the essay calls evaluative verification.
+
+30:53.560 --> 30:54.820
+Evaluative verification.
+
+30:55.360 --> 31:00.960
+Evaluative verification isn't asking the mechanical question, does the code compile?
+
+31:01.700 --> 31:03.800
+It is asking the conceptual questions.
+
+31:04.320 --> 31:06.140
+Should this abstraction exist at all?
+
+31:06.920 --> 31:09.760
+Is this interface comprehensible to the next human who reads it?
+
+31:10.100 --> 31:14.080
+Does this feature actually serve the core need of the user, or is it just bloat?
+
+31:14.080 --> 31:15.920
+So it's subjective.
+
+31:16.700 --> 31:22.860
+Well, it requires context, lived experience, judgment, and a highly trained capacity to discriminate.
+
+31:23.640 --> 31:28.820
+And the essay gives a very specific historical name to this evaluative verification capacity.
+
+31:29.080 --> 31:30.540
+It refers to it as taste.
+
+31:30.920 --> 31:38.760
+It reaches all the way back to the year 1757 to the Scottish philosopher David Hume to define what that word truly means.
+
+31:38.760 --> 31:48.920
+In modern conversation, we often use taste to mean arbitrary preference or elite snobbery, like preferring an expensive wine over a cheap one just for the status.
+
+31:49.140 --> 31:50.340
+Right, like being a food critic.
+
+31:51.280 --> 31:55.260
+But Hume argued that taste is a trained capacity to discriminate.
+
+31:56.100 --> 32:01.560
+It was born of intense practice, constant comparison, and prolonged exposure to a great many objects.
+
+32:01.560 --> 32:07.100
+And crucially, Hume understood that the most essential act of taste is the ability to refuse.
+
+32:08.160 --> 32:09.320
+The ability to refuse.
+
+32:10.220 --> 32:19.160
+And that connects right back to Fred Brooks in the 1980s and the essential difficulty of software, deciding what the system should actively refuse to do.
+
+32:19.520 --> 32:20.780
+The parallels are exact.
+
+32:21.120 --> 32:24.880
+Taste in software engineering is the disciplined preference for this smaller design.
+
+32:25.400 --> 32:28.640
+It is the patience to find the clearest possible variable name.
+
+32:28.640 --> 32:34.840
+It is designing an interface that does one single thing perfectly, rather than five things poorly.
+
+32:35.580 --> 32:41.600
+Or like the restraint required to decide not to import a massive third-party library just to solve a minor problem.
+
+32:42.020 --> 32:42.460
+Exactly.
+
+32:43.460 --> 32:46.940
+Taste is the invisible force that gives a system its conceptual integrity.
+
+32:47.800 --> 32:49.880
+Without taste, a system just accretes.
+
+32:50.120 --> 32:50.620
+It balloons.
+
+32:50.620 --> 32:55.000
+Every individual addition might seem totally defensible in isolation.
+
+32:55.300 --> 33:02.460
+But without the evaluative capacity to refuse, the whole structure loses its shape and collapses under its own weight.
+
+33:02.980 --> 33:07.180
+So how exactly does generative AI destroy this capacity for taste?
+
+33:07.780 --> 33:10.960
+It destroys it by eliminating the friction of creation.
+
+33:11.960 --> 33:14.600
+Hume deeply understood that taste is not innate.
+
+33:14.600 --> 33:20.700
+It is formed by the productive friction of making hard choices and living with the consequences of those choices.
+
+33:21.340 --> 33:26.120
+When you sit down to write a piece of software manually, you have to name the functions.
+
+33:26.560 --> 33:26.660
+Yeah.
+
+33:27.040 --> 33:31.800
+If you sit there staring at the screen struggling to name a function, that friction is telling you something.
+
+33:32.280 --> 33:34.900
+It is telling you that your underlying concept is confused.
+
+33:35.740 --> 33:37.100
+You learn from that friction.
+
+33:37.100 --> 33:44.260
+When you write a complex sentence, you rewrite it, you delete it, you feel the loss of the first draft.
+
+33:44.580 --> 33:47.400
+That struggle builds your capacity to discriminate.
+
+33:48.220 --> 33:53.540
+But when you generate something instantly, that productive friction is entirely gone.
+
+33:53.640 --> 33:55.520
+The pain of the blank page vanishes.
+
+33:56.320 --> 33:59.760
+Generative systems remove the occasions for making those hard choices,
+
+34:00.120 --> 34:03.580
+while preserving the shiny appearance that a choice was thoughtfully made.
+
+34:03.580 --> 34:06.980
+The draft arrives on your screen complete.
+
+34:07.680 --> 34:13.920
+The thousands of micro choices regarding syntax, structure, and tone were resolved by a statistical system,
+
+34:14.340 --> 34:16.320
+and you didn't have to weigh a single one of them.
+
+34:16.720 --> 34:17.380
+That's terrifying.
+
+34:17.860 --> 34:21.100
+The essay hypothesizes a terrifying cultural outcome.
+
+34:21.880 --> 34:26.940
+When you substitute the act of selecting from a generated menu for the actual hard work of construction,
+
+34:27.560 --> 34:29.840
+you weaken your evaluative capacity.
+
+34:30.180 --> 34:33.160
+Your taste literally atrophies like an unused muscle.
+
+34:33.160 --> 34:38.700
+And as individual taste atrophies, the overall demand for taste in the culture drops, too,
+
+34:38.780 --> 34:42.100
+because of what the essay calls the economics of the median.
+
+34:42.740 --> 34:45.660
+If millions of people are using the exact same underlying models,
+
+34:45.800 --> 34:48.660
+which were all trained on the exact same scrape of the Internet,
+
+34:49.260 --> 34:52.700
+everything inevitably converges on a perfectly generic center.
+
+34:53.060 --> 34:55.940
+We have concrete empirical evidence for this convergence.
+
+34:55.940 --> 35:01.720
+A fascinating study published in January 2026 took a popular image generator
+
+35:01.720 --> 35:07.640
+and set it to train repeatedly on its own generated outputs, a feedback loop of synthetic data.
+
+35:07.740 --> 35:08.180
+What happened?
+
+35:08.560 --> 35:13.340
+Very quickly, the model lost the ability to produce extreme or unique variations.
+
+35:13.560 --> 35:18.700
+It rapidly drifted into producing highly generic, perfectly average images.
+
+35:18.700 --> 35:24.200
+The researchers coined a brilliant term for this output, visual elevator music.
+
+35:24.280 --> 35:25.280
+Visual elevator music.
+
+35:25.280 --> 35:28.680
+That perfectly captures the vibe of so much of what we see online now.
+
+35:28.760 --> 35:32.940
+It is inoffensive, glossy, and entirely devoid of soul.
+
+35:33.500 --> 35:37.380
+And this phenomenon became so culturally prevalent that in June 2025,
+
+35:37.380 --> 35:42.640
+the Cambridge Dictionary literally added the word slop to their official lexicon
+
+35:42.640 --> 35:47.260
+to describe this flood of low-quality, median, AI-generated Internet content.
+
+35:48.060 --> 35:49.600
+But let me challenge you on this point,
+
+35:49.660 --> 35:53.160
+because I know there are listeners who might feel we are getting a bit too philosophical.
+
+35:54.200 --> 35:57.260
+Isn't taste ultimately just a subjective luxury?
+
+35:57.560 --> 36:01.180
+Like, if I'm an analyst writing a Python script to parse some sales data,
+
+36:01.340 --> 36:04.060
+or a manager sending an update email to my team,
+
+36:04.060 --> 36:08.140
+why does it really matter if my code or my email is a bit generic?
+
+36:08.420 --> 36:10.360
+Why does it matter if it lacks taste,
+
+36:10.360 --> 36:13.460
+as long as it gets the immediate job done and saves me an hour?
+
+36:13.980 --> 36:15.300
+It is a totally valid challenge.
+
+36:15.680 --> 36:19.920
+And it comes to the core of why we must distinguish between ornament and function.
+
+36:20.740 --> 36:23.840
+Taste in software engineering, and arguably in communication,
+
+36:24.120 --> 36:26.020
+is not a mere aesthetic luxury.
+
+36:26.840 --> 36:29.420
+The specific properties that taste selects for,
+
+36:29.740 --> 36:33.060
+a small surface area, clear and bounded interfaces,
+
+36:33.060 --> 36:35.940
+high rates of reuse, minimal external dependencies,
+
+36:36.580 --> 36:38.880
+these are functionally what makes systems secure,
+
+36:39.380 --> 36:41.380
+legible, and maintainable over time.
+
+36:41.760 --> 36:42.500
+Oh, I see.
+
+36:43.160 --> 36:46.340
+A lack of taste doesn't just result in an ugly, inelegant code base.
+
+36:46.480 --> 36:48.600
+It results in a highly vulnerable one.
+
+36:49.180 --> 36:51.180
+It creates a bloated, chaotic architecture
+
+36:51.180 --> 36:54.000
+where an attacker can easily hide malicious code,
+
+36:54.280 --> 36:56.120
+simply because the system is so sprawling
+
+36:56.120 --> 36:59.080
+that no human maintainer can hold it all in their head at once.
+
+36:59.080 --> 37:04.100
+Wow. So, taste is literally the immune system of the software.
+
+37:04.600 --> 37:06.480
+That is a phenomenal way to encapsulate it.
+
+37:06.760 --> 37:09.100
+In media and art, taste protects the audience
+
+37:09.100 --> 37:12.400
+from being force-fed the generic average of everything at once.
+
+37:12.980 --> 37:15.080
+In software, taste is the immune system
+
+37:15.080 --> 37:18.000
+that protects the critical infrastructure from systemic collapse.
+
+37:18.000 --> 37:22.000
+To prove that this loss of taste is a tangible, everyday reality,
+
+37:22.220 --> 37:24.940
+let's step completely out of the software code base for a minute.
+
+37:25.240 --> 37:26.440
+Let's look at the physical world.
+
+37:27.120 --> 37:28.820
+Let's look at the specific aesthetic
+
+37:28.820 --> 37:30.540
+that has taken over the daily lives
+
+37:30.540 --> 37:32.260
+of almost everyone listening to this.
+
+37:32.680 --> 37:34.300
+The visual vernacular.
+
+37:35.120 --> 37:36.720
+The AI slop in the wild.
+
+37:36.960 --> 37:38.560
+Flyxion's essay examines
+
+37:38.560 --> 37:40.900
+three specific cultural flashpoints
+
+37:40.900 --> 37:42.660
+where this erosion of taste
+
+37:42.660 --> 37:44.680
+and the subsequent backlash to it
+
+37:44.680 --> 37:46.640
+has become impossible to ignore.
+
+37:46.640 --> 37:49.940
+The first arena is local event posters.
+
+37:50.840 --> 37:52.520
+The 2026 flyer pandemic.
+
+37:53.140 --> 37:56.200
+I remember reading the massive 404 media report on this.
+
+37:56.420 --> 37:58.660
+You couldn't walk down a street without seeing one.
+
+37:59.340 --> 38:02.540
+Historically, a physical event poster has a very clear job.
+
+38:03.280 --> 38:04.540
+It tells you what is happening,
+
+38:05.140 --> 38:07.020
+where it is happening, and when.
+
+38:08.040 --> 38:10.740
+But crucially, the visual design of the flyer
+
+38:10.740 --> 38:13.240
+signals the kind of event it is.
+
+38:13.720 --> 38:14.020
+Right.
+
+38:14.020 --> 38:16.940
+A flyer for a chaotic punk rock show in a basement
+
+38:16.940 --> 38:18.520
+should not look anything like
+
+38:18.520 --> 38:20.600
+a flyer for a Sunday morning farmer's market.
+
+38:21.620 --> 38:23.580
+The friction of designing it locally,
+
+38:24.320 --> 38:25.440
+the imperfect fonts,
+
+38:25.740 --> 38:26.780
+the weird layouts,
+
+38:27.540 --> 38:30.420
+signaled that a human being in that specific community
+
+38:30.420 --> 38:33.020
+cared enough to put effort into making it.
+
+38:33.020 --> 38:37.060
+But then the AI image generators became ubiquitous.
+
+38:38.000 --> 38:39.240
+And suddenly, practically overnight,
+
+38:39.440 --> 38:42.440
+every event poster for every event in town
+
+38:42.440 --> 38:43.840
+looked exactly the same.
+
+38:44.240 --> 38:45.840
+They were hyper-glossy,
+
+38:46.040 --> 38:46.320
+oversaturated,
+
+38:47.260 --> 38:48.800
+weirdly perfect in their lighting,
+
+38:48.920 --> 38:50.680
+but fundamentally soulless
+
+38:50.680 --> 38:52.820
+and disconnected from the reality of the event.
+
+38:52.820 --> 38:55.900
+A writer for TechRadar analyzed this trend
+
+38:55.900 --> 38:57.100
+and pointed out that
+
+38:57.100 --> 38:58.840
+essentially all public events
+
+38:58.840 --> 39:01.800
+ended up adopting the exact same generic branding.
+
+39:02.720 --> 39:05.160
+A fantastic community-driven local event
+
+39:05.160 --> 39:07.560
+and a terrible corporate cash grab
+
+39:07.560 --> 39:09.820
+became visually indistinguishable from one another.
+
+39:10.300 --> 39:11.820
+But what is truly fascinating
+
+39:11.820 --> 39:14.960
+is the fierce cultural backlash that followed.
+
+39:14.960 --> 39:15.440
+Yes.
+
+39:15.980 --> 39:18.180
+The venues themselves started outright banning them.
+
+39:18.820 --> 39:19.960
+Axios reported throughout 2026
+
+39:20.480 --> 39:24.020
+that local breweries and artisan markets in Tampa Bay
+
+39:24.020 --> 39:26.100
+were being viciously publicly shamed
+
+39:26.100 --> 39:27.480
+in their Instagram comment sections
+
+39:27.480 --> 39:29.840
+for using AI slop to promote their events.
+
+39:30.180 --> 39:31.420
+People were really upset.
+
+39:31.820 --> 39:32.300
+They were.
+
+39:32.560 --> 39:34.260
+Independent businesses in Salt Lake City
+
+39:34.260 --> 39:37.540
+started signing pledges to use human-only advertising.
+
+39:38.120 --> 39:39.440
+An indie music venue in Oakland
+
+39:39.440 --> 39:42.520
+officially banned all AI-generated flyers from their premises.
+
+39:42.520 --> 39:45.400
+And they got nearly 8,000 likes on the announcement
+
+39:45.400 --> 39:47.340
+with hundreds of comments from locals
+
+39:47.340 --> 39:48.860
+saying that seeing an AI flyer
+
+39:48.860 --> 39:51.260
+made them actively less likely to attend the show.
+
+39:52.180 --> 39:54.700
+A popular pub in Halifax announced
+
+39:54.700 --> 39:57.280
+it would only accept and display human-made posters
+
+39:57.280 --> 39:58.640
+on their bulletin board.
+
+39:59.720 --> 40:02.460
+One local saloon in Utah went so far as to tell bands
+
+40:02.460 --> 40:04.920
+that they needed to either find a local artist,
+
+40:05.660 --> 40:06.900
+cut letters out of magazines,
+
+40:07.100 --> 40:09.200
+or, as management bluntly put it,
+
+40:09.900 --> 40:10.880
+do it yourself or die.
+
+40:10.880 --> 40:14.400
+And the essay notes this amazing, counterintuitive detail.
+
+40:14.920 --> 40:16.800
+A crudely hand-drawn stick figure
+
+40:16.800 --> 40:19.900
+is now socially preferred by these audiences
+
+40:19.900 --> 40:22.660
+over a flawless, glossy AI flyer.
+
+40:23.540 --> 40:23.860
+Why?
+
+40:24.240 --> 40:25.880
+Because in a world of infinite,
+
+40:26.120 --> 40:27.960
+zero-cost digital perfection,
+
+40:28.540 --> 40:31.380
+the crude stick figure carries a premium signal.
+
+40:31.620 --> 40:33.520
+It signals local participation.
+
+40:33.820 --> 40:35.360
+Yes, it proves that a human being
+
+40:35.360 --> 40:36.980
+actually gives a damn about the event.
+
+40:36.980 --> 40:40.320
+The audience's evaluative capacity has adapted.
+
+40:40.820 --> 40:42.900
+They have learned to read the glossy AI polish
+
+40:42.900 --> 40:44.120
+not as high quality,
+
+40:44.500 --> 40:46.860
+but as a glaring warning sign for laziness.
+
+40:47.500 --> 40:49.460
+The second area the essay investigates
+
+40:49.460 --> 40:51.900
+is online mathematical communities.
+
+40:52.420 --> 40:56.300
+And this one is deeply, profoundly tragic.
+
+40:56.820 --> 40:58.620
+Researchers from Stanford and Georgetown
+
+40:58.620 --> 41:01.220
+published a massive joint study on this,
+
+41:01.640 --> 41:03.920
+focusing specifically on large Facebook groups
+
+41:03.920 --> 41:05.020
+dedicated to mathematics.
+
+41:05.020 --> 41:08.680
+Mathematics is the ultimate limiting case
+
+41:08.680 --> 41:09.280
+for this argument.
+
+41:09.980 --> 41:11.600
+It is the one subject in the world
+
+41:11.600 --> 41:13.680
+where ornament is the least excusable.
+
+41:14.480 --> 41:17.260
+The entire intrinsic value of a math post
+
+41:17.260 --> 41:19.180
+is the stark correctness
+
+41:19.180 --> 41:20.960
+and the logical clarity of the equation.
+
+41:21.800 --> 41:22.860
+But these groups,
+
+41:23.020 --> 41:25.060
+which were once havens for rigorous discussion,
+
+41:25.060 --> 41:27.600
+are now heavily flooded with generated images
+
+41:27.600 --> 41:29.600
+where the equations are depicted
+
+41:29.600 --> 41:31.940
+floating over glowing digital cosmos
+
+41:31.940 --> 41:34.880
+or bursting out of a brain made of circuitry
+
+41:34.880 --> 41:37.640
+or surrounded by intricate golden gears.
+
+41:38.300 --> 41:40.360
+It is always the golden gears
+
+41:40.360 --> 41:42.400
+and the glowing blue holograms.
+
+41:42.460 --> 41:44.440
+It's like the AI's default aesthetic
+
+41:44.440 --> 41:45.720
+for intelligence.
+
+41:46.360 --> 41:47.520
+The images are saturated
+
+41:47.520 --> 41:49.240
+completely past the point of legibility.
+
+41:49.820 --> 41:50.700
+And the real tragedy
+
+41:50.700 --> 41:53.600
+is that the math contained within the generated image
+
+41:53.600 --> 41:55.680
+is routinely fundamentally wrong.
+
+41:55.900 --> 41:56.400
+Oh, wow.
+
+41:56.400 --> 41:58.360
+The AI hallucinates the formula
+
+41:58.360 --> 42:00.820
+to make it fit the aesthetic composition.
+
+42:01.380 --> 42:03.040
+But the social media engagement algorithm
+
+42:03.040 --> 42:04.540
+doesn't care if the math is correct.
+
+42:04.740 --> 42:05.920
+It is blind to truth.
+
+42:06.160 --> 42:07.680
+It only rewards the gaudiness
+
+42:07.680 --> 42:09.680
+that captures a scrolling thumb.
+
+42:10.220 --> 42:11.280
+These groups are now receiving
+
+42:11.280 --> 42:12.780
+hundreds of millions of engagements
+
+42:12.780 --> 42:14.900
+on outright falsehoods,
+
+42:14.900 --> 42:16.400
+completely severing the visual form
+
+42:16.400 --> 42:16.980
+of the community
+
+42:16.980 --> 42:18.640
+from its foundational function
+
+42:18.640 --> 42:20.420
+of sharing mathematical truth.
+
+42:20.420 --> 42:22.780
+I came up with an analogy for this
+
+42:22.780 --> 42:23.820
+when I was reading the study.
+
+42:24.620 --> 42:26.880
+It is exactly like visual MSG.
+
+42:27.320 --> 42:28.920
+It perfectly hits the algorithm's
+
+42:28.920 --> 42:29.820
+engagement receptors.
+
+42:30.360 --> 42:31.620
+It creates a massive spike
+
+42:31.620 --> 42:32.780
+in temporary attention.
+
+42:33.160 --> 42:34.460
+But it leaves the viewer
+
+42:34.460 --> 42:35.760
+entirely starved
+
+42:35.760 --> 42:37.620
+for actual human meaning or truth.
+
+42:37.760 --> 42:39.640
+It is pure, empty calories.
+
+42:39.980 --> 42:41.820
+The third specific example
+
+42:41.820 --> 42:42.840
+the essay provides
+
+42:42.840 --> 42:43.620
+is the phenomenon
+
+42:43.620 --> 42:46.080
+of the one-tap social media filter
+
+42:46.080 --> 42:46.620
+or template.
+
+42:47.400 --> 42:48.560
+They specifically analyze
+
+42:48.560 --> 42:50.820
+the massive March 2025 backlash
+
+42:50.820 --> 42:52.060
+against a viral
+
+42:52.060 --> 42:54.440
+animation studio-style filter.
+
+42:54.740 --> 42:57.240
+Oh, I remember this vividly.
+
+42:57.560 --> 42:58.080
+For a week,
+
+42:58.500 --> 42:59.520
+everyone on my feed
+
+42:59.520 --> 43:00.360
+was turning their photos
+
+43:00.360 --> 43:01.660
+into those big-eyed,
+
+43:01.920 --> 43:04.140
+overly emotive 3D-animated characters.
+
+43:04.580 --> 43:05.720
+The danger of these filters
+
+43:05.720 --> 43:06.720
+is that they apply
+
+43:06.720 --> 43:09.180
+a uniform, median aesthetic
+
+43:09.180 --> 43:11.120
+to incredibly diverse,
+
+43:11.340 --> 43:12.780
+nuanced human experiences.
+
+43:13.360 --> 43:14.660
+The faces of the elderly,
+
+43:15.200 --> 43:16.440
+the messy rooms of teenagers,
+
+43:16.940 --> 43:18.000
+the unique meals
+
+43:18.000 --> 43:18.960
+from different cultures.
+
+43:19.240 --> 43:20.460
+They all come out rendered
+
+43:20.460 --> 43:22.540
+in the exact same color palette
+
+43:22.540 --> 43:23.880
+with the exact same
+
+43:23.880 --> 43:25.480
+artificial grain and lighting.
+
+43:25.800 --> 43:26.940
+Everything looks the same.
+
+43:27.440 --> 43:28.600
+The crushing sameness
+
+43:28.600 --> 43:29.220
+of the output
+
+43:29.220 --> 43:30.900
+is delivered to the user
+
+43:30.900 --> 43:31.660
+as a feature.
+
+43:32.400 --> 43:33.640
+And when you saturate
+
+43:33.640 --> 43:34.540
+the visual environment
+
+43:34.540 --> 43:35.120
+of a culture
+
+43:35.120 --> 43:36.740
+with this median look,
+
+43:37.200 --> 43:38.420
+you implicitly teach
+
+43:38.420 --> 43:38.980
+a population
+
+43:38.980 --> 43:39.820
+that the median
+
+43:39.820 --> 43:41.200
+is all there is.
+
+43:41.860 --> 43:43.220
+You systemically remove
+
+43:43.220 --> 43:44.340
+the examples of people
+
+43:44.340 --> 43:44.780
+trying,
+
+43:45.140 --> 43:46.040
+whether they do it badly
+
+43:46.040 --> 43:46.560
+or well,
+
+43:46.980 --> 43:48.020
+to express their own
+
+43:48.020 --> 43:49.680
+unique, jagged reality.
+
+43:50.580 --> 43:51.280
+Okay, we have painted
+
+43:51.280 --> 43:52.820
+a pretty dire,
+
+43:53.200 --> 43:54.100
+intense picture here.
+
+43:54.300 --> 43:55.440
+The software running
+
+43:55.440 --> 43:56.440
+our world is bloated
+
+43:56.440 --> 43:58.240
+and increasingly vulnerable.
+
+43:58.740 --> 43:59.620
+The broader culture
+
+43:59.620 --> 44:01.480
+is flooded with empty slop,
+
+44:01.900 --> 44:03.860
+and our collective capacity
+
+44:03.860 --> 44:05.260
+for taste is atrophying.
+
+44:05.820 --> 44:07.280
+But to be truly informed,
+
+44:07.580 --> 44:08.900
+we cannot just look
+
+44:08.900 --> 44:09.860
+at one side of the ledger.
+
+44:10.080 --> 44:11.200
+We need to steel-man
+
+44:11.200 --> 44:11.940
+the opposing view.
+
+44:12.940 --> 44:14.300
+Let's impartially present
+
+44:14.300 --> 44:15.440
+the strongest arguments
+
+44:15.440 --> 44:17.040
+defending the current trajectory
+
+44:17.040 --> 44:18.160
+of generative AI
+
+44:18.160 --> 44:19.760
+and see how the essay's framework
+
+44:19.760 --> 44:20.640
+holds up against them.
+
+44:20.880 --> 44:22.380
+The first counter-argument
+
+44:22.380 --> 44:23.740
+from the proponents of AI
+
+44:23.740 --> 44:25.480
+is the most obvious
+
+44:25.480 --> 44:26.920
+and the most data-backed.
+
+44:27.500 --> 44:29.500
+Throughput has genuinely risen.
+
+44:30.280 --> 44:31.540
+The defenders of these tools
+
+44:31.540 --> 44:32.360
+will point directly
+
+44:32.360 --> 44:34.360
+to the DORA 2025 data
+
+44:34.360 --> 44:35.300
+we discussed earlier
+
+44:35.300 --> 44:36.060
+and say,
+
+44:36.260 --> 44:36.560
+look,
+
+44:36.840 --> 44:37.840
+the initial growing pains
+
+44:37.840 --> 44:38.220
+are over.
+
+44:38.360 --> 44:39.620
+We fixed the speed issue.
+
+44:40.220 --> 44:41.400
+Teams are currently shipping
+
+44:41.400 --> 44:42.040
+more features
+
+44:42.040 --> 44:43.220
+and writing more code
+
+44:43.220 --> 44:44.640
+than ever before in history.
+
+44:45.100 --> 44:45.860
+And as we established,
+
+44:46.060 --> 44:47.300
+that is factually true
+
+44:47.300 --> 44:48.040
+based on the data.
+
+44:48.140 --> 44:48.900
+They are moving faster.
+
+44:49.020 --> 44:49.900
+It is entirely true.
+
+44:50.540 --> 44:52.080
+But Flyxion's essay argues
+
+44:52.080 --> 44:53.300
+that pointing to volume
+
+44:53.300 --> 44:55.160
+is relying on the wrong metric.
+
+44:55.940 --> 44:57.280
+If you drastically increase
+
+44:57.280 --> 44:58.740
+the rate at which you ship code,
+
+44:59.120 --> 45:00.500
+but you simultaneously increase
+
+45:00.500 --> 45:01.400
+the rate of incorrect,
+
+45:01.600 --> 45:02.120
+unverified,
+
+45:02.240 --> 45:03.300
+or unstable changes,
+
+45:03.860 --> 45:04.540
+you haven't actually
+
+45:04.540 --> 45:05.660
+made forward progress.
+
+45:05.780 --> 45:05.980
+Right.
+
+45:06.400 --> 45:07.760
+You are just accumulating
+
+45:07.760 --> 45:08.460
+technical debt
+
+45:08.460 --> 45:09.580
+at a faster velocity.
+
+45:09.580 --> 45:11.100
+Shipping 10 times
+
+45:11.100 --> 45:11.840
+as many features
+
+45:11.840 --> 45:12.700
+does not matter
+
+45:12.700 --> 45:14.100
+if the underlying architecture
+
+45:14.100 --> 45:15.320
+becomes 10 times harder
+
+45:15.320 --> 45:16.720
+to maintain and secure.
+
+45:17.400 --> 45:18.540
+The second major counterargument
+
+45:18.540 --> 45:19.760
+is the historical one.
+
+45:20.060 --> 45:20.480
+People say,
+
+45:21.080 --> 45:21.980
+bad media and bad code
+
+45:21.980 --> 45:22.720
+are old news.
+
+45:23.000 --> 45:23.720
+We had terrible
+
+45:23.720 --> 45:25.260
+copy-pasted spaghetti code
+
+45:25.260 --> 45:26.380
+long before AI existed.
+
+45:26.900 --> 45:27.420
+We had cheap,
+
+45:27.560 --> 45:28.800
+generic clip art flyers
+
+45:28.800 --> 45:29.820
+in the 1990s.
+
+45:29.880 --> 45:31.120
+Slop has always existed,
+
+45:31.280 --> 45:32.260
+so why panic now?
+
+45:32.660 --> 45:33.920
+This is a very common defense.
+
+45:34.280 --> 45:35.580
+And the author of the essay
+
+45:35.580 --> 45:36.500
+concedes that it is
+
+45:36.500 --> 45:37.520
+historically accurate.
+
+45:38.120 --> 45:39.460
+Mediocrity is not new.
+
+45:40.100 --> 45:41.200
+But pointing out that fire
+
+45:41.200 --> 45:42.000
+has always existed
+
+45:42.000 --> 45:42.560
+in the forest
+
+45:42.560 --> 45:43.740
+is a very poor defense
+
+45:43.740 --> 45:44.900
+against the sudden deployment
+
+45:44.900 --> 45:46.060
+of a massive
+
+45:46.060 --> 45:47.940
+industrial-scale accelerant.
+
+45:48.300 --> 45:48.920
+Oh, that's a good way
+
+45:48.920 --> 45:49.400
+to frame it.
+
+45:49.800 --> 45:50.800
+The generative technology
+
+45:50.800 --> 45:52.320
+didn't invent mediocrity.
+
+45:52.680 --> 45:53.460
+What it did was
+
+45:53.460 --> 45:54.260
+completely remove
+
+45:54.260 --> 45:55.460
+the friction that historically
+
+45:55.460 --> 45:56.260
+kept the volume
+
+45:56.260 --> 45:57.840
+of that mediocrity in check.
+
+45:58.340 --> 45:59.580
+It fundamentally changed
+
+45:59.580 --> 46:00.860
+the rate at which production
+
+46:00.860 --> 46:02.260
+can outpace human judgment.
+
+46:02.800 --> 46:03.200
+Right.
+
+46:03.760 --> 46:04.860
+It used to take an hour
+
+46:04.860 --> 46:05.780
+of typing to write
+
+46:05.780 --> 46:06.880
+a really bad script.
+
+46:06.880 --> 46:08.480
+Now it takes a millisecond.
+
+46:08.960 --> 46:10.340
+That scale completely changes
+
+46:10.340 --> 46:11.800
+the physics of the problem.
+
+46:12.580 --> 46:13.400
+What about the argument
+
+46:13.400 --> 46:14.000
+that the models
+
+46:14.000 --> 46:15.160
+are constantly improving?
+
+46:15.480 --> 46:15.900
+People say,
+
+46:16.060 --> 46:16.880
+just give it a year,
+
+46:17.020 --> 46:17.920
+the context windows
+
+46:17.920 --> 46:18.640
+will get bigger,
+
+46:18.980 --> 46:20.220
+the reasoning capabilities
+
+46:20.220 --> 46:20.960
+will get sharper,
+
+46:21.100 --> 46:22.100
+and the AI will eventually
+
+46:22.100 --> 46:23.340
+just fix its own bugs.
+
+46:23.880 --> 46:25.320
+The models are indeed
+
+46:25.320 --> 46:26.160
+improving in their
+
+46:26.160 --> 46:26.980
+raw capabilities.
+
+46:27.700 --> 46:28.560
+But we have to look back
+
+46:28.560 --> 46:29.900
+at the Veracode security data.
+
+46:30.300 --> 46:31.300
+The vulnerability rates
+
+46:31.300 --> 46:32.140
+did not drop
+
+46:32.140 --> 46:33.360
+as the models scaled up.
+
+46:33.880 --> 46:34.140
+Furthermore,
+
+46:34.140 --> 46:35.480
+the essay points out
+
+46:35.480 --> 46:36.800
+a structural economic flaw
+
+46:36.800 --> 46:37.440
+in this defense.
+
+46:38.000 --> 46:38.920
+A more advanced model
+
+46:38.920 --> 46:39.840
+might lower the cost
+
+46:39.840 --> 46:41.260
+of verifying code slightly,
+
+46:41.720 --> 46:42.840
+but it lowers the cost
+
+46:42.840 --> 46:43.700
+of generating code
+
+46:43.700 --> 46:44.600
+even faster
+
+46:44.600 --> 46:46.340
+because rapid generation
+
+46:46.340 --> 46:47.580
+is what the models
+
+46:47.580 --> 46:48.600
+are primarily optimized
+
+46:48.600 --> 46:49.280
+to do.
+
+46:49.840 --> 46:50.740
+So the math gets worse.
+
+46:51.120 --> 46:51.340
+Yes.
+
+46:51.520 --> 46:52.520
+The mathematical gap
+
+46:52.520 --> 46:53.280
+between generation
+
+46:53.280 --> 46:54.040
+and verification,
+
+46:54.720 --> 46:56.180
+our G minus V equation,
+
+46:56.700 --> 46:57.800
+actually widens
+
+46:57.800 --> 46:58.640
+and worsens,
+
+46:59.140 --> 47:00.820
+even as the AI itself
+
+47:00.820 --> 47:01.340
+gets smarter.
+
+47:01.340 --> 47:03.500
+Okay, here is an argument
+
+47:03.500 --> 47:05.120
+that carries a massive amount
+
+47:05.120 --> 47:05.800
+of cultural
+
+47:05.800 --> 47:06.760
+and emotional weight.
+
+47:07.820 --> 47:08.380
+Democratization.
+
+47:08.940 --> 47:10.060
+The defense
+
+47:10.060 --> 47:11.420
+is that generative AI
+
+47:11.420 --> 47:12.100
+allows people
+
+47:12.100 --> 47:12.800
+who don't know
+
+47:12.800 --> 47:13.280
+how to code
+
+47:13.280 --> 47:14.200
+or don't know
+
+47:14.200 --> 47:14.680
+how to paint
+
+47:14.680 --> 47:16.020
+to finally participate
+
+47:16.020 --> 47:17.000
+and create things.
+
+47:17.480 --> 47:18.880
+It breaks the monopoly
+
+47:18.880 --> 47:19.840
+of the priesthood,
+
+47:19.960 --> 47:20.920
+the elite programmers,
+
+47:21.200 --> 47:22.860
+and the formally trained artists.
+
+47:23.200 --> 47:23.960
+The essay treats
+
+47:23.960 --> 47:25.440
+the democratization argument
+
+47:25.440 --> 47:26.840
+with serious respect.
+
+47:27.300 --> 47:28.500
+The access provided
+
+47:28.500 --> 47:29.100
+by these tools
+
+47:29.100 --> 47:29.620
+is real,
+
+47:29.620 --> 47:31.280
+and it is highly valuable
+
+47:31.280 --> 47:32.040
+for personal,
+
+47:32.460 --> 47:33.260
+localized use.
+
+47:33.980 --> 47:35.360
+But the systemic danger
+
+47:35.360 --> 47:36.560
+emerges at scale.
+
+47:37.420 --> 47:38.580
+Democratizing the production
+
+47:38.580 --> 47:39.320
+of artifacts
+
+47:39.320 --> 47:40.560
+without democratizing
+
+47:40.560 --> 47:41.800
+the underlying understanding
+
+47:41.800 --> 47:42.820
+of how they work
+
+47:42.820 --> 47:44.280
+is highly dangerous.
+
+47:44.800 --> 47:46.180
+Because they can't fix it
+
+47:46.180 --> 47:46.740
+if it breaks.
+
+47:47.120 --> 47:47.620
+Exactly.
+
+47:48.340 --> 47:49.400
+If you empower anyone
+
+47:49.400 --> 47:50.500
+to generate a massive,
+
+47:50.740 --> 47:52.180
+interconnected software system,
+
+47:52.540 --> 47:53.560
+but they don't actually
+
+47:53.560 --> 47:54.640
+understand the architecture,
+
+47:55.240 --> 47:56.420
+they cannot maintain it
+
+47:56.420 --> 47:56.900
+when it breaks.
+
+47:57.500 --> 47:58.200
+You end up creating
+
+47:58.200 --> 47:59.500
+a massive global stock
+
+47:59.500 --> 48:00.960
+of unmaintainable software.
+
+48:01.560 --> 48:02.060
+And ironically,
+
+48:02.620 --> 48:03.400
+rather than creating
+
+48:03.400 --> 48:04.220
+true independence,
+
+48:04.680 --> 48:06.080
+you significantly deepen
+
+48:06.080 --> 48:07.240
+the user's reliance
+
+48:07.240 --> 48:08.460
+on the massive tech vendors
+
+48:08.460 --> 48:09.460
+who supply
+
+48:09.460 --> 48:10.380
+the generative tools.
+
+48:10.800 --> 48:11.920
+Because if the code breaks,
+
+48:12.160 --> 48:13.220
+the user can't fix it.
+
+48:13.440 --> 48:14.520
+They have to ask the AI
+
+48:14.520 --> 48:15.060
+to fix it,
+
+48:15.140 --> 48:15.560
+trapping them
+
+48:15.560 --> 48:16.220
+in the ecosystem.
+
+48:16.780 --> 48:17.500
+And to your point
+
+48:17.500 --> 48:18.080
+about scale,
+
+48:18.460 --> 48:19.460
+the public impact
+
+48:19.460 --> 48:20.500
+of a software failure
+
+48:20.500 --> 48:21.580
+doesn't care about
+
+48:21.580 --> 48:22.260
+the creator's
+
+48:22.260 --> 48:22.860
+good intentions.
+
+48:23.320 --> 48:24.520
+A flawed security layer
+
+48:24.520 --> 48:25.660
+that leaks user data
+
+48:25.660 --> 48:26.380
+harms the public
+
+48:26.380 --> 48:27.380
+just as much,
+
+48:27.520 --> 48:28.180
+regardless of whether
+
+48:28.180 --> 48:28.940
+it was written by
+
+48:28.940 --> 48:30.560
+an elite veteran hacker
+
+48:30.560 --> 48:31.700
+or a total beginner
+
+48:31.700 --> 48:32.720
+using an AI tool
+
+48:32.720 --> 48:33.400
+for the first time.
+
+48:33.800 --> 48:34.180
+Exactly.
+
+48:34.420 --> 48:35.700
+And the final counterargument
+
+48:35.700 --> 48:36.820
+addresses the cultural
+
+48:36.820 --> 48:37.820
+backlash itself.
+
+48:38.180 --> 48:39.200
+It points out that
+
+48:39.200 --> 48:40.280
+the growing hostility
+
+48:40.280 --> 48:41.160
+toward AI
+
+48:41.160 --> 48:42.620
+is becoming deeply
+
+48:42.620 --> 48:43.600
+undiscriminating
+
+48:43.600 --> 48:44.240
+and toxic.
+
+48:44.240 --> 48:45.640
+They are referring
+
+48:45.640 --> 48:46.520
+to things like
+
+48:46.520 --> 48:48.020
+the May 2026
+
+48:48.020 --> 48:48.820
+Monet incident.
+
+48:49.160 --> 48:49.400
+Yes.
+
+48:50.220 --> 48:50.920
+For context,
+
+48:51.120 --> 48:52.080
+an independent artist
+
+48:52.080 --> 48:53.320
+posted a real,
+
+48:53.740 --> 48:54.400
+physical painting
+
+48:54.400 --> 48:55.300
+they had spent weeks
+
+48:55.300 --> 48:56.520
+creating in the
+
+48:56.520 --> 48:57.320
+impressionist style
+
+48:57.320 --> 48:57.900
+of Claude Monet.
+
+48:58.620 --> 48:59.900
+The internet mob
+
+48:59.900 --> 49:01.600
+immediately and viciously
+
+49:01.600 --> 49:02.400
+attacked the artist,
+
+49:02.640 --> 49:03.440
+falsely claiming
+
+49:03.440 --> 49:04.020
+the work was
+
+49:04.020 --> 49:05.140
+AI-generated slop.
+
+49:05.480 --> 49:06.600
+That was awful.
+
+49:06.960 --> 49:07.900
+The essay acknowledges
+
+49:07.900 --> 49:08.860
+this ugly incident
+
+49:08.860 --> 49:09.700
+but makes a brilliant
+
+49:09.700 --> 49:10.920
+counterintuitive point.
+
+49:11.500 --> 49:12.700
+This incident actually
+
+49:12.700 --> 49:14.180
+proves the central thesis
+
+49:14.180 --> 49:15.440
+about the loss of taste.
+
+49:16.100 --> 49:16.360
+Wait,
+
+49:16.500 --> 49:17.780
+how does a false
+
+49:17.780 --> 49:18.920
+accusation prove
+
+49:18.920 --> 49:19.940
+the loss of taste?
+
+49:20.240 --> 49:21.340
+Because a culture
+
+49:21.340 --> 49:22.280
+of reflexive,
+
+49:22.480 --> 49:23.620
+unthinking rejection
+
+49:23.620 --> 49:25.000
+has lost its
+
+49:25.000 --> 49:26.160
+evaluative capacity
+
+49:26.160 --> 49:27.000
+just as much
+
+49:27.000 --> 49:27.460
+as a culture
+
+49:27.460 --> 49:28.340
+of reflexive,
+
+49:28.480 --> 49:29.480
+unthinking acceptance.
+
+49:30.340 --> 49:31.040
+Taste is not just
+
+49:31.040 --> 49:31.920
+saying no.
+
+49:32.800 --> 49:33.660
+Taste is the learned
+
+49:33.660 --> 49:34.760
+ability to articulate
+
+49:34.760 --> 49:35.720
+why something
+
+49:35.720 --> 49:36.740
+is good or bad.
+
+49:37.280 --> 49:38.080
+If you are just
+
+49:38.080 --> 49:39.220
+screaming AI
+
+49:39.220 --> 49:40.260
+at anything that
+
+49:40.260 --> 49:40.960
+looks a certain way
+
+49:40.960 --> 49:41.440
+online,
+
+49:41.780 --> 49:42.840
+you aren't exercising
+
+49:42.840 --> 49:43.400
+taste.
+
+49:43.800 --> 49:44.860
+You are just acting
+
+49:44.860 --> 49:45.680
+on an automated
+
+49:45.680 --> 49:46.900
+tribal reflex.
+
+49:48.000 --> 49:48.400
+Oh, wow.
+
+49:48.980 --> 49:49.980
+Both extremes.
+
+49:50.440 --> 49:51.260
+Blindly accepting
+
+49:51.260 --> 49:52.220
+everything the AI
+
+49:52.220 --> 49:52.680
+produces
+
+49:52.680 --> 49:54.180
+and blindly rejecting
+
+49:54.180 --> 49:54.900
+real art
+
+49:54.900 --> 49:55.400
+because you are
+
+49:55.400 --> 49:55.900
+paranoid
+
+49:55.900 --> 49:57.580
+demonstrate a severe
+
+49:57.580 --> 49:58.540
+degradation of our
+
+49:58.540 --> 49:59.560
+capacity to verify
+
+49:59.560 --> 50:00.720
+and evaluate.
+
+50:01.220 --> 50:02.400
+That is a profound
+
+50:02.400 --> 50:02.820
+point.
+
+50:03.360 --> 50:04.020
+We are losing
+
+50:04.020 --> 50:04.580
+the ability
+
+50:04.580 --> 50:06.040
+to truly see
+
+50:06.040 --> 50:06.820
+what is in front
+
+50:06.820 --> 50:07.220
+of us.
+
+50:07.900 --> 50:08.600
+So we have fully
+
+50:08.600 --> 50:09.480
+diagnosed the disease.
+
+50:09.800 --> 50:10.360
+We have thoroughly
+
+50:10.360 --> 50:11.220
+analyzed the strongest
+
+50:11.220 --> 50:11.940
+counterarguments.
+
+50:12.440 --> 50:12.880
+Now,
+
+50:13.520 --> 50:14.120
+how do we actually
+
+50:14.120 --> 50:15.160
+fix this?
+
+50:15.920 --> 50:16.360
+How do we
+
+50:16.360 --> 50:17.100
+rebalance the
+
+50:17.100 --> 50:18.200
+G-V equation
+
+50:18.200 --> 50:18.860
+before the
+
+50:18.860 --> 50:20.280
+backlog buries us?
+
+50:20.280 --> 50:21.380
+The essay
+
+50:21.380 --> 50:21.760
+doesn't just
+
+50:21.760 --> 50:22.360
+leave the reader
+
+50:22.360 --> 50:22.860
+in despair.
+
+50:23.000 --> 50:23.560
+It offers a
+
+50:23.560 --> 50:24.500
+concrete alternative
+
+50:24.500 --> 50:25.000
+course.
+
+50:26.140 --> 50:26.500
+The proposed
+
+50:26.500 --> 50:27.300
+solutions all
+
+50:27.300 --> 50:28.000
+revolve around
+
+50:28.000 --> 50:28.960
+fundamentally changing
+
+50:28.960 --> 50:29.560
+how we choose
+
+50:29.560 --> 50:30.120
+to apply the
+
+50:30.120 --> 50:30.580
+technology.
+
+50:31.420 --> 50:32.020
+The first major
+
+50:32.020 --> 50:32.640
+shift is to
+
+50:32.640 --> 50:33.720
+repurpose generative
+
+50:33.720 --> 50:34.940
+AI for reduction
+
+50:34.940 --> 50:36.120
+rather than
+
+50:36.120 --> 50:36.820
+generation.
+
+50:37.660 --> 50:38.700
+Using AI to
+
+50:38.700 --> 50:39.400
+actively delete
+
+50:39.400 --> 50:39.740
+things.
+
+50:39.980 --> 50:40.540
+I absolutely
+
+50:40.540 --> 50:41.380
+love this concept.
+
+50:42.140 --> 50:42.840
+Instead of asking
+
+50:42.840 --> 50:43.560
+the language model
+
+50:43.560 --> 50:44.200
+to write a brand
+
+50:44.200 --> 50:44.880
+new bloated
+
+50:44.880 --> 50:45.320
+function,
+
+50:45.860 --> 50:46.420
+we should use
+
+50:46.420 --> 50:46.960
+its massive
+
+50:46.960 --> 50:47.900
+context reading
+
+50:47.900 --> 50:48.560
+abilities to
+
+50:48.560 --> 50:49.480
+scan the
+
+50:49.480 --> 50:50.360
+entire repository
+
+50:50.360 --> 50:51.160
+and find an
+
+50:51.160 --> 50:52.040
+existing function
+
+50:52.040 --> 50:52.460
+that we can
+
+50:52.460 --> 50:52.820
+reuse.
+
+50:53.600 --> 50:54.340
+We should ask
+
+50:54.340 --> 50:54.860
+the AI to
+
+50:54.860 --> 50:55.780
+propose safe
+
+50:55.780 --> 50:56.560
+deletions of
+
+50:56.560 --> 50:57.080
+dead code.
+
+50:57.660 --> 50:58.040
+Clean up the
+
+50:58.040 --> 50:58.280
+mess.
+
+50:58.840 --> 50:59.360
+We should use
+
+50:59.360 --> 50:59.860
+it to trace
+
+50:59.860 --> 51:00.560
+the unintended
+
+51:00.560 --> 51:01.160
+cascading
+
+51:01.160 --> 51:02.000
+consequences of
+
+51:02.000 --> 51:02.440
+a proposed
+
+51:02.440 --> 51:03.380
+change before
+
+51:03.380 --> 51:04.040
+we make it.
+
+51:04.540 --> 51:05.200
+We can ask
+
+51:05.200 --> 51:05.720
+it to explain
+
+51:05.720 --> 51:06.180
+a tangled
+
+51:06.180 --> 51:07.020
+legacy module
+
+51:07.020 --> 51:07.900
+so a human
+
+51:07.900 --> 51:08.560
+maintainer can
+
+51:08.560 --> 51:09.400
+finally understand
+
+51:09.400 --> 51:09.860
+it and
+
+51:09.860 --> 51:10.660
+simplify it.
+
+51:11.460 --> 51:11.860
+None of
+
+51:11.860 --> 51:12.420
+these tasks
+
+51:12.420 --> 51:13.800
+require generating
+
+51:13.800 --> 51:14.460
+large volumes
+
+51:14.460 --> 51:15.140
+of new text.
+
+51:15.580 --> 51:16.080
+They all
+
+51:16.080 --> 51:16.940
+actively increase
+
+51:16.940 --> 51:17.560
+our verification
+
+51:17.560 --> 51:18.360
+capacity,
+
+51:18.660 --> 51:18.800
+V,
+
+51:19.220 --> 51:19.940
+and actively
+
+51:19.940 --> 51:20.580
+reduce our
+
+51:20.580 --> 51:21.220
+accidental
+
+51:21.220 --> 51:21.820
+complexity.
+
+51:22.620 --> 51:22.760
+But the
+
+51:22.760 --> 51:23.480
+corporate incentives
+
+51:23.480 --> 51:24.040
+are all wrong
+
+51:24.040 --> 51:24.580
+for that right
+
+51:24.580 --> 51:24.780
+now.
+
+51:24.980 --> 51:25.500
+We need to
+
+51:25.500 --> 51:26.280
+radically change
+
+51:26.280 --> 51:26.920
+the metrics we
+
+51:26.920 --> 51:27.520
+use to measure
+
+51:27.520 --> 51:28.040
+success.
+
+51:28.340 --> 51:28.940
+That is the
+
+51:28.940 --> 51:29.500
+second proposed
+
+51:29.500 --> 51:29.900
+solution.
+
+51:30.220 --> 51:30.600
+Engineering
+
+51:30.600 --> 51:31.340
+managers must
+
+51:31.340 --> 51:31.900
+stop rewarding
+
+51:31.900 --> 51:32.620
+teams based on
+
+51:32.620 --> 51:33.320
+the sheer volume
+
+51:33.320 --> 51:34.560
+of output or
+
+51:34.560 --> 51:35.260
+the percentage
+
+51:35.260 --> 51:35.900
+of code written
+
+51:35.900 --> 51:36.400
+by AI.
+
+51:37.000 --> 51:37.440
+We need to
+
+51:37.440 --> 51:37.960
+start rewarding
+
+51:37.960 --> 51:38.920
+them for lines
+
+51:38.920 --> 51:39.660
+of code safely
+
+51:39.660 --> 51:40.900
+removed from
+
+51:40.900 --> 51:41.420
+the system.
+
+51:42.360 --> 51:42.880
+Reward them
+
+51:42.880 --> 51:44.140
+for eliminated
+
+51:44.140 --> 51:45.220
+external dependencies.
+
+51:45.220 --> 51:46.260
+Reward them
+
+51:46.260 --> 51:46.960
+for reducing
+
+51:46.960 --> 51:47.560
+the regression
+
+51:47.560 --> 51:48.860
+rate or for
+
+51:48.860 --> 51:49.620
+lowering the age
+
+51:49.620 --> 51:50.180
+of the oldest
+
+51:50.180 --> 51:51.440
+scariest code
+
+51:51.440 --> 51:52.080
+in the system.
+
+51:52.760 --> 51:53.200
+You measure
+
+51:53.200 --> 51:54.020
+what actually
+
+51:54.020 --> 51:54.680
+matters and
+
+51:54.680 --> 51:55.200
+what matters
+
+51:55.200 --> 51:55.760
+for long-term
+
+51:55.760 --> 51:56.500
+survival is
+
+51:56.500 --> 51:57.400
+simplicity and
+
+51:57.400 --> 51:57.840
+stability.
+
+51:58.720 --> 51:59.600
+What about the
+
+51:59.600 --> 52:00.220
+tools themselves?
+
+52:00.360 --> 52:00.780
+How do we
+
+52:00.780 --> 52:01.300
+handle the
+
+52:01.300 --> 52:02.180
+deployment issue?
+
+52:02.660 --> 52:03.340
+We need to
+
+52:03.340 --> 52:03.720
+change the
+
+52:03.720 --> 52:04.320
+defaults at the
+
+52:04.320 --> 52:05.060
+software level.
+
+52:05.820 --> 52:06.540
+Generative features
+
+52:06.540 --> 52:07.340
+should be strictly
+
+52:07.340 --> 52:08.280
+opt-in, not
+
+52:08.280 --> 52:09.360
+aggressively shoved
+
+52:09.360 --> 52:09.820
+into every
+
+52:09.820 --> 52:10.820
+interface by default.
+
+52:11.720 --> 52:12.300
+Their outputs
+
+52:12.300 --> 52:13.120
+should be clearly
+
+52:13.120 --> 52:13.800
+and universally
+
+52:13.800 --> 52:14.280
+labeled.
+
+52:14.280 --> 52:15.440
+The market
+
+52:15.440 --> 52:15.840
+can only
+
+52:15.840 --> 52:16.240
+accurately
+
+52:16.240 --> 52:16.980
+evaluate the
+
+52:16.980 --> 52:17.420
+true worth
+
+52:17.420 --> 52:17.680
+of these
+
+52:17.680 --> 52:18.120
+tools if
+
+52:18.120 --> 52:18.640
+their adoption
+
+52:18.640 --> 52:19.280
+is actually
+
+52:19.280 --> 52:19.940
+a voluntary
+
+52:19.940 --> 52:21.440
+conscious choice
+
+52:21.440 --> 52:22.140
+by the user.
+
+52:22.940 --> 52:23.500
+And structurally,
+
+52:23.680 --> 52:24.280
+the essay calls
+
+52:24.280 --> 52:24.800
+for a return
+
+52:24.800 --> 52:25.840
+to human-centric
+
+52:25.840 --> 52:26.420
+architecture.
+
+52:26.920 --> 52:27.660
+We must keep
+
+52:27.660 --> 52:28.200
+human beings
+
+52:28.200 --> 52:29.100
+relentlessly focused
+
+52:29.100 --> 52:29.740
+on the boundaries
+
+52:29.740 --> 52:30.580
+of the system.
+
+52:31.300 --> 52:31.720
+Humans should
+
+52:31.720 --> 52:32.340
+design the
+
+52:32.340 --> 52:32.900
+data model.
+
+52:33.360 --> 52:33.800
+Humans should
+
+52:33.800 --> 52:34.260
+define the
+
+52:34.260 --> 52:34.700
+interfaces.
+
+52:35.520 --> 52:36.040
+And again,
+
+52:36.160 --> 52:36.560
+returning to
+
+52:36.560 --> 52:36.980
+Fred Brooks,
+
+52:37.440 --> 52:38.080
+humans must
+
+52:38.080 --> 52:38.680
+dictate the
+
+52:38.680 --> 52:39.200
+things the
+
+52:39.200 --> 52:39.660
+system must
+
+52:39.660 --> 52:40.800
+refuse to do.
+
+52:41.520 --> 52:42.160
+Let the machine
+
+52:42.160 --> 52:43.140
+handle the syntax
+
+52:43.140 --> 52:43.700
+and the typing,
+
+52:43.880 --> 52:44.860
+but keep the
+
+52:44.860 --> 52:45.960
+essential difficulty,
+
+52:46.160 --> 52:47.000
+the conceptual
+
+52:47.000 --> 52:48.580
+integrity, firmly
+
+52:48.580 --> 52:49.380
+in human hands.
+
+52:49.380 --> 52:50.260
+But the author
+
+52:50.260 --> 52:50.860
+of the essay
+
+52:50.860 --> 52:51.400
+admits that
+
+52:51.400 --> 52:52.240
+individual action
+
+52:52.240 --> 52:52.800
+isn't going to
+
+52:52.800 --> 52:53.260
+be enough,
+
+52:53.360 --> 52:53.500
+right?
+
+52:53.660 --> 52:54.280
+Me deciding
+
+52:54.280 --> 52:54.860
+not to use
+
+52:54.860 --> 52:55.620
+autocomplete on
+
+52:55.620 --> 52:56.080
+my personal
+
+52:56.080 --> 52:56.800
+laptop isn't
+
+52:56.800 --> 52:57.240
+going to fix
+
+52:57.240 --> 52:57.700
+the global
+
+52:57.700 --> 52:58.480
+software supply
+
+52:58.480 --> 52:59.280
+chain that
+
+52:59.280 --> 52:59.660
+runs our
+
+52:59.660 --> 53:00.380
+hospitals and
+
+53:00.380 --> 53:01.000
+power grids.
+
+53:01.400 --> 53:01.820
+Because the
+
+53:01.820 --> 53:02.400
+deployment of
+
+53:02.400 --> 53:03.280
+these tools is
+
+53:03.280 --> 53:04.440
+inescapable by
+
+53:04.440 --> 53:05.020
+design.
+
+53:05.960 --> 53:06.400
+The real
+
+53:06.400 --> 53:07.100
+fixes require
+
+53:07.100 --> 53:07.940
+institutional,
+
+53:08.400 --> 53:09.080
+collective action.
+
+53:09.880 --> 53:10.740
+We are talking
+
+53:10.740 --> 53:11.420
+about implementing
+
+53:11.420 --> 53:12.400
+strict procurement
+
+53:12.400 --> 53:13.000
+standards.
+
+53:13.620 --> 53:14.260
+Public bodies
+
+53:14.260 --> 53:14.860
+and massive
+
+53:14.860 --> 53:16.100
+corporations must
+
+53:16.100 --> 53:16.980
+refuse to buy
+
+53:16.980 --> 53:17.640
+software that
+
+53:17.640 --> 53:18.340
+cannot prove the
+
+53:18.340 --> 53:19.400
+provenance and
+
+53:19.400 --> 53:19.820
+the human
+
+53:19.820 --> 53:20.700
+verification of
+
+53:20.700 --> 53:21.160
+its code.
+
+53:22.280 --> 53:22.680
+We need
+
+53:22.680 --> 53:23.780
+regulatory defaults
+
+53:23.780 --> 53:24.400
+that force
+
+53:24.400 --> 53:25.120
+vendors to make
+
+53:25.120 --> 53:26.380
+these tools opt-in
+
+53:26.380 --> 53:27.360
+rather than opt-out.
+
+53:27.580 --> 53:28.720
+A local music
+
+53:28.720 --> 53:29.600
+venue banning an
+
+53:29.600 --> 53:30.680
+AI poster is a
+
+53:30.680 --> 53:31.240
+great localized
+
+53:31.240 --> 53:31.720
+start.
+
+53:32.020 --> 53:32.940
+A senior developer
+
+53:32.940 --> 53:33.680
+refusing an
+
+53:33.680 --> 53:34.780
+unreviewed AI pull
+
+53:34.780 --> 53:35.480
+request is a
+
+53:35.480 --> 53:36.660
+great start, but we
+
+53:36.660 --> 53:37.340
+need massive
+
+53:37.340 --> 53:38.320
+institutions to
+
+53:38.320 --> 53:39.100
+realize that the
+
+53:39.100 --> 53:39.960
+true unit of
+
+53:39.960 --> 53:41.120
+progress is the
+
+53:41.120 --> 53:41.920
+program that is
+
+53:41.920 --> 53:42.800
+deeply understood,
+
+53:43.340 --> 53:44.180
+not the program
+
+53:44.180 --> 53:44.860
+that is merely
+
+53:44.860 --> 53:45.460
+generated.
+
+53:46.080 --> 53:46.400
+The true
+
+53:46.400 --> 53:47.300
+superpower in the
+
+53:47.300 --> 53:48.580
+AI age isn't
+
+53:48.580 --> 53:49.100
+knowing how to
+
+53:49.100 --> 53:49.700
+prompt a machine
+
+53:49.700 --> 53:50.320
+to generate a
+
+53:50.320 --> 53:51.020
+million ideas.
+
+53:51.360 --> 53:51.560
+No.
+
+53:51.900 --> 53:52.340
+The real
+
+53:52.340 --> 53:53.380
+superpower in a
+
+53:53.380 --> 53:54.300
+world of infinite,
+
+53:54.660 --> 53:55.600
+frictionless supply
+
+53:55.600 --> 53:56.220
+is having the
+
+53:56.220 --> 53:57.120
+restraint, the
+
+53:57.120 --> 53:57.980
+judgment, and the
+
+53:57.980 --> 53:58.800
+highly cultivated
+
+53:58.800 --> 53:59.720
+taste to delete
+
+53:59.720 --> 54:03.340
+999,999 of
+
+54:03.340 --> 54:03.500
+them.
+
+54:03.860 --> 54:04.420
+I couldn't agree
+
+54:04.420 --> 54:04.660
+more.
+
+54:05.240 --> 54:06.800
+So, as we wrap
+
+54:06.800 --> 54:07.480
+up this deep dive,
+
+54:07.800 --> 54:08.680
+I want to connect
+
+54:08.680 --> 54:09.340
+all of this back
+
+54:09.340 --> 54:10.040
+to you, the
+
+54:10.040 --> 54:10.760
+learner, listening
+
+54:10.760 --> 54:11.280
+to this right
+
+54:11.280 --> 54:12.000
+now, and how
+
+54:12.000 --> 54:12.760
+this impacts your
+
+54:12.760 --> 54:13.340
+daily life.
+
+54:14.140 --> 54:14.920
+We've covered a
+
+54:14.920 --> 54:15.780
+massive amount of
+
+54:15.780 --> 54:16.220
+ground today.
+
+54:16.640 --> 54:17.420
+We journeyed from
+
+54:17.420 --> 54:18.580
+Lehman's laws of
+
+54:18.580 --> 54:19.400
+software evolution
+
+54:19.400 --> 54:21.280
+in the 1970s, to
+
+54:21.280 --> 54:21.800
+the psychological
+
+54:21.800 --> 54:23.040
+perception gaps of
+
+54:23.040 --> 54:23.740
+the meta study
+
+54:23.740 --> 54:25.120
+developers, from
+
+54:25.120 --> 54:25.920
+the economics of
+
+54:25.920 --> 54:27.120
+spam applied to
+
+54:27.120 --> 54:28.080
+codebases, to the
+
+54:28.080 --> 54:29.200
+visual MSG of
+
+54:29.200 --> 54:29.880
+Facebook math
+
+54:29.880 --> 54:30.260
+groups.
+
+54:30.420 --> 54:31.040
+It's a lot to
+
+54:31.040 --> 54:31.400
+take in.
+
+54:31.640 --> 54:32.180
+It is.
+
+54:32.540 --> 54:33.320
+But the clear
+
+54:33.320 --> 54:34.260
+through line across
+
+54:34.260 --> 54:35.240
+all these domains is
+
+54:35.240 --> 54:35.620
+this.
+
+54:36.300 --> 54:37.080
+True understanding
+
+54:37.080 --> 54:38.300
+and genuine lasting
+
+54:38.300 --> 54:39.420
+progress are not
+
+54:39.420 --> 54:40.140
+measured by sheer
+
+54:40.140 --> 54:40.540
+volume.
+
+54:41.200 --> 54:41.880
+In a world where
+
+54:41.880 --> 54:42.520
+the friction of
+
+54:42.520 --> 54:43.260
+creation has been
+
+54:43.260 --> 54:44.260
+reduced to absolute
+
+54:44.260 --> 54:45.460
+zero, where the
+
+54:45.460 --> 54:46.360
+supply of content,
+
+54:46.540 --> 54:47.840
+code, and media is
+
+54:47.840 --> 54:49.280
+effectively infinite,
+
+54:49.920 --> 54:50.840
+your most valuable,
+
+54:51.060 --> 54:52.320
+irreplaceable asset is
+
+54:52.320 --> 54:53.200
+your evaluative
+
+54:53.200 --> 54:54.760
+capacity, your
+
+54:54.760 --> 54:55.720
+ability to verify,
+
+54:56.320 --> 54:57.500
+to discriminate, and
+
+54:57.500 --> 54:59.020
+most importantly, your
+
+54:59.020 --> 55:00.340
+capacity to refuse.
+
+55:01.280 --> 55:02.360
+But before we sign
+
+55:02.360 --> 55:03.320
+off, I want to toss it
+
+55:03.320 --> 55:04.280
+over for one final
+
+55:04.280 --> 55:05.080
+provocative thought.
+
+55:05.080 --> 55:06.460
+There is an
+
+55:06.460 --> 55:07.340
+implication in all
+
+55:07.340 --> 55:07.980
+of this data that
+
+55:07.980 --> 55:09.120
+the essay only hints
+
+55:09.120 --> 55:10.240
+at, but it is
+
+55:10.240 --> 55:11.200
+staggering when you
+
+55:11.200 --> 55:11.980
+really think about
+
+55:11.980 --> 55:12.760
+the timeline we are
+
+55:12.760 --> 55:12.980
+on.
+
+55:13.400 --> 55:14.020
+It is perhaps the
+
+55:14.020 --> 55:14.960
+most chilling aspect
+
+55:14.960 --> 55:15.640
+of this entire
+
+55:15.640 --> 55:16.580
+structural shift.
+
+55:17.180 --> 55:17.880
+We talked earlier
+
+55:17.880 --> 55:18.720
+about how image
+
+55:18.720 --> 55:19.880
+generators, when
+
+55:19.880 --> 55:20.240
+they're fed
+
+55:20.240 --> 55:21.140
+repeatedly on their
+
+55:21.140 --> 55:21.840
+own synthetic
+
+55:21.840 --> 55:23.260
+output, quickly
+
+55:23.260 --> 55:24.200
+devolve into that
+
+55:24.200 --> 55:26.080
+generic, degraded
+
+55:26.080 --> 55:27.040
+visual elevator
+
+55:27.040 --> 55:27.460
+music.
+
+55:28.100 --> 55:28.820
+It is a phenomenon
+
+55:28.820 --> 55:29.820
+known as model
+
+55:29.820 --> 55:31.080
+collapse, where the
+
+55:31.080 --> 55:31.940
+training loop becomes
+
+55:31.940 --> 55:32.960
+irreparably corrupted
+
+55:32.960 --> 55:33.820
+by its own data.
+
+55:33.820 --> 55:35.940
+Right now, as we
+
+55:35.940 --> 55:37.060
+speak, the software
+
+55:37.060 --> 55:37.980
+industry is pumping
+
+55:37.980 --> 55:38.980
+out unverified,
+
+55:39.140 --> 55:39.960
+hyper-duplicated,
+
+55:40.460 --> 55:41.740
+error-swallowing AI
+
+55:41.740 --> 55:42.840
+code into public and
+
+55:42.840 --> 55:43.760
+private repositories
+
+55:43.760 --> 55:45.000
+at an unprecedented
+
+55:45.000 --> 55:46.080
+industrial scale.
+
+55:46.420 --> 55:48.080
+We are at 25% of all
+
+55:48.080 --> 55:48.960
+commits and rising
+
+55:48.960 --> 55:49.400
+rapidly.
+
+55:50.100 --> 55:51.040
+This synthetic code is
+
+55:51.040 --> 55:51.980
+flooding the ecosystem.
+
+55:52.500 --> 55:53.860
+So we have to ask the
+
+55:53.860 --> 55:55.420
+critical question, what
+
+55:55.420 --> 55:56.500
+happens in two, three,
+
+55:56.560 --> 55:57.800
+or five years when the
+
+55:57.800 --> 55:58.660
+next generation of
+
+55:58.660 --> 55:59.660
+massive AI coding
+
+55:59.660 --> 56:00.920
+assistants is trained
+
+56:00.920 --> 56:01.940
+on those very same
+
+56:01.940 --> 56:02.660
+repositories?
+
+56:02.660 --> 56:03.720
+Oh, man.
+
+56:04.100 --> 56:04.920
+If the current code
+
+56:04.920 --> 56:06.040
+being merged today is
+
+56:06.040 --> 56:07.260
+bloated, duplicated,
+
+56:07.840 --> 56:08.680
+structurally unsound,
+
+56:08.780 --> 56:09.680
+and entirely stripped
+
+56:09.680 --> 56:11.440
+of taste, are we
+
+56:11.440 --> 56:12.540
+currently polluting the
+
+56:12.540 --> 56:13.600
+very training data we
+
+56:13.600 --> 56:14.160
+need to build the
+
+56:14.160 --> 56:14.420
+future?
+
+56:14.940 --> 56:16.620
+Are we mathematically
+
+56:16.620 --> 56:17.820
+guaranteeing that
+
+56:17.820 --> 56:19.280
+tomorrow's AI will be
+
+56:19.280 --> 56:20.260
+fundamentally less
+
+56:20.260 --> 56:21.240
+capable of understanding
+
+56:21.240 --> 56:22.340
+elegant, secure,
+
+56:22.700 --> 56:23.700
+human-centric systems
+
+56:23.700 --> 56:24.820
+simply because we
+
+56:24.820 --> 56:25.820
+buried all the good
+
+56:25.820 --> 56:26.900
+historical examples
+
+56:26.900 --> 56:27.720
+under a mountain of
+
+56:27.720 --> 56:28.640
+synthetic slop today?
+
+56:29.140 --> 56:30.580
+We might literally be
+
+56:30.580 --> 56:31.520
+burning the library of
+
+56:31.520 --> 56:32.740
+human knowledge just to
+
+56:32.740 --> 56:33.220
+keep their printing
+
+56:33.220 --> 56:33.980
+presses running at
+
+56:33.980 --> 56:34.820
+maximum speed.
+
+56:35.440 --> 56:35.940
+And that thought
+
+56:35.940 --> 56:37.080
+brings us right back
+
+56:37.080 --> 56:37.960
+to where we started.
+
+56:38.460 --> 56:39.500
+That feeling of
+
+56:39.500 --> 56:41.020
+frictionless magic when
+
+56:41.020 --> 56:41.880
+you type a prompt.
+
+56:42.300 --> 56:43.520
+The machine whirls,
+
+56:43.840 --> 56:44.660
+the text appears,
+
+56:44.960 --> 56:46.040
+the code compiles.
+
+56:46.400 --> 56:47.480
+It feels clean.
+
+56:48.340 --> 56:49.320
+It feels like an x-ray
+
+56:49.320 --> 56:50.040
+pointing out a broken
+
+56:50.040 --> 56:50.420
+bone.
+
+56:51.320 --> 56:52.760
+But beneath the surface,
+
+56:53.320 --> 56:54.420
+the waters are deeply,
+
+56:54.880 --> 56:56.220
+profoundly murky.
+
+56:56.220 --> 56:58.400
+Thank you for joining us
+
+56:58.400 --> 56:59.180
+on this deep dive.
+
+57:00.040 --> 57:01.060
+As you go back to your
+
+57:01.060 --> 57:02.580
+screens today, remember
+
+57:02.580 --> 57:03.720
+to cultivate your taste.
+
+57:04.360 --> 57:05.280
+Embrace the productive
+
+57:05.280 --> 57:06.540
+friction of doing things
+
+57:06.540 --> 57:07.840
+the hard way, and
+
+57:07.840 --> 57:09.360
+whatever you do, don't be
+
+57:09.360 --> 57:10.060
+afraid to hit delete.
+
