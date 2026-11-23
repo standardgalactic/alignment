@@ -1,5 +1,9 @@
 # Alignment Research
 
+[Conditional Optimality](https://standardgalactic.github.io/alignment/conditional-optimality.pdf)
+
+* [The Hidden Trapdoors of Optimization Math](https://standardgalactic.github.io/alignment/conditional-optimality-oscilloscope.html)
+
 [Software Degradation](https://standardgalactic.github.io/alignment/software-degradation.pdf)
 
 * [How AI Code Degrades Software Quality](https://standardgalactic.github.io/alignment/software-degradation-oscilloscope.html)

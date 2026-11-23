@@ -1,0 +1,789 @@
+So in 2026, we're basically trusting equations to decide, you know, pretty much everything.
+Oh, absolutely.
+Right.
+Everything.
+I mean, from which global charities get billions of dollars in funding
+to whether an artificial intelligence model is just deemed too dangerous to turn on.
+Yeah, we really just look at the spreadsheets and the algorithms and we,
+well, we think the math is completely objective.
+Exactly.
+We just type in the parameters and we trust the output almost blindly, really.
+And, you know, that is sort of the terrifying thing about optimization
+because the math always does exactly what you tell it to do.
+The danger isn't necessarily that the calculations are wrong.
+The danger is that the structural equations we use to define, like, goodness or safety,
+they possess these massive invisible trapdoors.
+Trapdoors that we just fall right through before we even hit the enter key.
+Exactly.
+So welcome to the Deep Dive.
+Our mission today is to decode a really brilliant, highly mathematical paper published in November 2026.
+Yeah, it's by the independent researcher Flyxion.
+Right.
+And it's titled Conditional Optimality Under Scalar Objectives.
+And just for you listening, I want to set the tone here.
+This is a pure, impartial look at the machinery of decision-making.
+Yeah, we aren't taking political sides here.
+And we're not here to debunk utilitarianism or anything like that.
+No, not at all.
+We are here to look at the engine itself because whether you are looking at the effective altruism movement,
+you know, trying to rank charities to do the most good per dollar,
+or you're looking at the frontier of AI governance, we are using the exact same kind of scalar math.
+And this paper proves mathematically that the numbers alone can never tell you what to do without,
+well, secretly relying on human assumptions.
+It's really a phenomenal piece of work because it just strips away all the ideology.
+Yeah.
+It just looks at the axioms.
+You know, when you ask an algorithm to maximize a single number, a scalar objective,
+what happens to all those variables you left out?
+Right.
+What happens to the noise in your data?
+Exactly.
+And the paper demonstrates that optimizing a flawed metric doesn't just give you like a slightly flawed result.
+It can actively engineer a complete catastrophe while literally telling you everything is perfect.
+Wow.
+Okay, let's unpack this.
+Let's start with the absolute baseline equation for doing good in the world.
+Expected value.
+Oh, yeah.
+The classic.
+If you spend any time in the philanthropic space, especially in those effective altruism debates,
+you see this formula everywhere.
+It's the value of an action equals the probability of an outcome multiplied by the utility or the moral value of that outcome.
+Right.
+So V equals P times U.
+It is basically the cornerstone of rational choice theory.
+And, I mean, it seems perfectly logical, right?
+But let's apply it to a real debate happening right now, which is long-termism.
+Oh, this is a perfect example.
+You have people arguing over whether we should spend, say, $100 million today on malaria nets,
+which we know with near 100% certainty will save a specific number of lives this year.
+Or should we spend that exact same money trying to prevent a hypothetical rogue AI from destroying humanity a thousand years from now?
+And this is exactly where Flyxion points out the first big mathematical vulnerability.
+It's called speculative benefit domination.
+Okay.
+Let's break that down for the listener because I really want to make sure the mechanics of this are crystal clear.
+Sure.
+So if I'm calculating the welfare of trillions of hypothetical future humans, the U in that equation, the utility, it just becomes unimaginably massive.
+Right.
+It basically approaches infinity.
+Yeah.
+And because the equation is just simple multiplication, a tiny, highly speculative probability.
+Like, say, a 0.0000001% chance?
+Yeah, exactly.
+A tiny chance of saving a trillion lives.
+You multiply that by that massive utility and it yields an expected benefit of tens of thousands of lives.
+Oh, wow.
+So mathematically, that highly speculative intervention instantly outweighs the absolute certainty of saving a few thousand people from malaria today.
+But wait, I can hear the pushback already.
+I mean, on behalf of you listening, someone is going to say, well, isn't a tiny chance to save a trillion people mathematically worth it?
+Right.
+The cosmic lottery ticket argument.
+Exactly.
+Like buying a cosmic lottery ticket where the payout is the survival of the human race.
+If the payoff is that massive, the math says you take the bet.
+What's fascinating here is that, yes, the math says you take the bet, but only if you assume the probability is an objective fact.
+Oh.
+And Flyxion forces us to separate the logical possibility of an event from the actual evidential support for its probability.
+I see.
+Just because a forecasting model spits out a probability of, you know, 10 to the negative sixth, that doesn't mean the real world operates on that fraction.
+Right.
+The math itself doesn't know the difference between a probability derived from centuries of hard empirical data and a probability somebody basically just made up because it felt right in a thought experiment.
+So the spreadsheet just sees the number.
+It doesn't see how fragile the evidence behind the number is.
+Exactly.
+The structural math has no built-in defense against that fragility.
+And this is where the paper brings in the Maximin criterion.
+Okay.
+Maximin.
+Yeah.
+Which has roots in Ellsberg's paradox and the economics of ambiguity aversion.
+Walk us through Ellsberg's paradox because I think that perfectly illustrates what we're actually dealing with here.
+Okay.
+Imagine an urn, like a jar, with 90 balls in it.
+90 balls.
+Got it.
+And I tell you that exactly 30 of them are red.
+The remaining 60 are a mix of black and yellow, but I absolutely refuse to tell you the ratio.
+Okay.
+So it could be 60 black and zero yellow or zero black and 60 yellow.
+Right.
+Or anything in between.
+So I have solid evidence for the red balls and complete ambiguity for the black and yellow ones.
+Yes.
+Now, I offer you a bet.
+Option A, you win $100 if you pull a red ball.
+Option B, you win $100 if you pull a black ball.
+I mean, I'd choose the red ball.
+Most people choose the red ball.
+Why?
+Because the 1 in 3 probability is known.
+They avoid the black ball because the probability is ambiguous.
+Even though logically the expected value of pulling a black ball could be higher if there happen to be like 60 of them in there.
+Exactly.
+We hate ambiguity.
+We really want to know the odds.
+Right.
+But expected value math, that V equals P times U equation, it structurally assumes you are totally neutral to ambiguity.
+Oh, I see.
+It assumes you treat a known probability and a totally speculative guess exactly the same way.
+Which is wild when you think about it.
+It is.
+So, what a Maximin criterion does is it looks at the entire range of possible probabilities based on your actual evidence.
+Okay.
+If your evidence for, say, an AI doom scenario is so incredibly weak and speculative that the lower bound of your confidence interval is just zero.
+Then under Maximin, you evaluate that worst case scenario.
+Yes.
+And zero times a trillion is zero.
+The expected value just vanishes.
+It completely vanishes.
+And if that speculative bet requires diverting funds from guaranteed interventions, meaning there's a certain harm or, you know, a real opportunity cost today, the expected value actually goes negative.
+Wow.
+Flyxion's point is that choosing between standard additive expected value and a Maximin rule is not just a mathematical preliminary.
+It is a profound ethical and epistemic choice.
+So, you literally have to decide how you value evidence before you let the math multiply the numbers.
+Exactly.
+The math will not make that judgment for you.
+So, you have to basically smuggle your epistemology into the spreadsheet.
+Mm-hmm.
+Which actually leads us directly into the next massive hurdle.
+Let's say we somehow get past the probability problem.
+We still have to figure out how to calculate the U, the utility.
+Right.
+The benefit itself.
+Yeah.
+And to get to a massive number of lives or to measure the impact of a huge economic policy, you have to add different people's welfare together.
+Right.
+Interpersonal aggregation.
+This is honestly one of the thorniest problems in all of economics and moral philosophy.
+The paper calls this the representation dependence of the unweighted sum, which, I mean, sounds incredibly dense.
+It does sound a bit intimidating.
+But the underlying concept is something we all intuitively experience every day, right?
+It's the realization that my internal experience of happiness or suffering is locked inside my head.
+And mine is locked inside mine.
+Exactly.
+So, how do we add them?
+Well, in classical expected utility theory, an individual's utility scale is only defined up to what we call a positive affine transformation.
+Okay.
+Let's unpack positive affine transformation.
+Let's say we're trying to measure how much we both value a cup of coffee.
+Sure.
+Inside your own personal decision-making process, your scale is completely arbitrary, as long as the order of your preferences remains consistent.
+Okay.
+Let's say you prefer coffee over tea and tea over water.
+You could assign coffee a value of 3, tea a 2, and water a 1.
+That's just a simple 1-2-3 scale.
+Makes sense.
+But you could also take that exact same internal preference and multiply it by 1,000, and then, I don't know, add 500.
+Okay.
+So, coffee is 3,500, tea is 2,500, water is 1,500.
+Yes.
+That is a positive affine transformation.
+And mathematically, it changes absolutely nothing about the choices you will make in the real world.
+Because I will still always pick the coffee.
+Exactly.
+For modeling an individual's rational choices, the scale itself is totally meaningless.
+Only the relative distances between the options matter.
+Okay.
+So, I have my own internal thermostat.
+Yes, you do.
+But here is the trapdoor Flyxion highlights.
+What happens when a central algorithm tries to add your utility and my utility together to maximize social welfare?
+It blindly takes whatever arbitrary scale we happen to be using and just jams them together.
+Precisely.
+Let's say we were deciding on the office temperature.
+I might be using a very modest 1 to 10 scale for my comfort.
+Right.
+But you, internally, might be using scale from 1 to 1,000.
+Okay, I see where this is going.
+If the building's optimization algorithm just takes an unweighted sum of our raw numbers together,
+it will always prioritize your preferences and freeze me out.
+Just simply because my internal math uses bigger numbers.
+Yes.
+You could multiply one person's utility scale by a constant,
+which, remember, is mathematically perfectly valid for their individual choices.
+But doing so completely reverses the outcome of the social total.
+Exactly.
+The math is entirely silent on how to compare one unit of your welfare against one unit of mine.
+Economists like Harsanyi and Sen have debated this for decades.
+And Flyxion brings it right to the forefront of these optimization algorithms.
+Right.
+If you want to add welfare together, you have to introduce a conversion rate.
+You have to make a deeply ethical judgment about how my subjective experience literally compares to yours.
+And, man, it gets infinitely harder when you try to scale this up to global policy.
+I mean, how do you compare the utility of a billionaire getting a tax cut to a family getting food assistance?
+You can't.
+Not with pure math.
+Or how do you compare human welfare to the welfare of, like, factory farmed animals?
+Or the welfare of people alive today versus unborn generations in the year 3000?
+You just cannot do it with pure math.
+You have to establish an ethical premise of comparability first.
+Right.
+The algorithm cannot output a moral truth if you didn't input a moral conversion rate.
+Okay.
+So if the math can't ethically compare my happiness to yours without us intervening,
+how do philanthropic algorithms or government agencies even build their spreadsheets in the first place?
+Well, they have to create a menu.
+Right.
+Because they have to start by picking a finite list of options to look at.
+They can't evaluate every possible action in the universe.
+And this brings us to the concept of the candidate set.
+Which, honestly, might contain the most counterintuitive, mind-bending mathematical proof in the entire paper.
+Okay.
+Let's dive into it.
+Because usually we assume that if an evaluator looks at a list of charities and picks the one with the highest mathematical score,
+they've found the best option.
+Right.
+They have found the best option on that specific list.
+Mm-hmm.
+The paper uses two distinct symbols here that are crucial to keep straight.
+Omega represents the universe of all possible options.
+So every charity, every policy, every conceivable action humanity could take.
+Exactly.
+Okay.
+That's omega.
+Then you have the letter S, which represents the candidate set.
+The tiny subset of options we actually put on the spreadsheet to evaluate.
+Right.
+Omega is everything.
+S is our menu.
+Now, when an algorithm optimizes, it only searches over S.
+Makes sense.
+But finding the absolute mathematical maximum within set S guarantees absolutely nothing about your success over omega.
+Right.
+The only way you can mathematically certify that the winner of your small menu is actually the best overall choice
+is if you can put a hard mathematical limit on the value of every single alternative you didn't look at.
+Oh, wow.
+Flyxion calls this the certification condition, right?
+Yes.
+Meaning I can say this is the most effective climate intervention on my list,
+but I can never scientifically claim this is the most effective climate intervention, period.
+Unless you have mathematical proof that every idea you didn't test is objectively worse,
+which is frankly impossible in the real world.
+It is practically impossible.
+And this introduces what the paper refers to using concepts from information theory as perplexity.
+Yeah.
+And perplexity isn't just a feeling of being confused.
+It's a measurable statistical state.
+Explain perplexity for us then.
+In this context, perplexity is related to entropy.
+It's a way of measuring the effective number of equally likely alternatives in a probability distribution.
+Okay.
+When you are trying to find the best intervention, you really have two types of uncertainty.
+You have ranking uncertainty.
+Which is the question...
+Did I measure the things on my menu correctly?
+Like, is option A actually better than option B?
+Exactly.
+That's just standard margin of error.
+But then you have omission uncertainty.
+Which is what?
+It's the sheer probability mass that the true actual best option is sitting off the menu entirely.
+Uh-huh.
+Perplexity forces you to acknowledge the dispersion of probability across that vast, unmeasured space of omega.
+Okay.
+But if omission uncertainty is the problem, if the danger is that the best idea isn't on our menu, my immediate intuition is that we just need a bigger menu.
+Right.
+That's what everyone thinks.
+Yeah.
+If I'm a massive philanthropic foundation, I should just hire a hundred more researchers and evaluate 10,000 charities instead of 50.
+Expand the set S.
+That is the universal intuition.
+If you want to find the best thing, search a wider area.
+Evaluate more candidates.
+Sure.
+But this is where Flyxion drops the hammer with the optimizer's curse.
+Oh, man.
+This blew my mind when I read it.
+It's incredible.
+Well, searching more actually introduces massive statistical selection bias.
+The idea that having more options can be mathematically worse.
+Walk me through a concrete scenario here, step by step, because it feels like a total paradox.
+How can trying harder make you dumber?
+Okay.
+Let's build like a mental spreadsheet.
+Imagine you are evaluating a thousand different charitable interventions.
+Okay.
+A thousand charities.
+And let's assume, just for the sake of the thought experiment, that in reality, every single one of these interventions produces the exact same amount of true good.
+Okay.
+They all have a true value of exactly 100 points.
+So the reality is a flat tie.
+They are all equally good.
+Right.
+But you don't know the true value.
+You only have your measurements, your estimates.
+And no measurement in the real world is perfect.
+Exactly.
+Your researchers have noise in their data.
+They might overestimate by 20 points or underestimate by 30 points.
+Let's say the noise is randomly distributed.
+So for charity A, the true value is 100, but we measure it as 90.
+Charity B is 100, but we measure it as 115.
+Yes.
+Now, what does the optimization algorithm do?
+It looks at your list of 1,000 estimated values, and it simply picks the highest number.
+Wait.
+So it's going to pick the charity where the researchers made the largest positive mistake?
+Precisely.
+If you search through 1,000 options, the maximum estimated value you find isn't going to be 100.
+It's going to be 140 or 150.
+Driven entirely by the extreme right tail of the statistical noise distribution.
+Yes.
+You're mathematically selecting for the highest positive measurement error.
+You aren't finding the best charity.
+You are finding the most overly optimistic spreadsheet.
+Exactly.
+Now, watch what happens when you expand the candidate set.
+Let's say you increase your search from 1,000 charities to 100,000 charities.
+Okay.
+The true value of all of them is still 100.
+But because you were taking a massive number of random samples of noise, the chances of generating an even more extreme positive error skyrocket.
+Oh, jeez.
+The algorithm might now pick a winner with an estimated value of 180.
+So the gap between what we think we are achieving and what we are actually achieving gets wider the more options we evaluate.
+Yes.
+This is the optimizer's curse.
+The mathematical proof shows a devastating scenario where adding a genuinely better option into your candidate set, alongside thousands of useless options with noisy estimates, it can actually lower the expected true value of what you ultimately select.
+Wait, really?
+Even if the best option is actually on the menu, the noise can bury it.
+Yes.
+Let's say you have one amazing charity with a true value of 130, and you measure it pretty accurately at 135.
+Okay, that's a great charity.
+But you also evaluate 10,000 mediocre charities with a true value of 80, but they have massive measurement noise.
+Right.
+Because you are pulling 10,000 samples of noise, statistical probability dictates that at least one of those mediocre charities is going to have a wildly inaccurate measurement of, say, 140.
+And the algorithm blindly picks the 140.
+Yes.
+So by expanding the menu to include all those mediocre, noisy options, you mathematically guarantee that you will overlook the genuinely good charity.
+The noise overwhelms the signal.
+As the candidate set grows, the maximum estimated value diverges aggressively from the maximum true value.
+Wow.
+The optimization process itself generates a systematic upward bias.
+So expanding the menu doesn't just cost time and money.
+It mathematically degrades the reliability of your decision.
+Correct.
+Unless your measurements are flawless, which they never are, the math punishes you for looking too widely.
+It really forces you to realize that optimization isn't just about finding the peak of a mountain.
+It's about navigating a fog of variance.
+And if you just follow the highest perceived elevation in the fog...
+You are probably just walking up a statistical anomaly, not the actual summit.
+That is just profound.
+Mm-hmm.
+And, I mean, it gets even more complicated when we realize that the items on these menus aren't just isolated islands, right?
+Right.
+They aren't independent.
+In the real world, interventions interact with each other.
+They rely on each other.
+Which is the focus of the next major mathematical breakdown in the paper.
+The failure of additive separability.
+Or what we might call the myth of the lone hero.
+I found the example Flyxion used here to be incredibly illuminating.
+It dismantles the whole assumption that an intervention has a standalone marginal value that you can just add up, like building blocks.
+Yeah, let's talk about the scientist, the teacher, and the technician.
+Yes.
+Let's walk through the math of this complementarity.
+Imagine you are a funding agency.
+And you have a budget to fund exactly two out of three possible interventions.
+Okay.
+Intervention one is paying for a brilliant teacher.
+Intervention two is paying for a skilled laboratory technician.
+And intervention three?
+Intervention three is paying for a totally unrelated feel-good local project.
+Let's say planting a community garden.
+Now, a standard optimization algorithm evaluates these one at a time to assign a score.
+If you just fund the teacher, but there is no lab and no genius student, the scientific output is zero.
+Right. The standalone value of intervention one is zero.
+If you just fund the technician, but there is no teacher and no student, the output is also zero.
+The standalone value of intervention two is zero.
+But if you fund the community garden, intervention three, it produces a small, independent amount of good all on its own.
+Let's call it five units of value.
+Now, what does the algorithm do?
+It ranks them by their standalone scores.
+Right.
+Intervention three is in first place with five points.
+Interventions one and two are tied for last place with zero points.
+So, the algorithm selects intervention three, plants the garden, and then, I guess, randomly picks either the teacher or the tech with the remaining budget, and it secures five units of value.
+Exactly.
+But it completely missed the massive counterfactual space.
+Because if it had selected intervention one and intervention two together...
+The teacher and the tech.
+Yeah.
+They would have trained a genius scientist who cures a disease, yielding like 10,000 units of value.
+Because their value is entirely complementary.
+They only work when paired.
+Right.
+But an algorithm that evaluates isolated, marginal impacts will systematically fail to discover synergistic value.
+And this isn't just some theoretical puzzle.
+This happens in real-world policy all the time.
+All the time.
+We evaluate educational tools, economic subsidies, and healthcare programs in total isolation.
+Yep.
+When interventions have strong complementarity, ranking them individually fails disastrously.
+Summing up individually estimated values is just a mathematically doomed strategy for complex social systems.
+It assumes the world is a simple addition problem when it's actually a web of chemical reactions.
+And that ties directly into the problem of causal inference.
+Because when we try to figure out what works, we usually just look at observational data, right?
+We look at what is already happening and try to copy it.
+And Flyxion demonstrates exactly why that is deeply dangerous.
+Identifying true counterfactual values, meaning what would have happened if we didn't intervene, is notoriously difficult because of selection bias in observational data.
+Let's use the advanced math program example from the text.
+Okay.
+Say a school district looks at its data and observes that kids who are placed into an advanced calculus track go on to have incredibly successful high-earning careers.
+The observable data shows a massive correlation.
+Right.
+A naive optimization model will look at that data and conclude that the causal value of the calculus program is astronomical.
+So, it will recommend defunding other programs to force every single student into advanced calculus, assuming it will yield the same success rate across the board.
+But that completely ignores selection bias.
+Entirely.
+Flyxion shows mathematically that two completely opposed causal models can produce the exact same observational dataset.
+Really?
+Yeah.
+How?
+Well, Model A asserts that the calculus program actively causes this success.
+It imparts skills that make kids successful.
+That's the intuitive one.
+And Model B?
+Model B asserts that the success is predetermined by natural aptitude or parental support or socioeconomic status.
+And the calculus program merely acts as a filter that selects kids who were already destined to succeed anyway.
+Oh, wow.
+Yeah.
+And both models fit the data perfectly.
+Perfectly.
+If you just look at the spreadsheet, you cannot distinguish between an intervention that generates value and an intervention that simply selects for pre-existing value.
+Think about the implications of that for philanthropy in business.
+We look at a successful microloan program in a developing country and we say, the data proves this works.
+But what if the data just proves that the people who apply for and secure microloans are inherently the most entrepreneurial driven individuals in that village?
+And they would have found a way to succeed regardless.
+Exactly.
+This raises an important question for you, the listener.
+How much of the success data we rely on is just observational masking?
+Right.
+If we blindly optimize based on observational correlation, we end up funding massive interventions that actually produce zero marginal utility.
+Because they are just taking credit for natural momentum.
+Exactly.
+So if we can't trust the optimizer's curse on big menus, and we can't trust individual evaluations because of complementarity, and we can't trust observational data because of selection bias, what do we do?
+Often institutions just fall back on asking people.
+Right. They issue grants, they take proposals, and they ask project leaders, how much good will you do and how much will it cost?
+And that introduces human behavior into the mathematics, which is where things get truly destructive.
+This brings us to optimization over claims.
+Okay. This revolves around cost, feasibility, and a really crucial mathematical error called the continuity assumption, right?
+Yes. Referencing the work of Coté and Stewart on threshold scales.
+Let's explain the recycling factory example, because this trapdoor is so practical and so common.
+Yeah. When algorithms optimize budgets, they love to use averages and marginal returns.
+They assume that reality is a continuous line.
+They assume that if it costs $1 million to build a recycling factory that processes 1 million tons of waste,
+then giving the project half a million dollars will allow them to process half a million tons of waste.
+It assumes you can just scale everything linearly.
+Right. But in reality, half a budget doesn't get you half a functioning factory.
+It gets you a concrete slab, a half-finished roof, and a bankrupt contractor.
+It processes zero waste.
+Exactly.
+That is the threshold scale.
+The intervention requires a minimum critical mass of funding to yield any value whatsoever.
+Okay.
+If an optimizer is using marginal figures to divide up a budget across multiple projects,
+it will systematically defund threshold projects right below their critical breaking point,
+turning what could have been massive value into complete deadweight loss.
+But the even deeper problem with optimizing over claims is what happens when people realize they are competing for that budget.
+This is the contractor analogy.
+Oh, this is one of the most mathematically rigorous proofs in the paper.
+It utilizes the properties of log concave density functions to demonstrate selection on favorable reporting error.
+Okay, let's break down log concave densities.
+Because earlier we talked about how selecting the highest estimated value selects for noise.
+This is the exact same dynamic applied to cost, right?
+Yes, but with human incentives added in.
+Mm-hmm.
+Here's where it gets really interesting.
+Yeah.
+It's like hiring a contractor.
+Imagine you are putting a major public works project out for bid or a philanthropic grant.
+You have 20 different organizations submitting proposals.
+Okay.
+And let's say the true objective cost to do this project right is around $20,000.
+In a perfect world, everyone bids $20,000.
+But in reality, there are two distinct probability distributions at play.
+Right.
+First, there is the distribution of their actual underlying efficiency.
+Maybe one contractor is slightly faster.
+So their true cost is $19,000.
+And second, there is the distribution of their reporting error.
+Exactly.
+Reporting error can be accidental.
+Maybe they forgot to price in the cost of copper wire.
+Or it can be intentional.
+They are wildly optimistic, or they are just flat out lying to win the bid.
+So a bid of $5,000 comes in.
+Now think about the math of those two distributions overlapping.
+A bid that is aggressively lower than the true mean is extremely unlikely to be driven purely by actual underlying efficiency.
+There is a physical limit to how cheap materials and labor can be.
+You can't just wish concrete to be 75% cheaper.
+But there is practically no limit to human reporting error.
+People can lie or miscalculate by massive margins.
+Right.
+So mathematically, the extreme left tail of the bidding distribution, the absolute lowest bids, are disproportionately composed of extreme reporting errors.
+The person who bids $5,000 for a $20,000 kitchen remodel isn't a wizard.
+The math actually proves we select for the highest error.
+Yes.
+The gap between the reported cost and the actual realizable cost, what the paper calls the shortfall, is maximized when you select the minimum reported cost.
+Wow.
+By designing your objective function to optimize for the lowest claim, you structurally filter out the honest, competent organizations who know what things actually cost.
+You are systematically filtering in the liars, the incompetents, and the extreme optimists.
+Your algorithm literally becomes a magnet for misrepresentation.
+It creates a race to the bottom of epistemics.
+And what is the only way to stop that?
+You have to check their work.
+You have to audit the claims.
+Independent verification.
+Mm-hmm.
+You have to go to their previous job sites and see if they actually built what they said they built.
+But verification costs resources.
+It costs time, money, and personnel.
+Right.
+And if you are an institution that is exclusively obsessed with maximizing your measured impact, getting the absolute highest score on your internal spreadsheet, then spending money on auditors starts to look like a mathematical waste.
+Which brings us to the institutional blind spot.
+This is where Flyxion shifts from looking at the math in a vacuum to looking at what happens to an organization that internalizes this math as its sole operating principle.
+And to understand this, we have to make a very sharp distinction between finding the mathematical optimum and having permission to execute it.
+The paper brings up the FTX cryptocurrency exchange here.
+I want to be clear for everyone listening.
+We are adhering strictly to the paper's analytical framing.
+We aren't here to psychoanalyze the founder who was convicted of fraud in 2024.
+Flyxion uses FTX as a pure structural example of an objective function running wild.
+The critical point is that maximizing an objective function, V of A, does not inherently grant what the paper defines as permitted of A.
+Meaning just because an action creates the highest expected value on your spreadsheet doesn't mean you are ethically or legally allowed to take it.
+Right.
+An objective function is just a mathematical topography.
+It seeks the highest peak.
+Yeah.
+It doesn't inherently contain concepts like fiduciary duty, consent, property rights, or the rule of law.
+Those are external categorical constraints.
+So if an agent is managing billions of dollars of customer deposits and they calculate that gambling those deposits on a high-risk venture will generate massive expected value for global charities...
+The math of expected value will cheer them on.
+The math will say, yes, that is the optimal path.
+If you do not hard-code permission constraints into the system, if you leave it up to the discretion of an agent whose only goal is to maximize the scalar metric, the math will happily recommend impermissible, catastrophic actions.
+Wow.
+The optimization process actively dissolves boundaries that aren't mathematically priced into its objective.
+The math doesn't have a conscience, so you can't assume the output will be conscientious.
+But man, the internal decay of these institutions is even more fascinating.
+The paper describes a phenomenon called endogenous verification decay.
+This is a brilliant modeling of institutional psychology using math.
+Tell us about it.
+Flyxion models an institution that has capital and it has verification capacity, meaning its ability to audit itself, catch its own errors, and monitor real-world harms.
+Okay.
+The institution's goal is to maximize its measure of reward, but here's the fatal flaw in the system.
+Verification catches errors, but it does not produce positive measured reward.
+Right. Auditing a charity doesn't save lives on paper.
+It just ensures the lives you thought you were saving are actually being saved.
+So if I'm a manager trying to hit my quarterly impact metrics and I look at my budget, I have $5 million in the auditing department and $5 million in the frontline intervention department.
+If I defund the auditors and move that money to the frontline, my measured output instantly doubles.
+And you look like a hero to the optimization algorithm.
+Unbelievable.
+Proposition 12 proves that if verification is not explicitly forced upon the optimizer as an external rule, an optimizer will inevitably defund its own oversight.
+It is mathematically compelled to do so.
+Yes, because any dollar spent on verification is interpreted by the algorithm as a strict loss of potential measured value.
+Over time, the institution systematically degrades its ability to even see reality.
+Wait, my immediate thought is surely an institution would eventually notice.
+Like, wouldn't an institution realize its true welfare is dropping?
+If they stop auditing, eventually they'll realize they are funding massive failures, right?
+You would think so.
+But this leads to Proposition 13, the perceived value trap.
+Okay.
+This is arguably the most chilling mathematical proof in the text.
+No, they won't realize it's dropping.
+Walk us through it.
+Why doesn't the institution realize it's failing?
+Because the optimizer only assigns value to the verification department based on the frequency of errors that the verification department is currently exposing.
+Oh, wow.
+Let me process that.
+It's like the smoke detector analogy.
+Exactly.
+Right.
+If you have a smoke detector in your house and it goes off twice a year to warn you about a fire, you value the smoke detector.
+Right.
+But if you decide to save money on batteries, you take them out.
+The smoke detector stops going off.
+And the optimization algorithm looks at the data and says, look at this.
+Ever since we stopped buying batteries, we haven't had a single fire alarm.
+Defunding the batteries was the most optimal decision we ever made.
+Our fire rate is mathematically zero.
+The algorithm is completely blind to the fact that the house is currently burning down because the mechanism for reporting the fire was defunded.
+The optimizer becomes trapped in a self-reinforcing illusion of perfection.
+That is terrifying.
+Once verification capacity drops below a critical threshold, the institution thinks everything is executing flawlessly because no shortfalls are being registered on the spreadsheet.
+Because there's no one left to register them.
+Right.
+The divergence between the measured return and the realizable return isn't just an accident.
+It is actively generated by the optimization process itself.
+And it is entirely invisible to the metric that guides it.
+The optimization destroys the instruments needed to measure the optimization.
+And it feels good while doing it.
+We've spent all this time looking at how scalar metrics can accidentally destroy philanthropy and financial institutions.
+But Flyxion takes this exact same mathematical structure, all of these trapdoors, and applies them to a massive high-stakes situation unfolding right now.
+The governance of artificial intelligence.
+Right.
+Section 11 of the text is titled, When Loss Becomes Law.
+And it is a master class in applying abstract math to immediate policy.
+Flyxion analyzes a specific proposal made in 2026 by an OpenAI researcher named Pachocki.
+The proposal was to use a scalar metric called perplexity, or predictive loss, as a hard threshold to pause the development of frontier AI models.
+Now, for anyone listening who isn't deep in the weeds of machine learning, let's explain what predictive loss actually is.
+Sure.
+Because it's really the heartbeat of how these models are trained.
+At its core, training a large language model is about predicting the next token or the next word in a sequence.
+You feed it a massive amount of text, and it plays a game of fill in the blank.
+You give it, the cat sat on the, and it has to guess the next word.
+The loss is a mathematical measurement of how bad the model is at guessing.
+Okay.
+A high loss means the model's probability distribution is flat and confused.
+It thinks mat, refrigerator, and quantum mechanics are all equally likely next words.
+It's essentially a measure of statistical stupidity.
+Right.
+A low loss means the model is highly confident and highly accurate.
+It assigns a near 100% probability to mat.
+Over time, as you train the model with more data and more compute, the loss goes down.
+The model gets better at predicting.
+And Pachocki's 2026 proposal observed a really compelling historical correlation.
+As the loss metric dropped on a specific internal OpenAI code base, the model seemed to magically unlock new complex capabilities.
+They observed that at a loss of roughly 0.99, models achieved fluent conversation.
+Right.
+At 0.91, they unlocked productive logical reasoning.
+And critically, at around 0.8, they began to exhibit cybersecurity capabilities, coding proficiency, things that start to look dangerous in the wrong hands.
+So the governance proposal was brilliantly simple.
+Let's use this math.
+Let's set a legal or industry-wide threshold based on this loss metric.
+If a model is training and its loss hits 0.7, we automatically hit the pause button.
+We stop training because the math tells us it's entering a dangerous capability zone.
+It sounds incredibly reasonable.
+It is a clean, objective, measurable number.
+But Flyxion brings the structural hammer down, showing that this AI governance proposal falls through the exact same trapdoors as the effective altruism equations.
+Let's look at the first failure point.
+The dependence of the ranking on the evaluation distribution.
+Yes.
+The fatal flaw here is assuming that loss is a universal, objective measure of general intelligence or capability.
+Which it isn't.
+It is not.
+Loss is strictly a measure of predictive performance relative to a specific dataset.
+Meaning what you test the AI on completely dictates the score.
+Precisely.
+Imagine you have two AI models, Model A and Model B.
+Model A was heavily trained on mathematics and Python code.
+Model B was heavily trained on poetry and historical literature.
+Okay.
+If my evaluation dataset is mostly code, Model A is going to have a much lower loss.
+It's going to look vastly smarter and closer to the danger threshold.
+But if you change the evaluation dataset to be mostly prose, suddenly Model B has the lower loss.
+Huh.
+The mathematical ranking of which AI is safer or more capable can completely invert depending on how you weight the mixture of the testing data.
+It is the exact same problem as the thermostat analogy from earlier.
+You can't just blindly add my comfort scale to your comfort scale.
+You can't just blindly evaluate an AI without deciding what type of intelligence you care about measuring.
+A shared governance threshold based on loss requires a shared, universal, mathematically objective definition of the evaluation distribution.
+And that does not exist.
+No, it doesn't.
+The choice of what data to test the AI on is a human, political, subjective choice.
+It is not a technical preliminary.
+So if a regulatory body decides to test AI models heavily on coding, they might ban a perfectly safe math tutor while greenlighting a model that is terrible at code, but highly persuasive at generating biological weapons instructions.
+Simply because biology wasn't weighted heavily in the loss calculation.
+Wow.
+Which leads directly to the second massive failure point.
+The insufficiency of scalar loss.
+Average loss does not determine specific hazardous capabilities.
+This makes perfect sense when you think about a student's GPA.
+Yeah.
+If a high school student has a 3.0 GPA, you know their average performance.
+But that single scalar number tells you absolutely nothing about the variance of their skills.
+Exactly.
+A 3.0 GPA could mean the student got a solid B in every single subject across the board.
+Or it could mean they got an A plus in advanced chemistry and an F in history.
+The average conceals the extremes.
+Flyxion shows mathematically that two entirely different AI models can have the exact same scalar loss score, but wildly different capability profiles.
+So an AI with a loss of 0.8 could be consistently mediocre at every task imaginable, making it incredibly safe to deploy.
+Or it could be terribly stupid at writing poetry and translating languages, but possess an A plus superhuman capability in hacking power grids.
+And they both average out to 0.8.
+So a rigid regulatory rule that says pause all models at 0.8 loss is mathematically blind to the actual shape of the danger.
+It treats a flat line and a massive spike as the exact same thing.
+And that leads to the final fatal blow against threshold governance.
+If you want a rule that guarantees you catch every dangerous AI before it is deployed, the math requires something practically impossible.
+It requires the certification condition.
+We are back to the candidate menu from the philanthropic math.
+Exactly.
+To mathematically guarantee that a threshold is safe, you must have an ironclad mathematical bound on the capabilities of all the models that exist above the threshold.
+You have to prove that everything you aren't pausing is definitively safe.
+And the paper points out a glaring loophole in the AI space that destroys this guarantee.
+The paper explicitly points out that chain of thought reasoning, where you allow the AI to generate hidden scratchpad tokens to think step by step before answering, massively raises an AI's capability.
+But here is the critical vulnerability.
+Chain of thought reasoning, or giving an AI access to a web browser, or fine-tuning it after base training, does not necessarily lower the base loss metric that the regulators are measuring.
+So the model gets vastly smarter, but the regulatory thermometer doesn't move.
+So the threshold completely misses a massive route to danger.
+These avenues act as the omitted alternatives we discussed earlier.
+The metric completely misses a massive route to capability.
+It is the ultimate manifestation of Goodhart's law, right?
+When a measure becomes a target, it ceases to be a good measure.
+If we connect this to the bigger picture, if you optimize your international AI regulations against a single scalar metric like loss, you structurally push every AI developer to find capabilities in the unmeasured margins.
+You incentivize the exact same misrepresentation we saw with the contractors submitting the lowest bids.
+If the law says you can't have a base loss lower than 0.7, developers will build models that score a safe 0.8 on the test, but use massive chain-of-thought architectures to act like a 0.1 in the real world.
+The historical correlation between a metric and an outcome in a lab does not justify using that metric as a rigid governance threshold in an adversarial world.
+The math of optimization will actively subvert the intent of the regulation.
+So if we take a step back and look at this entire landscape, we've spent this time tearing down the architecture of rational decision-making.
+We really have.
+We've established that expected value can be hijacked by infinite hypothetical futures.
+We've shown that adding up human happiness requires subjective conversion rates.
+We've proved that looking at limited menus causes statistical selection bias and actually punishes you for searching too widely.
+We've seen how assuming interventions are isolated ignores real-world complementarity, and how relying on observational data blinds us to selection effects.
+We've seen how optimizing for lowest costs selects for liars, how optimizing for measured outputs mathematically destroys safety audits, and how using loss metrics to govern AI completely misses the shape and source of actual danger.
+If all of this structural math is fundamentally vulnerable, how do we make decisions?
+Do we just give up on using numbers?
+No.
+Flyxion doesn't leave us in a state of mathematical nihilism.
+Section 12 outlines the repairs.
+Okay, good.
+But the crucial, inescapable takeaway is that the repairs do not eliminate the human element.
+They do not make the math purely objective.
+They simply relocate the human judgment to a more transparent part of the equation.
+Let's run through the repairs.
+Repair number one, bounded utility.
+This is how you fix the speculative benefit domination we talked about with long-termism.
+You simply impose a mathematical cap on how much utility any single outcome can generate.
+You declare by fiat, no hypothetical future is worth infinite points.
+The maximum score any event can have is 1 billion.
+It stops the tiny probability from multiplying into an unstoppable force.
+But doing that means you, the human, are making a highly subjective ethical choice to limit the mathematical value of future lives.
+The math didn't choose the cap.
+You did.
+Exactly.
+Repair number two, robust criteria, like the Maximin rule we discussed with Ellsberg's paradox.
+This fixes the ambiguity problem.
+You assume the worst case probability for highly speculative events.
+If there is no hard evidence, the probability is zero.
+But the cost of this repair is widespread conservatism.
+It forces you to ignore potential catastrophic tail risks if the evidence is currently thin.
+It paralyzes the algorithm in the face of deep uncertainty.
+Again, a human epistemic choice, not a mathematical absolute.
+Repair number three, side constraints.
+This fixes the FTX institutional blind spot.
+You introduce rigid, non-negotiable rules that sit completely outside the optimization objective.
+Maximize portfolio value, but do not touch client deposits.
+Exactly.
+Or maximize charitable impact, but mandate that 20% of the budget goes to independent audits.
+The objective function didn't generate those rules.
+The math didn't ask for a compliance department.
+You forced it onto the math from the outside.
+And that is the ultimate conclusion of Flyxion's deep dive.
+The quantitative apparatus, taken by itself, leaves everything that actually matters undetermined.
+The candidate set, the interaction models, the causal inferences, the aggregation scales.
+These are the critical junctures where arithmetic must give way to judgment.
+To stand behind a spreadsheet and claim that you are just following the math or letting the data decide is an illusion.
+The math is a phenomenally powerful engine, but it does not have a steering wheel.
+The bounds, the constraints, the verification protocols, those are the steering wheel.
+And you have to look in the mirror and admit that you are the one driving.
+And if you don't grab the wheel, the optimization process will just accelerate into the nearest statistical trapdoor.
+It really will.
+Which brings me to a final thought I want to leave you with today.
+We spend so much of our modern lives looking at how data and algorithms underdetermine what is good or safe.
+We assume we use these intense scalar metrics in our charities, our tech companies, our government policies, because the math is objective and human beings are biased.
+We think we are elevating our decision-making.
+But think about the crushing cognitive load of true moral responsibility.
+When we rely so heavily on data, algorithms, and spreadsheets to run our world, are we truly doing it because the math is smarter than us?
+Or are we just outsourcing our morality to the math simply to avoid the profound, agonizing discomfort of having to make subjective, human, ethical choices ourselves?
+Are we just typing the destination into the GPS, closing our eyes, and praying we don't end up driving straight into the lake?
+It's the ultimate abdication of responsibility disguised as rationality.
+And it's the question every institutional leader has to answer the next time they look at an optimized spreadsheet.
+Thank you for joining us on this deep dive.

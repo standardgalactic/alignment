@@ -1,0 +1,2369 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+So in 2026, we're basically trusting equations to decide, you know, pretty much everything.
+
+00:06.140 --> 00:06.580
+Oh, absolutely.
+
+00:06.800 --> 00:06.940
+Right.
+
+00:07.020 --> 00:07.280
+Everything.
+
+00:07.700 --> 00:10.500
+I mean, from which global charities get billions of dollars in funding
+
+00:10.500 --> 00:16.280
+to whether an artificial intelligence model is just deemed too dangerous to turn on.
+
+00:16.420 --> 00:19.260
+Yeah, we really just look at the spreadsheets and the algorithms and we,
+
+00:19.780 --> 00:21.700
+well, we think the math is completely objective.
+
+00:22.100 --> 00:22.480
+Exactly.
+
+00:22.660 --> 00:27.300
+We just type in the parameters and we trust the output almost blindly, really.
+
+00:27.300 --> 00:31.180
+And, you know, that is sort of the terrifying thing about optimization
+
+00:31.180 --> 00:34.420
+because the math always does exactly what you tell it to do.
+
+00:34.860 --> 00:37.540
+The danger isn't necessarily that the calculations are wrong.
+
+00:38.040 --> 00:43.880
+The danger is that the structural equations we use to define, like, goodness or safety,
+
+00:44.440 --> 00:47.420
+they possess these massive invisible trapdoors.
+
+00:48.040 --> 00:51.820
+Trapdoors that we just fall right through before we even hit the enter key.
+
+00:52.100 --> 00:52.500
+Exactly.
+
+00:52.880 --> 00:54.400
+So welcome to the Deep Dive.
+
+00:54.400 --> 01:01.180
+Our mission today is to decode a really brilliant, highly mathematical paper published in November 2026.
+
+01:01.720 --> 01:03.660
+Yeah, it's by the independent researcher Flyxion.
+
+01:04.060 --> 01:04.320
+Right.
+
+01:04.560 --> 01:08.300
+And it's titled Conditional Optimality Under Scalar Objectives.
+
+01:08.940 --> 01:11.480
+And just for you listening, I want to set the tone here.
+
+01:11.600 --> 01:15.000
+This is a pure, impartial look at the machinery of decision-making.
+
+01:15.300 --> 01:16.960
+Yeah, we aren't taking political sides here.
+
+01:17.180 --> 01:20.580
+And we're not here to debunk utilitarianism or anything like that.
+
+01:20.740 --> 01:21.420
+No, not at all.
+
+01:21.420 --> 01:27.360
+We are here to look at the engine itself because whether you are looking at the effective altruism movement,
+
+01:27.580 --> 01:30.220
+you know, trying to rank charities to do the most good per dollar,
+
+01:30.360 --> 01:36.480
+or you're looking at the frontier of AI governance, we are using the exact same kind of scalar math.
+
+01:37.400 --> 01:42.440
+And this paper proves mathematically that the numbers alone can never tell you what to do without,
+
+01:42.740 --> 01:44.920
+well, secretly relying on human assumptions.
+
+01:44.920 --> 01:49.180
+It's really a phenomenal piece of work because it just strips away all the ideology.
+
+01:49.620 --> 01:49.780
+Yeah.
+
+01:49.940 --> 01:50.960
+It just looks at the axioms.
+
+01:51.420 --> 01:56.280
+You know, when you ask an algorithm to maximize a single number, a scalar objective,
+
+01:56.680 --> 01:59.460
+what happens to all those variables you left out?
+
+01:59.700 --> 01:59.960
+Right.
+
+02:00.080 --> 02:01.620
+What happens to the noise in your data?
+
+02:01.780 --> 02:02.180
+Exactly.
+
+02:02.180 --> 02:09.060
+And the paper demonstrates that optimizing a flawed metric doesn't just give you like a slightly flawed result.
+
+02:09.520 --> 02:15.000
+It can actively engineer a complete catastrophe while literally telling you everything is perfect.
+
+02:15.540 --> 02:15.660
+Wow.
+
+02:15.940 --> 02:17.120
+Okay, let's unpack this.
+
+02:17.340 --> 02:21.080
+Let's start with the absolute baseline equation for doing good in the world.
+
+02:21.260 --> 02:22.340
+Expected value.
+
+02:22.340 --> 02:22.700
+Oh, yeah.
+
+02:23.060 --> 02:23.580
+The classic.
+
+02:24.380 --> 02:28.400
+If you spend any time in the philanthropic space, especially in those effective altruism debates,
+
+02:28.620 --> 02:30.240
+you see this formula everywhere.
+
+02:30.680 --> 02:38.700
+It's the value of an action equals the probability of an outcome multiplied by the utility or the moral value of that outcome.
+
+02:38.900 --> 02:39.060
+Right.
+
+02:39.160 --> 02:40.760
+So V equals P times U.
+
+02:41.300 --> 02:43.980
+It is basically the cornerstone of rational choice theory.
+
+02:44.340 --> 02:46.340
+And, I mean, it seems perfectly logical, right?
+
+02:47.020 --> 02:51.260
+But let's apply it to a real debate happening right now, which is long-termism.
+
+02:51.260 --> 02:52.900
+Oh, this is a perfect example.
+
+02:53.420 --> 02:59.500
+You have people arguing over whether we should spend, say, $100 million today on malaria nets,
+
+02:59.760 --> 03:05.500
+which we know with near 100% certainty will save a specific number of lives this year.
+
+03:06.120 --> 03:15.300
+Or should we spend that exact same money trying to prevent a hypothetical rogue AI from destroying humanity a thousand years from now?
+
+03:15.580 --> 03:19.520
+And this is exactly where Flyxion points out the first big mathematical vulnerability.
+
+03:19.520 --> 03:22.440
+It's called speculative benefit domination.
+
+03:22.940 --> 03:22.960
+Okay.
+
+03:23.060 --> 03:27.860
+Let's break that down for the listener because I really want to make sure the mechanics of this are crystal clear.
+
+03:28.060 --> 03:28.140
+Sure.
+
+03:28.140 --> 03:37.160
+So if I'm calculating the welfare of trillions of hypothetical future humans, the U in that equation, the utility, it just becomes unimaginably massive.
+
+03:37.420 --> 03:37.660
+Right.
+
+03:37.760 --> 03:39.280
+It basically approaches infinity.
+
+03:39.520 --> 03:39.700
+Yeah.
+
+03:40.140 --> 03:45.500
+And because the equation is just simple multiplication, a tiny, highly speculative probability.
+
+03:45.500 --> 03:49.760
+Like, say, a 0.0000001% chance?
+
+03:49.880 --> 03:50.420
+Yeah, exactly.
+
+03:50.800 --> 03:52.920
+A tiny chance of saving a trillion lives.
+
+03:53.120 --> 03:59.880
+You multiply that by that massive utility and it yields an expected benefit of tens of thousands of lives.
+
+04:00.040 --> 04:00.500
+Oh, wow.
+
+04:00.500 --> 04:08.960
+So mathematically, that highly speculative intervention instantly outweighs the absolute certainty of saving a few thousand people from malaria today.
+
+04:09.880 --> 04:11.820
+But wait, I can hear the pushback already.
+
+04:11.980 --> 04:19.320
+I mean, on behalf of you listening, someone is going to say, well, isn't a tiny chance to save a trillion people mathematically worth it?
+
+04:19.560 --> 04:19.820
+Right.
+
+04:20.000 --> 04:21.560
+The cosmic lottery ticket argument.
+
+04:21.740 --> 04:22.040
+Exactly.
+
+04:22.240 --> 04:26.520
+Like buying a cosmic lottery ticket where the payout is the survival of the human race.
+
+04:26.700 --> 04:29.680
+If the payoff is that massive, the math says you take the bet.
+
+04:29.680 --> 04:36.660
+What's fascinating here is that, yes, the math says you take the bet, but only if you assume the probability is an objective fact.
+
+04:37.200 --> 04:37.480
+Oh.
+
+04:37.760 --> 04:44.260
+And Flyxion forces us to separate the logical possibility of an event from the actual evidential support for its probability.
+
+04:44.540 --> 04:44.940
+I see.
+
+04:45.420 --> 04:53.660
+Just because a forecasting model spits out a probability of, you know, 10 to the negative sixth, that doesn't mean the real world operates on that fraction.
+
+04:53.820 --> 04:54.140
+Right.
+
+04:54.140 --> 05:05.100
+The math itself doesn't know the difference between a probability derived from centuries of hard empirical data and a probability somebody basically just made up because it felt right in a thought experiment.
+
+05:05.880 --> 05:07.840
+So the spreadsheet just sees the number.
+
+05:08.020 --> 05:11.540
+It doesn't see how fragile the evidence behind the number is.
+
+05:11.620 --> 05:11.940
+Exactly.
+
+05:12.640 --> 05:15.440
+The structural math has no built-in defense against that fragility.
+
+05:15.440 --> 05:19.600
+And this is where the paper brings in the Maximin criterion.
+
+05:19.800 --> 05:19.820
+Okay.
+
+05:20.060 --> 05:20.460
+Maximin.
+
+05:20.700 --> 05:20.880
+Yeah.
+
+05:21.000 --> 05:25.340
+Which has roots in Ellsberg's paradox and the economics of ambiguity aversion.
+
+05:25.840 --> 05:31.000
+Walk us through Ellsberg's paradox because I think that perfectly illustrates what we're actually dealing with here.
+
+05:31.400 --> 05:31.640
+Okay.
+
+05:31.960 --> 05:35.480
+Imagine an urn, like a jar, with 90 balls in it.
+
+05:35.760 --> 05:36.260
+90 balls.
+
+05:36.360 --> 05:36.580
+Got it.
+
+05:36.580 --> 05:38.920
+And I tell you that exactly 30 of them are red.
+
+05:39.840 --> 05:44.940
+The remaining 60 are a mix of black and yellow, but I absolutely refuse to tell you the ratio.
+
+05:45.300 --> 05:45.440
+Okay.
+
+05:45.540 --> 05:49.280
+So it could be 60 black and zero yellow or zero black and 60 yellow.
+
+05:49.420 --> 05:49.580
+Right.
+
+05:49.780 --> 05:50.980
+Or anything in between.
+
+05:51.440 --> 05:57.020
+So I have solid evidence for the red balls and complete ambiguity for the black and yellow ones.
+
+05:57.140 --> 05:57.400
+Yes.
+
+05:57.860 --> 05:59.220
+Now, I offer you a bet.
+
+06:00.180 --> 06:03.020
+Option A, you win $100 if you pull a red ball.
+
+06:03.020 --> 06:06.820
+Option B, you win $100 if you pull a black ball.
+
+06:07.340 --> 06:08.880
+I mean, I'd choose the red ball.
+
+06:09.220 --> 06:10.440
+Most people choose the red ball.
+
+06:10.780 --> 06:11.080
+Why?
+
+06:11.840 --> 06:14.300
+Because the 1 in 3 probability is known.
+
+06:14.960 --> 06:17.780
+They avoid the black ball because the probability is ambiguous.
+
+06:18.580 --> 06:25.580
+Even though logically the expected value of pulling a black ball could be higher if there happen to be like 60 of them in there.
+
+06:25.980 --> 06:26.460
+Exactly.
+
+06:26.980 --> 06:27.860
+We hate ambiguity.
+
+06:28.480 --> 06:30.000
+We really want to know the odds.
+
+06:30.280 --> 06:30.520
+Right.
+
+06:30.520 --> 06:38.660
+But expected value math, that V equals P times U equation, it structurally assumes you are totally neutral to ambiguity.
+
+06:39.120 --> 06:39.820
+Oh, I see.
+
+06:40.040 --> 06:45.760
+It assumes you treat a known probability and a totally speculative guess exactly the same way.
+
+06:45.960 --> 06:47.840
+Which is wild when you think about it.
+
+06:47.900 --> 06:48.280
+It is.
+
+06:48.280 --> 06:56.000
+So, what a Maximin criterion does is it looks at the entire range of possible probabilities based on your actual evidence.
+
+06:56.420 --> 06:56.660
+Okay.
+
+06:56.880 --> 07:05.180
+If your evidence for, say, an AI doom scenario is so incredibly weak and speculative that the lower bound of your confidence interval is just zero.
+
+07:05.280 --> 07:08.260
+Then under Maximin, you evaluate that worst case scenario.
+
+07:08.480 --> 07:08.720
+Yes.
+
+07:09.320 --> 07:12.060
+And zero times a trillion is zero.
+
+07:12.420 --> 07:14.060
+The expected value just vanishes.
+
+07:14.420 --> 07:15.420
+It completely vanishes.
+
+07:15.420 --> 07:27.080
+And if that speculative bet requires diverting funds from guaranteed interventions, meaning there's a certain harm or, you know, a real opportunity cost today, the expected value actually goes negative.
+
+07:27.320 --> 07:28.000
+Wow.
+
+07:28.320 --> 07:35.980
+Flyxion's point is that choosing between standard additive expected value and a Maximin rule is not just a mathematical preliminary.
+
+07:35.980 --> 07:39.340
+It is a profound ethical and epistemic choice.
+
+07:39.340 --> 07:44.680
+So, you literally have to decide how you value evidence before you let the math multiply the numbers.
+
+07:44.820 --> 07:45.260
+Exactly.
+
+07:46.140 --> 07:47.880
+The math will not make that judgment for you.
+
+07:48.060 --> 07:52.160
+So, you have to basically smuggle your epistemology into the spreadsheet.
+
+07:52.640 --> 07:52.940
+Mm-hmm.
+
+07:53.180 --> 07:56.420
+Which actually leads us directly into the next massive hurdle.
+
+07:57.020 --> 08:00.160
+Let's say we somehow get past the probability problem.
+
+08:00.700 --> 08:03.600
+We still have to figure out how to calculate the U, the utility.
+
+08:03.900 --> 08:04.140
+Right.
+
+08:04.300 --> 08:05.180
+The benefit itself.
+
+08:05.180 --> 08:05.540
+Yeah.
+
+08:05.880 --> 08:13.500
+And to get to a massive number of lives or to measure the impact of a huge economic policy, you have to add different people's welfare together.
+
+08:13.760 --> 08:13.960
+Right.
+
+08:14.220 --> 08:15.380
+Interpersonal aggregation.
+
+08:15.900 --> 08:20.240
+This is honestly one of the thorniest problems in all of economics and moral philosophy.
+
+08:21.000 --> 08:27.940
+The paper calls this the representation dependence of the unweighted sum, which, I mean, sounds incredibly dense.
+
+08:28.100 --> 08:29.560
+It does sound a bit intimidating.
+
+08:29.560 --> 08:34.360
+But the underlying concept is something we all intuitively experience every day, right?
+
+08:34.760 --> 08:40.300
+It's the realization that my internal experience of happiness or suffering is locked inside my head.
+
+08:40.640 --> 08:41.860
+And mine is locked inside mine.
+
+08:42.080 --> 08:42.420
+Exactly.
+
+08:42.660 --> 08:44.380
+So, how do we add them?
+
+08:44.900 --> 08:52.640
+Well, in classical expected utility theory, an individual's utility scale is only defined up to what we call a positive affine transformation.
+
+08:53.040 --> 08:53.220
+Okay.
+
+08:53.320 --> 08:55.220
+Let's unpack positive affine transformation.
+
+08:55.760 --> 08:58.840
+Let's say we're trying to measure how much we both value a cup of coffee.
+
+08:58.840 --> 08:59.240
+Sure.
+
+08:59.500 --> 09:07.300
+Inside your own personal decision-making process, your scale is completely arbitrary, as long as the order of your preferences remains consistent.
+
+09:07.500 --> 09:07.820
+Okay.
+
+09:08.400 --> 09:11.320
+Let's say you prefer coffee over tea and tea over water.
+
+09:11.820 --> 09:15.980
+You could assign coffee a value of 3, tea a 2, and water a 1.
+
+09:16.180 --> 09:17.880
+That's just a simple 1-2-3 scale.
+
+09:17.920 --> 09:18.340
+Makes sense.
+
+09:18.680 --> 09:24.640
+But you could also take that exact same internal preference and multiply it by 1,000, and then, I don't know, add 500.
+
+09:24.640 --> 09:25.120
+Okay.
+
+09:25.240 --> 09:29.540
+So, coffee is 3,500, tea is 2,500, water is 1,500.
+
+09:29.800 --> 09:30.060
+Yes.
+
+09:30.680 --> 09:33.420
+That is a positive affine transformation.
+
+09:33.980 --> 09:38.700
+And mathematically, it changes absolutely nothing about the choices you will make in the real world.
+
+09:39.040 --> 09:41.180
+Because I will still always pick the coffee.
+
+09:41.660 --> 09:42.080
+Exactly.
+
+09:42.600 --> 09:47.180
+For modeling an individual's rational choices, the scale itself is totally meaningless.
+
+09:47.620 --> 09:50.080
+Only the relative distances between the options matter.
+
+09:50.080 --> 09:50.640
+Okay.
+
+09:50.820 --> 09:52.700
+So, I have my own internal thermostat.
+
+09:53.300 --> 09:53.840
+Yes, you do.
+
+09:54.460 --> 09:56.700
+But here is the trapdoor Flyxion highlights.
+
+09:57.180 --> 10:05.260
+What happens when a central algorithm tries to add your utility and my utility together to maximize social welfare?
+
+10:05.620 --> 10:10.260
+It blindly takes whatever arbitrary scale we happen to be using and just jams them together.
+
+10:10.480 --> 10:10.900
+Precisely.
+
+10:11.260 --> 10:13.280
+Let's say we were deciding on the office temperature.
+
+10:13.900 --> 10:17.560
+I might be using a very modest 1 to 10 scale for my comfort.
+
+10:17.980 --> 10:18.280
+Right.
+
+10:18.280 --> 10:22.200
+But you, internally, might be using scale from 1 to 1,000.
+
+10:22.820 --> 10:24.220
+Okay, I see where this is going.
+
+10:24.820 --> 10:29.020
+If the building's optimization algorithm just takes an unweighted sum of our raw numbers together,
+
+10:29.440 --> 10:32.780
+it will always prioritize your preferences and freeze me out.
+
+10:33.140 --> 10:36.240
+Just simply because my internal math uses bigger numbers.
+
+10:36.360 --> 10:36.560
+Yes.
+
+10:37.220 --> 10:40.360
+You could multiply one person's utility scale by a constant,
+
+10:40.740 --> 10:44.560
+which, remember, is mathematically perfectly valid for their individual choices.
+
+10:44.660 --> 10:47.960
+But doing so completely reverses the outcome of the social total.
+
+10:47.960 --> 10:48.400
+Exactly.
+
+10:49.400 --> 10:53.940
+The math is entirely silent on how to compare one unit of your welfare against one unit of mine.
+
+10:54.740 --> 10:58.320
+Economists like Harsanyi and Sen have debated this for decades.
+
+10:59.120 --> 11:02.740
+And Flyxion brings it right to the forefront of these optimization algorithms.
+
+11:02.980 --> 11:03.180
+Right.
+
+11:03.380 --> 11:07.640
+If you want to add welfare together, you have to introduce a conversion rate.
+
+11:07.640 --> 11:14.480
+You have to make a deeply ethical judgment about how my subjective experience literally compares to yours.
+
+11:14.980 --> 11:19.000
+And, man, it gets infinitely harder when you try to scale this up to global policy.
+
+11:19.280 --> 11:24.980
+I mean, how do you compare the utility of a billionaire getting a tax cut to a family getting food assistance?
+
+11:24.980 --> 11:25.740
+You can't.
+
+11:26.140 --> 11:27.080
+Not with pure math.
+
+11:27.540 --> 11:31.560
+Or how do you compare human welfare to the welfare of, like, factory farmed animals?
+
+11:31.840 --> 11:37.320
+Or the welfare of people alive today versus unborn generations in the year 3000?
+
+11:37.720 --> 11:39.800
+You just cannot do it with pure math.
+
+11:40.200 --> 11:43.960
+You have to establish an ethical premise of comparability first.
+
+11:44.200 --> 11:44.480
+Right.
+
+11:44.480 --> 11:49.900
+The algorithm cannot output a moral truth if you didn't input a moral conversion rate.
+
+11:50.780 --> 11:50.800
+Okay.
+
+11:50.980 --> 11:56.640
+So if the math can't ethically compare my happiness to yours without us intervening,
+
+11:56.840 --> 12:02.560
+how do philanthropic algorithms or government agencies even build their spreadsheets in the first place?
+
+12:03.160 --> 12:04.380
+Well, they have to create a menu.
+
+12:04.580 --> 12:04.800
+Right.
+
+12:05.100 --> 12:08.160
+Because they have to start by picking a finite list of options to look at.
+
+12:08.280 --> 12:11.180
+They can't evaluate every possible action in the universe.
+
+12:11.180 --> 12:13.820
+And this brings us to the concept of the candidate set.
+
+12:14.480 --> 12:20.580
+Which, honestly, might contain the most counterintuitive, mind-bending mathematical proof in the entire paper.
+
+12:20.700 --> 12:20.940
+Okay.
+
+12:21.120 --> 12:22.140
+Let's dive into it.
+
+12:22.340 --> 12:28.640
+Because usually we assume that if an evaluator looks at a list of charities and picks the one with the highest mathematical score,
+
+12:28.760 --> 12:30.320
+they've found the best option.
+
+12:30.720 --> 12:30.980
+Right.
+
+12:31.480 --> 12:34.440
+They have found the best option on that specific list.
+
+12:34.780 --> 12:35.040
+Mm-hmm.
+
+12:35.040 --> 12:39.000
+The paper uses two distinct symbols here that are crucial to keep straight.
+
+12:40.020 --> 12:44.080
+Omega represents the universe of all possible options.
+
+12:44.080 --> 12:48.160
+So every charity, every policy, every conceivable action humanity could take.
+
+12:48.260 --> 12:48.720
+Exactly.
+
+12:48.940 --> 12:49.140
+Okay.
+
+12:49.220 --> 12:49.700
+That's omega.
+
+12:50.000 --> 12:53.880
+Then you have the letter S, which represents the candidate set.
+
+12:54.400 --> 12:58.320
+The tiny subset of options we actually put on the spreadsheet to evaluate.
+
+12:58.700 --> 12:58.960
+Right.
+
+12:59.500 --> 13:00.320
+Omega is everything.
+
+13:00.640 --> 13:01.640
+S is our menu.
+
+13:02.640 --> 13:07.380
+Now, when an algorithm optimizes, it only searches over S.
+
+13:07.900 --> 13:08.720
+Makes sense.
+
+13:08.720 --> 13:15.880
+But finding the absolute mathematical maximum within set S guarantees absolutely nothing about your success over omega.
+
+13:16.280 --> 13:16.580
+Right.
+
+13:17.080 --> 13:23.520
+The only way you can mathematically certify that the winner of your small menu is actually the best overall choice
+
+13:23.520 --> 13:29.880
+is if you can put a hard mathematical limit on the value of every single alternative you didn't look at.
+
+13:29.880 --> 13:30.800
+Oh, wow.
+
+13:31.040 --> 13:33.580
+Flyxion calls this the certification condition, right?
+
+13:33.800 --> 13:34.040
+Yes.
+
+13:34.140 --> 13:38.920
+Meaning I can say this is the most effective climate intervention on my list,
+
+13:39.040 --> 13:43.820
+but I can never scientifically claim this is the most effective climate intervention, period.
+
+13:44.200 --> 13:49.800
+Unless you have mathematical proof that every idea you didn't test is objectively worse,
+
+13:50.200 --> 13:52.560
+which is frankly impossible in the real world.
+
+13:52.560 --> 13:54.040
+It is practically impossible.
+
+13:54.880 --> 14:00.320
+And this introduces what the paper refers to using concepts from information theory as perplexity.
+
+14:00.560 --> 14:00.660
+Yeah.
+
+14:01.080 --> 14:03.820
+And perplexity isn't just a feeling of being confused.
+
+14:04.060 --> 14:06.800
+It's a measurable statistical state.
+
+14:07.160 --> 14:08.900
+Explain perplexity for us then.
+
+14:09.380 --> 14:12.180
+In this context, perplexity is related to entropy.
+
+14:12.620 --> 14:17.860
+It's a way of measuring the effective number of equally likely alternatives in a probability distribution.
+
+14:18.160 --> 14:18.420
+Okay.
+
+14:18.420 --> 14:23.180
+When you are trying to find the best intervention, you really have two types of uncertainty.
+
+14:23.740 --> 14:25.180
+You have ranking uncertainty.
+
+14:25.580 --> 14:26.420
+Which is the question...
+
+14:27.060 --> 14:28.960
+Did I measure the things on my menu correctly?
+
+14:29.200 --> 14:31.640
+Like, is option A actually better than option B?
+
+14:32.080 --> 14:32.520
+Exactly.
+
+14:32.840 --> 14:34.340
+That's just standard margin of error.
+
+14:34.720 --> 14:36.740
+But then you have omission uncertainty.
+
+14:37.400 --> 14:37.940
+Which is what?
+
+14:38.220 --> 14:43.620
+It's the sheer probability mass that the true actual best option is sitting off the menu entirely.
+
+14:43.920 --> 14:44.260
+Uh-huh.
+
+14:44.260 --> 14:51.280
+Perplexity forces you to acknowledge the dispersion of probability across that vast, unmeasured space of omega.
+
+14:51.800 --> 14:52.020
+Okay.
+
+14:52.080 --> 15:01.480
+But if omission uncertainty is the problem, if the danger is that the best idea isn't on our menu, my immediate intuition is that we just need a bigger menu.
+
+15:01.600 --> 15:01.760
+Right.
+
+15:02.240 --> 15:03.200
+That's what everyone thinks.
+
+15:03.440 --> 15:03.660
+Yeah.
+
+15:03.660 --> 15:12.340
+If I'm a massive philanthropic foundation, I should just hire a hundred more researchers and evaluate 10,000 charities instead of 50.
+
+15:12.960 --> 15:14.800
+Expand the set S.
+
+15:15.500 --> 15:16.820
+That is the universal intuition.
+
+15:17.300 --> 15:20.560
+If you want to find the best thing, search a wider area.
+
+15:21.080 --> 15:21.940
+Evaluate more candidates.
+
+15:22.200 --> 15:22.300
+Sure.
+
+15:22.580 --> 15:26.200
+But this is where Flyxion drops the hammer with the optimizer's curse.
+
+15:27.000 --> 15:27.460
+Oh, man.
+
+15:28.240 --> 15:29.860
+This blew my mind when I read it.
+
+15:29.980 --> 15:30.440
+It's incredible.
+
+15:30.440 --> 15:34.740
+Well, searching more actually introduces massive statistical selection bias.
+
+15:35.140 --> 15:38.060
+The idea that having more options can be mathematically worse.
+
+15:38.700 --> 15:43.100
+Walk me through a concrete scenario here, step by step, because it feels like a total paradox.
+
+15:43.720 --> 15:45.840
+How can trying harder make you dumber?
+
+15:46.200 --> 15:46.420
+Okay.
+
+15:46.600 --> 15:48.540
+Let's build like a mental spreadsheet.
+
+15:49.220 --> 15:52.620
+Imagine you are evaluating a thousand different charitable interventions.
+
+15:52.960 --> 15:53.260
+Okay.
+
+15:53.300 --> 15:54.100
+A thousand charities.
+
+15:54.100 --> 16:03.140
+And let's assume, just for the sake of the thought experiment, that in reality, every single one of these interventions produces the exact same amount of true good.
+
+16:03.400 --> 16:03.680
+Okay.
+
+16:03.880 --> 16:06.820
+They all have a true value of exactly 100 points.
+
+16:07.060 --> 16:08.880
+So the reality is a flat tie.
+
+16:08.980 --> 16:10.440
+They are all equally good.
+
+16:10.800 --> 16:11.260
+Right.
+
+16:11.900 --> 16:13.780
+But you don't know the true value.
+
+16:14.320 --> 16:16.460
+You only have your measurements, your estimates.
+
+16:16.920 --> 16:18.880
+And no measurement in the real world is perfect.
+
+16:19.340 --> 16:19.720
+Exactly.
+
+16:20.160 --> 16:22.100
+Your researchers have noise in their data.
+
+16:22.100 --> 16:26.780
+They might overestimate by 20 points or underestimate by 30 points.
+
+16:27.220 --> 16:29.760
+Let's say the noise is randomly distributed.
+
+16:30.520 --> 16:33.760
+So for charity A, the true value is 100, but we measure it as 90.
+
+16:34.160 --> 16:36.400
+Charity B is 100, but we measure it as 115.
+
+16:37.080 --> 16:37.440
+Yes.
+
+16:37.880 --> 16:40.340
+Now, what does the optimization algorithm do?
+
+16:40.720 --> 16:45.440
+It looks at your list of 1,000 estimated values, and it simply picks the highest number.
+
+16:45.840 --> 16:46.060
+Wait.
+
+16:46.140 --> 16:51.320
+So it's going to pick the charity where the researchers made the largest positive mistake?
+
+16:51.320 --> 16:52.200
+Precisely.
+
+16:52.420 --> 16:58.660
+If you search through 1,000 options, the maximum estimated value you find isn't going to be 100.
+
+16:58.820 --> 17:01.720
+It's going to be 140 or 150.
+
+17:02.040 --> 17:06.380
+Driven entirely by the extreme right tail of the statistical noise distribution.
+
+17:06.560 --> 17:06.820
+Yes.
+
+17:07.340 --> 17:11.120
+You're mathematically selecting for the highest positive measurement error.
+
+17:11.120 --> 17:12.740
+You aren't finding the best charity.
+
+17:12.980 --> 17:15.780
+You are finding the most overly optimistic spreadsheet.
+
+17:15.960 --> 17:16.240
+Exactly.
+
+17:16.940 --> 17:19.780
+Now, watch what happens when you expand the candidate set.
+
+17:20.220 --> 17:25.260
+Let's say you increase your search from 1,000 charities to 100,000 charities.
+
+17:25.380 --> 17:25.560
+Okay.
+
+17:25.780 --> 17:28.200
+The true value of all of them is still 100.
+
+17:29.060 --> 17:37.220
+But because you were taking a massive number of random samples of noise, the chances of generating an even more extreme positive error skyrocket.
+
+17:37.220 --> 17:38.160
+Oh, jeez.
+
+17:38.320 --> 17:41.760
+The algorithm might now pick a winner with an estimated value of 180.
+
+17:42.080 --> 17:48.880
+So the gap between what we think we are achieving and what we are actually achieving gets wider the more options we evaluate.
+
+17:49.100 --> 17:49.340
+Yes.
+
+17:49.880 --> 17:51.840
+This is the optimizer's curse.
+
+17:51.840 --> 18:06.340
+The mathematical proof shows a devastating scenario where adding a genuinely better option into your candidate set, alongside thousands of useless options with noisy estimates, it can actually lower the expected true value of what you ultimately select.
+
+18:06.760 --> 18:07.340
+Wait, really?
+
+18:07.720 --> 18:11.600
+Even if the best option is actually on the menu, the noise can bury it.
+
+18:11.740 --> 18:11.980
+Yes.
+
+18:12.700 --> 18:18.980
+Let's say you have one amazing charity with a true value of 130, and you measure it pretty accurately at 135.
+
+18:19.360 --> 18:20.380
+Okay, that's a great charity.
+
+18:20.380 --> 18:27.120
+But you also evaluate 10,000 mediocre charities with a true value of 80, but they have massive measurement noise.
+
+18:27.440 --> 18:27.700
+Right.
+
+18:28.280 --> 18:37.740
+Because you are pulling 10,000 samples of noise, statistical probability dictates that at least one of those mediocre charities is going to have a wildly inaccurate measurement of, say, 140.
+
+18:38.140 --> 18:40.520
+And the algorithm blindly picks the 140.
+
+18:40.920 --> 18:41.200
+Yes.
+
+18:41.800 --> 18:49.620
+So by expanding the menu to include all those mediocre, noisy options, you mathematically guarantee that you will overlook the genuinely good charity.
+
+18:49.620 --> 18:51.500
+The noise overwhelms the signal.
+
+18:52.140 --> 18:58.120
+As the candidate set grows, the maximum estimated value diverges aggressively from the maximum true value.
+
+18:58.340 --> 18:58.640
+Wow.
+
+18:59.120 --> 19:03.440
+The optimization process itself generates a systematic upward bias.
+
+19:03.880 --> 19:06.840
+So expanding the menu doesn't just cost time and money.
+
+19:07.080 --> 19:10.260
+It mathematically degrades the reliability of your decision.
+
+19:10.580 --> 19:10.980
+Correct.
+
+19:10.980 --> 19:16.500
+Unless your measurements are flawless, which they never are, the math punishes you for looking too widely.
+
+19:17.200 --> 19:21.220
+It really forces you to realize that optimization isn't just about finding the peak of a mountain.
+
+19:21.620 --> 19:23.620
+It's about navigating a fog of variance.
+
+19:24.100 --> 19:27.440
+And if you just follow the highest perceived elevation in the fog...
+
+19:27.440 --> 19:31.360
+You are probably just walking up a statistical anomaly, not the actual summit.
+
+19:31.360 --> 19:33.520
+That is just profound.
+
+19:33.880 --> 19:34.240
+Mm-hmm.
+
+19:34.660 --> 19:40.940
+And, I mean, it gets even more complicated when we realize that the items on these menus aren't just isolated islands, right?
+
+19:41.300 --> 19:41.560
+Right.
+
+19:41.620 --> 19:42.320
+They aren't independent.
+
+19:42.820 --> 19:46.360
+In the real world, interventions interact with each other.
+
+19:46.540 --> 19:48.320
+They rely on each other.
+
+19:48.760 --> 19:52.020
+Which is the focus of the next major mathematical breakdown in the paper.
+
+19:52.520 --> 19:55.060
+The failure of additive separability.
+
+19:55.640 --> 19:58.640
+Or what we might call the myth of the lone hero.
+
+19:58.640 --> 20:03.600
+I found the example Flyxion used here to be incredibly illuminating.
+
+20:03.800 --> 20:11.440
+It dismantles the whole assumption that an intervention has a standalone marginal value that you can just add up, like building blocks.
+
+20:12.100 --> 20:14.760
+Yeah, let's talk about the scientist, the teacher, and the technician.
+
+20:15.540 --> 20:15.820
+Yes.
+
+20:15.980 --> 20:18.160
+Let's walk through the math of this complementarity.
+
+20:19.100 --> 20:21.320
+Imagine you are a funding agency.
+
+20:21.640 --> 20:25.860
+And you have a budget to fund exactly two out of three possible interventions.
+
+20:25.860 --> 20:26.160
+Okay.
+
+20:26.160 --> 20:29.380
+Intervention one is paying for a brilliant teacher.
+
+20:30.200 --> 20:33.500
+Intervention two is paying for a skilled laboratory technician.
+
+20:34.380 --> 20:35.060
+And intervention three?
+
+20:35.500 --> 20:40.140
+Intervention three is paying for a totally unrelated feel-good local project.
+
+20:40.260 --> 20:41.920
+Let's say planting a community garden.
+
+20:42.740 --> 20:47.120
+Now, a standard optimization algorithm evaluates these one at a time to assign a score.
+
+20:47.500 --> 20:52.720
+If you just fund the teacher, but there is no lab and no genius student, the scientific output is zero.
+
+20:52.720 --> 20:56.420
+Right. The standalone value of intervention one is zero.
+
+20:56.620 --> 21:01.840
+If you just fund the technician, but there is no teacher and no student, the output is also zero.
+
+21:02.060 --> 21:05.040
+The standalone value of intervention two is zero.
+
+21:05.040 --> 21:11.460
+But if you fund the community garden, intervention three, it produces a small, independent amount of good all on its own.
+
+21:11.600 --> 21:13.680
+Let's call it five units of value.
+
+21:14.320 --> 21:15.880
+Now, what does the algorithm do?
+
+21:16.700 --> 21:18.540
+It ranks them by their standalone scores.
+
+21:18.940 --> 21:19.180
+Right.
+
+21:19.560 --> 21:21.840
+Intervention three is in first place with five points.
+
+21:22.460 --> 21:25.180
+Interventions one and two are tied for last place with zero points.
+
+21:25.180 --> 21:34.880
+So, the algorithm selects intervention three, plants the garden, and then, I guess, randomly picks either the teacher or the tech with the remaining budget, and it secures five units of value.
+
+21:35.240 --> 21:35.580
+Exactly.
+
+21:35.940 --> 21:38.400
+But it completely missed the massive counterfactual space.
+
+21:38.780 --> 21:43.000
+Because if it had selected intervention one and intervention two together...
+
+21:43.000 --> 21:43.860
+The teacher and the tech.
+
+21:44.080 --> 21:44.260
+Yeah.
+
+21:44.360 --> 21:49.620
+They would have trained a genius scientist who cures a disease, yielding like 10,000 units of value.
+
+21:49.780 --> 21:51.760
+Because their value is entirely complementary.
+
+21:52.360 --> 21:53.760
+They only work when paired.
+
+21:54.020 --> 21:54.280
+Right.
+
+21:54.280 --> 22:00.860
+But an algorithm that evaluates isolated, marginal impacts will systematically fail to discover synergistic value.
+
+22:01.540 --> 22:03.360
+And this isn't just some theoretical puzzle.
+
+22:03.480 --> 22:05.520
+This happens in real-world policy all the time.
+
+22:05.700 --> 22:06.160
+All the time.
+
+22:06.740 --> 22:11.740
+We evaluate educational tools, economic subsidies, and healthcare programs in total isolation.
+
+22:12.220 --> 22:12.460
+Yep.
+
+22:12.880 --> 22:17.900
+When interventions have strong complementarity, ranking them individually fails disastrously.
+
+22:17.900 --> 22:24.740
+Summing up individually estimated values is just a mathematically doomed strategy for complex social systems.
+
+22:24.740 --> 22:29.940
+It assumes the world is a simple addition problem when it's actually a web of chemical reactions.
+
+22:29.940 --> 22:32.900
+And that ties directly into the problem of causal inference.
+
+22:33.080 --> 22:38.200
+Because when we try to figure out what works, we usually just look at observational data, right?
+
+22:38.200 --> 22:41.340
+We look at what is already happening and try to copy it.
+
+22:41.340 --> 22:46.120
+And Flyxion demonstrates exactly why that is deeply dangerous.
+
+22:46.120 --> 22:56.620
+Identifying true counterfactual values, meaning what would have happened if we didn't intervene, is notoriously difficult because of selection bias in observational data.
+
+22:56.620 --> 23:00.300
+Let's use the advanced math program example from the text.
+
+23:00.500 --> 23:00.740
+Okay.
+
+23:01.200 --> 23:10.520
+Say a school district looks at its data and observes that kids who are placed into an advanced calculus track go on to have incredibly successful high-earning careers.
+
+23:11.060 --> 23:13.920
+The observable data shows a massive correlation.
+
+23:14.180 --> 23:14.340
+Right.
+
+23:15.100 --> 23:22.980
+A naive optimization model will look at that data and conclude that the causal value of the calculus program is astronomical.
+
+23:22.980 --> 23:31.460
+So, it will recommend defunding other programs to force every single student into advanced calculus, assuming it will yield the same success rate across the board.
+
+23:31.800 --> 23:34.500
+But that completely ignores selection bias.
+
+23:34.900 --> 23:35.460
+Entirely.
+
+23:36.300 --> 23:43.040
+Flyxion shows mathematically that two completely opposed causal models can produce the exact same observational dataset.
+
+23:43.280 --> 23:43.600
+Really?
+
+23:43.980 --> 23:44.180
+Yeah.
+
+23:44.640 --> 23:44.880
+How?
+
+23:45.260 --> 23:49.580
+Well, Model A asserts that the calculus program actively causes this success.
+
+23:49.820 --> 23:51.960
+It imparts skills that make kids successful.
+
+23:51.960 --> 23:54.100
+That's the intuitive one.
+
+23:54.480 --> 23:55.200
+And Model B?
+
+23:55.560 --> 24:04.120
+Model B asserts that the success is predetermined by natural aptitude or parental support or socioeconomic status.
+
+24:04.520 --> 24:10.660
+And the calculus program merely acts as a filter that selects kids who were already destined to succeed anyway.
+
+24:10.860 --> 24:11.380
+Oh, wow.
+
+24:11.500 --> 24:11.660
+Yeah.
+
+24:11.740 --> 24:13.840
+And both models fit the data perfectly.
+
+24:13.840 --> 24:14.640
+Perfectly.
+
+24:14.800 --> 24:23.560
+If you just look at the spreadsheet, you cannot distinguish between an intervention that generates value and an intervention that simply selects for pre-existing value.
+
+24:23.560 --> 24:26.660
+Think about the implications of that for philanthropy in business.
+
+24:27.120 --> 24:32.460
+We look at a successful microloan program in a developing country and we say, the data proves this works.
+
+24:32.960 --> 24:42.000
+But what if the data just proves that the people who apply for and secure microloans are inherently the most entrepreneurial driven individuals in that village?
+
+24:42.000 --> 24:44.600
+And they would have found a way to succeed regardless.
+
+24:45.100 --> 24:45.480
+Exactly.
+
+24:45.940 --> 24:48.040
+This raises an important question for you, the listener.
+
+24:48.580 --> 24:53.080
+How much of the success data we rely on is just observational masking?
+
+24:53.460 --> 24:53.740
+Right.
+
+24:53.740 --> 25:01.900
+If we blindly optimize based on observational correlation, we end up funding massive interventions that actually produce zero marginal utility.
+
+25:02.380 --> 25:04.680
+Because they are just taking credit for natural momentum.
+
+25:04.900 --> 25:05.320
+Exactly.
+
+25:06.080 --> 25:17.440
+So if we can't trust the optimizer's curse on big menus, and we can't trust individual evaluations because of complementarity, and we can't trust observational data because of selection bias, what do we do?
+
+25:17.820 --> 25:20.740
+Often institutions just fall back on asking people.
+
+25:20.740 --> 25:26.920
+Right. They issue grants, they take proposals, and they ask project leaders, how much good will you do and how much will it cost?
+
+25:27.420 --> 25:32.980
+And that introduces human behavior into the mathematics, which is where things get truly destructive.
+
+25:33.700 --> 25:36.700
+This brings us to optimization over claims.
+
+25:37.460 --> 25:44.880
+Okay. This revolves around cost, feasibility, and a really crucial mathematical error called the continuity assumption, right?
+
+25:45.080 --> 25:49.840
+Yes. Referencing the work of Coté and Stewart on threshold scales.
+
+25:49.840 --> 25:55.240
+Let's explain the recycling factory example, because this trapdoor is so practical and so common.
+
+25:55.720 --> 26:01.060
+Yeah. When algorithms optimize budgets, they love to use averages and marginal returns.
+
+26:01.340 --> 26:03.860
+They assume that reality is a continuous line.
+
+26:04.120 --> 26:10.340
+They assume that if it costs $1 million to build a recycling factory that processes 1 million tons of waste,
+
+26:10.580 --> 26:15.360
+then giving the project half a million dollars will allow them to process half a million tons of waste.
+
+26:15.800 --> 26:17.720
+It assumes you can just scale everything linearly.
+
+26:17.720 --> 26:22.220
+Right. But in reality, half a budget doesn't get you half a functioning factory.
+
+26:22.740 --> 26:26.500
+It gets you a concrete slab, a half-finished roof, and a bankrupt contractor.
+
+26:26.940 --> 26:28.620
+It processes zero waste.
+
+26:28.680 --> 26:29.160
+Exactly.
+
+26:29.860 --> 26:31.460
+That is the threshold scale.
+
+26:32.180 --> 26:36.620
+The intervention requires a minimum critical mass of funding to yield any value whatsoever.
+
+26:37.080 --> 26:37.440
+Okay.
+
+26:37.440 --> 26:42.700
+If an optimizer is using marginal figures to divide up a budget across multiple projects,
+
+26:42.700 --> 26:47.840
+it will systematically defund threshold projects right below their critical breaking point,
+
+26:48.460 --> 26:52.180
+turning what could have been massive value into complete deadweight loss.
+
+26:52.180 --> 26:59.100
+But the even deeper problem with optimizing over claims is what happens when people realize they are competing for that budget.
+
+26:59.100 --> 27:00.840
+This is the contractor analogy.
+
+27:01.200 --> 27:04.880
+Oh, this is one of the most mathematically rigorous proofs in the paper.
+
+27:05.640 --> 27:12.500
+It utilizes the properties of log concave density functions to demonstrate selection on favorable reporting error.
+
+27:12.700 --> 27:15.220
+Okay, let's break down log concave densities.
+
+27:15.680 --> 27:20.840
+Because earlier we talked about how selecting the highest estimated value selects for noise.
+
+27:20.840 --> 27:24.980
+This is the exact same dynamic applied to cost, right?
+
+27:25.400 --> 27:28.020
+Yes, but with human incentives added in.
+
+27:28.140 --> 27:28.420
+Mm-hmm.
+
+27:28.520 --> 27:29.840
+Here's where it gets really interesting.
+
+27:30.140 --> 27:30.280
+Yeah.
+
+27:31.000 --> 27:32.300
+It's like hiring a contractor.
+
+27:32.640 --> 27:38.240
+Imagine you are putting a major public works project out for bid or a philanthropic grant.
+
+27:38.680 --> 27:41.400
+You have 20 different organizations submitting proposals.
+
+27:41.760 --> 27:41.960
+Okay.
+
+27:42.400 --> 27:48.080
+And let's say the true objective cost to do this project right is around $20,000.
+
+27:48.080 --> 27:51.960
+In a perfect world, everyone bids $20,000.
+
+27:52.260 --> 27:56.100
+But in reality, there are two distinct probability distributions at play.
+
+27:56.320 --> 27:56.520
+Right.
+
+27:57.020 --> 28:00.180
+First, there is the distribution of their actual underlying efficiency.
+
+28:00.920 --> 28:02.940
+Maybe one contractor is slightly faster.
+
+28:03.240 --> 28:05.120
+So their true cost is $19,000.
+
+28:05.700 --> 28:08.940
+And second, there is the distribution of their reporting error.
+
+28:09.120 --> 28:09.600
+Exactly.
+
+28:10.360 --> 28:12.020
+Reporting error can be accidental.
+
+28:12.400 --> 28:14.740
+Maybe they forgot to price in the cost of copper wire.
+
+28:15.100 --> 28:16.280
+Or it can be intentional.
+
+28:16.280 --> 28:21.320
+They are wildly optimistic, or they are just flat out lying to win the bid.
+
+28:21.900 --> 28:23.900
+So a bid of $5,000 comes in.
+
+28:24.580 --> 28:27.380
+Now think about the math of those two distributions overlapping.
+
+28:28.240 --> 28:36.960
+A bid that is aggressively lower than the true mean is extremely unlikely to be driven purely by actual underlying efficiency.
+
+28:37.460 --> 28:40.700
+There is a physical limit to how cheap materials and labor can be.
+
+28:41.080 --> 28:44.540
+You can't just wish concrete to be 75% cheaper.
+
+28:44.540 --> 28:48.600
+But there is practically no limit to human reporting error.
+
+28:49.100 --> 28:52.660
+People can lie or miscalculate by massive margins.
+
+28:52.880 --> 28:53.000
+Right.
+
+28:53.380 --> 29:02.740
+So mathematically, the extreme left tail of the bidding distribution, the absolute lowest bids, are disproportionately composed of extreme reporting errors.
+
+29:02.740 --> 29:08.340
+The person who bids $5,000 for a $20,000 kitchen remodel isn't a wizard.
+
+29:08.980 --> 29:12.040
+The math actually proves we select for the highest error.
+
+29:12.040 --> 29:12.640
+Yes.
+
+29:12.640 --> 29:22.840
+The gap between the reported cost and the actual realizable cost, what the paper calls the shortfall, is maximized when you select the minimum reported cost.
+
+29:23.240 --> 29:23.580
+Wow.
+
+29:24.000 --> 29:33.280
+By designing your objective function to optimize for the lowest claim, you structurally filter out the honest, competent organizations who know what things actually cost.
+
+29:33.280 --> 29:38.920
+You are systematically filtering in the liars, the incompetents, and the extreme optimists.
+
+29:39.040 --> 29:42.640
+Your algorithm literally becomes a magnet for misrepresentation.
+
+29:42.740 --> 29:44.740
+It creates a race to the bottom of epistemics.
+
+29:45.300 --> 29:46.820
+And what is the only way to stop that?
+
+29:46.960 --> 29:47.720
+You have to check their work.
+
+29:48.000 --> 29:48.900
+You have to audit the claims.
+
+29:49.500 --> 29:50.300
+Independent verification.
+
+29:50.680 --> 29:50.920
+Mm-hmm.
+
+29:51.280 --> 29:55.080
+You have to go to their previous job sites and see if they actually built what they said they built.
+
+29:55.080 --> 29:57.480
+But verification costs resources.
+
+29:58.000 --> 30:00.080
+It costs time, money, and personnel.
+
+30:00.520 --> 30:00.620
+Right.
+
+30:01.180 --> 30:13.480
+And if you are an institution that is exclusively obsessed with maximizing your measured impact, getting the absolute highest score on your internal spreadsheet, then spending money on auditors starts to look like a mathematical waste.
+
+30:13.600 --> 30:15.900
+Which brings us to the institutional blind spot.
+
+30:15.900 --> 30:26.000
+This is where Flyxion shifts from looking at the math in a vacuum to looking at what happens to an organization that internalizes this math as its sole operating principle.
+
+30:26.620 --> 30:33.640
+And to understand this, we have to make a very sharp distinction between finding the mathematical optimum and having permission to execute it.
+
+30:33.900 --> 30:36.900
+The paper brings up the FTX cryptocurrency exchange here.
+
+30:37.220 --> 30:38.800
+I want to be clear for everyone listening.
+
+30:38.980 --> 30:41.680
+We are adhering strictly to the paper's analytical framing.
+
+30:41.680 --> 30:46.060
+We aren't here to psychoanalyze the founder who was convicted of fraud in 2024.
+
+30:47.000 --> 30:51.720
+Flyxion uses FTX as a pure structural example of an objective function running wild.
+
+30:52.620 --> 31:01.380
+The critical point is that maximizing an objective function, V of A, does not inherently grant what the paper defines as permitted of A.
+
+31:02.100 --> 31:09.420
+Meaning just because an action creates the highest expected value on your spreadsheet doesn't mean you are ethically or legally allowed to take it.
+
+31:09.620 --> 31:09.800
+Right.
+
+31:09.800 --> 31:13.800
+An objective function is just a mathematical topography.
+
+31:14.220 --> 31:15.240
+It seeks the highest peak.
+
+31:15.700 --> 31:15.760
+Yeah.
+
+31:16.180 --> 31:22.580
+It doesn't inherently contain concepts like fiduciary duty, consent, property rights, or the rule of law.
+
+31:22.760 --> 31:25.580
+Those are external categorical constraints.
+
+31:26.260 --> 31:36.800
+So if an agent is managing billions of dollars of customer deposits and they calculate that gambling those deposits on a high-risk venture will generate massive expected value for global charities...
+
+31:36.800 --> 31:39.620
+The math of expected value will cheer them on.
+
+31:40.220 --> 31:42.920
+The math will say, yes, that is the optimal path.
+
+31:42.920 --> 31:56.540
+If you do not hard-code permission constraints into the system, if you leave it up to the discretion of an agent whose only goal is to maximize the scalar metric, the math will happily recommend impermissible, catastrophic actions.
+
+31:56.760 --> 31:57.040
+Wow.
+
+31:57.040 --> 32:02.220
+The optimization process actively dissolves boundaries that aren't mathematically priced into its objective.
+
+32:02.220 --> 32:07.120
+The math doesn't have a conscience, so you can't assume the output will be conscientious.
+
+32:07.740 --> 32:11.660
+But man, the internal decay of these institutions is even more fascinating.
+
+32:12.380 --> 32:16.400
+The paper describes a phenomenon called endogenous verification decay.
+
+32:16.400 --> 32:20.340
+This is a brilliant modeling of institutional psychology using math.
+
+32:20.480 --> 32:21.280
+Tell us about it.
+
+32:21.780 --> 32:31.600
+Flyxion models an institution that has capital and it has verification capacity, meaning its ability to audit itself, catch its own errors, and monitor real-world harms.
+
+32:31.740 --> 32:32.060
+Okay.
+
+32:32.780 --> 32:38.040
+The institution's goal is to maximize its measure of reward, but here's the fatal flaw in the system.
+
+32:38.940 --> 32:43.340
+Verification catches errors, but it does not produce positive measured reward.
+
+32:43.340 --> 32:46.420
+Right. Auditing a charity doesn't save lives on paper.
+
+32:46.540 --> 32:49.920
+It just ensures the lives you thought you were saving are actually being saved.
+
+32:50.520 --> 33:00.120
+So if I'm a manager trying to hit my quarterly impact metrics and I look at my budget, I have $5 million in the auditing department and $5 million in the frontline intervention department.
+
+33:00.600 --> 33:05.820
+If I defund the auditors and move that money to the frontline, my measured output instantly doubles.
+
+33:06.080 --> 33:08.640
+And you look like a hero to the optimization algorithm.
+
+33:08.840 --> 33:09.240
+Unbelievable.
+
+33:09.240 --> 33:20.940
+Proposition 12 proves that if verification is not explicitly forced upon the optimizer as an external rule, an optimizer will inevitably defund its own oversight.
+
+33:21.720 --> 33:24.020
+It is mathematically compelled to do so.
+
+33:24.360 --> 33:31.800
+Yes, because any dollar spent on verification is interpreted by the algorithm as a strict loss of potential measured value.
+
+33:32.480 --> 33:37.860
+Over time, the institution systematically degrades its ability to even see reality.
+
+33:37.860 --> 33:42.460
+Wait, my immediate thought is surely an institution would eventually notice.
+
+33:42.740 --> 33:47.200
+Like, wouldn't an institution realize its true welfare is dropping?
+
+33:47.360 --> 33:52.760
+If they stop auditing, eventually they'll realize they are funding massive failures, right?
+
+33:52.920 --> 33:53.760
+You would think so.
+
+33:54.340 --> 33:58.600
+But this leads to Proposition 13, the perceived value trap.
+
+33:59.240 --> 33:59.520
+Okay.
+
+33:59.680 --> 34:02.620
+This is arguably the most chilling mathematical proof in the text.
+
+34:03.160 --> 34:05.200
+No, they won't realize it's dropping.
+
+34:05.700 --> 34:06.380
+Walk us through it.
+
+34:06.380 --> 34:09.100
+Why doesn't the institution realize it's failing?
+
+34:09.660 --> 34:17.460
+Because the optimizer only assigns value to the verification department based on the frequency of errors that the verification department is currently exposing.
+
+34:17.840 --> 34:18.480
+Oh, wow.
+
+34:18.780 --> 34:19.940
+Let me process that.
+
+34:20.000 --> 34:22.280
+It's like the smoke detector analogy.
+
+34:22.680 --> 34:23.060
+Exactly.
+
+34:23.320 --> 34:23.460
+Right.
+
+34:23.620 --> 34:29.940
+If you have a smoke detector in your house and it goes off twice a year to warn you about a fire, you value the smoke detector.
+
+34:30.100 --> 34:30.420
+Right.
+
+34:30.720 --> 34:33.780
+But if you decide to save money on batteries, you take them out.
+
+34:34.140 --> 34:35.780
+The smoke detector stops going off.
+
+34:35.780 --> 34:39.660
+And the optimization algorithm looks at the data and says, look at this.
+
+34:40.100 --> 34:43.460
+Ever since we stopped buying batteries, we haven't had a single fire alarm.
+
+34:44.180 --> 34:47.280
+Defunding the batteries was the most optimal decision we ever made.
+
+34:47.620 --> 34:49.920
+Our fire rate is mathematically zero.
+
+34:49.920 --> 34:57.240
+The algorithm is completely blind to the fact that the house is currently burning down because the mechanism for reporting the fire was defunded.
+
+34:57.600 --> 35:01.620
+The optimizer becomes trapped in a self-reinforcing illusion of perfection.
+
+35:01.880 --> 35:03.100
+That is terrifying.
+
+35:03.520 --> 35:12.800
+Once verification capacity drops below a critical threshold, the institution thinks everything is executing flawlessly because no shortfalls are being registered on the spreadsheet.
+
+35:12.800 --> 35:15.000
+Because there's no one left to register them.
+
+35:15.460 --> 35:15.540
+Right.
+
+35:15.940 --> 35:20.000
+The divergence between the measured return and the realizable return isn't just an accident.
+
+35:20.440 --> 35:23.900
+It is actively generated by the optimization process itself.
+
+35:24.180 --> 35:27.200
+And it is entirely invisible to the metric that guides it.
+
+35:27.900 --> 35:32.040
+The optimization destroys the instruments needed to measure the optimization.
+
+35:32.040 --> 35:34.200
+And it feels good while doing it.
+
+35:34.860 --> 35:41.440
+We've spent all this time looking at how scalar metrics can accidentally destroy philanthropy and financial institutions.
+
+35:41.720 --> 35:51.300
+But Flyxion takes this exact same mathematical structure, all of these trapdoors, and applies them to a massive high-stakes situation unfolding right now.
+
+35:51.540 --> 35:53.100
+The governance of artificial intelligence.
+
+35:53.440 --> 35:53.700
+Right.
+
+35:54.140 --> 35:57.640
+Section 11 of the text is titled, When Loss Becomes Law.
+
+35:57.640 --> 36:01.900
+And it is a master class in applying abstract math to immediate policy.
+
+36:02.900 --> 36:08.280
+Flyxion analyzes a specific proposal made in 2026 by an OpenAI researcher named Pachocki.
+
+36:09.120 --> 36:17.600
+The proposal was to use a scalar metric called perplexity, or predictive loss, as a hard threshold to pause the development of frontier AI models.
+
+36:18.240 --> 36:23.120
+Now, for anyone listening who isn't deep in the weeds of machine learning, let's explain what predictive loss actually is.
+
+36:23.140 --> 36:23.320
+Sure.
+
+36:23.320 --> 36:26.100
+Because it's really the heartbeat of how these models are trained.
+
+36:26.100 --> 36:32.100
+At its core, training a large language model is about predicting the next token or the next word in a sequence.
+
+36:32.820 --> 36:36.360
+You feed it a massive amount of text, and it plays a game of fill in the blank.
+
+36:36.740 --> 36:40.460
+You give it, the cat sat on the, and it has to guess the next word.
+
+36:40.840 --> 36:45.140
+The loss is a mathematical measurement of how bad the model is at guessing.
+
+36:45.400 --> 36:45.720
+Okay.
+
+36:45.720 --> 36:50.400
+A high loss means the model's probability distribution is flat and confused.
+
+36:50.540 --> 36:55.740
+It thinks mat, refrigerator, and quantum mechanics are all equally likely next words.
+
+36:56.480 --> 36:59.400
+It's essentially a measure of statistical stupidity.
+
+36:59.860 --> 37:00.160
+Right.
+
+37:00.720 --> 37:04.680
+A low loss means the model is highly confident and highly accurate.
+
+37:05.100 --> 37:08.080
+It assigns a near 100% probability to mat.
+
+37:08.080 --> 37:13.700
+Over time, as you train the model with more data and more compute, the loss goes down.
+
+37:14.160 --> 37:15.440
+The model gets better at predicting.
+
+37:16.300 --> 37:20.660
+And Pachocki's 2026 proposal observed a really compelling historical correlation.
+
+37:21.300 --> 37:29.240
+As the loss metric dropped on a specific internal OpenAI code base, the model seemed to magically unlock new complex capabilities.
+
+37:29.840 --> 37:35.240
+They observed that at a loss of roughly 0.99, models achieved fluent conversation.
+
+37:35.500 --> 37:35.720
+Right.
+
+37:35.720 --> 37:40.180
+At 0.91, they unlocked productive logical reasoning.
+
+37:41.060 --> 37:49.940
+And critically, at around 0.8, they began to exhibit cybersecurity capabilities, coding proficiency, things that start to look dangerous in the wrong hands.
+
+37:50.420 --> 37:52.520
+So the governance proposal was brilliantly simple.
+
+37:53.160 --> 37:53.960
+Let's use this math.
+
+37:54.380 --> 37:58.080
+Let's set a legal or industry-wide threshold based on this loss metric.
+
+37:58.240 --> 38:02.880
+If a model is training and its loss hits 0.7, we automatically hit the pause button.
+
+38:02.880 --> 38:07.920
+We stop training because the math tells us it's entering a dangerous capability zone.
+
+38:07.920 --> 38:09.400
+It sounds incredibly reasonable.
+
+38:09.840 --> 38:11.880
+It is a clean, objective, measurable number.
+
+38:12.680 --> 38:21.820
+But Flyxion brings the structural hammer down, showing that this AI governance proposal falls through the exact same trapdoors as the effective altruism equations.
+
+38:22.320 --> 38:24.240
+Let's look at the first failure point.
+
+38:25.060 --> 38:28.040
+The dependence of the ranking on the evaluation distribution.
+
+38:28.040 --> 38:28.520
+Yes.
+
+38:28.660 --> 38:35.700
+The fatal flaw here is assuming that loss is a universal, objective measure of general intelligence or capability.
+
+38:35.840 --> 38:36.440
+Which it isn't.
+
+38:36.520 --> 38:37.020
+It is not.
+
+38:37.540 --> 38:42.000
+Loss is strictly a measure of predictive performance relative to a specific dataset.
+
+38:42.340 --> 38:45.980
+Meaning what you test the AI on completely dictates the score.
+
+38:46.320 --> 38:46.800
+Precisely.
+
+38:47.380 --> 38:50.020
+Imagine you have two AI models, Model A and Model B.
+
+38:50.520 --> 38:53.340
+Model A was heavily trained on mathematics and Python code.
+
+38:53.980 --> 38:57.100
+Model B was heavily trained on poetry and historical literature.
+
+38:57.860 --> 38:58.120
+Okay.
+
+38:58.600 --> 39:04.340
+If my evaluation dataset is mostly code, Model A is going to have a much lower loss.
+
+39:04.820 --> 39:08.100
+It's going to look vastly smarter and closer to the danger threshold.
+
+39:08.300 --> 39:14.200
+But if you change the evaluation dataset to be mostly prose, suddenly Model B has the lower loss.
+
+39:14.500 --> 39:14.840
+Huh.
+
+39:14.840 --> 39:24.020
+The mathematical ranking of which AI is safer or more capable can completely invert depending on how you weight the mixture of the testing data.
+
+39:24.020 --> 39:27.780
+It is the exact same problem as the thermostat analogy from earlier.
+
+39:27.780 --> 39:31.140
+You can't just blindly add my comfort scale to your comfort scale.
+
+39:31.340 --> 39:37.540
+You can't just blindly evaluate an AI without deciding what type of intelligence you care about measuring.
+
+39:38.280 --> 39:46.700
+A shared governance threshold based on loss requires a shared, universal, mathematically objective definition of the evaluation distribution.
+
+39:47.220 --> 39:48.360
+And that does not exist.
+
+39:48.720 --> 39:49.360
+No, it doesn't.
+
+39:49.360 --> 39:54.420
+The choice of what data to test the AI on is a human, political, subjective choice.
+
+39:54.540 --> 39:56.120
+It is not a technical preliminary.
+
+39:56.120 --> 40:10.100
+So if a regulatory body decides to test AI models heavily on coding, they might ban a perfectly safe math tutor while greenlighting a model that is terrible at code, but highly persuasive at generating biological weapons instructions.
+
+40:10.660 --> 40:13.920
+Simply because biology wasn't weighted heavily in the loss calculation.
+
+40:14.200 --> 40:14.480
+Wow.
+
+40:14.480 --> 40:17.900
+Which leads directly to the second massive failure point.
+
+40:18.700 --> 40:21.580
+The insufficiency of scalar loss.
+
+40:22.420 --> 40:26.120
+Average loss does not determine specific hazardous capabilities.
+
+40:26.680 --> 40:29.280
+This makes perfect sense when you think about a student's GPA.
+
+40:29.680 --> 40:29.880
+Yeah.
+
+40:30.020 --> 40:34.500
+If a high school student has a 3.0 GPA, you know their average performance.
+
+40:34.760 --> 40:40.020
+But that single scalar number tells you absolutely nothing about the variance of their skills.
+
+40:40.500 --> 40:40.900
+Exactly.
+
+40:40.900 --> 40:46.480
+A 3.0 GPA could mean the student got a solid B in every single subject across the board.
+
+40:47.180 --> 40:51.620
+Or it could mean they got an A plus in advanced chemistry and an F in history.
+
+40:52.020 --> 40:54.220
+The average conceals the extremes.
+
+40:54.680 --> 41:03.300
+Flyxion shows mathematically that two entirely different AI models can have the exact same scalar loss score, but wildly different capability profiles.
+
+41:03.300 --> 41:12.280
+So an AI with a loss of 0.8 could be consistently mediocre at every task imaginable, making it incredibly safe to deploy.
+
+41:12.620 --> 41:21.540
+Or it could be terribly stupid at writing poetry and translating languages, but possess an A plus superhuman capability in hacking power grids.
+
+41:21.540 --> 41:24.300
+And they both average out to 0.8.
+
+41:24.680 --> 41:33.860
+So a rigid regulatory rule that says pause all models at 0.8 loss is mathematically blind to the actual shape of the danger.
+
+41:33.860 --> 41:37.820
+It treats a flat line and a massive spike as the exact same thing.
+
+41:38.540 --> 41:42.060
+And that leads to the final fatal blow against threshold governance.
+
+41:42.060 --> 41:50.560
+If you want a rule that guarantees you catch every dangerous AI before it is deployed, the math requires something practically impossible.
+
+41:51.040 --> 41:53.120
+It requires the certification condition.
+
+41:53.520 --> 41:56.540
+We are back to the candidate menu from the philanthropic math.
+
+41:56.740 --> 41:57.100
+Exactly.
+
+41:57.820 --> 42:06.840
+To mathematically guarantee that a threshold is safe, you must have an ironclad mathematical bound on the capabilities of all the models that exist above the threshold.
+
+42:06.840 --> 42:11.620
+You have to prove that everything you aren't pausing is definitively safe.
+
+42:12.200 --> 42:16.840
+And the paper points out a glaring loophole in the AI space that destroys this guarantee.
+
+42:17.340 --> 42:28.980
+The paper explicitly points out that chain of thought reasoning, where you allow the AI to generate hidden scratchpad tokens to think step by step before answering, massively raises an AI's capability.
+
+42:29.340 --> 42:31.300
+But here is the critical vulnerability.
+
+42:31.300 --> 42:42.360
+Chain of thought reasoning, or giving an AI access to a web browser, or fine-tuning it after base training, does not necessarily lower the base loss metric that the regulators are measuring.
+
+42:42.880 --> 42:47.260
+So the model gets vastly smarter, but the regulatory thermometer doesn't move.
+
+42:47.580 --> 42:50.880
+So the threshold completely misses a massive route to danger.
+
+42:51.440 --> 42:55.040
+These avenues act as the omitted alternatives we discussed earlier.
+
+42:55.400 --> 42:58.540
+The metric completely misses a massive route to capability.
+
+42:58.540 --> 43:01.640
+It is the ultimate manifestation of Goodhart's law, right?
+
+43:01.940 --> 43:05.020
+When a measure becomes a target, it ceases to be a good measure.
+
+43:05.580 --> 43:18.560
+If we connect this to the bigger picture, if you optimize your international AI regulations against a single scalar metric like loss, you structurally push every AI developer to find capabilities in the unmeasured margins.
+
+43:18.820 --> 43:24.060
+You incentivize the exact same misrepresentation we saw with the contractors submitting the lowest bids.
+
+43:24.060 --> 43:37.300
+If the law says you can't have a base loss lower than 0.7, developers will build models that score a safe 0.8 on the test, but use massive chain-of-thought architectures to act like a 0.1 in the real world.
+
+43:37.300 --> 43:46.880
+The historical correlation between a metric and an outcome in a lab does not justify using that metric as a rigid governance threshold in an adversarial world.
+
+43:47.220 --> 43:51.140
+The math of optimization will actively subvert the intent of the regulation.
+
+43:51.400 --> 43:59.560
+So if we take a step back and look at this entire landscape, we've spent this time tearing down the architecture of rational decision-making.
+
+43:59.960 --> 44:00.480
+We really have.
+
+44:00.480 --> 44:05.480
+We've established that expected value can be hijacked by infinite hypothetical futures.
+
+44:06.000 --> 44:09.800
+We've shown that adding up human happiness requires subjective conversion rates.
+
+44:10.340 --> 44:16.480
+We've proved that looking at limited menus causes statistical selection bias and actually punishes you for searching too widely.
+
+44:17.000 --> 44:25.840
+We've seen how assuming interventions are isolated ignores real-world complementarity, and how relying on observational data blinds us to selection effects.
+
+44:25.840 --> 44:39.480
+We've seen how optimizing for lowest costs selects for liars, how optimizing for measured outputs mathematically destroys safety audits, and how using loss metrics to govern AI completely misses the shape and source of actual danger.
+
+44:39.980 --> 44:44.680
+If all of this structural math is fundamentally vulnerable, how do we make decisions?
+
+44:45.200 --> 44:46.540
+Do we just give up on using numbers?
+
+44:46.960 --> 44:47.160
+No.
+
+44:47.520 --> 44:50.140
+Flyxion doesn't leave us in a state of mathematical nihilism.
+
+44:50.680 --> 44:52.280
+Section 12 outlines the repairs.
+
+44:52.480 --> 44:52.960
+Okay, good.
+
+44:52.960 --> 44:58.420
+But the crucial, inescapable takeaway is that the repairs do not eliminate the human element.
+
+44:58.880 --> 45:01.040
+They do not make the math purely objective.
+
+45:01.480 --> 45:05.200
+They simply relocate the human judgment to a more transparent part of the equation.
+
+45:05.440 --> 45:06.640
+Let's run through the repairs.
+
+45:06.980 --> 45:08.760
+Repair number one, bounded utility.
+
+45:09.080 --> 45:12.980
+This is how you fix the speculative benefit domination we talked about with long-termism.
+
+45:13.560 --> 45:19.020
+You simply impose a mathematical cap on how much utility any single outcome can generate.
+
+45:19.020 --> 45:24.040
+You declare by fiat, no hypothetical future is worth infinite points.
+
+45:24.620 --> 45:28.180
+The maximum score any event can have is 1 billion.
+
+45:28.540 --> 45:32.680
+It stops the tiny probability from multiplying into an unstoppable force.
+
+45:32.800 --> 45:40.260
+But doing that means you, the human, are making a highly subjective ethical choice to limit the mathematical value of future lives.
+
+45:40.420 --> 45:42.220
+The math didn't choose the cap.
+
+45:42.340 --> 45:42.740
+You did.
+
+45:42.740 --> 45:43.540
+Exactly.
+
+45:44.360 --> 45:50.600
+Repair number two, robust criteria, like the Maximin rule we discussed with Ellsberg's paradox.
+
+45:51.100 --> 45:52.980
+This fixes the ambiguity problem.
+
+45:53.640 --> 45:57.180
+You assume the worst case probability for highly speculative events.
+
+45:57.420 --> 46:00.060
+If there is no hard evidence, the probability is zero.
+
+46:00.060 --> 46:03.900
+But the cost of this repair is widespread conservatism.
+
+46:04.720 --> 46:09.800
+It forces you to ignore potential catastrophic tail risks if the evidence is currently thin.
+
+46:10.620 --> 46:13.400
+It paralyzes the algorithm in the face of deep uncertainty.
+
+46:14.100 --> 46:18.540
+Again, a human epistemic choice, not a mathematical absolute.
+
+46:19.580 --> 46:21.960
+Repair number three, side constraints.
+
+46:22.440 --> 46:24.820
+This fixes the FTX institutional blind spot.
+
+46:24.820 --> 46:30.520
+You introduce rigid, non-negotiable rules that sit completely outside the optimization objective.
+
+46:31.360 --> 46:35.380
+Maximize portfolio value, but do not touch client deposits.
+
+46:35.500 --> 46:35.840
+Exactly.
+
+46:36.380 --> 46:41.980
+Or maximize charitable impact, but mandate that 20% of the budget goes to independent audits.
+
+46:42.720 --> 46:44.920
+The objective function didn't generate those rules.
+
+46:45.100 --> 46:47.220
+The math didn't ask for a compliance department.
+
+46:47.540 --> 46:49.660
+You forced it onto the math from the outside.
+
+46:50.000 --> 46:52.740
+And that is the ultimate conclusion of Flyxion's deep dive.
+
+46:52.740 --> 46:59.280
+The quantitative apparatus, taken by itself, leaves everything that actually matters undetermined.
+
+47:00.020 --> 47:05.180
+The candidate set, the interaction models, the causal inferences, the aggregation scales.
+
+47:05.620 --> 47:09.720
+These are the critical junctures where arithmetic must give way to judgment.
+
+47:10.540 --> 47:16.200
+To stand behind a spreadsheet and claim that you are just following the math or letting the data decide is an illusion.
+
+47:16.780 --> 47:20.440
+The math is a phenomenally powerful engine, but it does not have a steering wheel.
+
+47:20.440 --> 47:25.380
+The bounds, the constraints, the verification protocols, those are the steering wheel.
+
+47:25.880 --> 47:28.960
+And you have to look in the mirror and admit that you are the one driving.
+
+47:29.340 --> 47:35.820
+And if you don't grab the wheel, the optimization process will just accelerate into the nearest statistical trapdoor.
+
+47:36.060 --> 47:36.560
+It really will.
+
+47:38.000 --> 47:41.480
+Which brings me to a final thought I want to leave you with today.
+
+47:41.480 --> 47:49.400
+We spend so much of our modern lives looking at how data and algorithms underdetermine what is good or safe.
+
+47:49.660 --> 48:00.000
+We assume we use these intense scalar metrics in our charities, our tech companies, our government policies, because the math is objective and human beings are biased.
+
+48:00.380 --> 48:02.820
+We think we are elevating our decision-making.
+
+48:02.820 --> 48:08.520
+But think about the crushing cognitive load of true moral responsibility.
+
+48:09.160 --> 48:17.640
+When we rely so heavily on data, algorithms, and spreadsheets to run our world, are we truly doing it because the math is smarter than us?
+
+48:17.640 --> 48:28.580
+Or are we just outsourcing our morality to the math simply to avoid the profound, agonizing discomfort of having to make subjective, human, ethical choices ourselves?
+
+48:29.200 --> 48:36.020
+Are we just typing the destination into the GPS, closing our eyes, and praying we don't end up driving straight into the lake?
+
+48:36.360 --> 48:40.600
+It's the ultimate abdication of responsibility disguised as rationality.
+
+48:41.080 --> 48:46.420
+And it's the question every institutional leader has to answer the next time they look at an optimized spreadsheet.
+
+48:46.420 --> 48:49.080
+Thank you for joining us on this deep dive.
+
